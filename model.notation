@@ -1073,12 +1073,42 @@
           <element xmi:type="uml:Property" href="model.uml#_n9-pUHlPEeSPCdLPklumvw"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_n-AegXlPEeSPCdLPklumvw"/>
         </children>
+        <children xmi:type="notation:Shape" xmi:id="_6J3UcHofEeSUaeD21Mb5IQ" type="3012">
+          <styles xmi:type="notation:StringListValueStyle" xmi:id="_-y2RwHofEeSUaeD21Mb5IQ" name="maskLabel">
+            <stringListValue>name</stringListValue>
+            <stringListValue>derived</stringListValue>
+          </styles>
+          <element xmi:type="uml:Property" href="model.uml#_6GDygHofEeSUaeD21Mb5IQ"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_6J3UcXofEeSUaeD21Mb5IQ"/>
+        </children>
         <styles xmi:type="notation:TitleStyle" xmi:id="_VoD3YXlOEeSPCdLPklumvw"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_VoD3YnlOEeSPCdLPklumvw"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_VoD3Y3lOEeSPCdLPklumvw"/>
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VoD3ZHlOEeSPCdLPklumvw"/>
       </children>
       <children xmi:type="notation:BasicCompartment" xmi:id="_VoD3ZXlOEeSPCdLPklumvw" type="7018">
+        <children xmi:type="notation:Shape" xmi:id="_IHE2MHogEeSUaeD21Mb5IQ" type="3013">
+          <styles xmi:type="notation:StringListValueStyle" xmi:id="_TnnhMHogEeSUaeD21Mb5IQ" name="maskLabel">
+            <stringListValue>parametersDirection</stringListValue>
+            <stringListValue>parametersType</stringListValue>
+            <stringListValue>parametersName</stringListValue>
+            <stringListValue>name</stringListValue>
+            <stringListValue>returnType</stringListValue>
+          </styles>
+          <element xmi:type="uml:Operation" href="model.uml#_IHDoEHogEeSUaeD21Mb5IQ"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_IHE2MXogEeSUaeD21Mb5IQ"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_LCHrAHogEeSUaeD21Mb5IQ" type="3013">
+          <styles xmi:type="notation:StringListValueStyle" xmi:id="_S3fr0HogEeSUaeD21Mb5IQ" name="maskLabel">
+            <stringListValue>parametersDirection</stringListValue>
+            <stringListValue>parametersType</stringListValue>
+            <stringListValue>parametersName</stringListValue>
+            <stringListValue>name</stringListValue>
+            <stringListValue>returnType</stringListValue>
+          </styles>
+          <element xmi:type="uml:Operation" href="model.uml#_LCF10HogEeSUaeD21Mb5IQ"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_LCHrAXogEeSUaeD21Mb5IQ"/>
+        </children>
         <styles xmi:type="notation:TitleStyle" xmi:id="_VoD3ZnlOEeSPCdLPklumvw"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_VoD3Z3lOEeSPCdLPklumvw"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_VoD3aHlOEeSPCdLPklumvw"/>

@@ -435,6 +435,9 @@
         <packagedElement xmi:type="uml:Class" xmi:id="_VnoZkHlOEeSPCdLPklumvw" name="Room Type">
           <ownedAttribute xmi:type="uml:Property" xmi:id="_QpBVEHlPEeSPCdLPklumvw" name="RoomTypeName"/>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_n9-pUHlPEeSPCdLPklumvw" name="Description"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_6GDygHofEeSUaeD21Mb5IQ" name="NumberOfAvailableRooms"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_IHDoEHogEeSUaeD21Mb5IQ" name="IncreaseNumberOfAvailableRooms"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_LCF10HogEeSUaeD21Mb5IQ" name="DecreaseNumberOfAvailableRooms"/>
         </packagedElement>
         <packagedElement xmi:type="uml:Association" xmi:id="_ZowFoHlOEeSPCdLPklumvw" name="Has" memberEnd="_ZowFoXlOEeSPCdLPklumvw _ZouQcHlOEeSPCdLPklumvw">
           <ownedEnd xmi:type="uml:Property" xmi:id="_ZowFoXlOEeSPCdLPklumvw" name="room Type" type="_VnoZkHlOEeSPCdLPklumvw" association="_ZowFoHlOEeSPCdLPklumvw">
