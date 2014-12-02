@@ -708,6 +708,7 @@
         <packagedElement xmi:type="uml:Dependency" xmi:id="_XVpO8HocEeSypfm9OOQUYA" client="_Q51pIHocEeSypfm9OOQUYA" supplier="_Oa_oIHocEeSypfm9OOQUYA"/>
         <packagedElement xmi:type="uml:Dependency" xmi:id="_ZEjAwHocEeSypfm9OOQUYA" client="_DBMeUHocEeSypfm9OOQUYA" supplier="_Oa_oIHocEeSypfm9OOQUYA"/>
         <packagedElement xmi:type="uml:Dependency" xmi:id="_bYI0AHocEeSypfm9OOQUYA" client="_DBMeUHocEeSypfm9OOQUYA" supplier="_IaMjUHocEeSypfm9OOQUYA"/>
+        <packagedElement xmi:type="uml:Package" xmi:id="_p5m6wHpbEeS6O5zO6NZCqA" name="Package1"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_KYfmkHodEeSypfm9OOQUYA" name="Components">
         <packagedElement xmi:type="uml:Component" xmi:id="_9a3H8HobEeSypfm9OOQUYA" name="RoomAdministration">
@@ -743,11 +744,56 @@
           </ownedComment>
         </packagedElement>
       </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_tXq9EHpbEeS6O5zO6NZCqA" name="ComponentInterfaces">
+        <packagedElement xmi:type="uml:Interface" xmi:id="_oFVrUHpcEeS6O5zO6NZCqA" name="AdditionalServiceAdmin">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_yhP-oHpeEeS6O5zO6NZCqA" name="createAdditionalService">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_o0ZM4HpgEeS6O5zO6NZCqA" name="name">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_wl-54HpgEeS6O5zO6NZCqA" name="price">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            </ownedParameter>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_17QVcHpgEeS6O5zO6NZCqA" name="maxAttendants">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_zg76AHpeEeS6O5zO6NZCqA" name="editAdditionalService">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_PALygHphEeS6O5zO6NZCqA" name="oldName">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_Re4pkHphEeS6O5zO6NZCqA" name="name">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_Yci_QHphEeS6O5zO6NZCqA" name="price">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            </ownedParameter>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_gOss8HphEeS6O5zO6NZCqA" name="maxAttendants">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_0lDiEHphEeS6O5zO6NZCqA" name="removeAdditionalService">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_6hgSYHphEeS6O5zO6NZCqA" name="name">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_IpGCsHpjEeS6O5zO6NZCqA" name="StuffAdminProvides"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_YlNd8HpfEeS6O5zO6NZCqA" name="AdditionalServiceClient">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_cMd4gHpfEeS6O5zO6NZCqA" name="getAdditionalServiceInfo">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_sr_mAHpfEeS6O5zO6NZCqA" name="name">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_seWBAHpeEeS6O5zO6NZCqA" name="additionalServiceRealisation" client="_IaMjUHocEeSypfm9OOQUYA" supplier="_oFVrUHpcEeS6O5zO6NZCqA" contract="_oFVrUHpcEeS6O5zO6NZCqA"/>
+        <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_6RxfMHpfEeS6O5zO6NZCqA" name="additionalServiceClientRealization" client="_IaMjUHocEeSypfm9OOQUYA" supplier="_YlNd8HpfEeS6O5zO6NZCqA" contract="_YlNd8HpfEeS6O5zO6NZCqA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_KOQxEHpgEeS6O5zO6NZCqA" name="ComponentDiagrams"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Model" xmi:id="_CWxusHokEeSpJvJMK8L-IA" name="BankingModel">
       <packagedElement xmi:type="uml:Component" xmi:id="_CWxusXokEeSpJvJMK8L-IA" name="BankComponent"/>
-      <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_CWxusnokEeSpJvJMK8L-IA" name="Realization1" client="_CWxusXokEeSpJvJMK8L-IA _CWxusXokEeSpJvJMK8L-IA _CWxusXokEeSpJvJMK8L-IA _CWxusXokEeSpJvJMK8L-IA" supplier="_CWxutHokEeSpJvJMK8L-IA _CWxutHokEeSpJvJMK8L-IA _CWxutHokEeSpJvJMK8L-IA _CWxutHokEeSpJvJMK8L-IA" contract="_CWxutHokEeSpJvJMK8L-IA"/>
-      <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_CWxus3okEeSpJvJMK8L-IA" name="Realization0" client="_CWxusXokEeSpJvJMK8L-IA _CWxusXokEeSpJvJMK8L-IA _CWxusXokEeSpJvJMK8L-IA _CWxusXokEeSpJvJMK8L-IA" supplier="_CWxu1nokEeSpJvJMK8L-IA _CWxu1nokEeSpJvJMK8L-IA _CWxu1nokEeSpJvJMK8L-IA _CWxu1nokEeSpJvJMK8L-IA" contract="_CWxu1nokEeSpJvJMK8L-IA"/>
+      <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_CWxusnokEeSpJvJMK8L-IA" name="Realization1" client="_CWxusXokEeSpJvJMK8L-IA" supplier="_CWxutHokEeSpJvJMK8L-IA" contract="_CWxutHokEeSpJvJMK8L-IA"/>
+      <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_CWxus3okEeSpJvJMK8L-IA" name="Realization0" client="_CWxusXokEeSpJvJMK8L-IA" supplier="_CWxu1nokEeSpJvJMK8L-IA" contract="_CWxu1nokEeSpJvJMK8L-IA"/>
       <packagedElement xmi:type="uml:Interface" xmi:id="_CWxutHokEeSpJvJMK8L-IA" name="AdministratorProvides">
         <ownedOperation xmi:type="uml:Operation" xmi:id="_CWxutXokEeSpJvJMK8L-IA" name="makeDeposit">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_CWxutnokEeSpJvJMK8L-IA" name="ccNumber">
