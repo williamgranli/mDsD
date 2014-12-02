@@ -711,7 +711,7 @@
         <packagedElement xmi:type="uml:Package" xmi:id="_p5m6wHpbEeS6O5zO6NZCqA" name="Package1"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_KYfmkHodEeSypfm9OOQUYA" name="Components">
-        <packagedElement xmi:type="uml:Component" xmi:id="_9a3H8HobEeSypfm9OOQUYA" name="RoomAdministration">
+        <packagedElement xmi:type="uml:Component" xmi:id="_9a3H8HobEeSypfm9OOQUYA" name="RoomHandler">
           <ownedComment xmi:type="uml:Comment" xmi:id="_g9RQgHocEeSypfm9OOQUYA">
             <body>Handles adding/editing/deleting rooms. Holds information about rooms and room types.
 </body>
@@ -777,7 +777,44 @@
             </ownedParameter>
           </ownedOperation>
         </packagedElement>
-        <packagedElement xmi:type="uml:Interface" xmi:id="_IpGCsHpjEeS6O5zO6NZCqA" name="StuffAdminProvides"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_IpGCsHpjEeS6O5zO6NZCqA" name="StaffAdminProvides">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_makucHpjEeS6O5zO6NZCqA" name="createAccount">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_TbFwMHpkEeS6O5zO6NZCqA" name="ssn">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_YgjOIHpkEeS6O5zO6NZCqA" name="name">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_b7jVYHpkEeS6O5zO6NZCqA" name="phone">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_fF_4IHpkEeS6O5zO6NZCqA" name="email">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_seDT0HpjEeS6O5zO6NZCqA" name="editAccountDetails">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_kn-S8HpkEeS6O5zO6NZCqA" name="ssn">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_rOy18HpkEeS6O5zO6NZCqA" name="newSSN">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_wzIBMHpkEeS6O5zO6NZCqA" name="name">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_09UwwHpkEeS6O5zO6NZCqA" name="phone">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_6VAnIHpkEeS6O5zO6NZCqA" name="email">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_u6cdwHpjEeS6O5zO6NZCqA" name="removeAccount">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_AW4qAHplEeS6O5zO6NZCqA" name="ssn">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+        </packagedElement>
         <packagedElement xmi:type="uml:Interface" xmi:id="_YlNd8HpfEeS6O5zO6NZCqA" name="AdditionalServiceClient">
           <ownedOperation xmi:type="uml:Operation" xmi:id="_cMd4gHpfEeS6O5zO6NZCqA" name="getAdditionalServiceInfo">
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_sr_mAHpfEeS6O5zO6NZCqA" name="name">
@@ -786,7 +823,48 @@
           </ownedOperation>
         </packagedElement>
         <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_seWBAHpeEeS6O5zO6NZCqA" name="additionalServiceRealisation" client="_IaMjUHocEeSypfm9OOQUYA" supplier="_oFVrUHpcEeS6O5zO6NZCqA" contract="_oFVrUHpcEeS6O5zO6NZCqA"/>
+        <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_rNaOgHpnEeS6O5zO6NZCqA" name="roomAdminRealization" client="_9a3H8HobEeSypfm9OOQUYA" supplier="_hHHwcHpmEeS6O5zO6NZCqA" contract="_hHHwcHpmEeS6O5zO6NZCqA"/>
         <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_6RxfMHpfEeS6O5zO6NZCqA" name="additionalServiceClientRealization" client="_IaMjUHocEeSypfm9OOQUYA" supplier="_YlNd8HpfEeS6O5zO6NZCqA" contract="_YlNd8HpfEeS6O5zO6NZCqA"/>
+        <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_B_7g4HpkEeS6O5zO6NZCqA" name="StaffAdminProvidesRelization" client="__b5yoHobEeSypfm9OOQUYA" supplier="_IpGCsHpjEeS6O5zO6NZCqA" contract="_IpGCsHpjEeS6O5zO6NZCqA"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_hHHwcHpmEeS6O5zO6NZCqA" name="RoomAdminProvides">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_CyYxMHpnEeS6O5zO6NZCqA" name="editRoom">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_IEGtAHpoEeS6O5zO6NZCqA" name="newRoomId">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_210cEHpnEeS6O5zO6NZCqA" name="roomId">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_-IoiYHpnEeS6O5zO6NZCqA" name="price">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            </ownedParameter>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_BB5OgHpoEeS6O5zO6NZCqA" name="useable">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_FDeDAHpnEeS6O5zO6NZCqA" name="createRoom">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_R5IRYHpoEeS6O5zO6NZCqA" name="roomId">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_UuWLAHpoEeS6O5zO6NZCqA" name="price">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            </ownedParameter>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_XSwBcHpoEeS6O5zO6NZCqA" name="useable">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_GOcBUHpnEeS6O5zO6NZCqA" name="removeRoom">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_a6jOkHpoEeS6O5zO6NZCqA" name="roomId">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_4QGeMHpmEeS6O5zO6NZCqA" name="RoomClientProvides">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_ML9vsHpnEeS6O5zO6NZCqA" name="getRoomInfo">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_koyD4HpnEeS6O5zO6NZCqA" name="roomId">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            </ownedParameter>
+          </ownedOperation>
+        </packagedElement>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_KOQxEHpgEeS6O5zO6NZCqA" name="ComponentDiagrams"/>
     </packagedElement>
