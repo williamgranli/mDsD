@@ -703,11 +703,6 @@
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_0xs5wHobEeSypfm9OOQUYA" name="Implementation">
       <packagedElement xmi:type="uml:Package" xmi:id="_FiVI4HodEeSypfm9OOQUYA" name="Dependencies">
-        <packagedElement xmi:type="uml:Dependency" xmi:id="_VnkjkHocEeSypfm9OOQUYA" client="_DBMeUHocEeSypfm9OOQUYA" supplier="_9a3H8HobEeSypfm9OOQUYA"/>
-        <packagedElement xmi:type="uml:Dependency" xmi:id="_WeiAwHocEeSypfm9OOQUYA" client="_Q51pIHocEeSypfm9OOQUYA" supplier="_DBMeUHocEeSypfm9OOQUYA"/>
-        <packagedElement xmi:type="uml:Dependency" xmi:id="_XVpO8HocEeSypfm9OOQUYA" client="_Q51pIHocEeSypfm9OOQUYA" supplier="_Oa_oIHocEeSypfm9OOQUYA"/>
-        <packagedElement xmi:type="uml:Dependency" xmi:id="_ZEjAwHocEeSypfm9OOQUYA" client="_DBMeUHocEeSypfm9OOQUYA" supplier="_Oa_oIHocEeSypfm9OOQUYA"/>
-        <packagedElement xmi:type="uml:Dependency" xmi:id="_bYI0AHocEeSypfm9OOQUYA" client="_DBMeUHocEeSypfm9OOQUYA" supplier="_IaMjUHocEeSypfm9OOQUYA"/>
         <packagedElement xmi:type="uml:Package" xmi:id="_p5m6wHpbEeS6O5zO6NZCqA" name="Package1"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_KYfmkHodEeSypfm9OOQUYA" name="Components">
@@ -744,7 +739,15 @@
             <body>Handles check in/out and keeps tracks of which guests are staying at the hotel at a given point in time.</body>
           </ownedComment>
         </packagedElement>
-        <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_e_mvsHp5EeS6O5zO6NZCqA" name="Realization0" client="_pLxeMHp4EeS6O5zO6NZCqA" supplier="_-wEGEHp4EeS6O5zO6NZCqA" contract="_-wEGEHp4EeS6O5zO6NZCqA"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_34oz4Hp7EeS6O5zO6NZCqA" name="Usage0" client="_DBMeUHocEeSypfm9OOQUYA" supplier="_-wEGEHp4EeS6O5zO6NZCqA"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_7Bs2kHp7EeS6O5zO6NZCqA" name="Usage1" client="__b5yoHobEeSypfm9OOQUYA" supplier="_-wEGEHp4EeS6O5zO6NZCqA"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_9Q4q8Hp7EeS6O5zO6NZCqA" name="Usage2" client="_IaMjUHocEeSypfm9OOQUYA" supplier="_-wEGEHp4EeS6O5zO6NZCqA"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_AJ4RUHp8EeS6O5zO6NZCqA" name="Usage3" client="_DBMeUHocEeSypfm9OOQUYA" supplier="_oFVrUHpcEeS6O5zO6NZCqA"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_I8cTIHp8EeS6O5zO6NZCqA" name="Usage4" client="_DBMeUHocEeSypfm9OOQUYA" supplier="_hHHwcHpmEeS6O5zO6NZCqA"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_NpvIsHp8EeS6O5zO6NZCqA" name="Usage5" client="_Oa_oIHocEeSypfm9OOQUYA" supplier="_5-C0cHprEeS6O5zO6NZCqA"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_T8BmIHp8EeS6O5zO6NZCqA" name="Usage6" client="_Q51pIHocEeSypfm9OOQUYA" supplier="_5-C0cHprEeS6O5zO6NZCqA"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_ZWRBQHp8EeS6O5zO6NZCqA" name="Usage7" client="_DBMeUHocEeSypfm9OOQUYA" supplier="_at5KQHp2EeS6O5zO6NZCqA"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_7hPnYHp9EeS6O5zO6NZCqA" name="Usage8" client="_9a3H8HobEeSypfm9OOQUYA" supplier="_-wEGEHp4EeS6O5zO6NZCqA"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_tXq9EHpbEeS6O5zO6NZCqA" name="ComponentInterfaces">
         <packagedElement xmi:type="uml:Interface" xmi:id="_oFVrUHpcEeS6O5zO6NZCqA" name="AdditionalServiceAdmin">
@@ -827,6 +830,7 @@
         <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_seWBAHpeEeS6O5zO6NZCqA" name="additionalServiceRealisation" client="_IaMjUHocEeSypfm9OOQUYA" supplier="_oFVrUHpcEeS6O5zO6NZCqA" contract="_oFVrUHpcEeS6O5zO6NZCqA"/>
         <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_icspAHp2EeS6O5zO6NZCqA" name="occupancyClientProvides" client="_Q51pIHocEeSypfm9OOQUYA" supplier="_at5KQHp2EeS6O5zO6NZCqA" contract="_at5KQHp2EeS6O5zO6NZCqA"/>
         <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_CrhFcHptEeS6O5zO6NZCqA" name="bookingClientProvidesRealization" client="_DBMeUHocEeSypfm9OOQUYA" supplier="_5-C0cHprEeS6O5zO6NZCqA" contract="_5-C0cHprEeS6O5zO6NZCqA"/>
+        <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_e_mvsHp5EeS6O5zO6NZCqA" name="authenticationClientProvidesRealization" client="_pLxeMHp4EeS6O5zO6NZCqA" supplier="_-wEGEHp4EeS6O5zO6NZCqA" contract="_-wEGEHp4EeS6O5zO6NZCqA"/>
         <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_XAADkHpzEeS6O5zO6NZCqA" name="paymentClientProvidesRealization" client="_Oa_oIHocEeSypfm9OOQUYA" supplier="_x9UbEHpyEeS6O5zO6NZCqA" contract="_x9UbEHpyEeS6O5zO6NZCqA"/>
         <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_rNaOgHpnEeS6O5zO6NZCqA" name="roomAdminRealization" client="_9a3H8HobEeSypfm9OOQUYA" supplier="_hHHwcHpmEeS6O5zO6NZCqA" contract="_hHHwcHpmEeS6O5zO6NZCqA"/>
         <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_6RxfMHpfEeS6O5zO6NZCqA" name="additionalServiceClientRealization" client="_IaMjUHocEeSypfm9OOQUYA" supplier="_YlNd8HpfEeS6O5zO6NZCqA" contract="_YlNd8HpfEeS6O5zO6NZCqA"/>
@@ -1022,8 +1026,6 @@
             </ownedParameter>
           </ownedOperation>
         </packagedElement>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Package" xmi:id="_KOQxEHpgEeS6O5zO6NZCqA" name="ComponentDiagrams">
         <packagedElement xmi:type="uml:Interface" xmi:id="_-wEGEHp4EeS6O5zO6NZCqA" name="authenticationClientProvides">
           <ownedOperation xmi:type="uml:Operation" xmi:id="_C9lPYHp5EeS6O5zO6NZCqA" name="login">
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_K1UnsHp5EeS6O5zO6NZCqA" name="username">
@@ -1040,6 +1042,13 @@
           </ownedOperation>
         </packagedElement>
       </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_KOQxEHpgEeS6O5zO6NZCqA" name="ComponentDiagrams"/>
+      <packagedElement xmi:type="uml:Component" xmi:id="_B2MMsHp9EeS6O5zO6NZCqA" name="Receptioninst"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_FH1joHp9EeS6O5zO6NZCqA" name="Usage0" client="_B2MMsHp9EeS6O5zO6NZCqA" supplier="_5-C0cHprEeS6O5zO6NZCqA"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_GmU64Hp9EeS6O5zO6NZCqA" name="Usage1" client="_B2MMsHp9EeS6O5zO6NZCqA" supplier="_at5KQHp2EeS6O5zO6NZCqA"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_HySXsHp9EeS6O5zO6NZCqA" name="Usage2" client="_B2MMsHp9EeS6O5zO6NZCqA" supplier="_x9UbEHpyEeS6O5zO6NZCqA"/>
+      <packagedElement xmi:type="uml:Component" xmi:id="_Qa0TwHp9EeS6O5zO6NZCqA" name="Administrator"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_SkTIwHp9EeS6O5zO6NZCqA" name="Usage3" client="_Qa0TwHp9EeS6O5zO6NZCqA" supplier="_IpGCsHpjEeS6O5zO6NZCqA"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Model" xmi:id="_CWxusHokEeSpJvJMK8L-IA" name="BankingModel">
       <packagedElement xmi:type="uml:Component" xmi:id="_CWxusXokEeSpJvJMK8L-IA" name="BankComponent"/>
