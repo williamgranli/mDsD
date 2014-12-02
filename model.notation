@@ -850,6 +850,17 @@
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nZvpZHGEEeSrFY1I6Ix49Q"/>
       </children>
       <children xmi:type="notation:BasicCompartment" xmi:id="_nZvpZXGEEeSrFY1I6Ix49Q" type="7018">
+        <children xmi:type="notation:Shape" xmi:id="_5jWBoHoMEeSH5YfPaEQLfA" type="3013">
+          <styles xmi:type="notation:StringListValueStyle" xmi:id="_RUF6AHoNEeSH5YfPaEQLfA" name="maskLabel">
+            <stringListValue>parametersDirection</stringListValue>
+            <stringListValue>parametersType</stringListValue>
+            <stringListValue>parametersName</stringListValue>
+            <stringListValue>name</stringListValue>
+            <stringListValue>returnType</stringListValue>
+          </styles>
+          <element xmi:type="uml:Operation" href="model.uml#_5inB0HoMEeSH5YfPaEQLfA"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_5jWBoXoMEeSH5YfPaEQLfA"/>
+        </children>
         <styles xmi:type="notation:TitleStyle" xmi:id="_nZvpZnGEEeSrFY1I6Ix49Q"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_nZvpZ3GEEeSrFY1I6Ix49Q"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_nZvpaHGEEeSrFY1I6Ix49Q"/>

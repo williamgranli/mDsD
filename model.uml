@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ActionLanguage="http://www.omg.org/spec/ALF/20120827/ActionLanguage-Profile" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.omg.org/spec/ALF/20120827/ActionLanguage-Profile pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_sYse0YZLEeKyw49uR6nx3g">
-  <uml:Model xmi:id="_60blQGTzEeS_fYcbMbH-Fw">
+  <uml:Model xmi:id="_60blQGTzEeS_fYcbMbH-Fw" name="model">
     <packagedElement xmi:type="uml:Package" xmi:id="_AO5VEHmIEeSv8578ohrpjA" name="DomainModel">
       <packagedElement xmi:type="uml:Package" xmi:id="_BlkNEHmIEeSv8578ohrpjA" name="Sub">
         <ownedComment xmi:type="uml:Comment" xmi:id="_kCuxMHlOEeSPCdLPklumvw">
@@ -349,6 +349,7 @@
           <ownedAttribute xmi:type="uml:Property" xmi:id="_PlGE4GUBEeS_fYcbMbH-Fw" name="CheckOutDateTime">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
           </ownedAttribute>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_5inB0HoMEeSH5YfPaEQLfA" name="isCheckedIn"/>
         </packagedElement>
         <packagedElement xmi:type="uml:Association" xmi:id="_vDFj4HGFEeSrFY1I6Ix49Q" name="Is-a" memberEnd="_vDFj4XGFEeSrFY1I6Ix49Q _vDEVwHGFEeSrFY1I6Ix49Q">
           <ownedEnd xmi:type="uml:Property" xmi:id="_vDFj4XGFEeSrFY1I6Ix49Q" name="additional Service Event" type="_SzoJUGT0EeS_fYcbMbH-Fw" association="_vDFj4HGFEeSrFY1I6Ix49Q">
