@@ -1326,6 +1326,62 @@
           <message xmi:type="uml:Message" xmi:id="_Dmg6jXr3EeS3LMpTfhaN6Q" name="inputGuestDetails(guestDetails)" messageSort="asynchCall" receiveEvent="_DmgTXXr3EeS3LMpTfhaN6Q" sendEvent="_DmgTXHr3EeS3LMpTfhaN6Q"/>
           <message xmi:type="uml:Message" xmi:id="_Dmg6jnr3EeS3LMpTfhaN6Q" name="addGuestDetailsToBooking(guestDetails)" messageSort="asynchCall" receiveEvent="_DmgTXnr3EeS3LMpTfhaN6Q" sendEvent="_DmgTW3r3EeS3LMpTfhaN6Q"/>
         </packagedElement>
+        <packagedElement xmi:type="uml:Interaction" xmi:id="_hGmUIHr3EeSmPPX1Zinjmw" name="CheckInGuest">
+          <lifeline xmi:type="uml:Lifeline" xmi:id="_hGmUIXr3EeSmPPX1Zinjmw" name="Receptionist" coveredBy="_hGmUJHr3EeSmPPX1Zinjmw _hGmUJXr3EeSmPPX1Zinjmw _hGmUJ3r3EeSmPPX1Zinjmw _hGmUK3r3EeSmPPX1Zinjmw _hGmUL3r3EeSmPPX1Zinjmw _hGmUM3r3EeSmPPX1Zinjmw _hGmUNXr3EeSmPPX1Zinjmw"/>
+          <lifeline xmi:type="uml:Lifeline" xmi:id="_hGmUInr3EeSmPPX1Zinjmw" name="Booking" coveredBy="_hGmUJHr3EeSmPPX1Zinjmw _hGmUJXr3EeSmPPX1Zinjmw _hGmUKXr3EeSmPPX1Zinjmw"/>
+          <lifeline xmi:type="uml:Lifeline" xmi:id="_hGmUI3r3EeSmPPX1Zinjmw" name="Occupancy" coveredBy="_hGmUMXr3EeSmPPX1Zinjmw _hGmUNHr3EeSmPPX1Zinjmw _hGmUMHr3EeSmPPX1Zinjmw _hGmUMnr3EeSmPPX1Zinjmw _hGmUN3r3EeSmPPX1Zinjmw _hGmUOXr3EeSmPPX1Zinjmw _hGmUNnr3EeSmPPX1Zinjmw _hGmUOHr3EeSmPPX1Zinjmw _hGmUOnr3EeSmPPX1Zinjmw"/>
+          <fragment xmi:type="uml:CombinedFragment" xmi:id="_hGmUJHr3EeSmPPX1Zinjmw" name="CombinedFragment" covered="_hGmUIXr3EeSmPPX1Zinjmw _hGmUInr3EeSmPPX1Zinjmw" interactionOperator="loop">
+            <operand xmi:type="uml:InteractionOperand" xmi:id="_hGmUJXr3EeSmPPX1Zinjmw" name="InteractionOperand" covered="_hGmUIXr3EeSmPPX1Zinjmw _hGmUInr3EeSmPPX1Zinjmw">
+              <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_hGmUJnr3EeSmPPX1Zinjmw" name="BehaviorExecSpecStart" execution="_hGmUKHr3EeSmPPX1Zinjmw"/>
+              <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_hGmUJ3r3EeSmPPX1Zinjmw" name="MessageSend" covered="_hGmUIXr3EeSmPPX1Zinjmw" message="_hGmUO3r3EeSmPPX1Zinjmw"/>
+              <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_hGmUKHr3EeSmPPX1Zinjmw" name="BehaviorExecSpec" finish="_hGmULHr3EeSmPPX1Zinjmw" start="_hGmUJnr3EeSmPPX1Zinjmw"/>
+              <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_hGmUKXr3EeSmPPX1Zinjmw" name="MessageRecv" covered="_hGmUInr3EeSmPPX1Zinjmw" message="_hGmUO3r3EeSmPPX1Zinjmw"/>
+              <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_hGmUKnr3EeSmPPX1Zinjmw" name="MessageSend0" message="_hGmUPXr3EeSmPPX1Zinjmw"/>
+              <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_hGmUK3r3EeSmPPX1Zinjmw" name="MessageRecv0" covered="_hGmUIXr3EeSmPPX1Zinjmw" message="_hGmUPXr3EeSmPPX1Zinjmw"/>
+              <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_hGmULHr3EeSmPPX1Zinjmw" name="BehaviorExecSpecFinish" execution="_hGmUKHr3EeSmPPX1Zinjmw"/>
+              <guard xmi:type="uml:InteractionConstraint" xmi:id="_hGmULXr3EeSmPPX1Zinjmw" name="confirmation">
+                <specification xmi:type="uml:LiteralString" xmi:id="_hGmULnr3EeSmPPX1Zinjmw" value="confirmation=null"/>
+              </guard>
+            </operand>
+          </fragment>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_hGmUL3r3EeSmPPX1Zinjmw" name="MessageSend" covered="_hGmUIXr3EeSmPPX1Zinjmw" message="_hGmUPnr3EeSmPPX1Zinjmw"/>
+          <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_hGmUMHr3EeSmPPX1Zinjmw" name="BehaviorExecSpec" covered="_hGmUI3r3EeSmPPX1Zinjmw" finish="_hGmUNHr3EeSmPPX1Zinjmw" start="_hGmUMXr3EeSmPPX1Zinjmw"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_hGmUMXr3EeSmPPX1Zinjmw" name="MessageRecv" covered="_hGmUI3r3EeSmPPX1Zinjmw" message="_hGmUPnr3EeSmPPX1Zinjmw"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_hGmUMnr3EeSmPPX1Zinjmw" name="MessageSend0" covered="_hGmUI3r3EeSmPPX1Zinjmw" message="_hGmUQHr3EeSmPPX1Zinjmw"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_hGmUM3r3EeSmPPX1Zinjmw" name="MessageRecv0" covered="_hGmUIXr3EeSmPPX1Zinjmw" message="_hGmUQHr3EeSmPPX1Zinjmw"/>
+          <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_hGmUNHr3EeSmPPX1Zinjmw" name="BehaviorExecSpecFinish" covered="_hGmUI3r3EeSmPPX1Zinjmw" execution="_hGmUMHr3EeSmPPX1Zinjmw"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_hGmUNXr3EeSmPPX1Zinjmw" name="MessageSend1" covered="_hGmUIXr3EeSmPPX1Zinjmw" message="_hGmUQXr3EeSmPPX1Zinjmw"/>
+          <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_hGmUNnr3EeSmPPX1Zinjmw" name="BehaviorExecSpec0" covered="_hGmUI3r3EeSmPPX1Zinjmw" finish="_hGmUOXr3EeSmPPX1Zinjmw" start="_hGmUN3r3EeSmPPX1Zinjmw"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_hGmUN3r3EeSmPPX1Zinjmw" name="MessageRecv1" covered="_hGmUI3r3EeSmPPX1Zinjmw" message="_hGmUQXr3EeSmPPX1Zinjmw"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_hGmUOHr3EeSmPPX1Zinjmw" name="MessageSend2" covered="_hGmUI3r3EeSmPPX1Zinjmw" message="_hGmURHr3EeSmPPX1Zinjmw"/>
+          <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_hGmUOXr3EeSmPPX1Zinjmw" name="BehaviorExecSpec0Finish" covered="_hGmUI3r3EeSmPPX1Zinjmw" execution="_hGmUNnr3EeSmPPX1Zinjmw"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_hGmUOnr3EeSmPPX1Zinjmw" name="MessageRecv2" covered="_hGmUI3r3EeSmPPX1Zinjmw" message="_hGmURHr3EeSmPPX1Zinjmw"/>
+          <message xmi:type="uml:Message" xmi:id="_hGmUO3r3EeSmPPX1Zinjmw" name="getBookingInfo" messageSort="asynchCall" receiveEvent="_hGmUKXr3EeSmPPX1Zinjmw" sendEvent="_hGmUJ3r3EeSmPPX1Zinjmw">
+            <argument xmi:type="uml:StringExpression" xmi:id="_hGmUPHr3EeSmPPX1Zinjmw" name="bookRef">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+            </argument>
+          </message>
+          <message xmi:type="uml:Message" xmi:id="_hGmUPXr3EeSmPPX1Zinjmw" name="confirmation" messageSort="reply" receiveEvent="_hGmUK3r3EeSmPPX1Zinjmw" sendEvent="_hGmUKnr3EeSmPPX1Zinjmw"/>
+          <message xmi:type="uml:Message" xmi:id="_hGmUPnr3EeSmPPX1Zinjmw" name="setCheckInDate" messageSort="asynchCall" receiveEvent="_hGmUMXr3EeSmPPX1Zinjmw" sendEvent="_hGmUL3r3EeSmPPX1Zinjmw">
+            <argument xmi:type="uml:TimeExpression" xmi:id="_hGmUP3r3EeSmPPX1Zinjmw" name="currentDate">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+            </argument>
+          </message>
+          <message xmi:type="uml:Message" xmi:id="_hGmUQHr3EeSmPPX1Zinjmw" name="«roomNumberList»" messageSort="reply" receiveEvent="_hGmUM3r3EeSmPPX1Zinjmw" sendEvent="_hGmUMnr3EeSmPPX1Zinjmw"/>
+          <message xmi:type="uml:Message" xmi:id="_hGmUQXr3EeSmPPX1Zinjmw" name="assignRoom" messageSort="asynchCall" receiveEvent="_hGmUN3r3EeSmPPX1Zinjmw" sendEvent="_hGmUNXr3EeSmPPX1Zinjmw">
+            <argument xmi:type="uml:Expression" xmi:id="_hGmUQnr3EeSmPPX1Zinjmw" name="roomNumber">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+            </argument>
+            <argument xmi:type="uml:StringExpression" xmi:id="_hGmUQ3r3EeSmPPX1Zinjmw" name="guestName">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+            </argument>
+          </message>
+          <message xmi:type="uml:Message" xmi:id="_hGmURHr3EeSmPPX1Zinjmw" name="markRoomUnavailable" messageSort="asynchCall" receiveEvent="_hGmUOnr3EeSmPPX1Zinjmw" sendEvent="_hGmUOHr3EeSmPPX1Zinjmw">
+            <argument xmi:type="uml:Expression" xmi:id="_hGmURXr3EeSmPPX1Zinjmw" name="roomNumber">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+            </argument>
+          </message>
+        </packagedElement>
       </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Model" xmi:id="_CWxusHokEeSpJvJMK8L-IA" name="BankingModel">
