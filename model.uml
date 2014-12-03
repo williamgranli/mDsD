@@ -1146,6 +1146,41 @@
         </packagedElement>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_KOQxEHpgEeS6O5zO6NZCqA" name="InterfaceDiagrams"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_iYzgsHroEeSE6fe6aSz6Dw" name="SequenceDiagrams">
+        <packagedElement xmi:type="uml:Interaction" xmi:id="_pkENgHroEeSE6fe6aSz6Dw" name="Booking">
+          <lifeline xmi:type="uml:Lifeline" xmi:id="_pkENgXroEeSE6fe6aSz6Dw" name="Customer" visibility="public" coveredBy="_pkENinroEeSE6fe6aSz6Dw _pkENi3roEeSE6fe6aSz6Dw _pkENhnroEeSE6fe6aSz6Dw _pkENh3roEeSE6fe6aSz6Dw _pkENjHroEeSE6fe6aSz6Dw"/>
+          <lifeline xmi:type="uml:Lifeline" xmi:id="_pkENgnroEeSE6fe6aSz6Dw" name="BookingComponent" coveredBy="_pkENlXroEeSE6fe6aSz6Dw _pkENhXroEeSE6fe6aSz6Dw _pkENinroEeSE6fe6aSz6Dw _pkENi3roEeSE6fe6aSz6Dw _pkENiHroEeSE6fe6aSz6Dw _pkENiXroEeSE6fe6aSz6Dw"/>
+          <lifeline xmi:type="uml:Lifeline" xmi:id="_pkENg3roEeSE6fe6aSz6Dw" name="PaymentHandler" coveredBy="_pkENinroEeSE6fe6aSz6Dw _pkENi3roEeSE6fe6aSz6Dw"/>
+          <lifeline xmi:type="uml:Lifeline" xmi:id="_pkENhHroEeSE6fe6aSz6Dw" name="Bank" coveredBy="_pkENinroEeSE6fe6aSz6Dw _pkENi3roEeSE6fe6aSz6Dw"/>
+          <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_pkENhXroEeSE6fe6aSz6Dw" name="ActionExecSpec1" visibility="public" covered="_pkENgnroEeSE6fe6aSz6Dw" finish="_pkENlXroEeSE6fe6aSz6Dw" start="_pkENlnroEeSE6fe6aSz6Dw"/>
+          <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_pkENhnroEeSE6fe6aSz6Dw" name="CustomerDuration" visibility="public" covered="_pkENgXroEeSE6fe6aSz6Dw"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_pkENh3roEeSE6fe6aSz6Dw" name="Message1Send" covered="_pkENgXroEeSE6fe6aSz6Dw" message="_pkENmXroEeSE6fe6aSz6Dw"/>
+          <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_pkENiHroEeSE6fe6aSz6Dw" name="ActionExecSpec2" covered="_pkENgnroEeSE6fe6aSz6Dw" finish="_pkENkHroEeSE6fe6aSz6Dw" start="_pkENiXroEeSE6fe6aSz6Dw"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_pkENiXroEeSE6fe6aSz6Dw" name="Message1Recv" covered="_pkENgnroEeSE6fe6aSz6Dw" message="_pkENmXroEeSE6fe6aSz6Dw"/>
+          <fragment xmi:type="uml:CombinedFragment" xmi:id="_pkENinroEeSE6fe6aSz6Dw" name="notFinished = true" covered="_pkENgXroEeSE6fe6aSz6Dw _pkENhHroEeSE6fe6aSz6Dw _pkENg3roEeSE6fe6aSz6Dw _pkENgnroEeSE6fe6aSz6Dw" interactionOperator="loop">
+            <operand xmi:type="uml:InteractionOperand" xmi:id="_pkENi3roEeSE6fe6aSz6Dw" name="RoomSelection" visibility="public" covered="_pkENgXroEeSE6fe6aSz6Dw _pkENhHroEeSE6fe6aSz6Dw _pkENg3roEeSE6fe6aSz6Dw _pkENgnroEeSE6fe6aSz6Dw">
+              <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_pkENjHroEeSE6fe6aSz6Dw" name="Message1Send" covered="_pkENgXroEeSE6fe6aSz6Dw" message="_pkENmnroEeSE6fe6aSz6Dw"/>
+              <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_pkENjXroEeSE6fe6aSz6Dw" name="Message1Recv" message="_pkENmnroEeSE6fe6aSz6Dw"/>
+              <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_pkENjnroEeSE6fe6aSz6Dw" name="Message1Send1" message="_pkENnHroEeSE6fe6aSz6Dw"/>
+              <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_pkENj3roEeSE6fe6aSz6Dw" name="Message1Recv1" message="_pkENnHroEeSE6fe6aSz6Dw"/>
+              <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_pkENkHroEeSE6fe6aSz6Dw" name="ActionExecSpec2Finish" execution="_pkENiHroEeSE6fe6aSz6Dw"/>
+              <guard xmi:type="uml:InteractionConstraint" xmi:id="_pkENkXroEeSE6fe6aSz6Dw" name="RoomSelection">
+                <specification xmi:type="uml:LiteralString" xmi:id="_pkENknroEeSE6fe6aSz6Dw" value="notFound = true"/>
+                <minint xmi:type="uml:LiteralInteger" xmi:id="_pkENk3roEeSE6fe6aSz6Dw"/>
+              </guard>
+            </operand>
+          </fragment>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_pkENlHroEeSE6fe6aSz6Dw" name="Message1Send0" message="_pkENm3roEeSE6fe6aSz6Dw"/>
+          <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_pkENlXroEeSE6fe6aSz6Dw" name="ActionExecSpec1Finish" covered="_pkENgnroEeSE6fe6aSz6Dw" execution="_pkENhXroEeSE6fe6aSz6Dw"/>
+          <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_pkENlnroEeSE6fe6aSz6Dw" name="ActionExecSpec1Start" execution="_pkENhXroEeSE6fe6aSz6Dw"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_pkENl3roEeSE6fe6aSz6Dw" name="Message1Recv0" message="_pkENm3roEeSE6fe6aSz6Dw"/>
+          <message xmi:type="uml:Message" xmi:id="_pkENmHroEeSE6fe6aSz6Dw" name="Message0" messageSort="asynchCall"/>
+          <message xmi:type="uml:Message" xmi:id="_pkENmXroEeSE6fe6aSz6Dw" name="createBooking()" messageSort="asynchCall" receiveEvent="_pkENiXroEeSE6fe6aSz6Dw" sendEvent="_pkENh3roEeSE6fe6aSz6Dw"/>
+          <message xmi:type="uml:Message" xmi:id="_pkENmnroEeSE6fe6aSz6Dw" name="selectRoomType(type)" messageSort="asynchCall" receiveEvent="_pkENjXroEeSE6fe6aSz6Dw" sendEvent="_pkENjHroEeSE6fe6aSz6Dw"/>
+          <message xmi:type="uml:Message" xmi:id="_pkENm3roEeSE6fe6aSz6Dw" name="addSelectedRoomType(type)" messageSort="asynchCall" receiveEvent="_pkENl3roEeSE6fe6aSz6Dw" sendEvent="_pkENlHroEeSE6fe6aSz6Dw"/>
+          <message xmi:type="uml:Message" xmi:id="_pkENnHroEeSE6fe6aSz6Dw" name="decrementAvailableRooms()" messageSort="asynchCall" receiveEvent="_pkENj3roEeSE6fe6aSz6Dw" sendEvent="_pkENjnroEeSE6fe6aSz6Dw"/>
+        </packagedElement>
+      </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Model" xmi:id="_CWxusHokEeSpJvJMK8L-IA" name="BankingModel">
       <packagedElement xmi:type="uml:Component" xmi:id="_CWxusXokEeSpJvJMK8L-IA" name="BankComponent"/>
