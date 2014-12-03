@@ -703,7 +703,10 @@
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_0xs5wHobEeSypfm9OOQUYA" name="Implementation">
       <packagedElement xmi:type="uml:Package" xmi:id="_FiVI4HodEeSypfm9OOQUYA" name="Dependencies">
-        <packagedElement xmi:type="uml:Package" xmi:id="_p5m6wHpbEeS6O5zO6NZCqA" name="Package1"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_FH1joHp9EeS6O5zO6NZCqA" name="Usage0" client="_B2MMsHp9EeS6O5zO6NZCqA" supplier="_5-C0cHprEeS6O5zO6NZCqA"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_GmU64Hp9EeS6O5zO6NZCqA" name="Usage1" client="_B2MMsHp9EeS6O5zO6NZCqA" supplier="_at5KQHp2EeS6O5zO6NZCqA"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_HySXsHp9EeS6O5zO6NZCqA" name="Usage2" client="_B2MMsHp9EeS6O5zO6NZCqA" supplier="_x9UbEHpyEeS6O5zO6NZCqA"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_SkTIwHp9EeS6O5zO6NZCqA" name="Usage3" client="_Qa0TwHp9EeS6O5zO6NZCqA" supplier="_IpGCsHpjEeS6O5zO6NZCqA"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_KYfmkHodEeSypfm9OOQUYA" name="Components">
         <packagedElement xmi:type="uml:Component" xmi:id="_9a3H8HobEeSypfm9OOQUYA" name="Room">
@@ -751,6 +754,8 @@
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_tXq9EHpbEeS6O5zO6NZCqA" name="ComponentInterfaces">
         <packagedElement xmi:type="uml:Interface" xmi:id="_oFVrUHpcEeS6O5zO6NZCqA" name="AdditionalServiceAdmin">
+          <nestedClassifier xmi:type="uml:Component" xmi:id="_B2MMsHp9EeS6O5zO6NZCqA" name="Receptionist"/>
+          <nestedClassifier xmi:type="uml:Component" xmi:id="_Qa0TwHp9EeS6O5zO6NZCqA" name="Administrator"/>
           <ownedOperation xmi:type="uml:Operation" xmi:id="_yhP-oHpeEeS6O5zO6NZCqA" name="createAdditionalService">
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_o0ZM4HpgEeS6O5zO6NZCqA" name="name">
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
@@ -1043,12 +1048,6 @@
         </packagedElement>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_KOQxEHpgEeS6O5zO6NZCqA" name="ComponentDiagrams"/>
-      <packagedElement xmi:type="uml:Component" xmi:id="_B2MMsHp9EeS6O5zO6NZCqA" name="Receptioninst"/>
-      <packagedElement xmi:type="uml:Usage" xmi:id="_FH1joHp9EeS6O5zO6NZCqA" name="Usage0" client="_B2MMsHp9EeS6O5zO6NZCqA" supplier="_5-C0cHprEeS6O5zO6NZCqA"/>
-      <packagedElement xmi:type="uml:Usage" xmi:id="_GmU64Hp9EeS6O5zO6NZCqA" name="Usage1" client="_B2MMsHp9EeS6O5zO6NZCqA" supplier="_at5KQHp2EeS6O5zO6NZCqA"/>
-      <packagedElement xmi:type="uml:Usage" xmi:id="_HySXsHp9EeS6O5zO6NZCqA" name="Usage2" client="_B2MMsHp9EeS6O5zO6NZCqA" supplier="_x9UbEHpyEeS6O5zO6NZCqA"/>
-      <packagedElement xmi:type="uml:Component" xmi:id="_Qa0TwHp9EeS6O5zO6NZCqA" name="Administrator"/>
-      <packagedElement xmi:type="uml:Usage" xmi:id="_SkTIwHp9EeS6O5zO6NZCqA" name="Usage3" client="_Qa0TwHp9EeS6O5zO6NZCqA" supplier="_IpGCsHpjEeS6O5zO6NZCqA"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Model" xmi:id="_CWxusHokEeSpJvJMK8L-IA" name="BankingModel">
       <packagedElement xmi:type="uml:Component" xmi:id="_CWxusXokEeSpJvJMK8L-IA" name="BankComponent"/>
