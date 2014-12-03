@@ -741,12 +741,36 @@
           <ownedComment xmi:type="uml:Comment" xmi:id="_oXaG0HocEeSypfm9OOQUYA">
             <body>Handles check in/out and keeps tracks of which guests are staying at the hotel at a given point in time.</body>
           </ownedComment>
+          <packagedElement xmi:type="uml:Class" xmi:id="_EmPN0Hr-EeS88peCe4NMnw" name="occupancyProxy">
+            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_iZjsoHr-EeS88peCe4NMnw" client="_EmPN0Hr-EeS88peCe4NMnw" supplier="_at5KQHp2EeS6O5zO6NZCqA" contract="_at5KQHp2EeS6O5zO6NZCqA"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_qWr7QHr-EeS88peCe4NMnw" name="checkInGuest">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_2rFsIHr-EeS88peCe4NMnw" name="bookingReference">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_63TN4Hr-EeS88peCe4NMnw" name="guestName">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_shmToHr-EeS88peCe4NMnw" name="checkOutGuest">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_9erf0Hr-EeS88peCe4NMnw" name="bookingReference">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_AhKZYHr_EeS88peCe4NMnw" name="guestName">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_DJGsAHr_EeS88peCe4NMnw" name="CheckInGuestHandler"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_N7nMUHr_EeS88peCe4NMnw" name="CheckOutGuestHandler"/>
+          <packagedElement xmi:type="uml:Component" xmi:id="_XotHQHsAEeS88peCe4NMnw" name="Component1"/>
         </packagedElement>
         <packagedElement xmi:type="uml:Component" xmi:id="_32tNsHrdEeSyBKqr79uWFQ" name="Customer"/>
         <packagedElement xmi:type="uml:Component" xmi:id="_B2MMsHp9EeS6O5zO6NZCqA" name="Receptionist"/>
         <packagedElement xmi:type="uml:Component" xmi:id="_Qa0TwHp9EeS6O5zO6NZCqA" name="Administrator"/>
         <packagedElement xmi:type="uml:Usage" xmi:id="_S-lNYHrzEeSCzp55akTC6w" name="Usage10" client="_Qa0TwHp9EeS6O5zO6NZCqA" supplier="_hHHwcHpmEeS6O5zO6NZCqA"/>
         <packagedElement xmi:type="uml:Usage" xmi:id="_m3MWkHrzEeSCzp55akTC6w" name="Usage101" client="_Qa0TwHp9EeS6O5zO6NZCqA" supplier="_oFVrUHpcEeS6O5zO6NZCqA"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="_b0uRMHr_EeS88peCe4NMnw" client="_EmPN0Hr-EeS88peCe4NMnw" supplier="_DJGsAHr_EeS88peCe4NMnw"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="_cgXPMHr_EeS88peCe4NMnw" client="_EmPN0Hr-EeS88peCe4NMnw" supplier="_N7nMUHr_EeS88peCe4NMnw"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_tXq9EHpbEeS6O5zO6NZCqA" name="InterfaceClasses">
         <packagedElement xmi:type="uml:Interface" xmi:id="_oFVrUHpcEeS6O5zO6NZCqA" name="AdditionalServiceAdmin">
