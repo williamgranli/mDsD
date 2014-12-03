@@ -1382,7 +1382,7 @@
             </argument>
           </message>
         </packagedElement>
-        <packagedElement xmi:type="uml:Interaction" xmi:id="_AJnOUHr6EeScgfQ_AHMzFA" name="check-out">
+        <packagedElement xmi:type="uml:Interaction" xmi:id="_AJnOUHr6EeScgfQ_AHMzFA" name="CheckOutGuest">
           <lifeline xmi:type="uml:Lifeline" xmi:id="_AJnOUXr6EeScgfQ_AHMzFA" name="Receptionist" visibility="public" coveredBy="_AJnOVnr6EeScgfQ_AHMzFA _AJnOWXr6EeScgfQ_AHMzFA _AJnOY3r6EeScgfQ_AHMzFA _AJnObnr6EeScgfQ_AHMzFA _AJnOYHr6EeScgfQ_AHMzFA _AJnOWnr6EeScgfQ_AHMzFA _AJnOYXr6EeScgfQ_AHMzFA _AJnOW3r6EeScgfQ_AHMzFA _AJnOcnr6EeScgfQ_AHMzFA _AJnOc3r6EeScgfQ_AHMzFA"/>
           <lifeline xmi:type="uml:Lifeline" xmi:id="_AJnOUnr6EeScgfQ_AHMzFA" name="Occupancy handler" coveredBy="_AJnOWnr6EeScgfQ_AHMzFA _AJnOW3r6EeScgfQ_AHMzFA _AJnOYHr6EeScgfQ_AHMzFA _AJnOYXr6EeScgfQ_AHMzFA _AJnOZ3r6EeScgfQ_AHMzFA _AJnOcnr6EeScgfQ_AHMzFA _AJnOc3r6EeScgfQ_AHMzFA"/>
           <lifeline xmi:type="uml:Lifeline" xmi:id="_AJnOU3r6EeScgfQ_AHMzFA" name="Booking handler" coveredBy="_AJnOV3r6EeScgfQ_AHMzFA _AJnOWnr6EeScgfQ_AHMzFA _AJnOW3r6EeScgfQ_AHMzFA _AJnOWHr6EeScgfQ_AHMzFA _AJnOYHr6EeScgfQ_AHMzFA _AJnOYXr6EeScgfQ_AHMzFA _AJnOYnr6EeScgfQ_AHMzFA _AJnOZHr6EeScgfQ_AHMzFA _AJnOZXr6EeScgfQ_AHMzFA _AJnOZnr6EeScgfQ_AHMzFA _AJnOaHr6EeScgfQ_AHMzFA _AJnOaXr6EeScgfQ_AHMzFA _AJnObHr6EeScgfQ_AHMzFA _AJnOcnr6EeScgfQ_AHMzFA _AJnOc3r6EeScgfQ_AHMzFA"/>
@@ -1453,6 +1453,81 @@
           <message xmi:type="uml:Message" xmi:id="_AJnOi3r6EeScgfQ_AHMzFA" name="createPayment(cc, amount)" messageSort="asynchCall" receiveEvent="_AJnOeXr6EeScgfQ_AHMzFA" sendEvent="_AJnOd3r6EeScgfQ_AHMzFA"/>
           <message xmi:type="uml:Message" xmi:id="_AJnOjHr6EeScgfQ_AHMzFA" name="handlePayment(cc, amount)" messageSort="asynchCall" receiveEvent="_AJnOfHr6EeScgfQ_AHMzFA" sendEvent="_AJnOe3r6EeScgfQ_AHMzFA"/>
           <message xmi:type="uml:Message" xmi:id="_AJnOjXr6EeScgfQ_AHMzFA" name="generateReceipt(paymentDetails)" messageSort="asynchCall" receiveEvent="_AJnOfXr6EeScgfQ_AHMzFA" sendEvent="_AJnOenr6EeScgfQ_AHMzFA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Interaction" xmi:id="_xC21IHr6EeSGZ9gr3LHnRg" name="Cancel Booking">
+          <lifeline xmi:type="uml:Lifeline" xmi:id="_xC21IXr6EeSGZ9gr3LHnRg" name="c:Customer" coveredBy="_xC21KHr6EeSGZ9gr3LHnRg _xC21KXr6EeSGZ9gr3LHnRg _xC21Knr6EeSGZ9gr3LHnRg _xC21L3r6EeSGZ9gr3LHnRg _xC21M3r6EeSGZ9gr3LHnRg _xC21NHr6EeSGZ9gr3LHnRg _xC21PXr6EeSGZ9gr3LHnRg _xC21VXr6EeSGZ9gr3LHnRg"/>
+          <lifeline xmi:type="uml:Lifeline" xmi:id="_xC21Inr6EeSGZ9gr3LHnRg" name=":BookingComponent" coveredBy="_xC21K3r6EeSGZ9gr3LHnRg _xC21LHr6EeSGZ9gr3LHnRg _xC21LXr6EeSGZ9gr3LHnRg _xC21Lnr6EeSGZ9gr3LHnRg _xC21Mnr6EeSGZ9gr3LHnRg _xC21NXr6EeSGZ9gr3LHnRg _xC21Nnr6EeSGZ9gr3LHnRg _xC21N3r6EeSGZ9gr3LHnRg _xC21KHr6EeSGZ9gr3LHnRg _xC21KXr6EeSGZ9gr3LHnRg _xC21Qnr6EeSGZ9gr3LHnRg _xC21SXr6EeSGZ9gr3LHnRg _xC21QHr6EeSGZ9gr3LHnRg _xC21QXr6EeSGZ9gr3LHnRg _xC21Tnr6EeSGZ9gr3LHnRg _xC21T3r6EeSGZ9gr3LHnRg _xC21UHr6EeSGZ9gr3LHnRg _xC21J3r6EeSGZ9gr3LHnRg _xC21Onr6EeSGZ9gr3LHnRg"/>
+          <lifeline xmi:type="uml:Lifeline" xmi:id="_xC21I3r6EeSGZ9gr3LHnRg" name=":PaymentHandler" coveredBy="_xC21R3r6EeSGZ9gr3LHnRg _xC21RHr6EeSGZ9gr3LHnRg _xC21Q3r6EeSGZ9gr3LHnRg _xC21SHr6EeSGZ9gr3LHnRg _xC21QHr6EeSGZ9gr3LHnRg _xC21QXr6EeSGZ9gr3LHnRg _xC21Tnr6EeSGZ9gr3LHnRg"/>
+          <lifeline xmi:type="uml:Lifeline" xmi:id="_xC21JHr6EeSGZ9gr3LHnRg" name=":Bank" coveredBy="_xC21Rnr6EeSGZ9gr3LHnRg _xC21RXr6EeSGZ9gr3LHnRg _xC21QHr6EeSGZ9gr3LHnRg _xC21QXr6EeSGZ9gr3LHnRg _xC21Tnr6EeSGZ9gr3LHnRg"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_xC21JXr6EeSGZ9gr3LHnRg" name="MessageRecv1"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_xC21Jnr6EeSGZ9gr3LHnRg" name="Message2Send"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_xC21J3r6EeSGZ9gr3LHnRg" name="MessageRecv7" covered="_xC21Inr6EeSGZ9gr3LHnRg"/>
+          <fragment xmi:type="uml:CombinedFragment" xmi:id="_xC21KHr6EeSGZ9gr3LHnRg" name="CombinedFragment" covered="_xC21IXr6EeSGZ9gr3LHnRg _xC21Inr6EeSGZ9gr3LHnRg" interactionOperator="loop">
+            <operand xmi:type="uml:InteractionOperand" xmi:id="_xC21KXr6EeSGZ9gr3LHnRg" name="InteractionOperand" covered="_xC21IXr6EeSGZ9gr3LHnRg _xC21Inr6EeSGZ9gr3LHnRg">
+              <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_xC21Knr6EeSGZ9gr3LHnRg" name="Message1Send" covered="_xC21IXr6EeSGZ9gr3LHnRg" message="_xC21Vnr6EeSGZ9gr3LHnRg"/>
+              <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_xC21K3r6EeSGZ9gr3LHnRg" name="Message1Recv" covered="_xC21Inr6EeSGZ9gr3LHnRg" message="_xC21Vnr6EeSGZ9gr3LHnRg"/>
+              <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_xC21LHr6EeSGZ9gr3LHnRg" name="Message1Send0" covered="_xC21Inr6EeSGZ9gr3LHnRg" message="_xC21V3r6EeSGZ9gr3LHnRg"/>
+              <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_xC21LXr6EeSGZ9gr3LHnRg" name="Message1Recv0" covered="_xC21Inr6EeSGZ9gr3LHnRg" message="_xC21V3r6EeSGZ9gr3LHnRg"/>
+              <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_xC21Lnr6EeSGZ9gr3LHnRg" name="Message1Send1" covered="_xC21Inr6EeSGZ9gr3LHnRg" message="_xC21WHr6EeSGZ9gr3LHnRg"/>
+              <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_xC21L3r6EeSGZ9gr3LHnRg" name="Message1Recv1" covered="_xC21IXr6EeSGZ9gr3LHnRg" message="_xC21WHr6EeSGZ9gr3LHnRg"/>
+              <guard xmi:type="uml:InteractionConstraint" xmi:id="_xC21MHr6EeSGZ9gr3LHnRg">
+                <specification xmi:type="uml:LiteralString" xmi:id="_xC21MXr6EeSGZ9gr3LHnRg" value="while checkValid()==false"/>
+              </guard>
+            </operand>
+          </fragment>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_xC21Mnr6EeSGZ9gr3LHnRg" name="Message1Send" covered="_xC21Inr6EeSGZ9gr3LHnRg" message="_xC21WXr6EeSGZ9gr3LHnRg"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_xC21M3r6EeSGZ9gr3LHnRg" name="Message1Recv" covered="_xC21IXr6EeSGZ9gr3LHnRg" message="_xC21WXr6EeSGZ9gr3LHnRg"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_xC21NHr6EeSGZ9gr3LHnRg" name="Message1Send0" covered="_xC21IXr6EeSGZ9gr3LHnRg" message="_xC21Wnr6EeSGZ9gr3LHnRg"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_xC21NXr6EeSGZ9gr3LHnRg" name="Message1Recv0" covered="_xC21Inr6EeSGZ9gr3LHnRg" message="_xC21Wnr6EeSGZ9gr3LHnRg"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_xC21Nnr6EeSGZ9gr3LHnRg" name="Message1Send1" covered="_xC21Inr6EeSGZ9gr3LHnRg" message="_xC21W3r6EeSGZ9gr3LHnRg"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_xC21N3r6EeSGZ9gr3LHnRg" name="Message1Recv1" covered="_xC21Inr6EeSGZ9gr3LHnRg" message="_xC21W3r6EeSGZ9gr3LHnRg"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_xC21OHr6EeSGZ9gr3LHnRg" name="MessageSend1"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_xC21OXr6EeSGZ9gr3LHnRg" name="MessageSend0"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_xC21Onr6EeSGZ9gr3LHnRg" name="MessageSend8" covered="_xC21Inr6EeSGZ9gr3LHnRg" message="_xC21YXr6EeSGZ9gr3LHnRg"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_xC21O3r6EeSGZ9gr3LHnRg" name="MessageRecv6"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_xC21PHr6EeSGZ9gr3LHnRg" name="Message2Recv"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_xC21PXr6EeSGZ9gr3LHnRg" name="MessageSend7" covered="_xC21IXr6EeSGZ9gr3LHnRg"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_xC21Pnr6EeSGZ9gr3LHnRg" name="MessageSend6"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_xC21P3r6EeSGZ9gr3LHnRg" name="MessageRecv0"/>
+          <fragment xmi:type="uml:CombinedFragment" xmi:id="_xC21QHr6EeSGZ9gr3LHnRg" name="CombinedFragment0" covered="_xC21I3r6EeSGZ9gr3LHnRg _xC21Inr6EeSGZ9gr3LHnRg _xC21JHr6EeSGZ9gr3LHnRg" interactionOperator="alt">
+            <operand xmi:type="uml:InteractionOperand" xmi:id="_xC21QXr6EeSGZ9gr3LHnRg" name="InteractionOperand" covered="_xC21I3r6EeSGZ9gr3LHnRg _xC21Inr6EeSGZ9gr3LHnRg _xC21JHr6EeSGZ9gr3LHnRg">
+              <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_xC21Qnr6EeSGZ9gr3LHnRg" name="MessageSend4" covered="_xC21Inr6EeSGZ9gr3LHnRg" message="_xC21Xnr6EeSGZ9gr3LHnRg"/>
+              <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_xC21Q3r6EeSGZ9gr3LHnRg" name="MessageRecv4" covered="_xC21I3r6EeSGZ9gr3LHnRg" message="_xC21Xnr6EeSGZ9gr3LHnRg"/>
+              <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_xC21RHr6EeSGZ9gr3LHnRg" name="MessageSend3" covered="_xC21I3r6EeSGZ9gr3LHnRg" message="_xC21XXr6EeSGZ9gr3LHnRg"/>
+              <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_xC21RXr6EeSGZ9gr3LHnRg" name="MessageRecv3" covered="_xC21JHr6EeSGZ9gr3LHnRg" message="_xC21XXr6EeSGZ9gr3LHnRg"/>
+              <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_xC21Rnr6EeSGZ9gr3LHnRg" name="MessageSend2" covered="_xC21JHr6EeSGZ9gr3LHnRg" message="_xC21XHr6EeSGZ9gr3LHnRg"/>
+              <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_xC21R3r6EeSGZ9gr3LHnRg" name="MessageRecv2" covered="_xC21I3r6EeSGZ9gr3LHnRg" message="_xC21XHr6EeSGZ9gr3LHnRg"/>
+              <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_xC21SHr6EeSGZ9gr3LHnRg" name="MessageSend5" covered="_xC21I3r6EeSGZ9gr3LHnRg" message="_xC21X3r6EeSGZ9gr3LHnRg"/>
+              <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_xC21SXr6EeSGZ9gr3LHnRg" name="MessageRecv5" covered="_xC21Inr6EeSGZ9gr3LHnRg" message="_xC21X3r6EeSGZ9gr3LHnRg"/>
+              <guard xmi:type="uml:InteractionConstraint" xmi:id="_xC21Snr6EeSGZ9gr3LHnRg">
+                <specification xmi:type="uml:LiteralString" xmi:id="_xC21S3r6EeSGZ9gr3LHnRg" value="arrivalTime-cancelTime&lt;24h"/>
+                <maxint xmi:type="uml:LiteralInteger" xmi:id="_xC21THr6EeSGZ9gr3LHnRg" value="1"/>
+                <minint xmi:type="uml:LiteralInteger" xmi:id="_xC21TXr6EeSGZ9gr3LHnRg"/>
+              </guard>
+            </operand>
+            <operand xmi:type="uml:InteractionOperand" xmi:id="_xC21Tnr6EeSGZ9gr3LHnRg" name="InteractionOperand0" covered="_xC21I3r6EeSGZ9gr3LHnRg _xC21Inr6EeSGZ9gr3LHnRg _xC21JHr6EeSGZ9gr3LHnRg">
+              <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_xC21T3r6EeSGZ9gr3LHnRg" name="MessageSend" covered="_xC21Inr6EeSGZ9gr3LHnRg" message="_xC21YHr6EeSGZ9gr3LHnRg"/>
+              <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_xC21UHr6EeSGZ9gr3LHnRg" name="MessageRecv" covered="_xC21Inr6EeSGZ9gr3LHnRg" message="_xC21YHr6EeSGZ9gr3LHnRg"/>
+              <guard xmi:type="uml:InteractionConstraint" xmi:id="_xC21UXr6EeSGZ9gr3LHnRg">
+                <specification xmi:type="uml:LiteralString" xmi:id="_xC21Unr6EeSGZ9gr3LHnRg" value="else"/>
+                <maxint xmi:type="uml:LiteralInteger" xmi:id="_xC21U3r6EeSGZ9gr3LHnRg" value="1"/>
+                <minint xmi:type="uml:LiteralInteger" xmi:id="_xC21VHr6EeSGZ9gr3LHnRg"/>
+              </guard>
+            </operand>
+          </fragment>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_xC21VXr6EeSGZ9gr3LHnRg" name="MessageRecv8" covered="_xC21IXr6EeSGZ9gr3LHnRg" message="_xC21YXr6EeSGZ9gr3LHnRg"/>
+          <message xmi:type="uml:Message" xmi:id="_xC21Vnr6EeSGZ9gr3LHnRg" name="enterBookingReference()" messageSort="asynchCall" receiveEvent="_xC21K3r6EeSGZ9gr3LHnRg" sendEvent="_xC21Knr6EeSGZ9gr3LHnRg"/>
+          <message xmi:type="uml:Message" xmi:id="_xC21V3r6EeSGZ9gr3LHnRg" name="checkValid()" messageSort="asynchCall" receiveEvent="_xC21LXr6EeSGZ9gr3LHnRg" sendEvent="_xC21LHr6EeSGZ9gr3LHnRg"/>
+          <message xmi:type="uml:Message" xmi:id="_xC21WHr6EeSGZ9gr3LHnRg" name="displayError()" messageSort="asynchCall" receiveEvent="_xC21L3r6EeSGZ9gr3LHnRg" sendEvent="_xC21Lnr6EeSGZ9gr3LHnRg"/>
+          <message xmi:type="uml:Message" xmi:id="_xC21WXr6EeSGZ9gr3LHnRg" name="getBookingReference(bookingReference)" messageSort="asynchCall" receiveEvent="_xC21M3r6EeSGZ9gr3LHnRg" sendEvent="_xC21Mnr6EeSGZ9gr3LHnRg"/>
+          <message xmi:type="uml:Message" xmi:id="_xC21Wnr6EeSGZ9gr3LHnRg" name="cancelBooking(bookingReference)" messageSort="asynchCall" receiveEvent="_xC21NXr6EeSGZ9gr3LHnRg" sendEvent="_xC21NHr6EeSGZ9gr3LHnRg"/>
+          <message xmi:type="uml:Message" xmi:id="_xC21W3r6EeSGZ9gr3LHnRg" name="checkTime(cancelTime,arrivalTime)" messageSort="asynchCall" receiveEvent="_xC21N3r6EeSGZ9gr3LHnRg" sendEvent="_xC21Nnr6EeSGZ9gr3LHnRg"/>
+          <message xmi:type="uml:Message" xmi:id="_xC21XHr6EeSGZ9gr3LHnRg" name="confirmCharged()" messageSort="asynchCall" receiveEvent="_xC21R3r6EeSGZ9gr3LHnRg" sendEvent="_xC21Rnr6EeSGZ9gr3LHnRg"/>
+          <message xmi:type="uml:Message" xmi:id="_xC21XXr6EeSGZ9gr3LHnRg" name="makePayment()" messageSort="asynchCall" receiveEvent="_xC21RXr6EeSGZ9gr3LHnRg" sendEvent="_xC21RHr6EeSGZ9gr3LHnRg"/>
+          <message xmi:type="uml:Message" xmi:id="_xC21Xnr6EeSGZ9gr3LHnRg" name="payForBooking()" messageSort="asynchCall" receiveEvent="_xC21Q3r6EeSGZ9gr3LHnRg" sendEvent="_xC21Qnr6EeSGZ9gr3LHnRg"/>
+          <message xmi:type="uml:Message" xmi:id="_xC21X3r6EeSGZ9gr3LHnRg" name="display(success)" messageSort="asynchCall" receiveEvent="_xC21SXr6EeSGZ9gr3LHnRg" sendEvent="_xC21SHr6EeSGZ9gr3LHnRg"/>
+          <message xmi:type="uml:Message" xmi:id="_xC21YHr6EeSGZ9gr3LHnRg" name="display(success)" messageSort="asynchCall" receiveEvent="_xC21UHr6EeSGZ9gr3LHnRg" sendEvent="_xC21T3r6EeSGZ9gr3LHnRg"/>
+          <message xmi:type="uml:Message" xmi:id="_xC21YXr6EeSGZ9gr3LHnRg" name="display(success)" messageSort="asynchCall" receiveEvent="_xC21VXr6EeSGZ9gr3LHnRg" sendEvent="_xC21Onr6EeSGZ9gr3LHnRg"/>
         </packagedElement>
       </packagedElement>
     </packagedElement>
