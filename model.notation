@@ -3612,7 +3612,7 @@
     <styles xmi:type="notation:StringValueStyle" xmi:id="_pkFb1HroEeSE6fe6aSz6Dw" name="diagram_compatibility_version" stringValue="1.0.0"/>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_pkFb1XroEeSE6fe6aSz6Dw"/>
     <styles xmi:type="style:PapyrusViewStyle" xmi:id="_pkFb1nroEeSE6fe6aSz6Dw">
-      <owner xmi:type="uml:Interaction" href="model.uml#_pkENgHroEeSE6fe6aSz6Dw"/>
+      <owner xmi:type="uml:Package" href="model.uml#_iYzgsHroEeSE6fe6aSz6Dw"/>
     </styles>
     <element xmi:type="uml:Interaction" href="model.uml#_pkENgHroEeSE6fe6aSz6Dw"/>
     <edges xmi:type="notation:Edge" xmi:id="_pkFb13roEeSE6fe6aSz6Dw" type="4004" source="_pkFbqXroEeSE6fe6aSz6Dw" target="_pkFbtXroEeSE6fe6aSz6Dw">
