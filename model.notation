@@ -3758,7 +3758,7 @@
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sl1CgHr1EeSAt9LYkAOtUQ" x="76" y="53" width="16" height="155"/>
           </children>
           <element xmi:type="uml:Lifeline" href="model.uml#_slkjwXr1EeSAt9LYkAOtUQ"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sl1CgXr1EeSAt9LYkAOtUQ" x="251" y="10" width="168" height="290"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sl1CgXr1EeSAt9LYkAOtUQ" x="338" y="10" width="168" height="290"/>
         </children>
         <children xmi:type="notation:Shape" xmi:id="_sl1Cgnr1EeSAt9LYkAOtUQ" type="3001">
           <children xmi:type="notation:DecorationNode" xmi:id="_sl1Cg3r1EeSAt9LYkAOtUQ" type="5002"/>
@@ -3768,10 +3768,10 @@
           </children>
           <children xmi:type="notation:Shape" xmi:id="_sl1Ch3r1EeSAt9LYkAOtUQ" type="3006">
             <element xmi:type="uml:ActionExecutionSpecification" href="model.uml#_slkj0nr1EeSAt9LYkAOtUQ"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sl1CjHr1EeSAt9LYkAOtUQ" x="48" y="135" width="16" height="32"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sl1CjHr1EeSAt9LYkAOtUQ" x="61" y="135" width="16" height="32"/>
           </children>
           <element xmi:type="uml:Lifeline" href="model.uml#_slkjwnr1EeSAt9LYkAOtUQ"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sl1CjXr1EeSAt9LYkAOtUQ" x="686" y="12" width="111" height="291"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sl1CjXr1EeSAt9LYkAOtUQ" x="832" y="12" width="137" height="291"/>
         </children>
         <children xmi:type="notation:Shape" xmi:id="_sl1Cjnr1EeSAt9LYkAOtUQ" type="3001">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_sl1Cj3r1EeSAt9LYkAOtUQ" source="CustomExtensionInfo">
@@ -3787,7 +3787,7 @@
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sl1Cmnr1EeSAt9LYkAOtUQ" x="76" y="59" width="16" height="28"/>
           </children>
           <element xmi:type="uml:Lifeline" href="model.uml#_slkjw3r1EeSAt9LYkAOtUQ"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sl1Cm3r1EeSAt9LYkAOtUQ" x="478" y="14" width="168" height="286"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sl1Cm3r1EeSAt9LYkAOtUQ" x="616" y="14" width="168" height="286"/>
         </children>
         <children xmi:type="notation:Shape" xmi:id="_sl1CnHr1EeSAt9LYkAOtUQ" type="3001">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_sl1CnXr1EeSAt9LYkAOtUQ" source="CustomExtensionInfo">
@@ -3808,7 +3808,7 @@
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sl1Cqnr1EeSAt9LYkAOtUQ"/>
       </children>
       <element xmi:type="uml:Interaction" href="model.uml#_slkjwHr1EeSAt9LYkAOtUQ"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sl1Cq3r1EeSAt9LYkAOtUQ" width="879"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sl1Cq3r1EeSAt9LYkAOtUQ" width="994"/>
     </children>
     <styles xmi:type="notation:StringValueStyle" xmi:id="_sl1CrHr1EeSAt9LYkAOtUQ" name="diagram_compatibility_version" stringValue="1.0.0"/>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_sl1CrXr1EeSAt9LYkAOtUQ"/>

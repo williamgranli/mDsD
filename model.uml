@@ -1190,9 +1190,9 @@
           <lifeline xmi:type="uml:Lifeline" xmi:id="_slkjwnr1EeSAt9LYkAOtUQ" name="AdditionalService" coveredBy="_slkj0Xr1EeSAt9LYkAOtUQ _slkj0nr1EeSAt9LYkAOtUQ _slkj1Xr1EeSAt9LYkAOtUQ _slkj1Hr1EeSAt9LYkAOtUQ _slkj13r1EeSAt9LYkAOtUQ"/>
           <lifeline xmi:type="uml:Lifeline" xmi:id="_slkjw3r1EeSAt9LYkAOtUQ" name="Room" coveredBy="_slkjznr1EeSAt9LYkAOtUQ _slkjzHr1EeSAt9LYkAOtUQ _slkjzXr1EeSAt9LYkAOtUQ _slkjz3r1EeSAt9LYkAOtUQ"/>
           <lifeline xmi:type="uml:Lifeline" xmi:id="_slkjxHr1EeSAt9LYkAOtUQ" name="User" coveredBy="_slkjx3r1EeSAt9LYkAOtUQ _slkjyHr1EeSAt9LYkAOtUQ _slkjxXr1EeSAt9LYkAOtUQ _slkj2nr1EeSAt9LYkAOtUQ _slkj23r1EeSAt9LYkAOtUQ"/>
-          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_slkjxXr1EeSAt9LYkAOtUQ" name="MessageSend1" covered="_slkjxHr1EeSAt9LYkAOtUQ" message="_slkj3Hr1EeSAt9LYkAOtUQ"/>
           <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_slkjxnr1EeSAt9LYkAOtUQ" name="ActionExecSpec1Start" covered="_slkjwXr1EeSAt9LYkAOtUQ" execution="_slkjyXr1EeSAt9LYkAOtUQ"/>
           <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_slkjx3r1EeSAt9LYkAOtUQ" name="ActionExecSpec0Start" covered="_slkjxHr1EeSAt9LYkAOtUQ" execution="_slkjyHr1EeSAt9LYkAOtUQ"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_slkjxXr1EeSAt9LYkAOtUQ" name="MessageSend1" covered="_slkjxHr1EeSAt9LYkAOtUQ" message="_slkj3Hr1EeSAt9LYkAOtUQ"/>
           <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_slkjyHr1EeSAt9LYkAOtUQ" name="ActionExecSpec0" covered="_slkjxHr1EeSAt9LYkAOtUQ" finish="_slkj23r1EeSAt9LYkAOtUQ" start="_slkjx3r1EeSAt9LYkAOtUQ"/>
           <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_slkjyXr1EeSAt9LYkAOtUQ" name="ActionExecSpec1" covered="_slkjwXr1EeSAt9LYkAOtUQ" finish="_slkj2Xr1EeSAt9LYkAOtUQ" start="_slkjxnr1EeSAt9LYkAOtUQ"/>
           <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_slkjynr1EeSAt9LYkAOtUQ" name="MessageRecv1" covered="_slkjwXr1EeSAt9LYkAOtUQ" message="_slkj3Hr1EeSAt9LYkAOtUQ"/>
@@ -1210,8 +1210,8 @@
           <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_slkj1nr1EeSAt9LYkAOtUQ" name="Message0Recv1" covered="_slkjwXr1EeSAt9LYkAOtUQ" message="_slkj4Xr1EeSAt9LYkAOtUQ"/>
           <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_slkj13r1EeSAt9LYkAOtUQ" name="ActionExecSpec3Finish" covered="_slkjwnr1EeSAt9LYkAOtUQ" execution="_slkj0nr1EeSAt9LYkAOtUQ"/>
           <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_slkj2Hr1EeSAt9LYkAOtUQ" name="Message0Send4" covered="_slkjwXr1EeSAt9LYkAOtUQ" message="_slkj5nr1EeSAt9LYkAOtUQ"/>
-          <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_slkj2Xr1EeSAt9LYkAOtUQ" name="ActionExecSpec1Finish" covered="_slkjwXr1EeSAt9LYkAOtUQ" execution="_slkjyXr1EeSAt9LYkAOtUQ"/>
           <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_slkj2nr1EeSAt9LYkAOtUQ" name="Message0Recv4" covered="_slkjxHr1EeSAt9LYkAOtUQ" message="_slkj5nr1EeSAt9LYkAOtUQ"/>
+          <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_slkj2Xr1EeSAt9LYkAOtUQ" name="ActionExecSpec1Finish" covered="_slkjwXr1EeSAt9LYkAOtUQ" execution="_slkjyXr1EeSAt9LYkAOtUQ"/>
           <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_slkj23r1EeSAt9LYkAOtUQ" name="ActionExecSpec0Finish" covered="_slkjxHr1EeSAt9LYkAOtUQ" execution="_slkjyHr1EeSAt9LYkAOtUQ"/>
           <message xmi:type="uml:Message" xmi:id="_slkj3Hr1EeSAt9LYkAOtUQ" name="getRoomTypeAvailability" messageSort="asynchCall" receiveEvent="_slkjynr1EeSAt9LYkAOtUQ" sendEvent="_slkjxXr1EeSAt9LYkAOtUQ">
             <argument xmi:type="uml:StringExpression" xmi:id="_slkj3Xr1EeSAt9LYkAOtUQ" name="arrivalDate">
