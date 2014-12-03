@@ -742,23 +742,14 @@
             <body>Handles check in/out and keeps tracks of which guests are staying at the hotel at a given point in time.</body>
           </ownedComment>
         </packagedElement>
-        <packagedElement xmi:type="uml:Usage" xmi:id="_34oz4Hp7EeS6O5zO6NZCqA" name="Usage0" client="_DBMeUHocEeSypfm9OOQUYA" supplier="_-wEGEHp4EeS6O5zO6NZCqA"/>
-        <packagedElement xmi:type="uml:Usage" xmi:id="_7Bs2kHp7EeS6O5zO6NZCqA" name="Usage1" client="__b5yoHobEeSypfm9OOQUYA" supplier="_-wEGEHp4EeS6O5zO6NZCqA"/>
-        <packagedElement xmi:type="uml:Usage" xmi:id="_9Q4q8Hp7EeS6O5zO6NZCqA" name="Usage2" client="_IaMjUHocEeSypfm9OOQUYA" supplier="_-wEGEHp4EeS6O5zO6NZCqA"/>
-        <packagedElement xmi:type="uml:Usage" xmi:id="_AJ4RUHp8EeS6O5zO6NZCqA" name="Usage3" client="_DBMeUHocEeSypfm9OOQUYA" supplier="_oFVrUHpcEeS6O5zO6NZCqA"/>
-        <packagedElement xmi:type="uml:Usage" xmi:id="_I8cTIHp8EeS6O5zO6NZCqA" name="Usage4" client="_DBMeUHocEeSypfm9OOQUYA" supplier="_hHHwcHpmEeS6O5zO6NZCqA"/>
-        <packagedElement xmi:type="uml:Usage" xmi:id="_T8BmIHp8EeS6O5zO6NZCqA" name="Usage6" client="_Q51pIHocEeSypfm9OOQUYA" supplier="_5-C0cHprEeS6O5zO6NZCqA"/>
-        <packagedElement xmi:type="uml:Usage" xmi:id="_7hPnYHp9EeS6O5zO6NZCqA" name="Usage8" client="_9a3H8HobEeSypfm9OOQUYA" supplier="_-wEGEHp4EeS6O5zO6NZCqA"/>
-        <packagedElement xmi:type="uml:Usage" xmi:id="_F77OMHrZEeSyBKqr79uWFQ" name="Usage5" client="_DBMeUHocEeSypfm9OOQUYA" supplier="_x9UbEHpyEeS6O5zO6NZCqA"/>
-        <packagedElement xmi:type="uml:Usage" xmi:id="_SaPWwHreEeSyBKqr79uWFQ" name="Usage7" client="_Oa_oIHocEeSypfm9OOQUYA" supplier="_CWxu1nokEeSpJvJMK8L-IA"/>
-        <packagedElement xmi:type="uml:Usage" xmi:id="_uFkjcHrgEeSyBKqr79uWFQ" name="Usage9" client="_Q51pIHocEeSypfm9OOQUYA" supplier="_hHHwcHpmEeS6O5zO6NZCqA"/>
         <packagedElement xmi:type="uml:Component" xmi:id="_32tNsHrdEeSyBKqr79uWFQ" name="Customer"/>
-        <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_w6WvgHrxEeSQrq2SbQNTVA" name="RoomClientRealization" client="_9a3H8HobEeSypfm9OOQUYA" supplier="_4QGeMHpmEeS6O5zO6NZCqA" contract="_4QGeMHpmEeS6O5zO6NZCqA"/>
+        <packagedElement xmi:type="uml:Component" xmi:id="_B2MMsHp9EeS6O5zO6NZCqA" name="Receptionist"/>
+        <packagedElement xmi:type="uml:Component" xmi:id="_Qa0TwHp9EeS6O5zO6NZCqA" name="Administrator"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_S-lNYHrzEeSCzp55akTC6w" name="Usage10" client="_Qa0TwHp9EeS6O5zO6NZCqA" supplier="_hHHwcHpmEeS6O5zO6NZCqA"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_m3MWkHrzEeSCzp55akTC6w" name="Usage101" client="_Qa0TwHp9EeS6O5zO6NZCqA" supplier="_oFVrUHpcEeS6O5zO6NZCqA"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_tXq9EHpbEeS6O5zO6NZCqA" name="InterfaceClasses">
         <packagedElement xmi:type="uml:Interface" xmi:id="_oFVrUHpcEeS6O5zO6NZCqA" name="AdditionalServiceAdmin">
-          <nestedClassifier xmi:type="uml:Component" xmi:id="_B2MMsHp9EeS6O5zO6NZCqA" name="Receptionist"/>
-          <nestedClassifier xmi:type="uml:Component" xmi:id="_Qa0TwHp9EeS6O5zO6NZCqA" name="Administrator"/>
           <ownedOperation xmi:type="uml:Operation" xmi:id="_yhP-oHpeEeS6O5zO6NZCqA" name="createAdditionalService">
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_o0ZM4HpgEeS6O5zO6NZCqA" name="name">
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
@@ -836,14 +827,6 @@
           </ownedOperation>
           <ownedOperation xmi:type="uml:Operation" xmi:id="_08jqYHrVEeSyBKqr79uWFQ" name="getAllAdditionalServices"/>
         </packagedElement>
-        <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_seWBAHpeEeS6O5zO6NZCqA" name="additionalServiceRealisation" client="_IaMjUHocEeSypfm9OOQUYA" supplier="_oFVrUHpcEeS6O5zO6NZCqA" contract="_oFVrUHpcEeS6O5zO6NZCqA"/>
-        <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_icspAHp2EeS6O5zO6NZCqA" name="occupancyClientProvides" client="_Q51pIHocEeSypfm9OOQUYA" supplier="_at5KQHp2EeS6O5zO6NZCqA" contract="_at5KQHp2EeS6O5zO6NZCqA"/>
-        <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_CrhFcHptEeS6O5zO6NZCqA" name="bookingClientProvidesRealization" client="_DBMeUHocEeSypfm9OOQUYA" supplier="_5-C0cHprEeS6O5zO6NZCqA" contract="_5-C0cHprEeS6O5zO6NZCqA"/>
-        <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_e_mvsHp5EeS6O5zO6NZCqA" name="authenticationClientProvidesRealization" client="_pLxeMHp4EeS6O5zO6NZCqA" supplier="_-wEGEHp4EeS6O5zO6NZCqA" contract="_-wEGEHp4EeS6O5zO6NZCqA"/>
-        <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_XAADkHpzEeS6O5zO6NZCqA" name="paymentClientProvidesRealization" client="_Oa_oIHocEeSypfm9OOQUYA" supplier="_x9UbEHpyEeS6O5zO6NZCqA" contract="_x9UbEHpyEeS6O5zO6NZCqA"/>
-        <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_rNaOgHpnEeS6O5zO6NZCqA" name="roomAdminRealization" client="_9a3H8HobEeSypfm9OOQUYA" supplier="_hHHwcHpmEeS6O5zO6NZCqA" contract="_hHHwcHpmEeS6O5zO6NZCqA"/>
-        <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_6RxfMHpfEeS6O5zO6NZCqA" name="additionalServiceClientRealization" client="_IaMjUHocEeSypfm9OOQUYA" supplier="_YlNd8HpfEeS6O5zO6NZCqA" contract="_YlNd8HpfEeS6O5zO6NZCqA"/>
-        <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_B_7g4HpkEeS6O5zO6NZCqA" name="StaffAdminProvidesRelization" client="__b5yoHobEeSypfm9OOQUYA" supplier="_IpGCsHpjEeS6O5zO6NZCqA" contract="_IpGCsHpjEeS6O5zO6NZCqA"/>
         <packagedElement xmi:type="uml:Interface" xmi:id="_hHHwcHpmEeS6O5zO6NZCqA" name="RoomAdminProvides">
           <ownedOperation xmi:type="uml:Operation" xmi:id="_CyYxMHpnEeS6O5zO6NZCqA" name="editRoom">
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_IEGtAHpoEeS6O5zO6NZCqA" name="newRoomId">
@@ -1144,6 +1127,27 @@
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
             </ownedParameter>
           </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_ye0hAHrzEeSCzp55akTC6w" name="Realizations">
+          <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_seWBAHpeEeS6O5zO6NZCqA" name="additionalServiceRealisation" client="_IaMjUHocEeSypfm9OOQUYA" supplier="_oFVrUHpcEeS6O5zO6NZCqA" contract="_oFVrUHpcEeS6O5zO6NZCqA"/>
+          <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_icspAHp2EeS6O5zO6NZCqA" name="occupancyClientProvides" client="_Q51pIHocEeSypfm9OOQUYA" supplier="_at5KQHp2EeS6O5zO6NZCqA" contract="_at5KQHp2EeS6O5zO6NZCqA"/>
+          <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_CrhFcHptEeS6O5zO6NZCqA" name="bookingClientProvidesRealization" client="_DBMeUHocEeSypfm9OOQUYA" supplier="_5-C0cHprEeS6O5zO6NZCqA" contract="_5-C0cHprEeS6O5zO6NZCqA"/>
+          <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_e_mvsHp5EeS6O5zO6NZCqA" name="authenticationClientProvidesRealization" client="_pLxeMHp4EeS6O5zO6NZCqA" supplier="_-wEGEHp4EeS6O5zO6NZCqA" contract="_-wEGEHp4EeS6O5zO6NZCqA"/>
+          <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_XAADkHpzEeS6O5zO6NZCqA" name="paymentClientProvidesRealization" client="_Oa_oIHocEeSypfm9OOQUYA" supplier="_x9UbEHpyEeS6O5zO6NZCqA" contract="_x9UbEHpyEeS6O5zO6NZCqA"/>
+          <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_rNaOgHpnEeS6O5zO6NZCqA" name="roomAdminRealization" client="_9a3H8HobEeSypfm9OOQUYA" supplier="_hHHwcHpmEeS6O5zO6NZCqA" contract="_hHHwcHpmEeS6O5zO6NZCqA"/>
+          <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_6RxfMHpfEeS6O5zO6NZCqA" name="additionalServiceClientRealization" client="_IaMjUHocEeSypfm9OOQUYA" supplier="_YlNd8HpfEeS6O5zO6NZCqA" contract="_YlNd8HpfEeS6O5zO6NZCqA"/>
+          <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_B_7g4HpkEeS6O5zO6NZCqA" name="StaffAdminProvidesRelization" client="__b5yoHobEeSypfm9OOQUYA" supplier="_IpGCsHpjEeS6O5zO6NZCqA" contract="_IpGCsHpjEeS6O5zO6NZCqA"/>
+          <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_w6WvgHrxEeSQrq2SbQNTVA" name="RoomClientRealization" client="_9a3H8HobEeSypfm9OOQUYA" supplier="_4QGeMHpmEeS6O5zO6NZCqA" contract="_4QGeMHpmEeS6O5zO6NZCqA"/>
+          <packagedElement xmi:type="uml:Usage" xmi:id="_34oz4Hp7EeS6O5zO6NZCqA" name="Usage0" client="_DBMeUHocEeSypfm9OOQUYA" supplier="_-wEGEHp4EeS6O5zO6NZCqA"/>
+          <packagedElement xmi:type="uml:Usage" xmi:id="_7Bs2kHp7EeS6O5zO6NZCqA" name="Usage1" client="__b5yoHobEeSypfm9OOQUYA" supplier="_-wEGEHp4EeS6O5zO6NZCqA"/>
+          <packagedElement xmi:type="uml:Usage" xmi:id="_9Q4q8Hp7EeS6O5zO6NZCqA" name="Usage2" client="_IaMjUHocEeSypfm9OOQUYA" supplier="_-wEGEHp4EeS6O5zO6NZCqA"/>
+          <packagedElement xmi:type="uml:Usage" xmi:id="_AJ4RUHp8EeS6O5zO6NZCqA" name="Usage3" client="_DBMeUHocEeSypfm9OOQUYA" supplier="_YlNd8HpfEeS6O5zO6NZCqA"/>
+          <packagedElement xmi:type="uml:Usage" xmi:id="_I8cTIHp8EeS6O5zO6NZCqA" name="Usage4" client="_DBMeUHocEeSypfm9OOQUYA" supplier="_4QGeMHpmEeS6O5zO6NZCqA"/>
+          <packagedElement xmi:type="uml:Usage" xmi:id="_T8BmIHp8EeS6O5zO6NZCqA" name="Usage6" client="_Q51pIHocEeSypfm9OOQUYA" supplier="_5-C0cHprEeS6O5zO6NZCqA"/>
+          <packagedElement xmi:type="uml:Usage" xmi:id="_7hPnYHp9EeS6O5zO6NZCqA" name="Usage8" client="_9a3H8HobEeSypfm9OOQUYA" supplier="_-wEGEHp4EeS6O5zO6NZCqA"/>
+          <packagedElement xmi:type="uml:Usage" xmi:id="_F77OMHrZEeSyBKqr79uWFQ" name="Usage5" client="_DBMeUHocEeSypfm9OOQUYA" supplier="_x9UbEHpyEeS6O5zO6NZCqA"/>
+          <packagedElement xmi:type="uml:Usage" xmi:id="_SaPWwHreEeSyBKqr79uWFQ" name="Usage7" client="_Oa_oIHocEeSypfm9OOQUYA" supplier="_CWxu1nokEeSpJvJMK8L-IA"/>
+          <packagedElement xmi:type="uml:Usage" xmi:id="_uFkjcHrgEeSyBKqr79uWFQ" name="Usage9" client="_Q51pIHocEeSypfm9OOQUYA" supplier="_4QGeMHpmEeS6O5zO6NZCqA"/>
         </packagedElement>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_KOQxEHpgEeS6O5zO6NZCqA" name="InterfaceDiagrams"/>
