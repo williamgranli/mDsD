@@ -2551,7 +2551,7 @@
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_mLNM4nmLEeSv8578ohrpjA" points="[22, 15, -47, -31]$[66, 39, -3, -7]"/>
     </edges>
   </notation:Diagram>
-  <notation:Diagram xmi:id="_3NJogHobEeSypfm9OOQUYA" type="PapyrusUMLComponentDiagram" name="ComponentDiagram" measurementUnit="Pixel">
+  <notation:Diagram xmi:id="_3NJogHobEeSypfm9OOQUYA" type="PapyrusUMLComponentDiagram" name="Component" measurementUnit="Pixel">
     <children xmi:type="notation:Shape" xmi:id="_9dQ7sHobEeSypfm9OOQUYA" type="2002">
       <children xmi:type="notation:DecorationNode" xmi:id="_9dRiwHobEeSypfm9OOQUYA" type="5004"/>
       <children xmi:type="notation:BasicCompartment" xmi:id="_9dRiwXobEeSypfm9OOQUYA" type="7001">
@@ -4951,5 +4951,13 @@
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_xC6gI3r6EeSGZ9gr3LHnRg" id="(0.0,0.9357034795763994)"/>
       <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_xC6gJHr6EeSGZ9gr3LHnRg" id="(1.0,0.9409984871406959){R}"/>
     </edges>
+  </notation:Diagram>
+  <notation:Diagram xmi:id="_8fT_cHr8EeSshdN1DdPgDg" type="PapyrusUMLClassDiagram" name="Class" measurementUnit="Pixel">
+    <styles xmi:type="notation:StringValueStyle" xmi:id="_8fT_cXr8EeSshdN1DdPgDg" name="diagram_compatibility_version" stringValue="1.0.0"/>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_8fT_cnr8EeSshdN1DdPgDg"/>
+    <styles xmi:type="style:PapyrusViewStyle" xmi:id="_8fT_c3r8EeSshdN1DdPgDg">
+      <owner xmi:type="uml:Package" href="model.uml#_0xs5wHobEeSypfm9OOQUYA"/>
+    </styles>
+    <element xmi:type="uml:Package" href="model.uml#_0xs5wHobEeSypfm9OOQUYA"/>
   </notation:Diagram>
 </xmi:XMI>
