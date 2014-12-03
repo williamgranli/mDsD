@@ -725,6 +725,114 @@
           <ownedComment xmi:type="uml:Comment" xmi:id="_AEXrYHodEeSypfm9OOQUYA">
             <body>Manages bookings</body>
           </ownedComment>
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_6RlpAHsPEeSdPKzPJV8cOA" name="Booking" visibility="package">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_6RlpAXsPEeSdPKzPJV8cOA" name="arrivalDate" visibility="private" type="_6RneMnsPEeSdPKzPJV8cOA"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_6RlpAnsPEeSdPKzPJV8cOA" name="departureDate" visibility="private" type="_6RneMnsPEeSdPKzPJV8cOA"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_6RlpA3sPEeSdPKzPJV8cOA" name="referenceNumber" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_6RlpBHsPEeSdPKzPJV8cOA" name="guests" visibility="private" type="_6RoFQHsPEeSdPKzPJV8cOA">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_6RlpBXsPEeSdPKzPJV8cOA"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_6RlpBnsPEeSdPKzPJV8cOA" value="*"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_6RlpB3sPEeSdPKzPJV8cOA" name="currentCost" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_6RlpCHsPEeSdPKzPJV8cOA" name="rooms" visibility="private" type="_6RoFRHsPEeSdPKzPJV8cOA">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_6RlpCXsPEeSdPKzPJV8cOA" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_6RlpCnsPEeSdPKzPJV8cOA" value="*"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_6RlpC3sPEeSdPKzPJV8cOA" name="additionalSerivces" visibility="private" type="_6RosWnsPEeSdPKzPJV8cOA">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_6RlpDHsPEeSdPKzPJV8cOA"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_6RlpDXsPEeSdPKzPJV8cOA" value="*"/>
+            </ownedAttribute>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_6RlpDnsPEeSdPKzPJV8cOA" name="BookingObject"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_6RlpD3sPEeSdPKzPJV8cOA" name="BookingObject">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_6RlpEHsPEeSdPKzPJV8cOA" name="arrivalDate" type="_6RneMnsPEeSdPKzPJV8cOA"/>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_6RlpEXsPEeSdPKzPJV8cOA" name="departureDate" type="_6RneMnsPEeSdPKzPJV8cOA"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_6RlpEnsPEeSdPKzPJV8cOA" name="edit"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_6RlpE3sPEeSdPKzPJV8cOA" name="addToBooking">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_6RlpFHsPEeSdPKzPJV8cOA" name="t">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EJavaClass"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_6RlpFXsPEeSdPKzPJV8cOA" name="confirmBooking">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_6RlpFnsPEeSdPKzPJV8cOA" name="refNumber" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_6RlpF3sPEeSdPKzPJV8cOA" name="currentCost" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_6RlpGHsPEeSdPKzPJV8cOA" name="newCost" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+              </ownedParameter>
+            </ownedOperation>
+          </nestedClassifier>
+          <nestedClassifier xmi:type="uml:Interface" xmi:id="_6Rm3IHsPEeSdPKzPJV8cOA" name="BookingInterface"/>
+          <nestedClassifier xmi:type="uml:DataType" xmi:id="_6RneMnsPEeSdPKzPJV8cOA" name="Date">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_6RneM3sPEeSdPKzPJV8cOA" name="Day">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_6RneNHsPEeSdPKzPJV8cOA" name="Month">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_6RneNXsPEeSdPKzPJV8cOA" name="Year">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            </ownedAttribute>
+          </nestedClassifier>
+          <nestedClassifier xmi:type="uml:DataType" xmi:id="_6RoFQHsPEeSdPKzPJV8cOA" name="Person">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_6RoFQXsPEeSdPKzPJV8cOA" name="firstName">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_6RoFQnsPEeSdPKzPJV8cOA" name="lastName">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_6RoFQ3sPEeSdPKzPJV8cOA" name="address">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+          </nestedClassifier>
+          <nestedClassifier xmi:type="uml:DataType" xmi:id="_6RoFRHsPEeSdPKzPJV8cOA" name="Room">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_6RoFRXsPEeSdPKzPJV8cOA" name="roomType">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_6RoFRnsPEeSdPKzPJV8cOA" name="price">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
+            </ownedAttribute>
+          </nestedClassifier>
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_6RosUHsPEeSdPKzPJV8cOA" name="BookingManager">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_6RosUXsPEeSdPKzPJV8cOA" name="bookings" type="_6RlpAHsPEeSdPKzPJV8cOA">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_6RosUnsPEeSdPKzPJV8cOA"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_6RosU3sPEeSdPKzPJV8cOA" value="*"/>
+            </ownedAttribute>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_6RosVHsPEeSdPKzPJV8cOA" name="BookingManager"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_6RosVXsPEeSdPKzPJV8cOA" name="searchForBooking">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_6RosVnsPEeSdPKzPJV8cOA" name="bookingReference">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_6RosV3sPEeSdPKzPJV8cOA" name="deleteBooking"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_6RosWHsPEeSdPKzPJV8cOA" name="updateBooking">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_6RosWXsPEeSdPKzPJV8cOA" name="bookingReference">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+              </ownedParameter>
+            </ownedOperation>
+          </nestedClassifier>
+          <nestedClassifier xmi:type="uml:DataType" xmi:id="_6RosWnsPEeSdPKzPJV8cOA" name="AdditionalService">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_6RosW3sPEeSdPKzPJV8cOA" name="name">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_6RosXHsPEeSdPKzPJV8cOA" name="cost">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_6RosXXsPEeSdPKzPJV8cOA" name="description">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+          </nestedClassifier>
+          <packagedElement xmi:type="uml:Dependency" xmi:id="_6Rm3IXsPEeSdPKzPJV8cOA" client="_6RlpAHsPEeSdPKzPJV8cOA" supplier="_6RneMnsPEeSdPKzPJV8cOA"/>
+          <packagedElement xmi:type="uml:Dependency" xmi:id="_6Rm3InsPEeSdPKzPJV8cOA" client="_6RlpAHsPEeSdPKzPJV8cOA" supplier="_6RoFQHsPEeSdPKzPJV8cOA"/>
+          <packagedElement xmi:type="uml:Dependency" xmi:id="_6RneMHsPEeSdPKzPJV8cOA" client="_6RlpAHsPEeSdPKzPJV8cOA" supplier="_6RoFRHsPEeSdPKzPJV8cOA"/>
+          <packagedElement xmi:type="uml:Dependency" xmi:id="_6RneMXsPEeSdPKzPJV8cOA" client="_6RlpAHsPEeSdPKzPJV8cOA" supplier="_6RosWnsPEeSdPKzPJV8cOA"/>
+          <packagedElement xmi:type="uml:Dependency" xmi:id="_6RpTYHsPEeSdPKzPJV8cOA" client="_6RosUHsPEeSdPKzPJV8cOA" supplier="_6RlpAHsPEeSdPKzPJV8cOA"/>
         </packagedElement>
         <packagedElement xmi:type="uml:Component" xmi:id="_pLxeMHp4EeS6O5zO6NZCqA" name="Authentication"/>
         <packagedElement xmi:type="uml:Component" xmi:id="_IaMjUHocEeSypfm9OOQUYA" name="AdditionalService">
