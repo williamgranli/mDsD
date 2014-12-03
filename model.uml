@@ -753,6 +753,7 @@
         <packagedElement xmi:type="uml:Usage" xmi:id="_SaPWwHreEeSyBKqr79uWFQ" name="Usage7" client="_Oa_oIHocEeSypfm9OOQUYA" supplier="_CWxu1nokEeSpJvJMK8L-IA"/>
         <packagedElement xmi:type="uml:Usage" xmi:id="_uFkjcHrgEeSyBKqr79uWFQ" name="Usage9" client="_Q51pIHocEeSypfm9OOQUYA" supplier="_hHHwcHpmEeS6O5zO6NZCqA"/>
         <packagedElement xmi:type="uml:Component" xmi:id="_32tNsHrdEeSyBKqr79uWFQ" name="Customer"/>
+        <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_w6WvgHrxEeSQrq2SbQNTVA" name="RoomClientRealization" client="_9a3H8HobEeSypfm9OOQUYA" supplier="_4QGeMHpmEeS6O5zO6NZCqA" contract="_4QGeMHpmEeS6O5zO6NZCqA"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_tXq9EHpbEeS6O5zO6NZCqA" name="InterfaceClasses">
         <packagedElement xmi:type="uml:Interface" xmi:id="_oFVrUHpcEeS6O5zO6NZCqA" name="AdditionalServiceAdmin">

@@ -2829,6 +2829,23 @@
       <element xmi:type="uml:Interface" href="model.uml#_CWxutHokEeSpJvJMK8L-IA"/>
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_u5uZsXrfEeSyBKqr79uWFQ" x="1049" y="895" width="139" height="45"/>
     </children>
+    <children xmi:type="notation:Shape" xmi:id="_kwLRoHrxEeSQrq2SbQNTVA" type="3205">
+      <children xmi:type="notation:DecorationNode" xmi:id="_kwMfwHrxEeSQrq2SbQNTVA" type="5266"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_kwNG0HrxEeSQrq2SbQNTVA" type="7008">
+        <styles xmi:type="notation:TitleStyle" xmi:id="_kwNG0XrxEeSQrq2SbQNTVA"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_kwNG0nrxEeSQrq2SbQNTVA"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_kwNG03rxEeSQrq2SbQNTVA"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kwNG1HrxEeSQrq2SbQNTVA"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_kwNG1XrxEeSQrq2SbQNTVA" type="7009">
+        <styles xmi:type="notation:TitleStyle" xmi:id="_kwNG1nrxEeSQrq2SbQNTVA"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_kwNG13rxEeSQrq2SbQNTVA"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_kwNG2HrxEeSQrq2SbQNTVA"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kwNG2XrxEeSQrq2SbQNTVA"/>
+      </children>
+      <element xmi:type="uml:Interface" href="model.uml#_YlNd8HpfEeS6O5zO6NZCqA"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kwLRoXrxEeSQrq2SbQNTVA" x="950" y="-61"/>
+    </children>
     <styles xmi:type="notation:StringValueStyle" xmi:id="_3NJogXobEeSypfm9OOQUYA" name="diagram_compatibility_version" stringValue="1.0.0"/>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_3NJognobEeSypfm9OOQUYA"/>
     <styles xmi:type="style:PapyrusViewStyle" xmi:id="_3NJog3obEeSypfm9OOQUYA">
@@ -2995,6 +3012,13 @@
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_uFwJonrgEeSyBKqr79uWFQ" points="[38, 9, -77, 111]$[115, 9, 0, 111]$[115, 9, 0, 111]$[115, -102, 0, 0]"/>
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_0Ue8wHrgEeSyBKqr79uWFQ" id="(0.8597785977859779,0.02097902097902098)"/>
       <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_0Ue8wXrgEeSyBKqr79uWFQ" id="(0.2796875,1.0)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_kwcXYHrxEeSQrq2SbQNTVA" type="4006" source="_IaRb0HocEeSypfm9OOQUYA" target="_kwLRoHrxEeSQrq2SbQNTVA">
+      <styles xmi:type="notation:FontStyle" xmi:id="_kwcXYXrxEeSQrq2SbQNTVA"/>
+      <element xmi:type="uml:InterfaceRealization" href="model.uml#_6RxfMHpfEeS6O5zO6NZCqA"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_kwcXYnrxEeSQrq2SbQNTVA" points="[-73, -11, 701, 109]$[-774, -120, 0, 0]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_lmQlEHrxEeSQrq2SbQNTVA" id="(0.47692307692307695,0.0)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_lmQlEXrxEeSQrq2SbQNTVA" id="(0.4968152866242038,1.0)"/>
     </edges>
   </notation:Diagram>
   <notation:Diagram xmi:id="_CW1ZEHokEeSpJvJMK8L-IA" type="PapyrusUMLComponentDiagram" name="BankingComponent" measurementUnit="Pixel">
@@ -3307,6 +3331,12 @@
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_rNiKUnpnEeS6O5zO6NZCqA" points="[-4, -35, -2, 74]$[-4, -50, -2, 59]"/>
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_sQA7AHpnEeS6O5zO6NZCqA" id="(0.5,0.0)"/>
       <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_sQA7AXpnEeS6O5zO6NZCqA" id="(0.49906890130353815,1.0)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_w62ewHrxEeSQrq2SbQNTVA" type="4006" source="_gPJmoHpmEeS6O5zO6NZCqA" target="_4QHsUHpmEeS6O5zO6NZCqA">
+      <styles xmi:type="notation:FontStyle" xmi:id="_w62ewXrxEeSQrq2SbQNTVA"/>
+      <element xmi:type="uml:InterfaceRealization" href="model.uml#_w6WvgHrxEeSQrq2SbQNTVA"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_w62ewnrxEeSQrq2SbQNTVA" points="[4, 35, -9, -71]$[10, 84, -3, -22]"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_w65iEHrxEeSQrq2SbQNTVA" id="(0.48046875,0.16176470588235295)"/>
     </edges>
   </notation:Diagram>
   <notation:Diagram xmi:id="_e8pDoHprEeS6O5zO6NZCqA" type="PapyrusUMLComponentDiagram" name="bookingComponent" measurementUnit="Pixel">
