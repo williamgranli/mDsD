@@ -705,14 +705,9 @@
       <packagedElement xmi:type="uml:Package" xmi:id="_FiVI4HodEeSypfm9OOQUYA" name="Dependencies">
         <packagedElement xmi:type="uml:Usage" xmi:id="_FH1joHp9EeS6O5zO6NZCqA" name="Usage0" client="_B2MMsHp9EeS6O5zO6NZCqA" supplier="_5-C0cHprEeS6O5zO6NZCqA"/>
         <packagedElement xmi:type="uml:Usage" xmi:id="_GmU64Hp9EeS6O5zO6NZCqA" name="Usage1" client="_B2MMsHp9EeS6O5zO6NZCqA" supplier="_at5KQHp2EeS6O5zO6NZCqA"/>
-        <packagedElement xmi:type="uml:Usage" xmi:id="_6phTkHrdEeSyBKqr79uWFQ" name="customerUsesBooking" client="_32tNsHrdEeSyBKqr79uWFQ" supplier="_5-C0cHprEeS6O5zO6NZCqA"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_KYfmkHodEeSypfm9OOQUYA" name="Components">
         <packagedElement xmi:type="uml:Component" xmi:id="_9a3H8HobEeSypfm9OOQUYA" name="Room">
-          <ownedComment xmi:type="uml:Comment" xmi:id="_g9RQgHocEeSypfm9OOQUYA">
-            <body>Handles adding/editing/deleting rooms. Holds information about rooms and room types.
-</body>
-          </ownedComment>
           <nestedClassifier xmi:type="uml:Class" xmi:id="_eIU7cHsTEeSLuMTWUFMNdg" name="Room">
             <ownedAttribute xmi:type="uml:Property" xmi:id="_eIU7cXsTEeSLuMTWUFMNdg" name="roomNumber">
               <ownedComment xmi:type="uml:Comment" xmi:id="_eIU7cnsTEeSLuMTWUFMNdg">
@@ -900,10 +895,6 @@
           <packagedElement xmi:type="uml:Usage" xmi:id="_caHQcHuzEeSVJuSosdCZSQ" name="OccupancyRoomUsage" client="_EmPN0Hr-EeS88peCe4NMnw" supplier="_4QGeMHpmEeS6O5zO6NZCqA"/>
         </packagedElement>
         <packagedElement xmi:type="uml:Component" xmi:id="__b5yoHobEeSypfm9OOQUYA" name="StaffAdministration">
-          <ownedComment xmi:type="uml:Comment" xmi:id="_eG45QHocEeSypfm9OOQUYA">
-            <body>Manages staff accounts etc.
-</body>
-          </ownedComment>
           <nestedClassifier xmi:type="uml:Class" xmi:id="_yNtykXumEeSUpK3HS5a0Lg" name="AccountManager">
             <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_yNtyk3umEeSUpK3HS5a0Lg" client="_yNtykXumEeSUpK3HS5a0Lg"/>
             <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_ZEc9MHuoEeSUpK3HS5a0Lg" client="_yNtykXumEeSUpK3HS5a0Lg" supplier="_yNtywnumEeSUpK3HS5a0Lg" contract="_yNtywnumEeSUpK3HS5a0Lg"/>
@@ -1342,23 +1333,15 @@
             <supplier xmi:type="uml:Class" href="../SequenceDiagram/model.uml#_xvNwkHsVEeSdPKzPJV8cOA"/>
           </packagedElement>
           <packagedElement xmi:type="uml:Realization" xmi:id="_SH2wwHujEeSz04gN9GtPDA" client="_gomS13uiEeSz04gN9GtPDA" supplier="_5-C0cHprEeS6O5zO6NZCqA"/>
+          <packagedElement xmi:type="uml:Usage" xmi:id="_6phTkHrdEeSyBKqr79uWFQ" name="customerUsesBooking" client="_32tNsHrdEeSyBKqr79uWFQ" supplier="_5-C0cHprEeS6O5zO6NZCqA"/>
         </packagedElement>
         <packagedElement xmi:type="uml:Component" xmi:id="_IaMjUHocEeSypfm9OOQUYA" name="AdditionalService">
-          <ownedComment xmi:type="uml:Comment" xmi:id="_2YgqEHocEeSypfm9OOQUYA">
-            <body>Handles adding/editing/deleting of AS. Hold all information of AS and AS events.</body>
-          </ownedComment>
           <packagedElement xmi:type="uml:Dependency" xmi:id="_TyrB4HulEeSz04gN9GtPDA" client="_gomS13uiEeSz04gN9GtPDA" supplier="_YlNd8HpfEeS6O5zO6NZCqA"/>
         </packagedElement>
         <packagedElement xmi:type="uml:Component" xmi:id="_Oa_oIHocEeSypfm9OOQUYA" name="Payment">
-          <ownedComment xmi:type="uml:Comment" xmi:id="_xmqrsHocEeSypfm9OOQUYA">
-            <body>Interface to the bank</body>
-          </ownedComment>
           <packagedElement xmi:type="uml:Dependency" xmi:id="_pgxtEHulEeSz04gN9GtPDA" client="_gomS13uiEeSz04gN9GtPDA" supplier="_x9UbEHpyEeS6O5zO6NZCqA"/>
         </packagedElement>
         <packagedElement xmi:type="uml:Component" xmi:id="_Q51pIHocEeSypfm9OOQUYA" name="Occupancy">
-          <ownedComment xmi:type="uml:Comment" xmi:id="_oXaG0HocEeSypfm9OOQUYA">
-            <body>Handles check in/out and keeps tracks of which guests are staying at the hotel at a given point in time.</body>
-          </ownedComment>
           <nestedClassifier xmi:type="uml:Class" xmi:id="_x4aGoHsGEeSN3_59vLF8fg" name="Occupancy">
             <ownedAttribute xmi:type="uml:Property" xmi:id="_eZfFQHsFEeSN3_59vLF8fg" name="roomNumber">
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
@@ -1465,9 +1448,9 @@
           <packagedElement xmi:type="uml:Usage" xmi:id="_m3MWkHrzEeSCzp55akTC6w" name="Usage101" client="_Qa0TwHp9EeS6O5zO6NZCqA" supplier="_oFVrUHpcEeS6O5zO6NZCqA"/>
           <packagedElement xmi:type="uml:Usage" xmi:id="_u5tYQHuzEeSVJuSosdCZSQ" name="OccupancyBookingUsage" client="_EmPN0Hr-EeS88peCe4NMnw" supplier="_5-C0cHprEeS6O5zO6NZCqA"/>
         </packagedElement>
-        <packagedElement xmi:type="uml:Component" xmi:id="_32tNsHrdEeSyBKqr79uWFQ" name="Customer"/>
-        <packagedElement xmi:type="uml:Component" xmi:id="_B2MMsHp9EeS6O5zO6NZCqA" name="Receptionist"/>
-        <packagedElement xmi:type="uml:Component" xmi:id="_Qa0TwHp9EeS6O5zO6NZCqA" name="Administrator"/>
+        <packagedElement xmi:type="uml:Component" xmi:id="_32tNsHrdEeSyBKqr79uWFQ" name="CustomerStub"/>
+        <packagedElement xmi:type="uml:Component" xmi:id="_B2MMsHp9EeS6O5zO6NZCqA" name="ReceptionistStub"/>
+        <packagedElement xmi:type="uml:Component" xmi:id="_Qa0TwHp9EeS6O5zO6NZCqA" name="AdministratorStub"/>
         <packagedElement xmi:type="uml:Usage" xmi:id="_ijijQHunEeSUpK3HS5a0Lg" name="Usage0" client="_Qa0TwHp9EeS6O5zO6NZCqA" supplier="_yNtyrnumEeSUpK3HS5a0Lg"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_tXq9EHpbEeS6O5zO6NZCqA" name="InterfaceClasses">
@@ -1871,7 +1854,7 @@
             </ownedParameter>
           </ownedOperation>
         </packagedElement>
-        <packagedElement xmi:type="uml:Package" xmi:id="_ye0hAHrzEeSCzp55akTC6w" name="Realizations">
+        <packagedElement xmi:type="uml:Package" xmi:id="_ye0hAHrzEeSCzp55akTC6w" name="Realizations (ComponentDiagram)">
           <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_seWBAHpeEeS6O5zO6NZCqA" name="additionalServiceRealisation" client="_IaMjUHocEeSypfm9OOQUYA" supplier="_oFVrUHpcEeS6O5zO6NZCqA" contract="_oFVrUHpcEeS6O5zO6NZCqA"/>
           <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_icspAHp2EeS6O5zO6NZCqA" name="occupancyClientProvides" client="_Q51pIHocEeSypfm9OOQUYA" supplier="_at5KQHp2EeS6O5zO6NZCqA" contract="_at5KQHp2EeS6O5zO6NZCqA"/>
           <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_CrhFcHptEeS6O5zO6NZCqA" name="bookingClientProvidesRealization" client="_DBMeUHocEeSypfm9OOQUYA" supplier="_5-C0cHprEeS6O5zO6NZCqA" contract="_5-C0cHprEeS6O5zO6NZCqA"/>
