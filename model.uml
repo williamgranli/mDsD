@@ -1046,7 +1046,8 @@
             <ownedAttribute xmi:type="uml:Property" xmi:id="_gokdp3uiEeSz04gN9GtPDA" name="currentCost" visibility="private">
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
             </ownedAttribute>
-            <ownedAttribute xmi:type="uml:Property" xmi:id="_gokdqHuiEeSz04gN9GtPDA" name="rooms" visibility="private" type="_gomS1HuiEeSz04gN9GtPDA">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_gokdqHuiEeSz04gN9GtPDA" name="rooms" visibility="protected">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gokdqXuiEeSz04gN9GtPDA" value="1"/>
               <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gokdqnuiEeSz04gN9GtPDA" value="*"/>
             </ownedAttribute>
@@ -1101,7 +1102,9 @@
               </ownedParameter>
             </ownedOperation>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_gokdwXuiEeSz04gN9GtPDA" name="addToBooking" visibility="public">
-              <ownedParameter xmi:type="uml:Parameter" xmi:id="_gokdwnuiEeSz04gN9GtPDA" name="newService" type="_gomS1HuiEeSz04gN9GtPDA"/>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_gokdwnuiEeSz04gN9GtPDA" name="newService">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+              </ownedParameter>
             </ownedOperation>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_gokdw3uiEeSz04gN9GtPDA" name="removeFromBooking">
               <ownedParameter xmi:type="uml:Parameter" xmi:id="_gokdxHuiEeSz04gN9GtPDA" name="roomType">
@@ -1152,14 +1155,6 @@
             </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_gomS03uiEeSz04gN9GtPDA" name="address">
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-            </ownedAttribute>
-          </nestedClassifier>
-          <nestedClassifier xmi:type="uml:DataType" xmi:id="_gomS1HuiEeSz04gN9GtPDA" name="Room">
-            <ownedAttribute xmi:type="uml:Property" xmi:id="_gomS1XuiEeSz04gN9GtPDA" name="roomType">
-              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-            </ownedAttribute>
-            <ownedAttribute xmi:type="uml:Property" xmi:id="_gomS1nuiEeSz04gN9GtPDA" name="price">
-              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
             </ownedAttribute>
           </nestedClassifier>
           <nestedClassifier xmi:type="uml:Class" xmi:id="_gomS13uiEeSz04gN9GtPDA" name="BookingManager">
@@ -1301,7 +1296,6 @@
           </nestedClassifier>
           <packagedElement xmi:type="uml:Dependency" xmi:id="_golEsHuiEeSz04gN9GtPDA" client="_gokdoHuiEeSz04gN9GtPDA" supplier="_golrw3uiEeSz04gN9GtPDA"/>
           <packagedElement xmi:type="uml:Dependency" xmi:id="_golrwHuiEeSz04gN9GtPDA" client="_gokdoHuiEeSz04gN9GtPDA" supplier="_gomS0HuiEeSz04gN9GtPDA"/>
-          <packagedElement xmi:type="uml:Dependency" xmi:id="_golrwXuiEeSz04gN9GtPDA" client="_gokdoHuiEeSz04gN9GtPDA" supplier="_gomS1HuiEeSz04gN9GtPDA"/>
           <packagedElement xmi:type="uml:Dependency" xmi:id="_golrwnuiEeSz04gN9GtPDA" client="_gokdoHuiEeSz04gN9GtPDA" supplier="_gong8HuiEeSz04gN9GtPDA"/>
           <packagedElement xmi:type="uml:Realization" xmi:id="_gong9HuiEeSz04gN9GtPDA" client="_gomS13uiEeSz04gN9GtPDA">
             <supplier xmi:type="uml:Interface" href="../SequenceDiagram/model.uml#_ex7kAHsREeSdPKzPJV8cOA"/>
@@ -1442,9 +1436,12 @@
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QJJTQnuhEeSMTLmV7lCB0w" value="*"/>
           </ownedEnd>
         </packagedElement>
-        <packagedElement xmi:type="uml:Dependency" xmi:id="_nqXh4HuhEeSMTLmV7lCB0w" name="&lt;&lt;uses>>" client="_EmPN0Hr-EeS88peCe4NMnw" supplier="_hHHwcHpmEeS6O5zO6NZCqA"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="_nqXh4HuhEeSMTLmV7lCB0w" name="&lt;&lt;uses>>" client="_EmPN0Hr-EeS88peCe4NMnw" supplier="_4QGeMHpmEeS6O5zO6NZCqA"/>
         <packagedElement xmi:type="uml:Realization" xmi:id="_SH2wwHujEeSz04gN9GtPDA" client="_gomS13uiEeSz04gN9GtPDA" supplier="_5-C0cHprEeS6O5zO6NZCqA"/>
         <packagedElement xmi:type="uml:Dependency" xmi:id="_5nsYMHujEeSz04gN9GtPDA" name="&lt;&lt;use>>" client="_EmPN0Hr-EeS88peCe4NMnw" supplier="_5-C0cHprEeS6O5zO6NZCqA"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="_1GwuMHukEeSz04gN9GtPDA" client="_gomS13uiEeSz04gN9GtPDA" supplier="_4QGeMHpmEeS6O5zO6NZCqA"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="_TyrB4HulEeSz04gN9GtPDA" client="_gomS13uiEeSz04gN9GtPDA" supplier="_YlNd8HpfEeS6O5zO6NZCqA"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="_pgxtEHulEeSz04gN9GtPDA" client="_gomS13uiEeSz04gN9GtPDA" supplier="_x9UbEHpyEeS6O5zO6NZCqA"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_tXq9EHpbEeS6O5zO6NZCqA" name="InterfaceClasses">
         <packagedElement xmi:type="uml:Interface" xmi:id="_oFVrUHpcEeS6O5zO6NZCqA" name="AdditionalServiceAdmin">
@@ -1609,7 +1606,6 @@
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
             </ownedParameter>
           </ownedOperation>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_wE5eMHuhEeSMTLmV7lCB0w" name="getAllRoomNumbers"/>
         </packagedElement>
         <packagedElement xmi:type="uml:Interface" xmi:id="_4QGeMHpmEeS6O5zO6NZCqA" name="RoomClientProvides">
           <ownedOperation xmi:type="uml:Operation" xmi:id="_ML9vsHpnEeS6O5zO6NZCqA" name="getRoomInfo">
@@ -1634,6 +1630,7 @@
             </ownedParameter>
           </ownedOperation>
           <ownedOperation xmi:type="uml:Operation" xmi:id="_8d9M8HueEeSQ2NWCMmu_Fw" name="getRoomTypes"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_8ei0EHukEeSz04gN9GtPDA" name="getAllRoomNumbers"/>
         </packagedElement>
         <packagedElement xmi:type="uml:Interface" xmi:id="_5-C0cHprEeS6O5zO6NZCqA" name="BookingClientProvides">
           <ownedOperation xmi:type="uml:Operation" xmi:id="_A_A80HpsEeS6O5zO6NZCqA" name="searchRooms">
