@@ -760,28 +760,6 @@
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4QITZXpmEeS6O5zO6NZCqA"/>
       </children>
       <children xmi:type="notation:BasicCompartment" xmi:id="_4QI6cHpmEeS6O5zO6NZCqA" type="7009">
-        <children xmi:type="notation:Shape" xmi:id="_ML-90HpnEeS6O5zO6NZCqA" type="5">
-          <styles xmi:type="notation:StringListValueStyle" xmi:id="_HJ3ygHueEeSQ2NWCMmu_Fw" name="maskLabel">
-            <stringListValue>parametersType</stringListValue>
-            <stringListValue>parametersName</stringListValue>
-            <stringListValue>visibility</stringListValue>
-            <stringListValue>name</stringListValue>
-            <stringListValue>returnType</stringListValue>
-          </styles>
-          <element xmi:type="uml:Operation" href="Implementation.uml#_ML9vsHpnEeS6O5zO6NZCqA"/>
-          <layoutConstraint xmi:type="notation:Location" xmi:id="_ML-90XpnEeS6O5zO6NZCqA"/>
-        </children>
-        <children xmi:type="notation:Shape" xmi:id="_tKXOgHrXEeSyBKqr79uWFQ" type="5">
-          <styles xmi:type="notation:StringListValueStyle" xmi:id="_Ebe5oHueEeSQ2NWCMmu_Fw" name="maskLabel">
-            <stringListValue>parametersType</stringListValue>
-            <stringListValue>parametersName</stringListValue>
-            <stringListValue>visibility</stringListValue>
-            <stringListValue>name</stringListValue>
-            <stringListValue>returnType</stringListValue>
-          </styles>
-          <element xmi:type="uml:Operation" href="Implementation.uml#_tKVZUHrXEeSyBKqr79uWFQ"/>
-          <layoutConstraint xmi:type="notation:Location" xmi:id="_tKXOgXrXEeSyBKqr79uWFQ"/>
-        </children>
         <styles xmi:type="notation:TitleStyle" xmi:id="_4QI6cXpmEeS6O5zO6NZCqA"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_4QI6cnpmEeS6O5zO6NZCqA"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_4QI6c3pmEeS6O5zO6NZCqA"/>

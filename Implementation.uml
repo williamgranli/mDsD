@@ -373,7 +373,7 @@
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
             </ownedParameter>
           </ownedOperation>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_gokdw3uiEeSz04gN9GtPDA" name="removeFromBooking">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_gokdw3uiEeSz04gN9GtPDA" name="removeRoomFromBooking">
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_gokdxHuiEeSz04gN9GtPDA" name="roomType">
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
             </ownedParameter>
@@ -386,7 +386,7 @@
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_gokdyHuiEeSz04gN9GtPDA" name="departureDate" type="_golrw3uiEeSz04gN9GtPDA"/>
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_gokdyXuiEeSz04gN9GtPDA" name="customerInformation" type="_gomS0HuiEeSz04gN9GtPDA"/>
           </ownedOperation>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_gokdynuiEeSz04gN9GtPDA" name="removeFromBooking" visibility="public">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_gokdynuiEeSz04gN9GtPDA" name="removeAdditionalServiceFromBooking" visibility="public">
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_gokdy3uiEeSz04gN9GtPDA" name="additionalService">
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
             </ownedParameter>
@@ -477,7 +477,7 @@
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
             </ownedParameter>
           </ownedOperation>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_gomS8nuiEeSz04gN9GtPDA" name="removeFromBooking">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_gomS8nuiEeSz04gN9GtPDA" name="removeRoomFromBooking">
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_gomS83uiEeSz04gN9GtPDA" name="bookingReference">
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
             </ownedParameter>
@@ -485,7 +485,7 @@
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
             </ownedParameter>
           </ownedOperation>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_gomS9XuiEeSz04gN9GtPDA" name="removeFromBooking" visibility="public">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_gomS9XuiEeSz04gN9GtPDA" name="removeAdditionalServiceFromBooking" visibility="public">
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_gomS9nuiEeSz04gN9GtPDA" name="bookingReference">
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
             </ownedParameter>
@@ -981,16 +981,6 @@
         </ownedOperation>
       </packagedElement>
       <packagedElement xmi:type="uml:Interface" xmi:id="_4QGeMHpmEeS6O5zO6NZCqA" name="RoomClientProvides">
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_ML9vsHpnEeS6O5zO6NZCqA" name="getRoomInfo">
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_koyD4HpnEeS6O5zO6NZCqA" name="roomNumber">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-          </ownedParameter>
-        </ownedOperation>
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_tKVZUHrXEeSyBKqr79uWFQ" name="searchRoom">
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_B2T5IHrYEeSyBKqr79uWFQ" name="roomTypeName">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-          </ownedParameter>
-        </ownedOperation>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_7eR4oHueEeSQ2NWCMmu_Fw" name="getRoomInfo">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_7eR4oXueEeSQ2NWCMmu_Fw" name="roomNumber">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
