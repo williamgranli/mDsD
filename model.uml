@@ -1281,6 +1281,90 @@
           <packagedElement xmi:type="uml:Usage" xmi:id="_6phTkHrdEeSyBKqr79uWFQ" name="customerUsesBooking" client="_32tNsHrdEeSyBKqr79uWFQ" supplier="_5-C0cHprEeS6O5zO6NZCqA"/>
         </packagedElement>
         <packagedElement xmi:type="uml:Component" xmi:id="_IaMjUHocEeSypfm9OOQUYA" name="AdditionalService">
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_BKM2oHvAEeSAJb-qAtupNw" name="AdditionalService">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_BKNdsHvAEeSAJb-qAtupNw" name="name">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_BKNdsXvAEeSAJb-qAtupNw" name="usable">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_BKNdsnvAEeSAJb-qAtupNw" name="price">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_BKNds3vAEeSAJb-qAtupNw" name="maxAttendant">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_BKNdtHvAEeSAJb-qAtupNw" name="Description">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_BKNdtXvAEeSAJb-qAtupNw" name="getAdditionalServiceInfo" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_BKNdtnvAEeSAJb-qAtupNw" name="name">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_BKNdt3vAEeSAJb-qAtupNw" name="removeAdditionalService" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_BKNduHvAEeSAJb-qAtupNw" name="name">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_BKNduXvAEeSAJb-qAtupNw" name="editAdditionalService" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_BKNdunvAEeSAJb-qAtupNw" name="name">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_BKNdu3vAEeSAJb-qAtupNw" name="newName">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_BKNdvHvAEeSAJb-qAtupNw" name="price">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_BKNdvXvAEeSAJb-qAtupNw" name="maxAttendants">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_BKNdvnvAEeSAJb-qAtupNw" name="addAdditionalService" visibility="package">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_BKNdv3vAEeSAJb-qAtupNw" name="name">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_BKNdwHvAEeSAJb-qAtupNw" name="price">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_BKNdwXvAEeSAJb-qAtupNw" name="maxAttendants">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+              </ownedParameter>
+            </ownedOperation>
+          </nestedClassifier>
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_BKP58HvAEeSAJb-qAtupNw" name="AdditionalServiceEvent">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_BKP58XvAEeSAJb-qAtupNw" name="dateTime">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_BKP58nvAEeSAJb-qAtupNw" name="name">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_BKP583vAEeSAJb-qAtupNw" name="location">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_BKP59HvAEeSAJb-qAtupNw" name="price">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_BKP59XvAEeSAJb-qAtupNw" name="maxAttendant">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            </ownedAttribute>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_BKP59nvAEeSAJb-qAtupNw" name="getAdditionalServiceInfo" concurrency="guarded">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_BKP593vAEeSAJb-qAtupNw" name="addtionalServiceName">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+            </ownedOperation>
+          </nestedClassifier>
+          <nestedClassifier xmi:type="uml:Association" xmi:id="_BKP5-HvAEeSAJb-qAtupNw" memberEnd="_BKP5-XvAEeSAJb-qAtupNw _BKP5_HvAEeSAJb-qAtupNw">
+            <ownedEnd xmi:type="uml:Property" xmi:id="_BKP5-XvAEeSAJb-qAtupNw" name="additionalService" type="_BKM2oHvAEeSAJb-qAtupNw" association="_BKP5-HvAEeSAJb-qAtupNw">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_BKP5-nvAEeSAJb-qAtupNw" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_BKP5-3vAEeSAJb-qAtupNw" value="1"/>
+            </ownedEnd>
+            <ownedEnd xmi:type="uml:Property" xmi:id="_BKP5_HvAEeSAJb-qAtupNw" name="additionalServiceEvent" type="_BKP58HvAEeSAJb-qAtupNw" association="_BKP5-HvAEeSAJb-qAtupNw">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_BKP5_XvAEeSAJb-qAtupNw" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_BKP5_nvAEeSAJb-qAtupNw" value="*"/>
+            </ownedEnd>
+          </nestedClassifier>
           <packagedElement xmi:type="uml:Dependency" xmi:id="_TyrB4HulEeSz04gN9GtPDA" client="_gomS13uiEeSz04gN9GtPDA" supplier="_YlNd8HpfEeS6O5zO6NZCqA"/>
         </packagedElement>
         <packagedElement xmi:type="uml:Component" xmi:id="_Oa_oIHocEeSypfm9OOQUYA" name="Payment">
@@ -1509,6 +1593,9 @@
         <packagedElement xmi:type="uml:Usage" xmi:id="_PTeQsHu7EeSdya3569P6lw" client="_iroNoHu6EeSdya3569P6lw" supplier="_CWxu1nokEeSpJvJMK8L-IA"/>
         <packagedElement xmi:type="uml:ComponentRealization" xmi:id="_k4v6kHu8EeSdya3569P6lw" client="__b5yoHobEeSypfm9OOQUYA" supplier="_yNtyrnumEeSUpK3HS5a0Lg"/>
         <packagedElement xmi:type="uml:ComponentRealization" xmi:id="_mUQPQHu8EeSdya3569P6lw" client="__b5yoHobEeSypfm9OOQUYA" supplier="_yNtywnumEeSUpK3HS5a0Lg"/>
+        <packagedElement xmi:type="uml:Realization" xmi:id="_MLFKIHvAEeSAJb-qAtupNw" client="_BKM2oHvAEeSAJb-qAtupNw" supplier="_oFVrUHpcEeS6O5zO6NZCqA"/>
+        <packagedElement xmi:type="uml:Realization" xmi:id="_M6OvIHvAEeSAJb-qAtupNw" client="_BKM2oHvAEeSAJb-qAtupNw" supplier="_YlNd8HpfEeS6O5zO6NZCqA"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_zX69EHvAEeSAJb-qAtupNw" client="_BKM2oHvAEeSAJb-qAtupNw" supplier="_yNtywnumEeSUpK3HS5a0Lg"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_tXq9EHpbEeS6O5zO6NZCqA" name="InterfaceClasses">
         <packagedElement xmi:type="uml:Interface" xmi:id="_oFVrUHpcEeS6O5zO6NZCqA" name="AdditionalServiceAdmin">
