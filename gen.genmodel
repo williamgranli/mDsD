@@ -186,8 +186,8 @@
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//Components/Booking_Booking/addToBooking.1">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//Components/Booking_Booking/addToBooking.1/newService"/>
         </genOperations>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//Components/Booking_Booking/removeFromBooking">
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//Components/Booking_Booking/removeFromBooking/roomType"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//Components/Booking_Booking/removeRoomFromBooking">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//Components/Booking_Booking/removeRoomFromBooking/roomType"/>
         </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//Components/Booking_Booking/updateBooking">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//Components/Booking_Booking/updateBooking/bookingReference"/>
@@ -195,8 +195,8 @@
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//Components/Booking_Booking/updateBooking/departureDate"/>
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//Components/Booking_Booking/updateBooking/customerInformation"/>
         </genOperations>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//Components/Booking_Booking/removeFromBooking.1">
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//Components/Booking_Booking/removeFromBooking.1/additionalService"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//Components/Booking_Booking/removeAdditionalServiceFromBooking">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//Components/Booking_Booking/removeAdditionalServiceFromBooking/additionalService"/>
         </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//Components/Booking_Booking/currentCost"/>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//Components/Booking_Booking/updatePaymentDetails">
@@ -250,13 +250,13 @@
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//Components/Booking_BookingManager/generateQuote/endDate"/>
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//Components/Booking_BookingManager/generateQuote/roomType"/>
         </genOperations>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//Components/Booking_BookingManager/removeFromBooking">
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//Components/Booking_BookingManager/removeFromBooking/bookingReference"/>
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//Components/Booking_BookingManager/removeFromBooking/roomType"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//Components/Booking_BookingManager/removeRoomFromBooking">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//Components/Booking_BookingManager/removeRoomFromBooking/bookingReference"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//Components/Booking_BookingManager/removeRoomFromBooking/roomType"/>
         </genOperations>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//Components/Booking_BookingManager/removeFromBooking.1">
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//Components/Booking_BookingManager/removeFromBooking.1/bookingReference"/>
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//Components/Booking_BookingManager/removeFromBooking.1/additionalService"/>
+        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//Components/Booking_BookingManager/removeAdditionalServiceFromBooking">
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//Components/Booking_BookingManager/removeAdditionalServiceFromBooking/bookingReference"/>
+          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//Components/Booking_BookingManager/removeAdditionalServiceFromBooking/additionalService"/>
         </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//Components/Booking_BookingManager/makeBooking">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//Components/Booking_BookingManager/makeBooking/roomType"/>
@@ -454,12 +454,6 @@
         </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//InterfaceClasses/RoomClientProvides/searchRoom">
           <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//InterfaceClasses/RoomClientProvides/searchRoom/roomTypeName"/>
-        </genOperations>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//InterfaceClasses/RoomClientProvides/getRoomInfo.1">
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//InterfaceClasses/RoomClientProvides/getRoomInfo.1/roomNumber"/>
-        </genOperations>
-        <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//InterfaceClasses/RoomClientProvides/searchRoom.1">
-          <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//InterfaceClasses/RoomClientProvides/searchRoom.1/roomTypeName"/>
         </genOperations>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//InterfaceClasses/RoomClientProvides/getRoomTypes"/>
         <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//InterfaceClasses/RoomClientProvides/getAllRoomNumbers"/>

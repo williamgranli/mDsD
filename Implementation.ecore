@@ -169,7 +169,7 @@
       <eOperations name="addToBooking" ordered="false" lowerBound="1">
         <eParameters name="newService" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       </eOperations>
-      <eOperations name="removeFromBooking" ordered="false" lowerBound="1">
+      <eOperations name="removeRoomFromBooking" ordered="false" lowerBound="1">
         <eParameters name="roomType" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       </eOperations>
       <eOperations name="updateBooking" ordered="false" lowerBound="1">
@@ -178,7 +178,7 @@
         <eParameters name="departureDate" ordered="false" lowerBound="1" eType="#//Components/Booking_Date"/>
         <eParameters name="customerInformation" ordered="false" lowerBound="1" eType="#//Components/Booking_Person"/>
       </eOperations>
-      <eOperations name="removeFromBooking" ordered="false" lowerBound="1">
+      <eOperations name="removeAdditionalServiceFromBooking" ordered="false" lowerBound="1">
         <eParameters name="additionalService" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       </eOperations>
       <eOperations name="currentCost" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
@@ -254,11 +254,11 @@
         <eParameters name="endDate" ordered="false" lowerBound="1" eType="#//Components/Booking_Date"/>
         <eParameters name="roomType" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       </eOperations>
-      <eOperations name="removeFromBooking" ordered="false" lowerBound="1">
+      <eOperations name="removeRoomFromBooking" ordered="false" lowerBound="1">
         <eParameters name="bookingReference" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
         <eParameters name="roomType" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       </eOperations>
-      <eOperations name="removeFromBooking" ordered="false" lowerBound="1">
+      <eOperations name="removeAdditionalServiceFromBooking" ordered="false" lowerBound="1">
         <eParameters name="bookingReference" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
         <eParameters name="additionalService" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       </eOperations>
@@ -479,12 +479,6 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="RoomClientProvides" abstract="true"
         interface="true">
-      <eOperations name="getRoomInfo" ordered="false" lowerBound="1">
-        <eParameters name="roomNumber" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-      </eOperations>
-      <eOperations name="searchRoom" ordered="false" lowerBound="1">
-        <eParameters name="roomTypeName" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-      </eOperations>
       <eOperations name="getRoomInfo" ordered="false" lowerBound="1">
         <eParameters name="roomNumber" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
       </eOperations>
