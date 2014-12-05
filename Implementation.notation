@@ -349,20 +349,6 @@
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_T8cc4Hp8EeS6O5zO6NZCqA" id="(0.9333333333333333,0.5285714285714286)"/>
       <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_qjUjIHp8EeS6O5zO6NZCqA" id="(0.014925373134328358,0.2558139534883721)"/>
     </edges>
-    <edges xmi:type="notation:Connector" xmi:id="_FH-GgHp9EeS6O5zO6NZCqA" type="4001" source="_B2PQAHp9EeS6O5zO6NZCqA" target="_Ok5ncHrfEeSyBKqr79uWFQ">
-      <styles xmi:type="notation:FontStyle" xmi:id="_FH-GgXp9EeS6O5zO6NZCqA"/>
-      <element xmi:type="uml:Usage" href="Implementation.uml#_FH1joHp9EeS6O5zO6NZCqA"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_FH-Ggnp9EeS6O5zO6NZCqA" points="[-1, -3, 18, 158]$[-19, -160, 0, 1]"/>
-      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_fmLqsHp9EeS6O5zO6NZCqA" id="(0.8888888888888888,0.0)"/>
-      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_PDm8sHrfEeSyBKqr79uWFQ" id="(0.18076285240464346,1.0)"/>
-    </edges>
-    <edges xmi:type="notation:Connector" xmi:id="_GmbBgHp9EeS6O5zO6NZCqA" type="4001" source="_B2PQAHp9EeS6O5zO6NZCqA" target="_LyRu0HrfEeSyBKqr79uWFQ">
-      <styles xmi:type="notation:FontStyle" xmi:id="_GmbBgXp9EeS6O5zO6NZCqA"/>
-      <element xmi:type="uml:Usage" href="Implementation.uml#_GmU64Hp9EeS6O5zO6NZCqA"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_GmbBgnp9EeS6O5zO6NZCqA" points="[-58, -35, 300, 179]$[-362, -224, -4, -10]"/>
-      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_gY6IIHp9EeS6O5zO6NZCqA" id="(0.16,0.0)"/>
-      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_NdprgHrfEeSyBKqr79uWFQ" id="(0.7362637362637363,1.0)"/>
-    </edges>
     <edges xmi:type="notation:Connector" xmi:id="_7hbNkHp9EeS6O5zO6NZCqA" type="4001" source="_9dQ7sHobEeSypfm9OOQUYA" target="_ZvQDIHunEeSUpK3HS5a0Lg">
       <styles xmi:type="notation:FontStyle" xmi:id="_7hbNkXp9EeS6O5zO6NZCqA"/>
       <element xmi:type="uml:Usage" href="Implementation.uml#_7hPnYHp9EeS6O5zO6NZCqA"/>

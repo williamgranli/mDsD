@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ActionLanguage="http://www.omg.org/spec/ALF/20120827/ActionLanguage-Profile" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.omg.org/spec/ALF/20120827/ActionLanguage-Profile pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_sYse0YZLEeKyw49uR6nx3g">
   <uml:Package xmi:id="_0xs5wHobEeSypfm9OOQUYA" name="Implementation">
-    <packagedElement xmi:type="uml:Package" xmi:id="_FiVI4HodEeSypfm9OOQUYA" name="Dependencies">
-      <packagedElement xmi:type="uml:Usage" xmi:id="_FH1joHp9EeS6O5zO6NZCqA" name="Usage0" client="_B2MMsHp9EeS6O5zO6NZCqA" supplier="_5-C0cHprEeS6O5zO6NZCqA"/>
-      <packagedElement xmi:type="uml:Usage" xmi:id="_GmU64Hp9EeS6O5zO6NZCqA" name="Usage1" client="_B2MMsHp9EeS6O5zO6NZCqA" supplier="_at5KQHp2EeS6O5zO6NZCqA"/>
-    </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_KYfmkHodEeSypfm9OOQUYA" name="Components">
       <packagedElement xmi:type="uml:Component" xmi:id="_9a3H8HobEeSypfm9OOQUYA" name="Room">
         <nestedClassifier xmi:type="uml:Class" xmi:id="_eIU7cHsTEeSLuMTWUFMNdg" name="Room">
