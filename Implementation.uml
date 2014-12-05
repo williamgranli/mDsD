@@ -186,7 +186,6 @@
         </nestedClassifier>
         <packagedElement xmi:type="uml:Realization" xmi:id="_6MaRQHsTEeSLuMTWUFMNdg" client="_eIU7cHsTEeSLuMTWUFMNdg" supplier="_4QGeMHpmEeS6O5zO6NZCqA"/>
         <packagedElement xmi:type="uml:Realization" xmi:id="_6mqkUHsTEeSLuMTWUFMNdg" client="_eIU7cHsTEeSLuMTWUFMNdg" supplier="_hHHwcHpmEeS6O5zO6NZCqA"/>
-        <packagedElement xmi:type="uml:Dependency" xmi:id="_1GwuMHukEeSz04gN9GtPDA" client="_gomS13uiEeSz04gN9GtPDA" supplier="_4QGeMHpmEeS6O5zO6NZCqA"/>
         <packagedElement xmi:type="uml:Usage" xmi:id="_caHQcHuzEeSVJuSosdCZSQ" name="OccupancyRoomUsage" client="_EmPN0Hr-EeS88peCe4NMnw" supplier="_4QGeMHpmEeS6O5zO6NZCqA"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Component" xmi:id="__b5yoHobEeSypfm9OOQUYA" name="StaffAdministration">
@@ -574,6 +573,7 @@
         </packagedElement>
         <packagedElement xmi:type="uml:Realization" xmi:id="_SH2wwHujEeSz04gN9GtPDA" client="_gomS13uiEeSz04gN9GtPDA" supplier="_5-C0cHprEeS6O5zO6NZCqA"/>
         <packagedElement xmi:type="uml:Usage" xmi:id="_6phTkHrdEeSyBKqr79uWFQ" name="customerUsesBooking" client="_32tNsHrdEeSyBKqr79uWFQ" supplier="_5-C0cHprEeS6O5zO6NZCqA"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="__X6CQHxyEeSFZ7RIJqqaZQ" name="BookingUsesRoom" client="_gomS13uiEeSz04gN9GtPDA" supplier="_4QGeMHpmEeS6O5zO6NZCqA"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Component" xmi:id="_IaMjUHocEeSypfm9OOQUYA" name="AdditionalService">
         <nestedClassifier xmi:type="uml:Class" xmi:id="_BKM2oHvAEeSAJb-qAtupNw" name="AdditionalService">
@@ -1283,7 +1283,6 @@
         </ownedOperation>
       </packagedElement>
     </packagedElement>
-    <packagedElement xmi:type="uml:Package" xmi:id="_KOQxEHpgEeS6O5zO6NZCqA" name="InterfaceDiagrams"/>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_EvCKIHvSEeSlv-_wb7Rnmw">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_EvEmYHvSEeSlv-_wb7Rnmw" source="http://www.eclipse.org/uml2/2.0.0/UML">
         <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_sYse0YZLEeKyw49uR6nx3g"/>
