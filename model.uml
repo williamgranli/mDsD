@@ -1247,9 +1247,6 @@
           <packagedElement xmi:type="uml:Usage" xmi:id="_m3MWkHrzEeSCzp55akTC6w" name="Usage101" client="_Qa0TwHp9EeS6O5zO6NZCqA" supplier="_oFVrUHpcEeS6O5zO6NZCqA"/>
           <packagedElement xmi:type="uml:Usage" xmi:id="_u5tYQHuzEeSVJuSosdCZSQ" name="OccupancyBookingUsage" client="_EmPN0Hr-EeS88peCe4NMnw" supplier="_5-C0cHprEeS6O5zO6NZCqA"/>
         </packagedElement>
-        <packagedElement xmi:type="uml:Component" xmi:id="_32tNsHrdEeSyBKqr79uWFQ" name="CustomerStub"/>
-        <packagedElement xmi:type="uml:Component" xmi:id="_B2MMsHp9EeS6O5zO6NZCqA" name="ReceptionistStub"/>
-        <packagedElement xmi:type="uml:Component" xmi:id="_Qa0TwHp9EeS6O5zO6NZCqA" name="AdministratorStub"/>
       </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_K-5lsHvSEeSlv-_wb7Rnmw" name="NotImplementation">
@@ -2823,6 +2820,13 @@
         <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_gfx7wHunEeSUpK3HS5a0Lg" name="staffAccount" client="__b5yoHobEeSypfm9OOQUYA" supplier="_yNtyrnumEeSUpK3HS5a0Lg" contract="_yNtyrnumEeSUpK3HS5a0Lg"/>
         <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_e_mvsHp5EeS6O5zO6NZCqA" name="authenticationClientProvidesRealization" client="__b5yoHobEeSypfm9OOQUYA" supplier="_yNtywnumEeSUpK3HS5a0Lg"/>
         <packagedElement xmi:type="uml:Usage" xmi:id="_7Bs2kHp7EeS6O5zO6NZCqA" name="staffAuth" client="__b5yoHobEeSypfm9OOQUYA" supplier="_yNtywnumEeSUpK3HS5a0Lg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_n4rLIHyHEeSJ7slPGZNOjA" name="Component">
+        <packagedElement xmi:type="uml:Package" xmi:id="_tPQ1UHyHEeSJ7slPGZNOjA" name="Stubs">
+          <packagedElement xmi:type="uml:Component" xmi:id="_32tNsHrdEeSyBKqr79uWFQ" name="CustomerStub"/>
+          <packagedElement xmi:type="uml:Component" xmi:id="_B2MMsHp9EeS6O5zO6NZCqA" name="ReceptionistStub"/>
+          <packagedElement xmi:type="uml:Component" xmi:id="_Qa0TwHp9EeS6O5zO6NZCqA" name="AdministratorStub"/>
+        </packagedElement>
       </packagedElement>
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_xWZvIGT0EeS_fYcbMbH-Fw">
