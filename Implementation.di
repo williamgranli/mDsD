@@ -3,9 +3,7 @@
   <sashModel currentSelection="//@sashModel/@windows.0/@children.0">
     <windows>
       <children xsi:type="di:TabFolder">
-        <children>
-          <emfPageIdentifier href="Implementation.notation#_8fT_cHr8EeSshdN1DdPgDg"/>
-        </children>
+        <children/>
       </children>
     </windows>
   </sashModel>
