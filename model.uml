@@ -477,10 +477,6 @@
           </ownedAttribute>
         </nestedClassifier>
         <nestedClassifier xmi:type="uml:Class" xmi:id="_gomS13uiEeSz04gN9GtPDA" name="BookingManager">
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_gomS2HuiEeSz04gN9GtPDA" name="bookings" type="_gokdoHuiEeSz04gN9GtPDA">
-            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gomS2XuiEeSz04gN9GtPDA"/>
-            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gomS2nuiEeSz04gN9GtPDA" value="*"/>
-          </ownedAttribute>
           <ownedOperation xmi:type="uml:Operation" xmi:id="_gomS23uiEeSz04gN9GtPDA" name="BookingManager"/>
         </nestedClassifier>
         <nestedClassifier xmi:type="uml:DataType" xmi:id="_gong8HuiEeSz04gN9GtPDA" name="AdditionalService">
@@ -692,41 +688,6 @@
           <ownedAttribute xmi:type="uml:Property" xmi:id="_BKNdtHvAEeSAJb-qAtupNw" name="Description">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedAttribute>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_BKNdtXvAEeSAJb-qAtupNw" name="getAdditionalServiceInfo" visibility="public">
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_BKNdtnvAEeSAJb-qAtupNw" name="name">
-              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-            </ownedParameter>
-          </ownedOperation>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_BKNdt3vAEeSAJb-qAtupNw" name="removeAdditionalService" visibility="public">
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_BKNduHvAEeSAJb-qAtupNw" name="name">
-              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-            </ownedParameter>
-          </ownedOperation>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_BKNduXvAEeSAJb-qAtupNw" name="editAdditionalService" visibility="public">
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_BKNdunvAEeSAJb-qAtupNw" name="name">
-              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-            </ownedParameter>
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_BKNdu3vAEeSAJb-qAtupNw" name="newName">
-              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-            </ownedParameter>
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_BKNdvHvAEeSAJb-qAtupNw" name="price">
-              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-            </ownedParameter>
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_BKNdvXvAEeSAJb-qAtupNw" name="maxAttendants">
-              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-            </ownedParameter>
-          </ownedOperation>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_BKNdvnvAEeSAJb-qAtupNw" name="addAdditionalService" visibility="package">
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_BKNdv3vAEeSAJb-qAtupNw" name="name">
-              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-            </ownedParameter>
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_BKNdwHvAEeSAJb-qAtupNw" name="price">
-              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-            </ownedParameter>
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_BKNdwXvAEeSAJb-qAtupNw" name="maxAttendants">
-              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-            </ownedParameter>
-          </ownedOperation>
         </nestedClassifier>
         <nestedClassifier xmi:type="uml:Class" xmi:id="_BKP58HvAEeSAJb-qAtupNw" name="AdditionalServiceEvent">
           <ownedAttribute xmi:type="uml:Property" xmi:id="_BKP58XvAEeSAJb-qAtupNw" name="dateTime">
