@@ -3722,13 +3722,6 @@
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ghcIoHunEeSUpK3HS5a0Lg" id="(0.5284974093264249,0.11016949152542373)"/>
       <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Dm4iMHvFEeStev25uiUWqg" id="(0.1043956043956044,0.6142857142857143)"/>
     </edges>
-    <edges xmi:type="notation:Connector" xmi:id="_ikFV0HunEeSUpK3HS5a0Lg" type="4001" source="_Qa4lMHp9EeS6O5zO6NZCqA" target="_QSa8UHunEeSUpK3HS5a0Lg">
-      <styles xmi:type="notation:FontStyle" xmi:id="_ikFV0XunEeSUpK3HS5a0Lg"/>
-      <element xmi:type="uml:Usage" href="model.uml#_ijijQHunEeSUpK3HS5a0Lg"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ikFV0nunEeSUpK3HS5a0Lg" points="[17, -4, -92, 0]$[91, -7, -18, -3]"/>
-      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ikK1YHunEeSUpK3HS5a0Lg" id="(0.9333333333333333,0.5714285714285714)"/>
-      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ikK1YXunEeSUpK3HS5a0Lg" id="(0.0,0.44333333333333336)"/>
-    </edges>
   </notation:Diagram>
   <notation:Diagram xmi:id="_8fT_cHr8EeSshdN1DdPgDg" type="PapyrusUMLClassDiagram" name="Class" measurementUnit="Pixel">
     <children xmi:type="notation:Shape" xmi:id="_BdWxUHr-EeS88peCe4NMnw" type="2004" fillColor="15053796">

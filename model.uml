@@ -662,6 +662,9 @@
             </ownedEnd>
           </nestedClassifier>
           <packagedElement xmi:type="uml:Dependency" xmi:id="_TyrB4HulEeSz04gN9GtPDA" client="_gomS13uiEeSz04gN9GtPDA" supplier="_YlNd8HpfEeS6O5zO6NZCqA"/>
+          <packagedElement xmi:type="uml:Realization" xmi:id="_MLFKIHvAEeSAJb-qAtupNw" client="_BKM2oHvAEeSAJb-qAtupNw" supplier="_oFVrUHpcEeS6O5zO6NZCqA"/>
+          <packagedElement xmi:type="uml:Realization" xmi:id="_M6OvIHvAEeSAJb-qAtupNw" client="_BKM2oHvAEeSAJb-qAtupNw" supplier="_YlNd8HpfEeS6O5zO6NZCqA"/>
+          <packagedElement xmi:type="uml:Usage" xmi:id="_zX69EHvAEeSAJb-qAtupNw" client="_BKM2oHvAEeSAJb-qAtupNw" supplier="_yNtywnumEeSUpK3HS5a0Lg"/>
         </packagedElement>
         <packagedElement xmi:type="uml:Component" xmi:id="_Oa_oIHocEeSypfm9OOQUYA" name="Payment">
           <nestedClassifier xmi:type="uml:Class" xmi:id="_iroNoHu6EeSdya3569P6lw" name="PaymentManager">
@@ -776,6 +779,7 @@
           <packagedElement xmi:type="uml:Dependency" xmi:id="_GXjekHu7EeSdya3569P6lw" client="_iro0sHu6EeSdya3569P6lw" supplier="_iroNoHu6EeSdya3569P6lw"/>
           <packagedElement xmi:type="uml:Dependency" xmi:id="_NBJowHu7EeSdya3569P6lw" client="_irqC0Xu6EeSdya3569P6lw" supplier="_iroNoHu6EeSdya3569P6lw"/>
           <packagedElement xmi:type="uml:Realization" xmi:id="_0O8TYHu6EeSdya3569P6lw" client="_iroNoHu6EeSdya3569P6lw" supplier="_x9UbEHpyEeS6O5zO6NZCqA"/>
+          <packagedElement xmi:type="uml:Usage" xmi:id="_PTeQsHu7EeSdya3569P6lw" name="PaymentUsesBank" client="_iroNoHu6EeSdya3569P6lw" supplier="_CWxu1nokEeSpJvJMK8L-IA"/>
         </packagedElement>
         <packagedElement xmi:type="uml:Component" xmi:id="_Q51pIHocEeSypfm9OOQUYA" name="Occupancy">
           <nestedClassifier xmi:type="uml:Class" xmi:id="_x4aGoHsGEeSN3_59vLF8fg" name="Occupancy">
@@ -887,13 +891,6 @@
         <packagedElement xmi:type="uml:Component" xmi:id="_32tNsHrdEeSyBKqr79uWFQ" name="CustomerStub"/>
         <packagedElement xmi:type="uml:Component" xmi:id="_B2MMsHp9EeS6O5zO6NZCqA" name="ReceptionistStub"/>
         <packagedElement xmi:type="uml:Component" xmi:id="_Qa0TwHp9EeS6O5zO6NZCqA" name="AdministratorStub"/>
-        <packagedElement xmi:type="uml:Usage" xmi:id="_ijijQHunEeSUpK3HS5a0Lg" name="Usage0" client="_Qa0TwHp9EeS6O5zO6NZCqA" supplier="_yNtyrnumEeSUpK3HS5a0Lg"/>
-        <packagedElement xmi:type="uml:Usage" xmi:id="_PTeQsHu7EeSdya3569P6lw" client="_iroNoHu6EeSdya3569P6lw" supplier="_CWxu1nokEeSpJvJMK8L-IA"/>
-        <packagedElement xmi:type="uml:ComponentRealization" xmi:id="_k4v6kHu8EeSdya3569P6lw" client="__b5yoHobEeSypfm9OOQUYA" supplier="_yNtyrnumEeSUpK3HS5a0Lg"/>
-        <packagedElement xmi:type="uml:ComponentRealization" xmi:id="_mUQPQHu8EeSdya3569P6lw" client="__b5yoHobEeSypfm9OOQUYA" supplier="_yNtywnumEeSUpK3HS5a0Lg"/>
-        <packagedElement xmi:type="uml:Realization" xmi:id="_MLFKIHvAEeSAJb-qAtupNw" client="_BKM2oHvAEeSAJb-qAtupNw" supplier="_oFVrUHpcEeS6O5zO6NZCqA"/>
-        <packagedElement xmi:type="uml:Realization" xmi:id="_M6OvIHvAEeSAJb-qAtupNw" client="_BKM2oHvAEeSAJb-qAtupNw" supplier="_YlNd8HpfEeS6O5zO6NZCqA"/>
-        <packagedElement xmi:type="uml:Usage" xmi:id="_zX69EHvAEeSAJb-qAtupNw" client="_BKM2oHvAEeSAJb-qAtupNw" supplier="_yNtywnumEeSUpK3HS5a0Lg"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_tXq9EHpbEeS6O5zO6NZCqA" name="InterfaceClasses">
         <packagedElement xmi:type="uml:Interface" xmi:id="_oFVrUHpcEeS6O5zO6NZCqA" name="AdditionalServiceAdmin">
