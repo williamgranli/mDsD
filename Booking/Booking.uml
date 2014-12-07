@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <uml:Package xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_igD7AH4kEeS4d8kZ58eU2A" name="Booking">
   <packagedElement xmi:type="uml:Component" xmi:id="_DBMeUHocEeSypfm9OOQUYA" name="BookingComponent">
-    <nestedClassifier xmi:type="uml:Interface" xmi:id="_6Rm3IHsPEeSdPKzPJV8cOA" name="BookingInterface"/>
     <nestedClassifier xmi:type="uml:Class" xmi:id="_eQyG4HuiEeSz04gN9GtPDA" name="PaymentDetails">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_eQyG4XuiEeSz04gN9GtPDA" name="firstName">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
@@ -106,7 +105,6 @@
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_gokdyHuiEeSz04gN9GtPDA" name="departureDate">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
         </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_gokdyXuiEeSz04gN9GtPDA" name="customerInformation"/>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_gokdynuiEeSz04gN9GtPDA" name="removeAdditionalServiceFromBooking" visibility="public">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_gokdy3uiEeSz04gN9GtPDA" name="additionalService" type="_pll4cH4SEeS7R5Ychvo0mw"/>
@@ -117,7 +115,7 @@
         </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_gokdznuiEeSz04gN9GtPDA" name="updatePaymentDetails">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_gokdz3uiEeSz04gN9GtPDA" name="newPaymentDetails" type="_1Flw4H4SEeS7R5Ychvo0mw"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_gokdz3uiEeSz04gN9GtPDA" name="newPaymentDetails" type="_eQyG4HuiEeSz04gN9GtPDA"/>
       </ownedOperation>
     </nestedClassifier>
     <nestedClassifier xmi:type="uml:Class" xmi:id="_gomS13uiEeSz04gN9GtPDA" name="BookingManager">
@@ -345,30 +343,6 @@
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_z4azIn4SEeS7R5Ychvo0mw" value="1"/>
       </ownedEnd>
     </nestedClassifier>
-    <nestedClassifier xmi:type="uml:Class" xmi:id="_1Flw4H4SEeS7R5Ychvo0mw" name="PaymentDetails">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_5N2KQH4TEeS7R5Ychvo0mw" name="ccn">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-      </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_BqrzsH4UEeS7R5Ychvo0mw" name="firstName">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-      </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_DwCWoH4UEeS7R5Ychvo0mw" name="lastName">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-      </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_L1FLIH4UEeS7R5Ychvo0mw" name="ccv">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-      </ownedAttribute>
-    </nestedClassifier>
-    <nestedClassifier xmi:type="uml:Association" xmi:id="_2N41sH4SEeS7R5Ychvo0mw" memberEnd="_2N41sX4SEeS7R5Ychvo0mw _2N2ZcH4SEeS7R5Ychvo0mw">
-      <ownedEnd xmi:type="uml:Property" xmi:id="_2N41sX4SEeS7R5Ychvo0mw" name="paymentDetails" type="_1Flw4H4SEeS7R5Ychvo0mw" aggregation="composite" association="_2N41sH4SEeS7R5Ychvo0mw">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_2N41sn4SEeS7R5Ychvo0mw" value="1"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_2N41s34SEeS7R5Ychvo0mw" value="1"/>
-      </ownedEnd>
-      <ownedEnd xmi:type="uml:Property" xmi:id="_2N2ZcH4SEeS7R5Ychvo0mw" name="booking" type="_gokdoHuiEeSz04gN9GtPDA" association="_2N41sH4SEeS7R5Ychvo0mw">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_2N2ZcX4SEeS7R5Ychvo0mw" value="1"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_2N2Zcn4SEeS7R5Ychvo0mw" value="1"/>
-      </ownedEnd>
-    </nestedClassifier>
     <packagedElement xmi:type="uml:Realization" xmi:id="_gong9HuiEeSz04gN9GtPDA" client="_gomS13uiEeSz04gN9GtPDA">
       <supplier xmi:type="uml:Interface" href="../../SequenceDiagram/model.uml#_ex7kAHsREeSdPKzPJV8cOA"/>
     </packagedElement>
@@ -394,6 +368,16 @@
     <packagedElement xmi:type="uml:Usage" xmi:id="_pFCFAHyREeSqgenY0JIynA" name="BookingUsesAdditionalServiceInformation" client="_gomS13uiEeSz04gN9GtPDA">
       <supplier xmi:type="uml:Interface" href="../AdditionalService/AdditionalService.uml#_YlNd8HpfEeS6O5zO6NZCqA"/>
     </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_3CjSMH4lEeSmVbbLtf9LGA" memberEnd="_3CjSMX4lEeSmVbbLtf9LGA _3CfAwH4lEeSmVbbLtf9LGA">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_3CjSMX4lEeSmVbbLtf9LGA" name="paymentDetails" type="_eQyG4HuiEeSz04gN9GtPDA" aggregation="composite" association="_3CjSMH4lEeSmVbbLtf9LGA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_3CjSMn4lEeSmVbbLtf9LGA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_3CjSM34lEeSmVbbLtf9LGA" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_3CfAwH4lEeSmVbbLtf9LGA" name="booking" type="_gokdoHuiEeSz04gN9GtPDA" association="_3CjSMH4lEeSmVbbLtf9LGA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_3CfAwX4lEeSmVbbLtf9LGA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_3CfAwn4lEeSmVbbLtf9LGA" value="1"/>
+    </ownedEnd>
   </packagedElement>
   <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_Z__h8H4lEeSmVbbLtf9LGA">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_aA-ZYH4lEeSmVbbLtf9LGA" source="http://www.eclipse.org/uml2/2.0.0/UML">
