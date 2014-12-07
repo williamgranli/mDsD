@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated occupancy -->
+      <package
+            uri="http:///Occupancy.ecore"
+            class="Occupancy.OccupancyPackage"
+            genModel="Occupancy/occupancy.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated additionalService -->
+      <package
+            uri="http:///AdditionalService.ecore"
+            class="AdditionalService.AdditionalServicePackage"
+            genModel="AdditionalService/additionalService.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated booking -->
+      <package
+            uri="http:///Booking.ecore"
+            class="Booking.BookingPackage"
+            genModel="Booking/booking.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated payment -->
+      <package
+            uri="http:///Payment.ecore"
+            class="Payment.PaymentPackage"
+            genModel="Payment/payment.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated room -->
+      <package
+            uri="http:///Room.ecore"
+            class="Room.RoomPackage"
+            genModel="Room/room.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated staff -->
+      <package
+            uri="http:///Staff.ecore"
+            class="Staff.StaffPackage"
+            genModel="Staff/staff.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated occupancy -->
+      <package
+            uri="http://www.eclipse.org/uml2/5.0.0/Types"
+            class="org.eclipse.uml2.types.TypesPackage"
+            genModel="Occupancy/occupancy.genmodel"/>
+   </extension>
+
+</plugin>
