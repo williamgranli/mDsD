@@ -8,29 +8,6 @@
       <packagedElement xmi:type="uml:Package" href="AdditionalService/AdditionalService.uml#_ii6asH4kEeS4d8kZ58eU2A"/>
       <packagedElement xmi:type="uml:Package" href="Payment/Payment.uml#_imAK8H4kEeS4d8kZ58eU2A"/>
       <packagedElement xmi:type="uml:Package" href="Occupancy/Occupancy.uml#_irnqwH4kEeS4d8kZ58eU2A"/>
-      <packagedElement xmi:type="uml:Class" xmi:id="_wR6r4H4lEeSmVbbLtf9LGA" name="PaymentDetails">
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_wR6r4X4lEeSmVbbLtf9LGA" name="firstName">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-        </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_wR6r4n4lEeSmVbbLtf9LGA" name="lastName">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-        </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_wR6r434lEeSmVbbLtf9LGA" name="address">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-        </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_wR6r5H4lEeSmVbbLtf9LGA" name="ccNumber">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-        </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_wR6r5X4lEeSmVbbLtf9LGA" name="ccv">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-        </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_wR6r5n4lEeSmVbbLtf9LGA" name="expiryMonth">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-        </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_wR6r534lEeSmVbbLtf9LGA" name="expiryYear">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-        </ownedAttribute>
-      </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_K-5lsHvSEeSlv-_wb7Rnmw" name="NotImplementation">
       <packagedElement xmi:type="uml:Package" xmi:id="_AO5VEHmIEeSv8578ohrpjA" name="DomainModel">

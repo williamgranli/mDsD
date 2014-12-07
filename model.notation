@@ -4992,29 +4992,6 @@
       <element xmi:type="uml:Class" href="Booking/Booking.uml#_yfZxwH4SEeS7R5Ychvo0mw"/>
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yfdcIX4SEeS7R5Ychvo0mw" x="1353" y="1963" width="182" height="104"/>
     </children>
-    <children xmi:type="notation:Shape" xmi:id="_wSQqIH4lEeSmVbbLtf9LGA" type="2008">
-      <children xmi:type="notation:DecorationNode" xmi:id="_wSRRMH4lEeSmVbbLtf9LGA" type="5029"/>
-      <children xmi:type="notation:BasicCompartment" xmi:id="_wSRRMX4lEeSmVbbLtf9LGA" type="7017">
-        <styles xmi:type="notation:TitleStyle" xmi:id="_wSRRMn4lEeSmVbbLtf9LGA"/>
-        <styles xmi:type="notation:SortingStyle" xmi:id="_wSRRM34lEeSmVbbLtf9LGA"/>
-        <styles xmi:type="notation:FilteringStyle" xmi:id="_wSRRNH4lEeSmVbbLtf9LGA"/>
-        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wSRRNX4lEeSmVbbLtf9LGA"/>
-      </children>
-      <children xmi:type="notation:BasicCompartment" xmi:id="_wSRRNn4lEeSmVbbLtf9LGA" type="7018">
-        <styles xmi:type="notation:TitleStyle" xmi:id="_wSRRN34lEeSmVbbLtf9LGA"/>
-        <styles xmi:type="notation:SortingStyle" xmi:id="_wSRROH4lEeSmVbbLtf9LGA"/>
-        <styles xmi:type="notation:FilteringStyle" xmi:id="_wSRROX4lEeSmVbbLtf9LGA"/>
-        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wSRROn4lEeSmVbbLtf9LGA"/>
-      </children>
-      <children xmi:type="notation:BasicCompartment" xmi:id="_wSRRO34lEeSmVbbLtf9LGA" type="7019">
-        <styles xmi:type="notation:TitleStyle" xmi:id="_wSRRPH4lEeSmVbbLtf9LGA"/>
-        <styles xmi:type="notation:SortingStyle" xmi:id="_wSRRPX4lEeSmVbbLtf9LGA"/>
-        <styles xmi:type="notation:FilteringStyle" xmi:id="_wSRRPn4lEeSmVbbLtf9LGA"/>
-        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wSRRP34lEeSmVbbLtf9LGA"/>
-      </children>
-      <element xmi:type="uml:Class" href="model.uml#_wR6r4H4lEeSmVbbLtf9LGA"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wSQqIX4lEeSmVbbLtf9LGA" x="2621" y="4024"/>
-    </children>
     <children xmi:type="notation:Shape" xmi:id="_xecJYH4lEeSmVbbLtf9LGA" type="2008" fillColor="8905185">
       <children xmi:type="notation:DecorationNode" xmi:id="_xecwcH4lEeSmVbbLtf9LGA" type="5029"/>
       <children xmi:type="notation:BasicCompartment" xmi:id="_xecwcX4lEeSmVbbLtf9LGA" type="7017">
