@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="Payment" nsURI="http:///Payment.ecore" nsPrefix="Payment">
+  <eClassifiers xsi:type="ecore:EClass" name="PaymentComponent"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PaymentComponent_PaymentManager">
+    <eOperations name="makePayment" ordered="false" lowerBound="1">
+      <eParameters name="ccv" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="amount" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
+      <eParameters name="ccNumber" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
+      <eParameters name="expireMonth" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
+      <eParameters name="expiryYear" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="firstName" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="lastName" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+    </eOperations>
+    <eOperations name="isCreditCardValid" ordered="false" lowerBound="1">
+      <eParameters name="ccNumber" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="ccv" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="expiryMonth" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="expiryYear" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="firstName" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="lastName" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="paymentDetails" ordered="false"
+        lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PaymentComponent_PaymentCalculator">
+    <eOperations name="calculate" ordered="false" lowerBound="1">
+      <eParameters name="price" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
+      <eParameters name="additionalService" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="checkInDate" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="checkOutDate" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="isLateCancellation" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Boolean"/>
+    </eOperations>
+    <eOperations name="checkLateCancellation" ordered="false" lowerBound="1">
+      <eParameters name="cancelDate" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="arrivalDate" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cost" ordered="false" lowerBound="1"
+        eType="ecore:EDataType types.ecore#//Integer"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="details" ordered="false"
+        lowerBound="1" upperBound="-1" eType="ecore:EDataType types.ecore#//String"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PaymentComponent_PaymentHistoryDB">
+    <eOperations name="createPaymentHistory" ordered="false" lowerBound="1">
+      <eParameters name="amount" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
+      <eParameters name="paymentDateAndTime" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="customerName" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+    </eOperations>
+    <eOperations name="searchForPayment" ordered="false" lowerBound="1">
+      <eParameters name="paymentDate" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="paymentHistory" ordered="false"
+        lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PaymentComponent_IPayment" abstract="true"
+      interface="true">
+    <eOperations name="payForBooking" ordered="false" lowerBound="1">
+      <eParameters name="amount" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
+      <eParameters name="ccNumber" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="ccv" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="expiryMonth" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="expiryYear" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="firstName" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="lastName" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+    </eOperations>
+    <eOperations name="reserveFunds" ordered="false" lowerBound="1">
+      <eParameters name="amount" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
+      <eParameters name="ccNumber" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="ccv" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="expiryMonth" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="expiryYear" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="firstName" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="lastName" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+    </eOperations>
+    <eOperations name="unreserveFunds" ordered="false" lowerBound="1">
+      <eParameters name="amount" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
+      <eParameters name="ccNumber" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="ccv" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="expiryMonth" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="expiryYear" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="firstName" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="lastName" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+    </eOperations>
+  </eClassifiers>
+</ecore:EPackage>
