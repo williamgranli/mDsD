@@ -4392,10 +4392,6 @@
           <element xmi:type="uml:Property" href="model.uml#_gokdp3uiEeSz04gN9GtPDA"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_tlY5Y3uiEeSz04gN9GtPDA"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_tlY5ZnuiEeSz04gN9GtPDA" type="3012">
-          <element xmi:type="uml:Property" href="model.uml#_gokdq3uiEeSz04gN9GtPDA"/>
-          <layoutConstraint xmi:type="notation:Location" xmi:id="_tlY5Z3uiEeSz04gN9GtPDA"/>
-        </children>
         <styles xmi:type="notation:TitleStyle" xmi:id="_ljRdEnuiEeSz04gN9GtPDA"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_ljRdE3uiEeSz04gN9GtPDA"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_ljRdFHuiEeSz04gN9GtPDA"/>
