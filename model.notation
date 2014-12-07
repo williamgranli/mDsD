@@ -4999,8 +4999,8 @@
       <styles xmi:type="notation:FontStyle" xmi:id="_fPGWQXsTEeSLuMTWUFMNdg"/>
       <element xmi:type="uml:Generalization" href="model.uml#_eIWJkXsTEeSLuMTWUFMNdg"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_fPGWQnsTEeSLuMTWUFMNdg" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
-      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_hBBm4HsTEeSLuMTWUFMNdg" id="(1.0,0.10869565217391304)"/>
-      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_hBCN8HsTEeSLuMTWUFMNdg" id="(0.0,0.11956521739130435)"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_hBBm4HsTEeSLuMTWUFMNdg" id="(0.9933774834437086,0.46195652173913043)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_hBCN8HsTEeSLuMTWUFMNdg" id="(0.02364864864864865,0.42934782608695654)"/>
     </edges>
     <edges xmi:type="notation:Connector" xmi:id="_gpMVsHsTEeSLuMTWUFMNdg" type="4002" source="_gpAIcHsTEeSLuMTWUFMNdg" target="_fO6JAHsTEeSLuMTWUFMNdg">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_D9fHWHukEeSz04gN9GtPDA" source="PapyrusCSSForceValue">
@@ -5427,7 +5427,7 @@
       <styles xmi:type="notation:FontStyle" xmi:id="_M6SZgXvAEeSAJb-qAtupNw"/>
       <element xmi:type="uml:Realization" href="model.uml#_M6OvIHvAEeSAJb-qAtupNw"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_M6SZgnvAEeSAJb-qAtupNw" points="[1, -13, 0, 161]$[13, -165, 12, 9]"/>
-      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_M6YgIHvAEeSAJb-qAtupNw" id="(0.75,0.85)"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_M6YgIHvAEeSAJb-qAtupNw" id="(0.6923076923076923,0.85)"/>
       <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_M6YgIXvAEeSAJb-qAtupNw" id="(0.449438202247191,0.0)"/>
     </edges>
     <edges xmi:type="notation:Connector" xmi:id="_zX-AYHvAEeSAJb-qAtupNw" type="4007" source="_DvMi8HvAEeSAJb-qAtupNw" target="_SwEOAHuoEeSUpK3HS5a0Lg">
