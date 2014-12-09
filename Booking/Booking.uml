@@ -119,6 +119,7 @@
       </ownedOperation>
     </nestedClassifier>
     <nestedClassifier xmi:type="uml:Class" xmi:id="_gomS13uiEeSz04gN9GtPDA" name="BookingManager">
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_LZsGIH-1EeSVo4U8yTxtOw" client="_gomS13uiEeSz04gN9GtPDA" supplier="_eX8x0H-zEeSVo4U8yTxtOw" contract="_eX8x0H-zEeSVo4U8yTxtOw"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_gomS23uiEeSz04gN9GtPDA" name="BookingManager"/>
     </nestedClassifier>
     <nestedClassifier xmi:type="uml:Association" xmi:id="_gooIAXuiEeSz04gN9GtPDA" memberEnd="_gooIAnuiEeSz04gN9GtPDA _gooIBXuiEeSz04gN9GtPDA">
@@ -357,6 +358,7 @@
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_3CfAwn4lEeSmVbbLtf9LGA" value="1"/>
       </ownedEnd>
     </nestedClassifier>
+    <nestedClassifier xmi:type="uml:Interface" xmi:id="_eX8x0H-zEeSVo4U8yTxtOw" name="IBookingDecision"/>
     <packagedElement xmi:type="uml:Realization" xmi:id="_gong9HuiEeSz04gN9GtPDA" client="_gomS13uiEeSz04gN9GtPDA">
       <supplier xmi:type="uml:Interface" href="../../SequenceDiagram/model.uml#_ex7kAHsREeSdPKzPJV8cOA"/>
     </packagedElement>

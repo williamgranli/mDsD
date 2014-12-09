@@ -188,7 +188,9 @@
         <ownedOperation xmi:type="uml:Operation" xmi:id="_8ei0EHukEeSz04gN9GtPDA" name="getAllRoomNumbers"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_eIU7hXsTEeSLuMTWUFMNdg" name="countNumberOfTotalRooms"/>
       </nestedClassifier>
-      <nestedClassifier xmi:type="uml:Class" xmi:id="_CxzwoH4QEeS7R5Ychvo0mw" name="RoomHandler"/>
+      <nestedClassifier xmi:type="uml:Class" xmi:id="_CxzwoH4QEeS7R5Ychvo0mw" name="RoomHandler">
+        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_JIbOIH-1EeSVo4U8yTxtOw" client="_CxzwoH4QEeS7R5Ychvo0mw" supplier="_hieNEH-zEeSVo4U8yTxtOw" contract="_hieNEH-zEeSVo4U8yTxtOw"/>
+      </nestedClassifier>
       <nestedClassifier xmi:type="uml:Association" xmi:id="_xlfZIH4QEeS7R5Ychvo0mw" memberEnd="_xlfZIX4QEeS7R5Ychvo0mw _xleLAH4QEeS7R5Ychvo0mw">
         <ownedEnd xmi:type="uml:Property" xmi:id="_xlfZIX4QEeS7R5Ychvo0mw" name="room" type="_eIU7cHsTEeSLuMTWUFMNdg" aggregation="composite" association="_xlfZIH4QEeS7R5Ychvo0mw">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_xlfZIn4QEeS7R5Ychvo0mw"/>
@@ -199,6 +201,7 @@
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_xleLAn4QEeS7R5Ychvo0mw" value="1"/>
         </ownedEnd>
       </nestedClassifier>
+      <nestedClassifier xmi:type="uml:Interface" xmi:id="_hieNEH-zEeSVo4U8yTxtOw" name="IRoomDecision"/>
       <packagedElement xmi:type="uml:Usage" xmi:id="_caHQcHuzEeSVJuSosdCZSQ" name="OccupancyRoomUsage" supplier="_4QGeMHpmEeS6O5zO6NZCqA">
         <client xmi:type="uml:Class" href="../Occupancy/Occupancy.uml#_EmPN0Hr-EeS88peCe4NMnw"/>
       </packagedElement>

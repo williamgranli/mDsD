@@ -34,6 +34,7 @@
       <ownedAttribute xmi:type="uml:Property" xmi:id="_BKP59XvAEeSAJb-qAtupNw" name="maxAttendant">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
       </ownedAttribute>
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_PP7-8H-1EeSVo4U8yTxtOw" client="_BKP58HvAEeSAJb-qAtupNw" supplier="_cDvTgH-zEeSVo4U8yTxtOw" contract="_cDvTgH-zEeSVo4U8yTxtOw"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_BKP59nvAEeSAJb-qAtupNw" name="getAdditionalServiceInfo" concurrency="guarded">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_BKP593vAEeSAJb-qAtupNw" name="addtionalServiceName">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
@@ -90,6 +91,7 @@
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_08jqYHrVEeSyBKqr79uWFQ" name="getAllAdditionalServices"/>
     </nestedClassifier>
+    <nestedClassifier xmi:type="uml:Interface" xmi:id="_cDvTgH-zEeSVo4U8yTxtOw" name="IAdditionalServiceDecision"/>
     <packagedElement xmi:type="uml:Realization" xmi:id="_MLFKIHvAEeSAJb-qAtupNw" client="_BKM2oHvAEeSAJb-qAtupNw" supplier="_oFVrUHpcEeS6O5zO6NZCqA"/>
     <packagedElement xmi:type="uml:Realization" xmi:id="_M6OvIHvAEeSAJb-qAtupNw" client="_BKM2oHvAEeSAJb-qAtupNw" supplier="_YlNd8HpfEeS6O5zO6NZCqA"/>
     <packagedElement xmi:type="uml:Usage" xmi:id="_zX69EHvAEeSAJb-qAtupNw" client="_BKM2oHvAEeSAJb-qAtupNw">
