@@ -11,22 +11,33 @@
       <packagedElement xmi:type="uml:Package" xmi:id="_QrcbAH-yEeSVo4U8yTxtOw" name="DecisionSupport">
         <packagedElement xmi:type="uml:Component" xmi:id="_TXYc0H-yEeSVo4U8yTxtOw" name="DecisionSupportComponent">
           <nestedClassifier xmi:type="uml:Interface" xmi:id="_3t3tsH-yEeSVo4U8yTxtOw" name="IDecisionSupport"/>
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_LeYjcH-2EeSVo4U8yTxtOw" name="DSSProcessor"/>
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_RyQ8UH-2EeSVo4U8yTxtOw" name="DSSPresenter"/>
+          <nestedClassifier xmi:type="uml:Association" xmi:id="_gmkeIH-2EeSVo4U8yTxtOw" memberEnd="_gmkeIX-2EeSVo4U8yTxtOw _gmj3EH-2EeSVo4U8yTxtOw">
+            <ownedEnd xmi:type="uml:Property" xmi:id="_gmkeIX-2EeSVo4U8yTxtOw" name="dSSController" type="_e1APUH-1EeSVo4U8yTxtOw" association="_gmkeIH-2EeSVo4U8yTxtOw">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gmkeIn-2EeSVo4U8yTxtOw" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gmkeI3-2EeSVo4U8yTxtOw" value="1"/>
+            </ownedEnd>
+          </nestedClassifier>
+          <nestedClassifier xmi:type="uml:Association" xmi:id="_jlyBQH-2EeSVo4U8yTxtOw" memberEnd="_jlyBQX-2EeSVo4U8yTxtOw _jlxaMH-2EeSVo4U8yTxtOw">
+            <ownedEnd xmi:type="uml:Property" xmi:id="_jlyBQX-2EeSVo4U8yTxtOw" name="dSSController" type="_e1APUH-1EeSVo4U8yTxtOw" association="_jlyBQH-2EeSVo4U8yTxtOw">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jlyBQn-2EeSVo4U8yTxtOw" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jlyBQ3-2EeSVo4U8yTxtOw" value="1"/>
+            </ownedEnd>
+          </nestedClassifier>
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_e1APUH-1EeSVo4U8yTxtOw" name="DSSController">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_gmj3EH-2EeSVo4U8yTxtOw" name="dSSProcessor" type="_LeYjcH-2EeSVo4U8yTxtOw" association="_gmkeIH-2EeSVo4U8yTxtOw">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gmj3EX-2EeSVo4U8yTxtOw"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gmj3En-2EeSVo4U8yTxtOw" value="*"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_jlxaMH-2EeSVo4U8yTxtOw" name="dSSPresenter" type="_RyQ8UH-2EeSVo4U8yTxtOw" association="_jlyBQH-2EeSVo4U8yTxtOw">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jlxaMX-2EeSVo4U8yTxtOw" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jlxaMn-2EeSVo4U8yTxtOw" value="1"/>
+            </ownedAttribute>
+          </nestedClassifier>
+          <packagedElement xmi:type="uml:Realization" xmi:id="_4UpScH-1EeSVo4U8yTxtOw" client="_e1APUH-1EeSVo4U8yTxtOw" supplier="_3t3tsH-yEeSVo4U8yTxtOw"/>
         </packagedElement>
       </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_e1APUH-1EeSVo4U8yTxtOw" name="DSSMainClass"/>
-      <packagedElement xmi:type="uml:Usage" xmi:id="_jvdXIH-1EeSVo4U8yTxtOw" client="_e1APUH-1EeSVo4U8yTxtOw">
-        <supplier xmi:type="uml:Interface" href="Booking/Booking.uml#_eX8x0H-zEeSVo4U8yTxtOw"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Usage" xmi:id="_kY_cUH-1EeSVo4U8yTxtOw" client="_e1APUH-1EeSVo4U8yTxtOw">
-        <supplier xmi:type="uml:Interface" href="Occupancy/Occupancy.uml#_9CLf8H-yEeSVo4U8yTxtOw"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Usage" xmi:id="_ovZb4H-1EeSVo4U8yTxtOw" client="_e1APUH-1EeSVo4U8yTxtOw">
-        <supplier xmi:type="uml:Interface" href="AdditionalService/AdditionalService.uml#_cDvTgH-zEeSVo4U8yTxtOw"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Usage" xmi:id="_vavSgH-1EeSVo4U8yTxtOw" client="_e1APUH-1EeSVo4U8yTxtOw">
-        <supplier xmi:type="uml:Interface" href="Room/Room.uml#_hieNEH-zEeSVo4U8yTxtOw"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Realization" xmi:id="_4UpScH-1EeSVo4U8yTxtOw" client="_e1APUH-1EeSVo4U8yTxtOw" supplier="_3t3tsH-yEeSVo4U8yTxtOw"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_K-5lsHvSEeSlv-_wb7Rnmw" name="NotImplementation">
       <packagedElement xmi:type="uml:Package" xmi:id="_AO5VEHmIEeSv8578ohrpjA" name="DomainModel">
