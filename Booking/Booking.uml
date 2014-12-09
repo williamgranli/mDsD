@@ -347,6 +347,16 @@
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_z4azIn4SEeS7R5Ychvo0mw" value="1"/>
       </ownedEnd>
     </nestedClassifier>
+    <nestedClassifier xmi:type="uml:Association" xmi:id="_3CjSMH4lEeSmVbbLtf9LGA" memberEnd="_3CjSMX4lEeSmVbbLtf9LGA _3CfAwH4lEeSmVbbLtf9LGA">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_3CjSMX4lEeSmVbbLtf9LGA" name="paymentDetails" type="_eQyG4HuiEeSz04gN9GtPDA" aggregation="composite" association="_3CjSMH4lEeSmVbbLtf9LGA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_3CjSMn4lEeSmVbbLtf9LGA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_3CjSM34lEeSmVbbLtf9LGA" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_3CfAwH4lEeSmVbbLtf9LGA" name="booking" type="_gokdoHuiEeSz04gN9GtPDA" association="_3CjSMH4lEeSmVbbLtf9LGA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_3CfAwX4lEeSmVbbLtf9LGA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_3CfAwn4lEeSmVbbLtf9LGA" value="1"/>
+      </ownedEnd>
+    </nestedClassifier>
     <packagedElement xmi:type="uml:Realization" xmi:id="_gong9HuiEeSz04gN9GtPDA" client="_gomS13uiEeSz04gN9GtPDA">
       <supplier xmi:type="uml:Interface" href="../../SequenceDiagram/model.uml#_ex7kAHsREeSdPKzPJV8cOA"/>
     </packagedElement>
@@ -372,20 +382,6 @@
     <packagedElement xmi:type="uml:Usage" xmi:id="_pFCFAHyREeSqgenY0JIynA" name="BookingUsesAdditionalServiceInformation" client="_gomS13uiEeSz04gN9GtPDA">
       <supplier xmi:type="uml:Interface" href="../AdditionalService/AdditionalService.uml#_YlNd8HpfEeS6O5zO6NZCqA"/>
     </packagedElement>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_3CjSMH4lEeSmVbbLtf9LGA" memberEnd="_3CjSMX4lEeSmVbbLtf9LGA _3CfAwH4lEeSmVbbLtf9LGA">
-    <ownedEnd xmi:type="uml:Property" xmi:id="_3CjSMX4lEeSmVbbLtf9LGA" name="paymentDetails" type="_eQyG4HuiEeSz04gN9GtPDA" aggregation="composite" association="_3CjSMH4lEeSmVbbLtf9LGA">
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_3CjSMn4lEeSmVbbLtf9LGA" value="1"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_3CjSM34lEeSmVbbLtf9LGA" value="1"/>
-    </ownedEnd>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_3CfAwH4lEeSmVbbLtf9LGA" name="booking" type="_gokdoHuiEeSz04gN9GtPDA" association="_3CjSMH4lEeSmVbbLtf9LGA">
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_3CfAwX4lEeSmVbbLtf9LGA" value="1"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_3CfAwn4lEeSmVbbLtf9LGA" value="1"/>
-    </ownedEnd>
-  </packagedElement>
-  <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_p1lSwH-zEeSVo4U8yTxtOw" name="BookingRealizesDecision" client="_DBMeUHocEeSypfm9OOQUYA">
-    <supplier xmi:type="uml:Interface" href="../model.uml#_eX8x0H-zEeSVo4U8yTxtOw"/>
-    <contract xmi:type="uml:Interface" href="../model.uml#_eX8x0H-zEeSVo4U8yTxtOw"/>
   </packagedElement>
   <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_Z__h8H4lEeSmVbbLtf9LGA">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_aA-ZYH4lEeSmVbbLtf9LGA" source="http://www.eclipse.org/uml2/2.0.0/UML">

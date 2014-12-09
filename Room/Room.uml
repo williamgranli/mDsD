@@ -208,10 +208,6 @@
         <supplier xmi:type="uml:Interface" href="../Staff/Staff.uml#_yNtywnumEeSUpK3HS5a0Lg"/>
       </packagedElement>
     </packagedElement>
-    <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_zsmbMH-zEeSVo4U8yTxtOw" name="RoomRealizesDecision" client="_9a3H8HobEeSypfm9OOQUYA">
-      <supplier xmi:type="uml:Interface" href="../model.uml#_hieNEH-zEeSVo4U8yTxtOw"/>
-      <contract xmi:type="uml:Interface" href="../model.uml#_hieNEH-zEeSVo4U8yTxtOw"/>
-    </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_YGFaAH4lEeSmVbbLtf9LGA">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_YHXzcH4lEeSmVbbLtf9LGA" source="http://www.eclipse.org/uml2/2.0.0/UML">
         <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_sYse0YZLEeKyw49uR6nx3g"/>
