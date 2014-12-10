@@ -570,6 +570,14 @@
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gooIBnuiEeSz04gN9GtPDA"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gooIB3uiEeSz04gN9GtPDA" value="*"/>
         </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_prYRAIB7EeS1NN9phWFP2A" name="authentication" type="_yNtywnumEeSUpK3HS5a0Lg" association="_prZfIIB7EeS1NN9phWFP2A">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_prYRAYB7EeS1NN9phWFP2A" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_prYRAoB7EeS1NN9phWFP2A" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_3hSQ4IB7EeS1NN9phWFP2A" name="iRoomInformation" type="_4QGeMHpmEeS6O5zO6NZCqA" association="_3hS38IB7EeS1NN9phWFP2A">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_3hSQ4YB7EeS1NN9phWFP2A" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_3hSQ4oB7EeS1NN9phWFP2A" value="1"/>
+        </ownedAttribute>
         <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_mFVxsIBrEeS1NN9phWFP2A" client="_gomS13uiEeSz04gN9GtPDA" supplier="_5-C0cHprEeS6O5zO6NZCqA" contract="_5-C0cHprEeS6O5zO6NZCqA"/>
         <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_phAnUIBrEeS1NN9phWFP2A" client="_gomS13uiEeSz04gN9GtPDA" supplier="_eX8x0H-zEeSVo4U8yTxtOw" contract="_eX8x0H-zEeSVo4U8yTxtOw"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_gomS23uiEeSz04gN9GtPDA" name="BookingManager"/>
@@ -806,7 +814,6 @@
       <packagedElement xmi:type="uml:Usage" xmi:id="_6phTkHrdEeSyBKqr79uWFQ" name="customerUsesBooking" supplier="_5-C0cHprEeS6O5zO6NZCqA">
         <client xmi:type="uml:Component" href="../model.uml#_32tNsHrdEeSyBKqr79uWFQ"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Usage" xmi:id="__X6CQHxyEeSFZ7RIJqqaZQ" name="BookingUsesRoom" client="_gomS13uiEeSz04gN9GtPDA" supplier="_4QGeMHpmEeS6O5zO6NZCqA"/>
       <packagedElement xmi:type="uml:Usage" xmi:id="_gb2BoHyREeSqgenY0JIynA" name="BookingUsesPayment" client="_gomS13uiEeSz04gN9GtPDA" supplier="_x9UbEHpyEeS6O5zO6NZCqA"/>
       <packagedElement xmi:type="uml:Usage" xmi:id="_jvdXIH-1EeSVo4U8yTxtOw" client="_e1APUH-1EeSVo4U8yTxtOw" supplier="_eX8x0H-zEeSVo4U8yTxtOw"/>
     </packagedElement>
@@ -939,7 +946,6 @@
         </ownedOperation>
       </nestedClassifier>
       <packagedElement xmi:type="uml:Usage" xmi:id="_cO3qwHuoEeSUpK3HS5a0Lg" client="_yNtykXumEeSUpK3HS5a0Lg" supplier="_yNtywnumEeSUpK3HS5a0Lg"/>
-      <packagedElement xmi:type="uml:Usage" xmi:id="_CKZm0HupEeSUpK3HS5a0Lg" client="_gomS13uiEeSz04gN9GtPDA" supplier="_yNtywnumEeSUpK3HS5a0Lg"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Component" xmi:id="_9a3H8HobEeSypfm9OOQUYA" name="RoomComponent">
       <nestedClassifier xmi:type="uml:Class" xmi:id="_eIU7cHsTEeSLuMTWUFMNdg" name="Room">
@@ -1149,6 +1155,18 @@
       <packagedElement xmi:type="uml:Usage" xmi:id="_vavSgH-1EeSVo4U8yTxtOw" client="_e1APUH-1EeSVo4U8yTxtOw" supplier="_hieNEH-zEeSVo4U8yTxtOw"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Usage" xmi:id="_zGvcYIB0EeS1NN9phWFP2A" name="bookingUsesAdditionalServices" client="_gomS13uiEeSz04gN9GtPDA" supplier="_YlNd8HpfEeS6O5zO6NZCqA"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_prZfIIB7EeS1NN9phWFP2A" memberEnd="_prZfIYB7EeS1NN9phWFP2A _prYRAIB7EeS1NN9phWFP2A">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_prZfIYB7EeS1NN9phWFP2A" name="bookingManager" type="_gomS13uiEeSz04gN9GtPDA" association="_prZfIIB7EeS1NN9phWFP2A">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_prZfIoB7EeS1NN9phWFP2A" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_prZfI4B7EeS1NN9phWFP2A" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_3hS38IB7EeS1NN9phWFP2A" memberEnd="_3hS38YB7EeS1NN9phWFP2A _3hSQ4IB7EeS1NN9phWFP2A">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_3hS38YB7EeS1NN9phWFP2A" name="bookingManager" type="_gomS13uiEeSz04gN9GtPDA" association="_3hS38IB7EeS1NN9phWFP2A">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_3hS38oB7EeS1NN9phWFP2A" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_3hS384B7EeS1NN9phWFP2A" value="1"/>
+      </ownedEnd>
+    </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_yyfjIIBSEeSGAtfklu05UQ">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_yzFZAIBSEeSGAtfklu05UQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
         <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_sYse0YZLEeKyw49uR6nx3g"/>
