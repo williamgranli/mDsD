@@ -288,7 +288,7 @@
           <packagedElement xmi:type="uml:Association" xmi:id="_wBbF0GaMEeSc971ouTOLAg" name="Has" memberEnd="_wBbF0WaMEeSc971ouTOLAg _wBaewGaMEeSc971ouTOLAg">
             <ownedEnd xmi:type="uml:Property" xmi:id="_wBbF0WaMEeSc971ouTOLAg" name="user" type="_Jv5fAGT0EeS_fYcbMbH-Fw" association="_wBbF0GaMEeSc971ouTOLAg">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wBbF0maMEeSc971ouTOLAg" value="1"/>
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wBbF02aMEeSc971ouTOLAg" value="*"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wBbF02aMEeSc971ouTOLAg" value="20"/>
             </ownedEnd>
             <ownedEnd xmi:type="uml:Property" xmi:id="_wBaewGaMEeSc971ouTOLAg" name="service" type="_Ym2sMGT0EeS_fYcbMbH-Fw" association="_wBbF0GaMEeSc971ouTOLAg">
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wBaewWaMEeSc971ouTOLAg" value="1"/>
