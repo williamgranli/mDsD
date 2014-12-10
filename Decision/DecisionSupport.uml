@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Package xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_QrcbAH-yEeSVo4U8yTxtOw" name="DecisionSupport">
+  <packagedElement xmi:type="uml:Component" xmi:id="_TXYc0H-yEeSVo4U8yTxtOw" name="DecisionSupportComponent">
+    <nestedClassifier xmi:type="uml:Interface" xmi:id="_3t3tsH-yEeSVo4U8yTxtOw" name="IDecisionSupport"/>
+    <nestedClassifier xmi:type="uml:Class" xmi:id="_LeYjcH-2EeSVo4U8yTxtOw" name="DSSProcessor"/>
+    <nestedClassifier xmi:type="uml:Class" xmi:id="_RyQ8UH-2EeSVo4U8yTxtOw" name="DSSPresenter"/>
+    <nestedClassifier xmi:type="uml:Association" xmi:id="_gmkeIH-2EeSVo4U8yTxtOw" memberEnd="_gmkeIX-2EeSVo4U8yTxtOw _gmj3EH-2EeSVo4U8yTxtOw">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_gmkeIX-2EeSVo4U8yTxtOw" name="dSSController" type="_e1APUH-1EeSVo4U8yTxtOw" association="_gmkeIH-2EeSVo4U8yTxtOw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gmkeIn-2EeSVo4U8yTxtOw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gmkeI3-2EeSVo4U8yTxtOw" value="1"/>
+      </ownedEnd>
+    </nestedClassifier>
+    <nestedClassifier xmi:type="uml:Association" xmi:id="_jlyBQH-2EeSVo4U8yTxtOw" memberEnd="_jlyBQX-2EeSVo4U8yTxtOw _jlxaMH-2EeSVo4U8yTxtOw">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_jlyBQX-2EeSVo4U8yTxtOw" name="dSSController" type="_e1APUH-1EeSVo4U8yTxtOw" association="_jlyBQH-2EeSVo4U8yTxtOw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jlyBQn-2EeSVo4U8yTxtOw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jlyBQ3-2EeSVo4U8yTxtOw" value="1"/>
+      </ownedEnd>
+    </nestedClassifier>
+    <nestedClassifier xmi:type="uml:Class" xmi:id="_e1APUH-1EeSVo4U8yTxtOw" name="DSSController">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_gmj3EH-2EeSVo4U8yTxtOw" name="dSSProcessor" type="_LeYjcH-2EeSVo4U8yTxtOw" association="_gmkeIH-2EeSVo4U8yTxtOw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gmj3EX-2EeSVo4U8yTxtOw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gmj3En-2EeSVo4U8yTxtOw" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_jlxaMH-2EeSVo4U8yTxtOw" name="dSSPresenter" type="_RyQ8UH-2EeSVo4U8yTxtOw" association="_jlyBQH-2EeSVo4U8yTxtOw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jlxaMX-2EeSVo4U8yTxtOw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jlxaMn-2EeSVo4U8yTxtOw" value="1"/>
+      </ownedAttribute>
+    </nestedClassifier>
+    <packagedElement xmi:type="uml:Realization" xmi:id="_4UpScH-1EeSVo4U8yTxtOw" client="_e1APUH-1EeSVo4U8yTxtOw" supplier="_3t3tsH-yEeSVo4U8yTxtOw"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_SwupEIBNEeSMDrsY8JJxOQ" client="_e1APUH-1EeSVo4U8yTxtOw">
+      <supplier xmi:type="uml:Interface" href="../Booking/Booking.uml#_eX8x0H-zEeSVo4U8yTxtOw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_dqXFEIBNEeSMDrsY8JJxOQ" client="_e1APUH-1EeSVo4U8yTxtOw">
+      <supplier xmi:type="uml:Interface" href="../Occupancy/Occupancy.uml#_YsPlQIBNEeSMDrsY8JJxOQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_hJ3R0IBNEeSMDrsY8JJxOQ" client="_e1APUH-1EeSVo4U8yTxtOw">
+      <supplier xmi:type="uml:Interface" href="../Room/Room.uml#_hieNEH-zEeSVo4U8yTxtOw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_mmSeQIBNEeSMDrsY8JJxOQ" client="_e1APUH-1EeSVo4U8yTxtOw">
+      <supplier xmi:type="uml:Interface" href="../AdditionalService/AdditionalService.uml#_cDvTgH-zEeSVo4U8yTxtOw"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_y5I6gIBOEeSt642Aan0hOg" client="_e1APUH-1EeSVo4U8yTxtOw">
+    <supplier xmi:type="uml:Interface" href="../Occupancy/Occupancy.uml#_oKxTUIBOEeSt642Aan0hOg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_LwkuIIBPEeSMz8ND1yS4hA" client="_e1APUH-1EeSVo4U8yTxtOw">
+    <supplier xmi:type="uml:Interface" href="../model.uml#_HB-RAIBPEeSMz8ND1yS4hA"/>
+  </packagedElement>
+  <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_2xpAoIBPEeS72oduEerwGA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_2yNoYIBPEeS72oduEerwGA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_sYse0YZLEeKyw49uR6nx3g"/>
+    </eAnnotations>
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_2yO2gIBPEeS72oduEerwGA" source="duplicatedProfile"/>
+    <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
+  </profileApplication>
+</uml:Package>

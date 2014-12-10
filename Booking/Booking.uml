@@ -385,7 +385,7 @@
       <supplier xmi:type="uml:Interface" href="../AdditionalService/AdditionalService.uml#_YlNd8HpfEeS6O5zO6NZCqA"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Usage" xmi:id="_jvdXIH-1EeSVo4U8yTxtOw" supplier="_eX8x0H-zEeSVo4U8yTxtOw">
-      <client xmi:type="uml:Class" href="../model.uml#_e1APUH-1EeSVo4U8yTxtOw"/>
+      <client xmi:type="uml:Class" href="../Decision/DecisionSupport.uml#_e1APUH-1EeSVo4U8yTxtOw"/>
     </packagedElement>
   </packagedElement>
   <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_Z__h8H4lEeSmVbbLtf9LGA">

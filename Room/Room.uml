@@ -211,7 +211,7 @@
         <supplier xmi:type="uml:Interface" href="../Staff/Staff.uml#_yNtywnumEeSUpK3HS5a0Lg"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Usage" xmi:id="_vavSgH-1EeSVo4U8yTxtOw" supplier="_hieNEH-zEeSVo4U8yTxtOw">
-        <client xmi:type="uml:Class" href="../model.uml#_e1APUH-1EeSVo4U8yTxtOw"/>
+        <client xmi:type="uml:Class" href="../Decision/DecisionSupport.uml#_e1APUH-1EeSVo4U8yTxtOw"/>
       </packagedElement>
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_YGFaAH4lEeSmVbbLtf9LGA">
