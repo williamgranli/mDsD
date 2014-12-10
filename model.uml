@@ -49,6 +49,9 @@
             <supplier xmi:type="uml:Interface" href="AdditionalService/AdditionalService.uml#_cDvTgH-zEeSVo4U8yTxtOw"/>
           </packagedElement>
         </packagedElement>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_y5I6gIBOEeSt642Aan0hOg" client="_e1APUH-1EeSVo4U8yTxtOw">
+          <supplier xmi:type="uml:Interface" href="Occupancy/Occupancy.uml#_oKxTUIBOEeSt642Aan0hOg"/>
+        </packagedElement>
       </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_K-5lsHvSEeSlv-_wb7Rnmw" name="NotImplementation">
