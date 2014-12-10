@@ -562,17 +562,18 @@
         </ownedOperation>
       </nestedClassifier>
       <nestedClassifier xmi:type="uml:Class" xmi:id="_gomS13uiEeSz04gN9GtPDA" name="BookingManager">
-        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_LZsGIH-1EeSVo4U8yTxtOw" client="_gomS13uiEeSz04gN9GtPDA" supplier="_eX8x0H-zEeSVo4U8yTxtOw" contract="_eX8x0H-zEeSVo4U8yTxtOw"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_gooIBXuiEeSz04gN9GtPDA" name="booking" type="_gokdoHuiEeSz04gN9GtPDA" association="_gooIAXuiEeSz04gN9GtPDA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gooIBnuiEeSz04gN9GtPDA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gooIB3uiEeSz04gN9GtPDA" value="*"/>
+        </ownedAttribute>
+        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_mFVxsIBrEeS1NN9phWFP2A" client="_gomS13uiEeSz04gN9GtPDA" supplier="_5-C0cHprEeS6O5zO6NZCqA" contract="_5-C0cHprEeS6O5zO6NZCqA"/>
+        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_phAnUIBrEeS1NN9phWFP2A" client="_gomS13uiEeSz04gN9GtPDA" supplier="_eX8x0H-zEeSVo4U8yTxtOw" contract="_eX8x0H-zEeSVo4U8yTxtOw"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_gomS23uiEeSz04gN9GtPDA" name="BookingManager"/>
       </nestedClassifier>
       <nestedClassifier xmi:type="uml:Association" xmi:id="_gooIAXuiEeSz04gN9GtPDA" memberEnd="_gooIAnuiEeSz04gN9GtPDA _gooIBXuiEeSz04gN9GtPDA">
         <ownedEnd xmi:type="uml:Property" xmi:id="_gooIAnuiEeSz04gN9GtPDA" name="bookingManager" type="_gomS13uiEeSz04gN9GtPDA" association="_gooIAXuiEeSz04gN9GtPDA">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gooIA3uiEeSz04gN9GtPDA" value="1"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gooIBHuiEeSz04gN9GtPDA" value="1"/>
-        </ownedEnd>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_gooIBXuiEeSz04gN9GtPDA" name="booking" type="_gokdoHuiEeSz04gN9GtPDA" aggregation="composite" association="_gooIAXuiEeSz04gN9GtPDA">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gooIBnuiEeSz04gN9GtPDA"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gooIB3uiEeSz04gN9GtPDA" value="*"/>
         </ownedEnd>
       </nestedClassifier>
       <nestedClassifier xmi:type="uml:Interface" xmi:id="_5-C0cHprEeS6O5zO6NZCqA" name="IBooking">
@@ -798,7 +799,6 @@
       <packagedElement xmi:type="uml:Dependency" xmi:id="_gooIAHuiEeSz04gN9GtPDA" client="_gokdoHuiEeSz04gN9GtPDA">
         <supplier xmi:type="uml:Class" href="../../SequenceDiagram/model.uml#_xvNwkHsVEeSdPKzPJV8cOA"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Realization" xmi:id="_SH2wwHujEeSz04gN9GtPDA" client="_gomS13uiEeSz04gN9GtPDA" supplier="_5-C0cHprEeS6O5zO6NZCqA"/>
       <packagedElement xmi:type="uml:Usage" xmi:id="_6phTkHrdEeSyBKqr79uWFQ" name="customerUsesBooking" supplier="_5-C0cHprEeS6O5zO6NZCqA">
         <client xmi:type="uml:Component" href="../model.uml#_32tNsHrdEeSyBKqr79uWFQ"/>
       </packagedElement>
