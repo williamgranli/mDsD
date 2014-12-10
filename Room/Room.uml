@@ -203,7 +203,7 @@
       </nestedClassifier>
       <nestedClassifier xmi:type="uml:Interface" xmi:id="_hieNEH-zEeSVo4U8yTxtOw" name="IRoomDecision"/>
       <packagedElement xmi:type="uml:Usage" xmi:id="_caHQcHuzEeSVJuSosdCZSQ" name="OccupancyRoomUsage" supplier="_4QGeMHpmEeS6O5zO6NZCqA">
-        <client xmi:type="uml:Class" href="../Occupancy/Occupancy.uml#_EmPN0Hr-EeS88peCe4NMnw"/>
+        <client xmi:type="uml:Class" href="../model.uml#_EmPN0Hr-EeS88peCe4NMnw"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Realization" xmi:id="_drrWEH4QEeS7R5Ychvo0mw" name="RoomHandlerRealizesIRoomAdministration" client="_CxzwoH4QEeS7R5Ychvo0mw" supplier="_hHHwcHpmEeS6O5zO6NZCqA"/>
       <packagedElement xmi:type="uml:Realization" xmi:id="_kQDpEH4QEeS7R5Ychvo0mw" name="RoomHandlerRealizesIRoomInformation" client="_CxzwoH4QEeS7R5Ychvo0mw" supplier="_4QGeMHpmEeS6O5zO6NZCqA"/>
