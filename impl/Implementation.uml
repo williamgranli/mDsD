@@ -480,19 +480,22 @@
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_z4baMn4SEeS7R5Ychvo0mw" value="1"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_z4baM34SEeS7R5Ychvo0mw" value="*"/>
         </ownedAttribute>
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_gokdrnuiEeSz04gN9GtPDA" name="BookingObject"/>
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_gokdr3uiEeSz04gN9GtPDA" name="Booking" visibility="public" concurrency="concurrent">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_gokdrnuiEeSz04gN9GtPDA" name="Booking" isStatic="true">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_hR6-oIBuEeS1NN9phWFP2A" name="booking" type="_gokdoHuiEeSz04gN9GtPDA" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_gokdr3uiEeSz04gN9GtPDA" name="Booking" visibility="public" isStatic="true" concurrency="concurrent">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_gokdsHuiEeSz04gN9GtPDA" name="arrivalDate">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
           </ownedParameter>
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_gokdsXuiEeSz04gN9GtPDA" name="departureDate">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
           </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_T_eGkIBtEeS1NN9phWFP2A" name="booking" type="_gokdoHuiEeSz04gN9GtPDA" direction="return"/>
         </ownedOperation>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_gokdsnuiEeSz04gN9GtPDA" name="addAdditionalServiceToBooking" visibility="public">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_gokds3uiEeSz04gN9GtPDA" name="newService" type="_pll4cH4SEeS7R5Ychvo0mw"/>
         </ownedOperation>
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_gokdtHuiEeSz04gN9GtPDA" name="Booking" visibility="public">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_gokdtHuiEeSz04gN9GtPDA" name="Booking" visibility="public" isStatic="true">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_gokdtXuiEeSz04gN9GtPDA" name="roomType">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedParameter>
@@ -529,6 +532,7 @@
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_gokdwHuiEeSz04gN9GtPDA" name="expiryYear">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_WyVPwIBtEeS1NN9phWFP2A" type="_gokdoHuiEeSz04gN9GtPDA" direction="return"/>
         </ownedOperation>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_gokdwXuiEeSz04gN9GtPDA" name="addRoomToBooking" visibility="public">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_gokdwnuiEeSz04gN9GtPDA" name="newRoom" type="_yfZxwH4SEeS7R5Ychvo0mw"/>
@@ -804,7 +808,6 @@
       </packagedElement>
       <packagedElement xmi:type="uml:Usage" xmi:id="__X6CQHxyEeSFZ7RIJqqaZQ" name="BookingUsesRoom" client="_gomS13uiEeSz04gN9GtPDA" supplier="_4QGeMHpmEeS6O5zO6NZCqA"/>
       <packagedElement xmi:type="uml:Usage" xmi:id="_gb2BoHyREeSqgenY0JIynA" name="BookingUsesPayment" client="_gomS13uiEeSz04gN9GtPDA" supplier="_x9UbEHpyEeS6O5zO6NZCqA"/>
-      <packagedElement xmi:type="uml:Usage" xmi:id="_pFCFAHyREeSqgenY0JIynA" name="BookingUsesAdditionalServiceInformation" client="_gomS13uiEeSz04gN9GtPDA" supplier="_YlNd8HpfEeS6O5zO6NZCqA"/>
       <packagedElement xmi:type="uml:Usage" xmi:id="_jvdXIH-1EeSVo4U8yTxtOw" client="_e1APUH-1EeSVo4U8yTxtOw" supplier="_eX8x0H-zEeSVo4U8yTxtOw"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Component" xmi:id="__b5yoHobEeSypfm9OOQUYA" name="StaffComponent">
@@ -1145,6 +1148,7 @@
       <packagedElement xmi:type="uml:Usage" xmi:id="_p-kEAH4QEeS7R5Ychvo0mw" name="RoomHandlerUsesIAuthentication" client="_CxzwoH4QEeS7R5Ychvo0mw" supplier="_yNtywnumEeSUpK3HS5a0Lg"/>
       <packagedElement xmi:type="uml:Usage" xmi:id="_vavSgH-1EeSVo4U8yTxtOw" client="_e1APUH-1EeSVo4U8yTxtOw" supplier="_hieNEH-zEeSVo4U8yTxtOw"/>
     </packagedElement>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_zGvcYIB0EeS1NN9phWFP2A" name="bookingUsesAdditionalServices" client="_gomS13uiEeSz04gN9GtPDA" supplier="_YlNd8HpfEeS6O5zO6NZCqA"/>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_yyfjIIBSEeSGAtfklu05UQ">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_yzFZAIBSEeSGAtfklu05UQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
         <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_sYse0YZLEeKyw49uR6nx3g"/>
