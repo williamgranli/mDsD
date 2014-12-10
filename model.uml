@@ -36,18 +36,18 @@
             </ownedAttribute>
           </nestedClassifier>
           <packagedElement xmi:type="uml:Realization" xmi:id="_4UpScH-1EeSVo4U8yTxtOw" client="_e1APUH-1EeSVo4U8yTxtOw" supplier="_3t3tsH-yEeSVo4U8yTxtOw"/>
-        </packagedElement>
-        <packagedElement xmi:type="uml:Usage" xmi:id="_SwupEIBNEeSMDrsY8JJxOQ" client="_e1APUH-1EeSVo4U8yTxtOw">
-          <supplier xmi:type="uml:Interface" href="Booking/Booking.uml#_eX8x0H-zEeSVo4U8yTxtOw"/>
-        </packagedElement>
-        <packagedElement xmi:type="uml:Usage" xmi:id="_dqXFEIBNEeSMDrsY8JJxOQ" client="_e1APUH-1EeSVo4U8yTxtOw">
-          <supplier xmi:type="uml:Interface" href="Occupancy/Occupancy.uml#_YsPlQIBNEeSMDrsY8JJxOQ"/>
-        </packagedElement>
-        <packagedElement xmi:type="uml:Usage" xmi:id="_hJ3R0IBNEeSMDrsY8JJxOQ" client="_e1APUH-1EeSVo4U8yTxtOw">
-          <supplier xmi:type="uml:Interface" href="Room/Room.uml#_hieNEH-zEeSVo4U8yTxtOw"/>
-        </packagedElement>
-        <packagedElement xmi:type="uml:Usage" xmi:id="_mmSeQIBNEeSMDrsY8JJxOQ" client="_e1APUH-1EeSVo4U8yTxtOw">
-          <supplier xmi:type="uml:Interface" href="AdditionalService/AdditionalService.uml#_cDvTgH-zEeSVo4U8yTxtOw"/>
+          <packagedElement xmi:type="uml:Usage" xmi:id="_SwupEIBNEeSMDrsY8JJxOQ" client="_e1APUH-1EeSVo4U8yTxtOw">
+            <supplier xmi:type="uml:Interface" href="Booking/Booking.uml#_eX8x0H-zEeSVo4U8yTxtOw"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Usage" xmi:id="_dqXFEIBNEeSMDrsY8JJxOQ" client="_e1APUH-1EeSVo4U8yTxtOw">
+            <supplier xmi:type="uml:Interface" href="Occupancy/Occupancy.uml#_YsPlQIBNEeSMDrsY8JJxOQ"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Usage" xmi:id="_hJ3R0IBNEeSMDrsY8JJxOQ" client="_e1APUH-1EeSVo4U8yTxtOw">
+            <supplier xmi:type="uml:Interface" href="Room/Room.uml#_hieNEH-zEeSVo4U8yTxtOw"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Usage" xmi:id="_mmSeQIBNEeSMDrsY8JJxOQ" client="_e1APUH-1EeSVo4U8yTxtOw">
+            <supplier xmi:type="uml:Interface" href="AdditionalService/AdditionalService.uml#_cDvTgH-zEeSVo4U8yTxtOw"/>
+          </packagedElement>
         </packagedElement>
       </packagedElement>
     </packagedElement>
