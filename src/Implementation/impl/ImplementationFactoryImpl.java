@@ -323,10 +323,10 @@ public class ImplementationFactoryImpl extends EFactoryImpl implements Implement
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public StaffComponent_Employee createStaffComponent_Employee() {
-		StaffComponent_EmployeeImpl staffComponent_Employee = new StaffComponent_EmployeeImpl();
+		StaffComponent_EmployeeImpl staffComponent_Employee = new StaffComponent_EmployeeImpl(null, null, null, null, null);
 		return staffComponent_Employee;
 	}
 

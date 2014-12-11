@@ -9,18 +9,16 @@ import Implementation.StaffComponent_IAccountAdministration;
 import Implementation.StaffComponent_IAuthentication;
 
 import java.lang.reflect.InvocationTargetException;
-
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+
 import java.util.ArrayList;
 /**
  * <!-- begin-user-doc -->
@@ -209,23 +207,42 @@ public class StaffComponent_AccountManagerImpl extends MinimalEObjectImpl.Contai
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean createAccount(String name, String ssn, String email, String phone, String password) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		// TODO: Include sending password to Employee constructor, when constructor is changed to accept it. Change return values to be booleans.
+
+		if (findAccount(ssn) == null) {
+			employees.add(new StaffComponent_EmployeeImpl(ssn,name,email,phone,password));
+			System.out.println("Employee account created for SSN: " + ssn);
+		}
+		return true;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean editAccountDetails(String ssn, String name, String email, String phone, String password) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+
+		if (findAccount(ssn) == null) {
+			System.out.println("Employee account for SSN: " + ssn + " does not exist, brah...");
+			return false;
+		}
+		
+		boolean removed = removeAccount(ssn);
+		
+		if (!removed) {
+			System.out.println("Could not edit account with SSN: " + ssn + "\nError: Removing old account failed...");
+			return false;
+		}
+
+		boolean created = createAccount(ssn,name,email,phone,password);
+		System.out.println("---\nAccount with SSN: " + ssn + " edited...");
+
+		return true;
+		
 	}
 
 	/**

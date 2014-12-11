@@ -8,11 +8,8 @@ import Implementation.StaffComponent_Employee;
 import java.lang.reflect.InvocationTargetException;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -158,10 +155,20 @@ public class StaffComponent_EmployeeImpl extends MinimalEObjectImpl.Container im
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @param password 
+	 * @param phone 
+	 * @param email 
+	 * @param name 
+	 * @param ssn 
+	 * @generated NOT
 	 */
-	protected StaffComponent_EmployeeImpl() {
+	protected StaffComponent_EmployeeImpl(String ssn, String name, String email, String phone, String password) {
 		super();
+		this.setSsn(ssn);
+		this.setName(name);
+		this.setEmail(email);
+		this.setPhone(phone);
+		this.setPassword(password);
 	}
 
 	/**
@@ -325,12 +332,15 @@ public class StaffComponent_EmployeeImpl extends MinimalEObjectImpl.Container im
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated 
 	 */
 	public EList<String> getEmployeeInfo() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		String ssn = "\n* SSN: " + this.getSsn();
+		String name = "\n* Name: " + this.getName();
+		String email = "\n* Email: " + this.getEmail();
+		String phone = "\n* Phone: " + this.getPhone();
+		String password = "\n* Password: 1024-bits encryption, mate.";// + this.getPassword();
+		return "\n---" + ssn + name + email + phone + password + "\n---";
 	}
 
 	/**
