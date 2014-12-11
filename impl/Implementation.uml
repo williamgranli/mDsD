@@ -866,6 +866,14 @@
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_VNq80YEiEeSZXsM8lF2eOA" value="1"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_VNq80oEiEeSZXsM8lF2eOA" value="1"/>
         </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_yNtyv3umEeSUpK3HS5a0Lg" name="loggedIn" type="_yNtyl3umEeSUpK3HS5a0Lg" association="_yNtyu3umEeSUpK3HS5a0Lg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_yNtywHumEeSUpK3HS5a0Lg"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_yNtywXumEeSUpK3HS5a0Lg" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_yNtyq3umEeSUpK3HS5a0Lg" name="employees" type="_yNtyl3umEeSUpK3HS5a0Lg" association="_yNtyp3umEeSUpK3HS5a0Lg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_yNtyrHumEeSUpK3HS5a0Lg" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_yNtyrXumEeSUpK3HS5a0Lg" value="*"/>
+        </ownedAttribute>
         <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_yNtyk3umEeSUpK3HS5a0Lg" client="_yNtykXumEeSUpK3HS5a0Lg"/>
         <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_ZEc9MHuoEeSUpK3HS5a0Lg" client="_yNtykXumEeSUpK3HS5a0Lg" supplier="_yNtywnumEeSUpK3HS5a0Lg" contract="_yNtywnumEeSUpK3HS5a0Lg"/>
         <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_ZrbdoHuoEeSUpK3HS5a0Lg" client="_yNtykXumEeSUpK3HS5a0Lg" supplier="_yNtyrnumEeSUpK3HS5a0Lg" contract="_yNtyrnumEeSUpK3HS5a0Lg"/>
@@ -875,24 +883,16 @@
           </ownedParameter>
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_yNtylnumEeSUpK3HS5a0Lg" name="returnValue" type="_yNtyl3umEeSUpK3HS5a0Lg" direction="return"/>
         </ownedOperation>
-        <nestedClassifier xmi:type="uml:Association" xmi:id="_yNtyp3umEeSUpK3HS5a0Lg" memberEnd="_yNtyqHumEeSUpK3HS5a0Lg _yNtyq3umEeSUpK3HS5a0Lg" navigableOwnedEnd="_yNtyq3umEeSUpK3HS5a0Lg">
+        <nestedClassifier xmi:type="uml:Association" xmi:id="_yNtyp3umEeSUpK3HS5a0Lg" memberEnd="_yNtyqHumEeSUpK3HS5a0Lg _yNtyq3umEeSUpK3HS5a0Lg">
           <ownedEnd xmi:type="uml:Property" xmi:id="_yNtyqHumEeSUpK3HS5a0Lg" name="accountManager" type="_yNtykXumEeSUpK3HS5a0Lg" association="_yNtyp3umEeSUpK3HS5a0Lg">
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_yNtyqXumEeSUpK3HS5a0Lg" value="1"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_yNtyqnumEeSUpK3HS5a0Lg" value="1"/>
           </ownedEnd>
-          <ownedEnd xmi:type="uml:Property" xmi:id="_yNtyq3umEeSUpK3HS5a0Lg" name="employees" type="_yNtyl3umEeSUpK3HS5a0Lg" association="_yNtyp3umEeSUpK3HS5a0Lg">
-            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_yNtyrHumEeSUpK3HS5a0Lg" value="1"/>
-            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_yNtyrXumEeSUpK3HS5a0Lg" value="*"/>
-          </ownedEnd>
         </nestedClassifier>
-        <nestedClassifier xmi:type="uml:Association" xmi:id="_yNtyu3umEeSUpK3HS5a0Lg" memberEnd="_yNtyvHumEeSUpK3HS5a0Lg _yNtyv3umEeSUpK3HS5a0Lg" navigableOwnedEnd="_yNtyv3umEeSUpK3HS5a0Lg">
+        <nestedClassifier xmi:type="uml:Association" xmi:id="_yNtyu3umEeSUpK3HS5a0Lg" memberEnd="_yNtyvHumEeSUpK3HS5a0Lg _yNtyv3umEeSUpK3HS5a0Lg">
           <ownedEnd xmi:type="uml:Property" xmi:id="_yNtyvHumEeSUpK3HS5a0Lg" name="accountManager" type="_yNtykXumEeSUpK3HS5a0Lg" association="_yNtyu3umEeSUpK3HS5a0Lg">
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_yNtyvXumEeSUpK3HS5a0Lg" value="1"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_yNtyvnumEeSUpK3HS5a0Lg" value="1"/>
-          </ownedEnd>
-          <ownedEnd xmi:type="uml:Property" xmi:id="_yNtyv3umEeSUpK3HS5a0Lg" name="loggedIn" type="_yNtyl3umEeSUpK3HS5a0Lg" association="_yNtyu3umEeSUpK3HS5a0Lg">
-            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_yNtywHumEeSUpK3HS5a0Lg"/>
-            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_yNtywXumEeSUpK3HS5a0Lg" value="*"/>
           </ownedEnd>
         </nestedClassifier>
         <nestedClassifier xmi:type="uml:Association" xmi:id="_VNsK8IEiEeSZXsM8lF2eOA" memberEnd="_VNsK8YEiEeSZXsM8lF2eOA _VNq80IEiEeSZXsM8lF2eOA">
