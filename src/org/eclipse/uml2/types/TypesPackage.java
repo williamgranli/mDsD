@@ -19,7 +19,7 @@ import org.eclipse.emf.ecore.EPackage;
  * <!-- end-user-doc -->
  * @see org.eclipse.uml2.types.TypesFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/uml2/2.0.0/UML originalName='primitiveTypes'"
+ *        annotation="http://www.eclipse.org/uml2/2.0.0/UML originalName='PrimitiveTypes'"
  * @generated
  */
 public interface TypesPackage extends EPackage {

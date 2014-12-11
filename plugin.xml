@@ -9,8 +9,8 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated impl -->
       <package
-            uri="http:///implementation.ecore"
-            class="implementation.ImplementationPackage"
+            uri="http:///Implementation.ecore"
+            class="Implementation.ImplementationPackage"
             genModel="impl/impl.genmodel"/>
    </extension>
 

@@ -1,0 +1,156 @@
+/**
+ */
+package Implementation;
+
+import org.eclipse.emf.common.util.EList;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Booking Component Booking Manager</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * <ul>
+ *   <li>{@link Implementation.BookingComponent_BookingManager#getBooking <em>Booking</em>}</li>
+ *   <li>{@link Implementation.BookingComponent_BookingManager#getAuthentication <em>Authentication</em>}</li>
+ *   <li>{@link Implementation.BookingComponent_BookingManager#getIRoomInformation <em>IRoom Information</em>}</li>
+ *   <li>{@link Implementation.BookingComponent_BookingManager#getIPayment <em>IPayment</em>}</li>
+ *   <li>{@link Implementation.BookingComponent_BookingManager#getIAdditionalServiceInformation <em>IAdditional Service Information</em>}</li>
+ * </ul>
+ * </p>
+ *
+ * @see Implementation.ImplementationPackage#getBookingComponent_BookingManager()
+ * @model
+ * @generated
+ */
+public interface BookingComponent_BookingManager extends BookingComponent_IBooking, BookingComponent_IBookingDecision {
+	/**
+	 * Returns the value of the '<em><b>Booking</b></em>' reference list.
+	 * The list contents are of type {@link Implementation.BookingComponent_Booking}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Booking</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Booking</em>' reference list.
+	 * @see Implementation.ImplementationPackage#getBookingComponent_BookingManager_Booking()
+	 * @model ordered="false"
+	 * @generated
+	 */
+	EList<BookingComponent_Booking> getBooking();
+
+	/**
+	 * Returns the value of the '<em><b>Authentication</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Authentication</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Authentication</em>' reference.
+	 * @see #setAuthentication(StaffComponent_IAuthentication)
+	 * @see Implementation.ImplementationPackage#getBookingComponent_BookingManager_Authentication()
+	 * @model required="true" ordered="false"
+	 * @generated
+	 */
+	StaffComponent_IAuthentication getAuthentication();
+
+	/**
+	 * Sets the value of the '{@link Implementation.BookingComponent_BookingManager#getAuthentication <em>Authentication</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Authentication</em>' reference.
+	 * @see #getAuthentication()
+	 * @generated
+	 */
+	void setAuthentication(StaffComponent_IAuthentication value);
+
+	/**
+	 * Returns the value of the '<em><b>IRoom Information</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>IRoom Information</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>IRoom Information</em>' reference.
+	 * @see #setIRoomInformation(RoomComponent_IRoomInformation)
+	 * @see Implementation.ImplementationPackage#getBookingComponent_BookingManager_IRoomInformation()
+	 * @model required="true" ordered="false"
+	 * @generated
+	 */
+	RoomComponent_IRoomInformation getIRoomInformation();
+
+	/**
+	 * Sets the value of the '{@link Implementation.BookingComponent_BookingManager#getIRoomInformation <em>IRoom Information</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>IRoom Information</em>' reference.
+	 * @see #getIRoomInformation()
+	 * @generated
+	 */
+	void setIRoomInformation(RoomComponent_IRoomInformation value);
+
+	/**
+	 * Returns the value of the '<em><b>IPayment</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>IPayment</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>IPayment</em>' reference.
+	 * @see #setIPayment(PaymentComponent_IPayment)
+	 * @see Implementation.ImplementationPackage#getBookingComponent_BookingManager_IPayment()
+	 * @model required="true" ordered="false"
+	 * @generated
+	 */
+	PaymentComponent_IPayment getIPayment();
+
+	/**
+	 * Sets the value of the '{@link Implementation.BookingComponent_BookingManager#getIPayment <em>IPayment</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>IPayment</em>' reference.
+	 * @see #getIPayment()
+	 * @generated
+	 */
+	void setIPayment(PaymentComponent_IPayment value);
+
+	/**
+	 * Returns the value of the '<em><b>IAdditional Service Information</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>IAdditional Service Information</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>IAdditional Service Information</em>' reference.
+	 * @see #setIAdditionalServiceInformation(AdditionalServiceComponent_IAdditionalServiceInformation)
+	 * @see Implementation.ImplementationPackage#getBookingComponent_BookingManager_IAdditionalServiceInformation()
+	 * @model required="true" ordered="false"
+	 * @generated
+	 */
+	AdditionalServiceComponent_IAdditionalServiceInformation getIAdditionalServiceInformation();
+
+	/**
+	 * Sets the value of the '{@link Implementation.BookingComponent_BookingManager#getIAdditionalServiceInformation <em>IAdditional Service Information</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>IAdditional Service Information</em>' reference.
+	 * @see #getIAdditionalServiceInformation()
+	 * @generated
+	 */
+	void setIAdditionalServiceInformation(AdditionalServiceComponent_IAdditionalServiceInformation value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	void BookingManager();
+
+} // BookingComponent_BookingManager

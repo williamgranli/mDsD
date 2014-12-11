@@ -103,7 +103,7 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 		isInited = true;
 
 		// Obtain or create and register interdependencies
-		ImplementationPackageImpl theImplementationPackage = (ImplementationPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ImplementationPackage.eNS_URI) instanceof ImplementationPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ImplementationPackage.eNS_URI) : ImplementationPackage.eINSTANCE);
+		Implementation.impl.ImplementationPackageImpl theImplementationPackage = (Implementation.impl.ImplementationPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(Implementation.ImplementationPackage.eNS_URI) instanceof Implementation.impl.ImplementationPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(Implementation.ImplementationPackage.eNS_URI) : Implementation.ImplementationPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theTypesPackage.createPackageContents();
@@ -252,7 +252,7 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 		  (this, 
 		   source, 
 		   new String[] {
-			 "originalName", "primitiveTypes"
+			 "originalName", "PrimitiveTypes"
 		   });
 	}
 

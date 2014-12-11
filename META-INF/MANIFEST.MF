@@ -10,6 +10,9 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Export-Package: implementation,
  implementation.impl,
  implementation.util,
+ Implementation,
+ Implementation.impl,
+ Implementation.util,
  org.eclipse.uml2.types,
  org.eclipse.uml2.types.impl
 Require-Bundle: org.eclipse.core.runtime,
