@@ -1776,7 +1776,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_COMPONENT_BOOKING___UPDATE_BOOKING__STRING_DATE_DATE = 6;
+	int BOOKING_COMPONENT_BOOKING___UPDATE_BOOKING__DATE_DATE = 6;
 
 	/**
 	 * The operation id for the '<em>Remove Additional Service From Booking</em>' operation.
@@ -4170,14 +4170,14 @@ public interface ImplementationPackage extends EPackage {
 	EOperation getBookingComponent_Booking__RemoveRoomFromBooking__String();
 
 	/**
-	 * Returns the meta object for the '{@link Implementation.BookingComponent_Booking#updateBooking(java.lang.String, java.util.Date, java.util.Date) <em>Update Booking</em>}' operation.
+	 * Returns the meta object for the '{@link Implementation.BookingComponent_Booking#updateBooking(java.util.Date, java.util.Date) <em>Update Booking</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Update Booking</em>' operation.
-	 * @see Implementation.BookingComponent_Booking#updateBooking(java.lang.String, java.util.Date, java.util.Date)
+	 * @see Implementation.BookingComponent_Booking#updateBooking(java.util.Date, java.util.Date)
 	 * @generated
 	 */
-	EOperation getBookingComponent_Booking__UpdateBooking__String_Date_Date();
+	EOperation getBookingComponent_Booking__UpdateBooking__Date_Date();
 
 	/**
 	 * Returns the meta object for the '{@link Implementation.BookingComponent_Booking#removeAdditionalServiceFromBooking(Implementation.BookingComponent_AdditionalService) <em>Remove Additional Service From Booking</em>}' operation.
@@ -5885,7 +5885,7 @@ public interface ImplementationPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation BOOKING_COMPONENT_BOOKING___UPDATE_BOOKING__STRING_DATE_DATE = eINSTANCE.getBookingComponent_Booking__UpdateBooking__String_Date_Date();
+		EOperation BOOKING_COMPONENT_BOOKING___UPDATE_BOOKING__DATE_DATE = eINSTANCE.getBookingComponent_Booking__UpdateBooking__Date_Date();
 
 		/**
 		 * The meta object literal for the '<em><b>Remove Additional Service From Booking</b></em>' operation.

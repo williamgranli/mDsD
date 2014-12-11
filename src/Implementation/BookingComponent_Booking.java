@@ -261,10 +261,10 @@ public interface BookingComponent_Booking extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model bookingReferenceDataType="org.eclipse.uml2.types.String" bookingReferenceRequired="true" bookingReferenceOrdered="false" arrivalDateRequired="true" arrivalDateOrdered="false" departureDateRequired="true" departureDateOrdered="false"
+	 * @model arrivalDateRequired="true" arrivalDateOrdered="false" departureDateRequired="true" departureDateOrdered="false"
 	 * @generated
 	 */
-	void updateBooking(String bookingReference, Date arrivalDate, Date departureDate);
+	void updateBooking(Date arrivalDate, Date departureDate);
 
 	/**
 	 * <!-- begin-user-doc -->

@@ -590,9 +590,6 @@
           </ownedParameter>
         </ownedOperation>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_gokdxXuiEeSz04gN9GtPDA" name="updateBooking" visibility="public">
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_gokdxnuiEeSz04gN9GtPDA" name="bookingReference">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-          </ownedParameter>
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_gokdx3uiEeSz04gN9GtPDA" name="arrivalDate">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
           </ownedParameter>

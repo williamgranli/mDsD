@@ -2,6 +2,7 @@
  */
 package Implementation.impl;
 
+import Implementation.AdditionalServiceComponent;
 import Implementation.BookingComponent_AdditionalService;
 import Implementation.BookingComponent_Booking;
 import Implementation.BookingComponent_BookingGuest;
@@ -10,20 +11,16 @@ import Implementation.BookingComponent_RoomType;
 import Implementation.ImplementationPackage;
 
 import java.lang.reflect.InvocationTargetException;
-
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
@@ -174,6 +171,29 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 	 */
 	protected BookingComponent_BookingImpl() {
 		super();
+		additionalServices = (EList<BookingComponent_AdditionalService>) new ArrayList<BookingComponent_AdditionalService>();
+		guests = (EList<BookingComponent_BookingGuest>) new ArrayList<BookingComponent_BookingGuest>();
+		rooms = (EList<BookingComponent_RoomType>) new ArrayList<BookingComponent_RoomType>();
+	}
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public BookingComponent_Booking Booking() {
+		return this;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BookingComponent_Booking Booking(Date arrivalDate, Date departureDate) {
+		this.arrivalDate = arrivalDate;
+		this.departureDate = departureDate;
+		return this;
 	}
 
 	/**
@@ -347,111 +367,116 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public BookingComponent_Booking Booking() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public BookingComponent_Booking Booking(Date arrivalDate, Date departureDate) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void addAdditionalServiceToBooking(BookingComponent_AdditionalService newService) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		additionalServices.add(newService);
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public BookingComponent_Booking Booking(String roomType, Date arrivalDate, Date departureDate, String customerSSN, String customerFirstName, String customerLastName, String customerAddress, String customerEmail, String ccNumber, String ccv, String expiryMonth, String expiryYear) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		//BookingComponent_AdditionalService newService = new BookingComponent_AdditionalServiceImpl();
+		BookingComponent_RoomType newRoom = new BookingComponent_RoomTypeImpl();
+		BookingComponent_PaymentDetails newPayment = new BookingComponent_PaymentDetailsImpl();
+		BookingComponent_BookingGuest newGuest = new BookingComponent_BookingGuestImpl();
+		
+		newRoom.setRoomType(roomType);
+		
+		newPayment.setFirstName(customerSSN);
+		newPayment.setLastName(customerFirstName);
+		newPayment.setAddress(customerAddress);
+		newPayment.setCcNumber(ccNumber);
+		newPayment.setCcv(ccv);
+		newPayment.setExpiryMonth(expiryMonth);
+		newPayment.setExpiryYear(expiryYear);
+		
+		newGuest.setFirstName(customerFirstName);
+		newGuest.setLastName(customerLastName);
+		newGuest.setAddress(customerAddress);
+		
+		this.arrivalDate = arrivalDate;
+		this.departureDate = departureDate;
+		
+		addRoomToBooking(newRoom);
+		
+		this.guests.add(newGuest);
+		this.paymentDetails = newPayment;
+		
+		return this;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void addRoomToBooking(BookingComponent_RoomType newRoom) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		rooms.add(newRoom);
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void removeRoomFromBooking(String roomType) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if(rooms.contains(roomType))
+		{
+			rooms.remove(roomType);
+		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public void updateBooking(String bookingReference, Date arrivalDate, Date departureDate) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public void updateBooking(Date arrivalDate, Date departureDate) {
+		this.arrivalDate = arrivalDate;
+		this.departureDate = departureDate;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void removeAdditionalServiceFromBooking(BookingComponent_AdditionalService additionalService) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if(additionalServices.contains(additionalService))
+		{
+			additionalServices.remove(additionalService);
+		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public int currentCost() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		
+		for(BookingComponent_AdditionalService x : additionalServices)
+		{
+			currentCost += x.getCost();
+		}
+		for(BookingComponent_RoomType x : rooms)
+		{
+			currentCost += x.getCost();
+		}
+		return currentCost;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void updatePaymentDetails(BookingComponent_PaymentDetails newPaymentDetails) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		this.paymentDetails = newPaymentDetails;
 	}
 
 	/**
@@ -610,8 +635,8 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING___REMOVE_ROOM_FROM_BOOKING__STRING:
 				removeRoomFromBooking((String)arguments.get(0));
 				return null;
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING___UPDATE_BOOKING__STRING_DATE_DATE:
-				updateBooking((String)arguments.get(0), (Date)arguments.get(1), (Date)arguments.get(2));
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING___UPDATE_BOOKING__DATE_DATE:
+				updateBooking((Date)arguments.get(0), (Date)arguments.get(1));
 				return null;
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING___REMOVE_ADDITIONAL_SERVICE_FROM_BOOKING__BOOKINGCOMPONENT_ADDITIONALSERVICE:
 				removeAdditionalServiceFromBooking((BookingComponent_AdditionalService)arguments.get(0));
