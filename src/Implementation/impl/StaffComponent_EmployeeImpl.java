@@ -155,6 +155,15 @@ public class StaffComponent_EmployeeImpl extends MinimalEObjectImpl.Container im
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected StaffComponent_EmployeeImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @param password 
 	 * @param phone 
 	 * @param email 
@@ -332,9 +341,10 @@ public class StaffComponent_EmployeeImpl extends MinimalEObjectImpl.Container im
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated 
+	 * @generated NOT
 	 */
-	public EList<String> getEmployeeInfo() {
+	public String getEmployeeInfo() {
+
 		String ssn = "\n* SSN: " + this.getSsn();
 		String name = "\n* Name: " + this.getName();
 		String email = "\n* Email: " + this.getEmail();

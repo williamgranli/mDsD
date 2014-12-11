@@ -2775,7 +2775,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 
 		initEOperation(getStaffComponent_Employee__Employee(), null, "Employee", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getStaffComponent_Employee__GetEmployeeInfo(), theTypesPackage.getString(), "getEmployeeInfo", 1, -1, IS_UNIQUE, !IS_ORDERED);
+		initEOperation(getStaffComponent_Employee__GetEmployeeInfo(), theTypesPackage.getString(), "getEmployeeInfo", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(staffComponent_IAccountAdministrationEClass, StaffComponent_IAccountAdministration.class, "StaffComponent_IAccountAdministration", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
