@@ -2,6 +2,8 @@
  */
 package Implementation;
 
+import org.eclipse.emf.common.util.EList;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -12,6 +14,7 @@ package Implementation;
  * The following features are supported:
  * <ul>
  *   <li>{@link Implementation.RoomComponent_RoomHandler#getAuthenticator <em>Authenticator</em>}</li>
+ *   <li>{@link Implementation.RoomComponent_RoomHandler#getRoom <em>Room</em>}</li>
  * </ul>
  * </p>
  *
@@ -45,5 +48,21 @@ public interface RoomComponent_RoomHandler extends RoomComponent_IRoomDecision, 
 	 * @generated
 	 */
 	void setAuthenticator(StaffComponent_IAuthentication value);
+
+	/**
+	 * Returns the value of the '<em><b>Room</b></em>' reference list.
+	 * The list contents are of type {@link Implementation.RoomComponent_Room}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Room</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Room</em>' reference list.
+	 * @see Implementation.ImplementationPackage#getRoomComponent_RoomHandler_Room()
+	 * @model required="true" ordered="false"
+	 * @generated
+	 */
+	EList<RoomComponent_Room> getRoom();
 
 } // RoomComponent_RoomHandler

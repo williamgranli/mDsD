@@ -93,10 +93,12 @@
     <eOperations name="getRoomInfo" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String">
       <eParameters name="roomNumber" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
     </eOperations>
-    <eOperations name="searchRoom" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String">
+    <eOperations name="searchRoom" ordered="false" lowerBound="1" upperBound="-1"
+        eType="ecore:EDataType types.ecore#//String">
       <eParameters name="roomTypeName" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     </eOperations>
-    <eOperations name="getRoomTypes" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+    <eOperations name="getRoomTypes" ordered="false" lowerBound="1" upperBound="-1"
+        eType="ecore:EDataType types.ecore#//String"/>
     <eOperations name="getAllRoomNumbers" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     <eOperations name="countNumberOfTotalRooms" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
   </eClassifiers>
@@ -246,10 +248,12 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AdditionalServiceComponent_IAdditionalServiceInformation"
       abstract="true" interface="true">
-    <eOperations name="getAdditionalServiceInfo" ordered="false" lowerBound="1">
+    <eOperations name="getAdditionalServiceInfo" ordered="false" lowerBound="1" upperBound="-1"
+        eType="ecore:EDataType types.ecore#//String">
       <eParameters name="name" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     </eOperations>
-    <eOperations name="getAllAdditionalServices" ordered="false" lowerBound="1"/>
+    <eOperations name="getAllAdditionalServices" ordered="false" lowerBound="1" upperBound="-1"
+        eType="ecore:EDataType types.ecore#//String"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AdditionalServiceComponent_IAdditionalServiceAdministration"
       abstract="true" interface="true">
@@ -400,6 +404,35 @@
     </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="iAuthentication" ordered="false"
         lowerBound="1" eType="#//StaffComponent_IAuthentication"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="loggedIn" ordered="false"
+        upperBound="-1" eType="#//StaffComponent_Employee"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="employees" ordered="false"
+        lowerBound="1" upperBound="-1" eType="#//StaffComponent_Employee"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StaffComponent_Employee">
+    <eOperations name="Employee" ordered="false" lowerBound="1">
+      <eParameters name="ssn" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="name" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="email" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="phone" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+    </eOperations>
+    <eOperations name="Employee" ordered="false" lowerBound="1"/>
+    <eOperations name="getEmployeeInfo" ordered="false" lowerBound="1" upperBound="-1"
+        eType="#//StaffComponent_Employee">
+      <eParameters name="ssn" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" ordered="false" lowerBound="1"
+        eType="ecore:EDataType types.ecore#//Integer"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ssn" ordered="false" lowerBound="1"
+        eType="ecore:EDataType types.ecore#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
+        eType="ecore:EDataType types.ecore#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="email" ordered="false"
+        lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="phone" ordered="false"
+        lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="password" ordered="false"
+        lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="StaffComponent_IAccountAdministration"
       abstract="true" interface="true">
@@ -416,30 +449,6 @@
     <eOperations name="removeAccount" ordered="false" lowerBound="1">
       <eParameters name="ssn" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     </eOperations>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="StaffComponent_Employee">
-    <eOperations name="Employee" ordered="false" lowerBound="1">
-      <eParameters name="ssn" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-      <eParameters name="name" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-      <eParameters name="email" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-      <eParameters name="phone" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-    </eOperations>
-    <eOperations name="Employee" ordered="false" lowerBound="1"/>
-    <eOperations name="getEmployeeInfo" ordered="false" lowerBound="1" eType="#//StaffComponent_Employee">
-      <eParameters name="ssn" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-    </eOperations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" ordered="false" lowerBound="1"
-        eType="ecore:EDataType types.ecore#//Integer"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ssn" ordered="false" lowerBound="1"
-        eType="ecore:EDataType types.ecore#//String"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
-        eType="ecore:EDataType types.ecore#//String"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="email" ordered="false"
-        lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="phone" ordered="false"
-        lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="password" ordered="false"
-        lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RoomComponent"/>
   <eClassifiers xsi:type="ecore:EClass" name="RoomComponent_Room">
@@ -525,5 +534,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="RoomComponent_RoomHandler" eSuperTypes="#//RoomComponent_IRoomDecision #//RoomComponent_IRoomInformation #//RoomComponent_IRoomAdministration">
     <eStructuralFeatures xsi:type="ecore:EReference" name="authenticator" ordered="false"
         lowerBound="1" eType="#//StaffComponent_IAuthentication"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="room" ordered="false" lowerBound="1"
+        upperBound="-1" eType="#//RoomComponent_Room"/>
   </eClassifiers>
 </ecore:EPackage>

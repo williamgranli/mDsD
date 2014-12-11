@@ -2,6 +2,8 @@
  */
 package Implementation;
 
+import org.eclipse.emf.common.util.EList;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -12,6 +14,8 @@ package Implementation;
  * The following features are supported:
  * <ul>
  *   <li>{@link Implementation.StaffComponent_AccountManager#getIAuthentication <em>IAuthentication</em>}</li>
+ *   <li>{@link Implementation.StaffComponent_AccountManager#getLoggedIn <em>Logged In</em>}</li>
+ *   <li>{@link Implementation.StaffComponent_AccountManager#getEmployees <em>Employees</em>}</li>
  * </ul>
  * </p>
  *
@@ -45,6 +49,38 @@ public interface StaffComponent_AccountManager extends StaffComponent_IAuthentic
 	 * @generated
 	 */
 	void setIAuthentication(StaffComponent_IAuthentication value);
+
+	/**
+	 * Returns the value of the '<em><b>Logged In</b></em>' reference list.
+	 * The list contents are of type {@link Implementation.StaffComponent_Employee}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Logged In</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Logged In</em>' reference list.
+	 * @see Implementation.ImplementationPackage#getStaffComponent_AccountManager_LoggedIn()
+	 * @model ordered="false"
+	 * @generated
+	 */
+	EList<StaffComponent_Employee> getLoggedIn();
+
+	/**
+	 * Returns the value of the '<em><b>Employees</b></em>' reference list.
+	 * The list contents are of type {@link Implementation.StaffComponent_Employee}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Employees</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Employees</em>' reference list.
+	 * @see Implementation.ImplementationPackage#getStaffComponent_AccountManager_Employees()
+	 * @model required="true" ordered="false"
+	 * @generated
+	 */
+	EList<StaffComponent_Employee> getEmployees();
 
 	/**
 	 * <!-- begin-user-doc -->

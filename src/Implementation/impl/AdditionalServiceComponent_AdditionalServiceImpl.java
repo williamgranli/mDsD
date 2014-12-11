@@ -316,7 +316,7 @@ public class AdditionalServiceComponent_AdditionalServiceImpl extends MinimalEOb
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getAdditionalServiceInfo(String name) {
+	public EList<String> getAdditionalServiceInfo(String name) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -327,7 +327,7 @@ public class AdditionalServiceComponent_AdditionalServiceImpl extends MinimalEOb
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getAllAdditionalServices() {
+	public EList<String> getAllAdditionalServices() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -509,11 +509,9 @@ public class AdditionalServiceComponent_AdditionalServiceImpl extends MinimalEOb
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
 			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE___GET_ADDITIONAL_SERVICE_INFO__STRING:
-				getAdditionalServiceInfo((String)arguments.get(0));
-				return null;
+				return getAdditionalServiceInfo((String)arguments.get(0));
 			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE___GET_ALL_ADDITIONAL_SERVICES:
-				getAllAdditionalServices();
-				return null;
+				return getAllAdditionalServices();
 			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE___CREATE_ADDITIONAL_SERVICE__STRING_INT_INT:
 				createAdditionalService((String)arguments.get(0), (Integer)arguments.get(1), (Integer)arguments.get(2));
 				return null;

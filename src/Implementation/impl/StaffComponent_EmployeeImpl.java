@@ -327,7 +327,7 @@ public class StaffComponent_EmployeeImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public StaffComponent_Employee getEmployeeInfo(String ssn) {
+	public EList<StaffComponent_Employee> getEmployeeInfo(String ssn) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();

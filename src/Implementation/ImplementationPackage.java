@@ -2199,13 +2199,31 @@ public interface ImplementationPackage extends EPackage {
 	int STAFF_COMPONENT_ACCOUNT_MANAGER__IAUTHENTICATION = STAFF_COMPONENT_IAUTHENTICATION_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Logged In</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAFF_COMPONENT_ACCOUNT_MANAGER__LOGGED_IN = STAFF_COMPONENT_IAUTHENTICATION_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Employees</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAFF_COMPONENT_ACCOUNT_MANAGER__EMPLOYEES = STAFF_COMPONENT_IAUTHENTICATION_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>Staff Component Account Manager</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STAFF_COMPONENT_ACCOUNT_MANAGER_FEATURE_COUNT = STAFF_COMPONENT_IAUTHENTICATION_FEATURE_COUNT + 1;
+	int STAFF_COMPONENT_ACCOUNT_MANAGER_FEATURE_COUNT = STAFF_COMPONENT_IAUTHENTICATION_FEATURE_COUNT + 3;
 
 	/**
 	 * The operation id for the '<em>Log In</em>' operation.
@@ -2287,52 +2305,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @see Implementation.impl.ImplementationPackageImpl#getStaffComponent_IAccountAdministration()
 	 * @generated
 	 */
-	int STAFF_COMPONENT_IACCOUNT_ADMINISTRATION = 35;
-
-	/**
-	 * The number of structural features of the '<em>Staff Component IAccount Administration</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAFF_COMPONENT_IACCOUNT_ADMINISTRATION_FEATURE_COUNT = 0;
-
-	/**
-	 * The operation id for the '<em>Create Account</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAFF_COMPONENT_IACCOUNT_ADMINISTRATION___CREATE_ACCOUNT__STRING_STRING_STRING_STRING_STRING = 0;
-
-	/**
-	 * The operation id for the '<em>Edit Account Details</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAFF_COMPONENT_IACCOUNT_ADMINISTRATION___EDIT_ACCOUNT_DETAILS__STRING = 1;
-
-	/**
-	 * The operation id for the '<em>Remove Account</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAFF_COMPONENT_IACCOUNT_ADMINISTRATION___REMOVE_ACCOUNT__STRING = 2;
-
-	/**
-	 * The number of operations of the '<em>Staff Component IAccount Administration</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAFF_COMPONENT_IACCOUNT_ADMINISTRATION_OPERATION_COUNT = 3;
+	int STAFF_COMPONENT_IACCOUNT_ADMINISTRATION = 36;
 
 	/**
 	 * The meta object id for the '{@link Implementation.impl.StaffComponent_EmployeeImpl <em>Staff Component Employee</em>}' class.
@@ -2342,7 +2315,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @see Implementation.impl.ImplementationPackageImpl#getStaffComponent_Employee()
 	 * @generated
 	 */
-	int STAFF_COMPONENT_EMPLOYEE = 36;
+	int STAFF_COMPONENT_EMPLOYEE = 35;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2442,6 +2415,51 @@ public interface ImplementationPackage extends EPackage {
 	 * @ordered
 	 */
 	int STAFF_COMPONENT_EMPLOYEE_OPERATION_COUNT = 3;
+
+	/**
+	 * The number of structural features of the '<em>Staff Component IAccount Administration</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAFF_COMPONENT_IACCOUNT_ADMINISTRATION_FEATURE_COUNT = 0;
+
+	/**
+	 * The operation id for the '<em>Create Account</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAFF_COMPONENT_IACCOUNT_ADMINISTRATION___CREATE_ACCOUNT__STRING_STRING_STRING_STRING_STRING = 0;
+
+	/**
+	 * The operation id for the '<em>Edit Account Details</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAFF_COMPONENT_IACCOUNT_ADMINISTRATION___EDIT_ACCOUNT_DETAILS__STRING = 1;
+
+	/**
+	 * The operation id for the '<em>Remove Account</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAFF_COMPONENT_IACCOUNT_ADMINISTRATION___REMOVE_ACCOUNT__STRING = 2;
+
+	/**
+	 * The number of operations of the '<em>Staff Component IAccount Administration</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAFF_COMPONENT_IACCOUNT_ADMINISTRATION_OPERATION_COUNT = 3;
 
 	/**
 	 * The meta object id for the '{@link Implementation.impl.RoomComponentImpl <em>Room Component</em>}' class.
@@ -2837,13 +2855,22 @@ public interface ImplementationPackage extends EPackage {
 	int ROOM_COMPONENT_ROOM_HANDLER__AUTHENTICATOR = ROOM_COMPONENT_IROOM_DECISION_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Room</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_COMPONENT_ROOM_HANDLER__ROOM = ROOM_COMPONENT_IROOM_DECISION_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Room Component Room Handler</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_COMPONENT_ROOM_HANDLER_FEATURE_COUNT = ROOM_COMPONENT_IROOM_DECISION_FEATURE_COUNT + 1;
+	int ROOM_COMPONENT_ROOM_HANDLER_FEATURE_COUNT = ROOM_COMPONENT_IROOM_DECISION_FEATURE_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Get Room Info</em>' operation.
@@ -4407,6 +4434,28 @@ public interface ImplementationPackage extends EPackage {
 	EReference getStaffComponent_AccountManager_IAuthentication();
 
 	/**
+	 * Returns the meta object for the reference list '{@link Implementation.StaffComponent_AccountManager#getLoggedIn <em>Logged In</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Logged In</em>'.
+	 * @see Implementation.StaffComponent_AccountManager#getLoggedIn()
+	 * @see #getStaffComponent_AccountManager()
+	 * @generated
+	 */
+	EReference getStaffComponent_AccountManager_LoggedIn();
+
+	/**
+	 * Returns the meta object for the reference list '{@link Implementation.StaffComponent_AccountManager#getEmployees <em>Employees</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Employees</em>'.
+	 * @see Implementation.StaffComponent_AccountManager#getEmployees()
+	 * @see #getStaffComponent_AccountManager()
+	 * @generated
+	 */
+	EReference getStaffComponent_AccountManager_Employees();
+
+	/**
 	 * Returns the meta object for the '{@link Implementation.StaffComponent_AccountManager#findAccount(java.lang.String) <em>Find Account</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4801,6 +4850,17 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getRoomComponent_RoomHandler_Authenticator();
+
+	/**
+	 * Returns the meta object for the reference list '{@link Implementation.RoomComponent_RoomHandler#getRoom <em>Room</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Room</em>'.
+	 * @see Implementation.RoomComponent_RoomHandler#getRoom()
+	 * @see #getRoomComponent_RoomHandler()
+	 * @generated
+	 */
+	EReference getRoomComponent_RoomHandler_Room();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -6032,6 +6092,22 @@ public interface ImplementationPackage extends EPackage {
 		EReference STAFF_COMPONENT_ACCOUNT_MANAGER__IAUTHENTICATION = eINSTANCE.getStaffComponent_AccountManager_IAuthentication();
 
 		/**
+		 * The meta object literal for the '<em><b>Logged In</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference STAFF_COMPONENT_ACCOUNT_MANAGER__LOGGED_IN = eINSTANCE.getStaffComponent_AccountManager_LoggedIn();
+
+		/**
+		 * The meta object literal for the '<em><b>Employees</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference STAFF_COMPONENT_ACCOUNT_MANAGER__EMPLOYEES = eINSTANCE.getStaffComponent_AccountManager_Employees();
+
+		/**
 		 * The meta object literal for the '<em><b>Find Account</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6350,6 +6426,14 @@ public interface ImplementationPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ROOM_COMPONENT_ROOM_HANDLER__AUTHENTICATOR = eINSTANCE.getRoomComponent_RoomHandler_Authenticator();
+
+		/**
+		 * The meta object literal for the '<em><b>Room</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ROOM_COMPONENT_ROOM_HANDLER__ROOM = eINSTANCE.getRoomComponent_RoomHandler_Room();
 
 	}
 

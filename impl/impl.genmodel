@@ -375,23 +375,12 @@
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//StaffComponent_AccountManager">
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
           propertySortChoices="true" ecoreFeature="ecore:EReference Implementation.ecore#//StaffComponent_AccountManager/iAuthentication"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference Implementation.ecore#//StaffComponent_AccountManager/loggedIn"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference Implementation.ecore#//StaffComponent_AccountManager/employees"/>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//StaffComponent_AccountManager/findAccount">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//StaffComponent_AccountManager/findAccount/ssn"/>
-      </genOperations>
-    </genClasses>
-    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Implementation.ecore#//StaffComponent_IAccountAdministration">
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//StaffComponent_IAccountAdministration/createAccount">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//StaffComponent_IAccountAdministration/createAccount/name"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//StaffComponent_IAccountAdministration/createAccount/ssn"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//StaffComponent_IAccountAdministration/createAccount/email"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//StaffComponent_IAccountAdministration/createAccount/phone"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//StaffComponent_IAccountAdministration/createAccount/password"/>
-      </genOperations>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//StaffComponent_IAccountAdministration/editAccountDetails">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//StaffComponent_IAccountAdministration/editAccountDetails/ssn"/>
-      </genOperations>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//StaffComponent_IAccountAdministration/removeAccount">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//StaffComponent_IAccountAdministration/removeAccount/ssn"/>
       </genOperations>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//StaffComponent_Employee">
@@ -410,6 +399,21 @@
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//StaffComponent_Employee/Employee.1"/>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//StaffComponent_Employee/getEmployeeInfo">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//StaffComponent_Employee/getEmployeeInfo/ssn"/>
+      </genOperations>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Implementation.ecore#//StaffComponent_IAccountAdministration">
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//StaffComponent_IAccountAdministration/createAccount">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//StaffComponent_IAccountAdministration/createAccount/name"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//StaffComponent_IAccountAdministration/createAccount/ssn"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//StaffComponent_IAccountAdministration/createAccount/email"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//StaffComponent_IAccountAdministration/createAccount/phone"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//StaffComponent_IAccountAdministration/createAccount/password"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//StaffComponent_IAccountAdministration/editAccountDetails">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//StaffComponent_IAccountAdministration/editAccountDetails/ssn"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//StaffComponent_IAccountAdministration/removeAccount">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//StaffComponent_IAccountAdministration/removeAccount/ssn"/>
       </genOperations>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//RoomComponent"/>
@@ -486,6 +490,8 @@
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//RoomComponent_RoomHandler">
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
           propertySortChoices="true" ecoreFeature="ecore:EReference Implementation.ecore#//RoomComponent_RoomHandler/authenticator"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference Implementation.ecore#//RoomComponent_RoomHandler/room"/>
     </genClasses>
   </genPackages>
   <genPackages xsi:type="genmodel:GenPackage" prefix="Types" basePackage="org.eclipse.uml2"

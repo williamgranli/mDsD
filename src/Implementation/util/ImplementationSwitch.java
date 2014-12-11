@@ -287,15 +287,15 @@ public class ImplementationSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ImplementationPackage.STAFF_COMPONENT_IACCOUNT_ADMINISTRATION: {
-				StaffComponent_IAccountAdministration staffComponent_IAccountAdministration = (StaffComponent_IAccountAdministration)theEObject;
-				T result = caseStaffComponent_IAccountAdministration(staffComponent_IAccountAdministration);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case ImplementationPackage.STAFF_COMPONENT_EMPLOYEE: {
 				StaffComponent_Employee staffComponent_Employee = (StaffComponent_Employee)theEObject;
 				T result = caseStaffComponent_Employee(staffComponent_Employee);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ImplementationPackage.STAFF_COMPONENT_IACCOUNT_ADMINISTRATION: {
+				StaffComponent_IAccountAdministration staffComponent_IAccountAdministration = (StaffComponent_IAccountAdministration)theEObject;
+				T result = caseStaffComponent_IAccountAdministration(staffComponent_IAccountAdministration);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

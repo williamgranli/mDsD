@@ -2,6 +2,7 @@
  */
 package Implementation;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -204,6 +205,6 @@ public interface StaffComponent_Employee extends EObject {
 	 * @model required="true" ordered="false" ssnDataType="org.eclipse.uml2.types.String" ssnRequired="true" ssnOrdered="false"
 	 * @generated
 	 */
-	StaffComponent_Employee getEmployeeInfo(String ssn);
+	EList<StaffComponent_Employee> getEmployeeInfo(String ssn);
 
 } // StaffComponent_Employee

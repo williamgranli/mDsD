@@ -2,6 +2,7 @@
  */
 package Implementation;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -29,7 +30,7 @@ public interface RoomComponent_IRoomInformation extends EObject {
 	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" roomTypeNameDataType="org.eclipse.uml2.types.String" roomTypeNameRequired="true" roomTypeNameOrdered="false"
 	 * @generated
 	 */
-	String searchRoom(String roomTypeName);
+	EList<String> searchRoom(String roomTypeName);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -37,7 +38,7 @@ public interface RoomComponent_IRoomInformation extends EObject {
 	 * @model kind="operation" dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
-	String getRoomTypes();
+	EList<String> getRoomTypes();
 
 	/**
 	 * <!-- begin-user-doc -->

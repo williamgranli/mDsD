@@ -1717,6 +1717,24 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getStaffComponent_AccountManager_LoggedIn() {
+		return (EReference)staffComponent_AccountManagerEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getStaffComponent_AccountManager_Employees() {
+		return (EReference)staffComponent_AccountManagerEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EOperation getStaffComponent_AccountManager__FindAccount__String() {
 		return staffComponent_AccountManagerEClass.getEOperations().get(0);
 	}
@@ -2059,6 +2077,15 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getRoomComponent_RoomHandler_Room() {
+		return (EReference)roomComponent_RoomHandlerEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ImplementationFactory getImplementationFactory() {
 		return (ImplementationFactory)getEFactoryInstance();
 	}
@@ -2258,12 +2285,9 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 
 		staffComponent_AccountManagerEClass = createEClass(STAFF_COMPONENT_ACCOUNT_MANAGER);
 		createEReference(staffComponent_AccountManagerEClass, STAFF_COMPONENT_ACCOUNT_MANAGER__IAUTHENTICATION);
+		createEReference(staffComponent_AccountManagerEClass, STAFF_COMPONENT_ACCOUNT_MANAGER__LOGGED_IN);
+		createEReference(staffComponent_AccountManagerEClass, STAFF_COMPONENT_ACCOUNT_MANAGER__EMPLOYEES);
 		createEOperation(staffComponent_AccountManagerEClass, STAFF_COMPONENT_ACCOUNT_MANAGER___FIND_ACCOUNT__STRING);
-
-		staffComponent_IAccountAdministrationEClass = createEClass(STAFF_COMPONENT_IACCOUNT_ADMINISTRATION);
-		createEOperation(staffComponent_IAccountAdministrationEClass, STAFF_COMPONENT_IACCOUNT_ADMINISTRATION___CREATE_ACCOUNT__STRING_STRING_STRING_STRING_STRING);
-		createEOperation(staffComponent_IAccountAdministrationEClass, STAFF_COMPONENT_IACCOUNT_ADMINISTRATION___EDIT_ACCOUNT_DETAILS__STRING);
-		createEOperation(staffComponent_IAccountAdministrationEClass, STAFF_COMPONENT_IACCOUNT_ADMINISTRATION___REMOVE_ACCOUNT__STRING);
 
 		staffComponent_EmployeeEClass = createEClass(STAFF_COMPONENT_EMPLOYEE);
 		createEAttribute(staffComponent_EmployeeEClass, STAFF_COMPONENT_EMPLOYEE__ID);
@@ -2275,6 +2299,11 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		createEOperation(staffComponent_EmployeeEClass, STAFF_COMPONENT_EMPLOYEE___EMPLOYEE__STRING_STRING_STRING_STRING);
 		createEOperation(staffComponent_EmployeeEClass, STAFF_COMPONENT_EMPLOYEE___EMPLOYEE);
 		createEOperation(staffComponent_EmployeeEClass, STAFF_COMPONENT_EMPLOYEE___GET_EMPLOYEE_INFO__STRING);
+
+		staffComponent_IAccountAdministrationEClass = createEClass(STAFF_COMPONENT_IACCOUNT_ADMINISTRATION);
+		createEOperation(staffComponent_IAccountAdministrationEClass, STAFF_COMPONENT_IACCOUNT_ADMINISTRATION___CREATE_ACCOUNT__STRING_STRING_STRING_STRING_STRING);
+		createEOperation(staffComponent_IAccountAdministrationEClass, STAFF_COMPONENT_IACCOUNT_ADMINISTRATION___EDIT_ACCOUNT_DETAILS__STRING);
+		createEOperation(staffComponent_IAccountAdministrationEClass, STAFF_COMPONENT_IACCOUNT_ADMINISTRATION___REMOVE_ACCOUNT__STRING);
 
 		roomComponentEClass = createEClass(ROOM_COMPONENT);
 
@@ -2304,6 +2333,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 
 		roomComponent_RoomHandlerEClass = createEClass(ROOM_COMPONENT_ROOM_HANDLER);
 		createEReference(roomComponent_RoomHandlerEClass, ROOM_COMPONENT_ROOM_HANDLER__AUTHENTICATOR);
+		createEReference(roomComponent_RoomHandlerEClass, ROOM_COMPONENT_ROOM_HANDLER__ROOM);
 	}
 
 	/**
@@ -2432,10 +2462,10 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		op = initEOperation(getRoomComponent_IRoomInformation__GetRoomInfo__int(), theTypesPackage.getString(), "getRoomInfo", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "roomNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getRoomComponent_IRoomInformation__SearchRoom__String(), theTypesPackage.getString(), "searchRoom", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getRoomComponent_IRoomInformation__SearchRoom__String(), theTypesPackage.getString(), "searchRoom", 1, -1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "roomTypeName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getRoomComponent_IRoomInformation__GetRoomTypes(), theTypesPackage.getString(), "getRoomTypes", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		initEOperation(getRoomComponent_IRoomInformation__GetRoomTypes(), theTypesPackage.getString(), "getRoomTypes", 1, -1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getRoomComponent_IRoomInformation__GetAllRoomNumbers(), theTypesPackage.getString(), "getAllRoomNumbers", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
@@ -2578,10 +2608,10 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 
 		initEClass(additionalServiceComponent_IAdditionalServiceInformationEClass, AdditionalServiceComponent_IAdditionalServiceInformation.class, "AdditionalServiceComponent_IAdditionalServiceInformation", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		op = initEOperation(getAdditionalServiceComponent_IAdditionalServiceInformation__GetAdditionalServiceInfo__String(), null, "getAdditionalServiceInfo", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getAdditionalServiceComponent_IAdditionalServiceInformation__GetAdditionalServiceInfo__String(), theTypesPackage.getString(), "getAdditionalServiceInfo", 1, -1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "name", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getAdditionalServiceComponent_IAdditionalServiceInformation__GetAllAdditionalServices(), null, "getAllAdditionalServices", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		initEOperation(getAdditionalServiceComponent_IAdditionalServiceInformation__GetAllAdditionalServices(), theTypesPackage.getString(), "getAllAdditionalServices", 1, -1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(additionalServiceComponent_IAdditionalServiceAdministrationEClass, AdditionalServiceComponent_IAdditionalServiceAdministration.class, "AdditionalServiceComponent_IAdditionalServiceAdministration", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -2699,23 +2729,10 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 
 		initEClass(staffComponent_AccountManagerEClass, StaffComponent_AccountManager.class, "StaffComponent_AccountManager", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getStaffComponent_AccountManager_IAuthentication(), this.getStaffComponent_IAuthentication(), null, "iAuthentication", null, 1, 1, StaffComponent_AccountManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getStaffComponent_AccountManager_LoggedIn(), this.getStaffComponent_Employee(), null, "loggedIn", null, 0, -1, StaffComponent_AccountManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getStaffComponent_AccountManager_Employees(), this.getStaffComponent_Employee(), null, "employees", null, 1, -1, StaffComponent_AccountManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		op = initEOperation(getStaffComponent_AccountManager__FindAccount__String(), this.getStaffComponent_Employee(), "findAccount", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "ssn", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEClass(staffComponent_IAccountAdministrationEClass, StaffComponent_IAccountAdministration.class, "StaffComponent_IAccountAdministration", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		op = initEOperation(getStaffComponent_IAccountAdministration__CreateAccount__String_String_String_String_String(), theTypesPackage.getInteger(), "createAccount", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "name", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "ssn", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "email", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "phone", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "password", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		op = initEOperation(getStaffComponent_IAccountAdministration__EditAccountDetails__String(), theTypesPackage.getString(), "editAccountDetails", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "ssn", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		op = initEOperation(getStaffComponent_IAccountAdministration__RemoveAccount__String(), null, "removeAccount", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "ssn", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(staffComponent_EmployeeEClass, StaffComponent_Employee.class, "StaffComponent_Employee", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2734,7 +2751,22 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 
 		initEOperation(getStaffComponent_Employee__Employee(), null, "Employee", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getStaffComponent_Employee__GetEmployeeInfo__String(), this.getStaffComponent_Employee(), "getEmployeeInfo", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getStaffComponent_Employee__GetEmployeeInfo__String(), this.getStaffComponent_Employee(), "getEmployeeInfo", 1, -1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "ssn", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		initEClass(staffComponent_IAccountAdministrationEClass, StaffComponent_IAccountAdministration.class, "StaffComponent_IAccountAdministration", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		op = initEOperation(getStaffComponent_IAccountAdministration__CreateAccount__String_String_String_String_String(), theTypesPackage.getInteger(), "createAccount", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "name", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "ssn", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "email", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "phone", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "password", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getStaffComponent_IAccountAdministration__EditAccountDetails__String(), theTypesPackage.getString(), "editAccountDetails", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "ssn", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getStaffComponent_IAccountAdministration__RemoveAccount__String(), null, "removeAccount", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "ssn", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(roomComponentEClass, RoomComponent.class, "RoomComponent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2811,6 +2843,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 
 		initEClass(roomComponent_RoomHandlerEClass, RoomComponent_RoomHandler.class, "RoomComponent_RoomHandler", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRoomComponent_RoomHandler_Authenticator(), this.getStaffComponent_IAuthentication(), null, "authenticator", null, 1, 1, RoomComponent_RoomHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getRoomComponent_RoomHandler_Room(), this.getRoomComponent_Room(), null, "room", null, 1, -1, RoomComponent_RoomHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

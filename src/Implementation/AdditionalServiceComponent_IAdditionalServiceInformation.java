@@ -2,6 +2,7 @@
  */
 package Implementation;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -18,17 +19,17 @@ public interface AdditionalServiceComponent_IAdditionalServiceInformation extend
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model nameDataType="org.eclipse.uml2.types.String" nameRequired="true" nameOrdered="false"
+	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" nameDataType="org.eclipse.uml2.types.String" nameRequired="true" nameOrdered="false"
 	 * @generated
 	 */
-	void getAdditionalServiceInfo(String name);
+	EList<String> getAdditionalServiceInfo(String name);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model kind="operation"
+	 * @model kind="operation" dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
-	void getAllAdditionalServices();
+	EList<String> getAllAdditionalServices();
 
 } // AdditionalServiceComponent_IAdditionalServiceInformation

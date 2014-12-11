@@ -208,12 +208,12 @@ public class ImplementationAdapterFactory extends AdapterFactoryImpl {
 				return createStaffComponent_AccountManagerAdapter();
 			}
 			@Override
-			public Adapter caseStaffComponent_IAccountAdministration(StaffComponent_IAccountAdministration object) {
-				return createStaffComponent_IAccountAdministrationAdapter();
-			}
-			@Override
 			public Adapter caseStaffComponent_Employee(StaffComponent_Employee object) {
 				return createStaffComponent_EmployeeAdapter();
+			}
+			@Override
+			public Adapter caseStaffComponent_IAccountAdministration(StaffComponent_IAccountAdministration object) {
+				return createStaffComponent_IAccountAdministrationAdapter();
 			}
 			@Override
 			public Adapter caseRoomComponent(RoomComponent object) {
