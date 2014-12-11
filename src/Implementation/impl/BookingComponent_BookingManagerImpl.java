@@ -11,20 +11,16 @@ import Implementation.RoomComponent_IRoomInformation;
 import Implementation.StaffComponent_IAuthentication;
 
 import java.lang.reflect.InvocationTargetException;
-
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
@@ -102,6 +98,7 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 	 */
 	protected BookingComponent_BookingManagerImpl() {
 		super();
+		booking = (EList<BookingComponent_Booking>) new ArrayList<BookingComponent_Booking>();
 	}
 
 	/**
@@ -281,22 +278,24 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void makeBooking(String roomType, Date arrivalDate, Date departureDate, String customerSSN, String customerFirstName, String customerLastName, String customerAddress, String customerEmail, String ccNumber, String ccv, String expiryMonth, String expiryYear) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		BookingComponent_Booking newBooking = new BookingComponent_BookingImpl();
+		newBooking.Booking(roomType, arrivalDate, departureDate, customerSSN, customerFirstName, customerLastName, customerAddress, customerEmail, ccNumber, ccv, expiryMonth, expiryYear);
+		booking.add(newBooking);
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void addRoom(String bookingReference, String roomId) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
+		BookingComponent_Booking bookingToChange;
+		
 		throw new UnsupportedOperationException();
 	}
 
@@ -380,12 +379,19 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public String searchForBooking(String bookingReference) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		for(BookingComponent_Booking x : booking)
+		{
+			if(x.getReferenceNumber() == bookingReference)
+			{
+				//Add to return list
+			}
+		}
+		return "TODO";
 	}
 
 	/**
