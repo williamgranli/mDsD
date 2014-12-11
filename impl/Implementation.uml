@@ -943,10 +943,8 @@
         </ownedOperation>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_yNtyo3umEeSUpK3HS5a0Lg" name="Employee"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_yNtypHumEeSUpK3HS5a0Lg" name="getEmployeeInfo" visibility="public">
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_yNtypXumEeSUpK3HS5a0Lg" name="ssn">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_yNtypnumEeSUpK3HS5a0Lg" name="returnValue" direction="return">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-          </ownedParameter>
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_yNtypnumEeSUpK3HS5a0Lg" name="returnValue" type="_yNtyl3umEeSUpK3HS5a0Lg" direction="return">
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qoyx4IEzEeSNiOPEdgrO9Q" value="1"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qozY8IEzEeSNiOPEdgrO9Q" value="*"/>
           </ownedParameter>
