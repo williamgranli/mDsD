@@ -2,19 +2,15 @@
  */
 package Implementation.impl;
 
-import Implementation.AdditionalServiceComponent;
 import Implementation.BookingComponent_AdditionalService;
 import Implementation.BookingComponent_Booking;
 import Implementation.BookingComponent_BookingGuest;
 import Implementation.BookingComponent_PaymentDetails;
 import Implementation.BookingComponent_RoomType;
 import Implementation.ImplementationPackage;
-
 import java.lang.reflect.InvocationTargetException;
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
@@ -171,9 +167,6 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 	 */
 	protected BookingComponent_BookingImpl() {
 		super();
-		additionalServices = (EList<BookingComponent_AdditionalService>) new ArrayList<BookingComponent_AdditionalService>();
-		guests = (EList<BookingComponent_BookingGuest>) new ArrayList<BookingComponent_BookingGuest>();
-		rooms = (EList<BookingComponent_RoomType>) new ArrayList<BookingComponent_RoomType>();
 	}
 	
 	/**
@@ -191,9 +184,9 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 	 * @generated
 	 */
 	public BookingComponent_Booking Booking(Date arrivalDate, Date departureDate) {
-		this.arrivalDate = arrivalDate;
-		this.departureDate = departureDate;
-		return this;
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -376,6 +369,17 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BookingComponent_Booking Booking(String roomType, Date arrivalDate, Date departureDate, String customerSSN, String customerFirstName, String customerLastName, String customerAddress, String ccNumber, String ccv, String expiryMonth, String expiryYear) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public BookingComponent_Booking Booking(String roomType, Date arrivalDate, Date departureDate, String customerSSN, String customerFirstName, String customerLastName, String customerAddress, String customerEmail, String ccNumber, String ccv, String expiryMonth, String expiryYear) {
@@ -477,6 +481,17 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 	 */
 	public void updatePaymentDetails(BookingComponent_PaymentDetails newPaymentDetails) {
 		this.paymentDetails = newPaymentDetails;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void generateReferenceNumber() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -627,8 +642,8 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING___ADD_ADDITIONAL_SERVICE_TO_BOOKING__BOOKINGCOMPONENT_ADDITIONALSERVICE:
 				addAdditionalServiceToBooking((BookingComponent_AdditionalService)arguments.get(0));
 				return null;
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING___BOOKING__STRING_DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_STRING_STRING_STRING:
-				return Booking((String)arguments.get(0), (Date)arguments.get(1), (Date)arguments.get(2), (String)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5), (String)arguments.get(6), (String)arguments.get(7), (String)arguments.get(8), (String)arguments.get(9), (String)arguments.get(10), (String)arguments.get(11));
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING___BOOKING__STRING_DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_STRING_STRING:
+				return Booking((String)arguments.get(0), (Date)arguments.get(1), (Date)arguments.get(2), (String)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5), (String)arguments.get(6), (String)arguments.get(7), (String)arguments.get(8), (String)arguments.get(9), (String)arguments.get(10));
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING___ADD_ROOM_TO_BOOKING__BOOKINGCOMPONENT_ROOMTYPE:
 				addRoomToBooking((BookingComponent_RoomType)arguments.get(0));
 				return null;
@@ -645,6 +660,9 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 				return currentCost();
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING___UPDATE_PAYMENT_DETAILS__BOOKINGCOMPONENT_PAYMENTDETAILS:
 				updatePaymentDetails((BookingComponent_PaymentDetails)arguments.get(0));
+				return null;
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING___GENERATE_REFERENCE_NUMBER:
+				generateReferenceNumber();
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);

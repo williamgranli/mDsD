@@ -319,7 +319,6 @@
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_Booking/Booking.2/customerFirstName"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_Booking/Booking.2/customerLastName"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_Booking/Booking.2/customerAddress"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_Booking/Booking.2/customerEmail"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_Booking/Booking.2/ccNumber"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_Booking/Booking.2/ccv"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_Booking/Booking.2/expiryMonth"/>
@@ -342,6 +341,7 @@
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//BookingComponent_Booking/updatePaymentDetails">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_Booking/updatePaymentDetails/newPaymentDetails"/>
       </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//BookingComponent_Booking/generateReferenceNumber"/>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//BookingComponent_AdditionalService">
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//BookingComponent_AdditionalService/name"/>
@@ -359,7 +359,7 @@
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//BookingComponent_BookingManager">
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EReference Implementation.ecore#//BookingComponent_BookingManager/booking"/>
+          propertySortChoices="true" ecoreFeature="ecore:EReference Implementation.ecore#//BookingComponent_BookingManager/bookings"/>
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
           propertySortChoices="true" ecoreFeature="ecore:EReference Implementation.ecore#//BookingComponent_BookingManager/authentication"/>
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
@@ -369,6 +369,9 @@
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
           propertySortChoices="true" ecoreFeature="ecore:EReference Implementation.ecore#//BookingComponent_BookingManager/iAdditionalServiceInformation"/>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//BookingComponent_BookingManager/BookingManager"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//BookingComponent_BookingManager/findBooking">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_BookingManager/findBooking/referenceNumber"/>
+      </genOperations>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//StaffComponent"/>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//StaffComponent_AccountManager">
@@ -394,11 +397,10 @@
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//StaffComponent_Employee/Employee/name"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//StaffComponent_Employee/Employee/email"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//StaffComponent_Employee/Employee/phone"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//StaffComponent_Employee/Employee/password"/>
       </genOperations>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//StaffComponent_Employee/Employee.1"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//StaffComponent_Employee/getEmployeeInfo">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//StaffComponent_Employee/getEmployeeInfo/ssn"/>
-      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//StaffComponent_Employee/getEmployeeInfo"/>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Implementation.ecore#//StaffComponent_IAccountAdministration">
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//StaffComponent_IAccountAdministration/createAccount">
@@ -410,6 +412,10 @@
       </genOperations>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//StaffComponent_IAccountAdministration/editAccountDetails">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//StaffComponent_IAccountAdministration/editAccountDetails/ssn"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//StaffComponent_IAccountAdministration/editAccountDetails/name"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//StaffComponent_IAccountAdministration/editAccountDetails/email"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//StaffComponent_IAccountAdministration/editAccountDetails/phone"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//StaffComponent_IAccountAdministration/editAccountDetails/password"/>
       </genOperations>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//StaffComponent_IAccountAdministration/removeAccount">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//StaffComponent_IAccountAdministration/removeAccount/ssn"/>

@@ -34,9 +34,9 @@ public interface StaffComponent_IAuthentication extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model ssnDataType="org.eclipse.uml2.types.String" ssnRequired="true" ssnOrdered="false"
+	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false" ssnDataType="org.eclipse.uml2.types.String" ssnRequired="true" ssnOrdered="false"
 	 * @generated
 	 */
-	void isLoggedIn(String ssn);
+	boolean isLoggedIn(String ssn);
 
 } // StaffComponent_IAuthentication

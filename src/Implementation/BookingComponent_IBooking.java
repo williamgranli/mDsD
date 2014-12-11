@@ -4,6 +4,7 @@ package Implementation;
 
 import java.util.Date;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -95,7 +96,7 @@ public interface BookingComponent_IBooking extends EObject {
 	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" bookingReferenceDataType="org.eclipse.uml2.types.String" bookingReferenceRequired="true" bookingReferenceOrdered="false"
 	 * @generated
 	 */
-	String searchForBooking(String bookingReference);
+	EList<String> searchForBooking(String bookingReference);
 
 	/**
 	 * <!-- begin-user-doc -->

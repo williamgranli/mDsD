@@ -175,7 +175,7 @@ public class StaffComponent_AccountManagerImpl extends MinimalEObjectImpl.Contai
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void isLoggedIn(String ssn) {
+	public boolean isLoggedIn(String ssn) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -186,7 +186,7 @@ public class StaffComponent_AccountManagerImpl extends MinimalEObjectImpl.Contai
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int createAccount(String name, String ssn, String email, String phone, String password) {
+	public boolean createAccount(String name, String ssn, String email, String phone, String password) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -197,7 +197,7 @@ public class StaffComponent_AccountManagerImpl extends MinimalEObjectImpl.Contai
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String editAccountDetails(String ssn) {
+	public boolean editAccountDetails(String ssn, String name, String email, String phone, String password) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -208,7 +208,7 @@ public class StaffComponent_AccountManagerImpl extends MinimalEObjectImpl.Contai
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void removeAccount(String ssn) {
+	public boolean removeAccount(String ssn) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -317,7 +317,7 @@ public class StaffComponent_AccountManagerImpl extends MinimalEObjectImpl.Contai
 		if (baseClass == StaffComponent_IAccountAdministration.class) {
 			switch (baseOperationID) {
 				case ImplementationPackage.STAFF_COMPONENT_IACCOUNT_ADMINISTRATION___CREATE_ACCOUNT__STRING_STRING_STRING_STRING_STRING: return ImplementationPackage.STAFF_COMPONENT_ACCOUNT_MANAGER___CREATE_ACCOUNT__STRING_STRING_STRING_STRING_STRING;
-				case ImplementationPackage.STAFF_COMPONENT_IACCOUNT_ADMINISTRATION___EDIT_ACCOUNT_DETAILS__STRING: return ImplementationPackage.STAFF_COMPONENT_ACCOUNT_MANAGER___EDIT_ACCOUNT_DETAILS__STRING;
+				case ImplementationPackage.STAFF_COMPONENT_IACCOUNT_ADMINISTRATION___EDIT_ACCOUNT_DETAILS__STRING_STRING_STRING_STRING_STRING: return ImplementationPackage.STAFF_COMPONENT_ACCOUNT_MANAGER___EDIT_ACCOUNT_DETAILS__STRING_STRING_STRING_STRING_STRING;
 				case ImplementationPackage.STAFF_COMPONENT_IACCOUNT_ADMINISTRATION___REMOVE_ACCOUNT__STRING: return ImplementationPackage.STAFF_COMPONENT_ACCOUNT_MANAGER___REMOVE_ACCOUNT__STRING;
 				default: return -1;
 			}
@@ -340,15 +340,13 @@ public class StaffComponent_AccountManagerImpl extends MinimalEObjectImpl.Contai
 				logOut((String)arguments.get(0));
 				return null;
 			case ImplementationPackage.STAFF_COMPONENT_ACCOUNT_MANAGER___IS_LOGGED_IN__STRING:
-				isLoggedIn((String)arguments.get(0));
-				return null;
+				return isLoggedIn((String)arguments.get(0));
 			case ImplementationPackage.STAFF_COMPONENT_ACCOUNT_MANAGER___CREATE_ACCOUNT__STRING_STRING_STRING_STRING_STRING:
 				return createAccount((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3), (String)arguments.get(4));
-			case ImplementationPackage.STAFF_COMPONENT_ACCOUNT_MANAGER___EDIT_ACCOUNT_DETAILS__STRING:
-				return editAccountDetails((String)arguments.get(0));
+			case ImplementationPackage.STAFF_COMPONENT_ACCOUNT_MANAGER___EDIT_ACCOUNT_DETAILS__STRING_STRING_STRING_STRING_STRING:
+				return editAccountDetails((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3), (String)arguments.get(4));
 			case ImplementationPackage.STAFF_COMPONENT_ACCOUNT_MANAGER___REMOVE_ACCOUNT__STRING:
-				removeAccount((String)arguments.get(0));
-				return null;
+				return removeAccount((String)arguments.get(0));
 			case ImplementationPackage.STAFF_COMPONENT_ACCOUNT_MANAGER___FIND_ACCOUNT__STRING:
 				return findAccount((String)arguments.get(0));
 		}

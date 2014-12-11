@@ -9,12 +9,9 @@ import Implementation.ImplementationPackage;
 import Implementation.PaymentComponent_IPayment;
 import Implementation.RoomComponent_IRoomInformation;
 import Implementation.StaffComponent_IAuthentication;
-
 import java.lang.reflect.InvocationTargetException;
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
@@ -30,7 +27,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link Implementation.impl.BookingComponent_BookingManagerImpl#getBooking <em>Booking</em>}</li>
+ *   <li>{@link Implementation.impl.BookingComponent_BookingManagerImpl#getBookings <em>Bookings</em>}</li>
  *   <li>{@link Implementation.impl.BookingComponent_BookingManagerImpl#getAuthentication <em>Authentication</em>}</li>
  *   <li>{@link Implementation.impl.BookingComponent_BookingManagerImpl#getIRoomInformation <em>IRoom Information</em>}</li>
  *   <li>{@link Implementation.impl.BookingComponent_BookingManagerImpl#getIPayment <em>IPayment</em>}</li>
@@ -42,14 +39,14 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  */
 public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Container implements BookingComponent_BookingManager {
 	/**
-	 * The cached value of the '{@link #getBooking() <em>Booking</em>}' reference list.
+	 * The cached value of the '{@link #getBookings() <em>Bookings</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getBooking()
+	 * @see #getBookings()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<BookingComponent_Booking> booking;
+	protected EList<BookingComponent_Booking> bookings;
 
 	/**
 	 * The cached value of the '{@link #getAuthentication() <em>Authentication</em>}' reference.
@@ -98,7 +95,6 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 	 */
 	protected BookingComponent_BookingManagerImpl() {
 		super();
-		booking = (EList<BookingComponent_Booking>) new ArrayList<BookingComponent_Booking>();
 	}
 
 	/**
@@ -116,11 +112,11 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<BookingComponent_Booking> getBooking() {
-		if (booking == null) {
-			booking = new EObjectResolvingEList<BookingComponent_Booking>(BookingComponent_Booking.class, this, ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__BOOKING);
+	public EList<BookingComponent_Booking> getBookings() {
+		if (bookings == null) {
+			bookings = new EObjectResolvingEList<BookingComponent_Booking>(BookingComponent_Booking.class, this, ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__BOOKINGS);
 		}
-		return booking;
+		return bookings;
 	}
 
 	/**
@@ -421,11 +417,22 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public BookingComponent_Booking findBooking(String referenceNumber) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__BOOKING:
-				return getBooking();
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__BOOKINGS:
+				return getBookings();
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__AUTHENTICATION:
 				if (resolve) return getAuthentication();
 				return basicGetAuthentication();
@@ -451,9 +458,9 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__BOOKING:
-				getBooking().clear();
-				getBooking().addAll((Collection<? extends BookingComponent_Booking>)newValue);
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__BOOKINGS:
+				getBookings().clear();
+				getBookings().addAll((Collection<? extends BookingComponent_Booking>)newValue);
 				return;
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__AUTHENTICATION:
 				setAuthentication((StaffComponent_IAuthentication)newValue);
@@ -479,8 +486,8 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__BOOKING:
-				getBooking().clear();
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__BOOKINGS:
+				getBookings().clear();
 				return;
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__AUTHENTICATION:
 				setAuthentication((StaffComponent_IAuthentication)null);
@@ -506,8 +513,8 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__BOOKING:
-				return booking != null && !booking.isEmpty();
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__BOOKINGS:
+				return bookings != null && !bookings.isEmpty();
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__AUTHENTICATION:
 				return authentication != null;
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__IROOM_INFORMATION:
@@ -563,6 +570,8 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___BOOKING_MANAGER:
 				BookingManager();
 				return null;
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___FIND_BOOKING__STRING:
+				return findBooking((String)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

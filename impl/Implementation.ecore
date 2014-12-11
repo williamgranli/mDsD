@@ -155,7 +155,8 @@
       <eParameters name="endDate" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
       <eParameters name="roomType" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     </eOperations>
-    <eOperations name="searchForBooking" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String">
+    <eOperations name="searchForBooking" ordered="false" lowerBound="1" upperBound="-1"
+        eType="ecore:EDataType types.ecore#//String">
       <eParameters name="bookingReference" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     </eOperations>
     <eOperations name="addGuestToBooking" ordered="false" lowerBound="1">
@@ -242,7 +243,7 @@
     <eOperations name="logOut" ordered="false" lowerBound="1">
       <eParameters name="ssn" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     </eOperations>
-    <eOperations name="isLoggedIn" ordered="false" lowerBound="1">
+    <eOperations name="isLoggedIn" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Boolean">
       <eParameters name="ssn" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     </eOperations>
   </eClassifiers>
@@ -321,7 +322,6 @@
       <eParameters name="customerFirstName" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       <eParameters name="customerLastName" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       <eParameters name="customerAddress" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-      <eParameters name="customerEmail" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       <eParameters name="ccNumber" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       <eParameters name="ccv" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       <eParameters name="expiryMonth" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
@@ -344,6 +344,7 @@
     <eOperations name="updatePaymentDetails" ordered="false" lowerBound="1">
       <eParameters name="newPaymentDetails" ordered="false" lowerBound="1" eType="#//BookingComponent_PaymentDetails"/>
     </eOperations>
+    <eOperations name="generateReferenceNumber" ordered="false" lowerBound="1"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="arrivalDate" ordered="false"
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="departureDate" ordered="false"
@@ -385,7 +386,10 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BookingComponent_BookingManager" eSuperTypes="#//BookingComponent_IBooking #//BookingComponent_IBookingDecision">
     <eOperations name="BookingManager" ordered="false" lowerBound="1"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="booking" ordered="false"
+    <eOperations name="findBooking" ordered="false" lowerBound="1" eType="#//BookingComponent_Booking">
+      <eParameters name="referenceNumber" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bookings" ordered="false"
         upperBound="-1" eType="#//BookingComponent_Booking"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="authentication" ordered="false"
         lowerBound="1" eType="#//StaffComponent_IAuthentication"/>
@@ -414,12 +418,11 @@
       <eParameters name="name" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       <eParameters name="email" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       <eParameters name="phone" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="password" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     </eOperations>
     <eOperations name="Employee" ordered="false" lowerBound="1"/>
     <eOperations name="getEmployeeInfo" ordered="false" lowerBound="1" upperBound="-1"
-        eType="#//StaffComponent_Employee">
-      <eParameters name="ssn" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-    </eOperations>
+        eType="ecore:EDataType types.ecore#//String"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" ordered="false" lowerBound="1"
         eType="ecore:EDataType types.ecore#//Integer"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ssn" ordered="false" lowerBound="1"
@@ -435,17 +438,21 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="StaffComponent_IAccountAdministration"
       abstract="true" interface="true">
-    <eOperations name="createAccount" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer">
+    <eOperations name="createAccount" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Boolean">
       <eParameters name="name" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       <eParameters name="ssn" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       <eParameters name="email" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       <eParameters name="phone" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       <eParameters name="password" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     </eOperations>
-    <eOperations name="editAccountDetails" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String">
+    <eOperations name="editAccountDetails" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Boolean">
       <eParameters name="ssn" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="name" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="email" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="phone" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="password" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     </eOperations>
-    <eOperations name="removeAccount" ordered="false" lowerBound="1">
+    <eOperations name="removeAccount" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Boolean">
       <eParameters name="ssn" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     </eOperations>
   </eClassifiers>

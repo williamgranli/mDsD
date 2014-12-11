@@ -12,7 +12,7 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link Implementation.BookingComponent_BookingManager#getBooking <em>Booking</em>}</li>
+ *   <li>{@link Implementation.BookingComponent_BookingManager#getBookings <em>Bookings</em>}</li>
  *   <li>{@link Implementation.BookingComponent_BookingManager#getAuthentication <em>Authentication</em>}</li>
  *   <li>{@link Implementation.BookingComponent_BookingManager#getIRoomInformation <em>IRoom Information</em>}</li>
  *   <li>{@link Implementation.BookingComponent_BookingManager#getIPayment <em>IPayment</em>}</li>
@@ -26,20 +26,20 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface BookingComponent_BookingManager extends BookingComponent_IBooking, BookingComponent_IBookingDecision {
 	/**
-	 * Returns the value of the '<em><b>Booking</b></em>' reference list.
+	 * Returns the value of the '<em><b>Bookings</b></em>' reference list.
 	 * The list contents are of type {@link Implementation.BookingComponent_Booking}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Booking</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Bookings</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Booking</em>' reference list.
-	 * @see Implementation.ImplementationPackage#getBookingComponent_BookingManager_Booking()
+	 * @return the value of the '<em>Bookings</em>' reference list.
+	 * @see Implementation.ImplementationPackage#getBookingComponent_BookingManager_Bookings()
 	 * @model ordered="false"
 	 * @generated
 	 */
-	EList<BookingComponent_Booking> getBooking();
+	EList<BookingComponent_Booking> getBookings();
 
 	/**
 	 * Returns the value of the '<em><b>Authentication</b></em>' reference.
@@ -152,5 +152,13 @@ public interface BookingComponent_BookingManager extends BookingComponent_IBooki
 	 * @generated
 	 */
 	void BookingManager();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model required="true" ordered="false" referenceNumberDataType="org.eclipse.uml2.types.String" referenceNumberRequired="true" referenceNumberOrdered="false"
+	 * @generated
+	 */
+	BookingComponent_Booking findBooking(String referenceNumber);
 
 } // BookingComponent_BookingManager
