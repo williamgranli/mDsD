@@ -946,7 +946,7 @@
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_yNtypnumEeSUpK3HS5a0Lg" name="returnValue" direction="return">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qoyx4IEzEeSNiOPEdgrO9Q" value="1"/>
-            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qozY8IEzEeSNiOPEdgrO9Q" value="*"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qozY8IEzEeSNiOPEdgrO9Q" value="1"/>
           </ownedParameter>
         </ownedOperation>
       </nestedClassifier>
