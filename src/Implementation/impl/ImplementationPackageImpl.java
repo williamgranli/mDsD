@@ -2429,17 +2429,17 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 
 		initEClass(roomComponent_IRoomInformationEClass, RoomComponent_IRoomInformation.class, "RoomComponent_IRoomInformation", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		op = initEOperation(getRoomComponent_IRoomInformation__GetRoomInfo__int(), null, "getRoomInfo", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getRoomComponent_IRoomInformation__GetRoomInfo__int(), theTypesPackage.getString(), "getRoomInfo", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "roomNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getRoomComponent_IRoomInformation__SearchRoom__String(), null, "searchRoom", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getRoomComponent_IRoomInformation__SearchRoom__String(), theTypesPackage.getString(), "searchRoom", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "roomTypeName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getRoomComponent_IRoomInformation__GetRoomTypes(), null, "getRoomTypes", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		initEOperation(getRoomComponent_IRoomInformation__GetRoomTypes(), theTypesPackage.getString(), "getRoomTypes", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getRoomComponent_IRoomInformation__GetAllRoomNumbers(), null, "getAllRoomNumbers", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		initEOperation(getRoomComponent_IRoomInformation__GetAllRoomNumbers(), theTypesPackage.getString(), "getAllRoomNumbers", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getRoomComponent_IRoomInformation__CountNumberOfTotalRooms(), null, "countNumberOfTotalRooms", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		initEOperation(getRoomComponent_IRoomInformation__CountNumberOfTotalRooms(), theTypesPackage.getInteger(), "countNumberOfTotalRooms", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(bookingComponent_IBookingEClass, BookingComponent_IBooking.class, "BookingComponent_IBooking", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
