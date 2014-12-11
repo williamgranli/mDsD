@@ -177,6 +177,19 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 		this.referenceNumber = "NULL";
 	}
 	
+	protected BookingComponent_BookingImpl(Date arrivalDate, Date departureDate)
+	{
+		super();
+		
+		this.arrivalDate = arrivalDate;
+		this.departureDate = departureDate;
+		
+		additionalServices = (EList<BookingComponent_AdditionalService>) new ArrayList<BookingComponent_AdditionalService>();
+		guests = (EList<BookingComponent_BookingGuest>) new ArrayList<BookingComponent_BookingGuest>();
+		rooms = (EList<BookingComponent_RoomType>) new ArrayList<BookingComponent_RoomType>();
+		this.referenceNumber = "NULL";
+	}
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -203,9 +216,10 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 	 * @generated
 	 */
 	public void addAdditionalServiceToBooking(String newService, int price) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		BookingComponent_AdditionalService newAdditionalService = new BookingComponent_AdditionalServiceImpl();
+		newAdditionalService.setName(newService);
+		newAdditionalService.setCost(price);
+		additionalServices.add(newAdditionalService);
 	}
 
 	/**
@@ -388,23 +402,13 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public BookingComponent_Booking Booking(String roomType, Date arrivalDate, Date departureDate, String customerSSN, String customerFirstName, String customerLastName, String customerAddress, String ccNumber, String ccv, String expiryMonth, String expiryYear) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void addRoomToBooking(String roomType, int roomPrice) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		BookingComponent_RoomType newRoom = new BookingComponent_RoomTypeImpl();
+		newRoom.setRoomType(roomType);
+		newRoom.setCost(roomPrice);
+		rooms.add(newRoom);
 	}
 
 	/**
@@ -413,7 +417,6 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 	 * @generated NOT
 	 */
 	public BookingComponent_Booking Booking(String roomType, Date arrivalDate, Date departureDate, String customerSSN, String customerFirstName, String customerLastName, String customerAddress, String customerEmail, String ccNumber, String ccv, String expiryMonth, String expiryYear) {
-		//BookingComponent_AdditionalService newService = new BookingComponent_AdditionalServiceImpl();
 		BookingComponent_RoomType newRoom = new BookingComponent_RoomTypeImpl();
 		BookingComponent_PaymentDetails newPayment = new BookingComponent_PaymentDetailsImpl();
 		BookingComponent_BookingGuest newGuest = new BookingComponent_BookingGuestImpl();
@@ -688,15 +691,9 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING___BOOKING:
-				return Booking();
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING___BOOKING__DATE_DATE:
-				return Booking((Date)arguments.get(0), (Date)arguments.get(1));
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING___ADD_ADDITIONAL_SERVICE_TO_BOOKING__STRING_INT:
 				addAdditionalServiceToBooking((String)arguments.get(0), (Integer)arguments.get(1));
 				return null;
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING___BOOKING__STRING_DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_STRING_STRING:
-				return Booking((String)arguments.get(0), (Date)arguments.get(1), (Date)arguments.get(2), (String)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5), (String)arguments.get(6), (String)arguments.get(7), (String)arguments.get(8), (String)arguments.get(9), (String)arguments.get(10));
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING___ADD_ROOM_TO_BOOKING__STRING_INT:
 				addRoomToBooking((String)arguments.get(0), (Integer)arguments.get(1));
 				return null;

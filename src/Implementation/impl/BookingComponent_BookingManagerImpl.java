@@ -273,26 +273,15 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 			eNotify(new ENotificationImpl(this, Notification.SET, ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__IADDITIONAL_SERVICE_INFORMATION, oldIAdditionalServiceInformation, iAdditionalServiceInformation));
 	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void makeBooking(String roomType, Date arrivalDate, Date departureDate, String customerSSN, String customerFirstName, String customerLastName, String customerAddress, String ccNumber, String ccv, String expiryMonth, String expiryYear) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public void addRoom(String bookingReference, String roomType, int price) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public void makeBooking(String roomType, Date arrivalDate, Date departureDate, String customerSSN, String customerFirstName, String customerLastName, String customerAddress, String ccNumber, String ccv, String expiryMonth, String expiryYear) {
+		BookingComponent_Booking newBooking = new BookingComponent_BookingImpl(arrivalDate, departureDate);
+		bookings.add(newBooking);
 	}
 
 	/**
@@ -300,10 +289,17 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public void makeBooking(String roomType, Date arrivalDate, Date departureDate, String customerSSN, String customerFirstName, String customerLastName, String customerAddress, String customerEmail, String ccNumber, String ccv, String expiryMonth, String expiryYear) {
-		BookingComponent_Booking newBooking = new BookingComponent_BookingImpl();
-		newBooking.Booking(roomType, arrivalDate, departureDate, customerSSN, customerFirstName, customerLastName, customerAddress, customerEmail, ccNumber, ccv, expiryMonth);
-		bookings.add(newBooking);
+	public void addRoom(String bookingReference, String roomType, int price) {
+		BookingComponent_Booking bookingToChange = findBooking(bookingReference);
+		
+		if(bookingToChange.getReferenceNumber().equals("NULL"))
+		{
+			System.out.println("Invalid Reference Number");
+		}
+		else
+		{
+			bookingToChange.addRoomToBooking(roomType, price);
+		}
 	}
 
 	/**
@@ -320,12 +316,20 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void editBooking(String bookingReference, Date arrivalDate, Date departureDate) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		//TODO check me
+		BookingComponent_Booking targetBooking = findBooking(bookingReference);
+		
+		if(targetBooking.getReferenceNumber().equals("NULL"))
+		{
+			System.out.println("Invalid Reference Number");
+		}
+		else
+		{
+			targetBooking.updateBooking(arrivalDate, departureDate);
+		}
 	}
 
 	/**
@@ -409,17 +413,6 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 	 * @generated
 	 */
 	public void addGuestToBooking(String firstName, String lastName, String address) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void BookingManager() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -588,14 +581,8 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING:
 				addGuestToBooking((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2));
 				return null;
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___BOOKING_MANAGER:
-				BookingManager();
-				return null;
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___FIND_BOOKING__STRING:
 				return findBooking((String)arguments.get(0));
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___MAKE_BOOKING__STRING_DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_STRING_STRING_STRING:
-				makeBooking((String)arguments.get(0), (Date)arguments.get(1), (Date)arguments.get(2), (String)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5), (String)arguments.get(6), (String)arguments.get(7), (String)arguments.get(8), (String)arguments.get(9), (String)arguments.get(10), (String)arguments.get(11));
-				return null;
 		}
 		return super.eInvoke(operationID, arguments);
 	}

@@ -319,28 +319,6 @@ public class StaffComponent_EmployeeImpl extends MinimalEObjectImpl.Container im
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void Employee(String ssn, String name, String email, String phone, String password) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void Employee() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public String getEmployeeInfo() {
@@ -469,12 +447,6 @@ public class StaffComponent_EmployeeImpl extends MinimalEObjectImpl.Container im
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case ImplementationPackage.STAFF_COMPONENT_EMPLOYEE___EMPLOYEE__STRING_STRING_STRING_STRING_STRING:
-				Employee((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3), (String)arguments.get(4));
-				return null;
-			case ImplementationPackage.STAFF_COMPONENT_EMPLOYEE___EMPLOYEE:
-				Employee();
-				return null;
 			case ImplementationPackage.STAFF_COMPONENT_EMPLOYEE___GET_EMPLOYEE_INFO:
 				return getEmployeeInfo();
 		}

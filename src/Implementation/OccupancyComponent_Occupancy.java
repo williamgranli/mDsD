@@ -164,12 +164,4 @@ public interface OccupancyComponent_Occupancy extends EObject {
 	 */
 	EList<OccupancyComponent_Guest> getGuests();
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model roomNumberDataType="org.eclipse.uml2.types.Integer" roomNumberRequired="true" roomNumberOrdered="false" checkInDateTimeDataType="org.eclipse.uml2.types.Integer" checkInDateTimeRequired="true" checkInDateTimeOrdered="false" GuestRequired="true" GuestOrdered="false" bookingReferenceDataType="org.eclipse.uml2.types.String" bookingReferenceRequired="true" bookingReferenceOrdered="false"
-	 * @generated
-	 */
-	void Occupancy(int roomNumber, int checkInDateTime, OccupancyComponent_Guest Guest, String bookingReference);
-
 } // OccupancyComponent_Occupancy
