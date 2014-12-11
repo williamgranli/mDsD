@@ -4,7 +4,7 @@ package Implementation.impl;
 
 import Implementation.BookingComponent_AdditionalService;
 import Implementation.BookingComponent_Booking;
-import Implementation.BookingComponent_Guest;
+import Implementation.BookingComponent_BookingGuest;
 import Implementation.BookingComponent_PaymentDetails;
 import Implementation.BookingComponent_RoomType;
 import Implementation.ImplementationPackage;
@@ -145,7 +145,7 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<BookingComponent_Guest> guests;
+	protected EList<BookingComponent_BookingGuest> guests;
 
 	/**
 	 * The cached value of the '{@link #getPaymentDetails() <em>Payment Details</em>}' reference.
@@ -287,9 +287,9 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<BookingComponent_Guest> getGuests() {
+	public EList<BookingComponent_BookingGuest> getGuests() {
 		if (guests == null) {
-			guests = new EObjectResolvingEList<BookingComponent_Guest>(BookingComponent_Guest.class, this, ImplementationPackage.BOOKING_COMPONENT_BOOKING__GUESTS);
+			guests = new EObjectResolvingEList<BookingComponent_BookingGuest>(BookingComponent_BookingGuest.class, this, ImplementationPackage.BOOKING_COMPONENT_BOOKING__GUESTS);
 		}
 		return guests;
 	}
@@ -510,7 +510,7 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 				return;
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING__GUESTS:
 				getGuests().clear();
-				getGuests().addAll((Collection<? extends BookingComponent_Guest>)newValue);
+				getGuests().addAll((Collection<? extends BookingComponent_BookingGuest>)newValue);
 				return;
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING__PAYMENT_DETAILS:
 				setPaymentDetails((BookingComponent_PaymentDetails)newValue);

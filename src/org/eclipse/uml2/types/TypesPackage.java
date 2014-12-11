@@ -65,22 +65,23 @@ public interface TypesPackage extends EPackage {
 	int BOOLEAN = 0;
 
 	/**
-	 * The meta object id for the '<em>Integer</em>' data type.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.uml2.types.impl.TypesPackageImpl#getInteger()
-	 * @generated
-	 */
-	int INTEGER = 1;
-
-	/**
 	 * The meta object id for the '<em>Real</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.uml2.types.impl.TypesPackageImpl#getReal()
 	 * @generated
 	 */
-	int REAL = 2;
+	int REAL = 1;
+
+	/**
+	 * The meta object id for the '<em>String</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see java.lang.String
+	 * @see org.eclipse.uml2.types.impl.TypesPackageImpl#getString()
+	 * @generated
+	 */
+	int STRING = 2;
 
 	/**
 	 * The meta object id for the '<em>Unlimited Natural</em>' data type.
@@ -92,14 +93,13 @@ public interface TypesPackage extends EPackage {
 	int UNLIMITED_NATURAL = 3;
 
 	/**
-	 * The meta object id for the '<em>String</em>' data type.
+	 * The meta object id for the '<em>Integer</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see java.lang.String
-	 * @see org.eclipse.uml2.types.impl.TypesPackageImpl#getString()
+	 * @see org.eclipse.uml2.types.impl.TypesPackageImpl#getInteger()
 	 * @generated
 	 */
-	int STRING = 4;
+	int INTEGER = 4;
 
 
 	/**
@@ -113,16 +113,6 @@ public interface TypesPackage extends EPackage {
 	EDataType getBoolean();
 
 	/**
-	 * Returns the meta object for data type '<em>Integer</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for data type '<em>Integer</em>'.
-	 * @model instanceClass="int"
-	 * @generated
-	 */
-	EDataType getInteger();
-
-	/**
 	 * Returns the meta object for data type '<em>Real</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -131,6 +121,17 @@ public interface TypesPackage extends EPackage {
 	 * @generated
 	 */
 	EDataType getReal();
+
+	/**
+	 * Returns the meta object for data type '{@link java.lang.String <em>String</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>String</em>'.
+	 * @see java.lang.String
+	 * @model instanceClass="java.lang.String"
+	 * @generated
+	 */
+	EDataType getString();
 
 	/**
 	 * Returns the meta object for data type '<em>Unlimited Natural</em>'.
@@ -143,15 +144,14 @@ public interface TypesPackage extends EPackage {
 	EDataType getUnlimitedNatural();
 
 	/**
-	 * Returns the meta object for data type '{@link java.lang.String <em>String</em>}'.
+	 * Returns the meta object for data type '<em>Integer</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for data type '<em>String</em>'.
-	 * @see java.lang.String
-	 * @model instanceClass="java.lang.String"
+	 * @return the meta object for data type '<em>Integer</em>'.
+	 * @model instanceClass="int"
 	 * @generated
 	 */
-	EDataType getString();
+	EDataType getInteger();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -186,15 +186,6 @@ public interface TypesPackage extends EPackage {
 		EDataType BOOLEAN = eINSTANCE.getBoolean();
 
 		/**
-		 * The meta object literal for the '<em>Integer</em>' data type.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.uml2.types.impl.TypesPackageImpl#getInteger()
-		 * @generated
-		 */
-		EDataType INTEGER = eINSTANCE.getInteger();
-
-		/**
 		 * The meta object literal for the '<em>Real</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -202,6 +193,16 @@ public interface TypesPackage extends EPackage {
 		 * @generated
 		 */
 		EDataType REAL = eINSTANCE.getReal();
+
+		/**
+		 * The meta object literal for the '<em>String</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see java.lang.String
+		 * @see org.eclipse.uml2.types.impl.TypesPackageImpl#getString()
+		 * @generated
+		 */
+		EDataType STRING = eINSTANCE.getString();
 
 		/**
 		 * The meta object literal for the '<em>Unlimited Natural</em>' data type.
@@ -213,14 +214,13 @@ public interface TypesPackage extends EPackage {
 		EDataType UNLIMITED_NATURAL = eINSTANCE.getUnlimitedNatural();
 
 		/**
-		 * The meta object literal for the '<em>String</em>' data type.
+		 * The meta object literal for the '<em>Integer</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see java.lang.String
-		 * @see org.eclipse.uml2.types.impl.TypesPackageImpl#getString()
+		 * @see org.eclipse.uml2.types.impl.TypesPackageImpl#getInteger()
 		 * @generated
 		 */
-		EDataType STRING = eINSTANCE.getString();
+		EDataType INTEGER = eINSTANCE.getInteger();
 
 	}
 

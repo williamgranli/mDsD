@@ -154,7 +154,7 @@ public interface BookingComponent_Booking extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Guests</b></em>' reference list.
-	 * The list contents are of type {@link Implementation.BookingComponent_Guest}.
+	 * The list contents are of type {@link Implementation.BookingComponent_BookingGuest}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Guests</em>' reference list isn't clear,
@@ -166,7 +166,7 @@ public interface BookingComponent_Booking extends EObject {
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	EList<BookingComponent_Guest> getGuests();
+	EList<BookingComponent_BookingGuest> getGuests();
 
 	/**
 	 * Returns the value of the '<em><b>Payment Details</b></em>' reference.

@@ -11,8 +11,6 @@ import Implementation.ImplementationPackage;
 import Implementation.OccupancyComponent_IOccupancyDecision;
 import Implementation.RoomComponent_IRoomDecision;
 
-import java.lang.reflect.InvocationTargetException;
-
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -332,61 +330,6 @@ public class DecisionSupportComponent_DSSControllerImpl extends MinimalEObjectIm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void checkInGuest(String bookingReference, String firstName, String lastName) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void checkOutGuest(String bookingReference, String firstName, String lastName) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void listFreeRooms() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void listGuestsInRoom(int roomNumber) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void numberOfGuestsInHotel() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -495,33 +438,6 @@ public class DecisionSupportComponent_DSSControllerImpl extends MinimalEObjectIm
 				return iBookingDecision != null;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER___CHECK_IN_GUEST__STRING_STRING_STRING:
-				checkInGuest((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2));
-				return null;
-			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER___CHECK_OUT_GUEST__STRING_STRING_STRING:
-				checkOutGuest((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2));
-				return null;
-			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER___LIST_FREE_ROOMS:
-				listFreeRooms();
-				return null;
-			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER___LIST_GUESTS_IN_ROOM__INT:
-				listGuestsInRoom((Integer)arguments.get(0));
-				return null;
-			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER___NUMBER_OF_GUESTS_IN_HOTEL:
-				numberOfGuestsInHotel();
-				return null;
-		}
-		return super.eInvoke(operationID, arguments);
 	}
 
 } //DecisionSupportComponent_DSSControllerImpl

@@ -66,8 +66,7 @@ public class ImplementationFactoryImpl extends EFactoryImpl implements Implement
 			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER: return createOccupancyComponent_OccupancyHandler();
 			case ImplementationPackage.PAYMENT_COMPONENT: return createPaymentComponent();
 			case ImplementationPackage.PAYMENT_COMPONENT_PAYMENT_MANAGER: return createPaymentComponent_PaymentManager();
-			case ImplementationPackage.PAYMENT_COMPONENT_PAYMENT_CALCULATOR: return createPaymentComponent_PaymentCalculator();
-			case ImplementationPackage.PAYMENT_COMPONENT_PAYMENT_HISTORY_DB: return createPaymentComponent_PaymentHistoryDB();
+			case ImplementationPackage.PAYMENT_COMPONENT_PAYMENT: return createPaymentComponent_Payment();
 			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT: return createAdditionalServiceComponent();
 			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE: return createAdditionalServiceComponent_AdditionalService();
 			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_EVENT: return createAdditionalServiceComponent_AdditionalServiceEvent();
@@ -75,7 +74,7 @@ public class ImplementationFactoryImpl extends EFactoryImpl implements Implement
 			case ImplementationPackage.BOOKING_COMPONENT_PAYMENT_DETAILS: return createBookingComponent_PaymentDetails();
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING: return createBookingComponent_Booking();
 			case ImplementationPackage.BOOKING_COMPONENT_ADDITIONAL_SERVICE: return createBookingComponent_AdditionalService();
-			case ImplementationPackage.BOOKING_COMPONENT_GUEST: return createBookingComponent_Guest();
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_GUEST: return createBookingComponent_BookingGuest();
 			case ImplementationPackage.BOOKING_COMPONENT_ROOM_TYPE: return createBookingComponent_RoomType();
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER: return createBookingComponent_BookingManager();
 			case ImplementationPackage.STAFF_COMPONENT: return createStaffComponent();
@@ -196,19 +195,9 @@ public class ImplementationFactoryImpl extends EFactoryImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PaymentComponent_PaymentCalculator createPaymentComponent_PaymentCalculator() {
-		PaymentComponent_PaymentCalculatorImpl paymentComponent_PaymentCalculator = new PaymentComponent_PaymentCalculatorImpl();
-		return paymentComponent_PaymentCalculator;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public PaymentComponent_PaymentHistoryDB createPaymentComponent_PaymentHistoryDB() {
-		PaymentComponent_PaymentHistoryDBImpl paymentComponent_PaymentHistoryDB = new PaymentComponent_PaymentHistoryDBImpl();
-		return paymentComponent_PaymentHistoryDB;
+	public PaymentComponent_Payment createPaymentComponent_Payment() {
+		PaymentComponent_PaymentImpl paymentComponent_Payment = new PaymentComponent_PaymentImpl();
+		return paymentComponent_Payment;
 	}
 
 	/**
@@ -286,9 +275,9 @@ public class ImplementationFactoryImpl extends EFactoryImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public BookingComponent_Guest createBookingComponent_Guest() {
-		BookingComponent_GuestImpl bookingComponent_Guest = new BookingComponent_GuestImpl();
-		return bookingComponent_Guest;
+	public BookingComponent_BookingGuest createBookingComponent_BookingGuest() {
+		BookingComponent_BookingGuestImpl bookingComponent_BookingGuest = new BookingComponent_BookingGuestImpl();
+		return bookingComponent_BookingGuest;
 	}
 
 	/**

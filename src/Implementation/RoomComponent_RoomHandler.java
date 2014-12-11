@@ -19,7 +19,7 @@ package Implementation;
  * @model
  * @generated
  */
-public interface RoomComponent_RoomHandler extends RoomComponent_IRoomDecision {
+public interface RoomComponent_RoomHandler extends RoomComponent_IRoomDecision, RoomComponent_IRoomInformation, RoomComponent_IRoomAdministration {
 	/**
 	 * Returns the value of the '<em><b>Authenticator</b></em>' reference.
 	 * <!-- begin-user-doc -->

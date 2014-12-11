@@ -6,13 +6,18 @@ import Implementation.ImplementationPackage;
 import Implementation.StaffComponent_AccountManager;
 import Implementation.StaffComponent_Employee;
 import Implementation.StaffComponent_IAccountAdministration;
+import Implementation.StaffComponent_IAuthentication;
 
 import java.lang.reflect.InvocationTargetException;
+
+import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
@@ -20,11 +25,25 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * An implementation of the model object '<em><b>Staff Component Account Manager</b></em>'.
  * <!-- end-user-doc -->
  * <p>
+ * The following features are implemented:
+ * <ul>
+ *   <li>{@link Implementation.impl.StaffComponent_AccountManagerImpl#getIAuthentication <em>IAuthentication</em>}</li>
+ * </ul>
  * </p>
  *
  * @generated
  */
 public class StaffComponent_AccountManagerImpl extends MinimalEObjectImpl.Container implements StaffComponent_AccountManager {
+	/**
+	 * The cached value of the '{@link #getIAuthentication() <em>IAuthentication</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIAuthentication()
+	 * @generated
+	 * @ordered
+	 */
+	protected StaffComponent_IAuthentication iAuthentication;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -42,6 +61,44 @@ public class StaffComponent_AccountManagerImpl extends MinimalEObjectImpl.Contai
 	@Override
 	protected EClass eStaticClass() {
 		return ImplementationPackage.Literals.STAFF_COMPONENT_ACCOUNT_MANAGER;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public StaffComponent_IAuthentication getIAuthentication() {
+		if (iAuthentication != null && iAuthentication.eIsProxy()) {
+			InternalEObject oldIAuthentication = (InternalEObject)iAuthentication;
+			iAuthentication = (StaffComponent_IAuthentication)eResolveProxy(oldIAuthentication);
+			if (iAuthentication != oldIAuthentication) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ImplementationPackage.STAFF_COMPONENT_ACCOUNT_MANAGER__IAUTHENTICATION, oldIAuthentication, iAuthentication));
+			}
+		}
+		return iAuthentication;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public StaffComponent_IAuthentication basicGetIAuthentication() {
+		return iAuthentication;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setIAuthentication(StaffComponent_IAuthentication newIAuthentication) {
+		StaffComponent_IAuthentication oldIAuthentication = iAuthentication;
+		iAuthentication = newIAuthentication;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ImplementationPackage.STAFF_COMPONENT_ACCOUNT_MANAGER__IAUTHENTICATION, oldIAuthentication, iAuthentication));
 	}
 
 	/**
@@ -119,6 +176,65 @@ public class StaffComponent_AccountManagerImpl extends MinimalEObjectImpl.Contai
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case ImplementationPackage.STAFF_COMPONENT_ACCOUNT_MANAGER__IAUTHENTICATION:
+				if (resolve) return getIAuthentication();
+				return basicGetIAuthentication();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case ImplementationPackage.STAFF_COMPONENT_ACCOUNT_MANAGER__IAUTHENTICATION:
+				setIAuthentication((StaffComponent_IAuthentication)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case ImplementationPackage.STAFF_COMPONENT_ACCOUNT_MANAGER__IAUTHENTICATION:
+				setIAuthentication((StaffComponent_IAuthentication)null);
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case ImplementationPackage.STAFF_COMPONENT_ACCOUNT_MANAGER__IAUTHENTICATION:
+				return iAuthentication != null;
+		}
+		return super.eIsSet(featureID);
 	}
 
 	/**

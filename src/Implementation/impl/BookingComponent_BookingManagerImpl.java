@@ -283,17 +283,6 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void searchRooms(String roomType, int price, Date arrivalDate, Date departureDate) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public void makeBooking(String roomType, Date arrivalDate, Date departureDate, String customerSSN, String customerFirstName, String customerLastName, String customerAddress, String customerEmail, String ccNumber, String ccv, String expiryMonth, String expiryYear) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -382,39 +371,6 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getBookingInfo(String bookingReference) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void generateReceipt(String bookingReference) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String validateReferenceNumber(String referenceNumber) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public void generateQuote(Date startDate, Date endDate, String roomType) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -426,7 +382,7 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void searchForBooking(String bookingReference) {
+	public String searchForBooking(String bookingReference) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -566,9 +522,6 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___SEARCH_ROOMS__STRING_INT_DATE_DATE:
-				searchRooms((String)arguments.get(0), (Integer)arguments.get(1), (Date)arguments.get(2), (Date)arguments.get(3));
-				return null;
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___MAKE_BOOKING__STRING_DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_STRING_STRING_STRING:
 				makeBooking((String)arguments.get(0), (Date)arguments.get(1), (Date)arguments.get(2), (String)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5), (String)arguments.get(6), (String)arguments.get(7), (String)arguments.get(8), (String)arguments.get(9), (String)arguments.get(10), (String)arguments.get(11));
 				return null;
@@ -593,20 +546,11 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___REMOVE_ADDIONAL_SERVICE__STRING_STRING:
 				removeAddionalService((String)arguments.get(0), (String)arguments.get(1));
 				return null;
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___GET_BOOKING_INFO__STRING:
-				getBookingInfo((String)arguments.get(0));
-				return null;
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___GENERATE_RECEIPT__STRING:
-				generateReceipt((String)arguments.get(0));
-				return null;
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___VALIDATE_REFERENCE_NUMBER__STRING:
-				return validateReferenceNumber((String)arguments.get(0));
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___GENERATE_QUOTE__DATE_DATE_STRING:
 				generateQuote((Date)arguments.get(0), (Date)arguments.get(1), (String)arguments.get(2));
 				return null;
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___SEARCH_FOR_BOOKING__STRING:
-				searchForBooking((String)arguments.get(0));
-				return null;
+				return searchForBooking((String)arguments.get(0));
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___ADD_GUEST_TO_BOOKING__STRING:
 				addGuestToBooking((String)arguments.get(0));
 				return null;

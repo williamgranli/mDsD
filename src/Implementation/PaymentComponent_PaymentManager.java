@@ -2,7 +2,7 @@
  */
 package Implementation;
 
-import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link Implementation.PaymentComponent_PaymentManager#getPaymentDetails <em>Payment Details</em>}</li>
+ *   <li>{@link Implementation.PaymentComponent_PaymentManager#getPayments <em>Payments</em>}</li>
  * </ul>
  * </p>
  *
@@ -20,7 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface PaymentComponent_PaymentManager extends EObject {
+public interface PaymentComponent_PaymentManager extends PaymentComponent_IPayment {
 	/**
 	 * Returns the value of the '<em><b>Payment Details</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -46,6 +47,22 @@ public interface PaymentComponent_PaymentManager extends EObject {
 	 * @generated
 	 */
 	void setPaymentDetails(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Payments</b></em>' reference list.
+	 * The list contents are of type {@link Implementation.PaymentComponent_Payment}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Payments</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Payments</em>' reference list.
+	 * @see Implementation.ImplementationPackage#getPaymentComponent_PaymentManager_Payments()
+	 * @model ordered="false"
+	 * @generated
+	 */
+	EList<PaymentComponent_Payment> getPayments();
 
 	/**
 	 * <!-- begin-user-doc -->

@@ -4,16 +4,26 @@ package Implementation.impl;
 
 import Implementation.BookingComponent_IBooking;
 import Implementation.ImplementationPackage;
+import Implementation.OccupancyComponent_IOccupancy;
+import Implementation.OccupancyComponent_Occupancy;
 import Implementation.OccupancyComponent_OccupancyHandler;
 import Implementation.RoomComponent_IRoomInformation;
 
+import java.lang.reflect.InvocationTargetException;
+
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,6 +34,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link Implementation.impl.OccupancyComponent_OccupancyHandlerImpl#getIRoomInformation <em>IRoom Information</em>}</li>
  *   <li>{@link Implementation.impl.OccupancyComponent_OccupancyHandlerImpl#getIBooking <em>IBooking</em>}</li>
+ *   <li>{@link Implementation.impl.OccupancyComponent_OccupancyHandlerImpl#getOccupancy <em>Occupancy</em>}</li>
  * </ul>
  * </p>
  *
@@ -49,6 +60,16 @@ public class OccupancyComponent_OccupancyHandlerImpl extends MinimalEObjectImpl.
 	 * @ordered
 	 */
 	protected BookingComponent_IBooking iBooking;
+
+	/**
+	 * The cached value of the '{@link #getOccupancy() <em>Occupancy</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOccupancy()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<OccupancyComponent_Occupancy> occupancy;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -150,6 +171,73 @@ public class OccupancyComponent_OccupancyHandlerImpl extends MinimalEObjectImpl.
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<OccupancyComponent_Occupancy> getOccupancy() {
+		if (occupancy == null) {
+			occupancy = new EObjectResolvingEList<OccupancyComponent_Occupancy>(OccupancyComponent_Occupancy.class, this, ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER__OCCUPANCY);
+		}
+		return occupancy;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void checkInGuest(String bookingReference, String firstName, String lastName) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void checkOutGuest(String bookingReference, String firstName, String lastName) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<String> listFreeRooms() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<String> listGuestsInRoom(int roomNumber) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int numberOfGuestsInHotel() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -159,6 +247,8 @@ public class OccupancyComponent_OccupancyHandlerImpl extends MinimalEObjectImpl.
 			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER__IBOOKING:
 				if (resolve) return getIBooking();
 				return basicGetIBooking();
+			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER__OCCUPANCY:
+				return getOccupancy();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -168,6 +258,7 @@ public class OccupancyComponent_OccupancyHandlerImpl extends MinimalEObjectImpl.
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -176,6 +267,10 @@ public class OccupancyComponent_OccupancyHandlerImpl extends MinimalEObjectImpl.
 				return;
 			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER__IBOOKING:
 				setIBooking((BookingComponent_IBooking)newValue);
+				return;
+			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER__OCCUPANCY:
+				getOccupancy().clear();
+				getOccupancy().addAll((Collection<? extends OccupancyComponent_Occupancy>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -195,6 +290,9 @@ public class OccupancyComponent_OccupancyHandlerImpl extends MinimalEObjectImpl.
 			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER__IBOOKING:
 				setIBooking((BookingComponent_IBooking)null);
 				return;
+			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER__OCCUPANCY:
+				getOccupancy().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -211,8 +309,54 @@ public class OccupancyComponent_OccupancyHandlerImpl extends MinimalEObjectImpl.
 				return iRoomInformation != null;
 			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER__IBOOKING:
 				return iBooking != null;
+			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER__OCCUPANCY:
+				return occupancy != null && !occupancy.isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
+		if (baseClass == OccupancyComponent_IOccupancy.class) {
+			switch (baseOperationID) {
+				case ImplementationPackage.OCCUPANCY_COMPONENT_IOCCUPANCY___CHECK_IN_GUEST__STRING_STRING_STRING: return ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___CHECK_IN_GUEST__STRING_STRING_STRING;
+				case ImplementationPackage.OCCUPANCY_COMPONENT_IOCCUPANCY___CHECK_OUT_GUEST__STRING_STRING_STRING: return ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___CHECK_OUT_GUEST__STRING_STRING_STRING;
+				case ImplementationPackage.OCCUPANCY_COMPONENT_IOCCUPANCY___LIST_FREE_ROOMS: return ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___LIST_FREE_ROOMS;
+				case ImplementationPackage.OCCUPANCY_COMPONENT_IOCCUPANCY___LIST_GUESTS_IN_ROOM__INT: return ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___LIST_GUESTS_IN_ROOM__INT;
+				case ImplementationPackage.OCCUPANCY_COMPONENT_IOCCUPANCY___NUMBER_OF_GUESTS_IN_HOTEL: return ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___NUMBER_OF_GUESTS_IN_HOTEL;
+				default: return -1;
+			}
+		}
+		return super.eDerivedOperationID(baseOperationID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___CHECK_IN_GUEST__STRING_STRING_STRING:
+				checkInGuest((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2));
+				return null;
+			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___CHECK_OUT_GUEST__STRING_STRING_STRING:
+				checkOutGuest((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2));
+				return null;
+			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___LIST_FREE_ROOMS:
+				return listFreeRooms();
+			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___LIST_GUESTS_IN_ROOM__INT:
+				return listGuestsInRoom((Integer)arguments.get(0));
+			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___NUMBER_OF_GUESTS_IN_HOTEL:
+				return numberOfGuestsInHotel();
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 } //OccupancyComponent_OccupancyHandlerImpl

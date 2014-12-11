@@ -33,6 +33,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link Implementation.impl.OccupancyComponent_OccupancyImpl#getCheckOutDateTime <em>Check Out Date Time</em>}</li>
  *   <li>{@link Implementation.impl.OccupancyComponent_OccupancyImpl#getGuest <em>Guest</em>}</li>
  *   <li>{@link Implementation.impl.OccupancyComponent_OccupancyImpl#getBookingReference <em>Booking Reference</em>}</li>
+ *   <li>{@link Implementation.impl.OccupancyComponent_OccupancyImpl#getGuests <em>Guests</em>}</li>
  * </ul>
  * </p>
  *
@@ -128,6 +129,16 @@ public class OccupancyComponent_OccupancyImpl extends MinimalEObjectImpl.Contain
 	 * @ordered
 	 */
 	protected String bookingReference = BOOKING_REFERENCE_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getGuests() <em>Guests</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getGuests()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<OccupancyComponent_Guest> guests;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -249,6 +260,18 @@ public class OccupancyComponent_OccupancyImpl extends MinimalEObjectImpl.Contain
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<OccupancyComponent_Guest> getGuests() {
+		if (guests == null) {
+			guests = new EObjectResolvingEList<OccupancyComponent_Guest>(OccupancyComponent_Guest.class, this, ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY__GUESTS);
+		}
+		return guests;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public void Occupancy(int roomNumber, int checkInDateTime, OccupancyComponent_Guest Guest, String bookingReference) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -273,6 +296,8 @@ public class OccupancyComponent_OccupancyImpl extends MinimalEObjectImpl.Contain
 				return getGuest();
 			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY__BOOKING_REFERENCE:
 				return getBookingReference();
+			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY__GUESTS:
+				return getGuests();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -302,6 +327,10 @@ public class OccupancyComponent_OccupancyImpl extends MinimalEObjectImpl.Contain
 			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY__BOOKING_REFERENCE:
 				setBookingReference((String)newValue);
 				return;
+			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY__GUESTS:
+				getGuests().clear();
+				getGuests().addAll((Collection<? extends OccupancyComponent_Guest>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -329,6 +358,9 @@ public class OccupancyComponent_OccupancyImpl extends MinimalEObjectImpl.Contain
 			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY__BOOKING_REFERENCE:
 				setBookingReference(BOOKING_REFERENCE_EDEFAULT);
 				return;
+			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY__GUESTS:
+				getGuests().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -351,6 +383,8 @@ public class OccupancyComponent_OccupancyImpl extends MinimalEObjectImpl.Contain
 				return guest != null && !guest.isEmpty();
 			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY__BOOKING_REFERENCE:
 				return BOOKING_REFERENCE_EDEFAULT == null ? bookingReference != null : !BOOKING_REFERENCE_EDEFAULT.equals(bookingReference);
+			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY__GUESTS:
+				return guests != null && !guests.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

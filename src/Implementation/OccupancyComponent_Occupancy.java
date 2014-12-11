@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link Implementation.OccupancyComponent_Occupancy#getCheckOutDateTime <em>Check Out Date Time</em>}</li>
  *   <li>{@link Implementation.OccupancyComponent_Occupancy#getGuest <em>Guest</em>}</li>
  *   <li>{@link Implementation.OccupancyComponent_Occupancy#getBookingReference <em>Booking Reference</em>}</li>
+ *   <li>{@link Implementation.OccupancyComponent_Occupancy#getGuests <em>Guests</em>}</li>
  * </ul>
  * </p>
  *
@@ -146,6 +147,22 @@ public interface OccupancyComponent_Occupancy extends EObject {
 	 * @generated
 	 */
 	void setBookingReference(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Guests</b></em>' reference list.
+	 * The list contents are of type {@link Implementation.OccupancyComponent_Guest}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Guests</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Guests</em>' reference list.
+	 * @see Implementation.ImplementationPackage#getOccupancyComponent_Occupancy_Guests()
+	 * @model required="true" ordered="false"
+	 * @generated
+	 */
+	EList<OccupancyComponent_Guest> getGuests();
 
 	/**
 	 * <!-- begin-user-doc -->

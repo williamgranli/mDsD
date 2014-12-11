@@ -72,14 +72,14 @@ public class TypesFactoryImpl extends EFactoryImpl implements TypesFactory {
 		switch (eDataType.getClassifierID()) {
 			case TypesPackage.BOOLEAN:
 				return createBooleanFromString(eDataType, initialValue);
-			case TypesPackage.INTEGER:
-				return createIntegerFromString(eDataType, initialValue);
 			case TypesPackage.REAL:
 				return createRealFromString(eDataType, initialValue);
-			case TypesPackage.UNLIMITED_NATURAL:
-				return createUnlimitedNaturalFromString(eDataType, initialValue);
 			case TypesPackage.STRING:
 				return createStringFromString(eDataType, initialValue);
+			case TypesPackage.UNLIMITED_NATURAL:
+				return createUnlimitedNaturalFromString(eDataType, initialValue);
+			case TypesPackage.INTEGER:
+				return createIntegerFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -95,14 +95,14 @@ public class TypesFactoryImpl extends EFactoryImpl implements TypesFactory {
 		switch (eDataType.getClassifierID()) {
 			case TypesPackage.BOOLEAN:
 				return convertBooleanToString(eDataType, instanceValue);
-			case TypesPackage.INTEGER:
-				return convertIntegerToString(eDataType, instanceValue);
 			case TypesPackage.REAL:
 				return convertRealToString(eDataType, instanceValue);
-			case TypesPackage.UNLIMITED_NATURAL:
-				return convertUnlimitedNaturalToString(eDataType, instanceValue);
 			case TypesPackage.STRING:
 				return convertStringToString(eDataType, instanceValue);
+			case TypesPackage.UNLIMITED_NATURAL:
+				return convertUnlimitedNaturalToString(eDataType, instanceValue);
+			case TypesPackage.INTEGER:
+				return convertIntegerToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -131,24 +131,6 @@ public class TypesFactoryImpl extends EFactoryImpl implements TypesFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Integer createIntegerFromString(EDataType eDataType, String initialValue) {
-		return (Integer)super.createFromString(eDataType, initialValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertIntegerToString(EDataType eDataType, Object instanceValue) {
-		return super.convertToString(eDataType, instanceValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Double createRealFromString(EDataType eDataType, String initialValue) {
 		return (Double)super.createFromString(eDataType, initialValue);
 	}
@@ -159,6 +141,24 @@ public class TypesFactoryImpl extends EFactoryImpl implements TypesFactory {
 	 * @generated
 	 */
 	public String convertRealToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(eDataType, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String createStringFromString(EDataType eDataType, String initialValue) {
+		return (String)super.createFromString(eDataType, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertStringToString(EDataType eDataType, Object instanceValue) {
 		return super.convertToString(eDataType, instanceValue);
 	}
 
@@ -185,8 +185,8 @@ public class TypesFactoryImpl extends EFactoryImpl implements TypesFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String createStringFromString(EDataType eDataType, String initialValue) {
-		return (String)super.createFromString(eDataType, initialValue);
+	public Integer createIntegerFromString(EDataType eDataType, String initialValue) {
+		return (Integer)super.createFromString(eDataType, initialValue);
 	}
 
 	/**
@@ -194,7 +194,7 @@ public class TypesFactoryImpl extends EFactoryImpl implements TypesFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertStringToString(EDataType eDataType, Object instanceValue) {
+	public String convertIntegerToString(EDataType eDataType, Object instanceValue) {
 		return super.convertToString(eDataType, instanceValue);
 	}
 

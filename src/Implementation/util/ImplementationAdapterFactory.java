@@ -104,10 +104,6 @@ public class ImplementationAdapterFactory extends AdapterFactoryImpl {
 				return createBookingComponent_IBookingDecisionAdapter();
 			}
 			@Override
-			public Adapter caseOccupancyComponent_IOccupancy(OccupancyComponent_IOccupancy object) {
-				return createOccupancyComponent_IOccupancyAdapter();
-			}
-			@Override
 			public Adapter caseOccupancyComponent(OccupancyComponent object) {
 				return createOccupancyComponentAdapter();
 			}
@@ -118,6 +114,10 @@ public class ImplementationAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseOccupancyComponent_Guest(OccupancyComponent_Guest object) {
 				return createOccupancyComponent_GuestAdapter();
+			}
+			@Override
+			public Adapter caseOccupancyComponent_IOccupancy(OccupancyComponent_IOccupancy object) {
+				return createOccupancyComponent_IOccupancyAdapter();
 			}
 			@Override
 			public Adapter caseOccupancyComponent_OccupancyHandler(OccupancyComponent_OccupancyHandler object) {
@@ -140,12 +140,8 @@ public class ImplementationAdapterFactory extends AdapterFactoryImpl {
 				return createPaymentComponent_PaymentManagerAdapter();
 			}
 			@Override
-			public Adapter casePaymentComponent_PaymentCalculator(PaymentComponent_PaymentCalculator object) {
-				return createPaymentComponent_PaymentCalculatorAdapter();
-			}
-			@Override
-			public Adapter casePaymentComponent_PaymentHistoryDB(PaymentComponent_PaymentHistoryDB object) {
-				return createPaymentComponent_PaymentHistoryDBAdapter();
+			public Adapter casePaymentComponent_Payment(PaymentComponent_Payment object) {
+				return createPaymentComponent_PaymentAdapter();
 			}
 			@Override
 			public Adapter casePaymentComponent_IPayment(PaymentComponent_IPayment object) {
@@ -164,16 +160,16 @@ public class ImplementationAdapterFactory extends AdapterFactoryImpl {
 				return createStaffComponent_IAuthenticationAdapter();
 			}
 			@Override
-			public Adapter caseAdditionalServiceComponent_AdditionalServiceEvent(AdditionalServiceComponent_AdditionalServiceEvent object) {
-				return createAdditionalServiceComponent_AdditionalServiceEventAdapter();
+			public Adapter caseAdditionalServiceComponent_IAdditionalServiceInformation(AdditionalServiceComponent_IAdditionalServiceInformation object) {
+				return createAdditionalServiceComponent_IAdditionalServiceInformationAdapter();
 			}
 			@Override
 			public Adapter caseAdditionalServiceComponent_IAdditionalServiceAdministration(AdditionalServiceComponent_IAdditionalServiceAdministration object) {
 				return createAdditionalServiceComponent_IAdditionalServiceAdministrationAdapter();
 			}
 			@Override
-			public Adapter caseAdditionalServiceComponent_IAdditionalServiceInformation(AdditionalServiceComponent_IAdditionalServiceInformation object) {
-				return createAdditionalServiceComponent_IAdditionalServiceInformationAdapter();
+			public Adapter caseAdditionalServiceComponent_AdditionalServiceEvent(AdditionalServiceComponent_AdditionalServiceEvent object) {
+				return createAdditionalServiceComponent_AdditionalServiceEventAdapter();
 			}
 			@Override
 			public Adapter caseBookingComponent(BookingComponent object) {
@@ -192,8 +188,8 @@ public class ImplementationAdapterFactory extends AdapterFactoryImpl {
 				return createBookingComponent_AdditionalServiceAdapter();
 			}
 			@Override
-			public Adapter caseBookingComponent_Guest(BookingComponent_Guest object) {
-				return createBookingComponent_GuestAdapter();
+			public Adapter caseBookingComponent_BookingGuest(BookingComponent_BookingGuest object) {
+				return createBookingComponent_BookingGuestAdapter();
 			}
 			@Override
 			public Adapter caseBookingComponent_RoomType(BookingComponent_RoomType object) {
@@ -390,20 +386,6 @@ public class ImplementationAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link Implementation.OccupancyComponent_IOccupancy <em>Occupancy Component IOccupancy</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see Implementation.OccupancyComponent_IOccupancy
-	 * @generated
-	 */
-	public Adapter createOccupancyComponent_IOccupancyAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link Implementation.OccupancyComponent <em>Occupancy Component</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -442,6 +424,20 @@ public class ImplementationAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createOccupancyComponent_GuestAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link Implementation.OccupancyComponent_IOccupancy <em>Occupancy Component IOccupancy</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see Implementation.OccupancyComponent_IOccupancy
+	 * @generated
+	 */
+	public Adapter createOccupancyComponent_IOccupancyAdapter() {
 		return null;
 	}
 
@@ -516,30 +512,16 @@ public class ImplementationAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link Implementation.PaymentComponent_PaymentCalculator <em>Payment Component Payment Calculator</em>}'.
+	 * Creates a new adapter for an object of class '{@link Implementation.PaymentComponent_Payment <em>Payment Component Payment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see Implementation.PaymentComponent_PaymentCalculator
+	 * @see Implementation.PaymentComponent_Payment
 	 * @generated
 	 */
-	public Adapter createPaymentComponent_PaymentCalculatorAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link Implementation.PaymentComponent_PaymentHistoryDB <em>Payment Component Payment History DB</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see Implementation.PaymentComponent_PaymentHistoryDB
-	 * @generated
-	 */
-	public Adapter createPaymentComponent_PaymentHistoryDBAdapter() {
+	public Adapter createPaymentComponent_PaymentAdapter() {
 		return null;
 	}
 
@@ -600,16 +582,16 @@ public class ImplementationAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link Implementation.AdditionalServiceComponent_AdditionalServiceEvent <em>Additional Service Component Additional Service Event</em>}'.
+	 * Creates a new adapter for an object of class '{@link Implementation.AdditionalServiceComponent_IAdditionalServiceInformation <em>Additional Service Component IAdditional Service Information</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see Implementation.AdditionalServiceComponent_AdditionalServiceEvent
+	 * @see Implementation.AdditionalServiceComponent_IAdditionalServiceInformation
 	 * @generated
 	 */
-	public Adapter createAdditionalServiceComponent_AdditionalServiceEventAdapter() {
+	public Adapter createAdditionalServiceComponent_IAdditionalServiceInformationAdapter() {
 		return null;
 	}
 
@@ -628,16 +610,16 @@ public class ImplementationAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link Implementation.AdditionalServiceComponent_IAdditionalServiceInformation <em>Additional Service Component IAdditional Service Information</em>}'.
+	 * Creates a new adapter for an object of class '{@link Implementation.AdditionalServiceComponent_AdditionalServiceEvent <em>Additional Service Component Additional Service Event</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see Implementation.AdditionalServiceComponent_IAdditionalServiceInformation
+	 * @see Implementation.AdditionalServiceComponent_AdditionalServiceEvent
 	 * @generated
 	 */
-	public Adapter createAdditionalServiceComponent_IAdditionalServiceInformationAdapter() {
+	public Adapter createAdditionalServiceComponent_AdditionalServiceEventAdapter() {
 		return null;
 	}
 
@@ -698,16 +680,16 @@ public class ImplementationAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link Implementation.BookingComponent_Guest <em>Booking Component Guest</em>}'.
+	 * Creates a new adapter for an object of class '{@link Implementation.BookingComponent_BookingGuest <em>Booking Component Booking Guest</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see Implementation.BookingComponent_Guest
+	 * @see Implementation.BookingComponent_BookingGuest
 	 * @generated
 	 */
-	public Adapter createBookingComponent_GuestAdapter() {
+	public Adapter createBookingComponent_BookingGuestAdapter() {
 		return null;
 	}
 

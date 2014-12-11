@@ -25,7 +25,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface DecisionSupportComponent_DSSController extends OccupancyComponent_IOccupancy {
+public interface DecisionSupportComponent_DSSController extends DecisionSupportComponent_IDecisionSupport {
 	/**
 	 * Returns the value of the '<em><b>DSS Processor</b></em>' reference list.
 	 * The list contents are of type {@link Implementation.DecisionSupportComponent_DSSProcessor}.

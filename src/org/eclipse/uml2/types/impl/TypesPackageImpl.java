@@ -2,9 +2,9 @@
  */
 package org.eclipse.uml2.types.impl;
 
-import implementation.ImplementationPackage;
+import Implementation.ImplementationPackage;
 
-import implementation.impl.ImplementationPackageImpl;
+import Implementation.impl.ImplementationPackageImpl;
 
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EPackage;
@@ -33,14 +33,14 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EDataType integerEDataType = null;
+	private EDataType realEDataType = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EDataType realEDataType = null;
+	private EDataType stringEDataType = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -54,7 +54,7 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EDataType stringEDataType = null;
+	private EDataType integerEDataType = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -103,7 +103,7 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 		isInited = true;
 
 		// Obtain or create and register interdependencies
-		Implementation.impl.ImplementationPackageImpl theImplementationPackage = (Implementation.impl.ImplementationPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(Implementation.ImplementationPackage.eNS_URI) instanceof Implementation.impl.ImplementationPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(Implementation.ImplementationPackage.eNS_URI) : Implementation.ImplementationPackage.eINSTANCE);
+		ImplementationPackageImpl theImplementationPackage = (ImplementationPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ImplementationPackage.eNS_URI) instanceof ImplementationPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ImplementationPackage.eNS_URI) : ImplementationPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theTypesPackage.createPackageContents();
@@ -136,8 +136,8 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EDataType getInteger() {
-		return integerEDataType;
+	public EDataType getReal() {
+		return realEDataType;
 	}
 
 	/**
@@ -145,8 +145,8 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EDataType getReal() {
-		return realEDataType;
+	public EDataType getString() {
+		return stringEDataType;
 	}
 
 	/**
@@ -163,8 +163,8 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EDataType getString() {
-		return stringEDataType;
+	public EDataType getInteger() {
+		return integerEDataType;
 	}
 
 	/**
@@ -196,10 +196,10 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 
 		// Create data types
 		booleanEDataType = createEDataType(BOOLEAN);
-		integerEDataType = createEDataType(INTEGER);
 		realEDataType = createEDataType(REAL);
-		unlimitedNaturalEDataType = createEDataType(UNLIMITED_NATURAL);
 		stringEDataType = createEDataType(STRING);
+		unlimitedNaturalEDataType = createEDataType(UNLIMITED_NATURAL);
+		integerEDataType = createEDataType(INTEGER);
 	}
 
 	/**
@@ -227,10 +227,10 @@ public class TypesPackageImpl extends EPackageImpl implements TypesPackage {
 
 		// Initialize data types
 		initEDataType(booleanEDataType, boolean.class, "Boolean", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
-		initEDataType(integerEDataType, int.class, "Integer", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(realEDataType, double.class, "Real", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
-		initEDataType(unlimitedNaturalEDataType, int.class, "UnlimitedNatural", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(stringEDataType, String.class, "String", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(unlimitedNaturalEDataType, int.class, "UnlimitedNatural", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(integerEDataType, int.class, "Integer", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

@@ -24,7 +24,7 @@ package Implementation;
  * @model
  * @generated
  */
-public interface AdditionalServiceComponent_AdditionalService extends AdditionalServiceComponent_IAdditionalServiceDecision {
+public interface AdditionalServiceComponent_AdditionalService extends AdditionalServiceComponent_IAdditionalServiceDecision, AdditionalServiceComponent_IAdditionalServiceInformation, AdditionalServiceComponent_IAdditionalServiceAdministration {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->

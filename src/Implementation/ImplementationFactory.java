@@ -112,22 +112,13 @@ public interface ImplementationFactory extends EFactory {
 	PaymentComponent_PaymentManager createPaymentComponent_PaymentManager();
 
 	/**
-	 * Returns a new object of class '<em>Payment Component Payment Calculator</em>'.
+	 * Returns a new object of class '<em>Payment Component Payment</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Payment Component Payment Calculator</em>'.
+	 * @return a new object of class '<em>Payment Component Payment</em>'.
 	 * @generated
 	 */
-	PaymentComponent_PaymentCalculator createPaymentComponent_PaymentCalculator();
-
-	/**
-	 * Returns a new object of class '<em>Payment Component Payment History DB</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Payment Component Payment History DB</em>'.
-	 * @generated
-	 */
-	PaymentComponent_PaymentHistoryDB createPaymentComponent_PaymentHistoryDB();
+	PaymentComponent_Payment createPaymentComponent_Payment();
 
 	/**
 	 * Returns a new object of class '<em>Additional Service Component</em>'.
@@ -193,13 +184,13 @@ public interface ImplementationFactory extends EFactory {
 	BookingComponent_AdditionalService createBookingComponent_AdditionalService();
 
 	/**
-	 * Returns a new object of class '<em>Booking Component Guest</em>'.
+	 * Returns a new object of class '<em>Booking Component Booking Guest</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Booking Component Guest</em>'.
+	 * @return a new object of class '<em>Booking Component Booking Guest</em>'.
 	 * @generated
 	 */
-	BookingComponent_Guest createBookingComponent_Guest();
+	BookingComponent_BookingGuest createBookingComponent_BookingGuest();
 
 	/**
 	 * Returns a new object of class '<em>Booking Component Room Type</em>'.

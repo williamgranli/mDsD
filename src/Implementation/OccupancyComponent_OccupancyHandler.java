@@ -2,7 +2,7 @@
  */
 package Implementation;
 
-import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link Implementation.OccupancyComponent_OccupancyHandler#getIRoomInformation <em>IRoom Information</em>}</li>
  *   <li>{@link Implementation.OccupancyComponent_OccupancyHandler#getIBooking <em>IBooking</em>}</li>
+ *   <li>{@link Implementation.OccupancyComponent_OccupancyHandler#getOccupancy <em>Occupancy</em>}</li>
  * </ul>
  * </p>
  *
@@ -21,7 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface OccupancyComponent_OccupancyHandler extends EObject {
+public interface OccupancyComponent_OccupancyHandler extends OccupancyComponent_IOccupancyDecision, OccupancyComponent_IOccupancy {
 	/**
 	 * Returns the value of the '<em><b>IRoom Information</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -73,5 +74,21 @@ public interface OccupancyComponent_OccupancyHandler extends EObject {
 	 * @generated
 	 */
 	void setIBooking(BookingComponent_IBooking value);
+
+	/**
+	 * Returns the value of the '<em><b>Occupancy</b></em>' reference list.
+	 * The list contents are of type {@link Implementation.OccupancyComponent_Occupancy}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Occupancy</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Occupancy</em>' reference list.
+	 * @see Implementation.ImplementationPackage#getOccupancyComponent_OccupancyHandler_Occupancy()
+	 * @model ordered="false"
+	 * @generated
+	 */
+	EList<OccupancyComponent_Occupancy> getOccupancy();
 
 } // OccupancyComponent_OccupancyHandler
