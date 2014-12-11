@@ -2,3 +2,6 @@
 
 %Classpath ignore
 *.classpath
+bin/
+*.DS_Store
+
