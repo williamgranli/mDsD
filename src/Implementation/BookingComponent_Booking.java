@@ -229,10 +229,10 @@ public interface BookingComponent_Booking extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model newServiceRequired="true" newServiceOrdered="false"
+	 * @model newServiceDataType="org.eclipse.uml2.types.String" newServiceRequired="true" newServiceOrdered="false" priceDataType="org.eclipse.uml2.types.Integer" priceRequired="true" priceOrdered="false"
 	 * @generated
 	 */
-	void addAdditionalServiceToBooking(BookingComponent_AdditionalService newService);
+	void addAdditionalServiceToBooking(String newService, int price);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -245,10 +245,10 @@ public interface BookingComponent_Booking extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model newRoomRequired="true" newRoomOrdered="false"
+	 * @model roomTypeDataType="org.eclipse.uml2.types.String" roomTypeRequired="true" roomTypeOrdered="false" roomPriceDataType="org.eclipse.uml2.types.Integer" roomPriceRequired="true" roomPriceOrdered="false"
 	 * @generated
 	 */
-	void addRoomToBooking(BookingComponent_RoomType newRoom);
+	void addRoomToBooking(String roomType, int roomPrice);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -297,5 +297,21 @@ public interface BookingComponent_Booking extends EObject {
 	 * @generated
 	 */
 	void generateReferenceNumber();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model firstNameDataType="org.eclipse.uml2.types.String" firstNameRequired="true" firstNameOrdered="false" lastNameDataType="org.eclipse.uml2.types.String" lastNameRequired="true" lastNameOrdered="false" addressDataType="org.eclipse.uml2.types.String" addressRequired="true" addressOrdered="false"
+	 * @generated
+	 */
+	void addGuestToBooking(String firstName, String lastName, String address);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model firstNameDataType="org.eclipse.uml2.types.String" firstNameRequired="true" firstNameOrdered="false" lastNameDataType="org.eclipse.uml2.types.String" lastNameRequired="true" lastNameOrdered="false" addressDataType="org.eclipse.uml2.types.String" addressRequired="true" addressOrdered="false"
+	 * @generated
+	 */
+	void removeGuestFromBooking(String firstName, String lastName, String address);
 
 } // BookingComponent_Booking
