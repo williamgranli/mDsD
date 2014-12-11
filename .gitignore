@@ -5,4 +5,6 @@
 bin/
 *.class
 *.DS_Store
+*Implementation.ecore
 
+*implementation.ecore
