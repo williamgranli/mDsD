@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-
+import java.util.ArrayList;
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Staff Component Account Manager</b></em>'.
@@ -70,10 +70,13 @@ public class StaffComponent_AccountManagerImpl extends MinimalEObjectImpl.Contai
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT	
 	 */
 	protected StaffComponent_AccountManagerImpl() {
 		super();
+		
+		employees = (EList<StaffComponent_Employee>) new ArrayList<StaffComponent_Employee>();
+		loggedIn = (EList<StaffComponent_Employee>) new ArrayList<StaffComponent_Employee>();
 	}
 
 	/**
@@ -151,34 +154,56 @@ public class StaffComponent_AccountManagerImpl extends MinimalEObjectImpl.Contai
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void logIn(String ssn, String password) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		StaffComponent_EmployeeImpl employee = null;
+		
+		for(int i = 0; i < employees.size(); i++){
+			StaffComponent_EmployeeImpl temp = (StaffComponent_EmployeeImpl) employees.get(i);
+			if(((temp.getSsn()).toString()).equals(ssn))
+				employee = temp;
+		}
+		
+		if(employee == null){
+			loggedIn.add(employee);
+			System.out.println("Log in successfull");
+		}
+		
+		else{
+			System.out.println("Log in failed");
+		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void logOut(String ssn) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		for(StaffComponent_Employee e: loggedIn){
+			if((e.getSsn()).equals(ssn)){
+				loggedIn.remove(e);
+				System.out.println("Logg out successfull");
+				return;
+			}
+		}	
+		System.out.println("User is not logged in");
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean isLoggedIn(String ssn) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		/* We have to change the return type to boolean */
+		for(StaffComponent_Employee e : loggedIn){
+			if(e.getSsn().equals("ssn"));
+			return true;
+		}
+		
+		return false;
 	}
 
 	/**
@@ -206,23 +231,35 @@ public class StaffComponent_AccountManagerImpl extends MinimalEObjectImpl.Contai
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean removeAccount(String ssn) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		StaffComponent_Employee employee = findAccount(ssn);
+		if(employee != null){
+			employees.remove(employee);
+			return true;
+		}
+		else{
+			return false;
+		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public StaffComponent_Employee findAccount(String ssn) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+
+		for(StaffComponent_Employee e: employees){
+			if((e.getSsn()).equals(ssn)){
+				//System.out.println("Account found");
+				return e;
+			}
+		}
+		
+		//System.out.println("Account not found");
+		return null;
 	}
 
 	/**
