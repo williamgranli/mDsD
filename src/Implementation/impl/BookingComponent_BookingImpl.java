@@ -8,9 +8,13 @@ import Implementation.BookingComponent_BookingGuest;
 import Implementation.BookingComponent_PaymentDetails;
 import Implementation.BookingComponent_RoomType;
 import Implementation.ImplementationPackage;
+
 import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
+import java.util.Random;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
@@ -163,10 +167,15 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
+	@SuppressWarnings("unchecked")
 	protected BookingComponent_BookingImpl() {
 		super();
+		additionalServices = (EList<BookingComponent_AdditionalService>) new ArrayList<BookingComponent_AdditionalService>();
+		guests = (EList<BookingComponent_BookingGuest>) new ArrayList<BookingComponent_BookingGuest>();
+		rooms = (EList<BookingComponent_RoomType>) new ArrayList<BookingComponent_RoomType>();
+		this.referenceNumber = "NULL";
 	}
 	
 	/**
@@ -181,12 +190,12 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public BookingComponent_Booking Booking(Date arrivalDate, Date departureDate) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		this.arrivalDate = arrivalDate;
+		this.departureDate = departureDate;
+		return this;
 	}
 
 	/**
@@ -360,7 +369,7 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * @generated 
 	 */
 	public void addAdditionalServiceToBooking(BookingComponent_AdditionalService newService) {
 		additionalServices.add(newService);
@@ -372,9 +381,33 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 	 * @generated
 	 */
 	public BookingComponent_Booking Booking(String roomType, Date arrivalDate, Date departureDate, String customerSSN, String customerFirstName, String customerLastName, String customerAddress, String ccNumber, String ccv, String expiryMonth, String expiryYear) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		BookingComponent_RoomType newRoom = new BookingComponent_RoomTypeImpl();
+		BookingComponent_PaymentDetails newPayment = new BookingComponent_PaymentDetailsImpl();
+		BookingComponent_BookingGuest newGuest = new BookingComponent_BookingGuestImpl();
+		
+		newRoom.setRoomType(roomType);
+		
+		newPayment.setFirstName(customerSSN);
+		newPayment.setLastName(customerFirstName);
+		newPayment.setAddress(customerAddress);
+		newPayment.setCcNumber(ccNumber);
+		newPayment.setCcv(ccv);
+		newPayment.setExpiryMonth(expiryMonth);
+		newPayment.setExpiryYear(expiryYear);
+		
+		newGuest.setFirstName(customerFirstName);
+		newGuest.setLastName(customerLastName);
+		newGuest.setAddress(customerAddress);
+		
+		this.arrivalDate = arrivalDate;
+		this.departureDate = departureDate;
+		
+		addRoomToBooking(newRoom);
+		
+		this.guests.add(newGuest);
+		this.paymentDetails = newPayment;
+		
+		return this;
 	}
 
 	/**
@@ -416,7 +449,7 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * @generated 
 	 */
 	public void addRoomToBooking(BookingComponent_RoomType newRoom) {
 		rooms.add(newRoom);
@@ -437,7 +470,7 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * @generated 
 	 */
 	public void updateBooking(Date arrivalDate, Date departureDate) {
 		this.arrivalDate = arrivalDate;
@@ -486,12 +519,13 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void generateReferenceNumber() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		this.referenceNumber = "REF#";
+		Random rand = new Random();
+		long number = rand.nextInt((999999999 - 0));
+		this.referenceNumber += number;
 	}
 
 	/**

@@ -5,13 +5,17 @@ package Implementation.impl;
 import Implementation.AdditionalServiceComponent_IAdditionalServiceInformation;
 import Implementation.BookingComponent_Booking;
 import Implementation.BookingComponent_BookingManager;
+import Implementation.BookingComponent_RoomType;
 import Implementation.ImplementationPackage;
 import Implementation.PaymentComponent_IPayment;
 import Implementation.RoomComponent_IRoomInformation;
 import Implementation.StaffComponent_IAuthentication;
+
 import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
@@ -93,8 +97,10 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	protected BookingComponent_BookingManagerImpl() {
 		super();
+		bookings = (EList<BookingComponent_Booking>) new ArrayList<BookingComponent_Booking>();
 	}
 
 	/**
@@ -278,19 +284,26 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 	 */
 	public void makeBooking(String roomType, Date arrivalDate, Date departureDate, String customerSSN, String customerFirstName, String customerLastName, String customerAddress, String customerEmail, String ccNumber, String ccv, String expiryMonth, String expiryYear) {
 		BookingComponent_Booking newBooking = new BookingComponent_BookingImpl();
-		newBooking.Booking(roomType, arrivalDate, departureDate, customerSSN, customerFirstName, customerLastName, customerAddress, customerEmail, ccNumber, ccv, expiryMonth, expiryYear);
-		booking.add(newBooking);
+		newBooking.Booking(roomType, arrivalDate, departureDate, customerSSN, customerFirstName, customerLastName, customerAddress, customerEmail, ccNumber, ccv, expiryMonth);
+		bookings.add(newBooking);
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * @generated
 	 */
 	public void addRoom(String bookingReference, String roomId) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		BookingComponent_Booking bookingToChange;
+		BookingComponent_Booking bookingToChange = findBooking(bookingReference);
+		
+		if(bookingToChange.getReferenceNumber().equals("NULL"))
+		{
+			System.out.println("Invalid Reference Number");
+		}
+		else
+		{
+			//bookingToChange.addRoomToBooking(roomId);
+		}
 		
 		throw new UnsupportedOperationException();
 	}
@@ -309,11 +322,22 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated 
 	 */
 	public void editBooking(String bookingReference, String roomId, Date arrivalDate, Date departureDate, String customerId) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
+		BookingComponent_Booking targetBooking = findBooking(bookingReference);
+		
+		if(targetBooking.getReferenceNumber().equals("NULL"))
+		{
+			System.out.println("Invalid Reference Number");
+		}
+		else
+		{
+			targetBooking.updateBooking(arrivalDate, departureDate);
+		}
+		
 		throw new UnsupportedOperationException();
 	}
 
@@ -377,17 +401,19 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public String searchForBooking(String bookingReference) {
+	public EList<String> searchForBooking(String bookingReference) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		for(BookingComponent_Booking x : booking)
+		EList<String> foundGuests = (EList<String>) new ArrayList<String>();
+		for(BookingComponent_Booking x : bookings)
 		{
-			if(x.getReferenceNumber() == bookingReference)
+			if(x.getReferenceNumber().equals(bookingReference))
 			{
 				//Add to return list
+				x.getGuests();
 			}
 		}
-		return "TODO";
+		return foundGuests;
 	}
 
 	/**
@@ -415,12 +441,20 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public BookingComponent_Booking findBooking(String referenceNumber) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public BookingComponent_Booking findBooking(String referenceNumber) 	
+	{
+		BookingComponent_Booking targetBooking = new BookingComponent_BookingImpl();
+		
+		for(BookingComponent_Booking x : bookings)
+		{
+			if(x.getReferenceNumber().equals(referenceNumber))
+			{
+				targetBooking = x;
+			}
+		}
+		return targetBooking;
 	}
 
 	/**
