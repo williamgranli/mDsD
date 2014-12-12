@@ -142,6 +142,20 @@ public class RoomComponent_RoomImpl extends MinimalEObjectImpl.Container impleme
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	protected RoomComponent_RoomImpl() {
+		super();
+		this.setRoomNumber(roomNumber);
+		this.setUsable(usable);
+		this.setPrice(price);
+		this.setRoomTypeName(roomTypeName);
+		this.setDescription(description);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override

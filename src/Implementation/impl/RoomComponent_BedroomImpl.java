@@ -61,6 +61,16 @@ public class RoomComponent_BedroomImpl extends RoomComponent_RoomImpl implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	protected RoomComponent_BedroomImpl(int roomNumber, boolean usable, int price, String roomTypeName, String description, int bedCount) {
+		super(roomNumber, usable, price, roomTypeName, description);
+		this.setBedCount(bedCount);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override

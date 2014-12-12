@@ -103,6 +103,18 @@ public class RoomComponent_ConferenceRoomImpl extends RoomComponent_RoomImpl imp
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	protected RoomComponent_ConferenceRoomImpl(int roomNumber, boolean usable, int price, String roomTypeName, String description, int numberOfSeats, boolean projector, boolean conferencePhone) {
+		super(roomNumber, usable, price, roomTypeName, description);
+		this.setNumberOfSeats(numberOfSeats);
+		this.setProjector(projector);
+		this.setConferencePhone(conferencePhone);
+	}
+ 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
