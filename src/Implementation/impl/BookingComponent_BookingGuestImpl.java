@@ -96,6 +96,13 @@ public class BookingComponent_BookingGuestImpl extends MinimalEObjectImpl.Contai
 	protected BookingComponent_BookingGuestImpl() {
 		super();
 	}
+	
+	protected BookingComponent_BookingGuestImpl(String firstName, String lastName, String address) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.address = address;
+	}
 
 	/**
 	 * <!-- begin-user-doc -->

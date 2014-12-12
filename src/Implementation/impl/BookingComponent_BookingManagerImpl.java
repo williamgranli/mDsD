@@ -5,14 +5,17 @@ package Implementation.impl;
 import Implementation.AdditionalServiceComponent_IAdditionalServiceInformation;
 import Implementation.BookingComponent_Booking;
 import Implementation.BookingComponent_BookingManager;
+import Implementation.BookingComponent_RoomType;
 import Implementation.ImplementationPackage;
 import Implementation.PaymentComponent_IPayment;
 import Implementation.RoomComponent_IRoomInformation;
 import Implementation.StaffComponent_IAuthentication;
+
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
@@ -319,7 +322,6 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 	 * @generated NOT
 	 */
 	public void editBooking(String bookingReference, Date arrivalDate, Date departureDate) {
-		//TODO check me
 		BookingComponent_Booking targetBooking = findBooking(bookingReference);
 		
 		if(targetBooking.getReferenceNumber().equals("NULL"))
@@ -335,45 +337,87 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void cancelBooking(String bookingReference) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		BookingComponent_Booking bookingToRemove = findBooking(bookingReference);
+		if(bookingToRemove.equals("NULL"))
+		{
+			System.out.println("Invalid Reference Number");
+		}
+		else
+		{
+			bookings.remove(bookingToRemove);
+		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void addAdditionalService(String bookingReference, String additionalServiceName, int price) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		BookingComponent_Booking bookingToChange = findBooking(bookingReference);
+		if(bookingToChange.equals("NULL"))
+		{
+			System.out.println("Invalid Reference Number");
+		}
+		else
+		{
+			bookingToChange.addAdditionalServiceToBooking(additionalServiceName, price);
+		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void removeRoom(String bookingReference, String roomType) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		BookingComponent_Booking bookingToRemove = findBooking(bookingReference);
+		if(bookingToRemove.equals("NULL"))
+		{
+			System.out.println("Invalid Reference Number");
+		}
+		else
+		{
+			EList<BookingComponent_RoomType> rooms = bookingToRemove.getRooms();
+			for(int i = 0; i < rooms.size(); ++i)
+			{
+				//Remove only one instance of the room type, not all.
+				if(rooms.get(i).getRoomType().equals(roomType))
+				{
+					rooms.remove(i);
+					return;
+				}
+			}
+		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void removeAddionalService(String bookingReference, String additionalServiceName) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		BookingComponent_Booking additionalServiceToRemove = findBooking(bookingReference);
+		if(additionalServiceToRemove.equals("NULL"))
+		{
+			System.out.println("Invalid Reference Number");
+		}
+		else
+		{
+			EList<BookingComponent_RoomType> additionalServices = additionalServiceToRemove.getRooms();
+			for(int i = 0; i < additionalServices.size(); ++i)
+			{
+				//Remove only one instance of the room type, not all.
+				if(additionalServices.get(i).getRoomType().equals(additionalServiceName))
+				{
+					additionalServices.remove(i);
+					return;
+				}
+			}
+		}
 	}
 
 	/**
@@ -410,12 +454,18 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public void addGuestToBooking(String firstName, String lastName, String address) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public void addGuestToBooking(String bookingReference, String firstName, String lastName, String address) {
+		BookingComponent_Booking bookingToChange = findBooking(bookingReference);
+		if(bookingToChange.equals("NULL"))
+		{
+			System.out.println("Invalid Reference Number");
+		}
+		else
+		{
+			bookingToChange.addGuestToBooking(firstName, lastName, address);
+		}
 	}
 
 	/**
@@ -579,7 +629,7 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___SEARCH_FOR_BOOKING__STRING:
 				return searchForBooking((String)arguments.get(0));
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING:
-				addGuestToBooking((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2));
+				addGuestToBooking((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3));
 				return null;
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___FIND_BOOKING__STRING:
 				return findBooking((String)arguments.get(0));

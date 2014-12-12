@@ -272,7 +272,7 @@ public interface BookingComponent_Booking extends EObject {
 	 * @model
 	 * @generated
 	 */
-	void generateReferenceNumber();
+	String generateReferenceNumber();
 
 	/**
 	 * <!-- begin-user-doc -->

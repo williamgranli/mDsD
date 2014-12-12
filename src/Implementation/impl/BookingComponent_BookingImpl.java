@@ -174,7 +174,7 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 		additionalServices = (EList<BookingComponent_AdditionalService>) new ArrayList<BookingComponent_AdditionalService>();
 		guests = (EList<BookingComponent_BookingGuest>) new ArrayList<BookingComponent_BookingGuest>();
 		rooms = (EList<BookingComponent_RoomType>) new ArrayList<BookingComponent_RoomType>();
-		this.referenceNumber = "NULL";
+		this.referenceNumber = generateReferenceNumber();
 	}
 	
 	protected BookingComponent_BookingImpl(Date arrivalDate, Date departureDate)
@@ -187,7 +187,7 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 		additionalServices = (EList<BookingComponent_AdditionalService>) new ArrayList<BookingComponent_AdditionalService>();
 		guests = (EList<BookingComponent_BookingGuest>) new ArrayList<BookingComponent_BookingGuest>();
 		rooms = (EList<BookingComponent_RoomType>) new ArrayList<BookingComponent_RoomType>();
-		this.referenceNumber = "NULL";
+		this.referenceNumber = generateReferenceNumber();
 	}
 	
 	/**
@@ -207,6 +207,7 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 	public BookingComponent_Booking Booking(Date arrivalDate, Date departureDate) {
 		this.arrivalDate = arrivalDate;
 		this.departureDate = departureDate;
+		generateReferenceNumber();
 		return this;
 	}
 
@@ -216,9 +217,10 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 	 * @generated
 	 */
 	public void addAdditionalServiceToBooking(String newService, int price) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		BookingComponent_AdditionalService newAdditionalService = new BookingComponent_AdditionalServiceImpl();
+		newAdditionalService.setName(newService);
+		newAdditionalService.setCost(price);
+		additionalServices.add(newAdditionalService);
 	}
 
 	/**
@@ -520,33 +522,36 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public void generateReferenceNumber() {
-		this.referenceNumber = "REF#";
+	public String generateReferenceNumber() {
+		String newReference = "REF#";
 		Random rand = new Random();
 		long number = rand.nextInt((999999999 - 0));
-		this.referenceNumber += number;
+		newReference += number;
+		return newReference;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void addGuestToBooking(String firstName, String lastName, String address) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		guests.add(new BookingComponent_BookingGuestImpl(firstName, lastName, address));
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void removeGuestFromBooking(String firstName, String lastName, String address) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		for(BookingComponent_BookingGuest guest : guests)
+		{
+			if(guest.getFirstName().equals(firstName) && guest.getLastName().equals(lastName) && guest.getAddress().equals(address))
+			{
+				guests.remove(guest);
+			}
+		}
 	}
 
 	/**

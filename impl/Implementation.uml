@@ -555,7 +555,11 @@
         <ownedOperation xmi:type="uml:Operation" xmi:id="_gokdznuiEeSz04gN9GtPDA" name="updatePaymentDetails">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_gokdz3uiEeSz04gN9GtPDA" name="newPaymentDetails" type="_eQyG4HuiEeSz04gN9GtPDA"/>
         </ownedOperation>
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_n3Sp4IFPEeSePs36Ha8-Rw" name="generateReferenceNumber"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_n3Sp4IFPEeSePs36Ha8-Rw" name="generateReferenceNumber">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_ywwRQIIUEeSGfvcarZDoCQ" name="referenceNumber" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_m47OEIFYEeSNiOPEdgrO9Q" name="addGuestToBooking">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_ugJeIIFYEeSNiOPEdgrO9Q" name="firstName">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
@@ -767,6 +771,9 @@
           </ownedParameter>
         </ownedOperation>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_AXvh8ICBEeSVsryNkPPRZw" name="addGuestToBooking">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_jN7SAIITEeSGfvcarZDoCQ" name="bookingReference">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_Fb4KMICBEeSVsryNkPPRZw" name="firstName">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedParameter>
