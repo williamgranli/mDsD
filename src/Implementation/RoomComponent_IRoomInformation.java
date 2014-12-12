@@ -43,10 +43,10 @@ public interface RoomComponent_IRoomInformation extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model kind="operation" dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
+	 * @model kind="operation" dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
 	 * @generated
 	 */
-	String getAllRoomNumbers();
+	EList<Integer> getAllRoomNumbers();
 
 	/**
 	 * <!-- begin-user-doc -->

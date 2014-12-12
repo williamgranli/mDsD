@@ -216,10 +216,9 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 	 * @generated
 	 */
 	public void addAdditionalServiceToBooking(String newService, int price) {
-		BookingComponent_AdditionalService newAdditionalService = new BookingComponent_AdditionalServiceImpl();
-		newAdditionalService.setName(newService);
-		newAdditionalService.setCost(price);
-		additionalServices.add(newAdditionalService);
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**

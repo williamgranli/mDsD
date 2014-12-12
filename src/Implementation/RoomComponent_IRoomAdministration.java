@@ -18,18 +18,18 @@ public interface RoomComponent_IRoomAdministration extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model roomNumberDataType="org.eclipse.uml2.types.Integer" roomNumberRequired="true" roomNumberOrdered="false" usableDataType="org.eclipse.uml2.types.Boolean" usableRequired="true" usableOrdered="false" priceDataType="org.eclipse.uml2.types.Integer" priceRequired="true" priceOrdered="false" roomTypeNameDataType="org.eclipse.uml2.types.String" roomTypeNameRequired="true" roomTypeNameOrdered="false" descriptionDataType="org.eclipse.uml2.types.String" descriptionRequired="true" descriptionOrdered="false"
+	 * @model roomNumberDataType="org.eclipse.uml2.types.Integer" roomNumberRequired="true" roomNumberOrdered="false" usableDataType="org.eclipse.uml2.types.Boolean" usableRequired="true" usableOrdered="false" priceDataType="org.eclipse.uml2.types.Integer" priceRequired="true" priceOrdered="false" roomTypeNameDataType="org.eclipse.uml2.types.String" roomTypeNameRequired="true" roomTypeNameOrdered="false" descriptionDataType="org.eclipse.uml2.types.String" descriptionRequired="true" descriptionOrdered="false" bedCountDataType="org.eclipse.uml2.types.Integer" bedCountRequired="true" bedCountOrdered="false"
 	 * @generated
 	 */
-	void createRoom(int roomNumber, boolean usable, int price, String roomTypeName, String description);
+	void createBedRoom(int roomNumber, boolean usable, int price, String roomTypeName, String description, int bedCount);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model roomNumberDataType="org.eclipse.uml2.types.Integer" roomNumberRequired="true" roomNumberOrdered="false" usableDataType="org.eclipse.uml2.types.Boolean" usableRequired="true" usableOrdered="false" priceDataType="org.eclipse.uml2.types.Integer" priceRequired="true" priceOrdered="false" roomTypeNameRequired="true" roomTypeNameOrdered="false" descriptionRequired="true" descriptionOrdered="false"
+	 * @model roomNumberDataType="org.eclipse.uml2.types.Integer" roomNumberRequired="true" roomNumberOrdered="false" usableDataType="org.eclipse.uml2.types.Boolean" usableRequired="true" usableOrdered="false" priceDataType="org.eclipse.uml2.types.Integer" priceRequired="true" priceOrdered="false" roomTypeNameRequired="true" roomTypeNameOrdered="false" descriptionRequired="true" descriptionOrdered="false" bedCountDataType="org.eclipse.uml2.types.Integer" bedCountRequired="true" bedCountOrdered="false"
 	 * @generated
 	 */
-	void editRoom(int roomNumber, boolean usable, int price, String roomTypeName, String description);
+	void editBedRoom(int roomNumber, boolean usable, int price, String roomTypeName, String description, int bedCount);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -38,5 +38,21 @@ public interface RoomComponent_IRoomAdministration extends EObject {
 	 * @generated
 	 */
 	void remove(int roomNumber);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model roomNumberDataType="org.eclipse.uml2.types.Integer" roomNumberRequired="true" roomNumberOrdered="false" usableDataType="org.eclipse.uml2.types.Boolean" usableRequired="true" usableOrdered="false" priceDataType="org.eclipse.uml2.types.Integer" priceRequired="true" priceOrdered="false" roomTypeNameDataType="org.eclipse.uml2.types.String" roomTypeNameRequired="true" roomTypeNameOrdered="false" descriptionDataType="org.eclipse.uml2.types.String" descriptionRequired="true" descriptionOrdered="false" numberOfSeatsDataType="org.eclipse.uml2.types.Integer" numberOfSeatsRequired="true" numberOfSeatsOrdered="false" projectorDataType="org.eclipse.uml2.types.Boolean" projectorRequired="true" projectorOrdered="false" conferencePhoneDataType="org.eclipse.uml2.types.Boolean" conferencePhoneRequired="true" conferencePhoneOrdered="false"
+	 * @generated
+	 */
+	void createConferenceRoom(int roomNumber, boolean usable, int price, String roomTypeName, String description, int numberOfSeats, boolean projector, boolean conferencePhone);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model roomNumberDataType="org.eclipse.uml2.types.Integer" roomNumberRequired="true" roomNumberOrdered="false" usableDataType="org.eclipse.uml2.types.Boolean" usableRequired="true" usableOrdered="false" priceDataType="org.eclipse.uml2.types.Integer" priceRequired="true" priceOrdered="false" roomTypeNameDataType="org.eclipse.uml2.types.String" roomTypeNameRequired="true" roomTypeNameOrdered="false" descriptionDataType="org.eclipse.uml2.types.String" descriptionRequired="true" descriptionOrdered="false" numberOfSeatsDataType="org.eclipse.uml2.types.Integer" numberOfSeatsRequired="true" numberOfSeatsOrdered="false" projectorDataType="org.eclipse.uml2.types.Boolean" projectorRequired="true" projectorOrdered="false" conferencePhoneDataType="org.eclipse.uml2.types.Boolean" conferencePhoneRequired="true" conferencePhoneOrdered="false"
+	 * @generated
+	 */
+	void editConferenceRoom(int roomNumber, boolean usable, int price, String roomTypeName, String description, int numberOfSeats, boolean projector, boolean conferencePhone);
 
 } // RoomComponent_IRoomAdministration

@@ -15,6 +15,7 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link Implementation.RoomComponent_RoomHandler#getAuthenticator <em>Authenticator</em>}</li>
  *   <li>{@link Implementation.RoomComponent_RoomHandler#getRoom <em>Room</em>}</li>
+ *   <li>{@link Implementation.RoomComponent_RoomHandler#getConferenceRoom <em>Conference Room</em>}</li>
  * </ul>
  * </p>
  *
@@ -51,7 +52,7 @@ public interface RoomComponent_RoomHandler extends RoomComponent_IRoomDecision, 
 
 	/**
 	 * Returns the value of the '<em><b>Room</b></em>' reference list.
-	 * The list contents are of type {@link Implementation.RoomComponent_Room}.
+	 * The list contents are of type {@link Implementation.RoomComponent_Bedroom}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Room</em>' reference list isn't clear,
@@ -63,6 +64,32 @@ public interface RoomComponent_RoomHandler extends RoomComponent_IRoomDecision, 
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	EList<RoomComponent_Room> getRoom();
+	EList<RoomComponent_Bedroom> getRoom();
+
+	/**
+	 * Returns the value of the '<em><b>Conference Room</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Conference Room</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Conference Room</em>' reference.
+	 * @see #setConferenceRoom(RoomComponent_ConferenceRoom)
+	 * @see Implementation.ImplementationPackage#getRoomComponent_RoomHandler_ConferenceRoom()
+	 * @model required="true" ordered="false"
+	 * @generated
+	 */
+	RoomComponent_ConferenceRoom getConferenceRoom();
+
+	/**
+	 * Sets the value of the '{@link Implementation.RoomComponent_RoomHandler#getConferenceRoom <em>Conference Room</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Conference Room</em>' reference.
+	 * @see #getConferenceRoom()
+	 * @generated
+	 */
+	void setConferenceRoom(RoomComponent_ConferenceRoom value);
 
 } // RoomComponent_RoomHandler
