@@ -8,3 +8,7 @@ bin/
 *Implementation.ecore
 
 *implementation.ecore
+
+# Sublime project files
+*.sublime-project
+*.sublime-workspace
