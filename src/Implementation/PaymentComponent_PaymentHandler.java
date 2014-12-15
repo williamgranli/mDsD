@@ -2,6 +2,8 @@
  */
 package Implementation;
 
+import org.eclipse.emf.common.util.EList;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -21,29 +23,19 @@ package Implementation;
  */
 public interface PaymentComponent_PaymentHandler extends PaymentComponent_IPayment {
 	/**
-	 * Returns the value of the '<em><b>Payment</b></em>' reference.
+	 * Returns the value of the '<em><b>Payment</b></em>' reference list.
+	 * The list contents are of type {@link Implementation.PaymentComponent_Payment}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Payment</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Payment</em>' reference.
-	 * @see #setPayment(PaymentComponent_Payment)
+	 * @return the value of the '<em>Payment</em>' reference list.
 	 * @see Implementation.ImplementationPackage#getPaymentComponent_PaymentHandler_Payment()
-	 * @model required="true" ordered="false"
+	 * @model ordered="false"
 	 * @generated
 	 */
-	PaymentComponent_Payment getPayment();
-
-	/**
-	 * Sets the value of the '{@link Implementation.PaymentComponent_PaymentHandler#getPayment <em>Payment</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Payment</em>' reference.
-	 * @see #getPayment()
-	 * @generated
-	 */
-	void setPayment(PaymentComponent_Payment value);
+	EList<PaymentComponent_Payment> getPayment();
 
 } // PaymentComponent_PaymentHandler

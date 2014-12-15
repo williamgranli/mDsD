@@ -184,7 +184,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PaymentComponent_PaymentHandler" eSuperTypes="#//PaymentComponent_IPayment">
     <eStructuralFeatures xsi:type="ecore:EReference" name="payment" ordered="false"
-        lowerBound="1" eType="#//PaymentComponent_Payment"/>
+        upperBound="-1" eType="#//PaymentComponent_Payment"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PaymentComponent_Payment">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ccNumber" ordered="false"

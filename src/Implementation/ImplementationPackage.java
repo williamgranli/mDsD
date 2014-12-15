@@ -986,7 +986,7 @@ public interface ImplementationPackage extends EPackage {
 	int PAYMENT_COMPONENT_PAYMENT_HANDLER = 18;
 
 	/**
-	 * The feature id for the '<em><b>Payment</b></em>' reference.
+	 * The feature id for the '<em><b>Payment</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3786,10 +3786,10 @@ public interface ImplementationPackage extends EPackage {
 	EClass getPaymentComponent_PaymentHandler();
 
 	/**
-	 * Returns the meta object for the reference '{@link Implementation.PaymentComponent_PaymentHandler#getPayment <em>Payment</em>}'.
+	 * Returns the meta object for the reference list '{@link Implementation.PaymentComponent_PaymentHandler#getPayment <em>Payment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Payment</em>'.
+	 * @return the meta object for the reference list '<em>Payment</em>'.
 	 * @see Implementation.PaymentComponent_PaymentHandler#getPayment()
 	 * @see #getPaymentComponent_PaymentHandler()
 	 * @generated
@@ -5683,7 +5683,7 @@ public interface ImplementationPackage extends EPackage {
 		EClass PAYMENT_COMPONENT_PAYMENT_HANDLER = eINSTANCE.getPaymentComponent_PaymentHandler();
 
 		/**
-		 * The meta object literal for the '<em><b>Payment</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Payment</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

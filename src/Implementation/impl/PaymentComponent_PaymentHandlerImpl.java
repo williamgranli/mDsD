@@ -6,12 +6,11 @@ import Implementation.ImplementationPackage;
 import Implementation.PaymentComponent_Payment;
 import Implementation.PaymentComponent_PaymentHandler;
 import java.lang.reflect.InvocationTargetException;
-import org.eclipse.emf.common.notify.Notification;
+import java.util.Collection;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,14 +27,14 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  */
 public class PaymentComponent_PaymentHandlerImpl extends MinimalEObjectImpl.Container implements PaymentComponent_PaymentHandler {
 	/**
-	 * The cached value of the '{@link #getPayment() <em>Payment</em>}' reference.
+	 * The cached value of the '{@link #getPayment() <em>Payment</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getPayment()
 	 * @generated
 	 * @ordered
 	 */
-	protected PaymentComponent_Payment payment;
+	protected EList<PaymentComponent_Payment> payment;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -61,37 +60,11 @@ public class PaymentComponent_PaymentHandlerImpl extends MinimalEObjectImpl.Cont
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PaymentComponent_Payment getPayment() {
-		if (payment != null && payment.eIsProxy()) {
-			InternalEObject oldPayment = (InternalEObject)payment;
-			payment = (PaymentComponent_Payment)eResolveProxy(oldPayment);
-			if (payment != oldPayment) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ImplementationPackage.PAYMENT_COMPONENT_PAYMENT_HANDLER__PAYMENT, oldPayment, payment));
-			}
+	public EList<PaymentComponent_Payment> getPayment() {
+		if (payment == null) {
+			payment = new EObjectResolvingEList<PaymentComponent_Payment>(PaymentComponent_Payment.class, this, ImplementationPackage.PAYMENT_COMPONENT_PAYMENT_HANDLER__PAYMENT);
 		}
 		return payment;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public PaymentComponent_Payment basicGetPayment() {
-		return payment;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setPayment(PaymentComponent_Payment newPayment) {
-		PaymentComponent_Payment oldPayment = payment;
-		payment = newPayment;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ImplementationPackage.PAYMENT_COMPONENT_PAYMENT_HANDLER__PAYMENT, oldPayment, payment));
 	}
 
 	/**
@@ -125,8 +98,7 @@ public class PaymentComponent_PaymentHandlerImpl extends MinimalEObjectImpl.Cont
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case ImplementationPackage.PAYMENT_COMPONENT_PAYMENT_HANDLER__PAYMENT:
-				if (resolve) return getPayment();
-				return basicGetPayment();
+				return getPayment();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -136,11 +108,13 @@ public class PaymentComponent_PaymentHandlerImpl extends MinimalEObjectImpl.Cont
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case ImplementationPackage.PAYMENT_COMPONENT_PAYMENT_HANDLER__PAYMENT:
-				setPayment((PaymentComponent_Payment)newValue);
+				getPayment().clear();
+				getPayment().addAll((Collection<? extends PaymentComponent_Payment>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -155,7 +129,7 @@ public class PaymentComponent_PaymentHandlerImpl extends MinimalEObjectImpl.Cont
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case ImplementationPackage.PAYMENT_COMPONENT_PAYMENT_HANDLER__PAYMENT:
-				setPayment((PaymentComponent_Payment)null);
+				getPayment().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -170,7 +144,7 @@ public class PaymentComponent_PaymentHandlerImpl extends MinimalEObjectImpl.Cont
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case ImplementationPackage.PAYMENT_COMPONENT_PAYMENT_HANDLER__PAYMENT:
-				return payment != null;
+				return payment != null && !payment.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

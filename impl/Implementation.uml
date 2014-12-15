@@ -261,8 +261,8 @@
       </nestedClassifier>
       <nestedClassifier xmi:type="uml:Class" xmi:id="_ZEjQEIRJEeSMS5FZ7DY3uw" name="PaymentHandler">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_j_6xcIRJEeSMS5FZ7DY3uw" name="payment" type="_Z6ZS8IRJEeSMS5FZ7DY3uw" association="_j_7YgIRJEeSMS5FZ7DY3uw">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_j_6xcYRJEeSMS5FZ7DY3uw" value="1"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_j_6xcoRJEeSMS5FZ7DY3uw" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_j_6xcYRJEeSMS5FZ7DY3uw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_j_6xcoRJEeSMS5FZ7DY3uw" value="*"/>
         </ownedAttribute>
         <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_jVMZcIRJEeSMS5FZ7DY3uw" client="_ZEjQEIRJEeSMS5FZ7DY3uw" supplier="_XioxYIRJEeSMS5FZ7DY3uw" contract="_XioxYIRJEeSMS5FZ7DY3uw"/>
       </nestedClassifier>
@@ -297,7 +297,6 @@
         </ownedEnd>
       </nestedClassifier>
       <nestedClassifier xmi:type="uml:Association" xmi:id="_j_7YgIRJEeSMS5FZ7DY3uw" memberEnd="_j_7YgYRJEeSMS5FZ7DY3uw _j_6xcIRJEeSMS5FZ7DY3uw">
-        <name xsi:nil="true"/>
         <ownedEnd xmi:type="uml:Property" xmi:id="_j_7YgYRJEeSMS5FZ7DY3uw" name="paymentHandler" type="_ZEjQEIRJEeSMS5FZ7DY3uw" association="_j_7YgIRJEeSMS5FZ7DY3uw">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_j_7YgoRJEeSMS5FZ7DY3uw" value="1"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_j_7Yg4RJEeSMS5FZ7DY3uw" value="1"/>
