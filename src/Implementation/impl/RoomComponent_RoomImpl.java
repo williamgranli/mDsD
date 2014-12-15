@@ -144,7 +144,7 @@ public class RoomComponent_RoomImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	protected RoomComponent_RoomImpl() {
+	protected RoomComponent_RoomImpl(int roomNumber, boolean usable, int price, String roomTypeName, String description) {
 		super();
 		this.setRoomNumber(roomNumber);
 		this.setUsable(usable);
