@@ -190,6 +190,18 @@ public class ImplementationSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ImplementationPackage.BANK_CUSTOMER_PROVIDES: {
+				Bank_CustomerProvides bank_CustomerProvides = (Bank_CustomerProvides)theEObject;
+				T result = caseBank_CustomerProvides(bank_CustomerProvides);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ImplementationPackage.BANK_ADMINISTRATOR_PROVIDES: {
+				Bank_AdministratorProvides bank_AdministratorProvides = (Bank_AdministratorProvides)theEObject;
+				T result = caseBank_AdministratorProvides(bank_AdministratorProvides);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT: {
 				AdditionalServiceComponent additionalServiceComponent = (AdditionalServiceComponent)theEObject;
 				T result = caseAdditionalServiceComponent(additionalServiceComponent);
@@ -343,6 +355,12 @@ public class ImplementationSwitch<T> extends Switch<T> {
 				if (result == null) result = caseRoomComponent_IRoomDecision(roomComponent_RoomHandler);
 				if (result == null) result = caseRoomComponent_IRoomInformation(roomComponent_RoomHandler);
 				if (result == null) result = caseRoomComponent_IRoomAdministration(roomComponent_RoomHandler);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ImplementationPackage.BANK: {
+				Bank bank = (Bank)theEObject;
+				T result = caseBank(bank);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -617,6 +635,36 @@ public class ImplementationSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T casePaymentComponent_Payment(PaymentComponent_Payment object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Bank Customer Provides</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Bank Customer Provides</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseBank_CustomerProvides(Bank_CustomerProvides object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Bank Administrator Provides</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Bank Administrator Provides</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseBank_AdministratorProvides(Bank_AdministratorProvides object) {
 		return null;
 	}
 
@@ -1007,6 +1055,21 @@ public class ImplementationSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseRoomComponent_RoomHandler(RoomComponent_RoomHandler object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Bank</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Bank</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseBank(Bank object) {
 		return null;
 	}
 

@@ -148,6 +148,14 @@ public class ImplementationAdapterFactory extends AdapterFactoryImpl {
 				return createPaymentComponent_PaymentAdapter();
 			}
 			@Override
+			public Adapter caseBank_CustomerProvides(Bank_CustomerProvides object) {
+				return createBank_CustomerProvidesAdapter();
+			}
+			@Override
+			public Adapter caseBank_AdministratorProvides(Bank_AdministratorProvides object) {
+				return createBank_AdministratorProvidesAdapter();
+			}
+			@Override
 			public Adapter caseAdditionalServiceComponent(AdditionalServiceComponent object) {
 				return createAdditionalServiceComponentAdapter();
 			}
@@ -242,6 +250,10 @@ public class ImplementationAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseRoomComponent_RoomHandler(RoomComponent_RoomHandler object) {
 				return createRoomComponent_RoomHandlerAdapter();
+			}
+			@Override
+			public Adapter caseBank(Bank object) {
+				return createBankAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -512,6 +524,34 @@ public class ImplementationAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createPaymentComponent_PaymentAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link Implementation.Bank_CustomerProvides <em>Bank Customer Provides</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see Implementation.Bank_CustomerProvides
+	 * @generated
+	 */
+	public Adapter createBank_CustomerProvidesAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link Implementation.Bank_AdministratorProvides <em>Bank Administrator Provides</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see Implementation.Bank_AdministratorProvides
+	 * @generated
+	 */
+	public Adapter createBank_AdministratorProvidesAdapter() {
 		return null;
 	}
 
@@ -876,6 +916,20 @@ public class ImplementationAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createRoomComponent_RoomHandlerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link Implementation.Bank <em>Bank</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see Implementation.Bank
+	 * @generated
+	 */
+	public Adapter createBankAdapter() {
 		return null;
 	}
 

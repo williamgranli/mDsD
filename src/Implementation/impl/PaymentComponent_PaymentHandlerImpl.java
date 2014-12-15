@@ -2,13 +2,27 @@
  */
 package Implementation.impl;
 
+//banking
+import javax.xml.soap.SOAPException;
+import se.chalmers.cse.mdsd1415.banking.customerRequires.*;
+import se.chalmers.cse.mdsd1415.banking.administratorRequires.*;
+
+
+import Implementation.Bank_AdministratorProvides;
+import Implementation.Bank_CustomerProvides;
+import Implementation.CustomerProvides;
 import Implementation.ImplementationPackage;
 import Implementation.PaymentComponent_Payment;
 import Implementation.PaymentComponent_PaymentHandler;
+
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
+
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
@@ -20,6 +34,8 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * The following features are implemented:
  * <ul>
  *   <li>{@link Implementation.impl.PaymentComponent_PaymentHandlerImpl#getPayment <em>Payment</em>}</li>
+ *   <li>{@link Implementation.impl.PaymentComponent_PaymentHandlerImpl#getCustomerProvides <em>Customer Provides</em>}</li>
+ *   <li>{@link Implementation.impl.PaymentComponent_PaymentHandlerImpl#getAdministratorProvides <em>Administrator Provides</em>}</li>
  * </ul>
  * </p>
  *
@@ -37,12 +53,34 @@ public class PaymentComponent_PaymentHandlerImpl extends MinimalEObjectImpl.Cont
 	protected EList<PaymentComponent_Payment> payment;
 
 	/**
+	 * The cached value of the '{@link #getCustomerProvides() <em>Customer Provides</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCustomerProvides()
+	 * @generated
+	 * @ordered
+	 */
+	protected Bank_CustomerProvides customerProvides;
+	/**
+	 * The cached value of the '{@link #getAdministratorProvides() <em>Administrator Provides</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAdministratorProvides()
+	 * @generated
+	 * @ordered
+	 */
+	protected Bank_AdministratorProvides administratorProvides;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	protected PaymentComponent_PaymentHandlerImpl() {
 		super();
+
+				
+		
 	}
 
 	/**
@@ -72,10 +110,16 @@ public class PaymentComponent_PaymentHandlerImpl extends MinimalEObjectImpl.Cont
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean makePayment(String ccNumber, String ccv, String expiryYear, String expiryMonth, String firstName, String lastName, double price) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public Bank_CustomerProvides getCustomerProvides() {
+		if (customerProvides != null && customerProvides.eIsProxy()) {
+			InternalEObject oldCustomerProvides = (InternalEObject)customerProvides;
+			customerProvides = (Bank_CustomerProvides)eResolveProxy(oldCustomerProvides);
+			if (customerProvides != oldCustomerProvides) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ImplementationPackage.PAYMENT_COMPONENT_PAYMENT_HANDLER__CUSTOMER_PROVIDES, oldCustomerProvides, customerProvides));
+			}
+		}
+		return customerProvides;
 	}
 
 	/**
@@ -83,10 +127,116 @@ public class PaymentComponent_PaymentHandlerImpl extends MinimalEObjectImpl.Cont
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Bank_CustomerProvides basicGetCustomerProvides() {
+		return customerProvides;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCustomerProvides(Bank_CustomerProvides newCustomerProvides) {
+		Bank_CustomerProvides oldCustomerProvides = customerProvides;
+		customerProvides = newCustomerProvides;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ImplementationPackage.PAYMENT_COMPONENT_PAYMENT_HANDLER__CUSTOMER_PROVIDES, oldCustomerProvides, customerProvides));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Bank_AdministratorProvides getAdministratorProvides() {
+		if (administratorProvides != null && administratorProvides.eIsProxy()) {
+			InternalEObject oldAdministratorProvides = (InternalEObject)administratorProvides;
+			administratorProvides = (Bank_AdministratorProvides)eResolveProxy(oldAdministratorProvides);
+			if (administratorProvides != oldAdministratorProvides) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ImplementationPackage.PAYMENT_COMPONENT_PAYMENT_HANDLER__ADMINISTRATOR_PROVIDES, oldAdministratorProvides, administratorProvides));
+			}
+		}
+		return administratorProvides;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Bank_AdministratorProvides basicGetAdministratorProvides() {
+		return administratorProvides;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAdministratorProvides(Bank_AdministratorProvides newAdministratorProvides) {
+		Bank_AdministratorProvides oldAdministratorProvides = administratorProvides;
+		administratorProvides = newAdministratorProvides;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ImplementationPackage.PAYMENT_COMPONENT_PAYMENT_HANDLER__ADMINISTRATOR_PROVIDES, oldAdministratorProvides, administratorProvides));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public boolean makePayment(String ccNumber, String ccv, String expiryYear, String expiryMonth, String firstName, String lastName, double price) {
+		// CustomerRequires interface
+		try {
+			// Acquire CustomerRequires object
+			se.chalmers.cse.mdsd1415.banking.customerRequires.CustomerRequires banking = se.chalmers.cse.mdsd1415.banking.customerRequires.CustomerRequires
+					.instance();
+
+			// Make a payment
+			if (banking.makePayment(ccNumber, ccv, expiryYear, expiryMonth, firstName, lastName,
+					price)) {
+				System.out.println("Payment of 25.50 successfully processed");
+			} else {
+				System.out
+						.println("Payment failed - invalid credit card or insufficient credit");
+			}
+
+		} catch (SOAPException e) {
+			System.err
+					.println("Error occurred while communicating with the bank");
+			e.printStackTrace();
+		}
+
+		
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
 	public boolean validateCC(String ccNumber, String ccv, String expiryYear, String expiryMonth, String firstName, String lastName, double price) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		try {
+			// Acquire CustomerRequires object
+			se.chalmers.cse.mdsd1415.banking.customerRequires.CustomerRequires banking = se.chalmers.cse.mdsd1415.banking.customerRequires.CustomerRequires
+					.instance();
+			
+			// Check for credit card validity
+			if (banking.isCreditCardValid(ccNumber, ccv, expiryYear, expiryMonth, firstName,
+					lastName)) {
+				System.out.println("Valid credit card");
+				return true;
+			} else {
+				System.out.println("Invalid credit card");
+				return false;
+			}
+
+		} catch (SOAPException e) {
+			System.err
+					.println("Error occurred while communicating with the bank");
+			e.printStackTrace();
+		}
 	}
 
 	/**
@@ -99,6 +249,12 @@ public class PaymentComponent_PaymentHandlerImpl extends MinimalEObjectImpl.Cont
 		switch (featureID) {
 			case ImplementationPackage.PAYMENT_COMPONENT_PAYMENT_HANDLER__PAYMENT:
 				return getPayment();
+			case ImplementationPackage.PAYMENT_COMPONENT_PAYMENT_HANDLER__CUSTOMER_PROVIDES:
+				if (resolve) return getCustomerProvides();
+				return basicGetCustomerProvides();
+			case ImplementationPackage.PAYMENT_COMPONENT_PAYMENT_HANDLER__ADMINISTRATOR_PROVIDES:
+				if (resolve) return getAdministratorProvides();
+				return basicGetAdministratorProvides();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -116,6 +272,12 @@ public class PaymentComponent_PaymentHandlerImpl extends MinimalEObjectImpl.Cont
 				getPayment().clear();
 				getPayment().addAll((Collection<? extends PaymentComponent_Payment>)newValue);
 				return;
+			case ImplementationPackage.PAYMENT_COMPONENT_PAYMENT_HANDLER__CUSTOMER_PROVIDES:
+				setCustomerProvides((Bank_CustomerProvides)newValue);
+				return;
+			case ImplementationPackage.PAYMENT_COMPONENT_PAYMENT_HANDLER__ADMINISTRATOR_PROVIDES:
+				setAdministratorProvides((Bank_AdministratorProvides)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -131,6 +293,12 @@ public class PaymentComponent_PaymentHandlerImpl extends MinimalEObjectImpl.Cont
 			case ImplementationPackage.PAYMENT_COMPONENT_PAYMENT_HANDLER__PAYMENT:
 				getPayment().clear();
 				return;
+			case ImplementationPackage.PAYMENT_COMPONENT_PAYMENT_HANDLER__CUSTOMER_PROVIDES:
+				setCustomerProvides((Bank_CustomerProvides)null);
+				return;
+			case ImplementationPackage.PAYMENT_COMPONENT_PAYMENT_HANDLER__ADMINISTRATOR_PROVIDES:
+				setAdministratorProvides((Bank_AdministratorProvides)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -145,6 +313,10 @@ public class PaymentComponent_PaymentHandlerImpl extends MinimalEObjectImpl.Cont
 		switch (featureID) {
 			case ImplementationPackage.PAYMENT_COMPONENT_PAYMENT_HANDLER__PAYMENT:
 				return payment != null && !payment.isEmpty();
+			case ImplementationPackage.PAYMENT_COMPONENT_PAYMENT_HANDLER__CUSTOMER_PROVIDES:
+				return customerProvides != null;
+			case ImplementationPackage.PAYMENT_COMPONENT_PAYMENT_HANDLER__ADMINISTRATOR_PROVIDES:
+				return administratorProvides != null;
 		}
 		return super.eIsSet(featureID);
 	}

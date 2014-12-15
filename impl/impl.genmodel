@@ -193,6 +193,10 @@
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//PaymentComponent_PaymentHandler">
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
           propertySortChoices="true" ecoreFeature="ecore:EReference Implementation.ecore#//PaymentComponent_PaymentHandler/payment"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference Implementation.ecore#//PaymentComponent_PaymentHandler/customerProvides"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference Implementation.ecore#//PaymentComponent_PaymentHandler/administratorProvides"/>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//PaymentComponent_Payment">
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//PaymentComponent_Payment/ccNumber"/>
@@ -202,6 +206,60 @@
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//PaymentComponent_Payment/expiryMonth"/>
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//PaymentComponent_Payment/expiryYear"/>
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//PaymentComponent_Payment/price"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Implementation.ecore#//Bank_CustomerProvides">
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//Bank_CustomerProvides/makePayment">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//Bank_CustomerProvides/makePayment/ccNumber"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//Bank_CustomerProvides/makePayment/ccv"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//Bank_CustomerProvides/makePayment/expiryMonth"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//Bank_CustomerProvides/makePayment/expiryYear"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//Bank_CustomerProvides/makePayment/firstName"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//Bank_CustomerProvides/makePayment/lastName"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//Bank_CustomerProvides/makePayment/sum"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//Bank_CustomerProvides/isCreditCardValid">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//Bank_CustomerProvides/isCreditCardValid/ccNumber"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//Bank_CustomerProvides/isCreditCardValid/ccv"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//Bank_CustomerProvides/isCreditCardValid/expiryMonth"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//Bank_CustomerProvides/isCreditCardValid/expiryYear"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//Bank_CustomerProvides/isCreditCardValid/firstName"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//Bank_CustomerProvides/isCreditCardValid/lastName"/>
+      </genOperations>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Implementation.ecore#//Bank_AdministratorProvides">
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//Bank_AdministratorProvides/makeDeposit">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//Bank_AdministratorProvides/makeDeposit/ccNumber"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//Bank_AdministratorProvides/makeDeposit/ccv"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//Bank_AdministratorProvides/makeDeposit/expiryMonth"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//Bank_AdministratorProvides/makeDeposit/expiryYear"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//Bank_AdministratorProvides/makeDeposit/firstName"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//Bank_AdministratorProvides/makeDeposit/lastName"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//Bank_AdministratorProvides/makeDeposit/sum"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//Bank_AdministratorProvides/addCreditCard">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//Bank_AdministratorProvides/addCreditCard/ccNumber"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//Bank_AdministratorProvides/addCreditCard/ccv"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//Bank_AdministratorProvides/addCreditCard/expiryMonth"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//Bank_AdministratorProvides/addCreditCard/expiryYear"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//Bank_AdministratorProvides/addCreditCard/firstName"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//Bank_AdministratorProvides/addCreditCard/lastName"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//Bank_AdministratorProvides/removeCreditCard">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//Bank_AdministratorProvides/removeCreditCard/ccNumber"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//Bank_AdministratorProvides/removeCreditCard/ccv"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//Bank_AdministratorProvides/removeCreditCard/expiryMonth"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//Bank_AdministratorProvides/removeCreditCard/expiryYear"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//Bank_AdministratorProvides/removeCreditCard/firstName"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//Bank_AdministratorProvides/removeCreditCard/lastName"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//Bank_AdministratorProvides/getBalance">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//Bank_AdministratorProvides/getBalance/ccNumber"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//Bank_AdministratorProvides/getBalance/ccv"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//Bank_AdministratorProvides/getBalance/expiryMonth"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//Bank_AdministratorProvides/getBalance/expiryYear"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//Bank_AdministratorProvides/getBalance/firstName"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//Bank_AdministratorProvides/getBalance/lastName"/>
+      </genOperations>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//AdditionalServiceComponent"/>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//AdditionalServiceComponent_AdditionalService">
@@ -516,6 +574,7 @@
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
           propertySortChoices="true" ecoreFeature="ecore:EReference Implementation.ecore#//RoomComponent_RoomHandler/conferenceRooms"/>
     </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//Bank"/>
   </genPackages>
   <genPackages xsi:type="genmodel:GenPackage" prefix="Types" basePackage="org.eclipse.uml2"
       disposableProviderFactory="true" ecorePackage="types.ecore#/">

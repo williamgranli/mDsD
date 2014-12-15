@@ -9,6 +9,9 @@ import Implementation.AdditionalServiceComponent_AdditionalServiceHandler;
 import Implementation.AdditionalServiceComponent_IAdditionalServiceAdministration;
 import Implementation.AdditionalServiceComponent_IAdditionalServiceDecision;
 import Implementation.AdditionalServiceComponent_IAdditionalServiceInformation;
+import Implementation.Bank;
+import Implementation.Bank_AdministratorProvides;
+import Implementation.Bank_CustomerProvides;
 import Implementation.BookingComponent;
 import Implementation.BookingComponent_AdditionalService;
 import Implementation.BookingComponent_Booking;
@@ -195,6 +198,20 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass bank_CustomerProvidesEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass bank_AdministratorProvidesEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass paymentComponent_IPaymentEClass = null;
 
 	/**
@@ -371,6 +388,13 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * @generated
 	 */
 	private EClass roomComponent_RoomHandlerEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass bankEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -1019,6 +1043,78 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getBank_CustomerProvides() {
+		return bank_CustomerProvidesEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getBank_CustomerProvides__MakePayment__String_String_int_int_String_String_double() {
+		return bank_CustomerProvidesEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getBank_CustomerProvides__IsCreditCardValid__String_String_int_int_String_String() {
+		return bank_CustomerProvidesEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getBank_AdministratorProvides() {
+		return bank_AdministratorProvidesEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getBank_AdministratorProvides__MakeDeposit__String_String_int_int_String_String_double() {
+		return bank_AdministratorProvidesEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getBank_AdministratorProvides__AddCreditCard__String_String_int_int_String_String() {
+		return bank_AdministratorProvidesEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getBank_AdministratorProvides__RemoveCreditCard__String_String_int_int_String_String() {
+		return bank_AdministratorProvidesEClass.getEOperations().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getBank_AdministratorProvides__GetBalance__String_String_int_int_String_String() {
+		return bank_AdministratorProvidesEClass.getEOperations().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getPaymentComponent_IPayment() {
 		return paymentComponent_IPaymentEClass;
 	}
@@ -1057,6 +1153,24 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 */
 	public EReference getPaymentComponent_PaymentHandler_Payment() {
 		return (EReference)paymentComponent_PaymentHandlerEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getPaymentComponent_PaymentHandler_CustomerProvides() {
+		return (EReference)paymentComponent_PaymentHandlerEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getPaymentComponent_PaymentHandler_AdministratorProvides() {
+		return (EReference)paymentComponent_PaymentHandlerEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -2162,6 +2276,15 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getBank() {
+		return bankEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ImplementationFactory getImplementationFactory() {
 		return (ImplementationFactory)getEFactoryInstance();
 	}
@@ -2264,6 +2387,8 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 
 		paymentComponent_PaymentHandlerEClass = createEClass(PAYMENT_COMPONENT_PAYMENT_HANDLER);
 		createEReference(paymentComponent_PaymentHandlerEClass, PAYMENT_COMPONENT_PAYMENT_HANDLER__PAYMENT);
+		createEReference(paymentComponent_PaymentHandlerEClass, PAYMENT_COMPONENT_PAYMENT_HANDLER__CUSTOMER_PROVIDES);
+		createEReference(paymentComponent_PaymentHandlerEClass, PAYMENT_COMPONENT_PAYMENT_HANDLER__ADMINISTRATOR_PROVIDES);
 
 		paymentComponent_PaymentEClass = createEClass(PAYMENT_COMPONENT_PAYMENT);
 		createEAttribute(paymentComponent_PaymentEClass, PAYMENT_COMPONENT_PAYMENT__CC_NUMBER);
@@ -2273,6 +2398,16 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		createEAttribute(paymentComponent_PaymentEClass, PAYMENT_COMPONENT_PAYMENT__EXPIRY_MONTH);
 		createEAttribute(paymentComponent_PaymentEClass, PAYMENT_COMPONENT_PAYMENT__EXPIRY_YEAR);
 		createEAttribute(paymentComponent_PaymentEClass, PAYMENT_COMPONENT_PAYMENT__PRICE);
+
+		bank_CustomerProvidesEClass = createEClass(BANK_CUSTOMER_PROVIDES);
+		createEOperation(bank_CustomerProvidesEClass, BANK_CUSTOMER_PROVIDES___MAKE_PAYMENT__STRING_STRING_INT_INT_STRING_STRING_DOUBLE);
+		createEOperation(bank_CustomerProvidesEClass, BANK_CUSTOMER_PROVIDES___IS_CREDIT_CARD_VALID__STRING_STRING_INT_INT_STRING_STRING);
+
+		bank_AdministratorProvidesEClass = createEClass(BANK_ADMINISTRATOR_PROVIDES);
+		createEOperation(bank_AdministratorProvidesEClass, BANK_ADMINISTRATOR_PROVIDES___MAKE_DEPOSIT__STRING_STRING_INT_INT_STRING_STRING_DOUBLE);
+		createEOperation(bank_AdministratorProvidesEClass, BANK_ADMINISTRATOR_PROVIDES___ADD_CREDIT_CARD__STRING_STRING_INT_INT_STRING_STRING);
+		createEOperation(bank_AdministratorProvidesEClass, BANK_ADMINISTRATOR_PROVIDES___REMOVE_CREDIT_CARD__STRING_STRING_INT_INT_STRING_STRING);
+		createEOperation(bank_AdministratorProvidesEClass, BANK_ADMINISTRATOR_PROVIDES___GET_BALANCE__STRING_STRING_INT_INT_STRING_STRING);
 
 		additionalServiceComponentEClass = createEClass(ADDITIONAL_SERVICE_COMPONENT);
 
@@ -2419,6 +2554,8 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		createEReference(roomComponent_RoomHandlerEClass, ROOM_COMPONENT_ROOM_HANDLER__AUTHENTICATOR);
 		createEReference(roomComponent_RoomHandlerEClass, ROOM_COMPONENT_ROOM_HANDLER__BED_ROOMS);
 		createEReference(roomComponent_RoomHandlerEClass, ROOM_COMPONENT_ROOM_HANDLER__CONFERENCE_ROOMS);
+
+		bankEClass = createEClass(BANK);
 	}
 
 	/**
@@ -2635,6 +2772,8 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 
 		initEClass(paymentComponent_PaymentHandlerEClass, PaymentComponent_PaymentHandler.class, "PaymentComponent_PaymentHandler", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPaymentComponent_PaymentHandler_Payment(), this.getPaymentComponent_Payment(), null, "payment", null, 0, -1, PaymentComponent_PaymentHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getPaymentComponent_PaymentHandler_CustomerProvides(), this.getBank_CustomerProvides(), null, "customerProvides", null, 1, 1, PaymentComponent_PaymentHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getPaymentComponent_PaymentHandler_AdministratorProvides(), this.getBank_AdministratorProvides(), null, "administratorProvides", null, 1, 1, PaymentComponent_PaymentHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(paymentComponent_PaymentEClass, PaymentComponent_Payment.class, "PaymentComponent_Payment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPaymentComponent_Payment_CcNumber(), theTypesPackage.getString(), "ccNumber", null, 1, 1, PaymentComponent_Payment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -2644,6 +2783,60 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		initEAttribute(getPaymentComponent_Payment_ExpiryMonth(), theTypesPackage.getString(), "expiryMonth", null, 1, 1, PaymentComponent_Payment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getPaymentComponent_Payment_ExpiryYear(), theTypesPackage.getString(), "expiryYear", null, 1, 1, PaymentComponent_Payment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getPaymentComponent_Payment_Price(), ecorePackage.getEDouble(), "price", null, 1, 1, PaymentComponent_Payment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(bank_CustomerProvidesEClass, Bank_CustomerProvides.class, "Bank_CustomerProvides", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		op = initEOperation(getBank_CustomerProvides__MakePayment__String_String_int_int_String_String_double(), ecorePackage.getEBoolean(), "makePayment", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "ccNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "ccv", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "expiryMonth", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "expiryYear", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "firstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "lastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDouble(), "sum", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getBank_CustomerProvides__IsCreditCardValid__String_String_int_int_String_String(), ecorePackage.getEBoolean(), "isCreditCardValid", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "ccNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "ccv", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "expiryMonth", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "expiryYear", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "firstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "lastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		initEClass(bank_AdministratorProvidesEClass, Bank_AdministratorProvides.class, "Bank_AdministratorProvides", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		op = initEOperation(getBank_AdministratorProvides__MakeDeposit__String_String_int_int_String_String_double(), ecorePackage.getEDouble(), "makeDeposit", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "ccNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "ccv", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "expiryMonth", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "expiryYear", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "firstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "lastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDouble(), "sum", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getBank_AdministratorProvides__AddCreditCard__String_String_int_int_String_String(), ecorePackage.getEBoolean(), "addCreditCard", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "ccNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "ccv", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "expiryMonth", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "expiryYear", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "firstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "lastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getBank_AdministratorProvides__RemoveCreditCard__String_String_int_int_String_String(), ecorePackage.getEBoolean(), "removeCreditCard", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "ccNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "ccv", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "expiryMonth", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "expiryYear", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "firstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "lastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getBank_AdministratorProvides__GetBalance__String_String_int_int_String_String(), ecorePackage.getEDouble(), "getBalance", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "ccNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "ccv", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "expiryMonth", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "expiryYear", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "firstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "lastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(additionalServiceComponentEClass, AdditionalServiceComponent.class, "AdditionalServiceComponent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -2947,6 +3140,8 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		initEReference(getRoomComponent_RoomHandler_Authenticator(), this.getStaffComponent_IAuthentication(), null, "authenticator", null, 1, 1, RoomComponent_RoomHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getRoomComponent_RoomHandler_BedRooms(), this.getRoomComponent_Bedroom(), null, "bedRooms", null, 0, -1, RoomComponent_RoomHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getRoomComponent_RoomHandler_ConferenceRooms(), this.getRoomComponent_ConferenceRoom(), null, "conferenceRooms", null, 0, -1, RoomComponent_RoomHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(bankEClass, Bank.class, "Bank", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

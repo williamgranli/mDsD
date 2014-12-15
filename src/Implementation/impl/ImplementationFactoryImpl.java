@@ -86,6 +86,7 @@ public class ImplementationFactoryImpl extends EFactoryImpl implements Implement
 			case ImplementationPackage.ROOM_COMPONENT_BEDROOM: return createRoomComponent_Bedroom();
 			case ImplementationPackage.ROOM_COMPONENT_CONFERENCE_ROOM: return createRoomComponent_ConferenceRoom();
 			case ImplementationPackage.ROOM_COMPONENT_ROOM_HANDLER: return createRoomComponent_RoomHandler();
+			case ImplementationPackage.BANK: return createBank();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -389,6 +390,16 @@ public class ImplementationFactoryImpl extends EFactoryImpl implements Implement
 	public RoomComponent_RoomHandler createRoomComponent_RoomHandler() {
 		RoomComponent_RoomHandlerImpl roomComponent_RoomHandler = new RoomComponent_RoomHandlerImpl();
 		return roomComponent_RoomHandler;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Bank createBank() {
+		BankImpl bank = new BankImpl();
+		return bank;
 	}
 
 	/**

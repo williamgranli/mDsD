@@ -292,6 +292,15 @@ public interface ImplementationFactory extends EFactory {
 	RoomComponent_RoomHandler createRoomComponent_RoomHandler();
 
 	/**
+	 * Returns a new object of class '<em>Bank</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Bank</em>'.
+	 * @generated
+	 */
+	Bank createBank();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
