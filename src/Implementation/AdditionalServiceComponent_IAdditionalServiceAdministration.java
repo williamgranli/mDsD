@@ -43,18 +43,18 @@ public interface AdditionalServiceComponent_IAdditionalServiceAdministration ext
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model nameDataType="org.eclipse.uml2.types.String" nameRequired="true" nameOrdered="false" dateTimeRequired="true" dateTimeOrdered="false" locationDataType="org.eclipse.uml2.types.String" locationRequired="true" locationOrdered="false" maxAttendantsDataType="org.eclipse.uml2.types.Integer" maxAttendantsRequired="true" maxAttendantsOrdered="false" currentAttendantsDataType="org.eclipse.uml2.types.Integer" currentAttendantsRequired="true" currentAttendantsOrdered="false" returnValueDataType="org.eclipse.uml2.types.Boolean" returnValueRequired="true" returnValueOrdered="false"
+	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false" nameDataType="org.eclipse.uml2.types.String" nameRequired="true" nameOrdered="false" dateTimeRequired="true" dateTimeOrdered="false" locationDataType="org.eclipse.uml2.types.String" locationRequired="true" locationOrdered="false" maxAttendantsDataType="org.eclipse.uml2.types.Integer" maxAttendantsRequired="true" maxAttendantsOrdered="false" currentAttendantsDataType="org.eclipse.uml2.types.Integer" currentAttendantsRequired="true" currentAttendantsOrdered="false"
 	 * @generated
 	 */
-	void createEvent(String name, Date dateTime, String location, int maxAttendants, int currentAttendants, boolean returnValue);
+	boolean createEvent(String name, Date dateTime, String location, int maxAttendants, int currentAttendants);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model nameDataType="org.eclipse.uml2.types.String" nameRequired="true" nameOrdered="false" dateTimeRequired="true" dateTimeOrdered="false" locationDataType="org.eclipse.uml2.types.String" locationRequired="true" locationOrdered="false" maxAttendantsDataType="org.eclipse.uml2.types.Integer" maxAttendantsRequired="true" maxAttendantsOrdered="false" currentAttendantsDataType="org.eclipse.uml2.types.Integer" currentAttendantsRequired="true" currentAttendantsOrdered="false" returnValueDataType="org.eclipse.uml2.types.Boolean" returnValueRequired="true" returnValueOrdered="false"
+	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false" nameDataType="org.eclipse.uml2.types.String" nameRequired="true" nameOrdered="false" dateTimeRequired="true" dateTimeOrdered="false" locationDataType="org.eclipse.uml2.types.String" locationRequired="true" locationOrdered="false" maxAttendantsDataType="org.eclipse.uml2.types.Integer" maxAttendantsRequired="true" maxAttendantsOrdered="false" currentAttendantsDataType="org.eclipse.uml2.types.Integer" currentAttendantsRequired="true" currentAttendantsOrdered="false"
 	 * @generated
 	 */
-	void editEvent(String name, Date dateTime, String location, int maxAttendants, int currentAttendants, boolean returnValue);
+	boolean editEvent(String name, Date dateTime, String location, int maxAttendants, int currentAttendants);
 
 	/**
 	 * <!-- begin-user-doc -->

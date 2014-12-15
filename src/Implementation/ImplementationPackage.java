@@ -1377,7 +1377,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___CREATE_EVENT__STRING_DATE_STRING_INT_INT_BOOLEAN = 3;
+	int ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___CREATE_EVENT__STRING_DATE_STRING_INT_INT = 3;
 
 	/**
 	 * The operation id for the '<em>Edit Event</em>' operation.
@@ -1386,7 +1386,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___EDIT_EVENT__STRING_DATE_STRING_INT_INT_BOOLEAN = 4;
+	int ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___EDIT_EVENT__STRING_DATE_STRING_INT_INT = 4;
 
 	/**
 	 * The operation id for the '<em>Remove Event</em>' operation.
@@ -1531,7 +1531,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER___CREATE_EVENT__STRING_DATE_STRING_INT_INT_BOOLEAN = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION_OPERATION_COUNT + 3;
+	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER___CREATE_EVENT__STRING_DATE_STRING_INT_INT = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION_OPERATION_COUNT + 3;
 
 	/**
 	 * The operation id for the '<em>Edit Event</em>' operation.
@@ -1540,7 +1540,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER___EDIT_EVENT__STRING_DATE_STRING_INT_INT_BOOLEAN = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION_OPERATION_COUNT + 4;
+	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER___EDIT_EVENT__STRING_DATE_STRING_INT_INT = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION_OPERATION_COUNT + 4;
 
 	/**
 	 * The operation id for the '<em>Remove Event</em>' operation.
@@ -4034,24 +4034,24 @@ public interface ImplementationPackage extends EPackage {
 	EOperation getAdditionalServiceComponent_IAdditionalServiceAdministration__RemoveAdditionalService__String();
 
 	/**
-	 * Returns the meta object for the '{@link Implementation.AdditionalServiceComponent_IAdditionalServiceAdministration#createEvent(java.lang.String, java.util.Date, java.lang.String, int, int, boolean) <em>Create Event</em>}' operation.
+	 * Returns the meta object for the '{@link Implementation.AdditionalServiceComponent_IAdditionalServiceAdministration#createEvent(java.lang.String, java.util.Date, java.lang.String, int, int) <em>Create Event</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Event</em>' operation.
-	 * @see Implementation.AdditionalServiceComponent_IAdditionalServiceAdministration#createEvent(java.lang.String, java.util.Date, java.lang.String, int, int, boolean)
+	 * @see Implementation.AdditionalServiceComponent_IAdditionalServiceAdministration#createEvent(java.lang.String, java.util.Date, java.lang.String, int, int)
 	 * @generated
 	 */
-	EOperation getAdditionalServiceComponent_IAdditionalServiceAdministration__CreateEvent__String_Date_String_int_int_boolean();
+	EOperation getAdditionalServiceComponent_IAdditionalServiceAdministration__CreateEvent__String_Date_String_int_int();
 
 	/**
-	 * Returns the meta object for the '{@link Implementation.AdditionalServiceComponent_IAdditionalServiceAdministration#editEvent(java.lang.String, java.util.Date, java.lang.String, int, int, boolean) <em>Edit Event</em>}' operation.
+	 * Returns the meta object for the '{@link Implementation.AdditionalServiceComponent_IAdditionalServiceAdministration#editEvent(java.lang.String, java.util.Date, java.lang.String, int, int) <em>Edit Event</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Edit Event</em>' operation.
-	 * @see Implementation.AdditionalServiceComponent_IAdditionalServiceAdministration#editEvent(java.lang.String, java.util.Date, java.lang.String, int, int, boolean)
+	 * @see Implementation.AdditionalServiceComponent_IAdditionalServiceAdministration#editEvent(java.lang.String, java.util.Date, java.lang.String, int, int)
 	 * @generated
 	 */
-	EOperation getAdditionalServiceComponent_IAdditionalServiceAdministration__EditEvent__String_Date_String_int_int_boolean();
+	EOperation getAdditionalServiceComponent_IAdditionalServiceAdministration__EditEvent__String_Date_String_int_int();
 
 	/**
 	 * Returns the meta object for the '{@link Implementation.AdditionalServiceComponent_IAdditionalServiceAdministration#removeEvent(java.lang.String, java.util.Date, java.lang.String) <em>Remove Event</em>}' operation.
@@ -5892,7 +5892,7 @@ public interface ImplementationPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___CREATE_EVENT__STRING_DATE_STRING_INT_INT_BOOLEAN = eINSTANCE.getAdditionalServiceComponent_IAdditionalServiceAdministration__CreateEvent__String_Date_String_int_int_boolean();
+		EOperation ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___CREATE_EVENT__STRING_DATE_STRING_INT_INT = eINSTANCE.getAdditionalServiceComponent_IAdditionalServiceAdministration__CreateEvent__String_Date_String_int_int();
 
 		/**
 		 * The meta object literal for the '<em><b>Edit Event</b></em>' operation.
@@ -5900,7 +5900,7 @@ public interface ImplementationPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___EDIT_EVENT__STRING_DATE_STRING_INT_INT_BOOLEAN = eINSTANCE.getAdditionalServiceComponent_IAdditionalServiceAdministration__EditEvent__String_Date_String_int_int_boolean();
+		EOperation ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___EDIT_EVENT__STRING_DATE_STRING_INT_INT = eINSTANCE.getAdditionalServiceComponent_IAdditionalServiceAdministration__EditEvent__String_Date_String_int_int();
 
 		/**
 		 * The meta object literal for the '<em><b>Remove Event</b></em>' operation.
