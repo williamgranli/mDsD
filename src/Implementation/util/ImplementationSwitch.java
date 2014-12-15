@@ -171,22 +171,22 @@ public class ImplementationSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ImplementationPackage.PAYMENT_COMPONENT_PAYMENT_MANAGER: {
-				PaymentComponent_PaymentManager paymentComponent_PaymentManager = (PaymentComponent_PaymentManager)theEObject;
-				T result = casePaymentComponent_PaymentManager(paymentComponent_PaymentManager);
-				if (result == null) result = casePaymentComponent_IPayment(paymentComponent_PaymentManager);
+			case ImplementationPackage.PAYMENT_COMPONENT_IPAYMENT: {
+				PaymentComponent_IPayment paymentComponent_IPayment = (PaymentComponent_IPayment)theEObject;
+				T result = casePaymentComponent_IPayment(paymentComponent_IPayment);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ImplementationPackage.PAYMENT_COMPONENT_PAYMENT_HANDLER: {
+				PaymentComponent_PaymentHandler paymentComponent_PaymentHandler = (PaymentComponent_PaymentHandler)theEObject;
+				T result = casePaymentComponent_PaymentHandler(paymentComponent_PaymentHandler);
+				if (result == null) result = casePaymentComponent_IPayment(paymentComponent_PaymentHandler);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case ImplementationPackage.PAYMENT_COMPONENT_PAYMENT: {
 				PaymentComponent_Payment paymentComponent_Payment = (PaymentComponent_Payment)theEObject;
 				T result = casePaymentComponent_Payment(paymentComponent_Payment);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ImplementationPackage.PAYMENT_COMPONENT_IPAYMENT: {
-				PaymentComponent_IPayment paymentComponent_IPayment = (PaymentComponent_IPayment)theEObject;
-				T result = casePaymentComponent_IPayment(paymentComponent_IPayment);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -217,6 +217,21 @@ public class ImplementationSwitch<T> extends Switch<T> {
 			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION: {
 				AdditionalServiceComponent_IAdditionalServiceInformation additionalServiceComponent_IAdditionalServiceInformation = (AdditionalServiceComponent_IAdditionalServiceInformation)theEObject;
 				T result = caseAdditionalServiceComponent_IAdditionalServiceInformation(additionalServiceComponent_IAdditionalServiceInformation);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER: {
+				AdditionalServiceComponent_AdditionalServiceHandler additionalServiceComponent_AdditionalServiceHandler = (AdditionalServiceComponent_AdditionalServiceHandler)theEObject;
+				T result = caseAdditionalServiceComponent_AdditionalServiceHandler(additionalServiceComponent_AdditionalServiceHandler);
+				if (result == null) result = caseAdditionalServiceComponent_IAdditionalServiceInformation(additionalServiceComponent_AdditionalServiceHandler);
+				if (result == null) result = caseAdditionalServiceComponent_IAdditionalServiceDecision(additionalServiceComponent_AdditionalServiceHandler);
+				if (result == null) result = caseAdditionalServiceComponent_IAdditionalServiceAdministration(additionalServiceComponent_AdditionalServiceHandler);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ImplementationPackage.STAFF_COMPONENT_IAUTHENTICATION: {
+				StaffComponent_IAuthentication staffComponent_IAuthentication = (StaffComponent_IAuthentication)theEObject;
+				T result = caseStaffComponent_IAuthentication(staffComponent_IAuthentication);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -261,12 +276,6 @@ public class ImplementationSwitch<T> extends Switch<T> {
 				T result = caseBookingComponent_BookingManager(bookingComponent_BookingManager);
 				if (result == null) result = caseBookingComponent_IBooking(bookingComponent_BookingManager);
 				if (result == null) result = caseBookingComponent_IBookingDecision(bookingComponent_BookingManager);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ImplementationPackage.STAFF_COMPONENT_IAUTHENTICATION: {
-				StaffComponent_IAuthentication staffComponent_IAuthentication = (StaffComponent_IAuthentication)theEObject;
-				T result = caseStaffComponent_IAuthentication(staffComponent_IAuthentication);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -334,15 +343,6 @@ public class ImplementationSwitch<T> extends Switch<T> {
 				if (result == null) result = caseRoomComponent_IRoomDecision(roomComponent_RoomHandler);
 				if (result == null) result = caseRoomComponent_IRoomInformation(roomComponent_RoomHandler);
 				if (result == null) result = caseRoomComponent_IRoomAdministration(roomComponent_RoomHandler);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ImplementationPackage.ADDITIONAL_SERVICE_HANDLER: {
-				AdditionalServiceHandler additionalServiceHandler = (AdditionalServiceHandler)theEObject;
-				T result = caseAdditionalServiceHandler(additionalServiceHandler);
-				if (result == null) result = caseAdditionalServiceComponent_IAdditionalServiceInformation(additionalServiceHandler);
-				if (result == null) result = caseAdditionalServiceComponent_IAdditionalServiceDecision(additionalServiceHandler);
-				if (result == null) result = caseAdditionalServiceComponent_IAdditionalServiceAdministration(additionalServiceHandler);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -606,21 +606,6 @@ public class ImplementationSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Payment Component Payment Manager</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Payment Component Payment Manager</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T casePaymentComponent_PaymentManager(PaymentComponent_PaymentManager object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Payment Component Payment</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -647,6 +632,21 @@ public class ImplementationSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T casePaymentComponent_IPayment(PaymentComponent_IPayment object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Payment Component Payment Handler</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Payment Component Payment Handler</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePaymentComponent_PaymentHandler(PaymentComponent_PaymentHandler object) {
 		return null;
 	}
 
@@ -707,6 +707,21 @@ public class ImplementationSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseAdditionalServiceComponent_IAdditionalServiceInformation(AdditionalServiceComponent_IAdditionalServiceInformation object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Additional Service Component Additional Service Handler</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Additional Service Component Additional Service Handler</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAdditionalServiceComponent_AdditionalServiceHandler(AdditionalServiceComponent_AdditionalServiceHandler object) {
 		return null;
 	}
 
@@ -992,21 +1007,6 @@ public class ImplementationSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseRoomComponent_RoomHandler(RoomComponent_RoomHandler object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Additional Service Handler</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Additional Service Handler</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseAdditionalServiceHandler(AdditionalServiceHandler object) {
 		return null;
 	}
 

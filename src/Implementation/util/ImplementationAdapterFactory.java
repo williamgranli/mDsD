@@ -136,16 +136,16 @@ public class ImplementationAdapterFactory extends AdapterFactoryImpl {
 				return createPaymentComponentAdapter();
 			}
 			@Override
-			public Adapter casePaymentComponent_PaymentManager(PaymentComponent_PaymentManager object) {
-				return createPaymentComponent_PaymentManagerAdapter();
+			public Adapter casePaymentComponent_IPayment(PaymentComponent_IPayment object) {
+				return createPaymentComponent_IPaymentAdapter();
+			}
+			@Override
+			public Adapter casePaymentComponent_PaymentHandler(PaymentComponent_PaymentHandler object) {
+				return createPaymentComponent_PaymentHandlerAdapter();
 			}
 			@Override
 			public Adapter casePaymentComponent_Payment(PaymentComponent_Payment object) {
 				return createPaymentComponent_PaymentAdapter();
-			}
-			@Override
-			public Adapter casePaymentComponent_IPayment(PaymentComponent_IPayment object) {
-				return createPaymentComponent_IPaymentAdapter();
 			}
 			@Override
 			public Adapter caseAdditionalServiceComponent(AdditionalServiceComponent object) {
@@ -166,6 +166,14 @@ public class ImplementationAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseAdditionalServiceComponent_IAdditionalServiceInformation(AdditionalServiceComponent_IAdditionalServiceInformation object) {
 				return createAdditionalServiceComponent_IAdditionalServiceInformationAdapter();
+			}
+			@Override
+			public Adapter caseAdditionalServiceComponent_AdditionalServiceHandler(AdditionalServiceComponent_AdditionalServiceHandler object) {
+				return createAdditionalServiceComponent_AdditionalServiceHandlerAdapter();
+			}
+			@Override
+			public Adapter caseStaffComponent_IAuthentication(StaffComponent_IAuthentication object) {
+				return createStaffComponent_IAuthenticationAdapter();
 			}
 			@Override
 			public Adapter caseBookingComponent(BookingComponent object) {
@@ -194,10 +202,6 @@ public class ImplementationAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseBookingComponent_BookingManager(BookingComponent_BookingManager object) {
 				return createBookingComponent_BookingManagerAdapter();
-			}
-			@Override
-			public Adapter caseStaffComponent_IAuthentication(StaffComponent_IAuthentication object) {
-				return createStaffComponent_IAuthenticationAdapter();
 			}
 			@Override
 			public Adapter caseStaffComponent(StaffComponent object) {
@@ -238,10 +242,6 @@ public class ImplementationAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseRoomComponent_RoomHandler(RoomComponent_RoomHandler object) {
 				return createRoomComponent_RoomHandlerAdapter();
-			}
-			@Override
-			public Adapter caseAdditionalServiceHandler(AdditionalServiceHandler object) {
-				return createAdditionalServiceHandlerAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -502,20 +502,6 @@ public class ImplementationAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link Implementation.PaymentComponent_PaymentManager <em>Payment Component Payment Manager</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see Implementation.PaymentComponent_PaymentManager
-	 * @generated
-	 */
-	public Adapter createPaymentComponent_PaymentManagerAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link Implementation.PaymentComponent_Payment <em>Payment Component Payment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -540,6 +526,20 @@ public class ImplementationAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createPaymentComponent_IPaymentAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link Implementation.PaymentComponent_PaymentHandler <em>Payment Component Payment Handler</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see Implementation.PaymentComponent_PaymentHandler
+	 * @generated
+	 */
+	public Adapter createPaymentComponent_PaymentHandlerAdapter() {
 		return null;
 	}
 
@@ -596,6 +596,20 @@ public class ImplementationAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createAdditionalServiceComponent_IAdditionalServiceInformationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link Implementation.AdditionalServiceComponent_AdditionalServiceHandler <em>Additional Service Component Additional Service Handler</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see Implementation.AdditionalServiceComponent_AdditionalServiceHandler
+	 * @generated
+	 */
+	public Adapter createAdditionalServiceComponent_AdditionalServiceHandlerAdapter() {
 		return null;
 	}
 
@@ -862,20 +876,6 @@ public class ImplementationAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createRoomComponent_RoomHandlerAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link Implementation.AdditionalServiceHandler <em>Additional Service Handler</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see Implementation.AdditionalServiceHandler
-	 * @generated
-	 */
-	public Adapter createAdditionalServiceHandlerAdapter() {
 		return null;
 	}
 

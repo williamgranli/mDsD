@@ -65,11 +65,12 @@ public class ImplementationFactoryImpl extends EFactoryImpl implements Implement
 			case ImplementationPackage.OCCUPANCY_COMPONENT_GUEST: return createOccupancyComponent_Guest();
 			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER: return createOccupancyComponent_OccupancyHandler();
 			case ImplementationPackage.PAYMENT_COMPONENT: return createPaymentComponent();
-			case ImplementationPackage.PAYMENT_COMPONENT_PAYMENT_MANAGER: return createPaymentComponent_PaymentManager();
+			case ImplementationPackage.PAYMENT_COMPONENT_PAYMENT_HANDLER: return createPaymentComponent_PaymentHandler();
 			case ImplementationPackage.PAYMENT_COMPONENT_PAYMENT: return createPaymentComponent_Payment();
 			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT: return createAdditionalServiceComponent();
 			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE: return createAdditionalServiceComponent_AdditionalService();
 			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_EVENT: return createAdditionalServiceComponent_AdditionalServiceEvent();
+			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER: return createAdditionalServiceComponent_AdditionalServiceHandler();
 			case ImplementationPackage.BOOKING_COMPONENT: return createBookingComponent();
 			case ImplementationPackage.BOOKING_COMPONENT_PAYMENT_DETAILS: return createBookingComponent_PaymentDetails();
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING: return createBookingComponent_Booking();
@@ -85,7 +86,6 @@ public class ImplementationFactoryImpl extends EFactoryImpl implements Implement
 			case ImplementationPackage.ROOM_COMPONENT_BEDROOM: return createRoomComponent_Bedroom();
 			case ImplementationPackage.ROOM_COMPONENT_CONFERENCE_ROOM: return createRoomComponent_ConferenceRoom();
 			case ImplementationPackage.ROOM_COMPONENT_ROOM_HANDLER: return createRoomComponent_RoomHandler();
-			case ImplementationPackage.ADDITIONAL_SERVICE_HANDLER: return createAdditionalServiceHandler();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -186,9 +186,9 @@ public class ImplementationFactoryImpl extends EFactoryImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PaymentComponent_PaymentManager createPaymentComponent_PaymentManager() {
-		PaymentComponent_PaymentManagerImpl paymentComponent_PaymentManager = new PaymentComponent_PaymentManagerImpl();
-		return paymentComponent_PaymentManager;
+	public PaymentComponent_PaymentHandler createPaymentComponent_PaymentHandler() {
+		PaymentComponent_PaymentHandlerImpl paymentComponent_PaymentHandler = new PaymentComponent_PaymentHandlerImpl();
+		return paymentComponent_PaymentHandler;
 	}
 
 	/**
@@ -229,6 +229,16 @@ public class ImplementationFactoryImpl extends EFactoryImpl implements Implement
 	public AdditionalServiceComponent_AdditionalServiceEvent createAdditionalServiceComponent_AdditionalServiceEvent() {
 		AdditionalServiceComponent_AdditionalServiceEventImpl additionalServiceComponent_AdditionalServiceEvent = new AdditionalServiceComponent_AdditionalServiceEventImpl();
 		return additionalServiceComponent_AdditionalServiceEvent;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public AdditionalServiceComponent_AdditionalServiceHandler createAdditionalServiceComponent_AdditionalServiceHandler() {
+		AdditionalServiceComponent_AdditionalServiceHandlerImpl additionalServiceComponent_AdditionalServiceHandler = new AdditionalServiceComponent_AdditionalServiceHandlerImpl();
+		return additionalServiceComponent_AdditionalServiceHandler;
 	}
 
 	/**
@@ -379,16 +389,6 @@ public class ImplementationFactoryImpl extends EFactoryImpl implements Implement
 	public RoomComponent_RoomHandler createRoomComponent_RoomHandler() {
 		RoomComponent_RoomHandlerImpl roomComponent_RoomHandler = new RoomComponent_RoomHandlerImpl();
 		return roomComponent_RoomHandler;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public AdditionalServiceHandler createAdditionalServiceHandler() {
-		AdditionalServiceHandlerImpl additionalServiceHandler = new AdditionalServiceHandlerImpl();
-		return additionalServiceHandler;
 	}
 
 	/**

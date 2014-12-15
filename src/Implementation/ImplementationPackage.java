@@ -937,7 +937,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @see Implementation.impl.ImplementationPackageImpl#getPaymentComponent_IPayment()
 	 * @generated
 	 */
-	int PAYMENT_COMPONENT_IPAYMENT = 19;
+	int PAYMENT_COMPONENT_IPAYMENT = 17;
 
 	/**
 	 * The number of structural features of the '<em>Payment Component IPayment</em>' class.
@@ -949,31 +949,22 @@ public interface ImplementationPackage extends EPackage {
 	int PAYMENT_COMPONENT_IPAYMENT_FEATURE_COUNT = 0;
 
 	/**
-	 * The operation id for the '<em>Pay For Booking</em>' operation.
+	 * The operation id for the '<em>Make Payment</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PAYMENT_COMPONENT_IPAYMENT___PAY_FOR_BOOKING__INT_STRING_STRING_STRING_STRING_STRING_STRING = 0;
+	int PAYMENT_COMPONENT_IPAYMENT___MAKE_PAYMENT__STRING_STRING_STRING_STRING_STRING_STRING_DATE = 0;
 
 	/**
-	 * The operation id for the '<em>Reserve Funds</em>' operation.
+	 * The operation id for the '<em>Validate CC</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PAYMENT_COMPONENT_IPAYMENT___RESERVE_FUNDS__INT_STRING_STRING_STRING_STRING_STRING_STRING = 1;
-
-	/**
-	 * The operation id for the '<em>Unreserve Funds</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PAYMENT_COMPONENT_IPAYMENT___UNRESERVE_FUNDS__INT_STRING_STRING_STRING_STRING_STRING_STRING = 2;
+	int PAYMENT_COMPONENT_IPAYMENT___VALIDATE_CC__STRING_STRING_STRING_STRING_STRING_STRING_DOUBLE = 1;
 
 	/**
 	 * The number of operations of the '<em>Payment Component IPayment</em>' class.
@@ -982,71 +973,35 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PAYMENT_COMPONENT_IPAYMENT_OPERATION_COUNT = 3;
+	int PAYMENT_COMPONENT_IPAYMENT_OPERATION_COUNT = 2;
 
 	/**
-	 * The meta object id for the '{@link Implementation.impl.PaymentComponent_PaymentManagerImpl <em>Payment Component Payment Manager</em>}' class.
+	 * The meta object id for the '{@link Implementation.impl.PaymentComponent_PaymentHandlerImpl <em>Payment Component Payment Handler</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Implementation.impl.PaymentComponent_PaymentManagerImpl
-	 * @see Implementation.impl.ImplementationPackageImpl#getPaymentComponent_PaymentManager()
+	 * @see Implementation.impl.PaymentComponent_PaymentHandlerImpl
+	 * @see Implementation.impl.ImplementationPackageImpl#getPaymentComponent_PaymentHandler()
 	 * @generated
 	 */
-	int PAYMENT_COMPONENT_PAYMENT_MANAGER = 17;
+	int PAYMENT_COMPONENT_PAYMENT_HANDLER = 18;
 
 	/**
-	 * The feature id for the '<em><b>Payment Details</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PAYMENT_COMPONENT_PAYMENT_MANAGER__PAYMENT_DETAILS = PAYMENT_COMPONENT_IPAYMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Payments</b></em>' reference list.
+	 * The feature id for the '<em><b>Payment</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PAYMENT_COMPONENT_PAYMENT_MANAGER__PAYMENTS = PAYMENT_COMPONENT_IPAYMENT_FEATURE_COUNT + 1;
+	int PAYMENT_COMPONENT_PAYMENT_HANDLER__PAYMENT = PAYMENT_COMPONENT_IPAYMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Payment Component Payment Manager</em>' class.
+	 * The number of structural features of the '<em>Payment Component Payment Handler</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PAYMENT_COMPONENT_PAYMENT_MANAGER_FEATURE_COUNT = PAYMENT_COMPONENT_IPAYMENT_FEATURE_COUNT + 2;
-
-	/**
-	 * The operation id for the '<em>Pay For Booking</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PAYMENT_COMPONENT_PAYMENT_MANAGER___PAY_FOR_BOOKING__INT_STRING_STRING_STRING_STRING_STRING_STRING = PAYMENT_COMPONENT_IPAYMENT___PAY_FOR_BOOKING__INT_STRING_STRING_STRING_STRING_STRING_STRING;
-
-	/**
-	 * The operation id for the '<em>Reserve Funds</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PAYMENT_COMPONENT_PAYMENT_MANAGER___RESERVE_FUNDS__INT_STRING_STRING_STRING_STRING_STRING_STRING = PAYMENT_COMPONENT_IPAYMENT___RESERVE_FUNDS__INT_STRING_STRING_STRING_STRING_STRING_STRING;
-
-	/**
-	 * The operation id for the '<em>Unreserve Funds</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PAYMENT_COMPONENT_PAYMENT_MANAGER___UNRESERVE_FUNDS__INT_STRING_STRING_STRING_STRING_STRING_STRING = PAYMENT_COMPONENT_IPAYMENT___UNRESERVE_FUNDS__INT_STRING_STRING_STRING_STRING_STRING_STRING;
+	int PAYMENT_COMPONENT_PAYMENT_HANDLER_FEATURE_COUNT = PAYMENT_COMPONENT_IPAYMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Make Payment</em>' operation.
@@ -1055,25 +1010,25 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PAYMENT_COMPONENT_PAYMENT_MANAGER___MAKE_PAYMENT__STRING_INT_INT_INT_STRING_STRING_STRING = PAYMENT_COMPONENT_IPAYMENT_OPERATION_COUNT + 0;
+	int PAYMENT_COMPONENT_PAYMENT_HANDLER___MAKE_PAYMENT__STRING_STRING_STRING_STRING_STRING_STRING_DATE = PAYMENT_COMPONENT_IPAYMENT___MAKE_PAYMENT__STRING_STRING_STRING_STRING_STRING_STRING_DATE;
 
 	/**
-	 * The operation id for the '<em>Is Credit Card Valid</em>' operation.
+	 * The operation id for the '<em>Validate CC</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PAYMENT_COMPONENT_PAYMENT_MANAGER___IS_CREDIT_CARD_VALID__STRING_STRING_STRING_STRING_STRING_STRING = PAYMENT_COMPONENT_IPAYMENT_OPERATION_COUNT + 1;
+	int PAYMENT_COMPONENT_PAYMENT_HANDLER___VALIDATE_CC__STRING_STRING_STRING_STRING_STRING_STRING_DOUBLE = PAYMENT_COMPONENT_IPAYMENT___VALIDATE_CC__STRING_STRING_STRING_STRING_STRING_STRING_DOUBLE;
 
 	/**
-	 * The number of operations of the '<em>Payment Component Payment Manager</em>' class.
+	 * The number of operations of the '<em>Payment Component Payment Handler</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PAYMENT_COMPONENT_PAYMENT_MANAGER_OPERATION_COUNT = PAYMENT_COMPONENT_IPAYMENT_OPERATION_COUNT + 2;
+	int PAYMENT_COMPONENT_PAYMENT_HANDLER_OPERATION_COUNT = PAYMENT_COMPONENT_IPAYMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link Implementation.impl.PaymentComponent_PaymentImpl <em>Payment Component Payment</em>}' class.
@@ -1083,7 +1038,70 @@ public interface ImplementationPackage extends EPackage {
 	 * @see Implementation.impl.ImplementationPackageImpl#getPaymentComponent_Payment()
 	 * @generated
 	 */
-	int PAYMENT_COMPONENT_PAYMENT = 18;
+	int PAYMENT_COMPONENT_PAYMENT = 19;
+
+	/**
+	 * The feature id for the '<em><b>Cc Number</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PAYMENT_COMPONENT_PAYMENT__CC_NUMBER = 0;
+
+	/**
+	 * The feature id for the '<em><b>Ccv</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PAYMENT_COMPONENT_PAYMENT__CCV = 1;
+
+	/**
+	 * The feature id for the '<em><b>First Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PAYMENT_COMPONENT_PAYMENT__FIRST_NAME = 2;
+
+	/**
+	 * The feature id for the '<em><b>Last Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PAYMENT_COMPONENT_PAYMENT__LAST_NAME = 3;
+
+	/**
+	 * The feature id for the '<em><b>Expiry Month</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PAYMENT_COMPONENT_PAYMENT__EXPIRY_MONTH = 4;
+
+	/**
+	 * The feature id for the '<em><b>Expiry Year</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PAYMENT_COMPONENT_PAYMENT__EXPIRY_YEAR = 5;
+
+	/**
+	 * The feature id for the '<em><b>Price</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PAYMENT_COMPONENT_PAYMENT__PRICE = 6;
 
 	/**
 	 * The number of structural features of the '<em>Payment Component Payment</em>' class.
@@ -1092,7 +1110,16 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PAYMENT_COMPONENT_PAYMENT_FEATURE_COUNT = 0;
+	int PAYMENT_COMPONENT_PAYMENT_FEATURE_COUNT = 7;
+
+	/**
+	 * The operation id for the '<em>Create Payment</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PAYMENT_COMPONENT_PAYMENT___CREATE_PAYMENT__STRING_STRING_STRING_STRING_STRING_STRING_DOUBLE = 0;
 
 	/**
 	 * The number of operations of the '<em>Payment Component Payment</em>' class.
@@ -1101,7 +1128,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PAYMENT_COMPONENT_PAYMENT_OPERATION_COUNT = 0;
+	int PAYMENT_COMPONENT_PAYMENT_OPERATION_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link Implementation.impl.AdditionalServiceComponentImpl <em>Additional Service Component</em>}' class.
@@ -1212,7 +1239,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @see Implementation.impl.ImplementationPackageImpl#getStaffComponent_IAuthentication()
 	 * @generated
 	 */
-	int STAFF_COMPONENT_IAUTHENTICATION = 32;
+	int STAFF_COMPONENT_IAUTHENTICATION = 26;
 
 	/**
 	 * The meta object id for the '{@link Implementation.AdditionalServiceComponent_IAdditionalServiceInformation <em>Additional Service Component IAdditional Service Information</em>}' class.
@@ -1416,6 +1443,142 @@ public interface ImplementationPackage extends EPackage {
 	int ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION_OPERATION_COUNT = 2;
 
 	/**
+	 * The meta object id for the '{@link Implementation.impl.AdditionalServiceComponent_AdditionalServiceHandlerImpl <em>Additional Service Component Additional Service Handler</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see Implementation.impl.AdditionalServiceComponent_AdditionalServiceHandlerImpl
+	 * @see Implementation.impl.ImplementationPackageImpl#getAdditionalServiceComponent_AdditionalServiceHandler()
+	 * @generated
+	 */
+	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER = 25;
+
+	/**
+	 * The feature id for the '<em><b>IAuthentication</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER__IAUTHENTICATION = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Additional Service</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER__ADDITIONAL_SERVICE = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Additional Service Event</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER__ADDITIONAL_SERVICE_EVENT = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>Additional Service Component Additional Service Handler</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER_FEATURE_COUNT = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION_FEATURE_COUNT + 3;
+
+	/**
+	 * The operation id for the '<em>Get Additional Service Info</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER___GET_ADDITIONAL_SERVICE_INFO__STRING = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION___GET_ADDITIONAL_SERVICE_INFO__STRING;
+
+	/**
+	 * The operation id for the '<em>Get All Additional Services</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER___GET_ALL_ADDITIONAL_SERVICES = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION___GET_ALL_ADDITIONAL_SERVICES;
+
+	/**
+	 * The operation id for the '<em>Create Additional Service</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER___CREATE_ADDITIONAL_SERVICE__STRING_BOOLEAN_INT_STRING = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION_OPERATION_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Edit Additional Service</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER___EDIT_ADDITIONAL_SERVICE__STRING_STRING_BOOLEAN_INT_STRING = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION_OPERATION_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Remove Additional Service</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER___REMOVE_ADDITIONAL_SERVICE__STRING = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION_OPERATION_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Create Event</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER___CREATE_EVENT__STRING_DATE_STRING_INT_INT = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION_OPERATION_COUNT + 3;
+
+	/**
+	 * The operation id for the '<em>Edit Event</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER___EDIT_EVENT__STRING_DATE_STRING_INT_INT = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION_OPERATION_COUNT + 4;
+
+	/**
+	 * The operation id for the '<em>Remove Event</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER___REMOVE_EVENT__STRING_DATE_STRING = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION_OPERATION_COUNT + 5;
+
+	/**
+	 * The operation id for the '<em>Find Service</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER___FIND_SERVICE__STRING = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION_OPERATION_COUNT + 6;
+
+	/**
+	 * The number of operations of the '<em>Additional Service Component Additional Service Handler</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER_OPERATION_COUNT = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION_OPERATION_COUNT + 7;
+
+	/**
 	 * The meta object id for the '{@link Implementation.impl.BookingComponentImpl <em>Booking Component</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1423,7 +1586,112 @@ public interface ImplementationPackage extends EPackage {
 	 * @see Implementation.impl.ImplementationPackageImpl#getBookingComponent()
 	 * @generated
 	 */
-	int BOOKING_COMPONENT = 25;
+	int BOOKING_COMPONENT = 27;
+
+	/**
+	 * The meta object id for the '{@link Implementation.impl.BookingComponent_PaymentDetailsImpl <em>Booking Component Payment Details</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see Implementation.impl.BookingComponent_PaymentDetailsImpl
+	 * @see Implementation.impl.ImplementationPackageImpl#getBookingComponent_PaymentDetails()
+	 * @generated
+	 */
+	int BOOKING_COMPONENT_PAYMENT_DETAILS = 28;
+
+	/**
+	 * The meta object id for the '{@link Implementation.impl.BookingComponent_BookingImpl <em>Booking Component Booking</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see Implementation.impl.BookingComponent_BookingImpl
+	 * @see Implementation.impl.ImplementationPackageImpl#getBookingComponent_Booking()
+	 * @generated
+	 */
+	int BOOKING_COMPONENT_BOOKING = 29;
+
+	/**
+	 * The meta object id for the '{@link Implementation.impl.BookingComponent_AdditionalServiceImpl <em>Booking Component Additional Service</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see Implementation.impl.BookingComponent_AdditionalServiceImpl
+	 * @see Implementation.impl.ImplementationPackageImpl#getBookingComponent_AdditionalService()
+	 * @generated
+	 */
+	int BOOKING_COMPONENT_ADDITIONAL_SERVICE = 30;
+
+	/**
+	 * The meta object id for the '{@link Implementation.impl.BookingComponent_BookingGuestImpl <em>Booking Component Booking Guest</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see Implementation.impl.BookingComponent_BookingGuestImpl
+	 * @see Implementation.impl.ImplementationPackageImpl#getBookingComponent_BookingGuest()
+	 * @generated
+	 */
+	int BOOKING_COMPONENT_BOOKING_GUEST = 31;
+
+	/**
+	 * The meta object id for the '{@link Implementation.impl.BookingComponent_RoomTypeImpl <em>Booking Component Room Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see Implementation.impl.BookingComponent_RoomTypeImpl
+	 * @see Implementation.impl.ImplementationPackageImpl#getBookingComponent_RoomType()
+	 * @generated
+	 */
+	int BOOKING_COMPONENT_ROOM_TYPE = 32;
+
+	/**
+	 * The meta object id for the '{@link Implementation.impl.BookingComponent_BookingManagerImpl <em>Booking Component Booking Manager</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see Implementation.impl.BookingComponent_BookingManagerImpl
+	 * @see Implementation.impl.ImplementationPackageImpl#getBookingComponent_BookingManager()
+	 * @generated
+	 */
+	int BOOKING_COMPONENT_BOOKING_MANAGER = 33;
+
+	/**
+	 * The number of structural features of the '<em>Staff Component IAuthentication</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAFF_COMPONENT_IAUTHENTICATION_FEATURE_COUNT = 0;
+
+	/**
+	 * The operation id for the '<em>Log In</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAFF_COMPONENT_IAUTHENTICATION___LOG_IN__STRING_STRING = 0;
+
+	/**
+	 * The operation id for the '<em>Log Out</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAFF_COMPONENT_IAUTHENTICATION___LOG_OUT__STRING = 1;
+
+	/**
+	 * The operation id for the '<em>Is Logged In</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAFF_COMPONENT_IAUTHENTICATION___IS_LOGGED_IN__STRING = 2;
+
+	/**
+	 * The number of operations of the '<em>Staff Component IAuthentication</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAFF_COMPONENT_IAUTHENTICATION_OPERATION_COUNT = 3;
 
 	/**
 	 * The number of structural features of the '<em>Booking Component</em>' class.
@@ -1442,16 +1710,6 @@ public interface ImplementationPackage extends EPackage {
 	 * @ordered
 	 */
 	int BOOKING_COMPONENT_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link Implementation.impl.BookingComponent_PaymentDetailsImpl <em>Booking Component Payment Details</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see Implementation.impl.BookingComponent_PaymentDetailsImpl
-	 * @see Implementation.impl.ImplementationPackageImpl#getBookingComponent_PaymentDetails()
-	 * @generated
-	 */
-	int BOOKING_COMPONENT_PAYMENT_DETAILS = 26;
 
 	/**
 	 * The feature id for the '<em><b>First Name</b></em>' attribute.
@@ -1533,16 +1791,6 @@ public interface ImplementationPackage extends EPackage {
 	 * @ordered
 	 */
 	int BOOKING_COMPONENT_PAYMENT_DETAILS_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link Implementation.impl.BookingComponent_BookingImpl <em>Booking Component Booking</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see Implementation.impl.BookingComponent_BookingImpl
-	 * @see Implementation.impl.ImplementationPackageImpl#getBookingComponent_Booking()
-	 * @generated
-	 */
-	int BOOKING_COMPONENT_BOOKING = 27;
 
 	/**
 	 * The feature id for the '<em><b>Arrival Date</b></em>' attribute.
@@ -1725,16 +1973,6 @@ public interface ImplementationPackage extends EPackage {
 	int BOOKING_COMPONENT_BOOKING_OPERATION_COUNT = 10;
 
 	/**
-	 * The meta object id for the '{@link Implementation.impl.BookingComponent_AdditionalServiceImpl <em>Booking Component Additional Service</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see Implementation.impl.BookingComponent_AdditionalServiceImpl
-	 * @see Implementation.impl.ImplementationPackageImpl#getBookingComponent_AdditionalService()
-	 * @generated
-	 */
-	int BOOKING_COMPONENT_ADDITIONAL_SERVICE = 28;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1769,16 +2007,6 @@ public interface ImplementationPackage extends EPackage {
 	 * @ordered
 	 */
 	int BOOKING_COMPONENT_ADDITIONAL_SERVICE_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link Implementation.impl.BookingComponent_BookingGuestImpl <em>Booking Component Booking Guest</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see Implementation.impl.BookingComponent_BookingGuestImpl
-	 * @see Implementation.impl.ImplementationPackageImpl#getBookingComponent_BookingGuest()
-	 * @generated
-	 */
-	int BOOKING_COMPONENT_BOOKING_GUEST = 29;
 
 	/**
 	 * The feature id for the '<em><b>First Name</b></em>' attribute.
@@ -1826,16 +2054,6 @@ public interface ImplementationPackage extends EPackage {
 	int BOOKING_COMPONENT_BOOKING_GUEST_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link Implementation.impl.BookingComponent_RoomTypeImpl <em>Booking Component Room Type</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see Implementation.impl.BookingComponent_RoomTypeImpl
-	 * @see Implementation.impl.ImplementationPackageImpl#getBookingComponent_RoomType()
-	 * @generated
-	 */
-	int BOOKING_COMPONENT_ROOM_TYPE = 30;
-
-	/**
 	 * The feature id for the '<em><b>Room Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1872,16 +2090,6 @@ public interface ImplementationPackage extends EPackage {
 	int BOOKING_COMPONENT_ROOM_TYPE_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link Implementation.impl.BookingComponent_BookingManagerImpl <em>Booking Component Booking Manager</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see Implementation.impl.BookingComponent_BookingManagerImpl
-	 * @see Implementation.impl.ImplementationPackageImpl#getBookingComponent_BookingManager()
-	 * @generated
-	 */
-	int BOOKING_COMPONENT_BOOKING_MANAGER = 31;
-
-	/**
 	 * The feature id for the '<em><b>Bookings</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1909,22 +2117,22 @@ public interface ImplementationPackage extends EPackage {
 	int BOOKING_COMPONENT_BOOKING_MANAGER__IROOM_INFORMATION = BOOKING_COMPONENT_IBOOKING_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>IPayment</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING_COMPONENT_BOOKING_MANAGER__IPAYMENT = BOOKING_COMPONENT_IBOOKING_FEATURE_COUNT + 3;
-
-	/**
 	 * The feature id for the '<em><b>IAdditional Service Information</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_COMPONENT_BOOKING_MANAGER__IADDITIONAL_SERVICE_INFORMATION = BOOKING_COMPONENT_IBOOKING_FEATURE_COUNT + 4;
+	int BOOKING_COMPONENT_BOOKING_MANAGER__IADDITIONAL_SERVICE_INFORMATION = BOOKING_COMPONENT_IBOOKING_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>IPayment</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_COMPONENT_BOOKING_MANAGER__IPAYMENT = BOOKING_COMPONENT_IBOOKING_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Booking Component Booking Manager</em>' class.
@@ -2053,51 +2261,6 @@ public interface ImplementationPackage extends EPackage {
 	int BOOKING_COMPONENT_BOOKING_MANAGER_OPERATION_COUNT = BOOKING_COMPONENT_IBOOKING_OPERATION_COUNT + 1;
 
 	/**
-	 * The number of structural features of the '<em>Staff Component IAuthentication</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAFF_COMPONENT_IAUTHENTICATION_FEATURE_COUNT = 0;
-
-	/**
-	 * The operation id for the '<em>Log In</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAFF_COMPONENT_IAUTHENTICATION___LOG_IN__STRING_STRING = 0;
-
-	/**
-	 * The operation id for the '<em>Log Out</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAFF_COMPONENT_IAUTHENTICATION___LOG_OUT__STRING = 1;
-
-	/**
-	 * The operation id for the '<em>Is Logged In</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAFF_COMPONENT_IAUTHENTICATION___IS_LOGGED_IN__STRING = 2;
-
-	/**
-	 * The number of operations of the '<em>Staff Component IAuthentication</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAFF_COMPONENT_IAUTHENTICATION_OPERATION_COUNT = 3;
-
-	/**
 	 * The meta object id for the '{@link Implementation.impl.StaffComponentImpl <em>Staff Component</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2105,7 +2268,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @see Implementation.impl.ImplementationPackageImpl#getStaffComponent()
 	 * @generated
 	 */
-	int STAFF_COMPONENT = 33;
+	int STAFF_COMPONENT = 34;
 
 	/**
 	 * The number of structural features of the '<em>Staff Component</em>' class.
@@ -2133,7 +2296,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @see Implementation.impl.ImplementationPackageImpl#getStaffComponent_AccountManager()
 	 * @generated
 	 */
-	int STAFF_COMPONENT_ACCOUNT_MANAGER = 34;
+	int STAFF_COMPONENT_ACCOUNT_MANAGER = 35;
 
 	/**
 	 * The feature id for the '<em><b>IAuthentication</b></em>' reference.
@@ -2251,7 +2414,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @see Implementation.impl.ImplementationPackageImpl#getStaffComponent_IAccountAdministration()
 	 * @generated
 	 */
-	int STAFF_COMPONENT_IACCOUNT_ADMINISTRATION = 36;
+	int STAFF_COMPONENT_IACCOUNT_ADMINISTRATION = 37;
 
 	/**
 	 * The meta object id for the '{@link Implementation.impl.StaffComponent_EmployeeImpl <em>Staff Component Employee</em>}' class.
@@ -2261,7 +2424,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @see Implementation.impl.ImplementationPackageImpl#getStaffComponent_Employee()
 	 * @generated
 	 */
-	int STAFF_COMPONENT_EMPLOYEE = 35;
+	int STAFF_COMPONENT_EMPLOYEE = 36;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2397,7 +2560,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @see Implementation.impl.ImplementationPackageImpl#getRoomComponent()
 	 * @generated
 	 */
-	int ROOM_COMPONENT = 37;
+	int ROOM_COMPONENT = 38;
 
 	/**
 	 * The number of structural features of the '<em>Room Component</em>' class.
@@ -2425,7 +2588,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @see Implementation.impl.ImplementationPackageImpl#getRoomComponent_Room()
 	 * @generated
 	 */
-	int ROOM_COMPONENT_ROOM = 38;
+	int ROOM_COMPONENT_ROOM = 39;
 
 	/**
 	 * The feature id for the '<em><b>Room Number</b></em>' attribute.
@@ -2498,7 +2661,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @see Implementation.impl.ImplementationPackageImpl#getRoomComponent_Bedroom()
 	 * @generated
 	 */
-	int ROOM_COMPONENT_BEDROOM = 39;
+	int ROOM_COMPONENT_BEDROOM = 40;
 
 	/**
 	 * The feature id for the '<em><b>Room Number</b></em>' attribute.
@@ -2598,7 +2761,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @see Implementation.impl.ImplementationPackageImpl#getRoomComponent_ConferenceRoom()
 	 * @generated
 	 */
-	int ROOM_COMPONENT_CONFERENCE_ROOM = 40;
+	int ROOM_COMPONENT_CONFERENCE_ROOM = 41;
 
 	/**
 	 * The feature id for the '<em><b>Room Number</b></em>' attribute.
@@ -2716,7 +2879,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @see Implementation.impl.ImplementationPackageImpl#getRoomComponent_IRoomAdministration()
 	 * @generated
 	 */
-	int ROOM_COMPONENT_IROOM_ADMINISTRATION = 41;
+	int ROOM_COMPONENT_IROOM_ADMINISTRATION = 42;
 
 	/**
 	 * The number of structural features of the '<em>Room Component IRoom Administration</em>' class.
@@ -2789,7 +2952,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @see Implementation.impl.ImplementationPackageImpl#getRoomComponent_RoomHandler()
 	 * @generated
 	 */
-	int ROOM_COMPONENT_ROOM_HANDLER = 42;
+	int ROOM_COMPONENT_ROOM_HANDLER = 43;
 
 	/**
 	 * The feature id for the '<em><b>Authenticator</b></em>' reference.
@@ -2925,143 +3088,6 @@ public interface ImplementationPackage extends EPackage {
 	 * @ordered
 	 */
 	int ROOM_COMPONENT_ROOM_HANDLER_OPERATION_COUNT = ROOM_COMPONENT_IROOM_DECISION_OPERATION_COUNT + 10;
-
-
-	/**
-	 * The meta object id for the '{@link Implementation.impl.AdditionalServiceHandlerImpl <em>Additional Service Handler</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see Implementation.impl.AdditionalServiceHandlerImpl
-	 * @see Implementation.impl.ImplementationPackageImpl#getAdditionalServiceHandler()
-	 * @generated
-	 */
-	int ADDITIONAL_SERVICE_HANDLER = 43;
-
-	/**
-	 * The feature id for the '<em><b>IAuthentication</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADDITIONAL_SERVICE_HANDLER__IAUTHENTICATION = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Additional Service</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADDITIONAL_SERVICE_HANDLER__ADDITIONAL_SERVICE = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Additional Service Event</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADDITIONAL_SERVICE_HANDLER__ADDITIONAL_SERVICE_EVENT = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of structural features of the '<em>Additional Service Handler</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADDITIONAL_SERVICE_HANDLER_FEATURE_COUNT = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION_FEATURE_COUNT + 3;
-
-	/**
-	 * The operation id for the '<em>Get Additional Service Info</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADDITIONAL_SERVICE_HANDLER___GET_ADDITIONAL_SERVICE_INFO__STRING = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION___GET_ADDITIONAL_SERVICE_INFO__STRING;
-
-	/**
-	 * The operation id for the '<em>Get All Additional Services</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADDITIONAL_SERVICE_HANDLER___GET_ALL_ADDITIONAL_SERVICES = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION___GET_ALL_ADDITIONAL_SERVICES;
-
-	/**
-	 * The operation id for the '<em>Create Additional Service</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADDITIONAL_SERVICE_HANDLER___CREATE_ADDITIONAL_SERVICE__STRING_BOOLEAN_INT_STRING = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION_OPERATION_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Edit Additional Service</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADDITIONAL_SERVICE_HANDLER___EDIT_ADDITIONAL_SERVICE__STRING_STRING_BOOLEAN_INT_STRING = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION_OPERATION_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>Remove Additional Service</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADDITIONAL_SERVICE_HANDLER___REMOVE_ADDITIONAL_SERVICE__STRING = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION_OPERATION_COUNT + 2;
-
-	/**
-	 * The operation id for the '<em>Create Event</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADDITIONAL_SERVICE_HANDLER___CREATE_EVENT__STRING_DATE_STRING_INT_INT = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION_OPERATION_COUNT + 3;
-
-	/**
-	 * The operation id for the '<em>Edit Event</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADDITIONAL_SERVICE_HANDLER___EDIT_EVENT__STRING_DATE_STRING_INT_INT = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION_OPERATION_COUNT + 4;
-
-	/**
-	 * The operation id for the '<em>Remove Event</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADDITIONAL_SERVICE_HANDLER___REMOVE_EVENT__STRING_DATE_STRING = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION_OPERATION_COUNT + 5;
-
-	/**
-	 * The operation id for the '<em>Find Service</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADDITIONAL_SERVICE_HANDLER___FIND_SERVICE__STRING = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION_OPERATION_COUNT + 6;
-
-	/**
-	 * The number of operations of the '<em>Additional Service Handler</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADDITIONAL_SERVICE_HANDLER_OPERATION_COUNT = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION_OPERATION_COUNT + 7;
 
 
 	/**
@@ -3642,58 +3668,6 @@ public interface ImplementationPackage extends EPackage {
 	EClass getPaymentComponent();
 
 	/**
-	 * Returns the meta object for class '{@link Implementation.PaymentComponent_PaymentManager <em>Payment Component Payment Manager</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Payment Component Payment Manager</em>'.
-	 * @see Implementation.PaymentComponent_PaymentManager
-	 * @generated
-	 */
-	EClass getPaymentComponent_PaymentManager();
-
-	/**
-	 * Returns the meta object for the attribute '{@link Implementation.PaymentComponent_PaymentManager#getPaymentDetails <em>Payment Details</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Payment Details</em>'.
-	 * @see Implementation.PaymentComponent_PaymentManager#getPaymentDetails()
-	 * @see #getPaymentComponent_PaymentManager()
-	 * @generated
-	 */
-	EAttribute getPaymentComponent_PaymentManager_PaymentDetails();
-
-	/**
-	 * Returns the meta object for the reference list '{@link Implementation.PaymentComponent_PaymentManager#getPayments <em>Payments</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Payments</em>'.
-	 * @see Implementation.PaymentComponent_PaymentManager#getPayments()
-	 * @see #getPaymentComponent_PaymentManager()
-	 * @generated
-	 */
-	EReference getPaymentComponent_PaymentManager_Payments();
-
-	/**
-	 * Returns the meta object for the '{@link Implementation.PaymentComponent_PaymentManager#makePayment(java.lang.String, int, int, int, java.lang.String, java.lang.String, java.lang.String) <em>Make Payment</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Make Payment</em>' operation.
-	 * @see Implementation.PaymentComponent_PaymentManager#makePayment(java.lang.String, int, int, int, java.lang.String, java.lang.String, java.lang.String)
-	 * @generated
-	 */
-	EOperation getPaymentComponent_PaymentManager__MakePayment__String_int_int_int_String_String_String();
-
-	/**
-	 * Returns the meta object for the '{@link Implementation.PaymentComponent_PaymentManager#isCreditCardValid(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String) <em>Is Credit Card Valid</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Credit Card Valid</em>' operation.
-	 * @see Implementation.PaymentComponent_PaymentManager#isCreditCardValid(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)
-	 * @generated
-	 */
-	EOperation getPaymentComponent_PaymentManager__IsCreditCardValid__String_String_String_String_String_String();
-
-	/**
 	 * Returns the meta object for class '{@link Implementation.PaymentComponent_Payment <em>Payment Component Payment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3702,6 +3676,93 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getPaymentComponent_Payment();
+
+	/**
+	 * Returns the meta object for the attribute '{@link Implementation.PaymentComponent_Payment#getCcNumber <em>Cc Number</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Cc Number</em>'.
+	 * @see Implementation.PaymentComponent_Payment#getCcNumber()
+	 * @see #getPaymentComponent_Payment()
+	 * @generated
+	 */
+	EAttribute getPaymentComponent_Payment_CcNumber();
+
+	/**
+	 * Returns the meta object for the attribute '{@link Implementation.PaymentComponent_Payment#getCcv <em>Ccv</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Ccv</em>'.
+	 * @see Implementation.PaymentComponent_Payment#getCcv()
+	 * @see #getPaymentComponent_Payment()
+	 * @generated
+	 */
+	EAttribute getPaymentComponent_Payment_Ccv();
+
+	/**
+	 * Returns the meta object for the attribute '{@link Implementation.PaymentComponent_Payment#getFirstName <em>First Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>First Name</em>'.
+	 * @see Implementation.PaymentComponent_Payment#getFirstName()
+	 * @see #getPaymentComponent_Payment()
+	 * @generated
+	 */
+	EAttribute getPaymentComponent_Payment_FirstName();
+
+	/**
+	 * Returns the meta object for the attribute '{@link Implementation.PaymentComponent_Payment#getLastName <em>Last Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Last Name</em>'.
+	 * @see Implementation.PaymentComponent_Payment#getLastName()
+	 * @see #getPaymentComponent_Payment()
+	 * @generated
+	 */
+	EAttribute getPaymentComponent_Payment_LastName();
+
+	/**
+	 * Returns the meta object for the attribute '{@link Implementation.PaymentComponent_Payment#getExpiryMonth <em>Expiry Month</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Expiry Month</em>'.
+	 * @see Implementation.PaymentComponent_Payment#getExpiryMonth()
+	 * @see #getPaymentComponent_Payment()
+	 * @generated
+	 */
+	EAttribute getPaymentComponent_Payment_ExpiryMonth();
+
+	/**
+	 * Returns the meta object for the attribute '{@link Implementation.PaymentComponent_Payment#getExpiryYear <em>Expiry Year</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Expiry Year</em>'.
+	 * @see Implementation.PaymentComponent_Payment#getExpiryYear()
+	 * @see #getPaymentComponent_Payment()
+	 * @generated
+	 */
+	EAttribute getPaymentComponent_Payment_ExpiryYear();
+
+	/**
+	 * Returns the meta object for the attribute '{@link Implementation.PaymentComponent_Payment#getPrice <em>Price</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Price</em>'.
+	 * @see Implementation.PaymentComponent_Payment#getPrice()
+	 * @see #getPaymentComponent_Payment()
+	 * @generated
+	 */
+	EAttribute getPaymentComponent_Payment_Price();
+
+	/**
+	 * Returns the meta object for the '{@link Implementation.PaymentComponent_Payment#createPayment(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, double) <em>Create Payment</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Create Payment</em>' operation.
+	 * @see Implementation.PaymentComponent_Payment#createPayment(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, double)
+	 * @generated
+	 */
+	EOperation getPaymentComponent_Payment__CreatePayment__String_String_String_String_String_String_double();
 
 	/**
 	 * Returns the meta object for class '{@link Implementation.PaymentComponent_IPayment <em>Payment Component IPayment</em>}'.
@@ -3714,34 +3775,45 @@ public interface ImplementationPackage extends EPackage {
 	EClass getPaymentComponent_IPayment();
 
 	/**
-	 * Returns the meta object for the '{@link Implementation.PaymentComponent_IPayment#payForBooking(int, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String) <em>Pay For Booking</em>}' operation.
+	 * Returns the meta object for the '{@link Implementation.PaymentComponent_IPayment#makePayment(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.util.Date) <em>Make Payment</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Pay For Booking</em>' operation.
-	 * @see Implementation.PaymentComponent_IPayment#payForBooking(int, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)
+	 * @return the meta object for the '<em>Make Payment</em>' operation.
+	 * @see Implementation.PaymentComponent_IPayment#makePayment(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.util.Date)
 	 * @generated
 	 */
-	EOperation getPaymentComponent_IPayment__PayForBooking__int_String_String_String_String_String_String();
+	EOperation getPaymentComponent_IPayment__MakePayment__String_String_String_String_String_String_Date();
 
 	/**
-	 * Returns the meta object for the '{@link Implementation.PaymentComponent_IPayment#reserveFunds(int, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String) <em>Reserve Funds</em>}' operation.
+	 * Returns the meta object for the '{@link Implementation.PaymentComponent_IPayment#validateCC(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, double) <em>Validate CC</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Reserve Funds</em>' operation.
-	 * @see Implementation.PaymentComponent_IPayment#reserveFunds(int, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)
+	 * @return the meta object for the '<em>Validate CC</em>' operation.
+	 * @see Implementation.PaymentComponent_IPayment#validateCC(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, double)
 	 * @generated
 	 */
-	EOperation getPaymentComponent_IPayment__ReserveFunds__int_String_String_String_String_String_String();
+	EOperation getPaymentComponent_IPayment__ValidateCC__String_String_String_String_String_String_double();
 
 	/**
-	 * Returns the meta object for the '{@link Implementation.PaymentComponent_IPayment#unreserveFunds(int, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String) <em>Unreserve Funds</em>}' operation.
+	 * Returns the meta object for class '{@link Implementation.PaymentComponent_PaymentHandler <em>Payment Component Payment Handler</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Unreserve Funds</em>' operation.
-	 * @see Implementation.PaymentComponent_IPayment#unreserveFunds(int, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)
+	 * @return the meta object for class '<em>Payment Component Payment Handler</em>'.
+	 * @see Implementation.PaymentComponent_PaymentHandler
 	 * @generated
 	 */
-	EOperation getPaymentComponent_IPayment__UnreserveFunds__int_String_String_String_String_String_String();
+	EClass getPaymentComponent_PaymentHandler();
+
+	/**
+	 * Returns the meta object for the reference '{@link Implementation.PaymentComponent_PaymentHandler#getPayment <em>Payment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Payment</em>'.
+	 * @see Implementation.PaymentComponent_PaymentHandler#getPayment()
+	 * @see #getPaymentComponent_PaymentHandler()
+	 * @generated
+	 */
+	EReference getPaymentComponent_PaymentHandler_Payment();
 
 	/**
 	 * Returns the meta object for class '{@link Implementation.AdditionalServiceComponent <em>Additional Service Component</em>}'.
@@ -3886,6 +3958,59 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getAdditionalServiceComponent_IAdditionalServiceInformation__GetAllAdditionalServices();
+
+	/**
+	 * Returns the meta object for class '{@link Implementation.AdditionalServiceComponent_AdditionalServiceHandler <em>Additional Service Component Additional Service Handler</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Additional Service Component Additional Service Handler</em>'.
+	 * @see Implementation.AdditionalServiceComponent_AdditionalServiceHandler
+	 * @generated
+	 */
+	EClass getAdditionalServiceComponent_AdditionalServiceHandler();
+
+	/**
+	 * Returns the meta object for the reference '{@link Implementation.AdditionalServiceComponent_AdditionalServiceHandler#getIAuthentication <em>IAuthentication</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>IAuthentication</em>'.
+	 * @see Implementation.AdditionalServiceComponent_AdditionalServiceHandler#getIAuthentication()
+	 * @see #getAdditionalServiceComponent_AdditionalServiceHandler()
+	 * @generated
+	 */
+	EReference getAdditionalServiceComponent_AdditionalServiceHandler_IAuthentication();
+
+	/**
+	 * Returns the meta object for the reference list '{@link Implementation.AdditionalServiceComponent_AdditionalServiceHandler#getAdditionalService <em>Additional Service</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Additional Service</em>'.
+	 * @see Implementation.AdditionalServiceComponent_AdditionalServiceHandler#getAdditionalService()
+	 * @see #getAdditionalServiceComponent_AdditionalServiceHandler()
+	 * @generated
+	 */
+	EReference getAdditionalServiceComponent_AdditionalServiceHandler_AdditionalService();
+
+	/**
+	 * Returns the meta object for the reference list '{@link Implementation.AdditionalServiceComponent_AdditionalServiceHandler#getAdditionalServiceEvent <em>Additional Service Event</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Additional Service Event</em>'.
+	 * @see Implementation.AdditionalServiceComponent_AdditionalServiceHandler#getAdditionalServiceEvent()
+	 * @see #getAdditionalServiceComponent_AdditionalServiceHandler()
+	 * @generated
+	 */
+	EReference getAdditionalServiceComponent_AdditionalServiceHandler_AdditionalServiceEvent();
+
+	/**
+	 * Returns the meta object for the '{@link Implementation.AdditionalServiceComponent_AdditionalServiceHandler#findService(java.lang.String) <em>Find Service</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Find Service</em>' operation.
+	 * @see Implementation.AdditionalServiceComponent_AdditionalServiceHandler#findService(java.lang.String)
+	 * @generated
+	 */
+	EOperation getAdditionalServiceComponent_AdditionalServiceHandler__FindService__String();
 
 	/**
 	 * Returns the meta object for class '{@link Implementation.AdditionalServiceComponent_IAdditionalServiceAdministration <em>Additional Service Component IAdditional Service Administration</em>}'.
@@ -4970,59 +5095,6 @@ public interface ImplementationPackage extends EPackage {
 	EReference getRoomComponent_RoomHandler_ConferenceRooms();
 
 	/**
-	 * Returns the meta object for class '{@link Implementation.AdditionalServiceHandler <em>Additional Service Handler</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Additional Service Handler</em>'.
-	 * @see Implementation.AdditionalServiceHandler
-	 * @generated
-	 */
-	EClass getAdditionalServiceHandler();
-
-	/**
-	 * Returns the meta object for the reference '{@link Implementation.AdditionalServiceHandler#getIAuthentication <em>IAuthentication</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>IAuthentication</em>'.
-	 * @see Implementation.AdditionalServiceHandler#getIAuthentication()
-	 * @see #getAdditionalServiceHandler()
-	 * @generated
-	 */
-	EReference getAdditionalServiceHandler_IAuthentication();
-
-	/**
-	 * Returns the meta object for the reference list '{@link Implementation.AdditionalServiceHandler#getAdditionalService <em>Additional Service</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Additional Service</em>'.
-	 * @see Implementation.AdditionalServiceHandler#getAdditionalService()
-	 * @see #getAdditionalServiceHandler()
-	 * @generated
-	 */
-	EReference getAdditionalServiceHandler_AdditionalService();
-
-	/**
-	 * Returns the meta object for the reference list '{@link Implementation.AdditionalServiceHandler#getAdditionalServiceEvent <em>Additional Service Event</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Additional Service Event</em>'.
-	 * @see Implementation.AdditionalServiceHandler#getAdditionalServiceEvent()
-	 * @see #getAdditionalServiceHandler()
-	 * @generated
-	 */
-	EReference getAdditionalServiceHandler_AdditionalServiceEvent();
-
-	/**
-	 * Returns the meta object for the '{@link Implementation.AdditionalServiceHandler#findService(java.lang.String) <em>Find Service</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Find Service</em>' operation.
-	 * @see Implementation.AdditionalServiceHandler#findService(java.lang.String)
-	 * @generated
-	 */
-	EOperation getAdditionalServiceHandler__FindService__String();
-
-	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5528,48 +5600,6 @@ public interface ImplementationPackage extends EPackage {
 		EClass PAYMENT_COMPONENT = eINSTANCE.getPaymentComponent();
 
 		/**
-		 * The meta object literal for the '{@link Implementation.impl.PaymentComponent_PaymentManagerImpl <em>Payment Component Payment Manager</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see Implementation.impl.PaymentComponent_PaymentManagerImpl
-		 * @see Implementation.impl.ImplementationPackageImpl#getPaymentComponent_PaymentManager()
-		 * @generated
-		 */
-		EClass PAYMENT_COMPONENT_PAYMENT_MANAGER = eINSTANCE.getPaymentComponent_PaymentManager();
-
-		/**
-		 * The meta object literal for the '<em><b>Payment Details</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PAYMENT_COMPONENT_PAYMENT_MANAGER__PAYMENT_DETAILS = eINSTANCE.getPaymentComponent_PaymentManager_PaymentDetails();
-
-		/**
-		 * The meta object literal for the '<em><b>Payments</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PAYMENT_COMPONENT_PAYMENT_MANAGER__PAYMENTS = eINSTANCE.getPaymentComponent_PaymentManager_Payments();
-
-		/**
-		 * The meta object literal for the '<em><b>Make Payment</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation PAYMENT_COMPONENT_PAYMENT_MANAGER___MAKE_PAYMENT__STRING_INT_INT_INT_STRING_STRING_STRING = eINSTANCE.getPaymentComponent_PaymentManager__MakePayment__String_int_int_int_String_String_String();
-
-		/**
-		 * The meta object literal for the '<em><b>Is Credit Card Valid</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation PAYMENT_COMPONENT_PAYMENT_MANAGER___IS_CREDIT_CARD_VALID__STRING_STRING_STRING_STRING_STRING_STRING = eINSTANCE.getPaymentComponent_PaymentManager__IsCreditCardValid__String_String_String_String_String_String();
-
-		/**
 		 * The meta object literal for the '{@link Implementation.impl.PaymentComponent_PaymentImpl <em>Payment Component Payment</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5578,6 +5608,70 @@ public interface ImplementationPackage extends EPackage {
 		 * @generated
 		 */
 		EClass PAYMENT_COMPONENT_PAYMENT = eINSTANCE.getPaymentComponent_Payment();
+
+		/**
+		 * The meta object literal for the '<em><b>Cc Number</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PAYMENT_COMPONENT_PAYMENT__CC_NUMBER = eINSTANCE.getPaymentComponent_Payment_CcNumber();
+
+		/**
+		 * The meta object literal for the '<em><b>Ccv</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PAYMENT_COMPONENT_PAYMENT__CCV = eINSTANCE.getPaymentComponent_Payment_Ccv();
+
+		/**
+		 * The meta object literal for the '<em><b>First Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PAYMENT_COMPONENT_PAYMENT__FIRST_NAME = eINSTANCE.getPaymentComponent_Payment_FirstName();
+
+		/**
+		 * The meta object literal for the '<em><b>Last Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PAYMENT_COMPONENT_PAYMENT__LAST_NAME = eINSTANCE.getPaymentComponent_Payment_LastName();
+
+		/**
+		 * The meta object literal for the '<em><b>Expiry Month</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PAYMENT_COMPONENT_PAYMENT__EXPIRY_MONTH = eINSTANCE.getPaymentComponent_Payment_ExpiryMonth();
+
+		/**
+		 * The meta object literal for the '<em><b>Expiry Year</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PAYMENT_COMPONENT_PAYMENT__EXPIRY_YEAR = eINSTANCE.getPaymentComponent_Payment_ExpiryYear();
+
+		/**
+		 * The meta object literal for the '<em><b>Price</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PAYMENT_COMPONENT_PAYMENT__PRICE = eINSTANCE.getPaymentComponent_Payment_Price();
+
+		/**
+		 * The meta object literal for the '<em><b>Create Payment</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation PAYMENT_COMPONENT_PAYMENT___CREATE_PAYMENT__STRING_STRING_STRING_STRING_STRING_STRING_DOUBLE = eINSTANCE.getPaymentComponent_Payment__CreatePayment__String_String_String_String_String_String_double();
 
 		/**
 		 * The meta object literal for the '{@link Implementation.PaymentComponent_IPayment <em>Payment Component IPayment</em>}' class.
@@ -5590,28 +5684,38 @@ public interface ImplementationPackage extends EPackage {
 		EClass PAYMENT_COMPONENT_IPAYMENT = eINSTANCE.getPaymentComponent_IPayment();
 
 		/**
-		 * The meta object literal for the '<em><b>Pay For Booking</b></em>' operation.
+		 * The meta object literal for the '<em><b>Make Payment</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation PAYMENT_COMPONENT_IPAYMENT___PAY_FOR_BOOKING__INT_STRING_STRING_STRING_STRING_STRING_STRING = eINSTANCE.getPaymentComponent_IPayment__PayForBooking__int_String_String_String_String_String_String();
+		EOperation PAYMENT_COMPONENT_IPAYMENT___MAKE_PAYMENT__STRING_STRING_STRING_STRING_STRING_STRING_DATE = eINSTANCE.getPaymentComponent_IPayment__MakePayment__String_String_String_String_String_String_Date();
 
 		/**
-		 * The meta object literal for the '<em><b>Reserve Funds</b></em>' operation.
+		 * The meta object literal for the '<em><b>Validate CC</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation PAYMENT_COMPONENT_IPAYMENT___RESERVE_FUNDS__INT_STRING_STRING_STRING_STRING_STRING_STRING = eINSTANCE.getPaymentComponent_IPayment__ReserveFunds__int_String_String_String_String_String_String();
+		EOperation PAYMENT_COMPONENT_IPAYMENT___VALIDATE_CC__STRING_STRING_STRING_STRING_STRING_STRING_DOUBLE = eINSTANCE.getPaymentComponent_IPayment__ValidateCC__String_String_String_String_String_String_double();
 
 		/**
-		 * The meta object literal for the '<em><b>Unreserve Funds</b></em>' operation.
+		 * The meta object literal for the '{@link Implementation.impl.PaymentComponent_PaymentHandlerImpl <em>Payment Component Payment Handler</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see Implementation.impl.PaymentComponent_PaymentHandlerImpl
+		 * @see Implementation.impl.ImplementationPackageImpl#getPaymentComponent_PaymentHandler()
+		 * @generated
+		 */
+		EClass PAYMENT_COMPONENT_PAYMENT_HANDLER = eINSTANCE.getPaymentComponent_PaymentHandler();
+
+		/**
+		 * The meta object literal for the '<em><b>Payment</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation PAYMENT_COMPONENT_IPAYMENT___UNRESERVE_FUNDS__INT_STRING_STRING_STRING_STRING_STRING_STRING = eINSTANCE.getPaymentComponent_IPayment__UnreserveFunds__int_String_String_String_String_String_String();
+		EReference PAYMENT_COMPONENT_PAYMENT_HANDLER__PAYMENT = eINSTANCE.getPaymentComponent_PaymentHandler_Payment();
 
 		/**
 		 * The meta object literal for the '{@link Implementation.impl.AdditionalServiceComponentImpl <em>Additional Service Component</em>}' class.
@@ -5732,6 +5836,48 @@ public interface ImplementationPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION___GET_ALL_ADDITIONAL_SERVICES = eINSTANCE.getAdditionalServiceComponent_IAdditionalServiceInformation__GetAllAdditionalServices();
+
+		/**
+		 * The meta object literal for the '{@link Implementation.impl.AdditionalServiceComponent_AdditionalServiceHandlerImpl <em>Additional Service Component Additional Service Handler</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see Implementation.impl.AdditionalServiceComponent_AdditionalServiceHandlerImpl
+		 * @see Implementation.impl.ImplementationPackageImpl#getAdditionalServiceComponent_AdditionalServiceHandler()
+		 * @generated
+		 */
+		EClass ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER = eINSTANCE.getAdditionalServiceComponent_AdditionalServiceHandler();
+
+		/**
+		 * The meta object literal for the '<em><b>IAuthentication</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER__IAUTHENTICATION = eINSTANCE.getAdditionalServiceComponent_AdditionalServiceHandler_IAuthentication();
+
+		/**
+		 * The meta object literal for the '<em><b>Additional Service</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER__ADDITIONAL_SERVICE = eINSTANCE.getAdditionalServiceComponent_AdditionalServiceHandler_AdditionalService();
+
+		/**
+		 * The meta object literal for the '<em><b>Additional Service Event</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER__ADDITIONAL_SERVICE_EVENT = eINSTANCE.getAdditionalServiceComponent_AdditionalServiceHandler_AdditionalServiceEvent();
+
+		/**
+		 * The meta object literal for the '<em><b>Find Service</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER___FIND_SERVICE__STRING = eINSTANCE.getAdditionalServiceComponent_AdditionalServiceHandler__FindService__String();
 
 		/**
 		 * The meta object literal for the '{@link Implementation.AdditionalServiceComponent_IAdditionalServiceAdministration <em>Additional Service Component IAdditional Service Administration</em>}' class.
@@ -6594,48 +6740,6 @@ public interface ImplementationPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ROOM_COMPONENT_ROOM_HANDLER__CONFERENCE_ROOMS = eINSTANCE.getRoomComponent_RoomHandler_ConferenceRooms();
-
-		/**
-		 * The meta object literal for the '{@link Implementation.impl.AdditionalServiceHandlerImpl <em>Additional Service Handler</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see Implementation.impl.AdditionalServiceHandlerImpl
-		 * @see Implementation.impl.ImplementationPackageImpl#getAdditionalServiceHandler()
-		 * @generated
-		 */
-		EClass ADDITIONAL_SERVICE_HANDLER = eINSTANCE.getAdditionalServiceHandler();
-
-		/**
-		 * The meta object literal for the '<em><b>IAuthentication</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ADDITIONAL_SERVICE_HANDLER__IAUTHENTICATION = eINSTANCE.getAdditionalServiceHandler_IAuthentication();
-
-		/**
-		 * The meta object literal for the '<em><b>Additional Service</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ADDITIONAL_SERVICE_HANDLER__ADDITIONAL_SERVICE = eINSTANCE.getAdditionalServiceHandler_AdditionalService();
-
-		/**
-		 * The meta object literal for the '<em><b>Additional Service Event</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ADDITIONAL_SERVICE_HANDLER__ADDITIONAL_SERVICE_EVENT = eINSTANCE.getAdditionalServiceHandler_AdditionalServiceEvent();
-
-		/**
-		 * The meta object literal for the '<em><b>Find Service</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ADDITIONAL_SERVICE_HANDLER___FIND_SERVICE__STRING = eINSTANCE.getAdditionalServiceHandler__FindService__String();
 
 	}
 

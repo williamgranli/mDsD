@@ -9,10 +9,212 @@ import org.eclipse.emf.ecore.EObject;
  * A representation of the model object '<em><b>Payment Component Payment</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <p>
+ * The following features are supported:
+ * <ul>
+ *   <li>{@link Implementation.PaymentComponent_Payment#getCcNumber <em>Cc Number</em>}</li>
+ *   <li>{@link Implementation.PaymentComponent_Payment#getCcv <em>Ccv</em>}</li>
+ *   <li>{@link Implementation.PaymentComponent_Payment#getFirstName <em>First Name</em>}</li>
+ *   <li>{@link Implementation.PaymentComponent_Payment#getLastName <em>Last Name</em>}</li>
+ *   <li>{@link Implementation.PaymentComponent_Payment#getExpiryMonth <em>Expiry Month</em>}</li>
+ *   <li>{@link Implementation.PaymentComponent_Payment#getExpiryYear <em>Expiry Year</em>}</li>
+ *   <li>{@link Implementation.PaymentComponent_Payment#getPrice <em>Price</em>}</li>
+ * </ul>
+ * </p>
  *
  * @see Implementation.ImplementationPackage#getPaymentComponent_Payment()
  * @model
  * @generated
  */
 public interface PaymentComponent_Payment extends EObject {
+
+	/**
+	 * Returns the value of the '<em><b>Cc Number</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Cc Number</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Cc Number</em>' attribute.
+	 * @see #setCcNumber(String)
+	 * @see Implementation.ImplementationPackage#getPaymentComponent_Payment_CcNumber()
+	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
+	 * @generated
+	 */
+	String getCcNumber();
+
+	/**
+	 * Sets the value of the '{@link Implementation.PaymentComponent_Payment#getCcNumber <em>Cc Number</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Cc Number</em>' attribute.
+	 * @see #getCcNumber()
+	 * @generated
+	 */
+	void setCcNumber(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Ccv</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Ccv</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Ccv</em>' attribute.
+	 * @see #setCcv(String)
+	 * @see Implementation.ImplementationPackage#getPaymentComponent_Payment_Ccv()
+	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
+	 * @generated
+	 */
+	String getCcv();
+
+	/**
+	 * Sets the value of the '{@link Implementation.PaymentComponent_Payment#getCcv <em>Ccv</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Ccv</em>' attribute.
+	 * @see #getCcv()
+	 * @generated
+	 */
+	void setCcv(String value);
+
+	/**
+	 * Returns the value of the '<em><b>First Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>First Name</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>First Name</em>' attribute.
+	 * @see #setFirstName(String)
+	 * @see Implementation.ImplementationPackage#getPaymentComponent_Payment_FirstName()
+	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
+	 * @generated
+	 */
+	String getFirstName();
+
+	/**
+	 * Sets the value of the '{@link Implementation.PaymentComponent_Payment#getFirstName <em>First Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>First Name</em>' attribute.
+	 * @see #getFirstName()
+	 * @generated
+	 */
+	void setFirstName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Last Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Last Name</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Last Name</em>' attribute.
+	 * @see #setLastName(String)
+	 * @see Implementation.ImplementationPackage#getPaymentComponent_Payment_LastName()
+	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
+	 * @generated
+	 */
+	String getLastName();
+
+	/**
+	 * Sets the value of the '{@link Implementation.PaymentComponent_Payment#getLastName <em>Last Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Last Name</em>' attribute.
+	 * @see #getLastName()
+	 * @generated
+	 */
+	void setLastName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Expiry Month</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Expiry Month</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Expiry Month</em>' attribute.
+	 * @see #setExpiryMonth(String)
+	 * @see Implementation.ImplementationPackage#getPaymentComponent_Payment_ExpiryMonth()
+	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
+	 * @generated
+	 */
+	String getExpiryMonth();
+
+	/**
+	 * Sets the value of the '{@link Implementation.PaymentComponent_Payment#getExpiryMonth <em>Expiry Month</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Expiry Month</em>' attribute.
+	 * @see #getExpiryMonth()
+	 * @generated
+	 */
+	void setExpiryMonth(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Expiry Year</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Expiry Year</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Expiry Year</em>' attribute.
+	 * @see #setExpiryYear(String)
+	 * @see Implementation.ImplementationPackage#getPaymentComponent_Payment_ExpiryYear()
+	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
+	 * @generated
+	 */
+	String getExpiryYear();
+
+	/**
+	 * Sets the value of the '{@link Implementation.PaymentComponent_Payment#getExpiryYear <em>Expiry Year</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Expiry Year</em>' attribute.
+	 * @see #getExpiryYear()
+	 * @generated
+	 */
+	void setExpiryYear(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Price</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Price</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Price</em>' attribute.
+	 * @see #setPrice(double)
+	 * @see Implementation.ImplementationPackage#getPaymentComponent_Payment_Price()
+	 * @model required="true" ordered="false"
+	 * @generated
+	 */
+	double getPrice();
+
+	/**
+	 * Sets the value of the '{@link Implementation.PaymentComponent_Payment#getPrice <em>Price</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Price</em>' attribute.
+	 * @see #getPrice()
+	 * @generated
+	 */
+	void setPrice(double value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model ccNumberDataType="org.eclipse.uml2.types.String" ccNumberRequired="true" ccNumberOrdered="false" ccvDataType="org.eclipse.uml2.types.String" ccvRequired="true" ccvOrdered="false" firstNameDataType="org.eclipse.uml2.types.String" firstNameRequired="true" firstNameOrdered="false" lastNameDataType="org.eclipse.uml2.types.String" lastNameRequired="true" lastNameOrdered="false" expiryYearDataType="org.eclipse.uml2.types.String" expiryYearRequired="true" expiryYearOrdered="false" expiryMonthDataType="org.eclipse.uml2.types.String" expiryMonthRequired="true" expiryMonthOrdered="false" priceRequired="true" priceOrdered="false"
+	 * @generated
+	 */
+	void createPayment(String ccNumber, String ccv, String firstName, String lastName, String expiryYear, String expiryMonth, double price);
 } // PaymentComponent_Payment

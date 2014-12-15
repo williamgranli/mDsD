@@ -103,13 +103,13 @@ public interface ImplementationFactory extends EFactory {
 	PaymentComponent createPaymentComponent();
 
 	/**
-	 * Returns a new object of class '<em>Payment Component Payment Manager</em>'.
+	 * Returns a new object of class '<em>Payment Component Payment Handler</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Payment Component Payment Manager</em>'.
+	 * @return a new object of class '<em>Payment Component Payment Handler</em>'.
 	 * @generated
 	 */
-	PaymentComponent_PaymentManager createPaymentComponent_PaymentManager();
+	PaymentComponent_PaymentHandler createPaymentComponent_PaymentHandler();
 
 	/**
 	 * Returns a new object of class '<em>Payment Component Payment</em>'.
@@ -146,6 +146,15 @@ public interface ImplementationFactory extends EFactory {
 	 * @generated
 	 */
 	AdditionalServiceComponent_AdditionalServiceEvent createAdditionalServiceComponent_AdditionalServiceEvent();
+
+	/**
+	 * Returns a new object of class '<em>Additional Service Component Additional Service Handler</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Additional Service Component Additional Service Handler</em>'.
+	 * @generated
+	 */
+	AdditionalServiceComponent_AdditionalServiceHandler createAdditionalServiceComponent_AdditionalServiceHandler();
 
 	/**
 	 * Returns a new object of class '<em>Booking Component</em>'.
@@ -281,15 +290,6 @@ public interface ImplementationFactory extends EFactory {
 	 * @generated
 	 */
 	RoomComponent_RoomHandler createRoomComponent_RoomHandler();
-
-	/**
-	 * Returns a new object of class '<em>Additional Service Handler</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Additional Service Handler</em>'.
-	 * @generated
-	 */
-	AdditionalServiceHandler createAdditionalServiceHandler();
 
 	/**
 	 * Returns the package supported by this factory.

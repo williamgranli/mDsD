@@ -5,10 +5,10 @@ package Implementation.impl;
 import Implementation.AdditionalServiceComponent;
 import Implementation.AdditionalServiceComponent_AdditionalService;
 import Implementation.AdditionalServiceComponent_AdditionalServiceEvent;
+import Implementation.AdditionalServiceComponent_AdditionalServiceHandler;
 import Implementation.AdditionalServiceComponent_IAdditionalServiceAdministration;
 import Implementation.AdditionalServiceComponent_IAdditionalServiceDecision;
 import Implementation.AdditionalServiceComponent_IAdditionalServiceInformation;
-import Implementation.AdditionalServiceHandler;
 import Implementation.BookingComponent;
 import Implementation.BookingComponent_AdditionalService;
 import Implementation.BookingComponent_Booking;
@@ -34,7 +34,7 @@ import Implementation.OccupancyComponent_OccupancyHandler;
 import Implementation.PaymentComponent;
 import Implementation.PaymentComponent_IPayment;
 import Implementation.PaymentComponent_Payment;
-import Implementation.PaymentComponent_PaymentManager;
+import Implementation.PaymentComponent_PaymentHandler;
 import Implementation.RoomComponent;
 import Implementation.RoomComponent_Bedroom;
 import Implementation.RoomComponent_ConferenceRoom;
@@ -48,17 +48,13 @@ import Implementation.StaffComponent_AccountManager;
 import Implementation.StaffComponent_Employee;
 import Implementation.StaffComponent_IAccountAdministration;
 import Implementation.StaffComponent_IAuthentication;
-
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
 import org.eclipse.uml2.types.TypesPackage;
-
 import org.eclipse.uml2.types.impl.TypesPackageImpl;
 
 /**
@@ -192,13 +188,6 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass paymentComponent_PaymentManagerEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass paymentComponent_PaymentEClass = null;
 
 	/**
@@ -207,6 +196,13 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * @generated
 	 */
 	private EClass paymentComponent_IPaymentEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass paymentComponent_PaymentHandlerEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -235,6 +231,13 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * @generated
 	 */
 	private EClass additionalServiceComponent_IAdditionalServiceInformationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass additionalServiceComponent_AdditionalServiceHandlerEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -368,13 +371,6 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * @generated
 	 */
 	private EClass roomComponent_RoomHandlerEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass additionalServiceHandlerEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -951,53 +947,80 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getPaymentComponent_PaymentManager() {
-		return paymentComponent_PaymentManagerEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getPaymentComponent_PaymentManager_PaymentDetails() {
-		return (EAttribute)paymentComponent_PaymentManagerEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getPaymentComponent_PaymentManager_Payments() {
-		return (EReference)paymentComponent_PaymentManagerEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getPaymentComponent_PaymentManager__MakePayment__String_int_int_int_String_String_String() {
-		return paymentComponent_PaymentManagerEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getPaymentComponent_PaymentManager__IsCreditCardValid__String_String_String_String_String_String() {
-		return paymentComponent_PaymentManagerEClass.getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getPaymentComponent_Payment() {
 		return paymentComponent_PaymentEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPaymentComponent_Payment_CcNumber() {
+		return (EAttribute)paymentComponent_PaymentEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPaymentComponent_Payment_Ccv() {
+		return (EAttribute)paymentComponent_PaymentEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPaymentComponent_Payment_FirstName() {
+		return (EAttribute)paymentComponent_PaymentEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPaymentComponent_Payment_LastName() {
+		return (EAttribute)paymentComponent_PaymentEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPaymentComponent_Payment_ExpiryMonth() {
+		return (EAttribute)paymentComponent_PaymentEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPaymentComponent_Payment_ExpiryYear() {
+		return (EAttribute)paymentComponent_PaymentEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPaymentComponent_Payment_Price() {
+		return (EAttribute)paymentComponent_PaymentEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getPaymentComponent_Payment__CreatePayment__String_String_String_String_String_String_double() {
+		return paymentComponent_PaymentEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -1014,7 +1037,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getPaymentComponent_IPayment__PayForBooking__int_String_String_String_String_String_String() {
+	public EOperation getPaymentComponent_IPayment__MakePayment__String_String_String_String_String_String_Date() {
 		return paymentComponent_IPaymentEClass.getEOperations().get(0);
 	}
 
@@ -1023,7 +1046,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getPaymentComponent_IPayment__ReserveFunds__int_String_String_String_String_String_String() {
+	public EOperation getPaymentComponent_IPayment__ValidateCC__String_String_String_String_String_String_double() {
 		return paymentComponent_IPaymentEClass.getEOperations().get(1);
 	}
 
@@ -1032,8 +1055,17 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getPaymentComponent_IPayment__UnreserveFunds__int_String_String_String_String_String_String() {
-		return paymentComponent_IPaymentEClass.getEOperations().get(2);
+	public EClass getPaymentComponent_PaymentHandler() {
+		return paymentComponent_PaymentHandlerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getPaymentComponent_PaymentHandler_Payment() {
+		return (EReference)paymentComponent_PaymentHandlerEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1160,6 +1192,51 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 */
 	public EOperation getAdditionalServiceComponent_IAdditionalServiceInformation__GetAllAdditionalServices() {
 		return additionalServiceComponent_IAdditionalServiceInformationEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getAdditionalServiceComponent_AdditionalServiceHandler() {
+		return additionalServiceComponent_AdditionalServiceHandlerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getAdditionalServiceComponent_AdditionalServiceHandler_IAuthentication() {
+		return (EReference)additionalServiceComponent_AdditionalServiceHandlerEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getAdditionalServiceComponent_AdditionalServiceHandler_AdditionalService() {
+		return (EReference)additionalServiceComponent_AdditionalServiceHandlerEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getAdditionalServiceComponent_AdditionalServiceHandler_AdditionalServiceEvent() {
+		return (EReference)additionalServiceComponent_AdditionalServiceHandlerEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getAdditionalServiceComponent_AdditionalServiceHandler__FindService__String() {
+		return additionalServiceComponent_AdditionalServiceHandlerEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -1663,7 +1740,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * @generated
 	 */
 	public EReference getBookingComponent_BookingManager_IPayment() {
-		return (EReference)bookingComponent_BookingManagerEClass.getEStructuralFeatures().get(3);
+		return (EReference)bookingComponent_BookingManagerEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -1672,7 +1749,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * @generated
 	 */
 	public EReference getBookingComponent_BookingManager_IAdditionalServiceInformation() {
-		return (EReference)bookingComponent_BookingManagerEClass.getEStructuralFeatures().get(4);
+		return (EReference)bookingComponent_BookingManagerEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -2094,51 +2171,6 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getAdditionalServiceHandler() {
-		return additionalServiceHandlerEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getAdditionalServiceHandler_IAuthentication() {
-		return (EReference)additionalServiceHandlerEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getAdditionalServiceHandler_AdditionalService() {
-		return (EReference)additionalServiceHandlerEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getAdditionalServiceHandler_AdditionalServiceEvent() {
-		return (EReference)additionalServiceHandlerEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getAdditionalServiceHandler__FindService__String() {
-		return additionalServiceHandlerEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public ImplementationFactory getImplementationFactory() {
 		return (ImplementationFactory)getEFactoryInstance();
 	}
@@ -2235,18 +2267,22 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 
 		paymentComponentEClass = createEClass(PAYMENT_COMPONENT);
 
-		paymentComponent_PaymentManagerEClass = createEClass(PAYMENT_COMPONENT_PAYMENT_MANAGER);
-		createEAttribute(paymentComponent_PaymentManagerEClass, PAYMENT_COMPONENT_PAYMENT_MANAGER__PAYMENT_DETAILS);
-		createEReference(paymentComponent_PaymentManagerEClass, PAYMENT_COMPONENT_PAYMENT_MANAGER__PAYMENTS);
-		createEOperation(paymentComponent_PaymentManagerEClass, PAYMENT_COMPONENT_PAYMENT_MANAGER___MAKE_PAYMENT__STRING_INT_INT_INT_STRING_STRING_STRING);
-		createEOperation(paymentComponent_PaymentManagerEClass, PAYMENT_COMPONENT_PAYMENT_MANAGER___IS_CREDIT_CARD_VALID__STRING_STRING_STRING_STRING_STRING_STRING);
+		paymentComponent_IPaymentEClass = createEClass(PAYMENT_COMPONENT_IPAYMENT);
+		createEOperation(paymentComponent_IPaymentEClass, PAYMENT_COMPONENT_IPAYMENT___MAKE_PAYMENT__STRING_STRING_STRING_STRING_STRING_STRING_DATE);
+		createEOperation(paymentComponent_IPaymentEClass, PAYMENT_COMPONENT_IPAYMENT___VALIDATE_CC__STRING_STRING_STRING_STRING_STRING_STRING_DOUBLE);
+
+		paymentComponent_PaymentHandlerEClass = createEClass(PAYMENT_COMPONENT_PAYMENT_HANDLER);
+		createEReference(paymentComponent_PaymentHandlerEClass, PAYMENT_COMPONENT_PAYMENT_HANDLER__PAYMENT);
 
 		paymentComponent_PaymentEClass = createEClass(PAYMENT_COMPONENT_PAYMENT);
-
-		paymentComponent_IPaymentEClass = createEClass(PAYMENT_COMPONENT_IPAYMENT);
-		createEOperation(paymentComponent_IPaymentEClass, PAYMENT_COMPONENT_IPAYMENT___PAY_FOR_BOOKING__INT_STRING_STRING_STRING_STRING_STRING_STRING);
-		createEOperation(paymentComponent_IPaymentEClass, PAYMENT_COMPONENT_IPAYMENT___RESERVE_FUNDS__INT_STRING_STRING_STRING_STRING_STRING_STRING);
-		createEOperation(paymentComponent_IPaymentEClass, PAYMENT_COMPONENT_IPAYMENT___UNRESERVE_FUNDS__INT_STRING_STRING_STRING_STRING_STRING_STRING);
+		createEAttribute(paymentComponent_PaymentEClass, PAYMENT_COMPONENT_PAYMENT__CC_NUMBER);
+		createEAttribute(paymentComponent_PaymentEClass, PAYMENT_COMPONENT_PAYMENT__CCV);
+		createEAttribute(paymentComponent_PaymentEClass, PAYMENT_COMPONENT_PAYMENT__FIRST_NAME);
+		createEAttribute(paymentComponent_PaymentEClass, PAYMENT_COMPONENT_PAYMENT__LAST_NAME);
+		createEAttribute(paymentComponent_PaymentEClass, PAYMENT_COMPONENT_PAYMENT__EXPIRY_MONTH);
+		createEAttribute(paymentComponent_PaymentEClass, PAYMENT_COMPONENT_PAYMENT__EXPIRY_YEAR);
+		createEAttribute(paymentComponent_PaymentEClass, PAYMENT_COMPONENT_PAYMENT__PRICE);
+		createEOperation(paymentComponent_PaymentEClass, PAYMENT_COMPONENT_PAYMENT___CREATE_PAYMENT__STRING_STRING_STRING_STRING_STRING_STRING_DOUBLE);
 
 		additionalServiceComponentEClass = createEClass(ADDITIONAL_SERVICE_COMPONENT);
 
@@ -2275,6 +2311,17 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		additionalServiceComponent_IAdditionalServiceInformationEClass = createEClass(ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION);
 		createEOperation(additionalServiceComponent_IAdditionalServiceInformationEClass, ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION___GET_ADDITIONAL_SERVICE_INFO__STRING);
 		createEOperation(additionalServiceComponent_IAdditionalServiceInformationEClass, ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION___GET_ALL_ADDITIONAL_SERVICES);
+
+		additionalServiceComponent_AdditionalServiceHandlerEClass = createEClass(ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER);
+		createEReference(additionalServiceComponent_AdditionalServiceHandlerEClass, ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER__IAUTHENTICATION);
+		createEReference(additionalServiceComponent_AdditionalServiceHandlerEClass, ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER__ADDITIONAL_SERVICE);
+		createEReference(additionalServiceComponent_AdditionalServiceHandlerEClass, ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER__ADDITIONAL_SERVICE_EVENT);
+		createEOperation(additionalServiceComponent_AdditionalServiceHandlerEClass, ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER___FIND_SERVICE__STRING);
+
+		staffComponent_IAuthenticationEClass = createEClass(STAFF_COMPONENT_IAUTHENTICATION);
+		createEOperation(staffComponent_IAuthenticationEClass, STAFF_COMPONENT_IAUTHENTICATION___LOG_IN__STRING_STRING);
+		createEOperation(staffComponent_IAuthenticationEClass, STAFF_COMPONENT_IAUTHENTICATION___LOG_OUT__STRING);
+		createEOperation(staffComponent_IAuthenticationEClass, STAFF_COMPONENT_IAUTHENTICATION___IS_LOGGED_IN__STRING);
 
 		bookingComponentEClass = createEClass(BOOKING_COMPONENT);
 
@@ -2324,14 +2371,9 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		createEReference(bookingComponent_BookingManagerEClass, BOOKING_COMPONENT_BOOKING_MANAGER__BOOKINGS);
 		createEReference(bookingComponent_BookingManagerEClass, BOOKING_COMPONENT_BOOKING_MANAGER__AUTHENTICATION);
 		createEReference(bookingComponent_BookingManagerEClass, BOOKING_COMPONENT_BOOKING_MANAGER__IROOM_INFORMATION);
-		createEReference(bookingComponent_BookingManagerEClass, BOOKING_COMPONENT_BOOKING_MANAGER__IPAYMENT);
 		createEReference(bookingComponent_BookingManagerEClass, BOOKING_COMPONENT_BOOKING_MANAGER__IADDITIONAL_SERVICE_INFORMATION);
+		createEReference(bookingComponent_BookingManagerEClass, BOOKING_COMPONENT_BOOKING_MANAGER__IPAYMENT);
 		createEOperation(bookingComponent_BookingManagerEClass, BOOKING_COMPONENT_BOOKING_MANAGER___FIND_BOOKING__STRING);
-
-		staffComponent_IAuthenticationEClass = createEClass(STAFF_COMPONENT_IAUTHENTICATION);
-		createEOperation(staffComponent_IAuthenticationEClass, STAFF_COMPONENT_IAUTHENTICATION___LOG_IN__STRING_STRING);
-		createEOperation(staffComponent_IAuthenticationEClass, STAFF_COMPONENT_IAUTHENTICATION___LOG_OUT__STRING);
-		createEOperation(staffComponent_IAuthenticationEClass, STAFF_COMPONENT_IAUTHENTICATION___IS_LOGGED_IN__STRING);
 
 		staffComponentEClass = createEClass(STAFF_COMPONENT);
 
@@ -2387,12 +2429,6 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		createEReference(roomComponent_RoomHandlerEClass, ROOM_COMPONENT_ROOM_HANDLER__AUTHENTICATOR);
 		createEReference(roomComponent_RoomHandlerEClass, ROOM_COMPONENT_ROOM_HANDLER__BED_ROOMS);
 		createEReference(roomComponent_RoomHandlerEClass, ROOM_COMPONENT_ROOM_HANDLER__CONFERENCE_ROOMS);
-
-		additionalServiceHandlerEClass = createEClass(ADDITIONAL_SERVICE_HANDLER);
-		createEReference(additionalServiceHandlerEClass, ADDITIONAL_SERVICE_HANDLER__IAUTHENTICATION);
-		createEReference(additionalServiceHandlerEClass, ADDITIONAL_SERVICE_HANDLER__ADDITIONAL_SERVICE);
-		createEReference(additionalServiceHandlerEClass, ADDITIONAL_SERVICE_HANDLER__ADDITIONAL_SERVICE_EVENT);
-		createEOperation(additionalServiceHandlerEClass, ADDITIONAL_SERVICE_HANDLER___FIND_SERVICE__STRING);
 	}
 
 	/**
@@ -2429,7 +2465,10 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		decisionSupportComponent_DSSControllerEClass.getESuperTypes().add(this.getDecisionSupportComponent_IDecisionSupport());
 		occupancyComponent_OccupancyHandlerEClass.getESuperTypes().add(this.getOccupancyComponent_IOccupancyDecision());
 		occupancyComponent_OccupancyHandlerEClass.getESuperTypes().add(this.getOccupancyComponent_IOccupancy());
-		paymentComponent_PaymentManagerEClass.getESuperTypes().add(this.getPaymentComponent_IPayment());
+		paymentComponent_PaymentHandlerEClass.getESuperTypes().add(this.getPaymentComponent_IPayment());
+		additionalServiceComponent_AdditionalServiceHandlerEClass.getESuperTypes().add(this.getAdditionalServiceComponent_IAdditionalServiceInformation());
+		additionalServiceComponent_AdditionalServiceHandlerEClass.getESuperTypes().add(this.getAdditionalServiceComponent_IAdditionalServiceDecision());
+		additionalServiceComponent_AdditionalServiceHandlerEClass.getESuperTypes().add(this.getAdditionalServiceComponent_IAdditionalServiceAdministration());
 		bookingComponent_BookingManagerEClass.getESuperTypes().add(this.getBookingComponent_IBooking());
 		bookingComponent_BookingManagerEClass.getESuperTypes().add(this.getBookingComponent_IBookingDecision());
 		staffComponent_AccountManagerEClass.getESuperTypes().add(this.getStaffComponent_IAuthentication());
@@ -2439,9 +2478,6 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		roomComponent_RoomHandlerEClass.getESuperTypes().add(this.getRoomComponent_IRoomDecision());
 		roomComponent_RoomHandlerEClass.getESuperTypes().add(this.getRoomComponent_IRoomInformation());
 		roomComponent_RoomHandlerEClass.getESuperTypes().add(this.getRoomComponent_IRoomAdministration());
-		additionalServiceHandlerEClass.getESuperTypes().add(this.getAdditionalServiceComponent_IAdditionalServiceInformation());
-		additionalServiceHandlerEClass.getESuperTypes().add(this.getAdditionalServiceComponent_IAdditionalServiceDecision());
-		additionalServiceHandlerEClass.getESuperTypes().add(this.getAdditionalServiceComponent_IAdditionalServiceAdministration());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(decisionSupportComponentEClass, DecisionSupportComponent.class, "DecisionSupportComponent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2587,57 +2623,46 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 
 		initEClass(paymentComponentEClass, PaymentComponent.class, "PaymentComponent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(paymentComponent_PaymentManagerEClass, PaymentComponent_PaymentManager.class, "PaymentComponent_PaymentManager", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getPaymentComponent_PaymentManager_PaymentDetails(), theTypesPackage.getString(), "paymentDetails", null, 1, 1, PaymentComponent_PaymentManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getPaymentComponent_PaymentManager_Payments(), this.getPaymentComponent_Payment(), null, "payments", null, 0, -1, PaymentComponent_PaymentManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		op = initEOperation(getPaymentComponent_PaymentManager__MakePayment__String_int_int_int_String_String_String(), null, "makePayment", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "ccv", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "amount", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "ccNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "expireMonth", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "expiryYear", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "firstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "lastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		op = initEOperation(getPaymentComponent_PaymentManager__IsCreditCardValid__String_String_String_String_String_String(), null, "isCreditCardValid", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "ccNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "ccv", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "expiryMonth", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "expiryYear", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "firstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "lastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEClass(paymentComponent_PaymentEClass, PaymentComponent_Payment.class, "PaymentComponent_Payment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
 		initEClass(paymentComponent_IPaymentEClass, PaymentComponent_IPayment.class, "PaymentComponent_IPayment", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		op = initEOperation(getPaymentComponent_IPayment__PayForBooking__int_String_String_String_String_String_String(), null, "payForBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "amount", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getPaymentComponent_IPayment__MakePayment__String_String_String_String_String_String_Date(), null, "makePayment", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "ccNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "ccv", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "expiryMonth", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "expiryYear", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "expiryMonth", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "firstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "lastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "double_", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getPaymentComponent_IPayment__ReserveFunds__int_String_String_String_String_String_String(), null, "reserveFunds", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "amount", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getPaymentComponent_IPayment__ValidateCC__String_String_String_String_String_String_double(), null, "validateCC", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "ccNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "ccv", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "expiryMonth", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "expiryYear", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "expiryMonth", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "firstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "lastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDouble(), "price", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getPaymentComponent_IPayment__UnreserveFunds__int_String_String_String_String_String_String(), null, "unreserveFunds", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "amount", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		initEClass(paymentComponent_PaymentHandlerEClass, PaymentComponent_PaymentHandler.class, "PaymentComponent_PaymentHandler", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getPaymentComponent_PaymentHandler_Payment(), this.getPaymentComponent_Payment(), null, "payment", null, 1, 1, PaymentComponent_PaymentHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(paymentComponent_PaymentEClass, PaymentComponent_Payment.class, "PaymentComponent_Payment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getPaymentComponent_Payment_CcNumber(), theTypesPackage.getString(), "ccNumber", null, 1, 1, PaymentComponent_Payment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getPaymentComponent_Payment_Ccv(), theTypesPackage.getString(), "ccv", null, 1, 1, PaymentComponent_Payment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getPaymentComponent_Payment_FirstName(), theTypesPackage.getString(), "firstName", null, 1, 1, PaymentComponent_Payment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getPaymentComponent_Payment_LastName(), theTypesPackage.getString(), "lastName", null, 1, 1, PaymentComponent_Payment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getPaymentComponent_Payment_ExpiryMonth(), theTypesPackage.getString(), "expiryMonth", null, 1, 1, PaymentComponent_Payment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getPaymentComponent_Payment_ExpiryYear(), theTypesPackage.getString(), "expiryYear", null, 1, 1, PaymentComponent_Payment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getPaymentComponent_Payment_Price(), ecorePackage.getEDouble(), "price", null, 1, 1, PaymentComponent_Payment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		op = initEOperation(getPaymentComponent_Payment__CreatePayment__String_String_String_String_String_String_double(), null, "createPayment", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "ccNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "ccv", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "expiryMonth", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "expiryYear", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "firstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "lastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "expiryYear", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "expiryMonth", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDouble(), "price", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(additionalServiceComponentEClass, AdditionalServiceComponent.class, "AdditionalServiceComponent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -2702,6 +2727,26 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		addEParameter(op, theTypesPackage.getString(), "name", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getAdditionalServiceComponent_IAdditionalServiceInformation__GetAllAdditionalServices(), theTypesPackage.getString(), "getAllAdditionalServices", 1, -1, IS_UNIQUE, !IS_ORDERED);
+
+		initEClass(additionalServiceComponent_AdditionalServiceHandlerEClass, AdditionalServiceComponent_AdditionalServiceHandler.class, "AdditionalServiceComponent_AdditionalServiceHandler", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getAdditionalServiceComponent_AdditionalServiceHandler_IAuthentication(), this.getStaffComponent_IAuthentication(), null, "iAuthentication", null, 1, 1, AdditionalServiceComponent_AdditionalServiceHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getAdditionalServiceComponent_AdditionalServiceHandler_AdditionalService(), this.getAdditionalServiceComponent_AdditionalService(), null, "additionalService", null, 0, -1, AdditionalServiceComponent_AdditionalServiceHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getAdditionalServiceComponent_AdditionalServiceHandler_AdditionalServiceEvent(), this.getAdditionalServiceComponent_AdditionalServiceEvent(), null, "additionalServiceEvent", null, 0, -1, AdditionalServiceComponent_AdditionalServiceHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		op = initEOperation(getAdditionalServiceComponent_AdditionalServiceHandler__FindService__String(), this.getAdditionalServiceComponent_AdditionalService(), "findService", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "name", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		initEClass(staffComponent_IAuthenticationEClass, StaffComponent_IAuthentication.class, "StaffComponent_IAuthentication", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		op = initEOperation(getStaffComponent_IAuthentication__LogIn__String_String(), null, "logIn", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "ssn", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "password", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getStaffComponent_IAuthentication__LogOut__String(), null, "logOut", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "ssn", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getStaffComponent_IAuthentication__IsLoggedIn__String(), theTypesPackage.getBoolean(), "isLoggedIn", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "ssn", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(bookingComponentEClass, BookingComponent.class, "BookingComponent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -2776,23 +2821,11 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		initEReference(getBookingComponent_BookingManager_Bookings(), this.getBookingComponent_Booking(), null, "bookings", null, 0, -1, BookingComponent_BookingManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getBookingComponent_BookingManager_Authentication(), this.getStaffComponent_IAuthentication(), null, "authentication", null, 1, 1, BookingComponent_BookingManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getBookingComponent_BookingManager_IRoomInformation(), this.getRoomComponent_IRoomInformation(), null, "iRoomInformation", null, 1, 1, BookingComponent_BookingManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getBookingComponent_BookingManager_IPayment(), this.getPaymentComponent_IPayment(), null, "iPayment", null, 1, 1, BookingComponent_BookingManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getBookingComponent_BookingManager_IAdditionalServiceInformation(), this.getAdditionalServiceComponent_IAdditionalServiceInformation(), null, "iAdditionalServiceInformation", null, 1, 1, BookingComponent_BookingManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getBookingComponent_BookingManager_IPayment(), this.getPaymentComponent_IPayment(), null, "iPayment", null, 1, 1, BookingComponent_BookingManager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		op = initEOperation(getBookingComponent_BookingManager__FindBooking__String(), this.getBookingComponent_Booking(), "findBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "referenceNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEClass(staffComponent_IAuthenticationEClass, StaffComponent_IAuthentication.class, "StaffComponent_IAuthentication", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		op = initEOperation(getStaffComponent_IAuthentication__LogIn__String_String(), null, "logIn", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "ssn", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "password", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		op = initEOperation(getStaffComponent_IAuthentication__LogOut__String(), null, "logOut", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "ssn", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		op = initEOperation(getStaffComponent_IAuthentication__IsLoggedIn__String(), theTypesPackage.getBoolean(), "isLoggedIn", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "ssn", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(staffComponentEClass, StaffComponent.class, "StaffComponent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -2931,14 +2964,6 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		initEReference(getRoomComponent_RoomHandler_Authenticator(), this.getStaffComponent_IAuthentication(), null, "authenticator", null, 1, 1, RoomComponent_RoomHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getRoomComponent_RoomHandler_BedRooms(), this.getRoomComponent_Bedroom(), null, "bedRooms", null, 0, -1, RoomComponent_RoomHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getRoomComponent_RoomHandler_ConferenceRooms(), this.getRoomComponent_ConferenceRoom(), null, "conferenceRooms", null, 0, -1, RoomComponent_RoomHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		initEClass(additionalServiceHandlerEClass, AdditionalServiceHandler.class, "AdditionalServiceHandler", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAdditionalServiceHandler_IAuthentication(), this.getStaffComponent_IAuthentication(), null, "iAuthentication", null, 1, 1, AdditionalServiceHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getAdditionalServiceHandler_AdditionalService(), this.getAdditionalServiceComponent_AdditionalService(), null, "additionalService", null, 0, -1, AdditionalServiceHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getAdditionalServiceHandler_AdditionalServiceEvent(), this.getAdditionalServiceComponent_AdditionalServiceEvent(), null, "additionalServiceEvent", null, 0, -1, AdditionalServiceHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		op = initEOperation(getAdditionalServiceHandler__FindService__String(), this.getAdditionalServiceComponent_AdditionalService(), "findService", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "name", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

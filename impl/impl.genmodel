@@ -170,56 +170,46 @@
       </genOperations>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//PaymentComponent"/>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//PaymentComponent_PaymentManager">
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//PaymentComponent_PaymentManager/paymentDetails"/>
-      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EReference Implementation.ecore#//PaymentComponent_PaymentManager/payments"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//PaymentComponent_PaymentManager/makePayment">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_PaymentManager/makePayment/ccv"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_PaymentManager/makePayment/amount"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_PaymentManager/makePayment/ccNumber"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_PaymentManager/makePayment/expireMonth"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_PaymentManager/makePayment/expiryYear"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_PaymentManager/makePayment/firstName"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_PaymentManager/makePayment/lastName"/>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Implementation.ecore#//PaymentComponent_IPayment">
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//PaymentComponent_IPayment/makePayment">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/makePayment/ccNumber"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/makePayment/ccv"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/makePayment/expiryYear"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/makePayment/expiryMonth"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/makePayment/firstName"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/makePayment/lastName"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/makePayment/double"/>
       </genOperations>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//PaymentComponent_PaymentManager/isCreditCardValid">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_PaymentManager/isCreditCardValid/ccNumber"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_PaymentManager/isCreditCardValid/ccv"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_PaymentManager/isCreditCardValid/expiryMonth"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_PaymentManager/isCreditCardValid/expiryYear"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_PaymentManager/isCreditCardValid/firstName"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_PaymentManager/isCreditCardValid/lastName"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//PaymentComponent_IPayment/validateCC">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/validateCC/ccNumber"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/validateCC/ccv"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/validateCC/expiryYear"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/validateCC/expiryMonth"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/validateCC/firstName"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/validateCC/lastName"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/validateCC/price"/>
       </genOperations>
     </genClasses>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//PaymentComponent_Payment"/>
-    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Implementation.ecore#//PaymentComponent_IPayment">
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//PaymentComponent_IPayment/payForBooking">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/payForBooking/amount"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/payForBooking/ccNumber"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/payForBooking/ccv"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/payForBooking/expiryMonth"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/payForBooking/expiryYear"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/payForBooking/firstName"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/payForBooking/lastName"/>
-      </genOperations>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//PaymentComponent_IPayment/reserveFunds">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/reserveFunds/amount"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/reserveFunds/ccNumber"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/reserveFunds/ccv"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/reserveFunds/expiryMonth"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/reserveFunds/expiryYear"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/reserveFunds/firstName"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/reserveFunds/lastName"/>
-      </genOperations>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//PaymentComponent_IPayment/unreserveFunds">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/unreserveFunds/amount"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/unreserveFunds/ccNumber"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/unreserveFunds/ccv"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/unreserveFunds/expiryMonth"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/unreserveFunds/expiryYear"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/unreserveFunds/firstName"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/unreserveFunds/lastName"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//PaymentComponent_PaymentHandler">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference Implementation.ecore#//PaymentComponent_PaymentHandler/payment"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//PaymentComponent_Payment">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//PaymentComponent_Payment/ccNumber"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//PaymentComponent_Payment/ccv"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//PaymentComponent_Payment/firstName"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//PaymentComponent_Payment/lastName"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//PaymentComponent_Payment/expiryMonth"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//PaymentComponent_Payment/expiryYear"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//PaymentComponent_Payment/price"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//PaymentComponent_Payment/createPayment">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_Payment/createPayment/ccNumber"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_Payment/createPayment/ccv"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_Payment/createPayment/firstName"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_Payment/createPayment/lastName"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_Payment/createPayment/expiryYear"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_Payment/createPayment/expiryMonth"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_Payment/createPayment/price"/>
       </genOperations>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//AdditionalServiceComponent"/>
@@ -283,6 +273,29 @@
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//AdditionalServiceComponent_IAdditionalServiceInformation/getAdditionalServiceInfo/name"/>
       </genOperations>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//AdditionalServiceComponent_IAdditionalServiceInformation/getAllAdditionalServices"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//AdditionalServiceComponent_AdditionalServiceHandler">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference Implementation.ecore#//AdditionalServiceComponent_AdditionalServiceHandler/iAuthentication"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference Implementation.ecore#//AdditionalServiceComponent_AdditionalServiceHandler/additionalService"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference Implementation.ecore#//AdditionalServiceComponent_AdditionalServiceHandler/additionalServiceEvent"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//AdditionalServiceComponent_AdditionalServiceHandler/findService">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//AdditionalServiceComponent_AdditionalServiceHandler/findService/name"/>
+      </genOperations>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Implementation.ecore#//StaffComponent_IAuthentication">
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//StaffComponent_IAuthentication/logIn">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//StaffComponent_IAuthentication/logIn/ssn"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//StaffComponent_IAuthentication/logIn/password"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//StaffComponent_IAuthentication/logOut">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//StaffComponent_IAuthentication/logOut/ssn"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//StaffComponent_IAuthentication/isLoggedIn">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//StaffComponent_IAuthentication/isLoggedIn/ssn"/>
+      </genOperations>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//BookingComponent"/>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//BookingComponent_PaymentDetails">
@@ -362,23 +375,11 @@
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
           propertySortChoices="true" ecoreFeature="ecore:EReference Implementation.ecore#//BookingComponent_BookingManager/iRoomInformation"/>
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EReference Implementation.ecore#//BookingComponent_BookingManager/iPayment"/>
-      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
           propertySortChoices="true" ecoreFeature="ecore:EReference Implementation.ecore#//BookingComponent_BookingManager/iAdditionalServiceInformation"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference Implementation.ecore#//BookingComponent_BookingManager/iPayment"/>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//BookingComponent_BookingManager/findBooking">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_BookingManager/findBooking/referenceNumber"/>
-      </genOperations>
-    </genClasses>
-    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Implementation.ecore#//StaffComponent_IAuthentication">
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//StaffComponent_IAuthentication/logIn">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//StaffComponent_IAuthentication/logIn/ssn"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//StaffComponent_IAuthentication/logIn/password"/>
-      </genOperations>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//StaffComponent_IAuthentication/logOut">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//StaffComponent_IAuthentication/logOut/ssn"/>
-      </genOperations>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//StaffComponent_IAuthentication/isLoggedIn">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//StaffComponent_IAuthentication/isLoggedIn/ssn"/>
       </genOperations>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//StaffComponent"/>
@@ -521,17 +522,6 @@
           propertySortChoices="true" ecoreFeature="ecore:EReference Implementation.ecore#//RoomComponent_RoomHandler/bedRooms"/>
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
           propertySortChoices="true" ecoreFeature="ecore:EReference Implementation.ecore#//RoomComponent_RoomHandler/conferenceRooms"/>
-    </genClasses>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//AdditionalServiceHandler">
-      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EReference Implementation.ecore#//AdditionalServiceHandler/iAuthentication"/>
-      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EReference Implementation.ecore#//AdditionalServiceHandler/additionalService"/>
-      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EReference Implementation.ecore#//AdditionalServiceHandler/additionalServiceEvent"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//AdditionalServiceHandler/findService">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//AdditionalServiceHandler/findService/name"/>
-      </genOperations>
     </genClasses>
   </genPackages>
   <genPackages xsi:type="genmodel:GenPackage" prefix="Types" basePackage="org.eclipse.uml2"

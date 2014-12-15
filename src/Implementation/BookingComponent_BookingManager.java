@@ -15,8 +15,8 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link Implementation.BookingComponent_BookingManager#getBookings <em>Bookings</em>}</li>
  *   <li>{@link Implementation.BookingComponent_BookingManager#getAuthentication <em>Authentication</em>}</li>
  *   <li>{@link Implementation.BookingComponent_BookingManager#getIRoomInformation <em>IRoom Information</em>}</li>
- *   <li>{@link Implementation.BookingComponent_BookingManager#getIPayment <em>IPayment</em>}</li>
  *   <li>{@link Implementation.BookingComponent_BookingManager#getIAdditionalServiceInformation <em>IAdditional Service Information</em>}</li>
+ *   <li>{@link Implementation.BookingComponent_BookingManager#getIPayment <em>IPayment</em>}</li>
  * </ul>
  * </p>
  *

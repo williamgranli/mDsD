@@ -34,8 +34,8 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link Implementation.impl.BookingComponent_BookingManagerImpl#getBookings <em>Bookings</em>}</li>
  *   <li>{@link Implementation.impl.BookingComponent_BookingManagerImpl#getAuthentication <em>Authentication</em>}</li>
  *   <li>{@link Implementation.impl.BookingComponent_BookingManagerImpl#getIRoomInformation <em>IRoom Information</em>}</li>
- *   <li>{@link Implementation.impl.BookingComponent_BookingManagerImpl#getIPayment <em>IPayment</em>}</li>
  *   <li>{@link Implementation.impl.BookingComponent_BookingManagerImpl#getIAdditionalServiceInformation <em>IAdditional Service Information</em>}</li>
+ *   <li>{@link Implementation.impl.BookingComponent_BookingManagerImpl#getIPayment <em>IPayment</em>}</li>
  * </ul>
  * </p>
  *
@@ -73,16 +73,6 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 	protected RoomComponent_IRoomInformation iRoomInformation;
 
 	/**
-	 * The cached value of the '{@link #getIPayment() <em>IPayment</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIPayment()
-	 * @generated
-	 * @ordered
-	 */
-	protected PaymentComponent_IPayment iPayment;
-
-	/**
 	 * The cached value of the '{@link #getIAdditionalServiceInformation() <em>IAdditional Service Information</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -91,6 +81,16 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 	 * @ordered
 	 */
 	protected AdditionalServiceComponent_IAdditionalServiceInformation iAdditionalServiceInformation;
+
+	/**
+	 * The cached value of the '{@link #getIPayment() <em>IPayment</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIPayment()
+	 * @generated
+	 * @ordered
+	 */
+	protected PaymentComponent_IPayment iPayment;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -503,12 +503,12 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__IROOM_INFORMATION:
 				if (resolve) return getIRoomInformation();
 				return basicGetIRoomInformation();
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__IPAYMENT:
-				if (resolve) return getIPayment();
-				return basicGetIPayment();
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__IADDITIONAL_SERVICE_INFORMATION:
 				if (resolve) return getIAdditionalServiceInformation();
 				return basicGetIAdditionalServiceInformation();
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__IPAYMENT:
+				if (resolve) return getIPayment();
+				return basicGetIPayment();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -532,11 +532,11 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__IROOM_INFORMATION:
 				setIRoomInformation((RoomComponent_IRoomInformation)newValue);
 				return;
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__IPAYMENT:
-				setIPayment((PaymentComponent_IPayment)newValue);
-				return;
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__IADDITIONAL_SERVICE_INFORMATION:
 				setIAdditionalServiceInformation((AdditionalServiceComponent_IAdditionalServiceInformation)newValue);
+				return;
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__IPAYMENT:
+				setIPayment((PaymentComponent_IPayment)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -559,11 +559,11 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__IROOM_INFORMATION:
 				setIRoomInformation((RoomComponent_IRoomInformation)null);
 				return;
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__IPAYMENT:
-				setIPayment((PaymentComponent_IPayment)null);
-				return;
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__IADDITIONAL_SERVICE_INFORMATION:
 				setIAdditionalServiceInformation((AdditionalServiceComponent_IAdditionalServiceInformation)null);
+				return;
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__IPAYMENT:
+				setIPayment((PaymentComponent_IPayment)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -583,10 +583,10 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 				return authentication != null;
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__IROOM_INFORMATION:
 				return iRoomInformation != null;
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__IPAYMENT:
-				return iPayment != null;
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__IADDITIONAL_SERVICE_INFORMATION:
 				return iAdditionalServiceInformation != null;
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__IPAYMENT:
+				return iPayment != null;
 		}
 		return super.eIsSet(featureID);
 	}
