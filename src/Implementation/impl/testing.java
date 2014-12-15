@@ -12,5 +12,4 @@ public class testing {
 		manager.makeBooking("TEST", new Date(), new Date(), "880923", "John", "Burchell", "MyHouse", "123456789", "123", "september", "2015");
 		System.out.println(manager.getBookings().get(0));
 	}
-
 }
