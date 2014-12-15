@@ -224,6 +224,8 @@
         lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" ordered="false"
         lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="additionalServiceEvent"
+        ordered="false" upperBound="-1" eType="#//AdditionalServiceComponent_AdditionalServiceEvent"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AdditionalServiceComponent_AdditionalServiceEvent">
     <eOperations name="getAdditionalServiceInfo" ordered="false" lowerBound="1">
@@ -290,12 +292,10 @@
     <eOperations name="findService" ordered="false" lowerBound="1" eType="#//AdditionalServiceComponent_AdditionalService">
       <eParameters name="name" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     </eOperations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="iAuthentication" ordered="false"
-        lowerBound="1" eType="#//StaffComponent_IAuthentication"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="additionalService" ordered="false"
         upperBound="-1" eType="#//AdditionalServiceComponent_AdditionalService"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="additionalServiceEvent"
-        ordered="false" upperBound="-1" eType="#//AdditionalServiceComponent_AdditionalServiceEvent"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="iAuthentication" ordered="false"
+        lowerBound="1" eType="#//StaffComponent_IAuthentication"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="StaffComponent_IAuthentication" abstract="true"
       interface="true">

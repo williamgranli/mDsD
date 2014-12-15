@@ -3,6 +3,7 @@
 package Implementation;
 
 import java.util.Date;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 
@@ -18,6 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link Implementation.AdditionalServiceComponent_AdditionalService#isUsable <em>Usable</em>}</li>
  *   <li>{@link Implementation.AdditionalServiceComponent_AdditionalService#getPrice <em>Price</em>}</li>
  *   <li>{@link Implementation.AdditionalServiceComponent_AdditionalService#getDescription <em>Description</em>}</li>
+ *   <li>{@link Implementation.AdditionalServiceComponent_AdditionalService#getAdditionalServiceEvent <em>Additional Service Event</em>}</li>
  * </ul>
  * </p>
  *
@@ -129,6 +131,22 @@ public interface AdditionalServiceComponent_AdditionalService extends EObject {
 	 * @generated
 	 */
 	void setDescription(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Additional Service Event</b></em>' reference list.
+	 * The list contents are of type {@link Implementation.AdditionalServiceComponent_AdditionalServiceEvent}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Additional Service Event</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Additional Service Event</em>' reference list.
+	 * @see Implementation.ImplementationPackage#getAdditionalServiceComponent_AdditionalService_AdditionalServiceEvent()
+	 * @model ordered="false"
+	 * @generated
+	 */
+	EList<AdditionalServiceComponent_AdditionalServiceEvent> getAdditionalServiceEvent();
 
 	/**
 	 * <!-- begin-user-doc -->

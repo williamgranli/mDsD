@@ -336,8 +336,8 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_1dhsQIRTEeSMS5FZ7DY3uw" name="additionalServiceEvent" type="_BKP58HvAEeSAJb-qAtupNw" association="_1diTUIRTEeSMS5FZ7DY3uw">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1dhsQYRTEeSMS5FZ7DY3uw" value="1"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_1dhsQoRTEeSMS5FZ7DY3uw" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1dhsQYRTEeSMS5FZ7DY3uw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_1dhsQoRTEeSMS5FZ7DY3uw" value="*"/>
         </ownedAttribute>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_lU-HkIRDEeSY_7x5FILowQ" name="findEvent">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_prpM4IRDEeSY_7x5FILowQ" name="date">
@@ -468,13 +468,13 @@
       </nestedClassifier>
       <nestedClassifier xmi:type="uml:Interface" xmi:id="_cDvTgH-zEeSVo4U8yTxtOw" name="IAdditionalServiceDecision"/>
       <nestedClassifier xmi:type="uml:Class" xmi:id="__NyKkIRBEeSY_7x5FILowQ" name="AdditionalServiceHandler">
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_FRGX4IRCEeSY_7x5FILowQ" name="iAuthentication" type="_yNtywnumEeSUpK3HS5a0Lg" association="_FRHmAIRCEeSY_7x5FILowQ">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FRGX4YRCEeSY_7x5FILowQ" value="1"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FRGX4oRCEeSY_7x5FILowQ" value="1"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_I3S9UIRUEeSMS5FZ7DY3uw" name="additionalService" type="_BKM2oHvAEeSAJb-qAtupNw" association="_I3TkYIRUEeSMS5FZ7DY3uw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_I3S9UYRUEeSMS5FZ7DY3uw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_I3S9UoRUEeSMS5FZ7DY3uw" value="*"/>
         </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_gTUoEIRCEeSY_7x5FILowQ" name="additionalService" type="_BKM2oHvAEeSAJb-qAtupNw" association="_gTXrYIRCEeSY_7x5FILowQ">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gTUoEYRCEeSY_7x5FILowQ"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gTUoEoRCEeSY_7x5FILowQ" value="*"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Qx41UIRUEeSMS5FZ7DY3uw" name="iAuthentication" type="_yNtywnumEeSUpK3HS5a0Lg" association="_Qx5cYIRUEeSMS5FZ7DY3uw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Qx41UYRUEeSMS5FZ7DY3uw" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Qx41UoRUEeSMS5FZ7DY3uw" value="1"/>
         </ownedAttribute>
         <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_UTAQ0IRCEeSY_7x5FILowQ" client="__NyKkIRBEeSY_7x5FILowQ" supplier="_YlNd8HpfEeS6O5zO6NZCqA" contract="_YlNd8HpfEeS6O5zO6NZCqA"/>
         <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_Vmi8UIRCEeSY_7x5FILowQ" client="__NyKkIRBEeSY_7x5FILowQ" supplier="_cDvTgH-zEeSVo4U8yTxtOw" contract="_cDvTgH-zEeSVo4U8yTxtOw"/>
@@ -486,23 +486,23 @@
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_AWmh4IREEeSY_7x5FILowQ" type="_BKM2oHvAEeSAJb-qAtupNw" direction="return"/>
         </ownedOperation>
       </nestedClassifier>
-      <nestedClassifier xmi:type="uml:Association" xmi:id="_FRHmAIRCEeSY_7x5FILowQ" memberEnd="_FRHmAYRCEeSY_7x5FILowQ _FRGX4IRCEeSY_7x5FILowQ">
-        <ownedEnd xmi:type="uml:Property" xmi:id="_FRHmAYRCEeSY_7x5FILowQ" name="additionalServiceHandler" type="__NyKkIRBEeSY_7x5FILowQ" association="_FRHmAIRCEeSY_7x5FILowQ">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FRHmAoRCEeSY_7x5FILowQ" value="1"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FRHmA4RCEeSY_7x5FILowQ" value="1"/>
-        </ownedEnd>
-      </nestedClassifier>
-      <nestedClassifier xmi:type="uml:Association" xmi:id="_gTXrYIRCEeSY_7x5FILowQ" memberEnd="_gTXrYYRCEeSY_7x5FILowQ _gTUoEIRCEeSY_7x5FILowQ">
-        <ownedEnd xmi:type="uml:Property" xmi:id="_gTXrYYRCEeSY_7x5FILowQ" name="additionalServiceHandler" type="__NyKkIRBEeSY_7x5FILowQ" association="_gTXrYIRCEeSY_7x5FILowQ">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gTXrYoRCEeSY_7x5FILowQ" value="1"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gTXrY4RCEeSY_7x5FILowQ" value="1"/>
-        </ownedEnd>
-      </nestedClassifier>
       <nestedClassifier xmi:type="uml:Association" xmi:id="_1diTUIRTEeSMS5FZ7DY3uw" memberEnd="_1diTUYRTEeSMS5FZ7DY3uw _1dhsQIRTEeSMS5FZ7DY3uw">
-        <name xsi:nil="true"/>
         <ownedEnd xmi:type="uml:Property" xmi:id="_1diTUYRTEeSMS5FZ7DY3uw" name="additionalService" type="_BKM2oHvAEeSAJb-qAtupNw" association="_1diTUIRTEeSMS5FZ7DY3uw">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1diTUoRTEeSMS5FZ7DY3uw" value="1"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_1diTU4RTEeSMS5FZ7DY3uw" value="1"/>
+        </ownedEnd>
+      </nestedClassifier>
+      <nestedClassifier xmi:type="uml:Association" xmi:id="_I3TkYIRUEeSMS5FZ7DY3uw" memberEnd="_I3TkYYRUEeSMS5FZ7DY3uw _I3S9UIRUEeSMS5FZ7DY3uw">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_I3TkYYRUEeSMS5FZ7DY3uw" name="additionalServiceHandler" type="__NyKkIRBEeSY_7x5FILowQ" association="_I3TkYIRUEeSMS5FZ7DY3uw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_I3TkYoRUEeSMS5FZ7DY3uw" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_I3TkY4RUEeSMS5FZ7DY3uw" value="1"/>
+        </ownedEnd>
+      </nestedClassifier>
+      <nestedClassifier xmi:type="uml:Association" xmi:id="_Qx5cYIRUEeSMS5FZ7DY3uw" memberEnd="_Qx5cYYRUEeSMS5FZ7DY3uw _Qx41UIRUEeSMS5FZ7DY3uw">
+        <name xsi:nil="true"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_Qx5cYYRUEeSMS5FZ7DY3uw" name="additionalServiceHandler" type="__NyKkIRBEeSY_7x5FILowQ" association="_Qx5cYIRUEeSMS5FZ7DY3uw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Qx5cYoRUEeSMS5FZ7DY3uw" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Qx5cY4RUEeSMS5FZ7DY3uw" value="1"/>
         </ownedEnd>
       </nestedClassifier>
     </packagedElement>

@@ -3,28 +3,20 @@
 package Implementation.impl;
 
 import Implementation.AdditionalServiceComponent_AdditionalService;
-import Implementation.AdditionalServiceComponent_AdditionalServiceEvent;
 import Implementation.AdditionalServiceComponent_AdditionalServiceHandler;
 import Implementation.AdditionalServiceComponent_IAdditionalServiceAdministration;
 import Implementation.AdditionalServiceComponent_IAdditionalServiceDecision;
 import Implementation.ImplementationPackage;
 import Implementation.StaffComponent_IAuthentication;
-
 import java.lang.reflect.InvocationTargetException;
-
 import java.util.Collection;
 import java.util.Date;
-
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
@@ -34,25 +26,14 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link Implementation.impl.AdditionalServiceComponent_AdditionalServiceHandlerImpl#getIAuthentication <em>IAuthentication</em>}</li>
  *   <li>{@link Implementation.impl.AdditionalServiceComponent_AdditionalServiceHandlerImpl#getAdditionalService <em>Additional Service</em>}</li>
- *   <li>{@link Implementation.impl.AdditionalServiceComponent_AdditionalServiceHandlerImpl#getAdditionalServiceEvent <em>Additional Service Event</em>}</li>
+ *   <li>{@link Implementation.impl.AdditionalServiceComponent_AdditionalServiceHandlerImpl#getIAuthentication <em>IAuthentication</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
 public class AdditionalServiceComponent_AdditionalServiceHandlerImpl extends MinimalEObjectImpl.Container implements AdditionalServiceComponent_AdditionalServiceHandler {
-	/**
-	 * The cached value of the '{@link #getIAuthentication() <em>IAuthentication</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIAuthentication()
-	 * @generated
-	 * @ordered
-	 */
-	protected StaffComponent_IAuthentication iAuthentication;
-
 	/**
 	 * The cached value of the '{@link #getAdditionalService() <em>Additional Service</em>}' reference list.
 	 * <!-- begin-user-doc -->
@@ -64,14 +45,14 @@ public class AdditionalServiceComponent_AdditionalServiceHandlerImpl extends Min
 	protected EList<AdditionalServiceComponent_AdditionalService> additionalService;
 
 	/**
-	 * The cached value of the '{@link #getAdditionalServiceEvent() <em>Additional Service Event</em>}' reference list.
+	 * The cached value of the '{@link #getIAuthentication() <em>IAuthentication</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAdditionalServiceEvent()
+	 * @see #getIAuthentication()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<AdditionalServiceComponent_AdditionalServiceEvent> additionalServiceEvent;
+	protected StaffComponent_IAuthentication iAuthentication;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -140,18 +121,6 @@ public class AdditionalServiceComponent_AdditionalServiceHandlerImpl extends Min
 			additionalService = new EObjectResolvingEList<AdditionalServiceComponent_AdditionalService>(AdditionalServiceComponent_AdditionalService.class, this, ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER__ADDITIONAL_SERVICE);
 		}
 		return additionalService;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<AdditionalServiceComponent_AdditionalServiceEvent> getAdditionalServiceEvent() {
-		if (additionalServiceEvent == null) {
-			additionalServiceEvent = new EObjectResolvingEList<AdditionalServiceComponent_AdditionalServiceEvent>(AdditionalServiceComponent_AdditionalServiceEvent.class, this, ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER__ADDITIONAL_SERVICE_EVENT);
-		}
-		return additionalServiceEvent;
 	}
 
 	/**
@@ -261,13 +230,11 @@ public class AdditionalServiceComponent_AdditionalServiceHandlerImpl extends Min
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER__ADDITIONAL_SERVICE:
+				return getAdditionalService();
 			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER__IAUTHENTICATION:
 				if (resolve) return getIAuthentication();
 				return basicGetIAuthentication();
-			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER__ADDITIONAL_SERVICE:
-				return getAdditionalService();
-			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER__ADDITIONAL_SERVICE_EVENT:
-				return getAdditionalServiceEvent();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -281,16 +248,12 @@ public class AdditionalServiceComponent_AdditionalServiceHandlerImpl extends Min
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER__IAUTHENTICATION:
-				setIAuthentication((StaffComponent_IAuthentication)newValue);
-				return;
 			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER__ADDITIONAL_SERVICE:
 				getAdditionalService().clear();
 				getAdditionalService().addAll((Collection<? extends AdditionalServiceComponent_AdditionalService>)newValue);
 				return;
-			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER__ADDITIONAL_SERVICE_EVENT:
-				getAdditionalServiceEvent().clear();
-				getAdditionalServiceEvent().addAll((Collection<? extends AdditionalServiceComponent_AdditionalServiceEvent>)newValue);
+			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER__IAUTHENTICATION:
+				setIAuthentication((StaffComponent_IAuthentication)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -304,14 +267,11 @@ public class AdditionalServiceComponent_AdditionalServiceHandlerImpl extends Min
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER__IAUTHENTICATION:
-				setIAuthentication((StaffComponent_IAuthentication)null);
-				return;
 			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER__ADDITIONAL_SERVICE:
 				getAdditionalService().clear();
 				return;
-			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER__ADDITIONAL_SERVICE_EVENT:
-				getAdditionalServiceEvent().clear();
+			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER__IAUTHENTICATION:
+				setIAuthentication((StaffComponent_IAuthentication)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -325,12 +285,10 @@ public class AdditionalServiceComponent_AdditionalServiceHandlerImpl extends Min
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER__IAUTHENTICATION:
-				return iAuthentication != null;
 			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER__ADDITIONAL_SERVICE:
 				return additionalService != null && !additionalService.isEmpty();
-			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER__ADDITIONAL_SERVICE_EVENT:
-				return additionalServiceEvent != null && !additionalServiceEvent.isEmpty();
+			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER__IAUTHENTICATION:
+				return iAuthentication != null;
 		}
 		return super.eIsSet(featureID);
 	}

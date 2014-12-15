@@ -1205,13 +1205,22 @@ public interface ImplementationPackage extends EPackage {
 	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE__DESCRIPTION = 3;
 
 	/**
+	 * The feature id for the '<em><b>Additional Service Event</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE__ADDITIONAL_SERVICE_EVENT = 4;
+
+	/**
 	 * The number of structural features of the '<em>Additional Service Component Additional Service</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_FEATURE_COUNT = 4;
+	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_FEATURE_COUNT = 5;
 
 	/**
 	 * The operation id for the '<em>Find Event</em>' operation.
@@ -1453,31 +1462,22 @@ public interface ImplementationPackage extends EPackage {
 	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER = 25;
 
 	/**
-	 * The feature id for the '<em><b>IAuthentication</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER__IAUTHENTICATION = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Additional Service</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER__ADDITIONAL_SERVICE = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION_FEATURE_COUNT + 1;
+	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER__ADDITIONAL_SERVICE = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Additional Service Event</b></em>' reference list.
+	 * The feature id for the '<em><b>IAuthentication</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER__ADDITIONAL_SERVICE_EVENT = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION_FEATURE_COUNT + 2;
+	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER__IAUTHENTICATION = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Additional Service Component Additional Service Handler</em>' class.
@@ -1486,7 +1486,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER_FEATURE_COUNT = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION_FEATURE_COUNT + 3;
+	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER_FEATURE_COUNT = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION_FEATURE_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Get Additional Service Info</em>' operation.
@@ -3880,6 +3880,17 @@ public interface ImplementationPackage extends EPackage {
 	EAttribute getAdditionalServiceComponent_AdditionalService_Description();
 
 	/**
+	 * Returns the meta object for the reference list '{@link Implementation.AdditionalServiceComponent_AdditionalService#getAdditionalServiceEvent <em>Additional Service Event</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Additional Service Event</em>'.
+	 * @see Implementation.AdditionalServiceComponent_AdditionalService#getAdditionalServiceEvent()
+	 * @see #getAdditionalServiceComponent_AdditionalService()
+	 * @generated
+	 */
+	EReference getAdditionalServiceComponent_AdditionalService_AdditionalServiceEvent();
+
+	/**
 	 * Returns the meta object for the '{@link Implementation.AdditionalServiceComponent_AdditionalService#findEvent(java.util.Date) <em>Find Event</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3990,17 +4001,6 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getAdditionalServiceComponent_AdditionalServiceHandler_AdditionalService();
-
-	/**
-	 * Returns the meta object for the reference list '{@link Implementation.AdditionalServiceComponent_AdditionalServiceHandler#getAdditionalServiceEvent <em>Additional Service Event</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Additional Service Event</em>'.
-	 * @see Implementation.AdditionalServiceComponent_AdditionalServiceHandler#getAdditionalServiceEvent()
-	 * @see #getAdditionalServiceComponent_AdditionalServiceHandler()
-	 * @generated
-	 */
-	EReference getAdditionalServiceComponent_AdditionalServiceHandler_AdditionalServiceEvent();
 
 	/**
 	 * Returns the meta object for the '{@link Implementation.AdditionalServiceComponent_AdditionalServiceHandler#findService(java.lang.String) <em>Find Service</em>}' operation.
@@ -5770,6 +5770,14 @@ public interface ImplementationPackage extends EPackage {
 		EAttribute ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE__DESCRIPTION = eINSTANCE.getAdditionalServiceComponent_AdditionalService_Description();
 
 		/**
+		 * The meta object literal for the '<em><b>Additional Service Event</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE__ADDITIONAL_SERVICE_EVENT = eINSTANCE.getAdditionalServiceComponent_AdditionalService_AdditionalServiceEvent();
+
+		/**
 		 * The meta object literal for the '<em><b>Find Event</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5862,14 +5870,6 @@ public interface ImplementationPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER__ADDITIONAL_SERVICE = eINSTANCE.getAdditionalServiceComponent_AdditionalServiceHandler_AdditionalService();
-
-		/**
-		 * The meta object literal for the '<em><b>Additional Service Event</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER__ADDITIONAL_SERVICE_EVENT = eINSTANCE.getAdditionalServiceComponent_AdditionalServiceHandler_AdditionalServiceEvent();
 
 		/**
 		 * The meta object literal for the '<em><b>Find Service</b></em>' operation.

@@ -12,9 +12,8 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link Implementation.AdditionalServiceComponent_AdditionalServiceHandler#getIAuthentication <em>IAuthentication</em>}</li>
  *   <li>{@link Implementation.AdditionalServiceComponent_AdditionalServiceHandler#getAdditionalService <em>Additional Service</em>}</li>
- *   <li>{@link Implementation.AdditionalServiceComponent_AdditionalServiceHandler#getAdditionalServiceEvent <em>Additional Service Event</em>}</li>
+ *   <li>{@link Implementation.AdditionalServiceComponent_AdditionalServiceHandler#getIAuthentication <em>IAuthentication</em>}</li>
  * </ul>
  * </p>
  *
@@ -64,22 +63,6 @@ public interface AdditionalServiceComponent_AdditionalServiceHandler extends Add
 	 * @generated
 	 */
 	EList<AdditionalServiceComponent_AdditionalService> getAdditionalService();
-
-	/**
-	 * Returns the value of the '<em><b>Additional Service Event</b></em>' reference list.
-	 * The list contents are of type {@link Implementation.AdditionalServiceComponent_AdditionalServiceEvent}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Additional Service Event</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Additional Service Event</em>' reference list.
-	 * @see Implementation.ImplementationPackage#getAdditionalServiceComponent_AdditionalServiceHandler_AdditionalServiceEvent()
-	 * @model ordered="false"
-	 * @generated
-	 */
-	EList<AdditionalServiceComponent_AdditionalServiceEvent> getAdditionalServiceEvent();
 
 	/**
 	 * <!-- begin-user-doc -->
