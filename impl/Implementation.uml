@@ -335,6 +335,10 @@
         <ownedAttribute xmi:type="uml:Property" xmi:id="_BKNdtHvAEeSAJb-qAtupNw" name="description">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_1dhsQIRTEeSMS5FZ7DY3uw" name="additionalServiceEvent" type="_BKP58HvAEeSAJb-qAtupNw" association="_1diTUIRTEeSMS5FZ7DY3uw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1dhsQYRTEeSMS5FZ7DY3uw" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_1dhsQoRTEeSMS5FZ7DY3uw" value="1"/>
+        </ownedAttribute>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_lU-HkIRDEeSY_7x5FILowQ" name="findEvent">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_prpM4IRDEeSY_7x5FILowQ" name="date">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
@@ -472,10 +476,6 @@
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gTUoEYRCEeSY_7x5FILowQ"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gTUoEoRCEeSY_7x5FILowQ" value="*"/>
         </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_ppz2UIRCEeSY_7x5FILowQ" name="additionalServiceEvent" type="_BKP58HvAEeSAJb-qAtupNw" association="_pp1rgIRCEeSY_7x5FILowQ">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ppz2UYRCEeSY_7x5FILowQ"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ppz2UoRCEeSY_7x5FILowQ" value="*"/>
-        </ownedAttribute>
         <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_UTAQ0IRCEeSY_7x5FILowQ" client="__NyKkIRBEeSY_7x5FILowQ" supplier="_YlNd8HpfEeS6O5zO6NZCqA" contract="_YlNd8HpfEeS6O5zO6NZCqA"/>
         <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_Vmi8UIRCEeSY_7x5FILowQ" client="__NyKkIRBEeSY_7x5FILowQ" supplier="_cDvTgH-zEeSVo4U8yTxtOw" contract="_cDvTgH-zEeSVo4U8yTxtOw"/>
         <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_a0OiIIRCEeSY_7x5FILowQ" client="__NyKkIRBEeSY_7x5FILowQ" supplier="_oFVrUHpcEeS6O5zO6NZCqA" contract="_oFVrUHpcEeS6O5zO6NZCqA"/>
@@ -498,10 +498,11 @@
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gTXrY4RCEeSY_7x5FILowQ" value="1"/>
         </ownedEnd>
       </nestedClassifier>
-      <nestedClassifier xmi:type="uml:Association" xmi:id="_pp1rgIRCEeSY_7x5FILowQ" memberEnd="_pp1rgYRCEeSY_7x5FILowQ _ppz2UIRCEeSY_7x5FILowQ">
-        <ownedEnd xmi:type="uml:Property" xmi:id="_pp1rgYRCEeSY_7x5FILowQ" name="additionalServiceHandler" type="_BKM2oHvAEeSAJb-qAtupNw" association="_pp1rgIRCEeSY_7x5FILowQ">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_pp1rgoRCEeSY_7x5FILowQ" value="1"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_pp1rg4RCEeSY_7x5FILowQ" value="1"/>
+      <nestedClassifier xmi:type="uml:Association" xmi:id="_1diTUIRTEeSMS5FZ7DY3uw" memberEnd="_1diTUYRTEeSMS5FZ7DY3uw _1dhsQIRTEeSMS5FZ7DY3uw">
+        <name xsi:nil="true"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_1diTUYRTEeSMS5FZ7DY3uw" name="additionalService" type="_BKM2oHvAEeSAJb-qAtupNw" association="_1diTUIRTEeSMS5FZ7DY3uw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1diTUoRTEeSMS5FZ7DY3uw" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_1diTU4RTEeSMS5FZ7DY3uw" value="1"/>
         </ownedEnd>
       </nestedClassifier>
     </packagedElement>
