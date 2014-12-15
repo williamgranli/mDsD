@@ -100,6 +100,7 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 	@SuppressWarnings("unchecked")
 	protected BookingComponent_BookingManagerImpl() {
 		super();
+		bookings = getBookings();
 	}
 
 	/**

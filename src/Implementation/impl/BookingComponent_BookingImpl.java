@@ -171,9 +171,9 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 	 */
 	protected BookingComponent_BookingImpl() {
 		super();
-		additionalServices = (EList<BookingComponent_AdditionalService>) new ArrayList<BookingComponent_AdditionalService>();
-		guests = (EList<BookingComponent_BookingGuest>) new ArrayList<BookingComponent_BookingGuest>();
-		rooms = (EList<BookingComponent_RoomType>) new ArrayList<BookingComponent_RoomType>();
+		this.additionalServices = getAdditionalServices();
+		this.guests = getGuests();
+		this.rooms = getRooms();
 		this.referenceNumber = generateReferenceNumber();
 	}
 	
@@ -184,9 +184,9 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 		this.arrivalDate = arrivalDate;
 		this.departureDate = departureDate;
 		
-		additionalServices = (EList<BookingComponent_AdditionalService>) new ArrayList<BookingComponent_AdditionalService>();
-		guests = (EList<BookingComponent_BookingGuest>) new ArrayList<BookingComponent_BookingGuest>();
-		rooms = (EList<BookingComponent_RoomType>) new ArrayList<BookingComponent_RoomType>();
+		this.additionalServices = getAdditionalServices();
+		this.guests = getGuests();
+		this.rooms = getRooms();
 		this.referenceNumber = generateReferenceNumber();
 	}
 	
