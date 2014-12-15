@@ -225,10 +225,10 @@
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_IheC0IRKEeSMS5FZ7DY3uw" name="lastName">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedParameter>
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_Kq3YQIRKEeSMS5FZ7DY3uw" name="double">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_Kq3YQIRKEeSMS5FZ7DY3uw" name="price">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDouble"/>
           </ownedParameter>
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_ipku8IRcEeS5TvfISGxxPQ" name="returnValue">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_ipku8IRcEeS5TvfISGxxPQ" name="returnValue" direction="return">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
           </ownedParameter>
         </ownedOperation>
@@ -254,7 +254,7 @@
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_bYyuIIRKEeSMS5FZ7DY3uw" name="price">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
           </ownedParameter>
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_dd24AIRcEeS5TvfISGxxPQ" name="returnValue">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_dd24AIRcEeS5TvfISGxxPQ" name="returnValue" direction="return">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
           </ownedParameter>
         </ownedOperation>
@@ -409,7 +409,7 @@
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_9-HLEIREEeSY_7x5FILowQ" name="currentAttendants">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
           </ownedParameter>
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_1_1q8IRaEeSwC95jIvSgtA" name="returnValue" direction="return">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_1_1q8IRaEeSwC95jIvSgtA" name="returnValue" direction="out">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
           </ownedParameter>
         </ownedOperation>
@@ -429,7 +429,7 @@
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_Kr8IkIRFEeSY_7x5FILowQ" name="currentAttendants">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
           </ownedParameter>
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_4FiMIIRaEeSwC95jIvSgtA" name="returnValue" direction="return">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_4FiMIIRaEeSwC95jIvSgtA" name="returnValue" direction="out">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
           </ownedParameter>
         </ownedOperation>
