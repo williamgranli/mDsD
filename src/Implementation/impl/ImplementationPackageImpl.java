@@ -2707,7 +2707,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 
 		initEClass(additionalServiceComponent_IAdditionalServiceInformationEClass, AdditionalServiceComponent_IAdditionalServiceInformation.class, "AdditionalServiceComponent_IAdditionalServiceInformation", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		op = initEOperation(getAdditionalServiceComponent_IAdditionalServiceInformation__GetAdditionalServiceInfo__String(), theTypesPackage.getString(), "getAdditionalServiceInfo", 1, -1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getAdditionalServiceComponent_IAdditionalServiceInformation__GetAdditionalServiceInfo__String(), theTypesPackage.getString(), "getAdditionalServiceInfo", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "name", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getAdditionalServiceComponent_IAdditionalServiceInformation__GetAllAdditionalServices(), theTypesPackage.getString(), "getAllAdditionalServices", 1, -1, IS_UNIQUE, !IS_ORDERED);

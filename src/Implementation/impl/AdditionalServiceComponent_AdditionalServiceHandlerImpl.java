@@ -135,7 +135,7 @@ public class AdditionalServiceComponent_AdditionalServiceHandlerImpl extends Min
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<String> getAdditionalServiceInfo(String name) {
+	public String getAdditionalServiceInfo(String name) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();

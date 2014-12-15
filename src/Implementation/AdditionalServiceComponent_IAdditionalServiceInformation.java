@@ -22,7 +22,7 @@ public interface AdditionalServiceComponent_IAdditionalServiceInformation extend
 	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" nameDataType="org.eclipse.uml2.types.String" nameRequired="true" nameOrdered="false"
 	 * @generated
 	 */
-	EList<String> getAdditionalServiceInfo(String name);
+	String getAdditionalServiceInfo(String name);
 
 	/**
 	 * <!-- begin-user-doc -->

@@ -273,8 +273,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AdditionalServiceComponent_IAdditionalServiceInformation"
       abstract="true" interface="true">
-    <eOperations name="getAdditionalServiceInfo" ordered="false" lowerBound="1" upperBound="-1"
-        eType="ecore:EDataType types.ecore#//String">
+    <eOperations name="getAdditionalServiceInfo" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String">
       <eParameters name="name" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     </eOperations>
     <eOperations name="getAllAdditionalServices" ordered="false" lowerBound="1" upperBound="-1"

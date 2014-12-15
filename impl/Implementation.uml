@@ -456,7 +456,7 @@
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_jNWUAIEzEeSNiOPEdgrO9Q" name="additionalServiceInformation" direction="return">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_oOM-wIEzEeSNiOPEdgrO9Q" value="1"/>
-            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_oOSeUIEzEeSNiOPEdgrO9Q" value="*"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_oOSeUIEzEeSNiOPEdgrO9Q" value="1"/>
           </ownedParameter>
         </ownedOperation>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_08jqYHrVEeSyBKqr79uWFQ" name="getAllAdditionalServices">
