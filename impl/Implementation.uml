@@ -378,8 +378,11 @@
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_ZeE8oIREEeSY_7x5FILowQ" name="description">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_vasi8IRaEeSwC95jIvSgtA" name="returnValue" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          </ownedParameter>
         </ownedOperation>
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_zg76AHpeEeS6O5zO6NZCqA" name="editAdditionalService">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_zg76AHpeEeS6O5zO6NZCqA" name="editAdditionalService" visibility="public">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_PALygHphEeS6O5zO6NZCqA" name="oldName">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedParameter>
@@ -395,10 +398,16 @@
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_eX7AcIREEeSY_7x5FILowQ" name="description">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_xqBhQIRaEeSwC95jIvSgtA" name="returnValue" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          </ownedParameter>
         </ownedOperation>
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_0lDiEHphEeS6O5zO6NZCqA" name="removeAdditionalService">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_0lDiEHphEeS6O5zO6NZCqA" name="removeAdditionalService" visibility="public">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_6hgSYHphEeS6O5zO6NZCqA" name="name">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_z4eV0IRaEeSwC95jIvSgtA" name="returnValue" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
           </ownedParameter>
         </ownedOperation>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_vzk_AIREEeSY_7x5FILowQ" name="createEvent" visibility="public">
@@ -417,8 +426,11 @@
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_9-HLEIREEeSY_7x5FILowQ" name="currentAttendants">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
           </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_1_1q8IRaEeSwC95jIvSgtA" name="returnValue" direction="out">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          </ownedParameter>
         </ownedOperation>
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_CB4igIRFEeSY_7x5FILowQ" name="editEvent">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_CB4igIRFEeSY_7x5FILowQ" name="editEvent" visibility="public">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_FbhX0IRFEeSY_7x5FILowQ" name="name">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedParameter>
@@ -434,6 +446,9 @@
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_Kr8IkIRFEeSY_7x5FILowQ" name="currentAttendants">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
           </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_4FiMIIRaEeSwC95jIvSgtA" name="returnValue" direction="out">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          </ownedParameter>
         </ownedOperation>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_Ld0RcIRFEeSY_7x5FILowQ" name="removeEvent" visibility="public">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_PUIbsIRFEeSY_7x5FILowQ" name="name">
@@ -444,6 +459,9 @@
           </ownedParameter>
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_TE9B8IRFEeSY_7x5FILowQ" name="location">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_9lhp8IRaEeSwC95jIvSgtA" name="returnValue" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
           </ownedParameter>
         </ownedOperation>
       </nestedClassifier>
