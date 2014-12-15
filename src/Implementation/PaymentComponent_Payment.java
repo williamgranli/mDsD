@@ -209,12 +209,4 @@ public interface PaymentComponent_Payment extends EObject {
 	 * @generated
 	 */
 	void setPrice(double value);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model ccNumberDataType="org.eclipse.uml2.types.String" ccNumberRequired="true" ccNumberOrdered="false" ccvDataType="org.eclipse.uml2.types.String" ccvRequired="true" ccvOrdered="false" firstNameDataType="org.eclipse.uml2.types.String" firstNameRequired="true" firstNameOrdered="false" lastNameDataType="org.eclipse.uml2.types.String" lastNameRequired="true" lastNameOrdered="false" expiryYearDataType="org.eclipse.uml2.types.String" expiryYearRequired="true" expiryYearOrdered="false" expiryMonthDataType="org.eclipse.uml2.types.String" expiryMonthRequired="true" expiryMonthOrdered="false" priceRequired="true" priceOrdered="false"
-	 * @generated
-	 */
-	void createPayment(String ccNumber, String ccv, String firstName, String lastName, String expiryYear, String expiryMonth, double price);
 } // PaymentComponent_Payment

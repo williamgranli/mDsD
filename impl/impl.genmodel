@@ -179,6 +179,7 @@
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/makePayment/firstName"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/makePayment/lastName"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/makePayment/double"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/makePayment/returnValue"/>
       </genOperations>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//PaymentComponent_IPayment/validateCC">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/validateCC/ccNumber"/>
@@ -188,6 +189,7 @@
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/validateCC/firstName"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/validateCC/lastName"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/validateCC/price"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/validateCC/returnValue"/>
       </genOperations>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//PaymentComponent_PaymentHandler">
@@ -202,15 +204,6 @@
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//PaymentComponent_Payment/expiryMonth"/>
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//PaymentComponent_Payment/expiryYear"/>
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//PaymentComponent_Payment/price"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//PaymentComponent_Payment/createPayment">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_Payment/createPayment/ccNumber"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_Payment/createPayment/ccv"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_Payment/createPayment/firstName"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_Payment/createPayment/lastName"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_Payment/createPayment/expiryYear"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_Payment/createPayment/expiryMonth"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_Payment/createPayment/price"/>
-      </genOperations>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//AdditionalServiceComponent"/>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//AdditionalServiceComponent_AdditionalService">
@@ -256,6 +249,7 @@
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//AdditionalServiceComponent_IAdditionalServiceAdministration/createEvent/location"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//AdditionalServiceComponent_IAdditionalServiceAdministration/createEvent/maxAttendants"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//AdditionalServiceComponent_IAdditionalServiceAdministration/createEvent/currentAttendants"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//AdditionalServiceComponent_IAdditionalServiceAdministration/createEvent/returnValue"/>
       </genOperations>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//AdditionalServiceComponent_IAdditionalServiceAdministration/editEvent">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//AdditionalServiceComponent_IAdditionalServiceAdministration/editEvent/name"/>
@@ -263,6 +257,7 @@
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//AdditionalServiceComponent_IAdditionalServiceAdministration/editEvent/location"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//AdditionalServiceComponent_IAdditionalServiceAdministration/editEvent/maxAttendants"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//AdditionalServiceComponent_IAdditionalServiceAdministration/editEvent/currentAttendants"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//AdditionalServiceComponent_IAdditionalServiceAdministration/editEvent/returnValue"/>
       </genOperations>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//AdditionalServiceComponent_IAdditionalServiceAdministration/removeEvent">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//AdditionalServiceComponent_IAdditionalServiceAdministration/removeEvent/name"/>

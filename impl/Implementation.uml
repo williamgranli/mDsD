@@ -206,7 +206,7 @@
     </packagedElement>
     <packagedElement xmi:type="uml:Component" xmi:id="_Oa_oIHocEeSypfm9OOQUYA" name="PaymentComponent">
       <nestedClassifier xmi:type="uml:Interface" xmi:id="_XioxYIRJEeSMS5FZ7DY3uw" name="IPayment">
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_9CxK4IRJEeSMS5FZ7DY3uw" name="makePayment">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_9CxK4IRJEeSMS5FZ7DY3uw" name="makePayment" visibility="public">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="__5h8oIRJEeSMS5FZ7DY3uw" name="ccNumber">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedParameter>
@@ -227,6 +227,9 @@
           </ownedParameter>
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_Kq3YQIRKEeSMS5FZ7DY3uw" name="double">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_ipku8IRcEeS5TvfISGxxPQ" name="returnValue">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
           </ownedParameter>
         </ownedOperation>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_OHZJgIRKEeSMS5FZ7DY3uw" name="validateCC" visibility="public">
@@ -251,17 +254,15 @@
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_bYyuIIRKEeSMS5FZ7DY3uw" name="price">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
           </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_dd24AIRcEeS5TvfISGxxPQ" name="returnValue">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          </ownedParameter>
         </ownedOperation>
       </nestedClassifier>
       <nestedClassifier xmi:type="uml:Class" xmi:id="_ZEjQEIRJEeSMS5FZ7DY3uw" name="PaymentHandler">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_j_6xcIRJEeSMS5FZ7DY3uw" name="payment" type="_Z6ZS8IRJEeSMS5FZ7DY3uw" association="_j_7YgIRJEeSMS5FZ7DY3uw">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_j_6xcYRJEeSMS5FZ7DY3uw" value="1"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_j_6xcoRJEeSMS5FZ7DY3uw" value="1"/>
-        </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_lkAVMIRbEeSwC95jIvSgtA" name="customerProvides" association="_lkA8QIRbEeSwC95jIvSgtA">
-          <type xmi:type="uml:Interface" href="../model.uml#_gDR3toRbEeSwC95jIvSgtA"/>
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_lkAVMYRbEeSwC95jIvSgtA" value="1"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_lkAVMoRbEeSwC95jIvSgtA" value="1"/>
         </ownedAttribute>
         <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_jVMZcIRJEeSMS5FZ7DY3uw" client="_ZEjQEIRJEeSMS5FZ7DY3uw" supplier="_XioxYIRJEeSMS5FZ7DY3uw" contract="_XioxYIRJEeSMS5FZ7DY3uw"/>
       </nestedClassifier>
@@ -287,29 +288,6 @@
         <ownedAttribute xmi:type="uml:Property" xmi:id="_2zVNIIRJEeSMS5FZ7DY3uw" name="price">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
         </ownedAttribute>
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_iaAHEIRKEeSMS5FZ7DY3uw" name="createPayment" visibility="public">
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_nBnycIRKEeSMS5FZ7DY3uw" name="ccNumber">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-          </ownedParameter>
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_nyPXEIRKEeSMS5FZ7DY3uw" name="ccv">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-          </ownedParameter>
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_qjjoIIRKEeSMS5FZ7DY3uw" name="firstName">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-          </ownedParameter>
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_tG1dMIRKEeSMS5FZ7DY3uw" name="lastName">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-          </ownedParameter>
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_uM2qEIRKEeSMS5FZ7DY3uw" name="expiryYear">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-          </ownedParameter>
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_vSmKIIRKEeSMS5FZ7DY3uw" name="expiryMonth">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-          </ownedParameter>
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_wOkqMIRKEeSMS5FZ7DY3uw" name="price">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
-          </ownedParameter>
-        </ownedOperation>
       </nestedClassifier>
       <nestedClassifier xmi:type="uml:Association" xmi:id="_fi2JMIRJEeSMS5FZ7DY3uw" memberEnd="_fi2JMYRJEeSMS5FZ7DY3uw _fi07EIRJEeSMS5FZ7DY3uw">
         <name xsi:nil="true"/>
@@ -323,13 +301,6 @@
         <ownedEnd xmi:type="uml:Property" xmi:id="_j_7YgYRJEeSMS5FZ7DY3uw" name="paymentHandler" type="_ZEjQEIRJEeSMS5FZ7DY3uw" association="_j_7YgIRJEeSMS5FZ7DY3uw">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_j_7YgoRJEeSMS5FZ7DY3uw" value="1"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_j_7Yg4RJEeSMS5FZ7DY3uw" value="1"/>
-        </ownedEnd>
-      </nestedClassifier>
-      <nestedClassifier xmi:type="uml:Association" xmi:id="_lkA8QIRbEeSwC95jIvSgtA" memberEnd="_lkA8QYRbEeSwC95jIvSgtA _lkAVMIRbEeSwC95jIvSgtA">
-        <name xsi:nil="true"/>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_lkA8QYRbEeSwC95jIvSgtA" name="paymentHandler" type="_ZEjQEIRJEeSMS5FZ7DY3uw" association="_lkA8QIRbEeSwC95jIvSgtA">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_lkA8QoRbEeSwC95jIvSgtA" value="1"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_lkA8Q4RbEeSwC95jIvSgtA" value="1"/>
         </ownedEnd>
       </nestedClassifier>
     </packagedElement>

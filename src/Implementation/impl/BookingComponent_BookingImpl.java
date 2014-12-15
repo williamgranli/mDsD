@@ -8,13 +8,10 @@ import Implementation.BookingComponent_BookingGuest;
 import Implementation.BookingComponent_PaymentDetails;
 import Implementation.BookingComponent_RoomType;
 import Implementation.ImplementationPackage;
-
 import java.lang.reflect.InvocationTargetException;
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
 import java.util.Random;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;

@@ -955,7 +955,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PAYMENT_COMPONENT_IPAYMENT___MAKE_PAYMENT__STRING_STRING_STRING_STRING_STRING_STRING_DATE = 0;
+	int PAYMENT_COMPONENT_IPAYMENT___MAKE_PAYMENT__STRING_STRING_STRING_STRING_STRING_STRING_DATE_BOOLEAN = 0;
 
 	/**
 	 * The operation id for the '<em>Validate CC</em>' operation.
@@ -964,7 +964,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PAYMENT_COMPONENT_IPAYMENT___VALIDATE_CC__STRING_STRING_STRING_STRING_STRING_STRING_DOUBLE = 1;
+	int PAYMENT_COMPONENT_IPAYMENT___VALIDATE_CC__STRING_STRING_STRING_STRING_STRING_STRING_DOUBLE_BOOLEAN = 1;
 
 	/**
 	 * The number of operations of the '<em>Payment Component IPayment</em>' class.
@@ -1010,7 +1010,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PAYMENT_COMPONENT_PAYMENT_HANDLER___MAKE_PAYMENT__STRING_STRING_STRING_STRING_STRING_STRING_DATE = PAYMENT_COMPONENT_IPAYMENT___MAKE_PAYMENT__STRING_STRING_STRING_STRING_STRING_STRING_DATE;
+	int PAYMENT_COMPONENT_PAYMENT_HANDLER___MAKE_PAYMENT__STRING_STRING_STRING_STRING_STRING_STRING_DATE_BOOLEAN = PAYMENT_COMPONENT_IPAYMENT___MAKE_PAYMENT__STRING_STRING_STRING_STRING_STRING_STRING_DATE_BOOLEAN;
 
 	/**
 	 * The operation id for the '<em>Validate CC</em>' operation.
@@ -1019,7 +1019,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PAYMENT_COMPONENT_PAYMENT_HANDLER___VALIDATE_CC__STRING_STRING_STRING_STRING_STRING_STRING_DOUBLE = PAYMENT_COMPONENT_IPAYMENT___VALIDATE_CC__STRING_STRING_STRING_STRING_STRING_STRING_DOUBLE;
+	int PAYMENT_COMPONENT_PAYMENT_HANDLER___VALIDATE_CC__STRING_STRING_STRING_STRING_STRING_STRING_DOUBLE_BOOLEAN = PAYMENT_COMPONENT_IPAYMENT___VALIDATE_CC__STRING_STRING_STRING_STRING_STRING_STRING_DOUBLE_BOOLEAN;
 
 	/**
 	 * The number of operations of the '<em>Payment Component Payment Handler</em>' class.
@@ -1113,22 +1113,13 @@ public interface ImplementationPackage extends EPackage {
 	int PAYMENT_COMPONENT_PAYMENT_FEATURE_COUNT = 7;
 
 	/**
-	 * The operation id for the '<em>Create Payment</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PAYMENT_COMPONENT_PAYMENT___CREATE_PAYMENT__STRING_STRING_STRING_STRING_STRING_STRING_DOUBLE = 0;
-
-	/**
 	 * The number of operations of the '<em>Payment Component Payment</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PAYMENT_COMPONENT_PAYMENT_OPERATION_COUNT = 1;
+	int PAYMENT_COMPONENT_PAYMENT_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link Implementation.impl.AdditionalServiceComponentImpl <em>Additional Service Component</em>}' class.
@@ -1386,7 +1377,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___CREATE_EVENT__STRING_DATE_STRING_INT_INT = 3;
+	int ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___CREATE_EVENT__STRING_DATE_STRING_INT_INT_BOOLEAN = 3;
 
 	/**
 	 * The operation id for the '<em>Edit Event</em>' operation.
@@ -1395,7 +1386,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___EDIT_EVENT__STRING_DATE_STRING_INT_INT = 4;
+	int ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___EDIT_EVENT__STRING_DATE_STRING_INT_INT_BOOLEAN = 4;
 
 	/**
 	 * The operation id for the '<em>Remove Event</em>' operation.
@@ -1540,7 +1531,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER___CREATE_EVENT__STRING_DATE_STRING_INT_INT = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION_OPERATION_COUNT + 3;
+	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER___CREATE_EVENT__STRING_DATE_STRING_INT_INT_BOOLEAN = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION_OPERATION_COUNT + 3;
 
 	/**
 	 * The operation id for the '<em>Edit Event</em>' operation.
@@ -1549,7 +1540,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER___EDIT_EVENT__STRING_DATE_STRING_INT_INT = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION_OPERATION_COUNT + 4;
+	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER___EDIT_EVENT__STRING_DATE_STRING_INT_INT_BOOLEAN = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION_OPERATION_COUNT + 4;
 
 	/**
 	 * The operation id for the '<em>Remove Event</em>' operation.
@@ -3755,16 +3746,6 @@ public interface ImplementationPackage extends EPackage {
 	EAttribute getPaymentComponent_Payment_Price();
 
 	/**
-	 * Returns the meta object for the '{@link Implementation.PaymentComponent_Payment#createPayment(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, double) <em>Create Payment</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Create Payment</em>' operation.
-	 * @see Implementation.PaymentComponent_Payment#createPayment(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, double)
-	 * @generated
-	 */
-	EOperation getPaymentComponent_Payment__CreatePayment__String_String_String_String_String_String_double();
-
-	/**
 	 * Returns the meta object for class '{@link Implementation.PaymentComponent_IPayment <em>Payment Component IPayment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3775,24 +3756,24 @@ public interface ImplementationPackage extends EPackage {
 	EClass getPaymentComponent_IPayment();
 
 	/**
-	 * Returns the meta object for the '{@link Implementation.PaymentComponent_IPayment#makePayment(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.util.Date) <em>Make Payment</em>}' operation.
+	 * Returns the meta object for the '{@link Implementation.PaymentComponent_IPayment#makePayment(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.util.Date, boolean) <em>Make Payment</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Make Payment</em>' operation.
-	 * @see Implementation.PaymentComponent_IPayment#makePayment(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.util.Date)
+	 * @see Implementation.PaymentComponent_IPayment#makePayment(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.util.Date, boolean)
 	 * @generated
 	 */
-	EOperation getPaymentComponent_IPayment__MakePayment__String_String_String_String_String_String_Date();
+	EOperation getPaymentComponent_IPayment__MakePayment__String_String_String_String_String_String_Date_boolean();
 
 	/**
-	 * Returns the meta object for the '{@link Implementation.PaymentComponent_IPayment#validateCC(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, double) <em>Validate CC</em>}' operation.
+	 * Returns the meta object for the '{@link Implementation.PaymentComponent_IPayment#validateCC(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, double, boolean) <em>Validate CC</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Validate CC</em>' operation.
-	 * @see Implementation.PaymentComponent_IPayment#validateCC(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, double)
+	 * @see Implementation.PaymentComponent_IPayment#validateCC(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, double, boolean)
 	 * @generated
 	 */
-	EOperation getPaymentComponent_IPayment__ValidateCC__String_String_String_String_String_String_double();
+	EOperation getPaymentComponent_IPayment__ValidateCC__String_String_String_String_String_String_double_boolean();
 
 	/**
 	 * Returns the meta object for class '{@link Implementation.PaymentComponent_PaymentHandler <em>Payment Component Payment Handler</em>}'.
@@ -4053,24 +4034,24 @@ public interface ImplementationPackage extends EPackage {
 	EOperation getAdditionalServiceComponent_IAdditionalServiceAdministration__RemoveAdditionalService__String();
 
 	/**
-	 * Returns the meta object for the '{@link Implementation.AdditionalServiceComponent_IAdditionalServiceAdministration#createEvent(java.lang.String, java.util.Date, java.lang.String, int, int) <em>Create Event</em>}' operation.
+	 * Returns the meta object for the '{@link Implementation.AdditionalServiceComponent_IAdditionalServiceAdministration#createEvent(java.lang.String, java.util.Date, java.lang.String, int, int, boolean) <em>Create Event</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Event</em>' operation.
-	 * @see Implementation.AdditionalServiceComponent_IAdditionalServiceAdministration#createEvent(java.lang.String, java.util.Date, java.lang.String, int, int)
+	 * @see Implementation.AdditionalServiceComponent_IAdditionalServiceAdministration#createEvent(java.lang.String, java.util.Date, java.lang.String, int, int, boolean)
 	 * @generated
 	 */
-	EOperation getAdditionalServiceComponent_IAdditionalServiceAdministration__CreateEvent__String_Date_String_int_int();
+	EOperation getAdditionalServiceComponent_IAdditionalServiceAdministration__CreateEvent__String_Date_String_int_int_boolean();
 
 	/**
-	 * Returns the meta object for the '{@link Implementation.AdditionalServiceComponent_IAdditionalServiceAdministration#editEvent(java.lang.String, java.util.Date, java.lang.String, int, int) <em>Edit Event</em>}' operation.
+	 * Returns the meta object for the '{@link Implementation.AdditionalServiceComponent_IAdditionalServiceAdministration#editEvent(java.lang.String, java.util.Date, java.lang.String, int, int, boolean) <em>Edit Event</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Edit Event</em>' operation.
-	 * @see Implementation.AdditionalServiceComponent_IAdditionalServiceAdministration#editEvent(java.lang.String, java.util.Date, java.lang.String, int, int)
+	 * @see Implementation.AdditionalServiceComponent_IAdditionalServiceAdministration#editEvent(java.lang.String, java.util.Date, java.lang.String, int, int, boolean)
 	 * @generated
 	 */
-	EOperation getAdditionalServiceComponent_IAdditionalServiceAdministration__EditEvent__String_Date_String_int_int();
+	EOperation getAdditionalServiceComponent_IAdditionalServiceAdministration__EditEvent__String_Date_String_int_int_boolean();
 
 	/**
 	 * Returns the meta object for the '{@link Implementation.AdditionalServiceComponent_IAdditionalServiceAdministration#removeEvent(java.lang.String, java.util.Date, java.lang.String) <em>Remove Event</em>}' operation.
@@ -5666,14 +5647,6 @@ public interface ImplementationPackage extends EPackage {
 		EAttribute PAYMENT_COMPONENT_PAYMENT__PRICE = eINSTANCE.getPaymentComponent_Payment_Price();
 
 		/**
-		 * The meta object literal for the '<em><b>Create Payment</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation PAYMENT_COMPONENT_PAYMENT___CREATE_PAYMENT__STRING_STRING_STRING_STRING_STRING_STRING_DOUBLE = eINSTANCE.getPaymentComponent_Payment__CreatePayment__String_String_String_String_String_String_double();
-
-		/**
 		 * The meta object literal for the '{@link Implementation.PaymentComponent_IPayment <em>Payment Component IPayment</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5689,7 +5662,7 @@ public interface ImplementationPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation PAYMENT_COMPONENT_IPAYMENT___MAKE_PAYMENT__STRING_STRING_STRING_STRING_STRING_STRING_DATE = eINSTANCE.getPaymentComponent_IPayment__MakePayment__String_String_String_String_String_String_Date();
+		EOperation PAYMENT_COMPONENT_IPAYMENT___MAKE_PAYMENT__STRING_STRING_STRING_STRING_STRING_STRING_DATE_BOOLEAN = eINSTANCE.getPaymentComponent_IPayment__MakePayment__String_String_String_String_String_String_Date_boolean();
 
 		/**
 		 * The meta object literal for the '<em><b>Validate CC</b></em>' operation.
@@ -5697,7 +5670,7 @@ public interface ImplementationPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation PAYMENT_COMPONENT_IPAYMENT___VALIDATE_CC__STRING_STRING_STRING_STRING_STRING_STRING_DOUBLE = eINSTANCE.getPaymentComponent_IPayment__ValidateCC__String_String_String_String_String_String_double();
+		EOperation PAYMENT_COMPONENT_IPAYMENT___VALIDATE_CC__STRING_STRING_STRING_STRING_STRING_STRING_DOUBLE_BOOLEAN = eINSTANCE.getPaymentComponent_IPayment__ValidateCC__String_String_String_String_String_String_double_boolean();
 
 		/**
 		 * The meta object literal for the '{@link Implementation.impl.PaymentComponent_PaymentHandlerImpl <em>Payment Component Payment Handler</em>}' class.
@@ -5919,7 +5892,7 @@ public interface ImplementationPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___CREATE_EVENT__STRING_DATE_STRING_INT_INT = eINSTANCE.getAdditionalServiceComponent_IAdditionalServiceAdministration__CreateEvent__String_Date_String_int_int();
+		EOperation ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___CREATE_EVENT__STRING_DATE_STRING_INT_INT_BOOLEAN = eINSTANCE.getAdditionalServiceComponent_IAdditionalServiceAdministration__CreateEvent__String_Date_String_int_int_boolean();
 
 		/**
 		 * The meta object literal for the '<em><b>Edit Event</b></em>' operation.
@@ -5927,7 +5900,7 @@ public interface ImplementationPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___EDIT_EVENT__STRING_DATE_STRING_INT_INT = eINSTANCE.getAdditionalServiceComponent_IAdditionalServiceAdministration__EditEvent__String_Date_String_int_int();
+		EOperation ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___EDIT_EVENT__STRING_DATE_STRING_INT_INT_BOOLEAN = eINSTANCE.getAdditionalServiceComponent_IAdditionalServiceAdministration__EditEvent__String_Date_String_int_int_boolean();
 
 		/**
 		 * The meta object literal for the '<em><b>Remove Event</b></em>' operation.

@@ -1019,15 +1019,6 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getPaymentComponent_Payment__CreatePayment__String_String_String_String_String_String_double() {
-		return paymentComponent_PaymentEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getPaymentComponent_IPayment() {
 		return paymentComponent_IPaymentEClass;
 	}
@@ -1037,7 +1028,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getPaymentComponent_IPayment__MakePayment__String_String_String_String_String_String_Date() {
+	public EOperation getPaymentComponent_IPayment__MakePayment__String_String_String_String_String_String_Date_boolean() {
 		return paymentComponent_IPaymentEClass.getEOperations().get(0);
 	}
 
@@ -1046,7 +1037,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getPaymentComponent_IPayment__ValidateCC__String_String_String_String_String_String_double() {
+	public EOperation getPaymentComponent_IPayment__ValidateCC__String_String_String_String_String_String_double_boolean() {
 		return paymentComponent_IPaymentEClass.getEOperations().get(1);
 	}
 
@@ -1280,7 +1271,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getAdditionalServiceComponent_IAdditionalServiceAdministration__CreateEvent__String_Date_String_int_int() {
+	public EOperation getAdditionalServiceComponent_IAdditionalServiceAdministration__CreateEvent__String_Date_String_int_int_boolean() {
 		return additionalServiceComponent_IAdditionalServiceAdministrationEClass.getEOperations().get(3);
 	}
 
@@ -1289,7 +1280,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getAdditionalServiceComponent_IAdditionalServiceAdministration__EditEvent__String_Date_String_int_int() {
+	public EOperation getAdditionalServiceComponent_IAdditionalServiceAdministration__EditEvent__String_Date_String_int_int_boolean() {
 		return additionalServiceComponent_IAdditionalServiceAdministrationEClass.getEOperations().get(4);
 	}
 
@@ -2268,8 +2259,8 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		paymentComponentEClass = createEClass(PAYMENT_COMPONENT);
 
 		paymentComponent_IPaymentEClass = createEClass(PAYMENT_COMPONENT_IPAYMENT);
-		createEOperation(paymentComponent_IPaymentEClass, PAYMENT_COMPONENT_IPAYMENT___MAKE_PAYMENT__STRING_STRING_STRING_STRING_STRING_STRING_DATE);
-		createEOperation(paymentComponent_IPaymentEClass, PAYMENT_COMPONENT_IPAYMENT___VALIDATE_CC__STRING_STRING_STRING_STRING_STRING_STRING_DOUBLE);
+		createEOperation(paymentComponent_IPaymentEClass, PAYMENT_COMPONENT_IPAYMENT___MAKE_PAYMENT__STRING_STRING_STRING_STRING_STRING_STRING_DATE_BOOLEAN);
+		createEOperation(paymentComponent_IPaymentEClass, PAYMENT_COMPONENT_IPAYMENT___VALIDATE_CC__STRING_STRING_STRING_STRING_STRING_STRING_DOUBLE_BOOLEAN);
 
 		paymentComponent_PaymentHandlerEClass = createEClass(PAYMENT_COMPONENT_PAYMENT_HANDLER);
 		createEReference(paymentComponent_PaymentHandlerEClass, PAYMENT_COMPONENT_PAYMENT_HANDLER__PAYMENT);
@@ -2282,7 +2273,6 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		createEAttribute(paymentComponent_PaymentEClass, PAYMENT_COMPONENT_PAYMENT__EXPIRY_MONTH);
 		createEAttribute(paymentComponent_PaymentEClass, PAYMENT_COMPONENT_PAYMENT__EXPIRY_YEAR);
 		createEAttribute(paymentComponent_PaymentEClass, PAYMENT_COMPONENT_PAYMENT__PRICE);
-		createEOperation(paymentComponent_PaymentEClass, PAYMENT_COMPONENT_PAYMENT___CREATE_PAYMENT__STRING_STRING_STRING_STRING_STRING_STRING_DOUBLE);
 
 		additionalServiceComponentEClass = createEClass(ADDITIONAL_SERVICE_COMPONENT);
 
@@ -2305,8 +2295,8 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		createEOperation(additionalServiceComponent_IAdditionalServiceAdministrationEClass, ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___CREATE_ADDITIONAL_SERVICE__STRING_BOOLEAN_INT_STRING);
 		createEOperation(additionalServiceComponent_IAdditionalServiceAdministrationEClass, ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___EDIT_ADDITIONAL_SERVICE__STRING_STRING_BOOLEAN_INT_STRING);
 		createEOperation(additionalServiceComponent_IAdditionalServiceAdministrationEClass, ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___REMOVE_ADDITIONAL_SERVICE__STRING);
-		createEOperation(additionalServiceComponent_IAdditionalServiceAdministrationEClass, ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___CREATE_EVENT__STRING_DATE_STRING_INT_INT);
-		createEOperation(additionalServiceComponent_IAdditionalServiceAdministrationEClass, ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___EDIT_EVENT__STRING_DATE_STRING_INT_INT);
+		createEOperation(additionalServiceComponent_IAdditionalServiceAdministrationEClass, ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___CREATE_EVENT__STRING_DATE_STRING_INT_INT_BOOLEAN);
+		createEOperation(additionalServiceComponent_IAdditionalServiceAdministrationEClass, ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___EDIT_EVENT__STRING_DATE_STRING_INT_INT_BOOLEAN);
 		createEOperation(additionalServiceComponent_IAdditionalServiceAdministrationEClass, ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___REMOVE_EVENT__STRING_DATE_STRING);
 
 		additionalServiceComponent_IAdditionalServiceInformationEClass = createEClass(ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION);
@@ -2625,7 +2615,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 
 		initEClass(paymentComponent_IPaymentEClass, PaymentComponent_IPayment.class, "PaymentComponent_IPayment", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		op = initEOperation(getPaymentComponent_IPayment__MakePayment__String_String_String_String_String_String_Date(), null, "makePayment", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getPaymentComponent_IPayment__MakePayment__String_String_String_String_String_String_Date_boolean(), null, "makePayment", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "ccNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "ccv", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "expiryYear", 1, 1, IS_UNIQUE, !IS_ORDERED);
@@ -2633,8 +2623,9 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		addEParameter(op, theTypesPackage.getString(), "firstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "lastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDate(), "double_", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getBoolean(), "returnValue", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getPaymentComponent_IPayment__ValidateCC__String_String_String_String_String_String_double(), null, "validateCC", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getPaymentComponent_IPayment__ValidateCC__String_String_String_String_String_String_double_boolean(), null, "validateCC", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "ccNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "ccv", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "expiryYear", 1, 1, IS_UNIQUE, !IS_ORDERED);
@@ -2642,6 +2633,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		addEParameter(op, theTypesPackage.getString(), "firstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "lastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDouble(), "price", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getBoolean(), "returnValue", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(paymentComponent_PaymentHandlerEClass, PaymentComponent_PaymentHandler.class, "PaymentComponent_PaymentHandler", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPaymentComponent_PaymentHandler_Payment(), this.getPaymentComponent_Payment(), null, "payment", null, 1, 1, PaymentComponent_PaymentHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -2654,15 +2646,6 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		initEAttribute(getPaymentComponent_Payment_ExpiryMonth(), theTypesPackage.getString(), "expiryMonth", null, 1, 1, PaymentComponent_Payment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getPaymentComponent_Payment_ExpiryYear(), theTypesPackage.getString(), "expiryYear", null, 1, 1, PaymentComponent_Payment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getPaymentComponent_Payment_Price(), ecorePackage.getEDouble(), "price", null, 1, 1, PaymentComponent_Payment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		op = initEOperation(getPaymentComponent_Payment__CreatePayment__String_String_String_String_String_String_double(), null, "createPayment", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "ccNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "ccv", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "firstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "lastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "expiryYear", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "expiryMonth", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDouble(), "price", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(additionalServiceComponentEClass, AdditionalServiceComponent.class, "AdditionalServiceComponent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -2687,37 +2670,39 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 
 		initEClass(additionalServiceComponent_IAdditionalServiceAdministrationEClass, AdditionalServiceComponent_IAdditionalServiceAdministration.class, "AdditionalServiceComponent_IAdditionalServiceAdministration", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		op = initEOperation(getAdditionalServiceComponent_IAdditionalServiceAdministration__CreateAdditionalService__String_boolean_int_String(), null, "createAdditionalService", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getAdditionalServiceComponent_IAdditionalServiceAdministration__CreateAdditionalService__String_boolean_int_String(), theTypesPackage.getBoolean(), "createAdditionalService", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "name", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getBoolean(), "usable", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "price", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "description", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getAdditionalServiceComponent_IAdditionalServiceAdministration__EditAdditionalService__String_String_boolean_int_String(), null, "editAdditionalService", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getAdditionalServiceComponent_IAdditionalServiceAdministration__EditAdditionalService__String_String_boolean_int_String(), theTypesPackage.getBoolean(), "editAdditionalService", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "oldName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "name", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getBoolean(), "usable", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "price", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "description", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getAdditionalServiceComponent_IAdditionalServiceAdministration__RemoveAdditionalService__String(), null, "removeAdditionalService", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getAdditionalServiceComponent_IAdditionalServiceAdministration__RemoveAdditionalService__String(), theTypesPackage.getBoolean(), "removeAdditionalService", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "name", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getAdditionalServiceComponent_IAdditionalServiceAdministration__CreateEvent__String_Date_String_int_int(), null, "createEvent", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "name", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDate(), "dateTime", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "location", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "maxAttendants", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "currentAttendants", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		op = initEOperation(getAdditionalServiceComponent_IAdditionalServiceAdministration__EditEvent__String_Date_String_int_int(), null, "editEvent", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getAdditionalServiceComponent_IAdditionalServiceAdministration__CreateEvent__String_Date_String_int_int_boolean(), null, "createEvent", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "name", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDate(), "dateTime", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "location", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "maxAttendants", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "currentAttendants", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getBoolean(), "returnValue", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getAdditionalServiceComponent_IAdditionalServiceAdministration__RemoveEvent__String_Date_String(), null, "removeEvent", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getAdditionalServiceComponent_IAdditionalServiceAdministration__EditEvent__String_Date_String_int_int_boolean(), null, "editEvent", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "name", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "dateTime", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "location", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getInteger(), "maxAttendants", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getInteger(), "currentAttendants", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getBoolean(), "returnValue", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getAdditionalServiceComponent_IAdditionalServiceAdministration__RemoveEvent__String_Date_String(), theTypesPackage.getBoolean(), "removeEvent", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "name", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDate(), "date", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "location", 1, 1, IS_UNIQUE, !IS_ORDERED);
