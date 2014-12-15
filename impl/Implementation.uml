@@ -258,6 +258,11 @@
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_j_6xcYRJEeSMS5FZ7DY3uw" value="1"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_j_6xcoRJEeSMS5FZ7DY3uw" value="1"/>
         </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_lkAVMIRbEeSwC95jIvSgtA" name="customerProvides" association="_lkA8QIRbEeSwC95jIvSgtA">
+          <type xmi:type="uml:Interface" href="../model.uml#_gDR3toRbEeSwC95jIvSgtA"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_lkAVMYRbEeSwC95jIvSgtA" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_lkAVMoRbEeSwC95jIvSgtA" value="1"/>
+        </ownedAttribute>
         <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_jVMZcIRJEeSMS5FZ7DY3uw" client="_ZEjQEIRJEeSMS5FZ7DY3uw" supplier="_XioxYIRJEeSMS5FZ7DY3uw" contract="_XioxYIRJEeSMS5FZ7DY3uw"/>
       </nestedClassifier>
       <nestedClassifier xmi:type="uml:Class" xmi:id="_Z6ZS8IRJEeSMS5FZ7DY3uw" name="Payment">
@@ -318,6 +323,13 @@
         <ownedEnd xmi:type="uml:Property" xmi:id="_j_7YgYRJEeSMS5FZ7DY3uw" name="paymentHandler" type="_ZEjQEIRJEeSMS5FZ7DY3uw" association="_j_7YgIRJEeSMS5FZ7DY3uw">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_j_7YgoRJEeSMS5FZ7DY3uw" value="1"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_j_7Yg4RJEeSMS5FZ7DY3uw" value="1"/>
+        </ownedEnd>
+      </nestedClassifier>
+      <nestedClassifier xmi:type="uml:Association" xmi:id="_lkA8QIRbEeSwC95jIvSgtA" memberEnd="_lkA8QYRbEeSwC95jIvSgtA _lkAVMIRbEeSwC95jIvSgtA">
+        <name xsi:nil="true"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_lkA8QYRbEeSwC95jIvSgtA" name="paymentHandler" type="_ZEjQEIRJEeSMS5FZ7DY3uw" association="_lkA8QIRbEeSwC95jIvSgtA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_lkA8QoRbEeSwC95jIvSgtA" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_lkA8Q4RbEeSwC95jIvSgtA" value="1"/>
         </ownedEnd>
       </nestedClassifier>
     </packagedElement>
