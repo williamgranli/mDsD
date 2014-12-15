@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link Implementation.AdditionalServiceComponent_AdditionalService#getPrice <em>Price</em>}</li>
  *   <li>{@link Implementation.AdditionalServiceComponent_AdditionalService#getDescription <em>Description</em>}</li>
  *   <li>{@link Implementation.AdditionalServiceComponent_AdditionalService#getAdditionalServiceEvent <em>Additional Service Event</em>}</li>
+ *   <li>{@link Implementation.AdditionalServiceComponent_AdditionalService#getTempEvents <em>Temp Events</em>}</li>
  * </ul>
  * </p>
  *
@@ -149,11 +150,35 @@ public interface AdditionalServiceComponent_AdditionalService extends EObject {
 	EList<AdditionalServiceComponent_AdditionalServiceEvent> getAdditionalServiceEvent();
 
 	/**
+	 * Returns the value of the '<em><b>Temp Events</b></em>' reference list.
+	 * The list contents are of type {@link Implementation.AdditionalServiceComponent_AdditionalServiceEvent}.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Temp Events</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
-	 * @model dateRequired="true" dateOrdered="false"
+	 * @return the value of the '<em>Temp Events</em>' reference list.
+	 * @see Implementation.ImplementationPackage#getAdditionalServiceComponent_AdditionalService_TempEvents()
+	 * @model ordered="false"
 	 * @generated
 	 */
-	void findEvent(Date date);
+	EList<AdditionalServiceComponent_AdditionalServiceEvent> getTempEvents();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model required="true" ordered="false" dateRequired="true" dateOrdered="false" locationDataType="org.eclipse.uml2.types.String" locationRequired="true" locationOrdered="false"
+	 * @generated
+	 */
+	AdditionalServiceComponent_AdditionalServiceEvent findEvent(Date date, String location);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model required="true" ordered="false" dateTimeRequired="true" dateTimeOrdered="false"
+	 * @generated
+	 */
+	AdditionalServiceComponent_AdditionalServiceEvent findEvents(Date dateTime);
 
 } // AdditionalServiceComponent_AdditionalService

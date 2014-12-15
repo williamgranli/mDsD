@@ -4,17 +4,9 @@ package Implementation.impl;
 
 import Implementation.AdditionalServiceComponent_AdditionalServiceEvent;
 import Implementation.ImplementationPackage;
-
-import java.lang.reflect.InvocationTargetException;
-
 import java.util.Date;
-
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -223,17 +215,6 @@ public class AdditionalServiceComponent_AdditionalServiceEventImpl extends Minim
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getAdditionalServiceInfo(String addtionalServiceName) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -315,21 +296,6 @@ public class AdditionalServiceComponent_AdditionalServiceEventImpl extends Minim
 				return currentAttendants != CURRENT_ATTENDANTS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_EVENT___GET_ADDITIONAL_SERVICE_INFO__STRING:
-				getAdditionalServiceInfo((String)arguments.get(0));
-				return null;
-		}
-		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

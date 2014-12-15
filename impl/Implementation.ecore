@@ -296,8 +296,12 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AdditionalServiceComponent"/>
   <eClassifiers xsi:type="ecore:EClass" name="AdditionalServiceComponent_AdditionalService">
-    <eOperations name="findEvent" ordered="false" lowerBound="1">
+    <eOperations name="findEvent" ordered="false" lowerBound="1" eType="#//AdditionalServiceComponent_AdditionalServiceEvent">
       <eParameters name="date" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+      <eParameters name="location" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+    </eOperations>
+    <eOperations name="findEvents" ordered="false" lowerBound="1" eType="#//AdditionalServiceComponent_AdditionalServiceEvent">
+      <eParameters name="dateTime" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
     </eOperations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
         eType="ecore:EDataType types.ecore#//String"/>
@@ -309,11 +313,10 @@
         lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="additionalServiceEvent"
         ordered="false" upperBound="-1" eType="#//AdditionalServiceComponent_AdditionalServiceEvent"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tempEvents" ordered="false"
+        upperBound="-1" eType="#//AdditionalServiceComponent_AdditionalServiceEvent"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AdditionalServiceComponent_AdditionalServiceEvent">
-    <eOperations name="getAdditionalServiceInfo" ordered="false" lowerBound="1">
-      <eParameters name="addtionalServiceName" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-    </eOperations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="dateTime" ordered="false"
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="location" ordered="false"

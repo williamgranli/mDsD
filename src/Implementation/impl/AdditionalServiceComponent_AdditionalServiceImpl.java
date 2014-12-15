@@ -27,6 +27,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link Implementation.impl.AdditionalServiceComponent_AdditionalServiceImpl#getPrice <em>Price</em>}</li>
  *   <li>{@link Implementation.impl.AdditionalServiceComponent_AdditionalServiceImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link Implementation.impl.AdditionalServiceComponent_AdditionalServiceImpl#getAdditionalServiceEvent <em>Additional Service Event</em>}</li>
+ *   <li>{@link Implementation.impl.AdditionalServiceComponent_AdditionalServiceImpl#getTempEvents <em>Temp Events</em>}</li>
  * </ul>
  * </p>
  *
@@ -122,6 +123,16 @@ public class AdditionalServiceComponent_AdditionalServiceImpl extends MinimalEOb
 	 * @ordered
 	 */
 	protected EList<AdditionalServiceComponent_AdditionalServiceEvent> additionalServiceEvent;
+
+	/**
+	 * The cached value of the '{@link #getTempEvents() <em>Temp Events</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTempEvents()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<AdditionalServiceComponent_AdditionalServiceEvent> tempEvents;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -243,7 +254,30 @@ public class AdditionalServiceComponent_AdditionalServiceImpl extends MinimalEOb
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void findEvent(Date date) {
+	public EList<AdditionalServiceComponent_AdditionalServiceEvent> getTempEvents() {
+		if (tempEvents == null) {
+			tempEvents = new EObjectResolvingEList<AdditionalServiceComponent_AdditionalServiceEvent>(AdditionalServiceComponent_AdditionalServiceEvent.class, this, ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE__TEMP_EVENTS);
+		}
+		return tempEvents;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public AdditionalServiceComponent_AdditionalServiceEvent findEvent(Date date, String location) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public AdditionalServiceComponent_AdditionalServiceEvent findEvents(Date dateTime) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -267,6 +301,8 @@ public class AdditionalServiceComponent_AdditionalServiceImpl extends MinimalEOb
 				return getDescription();
 			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE__ADDITIONAL_SERVICE_EVENT:
 				return getAdditionalServiceEvent();
+			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE__TEMP_EVENTS:
+				return getTempEvents();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -296,6 +332,10 @@ public class AdditionalServiceComponent_AdditionalServiceImpl extends MinimalEOb
 				getAdditionalServiceEvent().clear();
 				getAdditionalServiceEvent().addAll((Collection<? extends AdditionalServiceComponent_AdditionalServiceEvent>)newValue);
 				return;
+			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE__TEMP_EVENTS:
+				getTempEvents().clear();
+				getTempEvents().addAll((Collection<? extends AdditionalServiceComponent_AdditionalServiceEvent>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -323,6 +363,9 @@ public class AdditionalServiceComponent_AdditionalServiceImpl extends MinimalEOb
 			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE__ADDITIONAL_SERVICE_EVENT:
 				getAdditionalServiceEvent().clear();
 				return;
+			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE__TEMP_EVENTS:
+				getTempEvents().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -345,6 +388,8 @@ public class AdditionalServiceComponent_AdditionalServiceImpl extends MinimalEOb
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE__ADDITIONAL_SERVICE_EVENT:
 				return additionalServiceEvent != null && !additionalServiceEvent.isEmpty();
+			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE__TEMP_EVENTS:
+				return tempEvents != null && !tempEvents.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -357,9 +402,10 @@ public class AdditionalServiceComponent_AdditionalServiceImpl extends MinimalEOb
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE___FIND_EVENT__DATE:
-				findEvent((Date)arguments.get(0));
-				return null;
+			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE___FIND_EVENT__DATE_STRING:
+				return findEvent((Date)arguments.get(0), (String)arguments.get(1));
+			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE___FIND_EVENTS__DATE:
+				return findEvents((Date)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

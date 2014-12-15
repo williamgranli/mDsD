@@ -1625,13 +1625,22 @@ public interface ImplementationPackage extends EPackage {
 	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE__ADDITIONAL_SERVICE_EVENT = 4;
 
 	/**
+	 * The feature id for the '<em><b>Temp Events</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE__TEMP_EVENTS = 5;
+
+	/**
 	 * The number of structural features of the '<em>Additional Service Component Additional Service</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_FEATURE_COUNT = 5;
+	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_FEATURE_COUNT = 6;
 
 	/**
 	 * The operation id for the '<em>Find Event</em>' operation.
@@ -1640,7 +1649,16 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE___FIND_EVENT__DATE = 0;
+	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE___FIND_EVENT__DATE_STRING = 0;
+
+	/**
+	 * The operation id for the '<em>Find Events</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE___FIND_EVENTS__DATE = 1;
 
 	/**
 	 * The number of operations of the '<em>Additional Service Component Additional Service</em>' class.
@@ -1649,7 +1667,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_OPERATION_COUNT = 1;
+	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_OPERATION_COUNT = 2;
 
 	/**
 	 * The feature id for the '<em><b>Date Time</b></em>' attribute.
@@ -1697,22 +1715,13 @@ public interface ImplementationPackage extends EPackage {
 	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_EVENT_FEATURE_COUNT = 4;
 
 	/**
-	 * The operation id for the '<em>Get Additional Service Info</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_EVENT___GET_ADDITIONAL_SERVICE_INFO__STRING = 0;
-
-	/**
 	 * The number of operations of the '<em>Additional Service Component Additional Service Event</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_EVENT_OPERATION_COUNT = 1;
+	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_EVENT_OPERATION_COUNT = 0;
 
 	/**
 	 * The number of structural features of the '<em>Additional Service Component IAdditional Service Administration</em>' class.
@@ -4243,14 +4252,35 @@ public interface ImplementationPackage extends EPackage {
 	EReference getAdditionalServiceComponent_AdditionalService_AdditionalServiceEvent();
 
 	/**
-	 * Returns the meta object for the '{@link Implementation.AdditionalServiceComponent_AdditionalService#findEvent(java.util.Date) <em>Find Event</em>}' operation.
+	 * Returns the meta object for the reference list '{@link Implementation.AdditionalServiceComponent_AdditionalService#getTempEvents <em>Temp Events</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Temp Events</em>'.
+	 * @see Implementation.AdditionalServiceComponent_AdditionalService#getTempEvents()
+	 * @see #getAdditionalServiceComponent_AdditionalService()
+	 * @generated
+	 */
+	EReference getAdditionalServiceComponent_AdditionalService_TempEvents();
+
+	/**
+	 * Returns the meta object for the '{@link Implementation.AdditionalServiceComponent_AdditionalService#findEvent(java.util.Date, java.lang.String) <em>Find Event</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Find Event</em>' operation.
-	 * @see Implementation.AdditionalServiceComponent_AdditionalService#findEvent(java.util.Date)
+	 * @see Implementation.AdditionalServiceComponent_AdditionalService#findEvent(java.util.Date, java.lang.String)
 	 * @generated
 	 */
-	EOperation getAdditionalServiceComponent_AdditionalService__FindEvent__Date();
+	EOperation getAdditionalServiceComponent_AdditionalService__FindEvent__Date_String();
+
+	/**
+	 * Returns the meta object for the '{@link Implementation.AdditionalServiceComponent_AdditionalService#findEvents(java.util.Date) <em>Find Events</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Find Events</em>' operation.
+	 * @see Implementation.AdditionalServiceComponent_AdditionalService#findEvents(java.util.Date)
+	 * @generated
+	 */
+	EOperation getAdditionalServiceComponent_AdditionalService__FindEvents__Date();
 
 	/**
 	 * Returns the meta object for class '{@link Implementation.StaffComponent_IAuthentication <em>Staff Component IAuthentication</em>}'.
@@ -4487,16 +4517,6 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getAdditionalServiceComponent_AdditionalServiceEvent_CurrentAttendants();
-
-	/**
-	 * Returns the meta object for the '{@link Implementation.AdditionalServiceComponent_AdditionalServiceEvent#getAdditionalServiceInfo(java.lang.String) <em>Get Additional Service Info</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Additional Service Info</em>' operation.
-	 * @see Implementation.AdditionalServiceComponent_AdditionalServiceEvent#getAdditionalServiceInfo(java.lang.String)
-	 * @generated
-	 */
-	EOperation getAdditionalServiceComponent_AdditionalServiceEvent__GetAdditionalServiceInfo__String();
 
 	/**
 	 * Returns the meta object for class '{@link Implementation.BookingComponent <em>Booking Component</em>}'.
@@ -6248,12 +6268,28 @@ public interface ImplementationPackage extends EPackage {
 		EReference ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE__ADDITIONAL_SERVICE_EVENT = eINSTANCE.getAdditionalServiceComponent_AdditionalService_AdditionalServiceEvent();
 
 		/**
+		 * The meta object literal for the '<em><b>Temp Events</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE__TEMP_EVENTS = eINSTANCE.getAdditionalServiceComponent_AdditionalService_TempEvents();
+
+		/**
 		 * The meta object literal for the '<em><b>Find Event</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE___FIND_EVENT__DATE = eINSTANCE.getAdditionalServiceComponent_AdditionalService__FindEvent__Date();
+		EOperation ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE___FIND_EVENT__DATE_STRING = eINSTANCE.getAdditionalServiceComponent_AdditionalService__FindEvent__Date_String();
+
+		/**
+		 * The meta object literal for the '<em><b>Find Events</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE___FIND_EVENTS__DATE = eINSTANCE.getAdditionalServiceComponent_AdditionalService__FindEvents__Date();
 
 		/**
 		 * The meta object literal for the '{@link Implementation.StaffComponent_IAuthentication <em>Staff Component IAuthentication</em>}' class.
@@ -6448,14 +6484,6 @@ public interface ImplementationPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_EVENT__CURRENT_ATTENDANTS = eINSTANCE.getAdditionalServiceComponent_AdditionalServiceEvent_CurrentAttendants();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Additional Service Info</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_EVENT___GET_ADDITIONAL_SERVICE_INFO__STRING = eINSTANCE.getAdditionalServiceComponent_AdditionalServiceEvent__GetAdditionalServiceInfo__String();
 
 		/**
 		 * The meta object literal for the '{@link Implementation.impl.BookingComponentImpl <em>Booking Component</em>}' class.

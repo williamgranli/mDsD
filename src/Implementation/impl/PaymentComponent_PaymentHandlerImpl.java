@@ -211,27 +211,9 @@ public class PaymentComponent_PaymentHandlerImpl extends MinimalEObjectImpl.Cont
 	 * @generated
 	 */
 	public boolean validateCC(String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName) {
-		try {
-			// Acquire CustomerRequires object
-			se.chalmers.cse.mdsd1415.banking.customerRequires.CustomerRequires banking = se.chalmers.cse.mdsd1415.banking.customerRequires.CustomerRequires
-					.instance();
-			
-			// Check for credit card validity
-			if (banking.isCreditCardValid(ccNumber, ccv, expiryMonth, expiryYear, firstName,
-					lastName)) {
-				System.out.println("Valid credit card");
-				return true;
-			} else {
-				System.out.println("Invalid credit card");
-				return false;
-			}
-
-		} catch (SOAPException e) {
-			System.err
-					.println("Error occurred while communicating with the bank");
-			e.printStackTrace();
-			return false;
-		}
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 

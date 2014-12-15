@@ -130,12 +130,4 @@ public interface AdditionalServiceComponent_AdditionalServiceEvent extends EObje
 	 */
 	void setCurrentAttendants(int value);
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model addtionalServiceNameDataType="org.eclipse.uml2.types.String" addtionalServiceNameRequired="true" addtionalServiceNameOrdered="false"
-	 * @generated
-	 */
-	void getAdditionalServiceInfo(String addtionalServiceName);
-
 } // AdditionalServiceComponent_AdditionalServiceEvent
