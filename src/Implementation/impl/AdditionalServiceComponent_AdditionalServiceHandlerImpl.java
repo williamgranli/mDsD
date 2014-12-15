@@ -8,15 +8,22 @@ import Implementation.AdditionalServiceComponent_IAdditionalServiceAdministratio
 import Implementation.AdditionalServiceComponent_IAdditionalServiceDecision;
 import Implementation.ImplementationPackage;
 import Implementation.StaffComponent_IAuthentication;
+
 import java.lang.reflect.InvocationTargetException;
+
 import java.util.Collection;
 import java.util.Date;
+
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
@@ -78,6 +85,18 @@ public class AdditionalServiceComponent_AdditionalServiceHandlerImpl extends Min
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<AdditionalServiceComponent_AdditionalService> getAdditionalService() {
+		if (additionalService == null) {
+			additionalService = new EObjectResolvingEList<AdditionalServiceComponent_AdditionalService>(AdditionalServiceComponent_AdditionalService.class, this, ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER__ADDITIONAL_SERVICE);
+		}
+		return additionalService;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public StaffComponent_IAuthentication getIAuthentication() {
 		if (iAuthentication != null && iAuthentication.eIsProxy()) {
 			InternalEObject oldIAuthentication = (InternalEObject)iAuthentication;
@@ -109,18 +128,6 @@ public class AdditionalServiceComponent_AdditionalServiceHandlerImpl extends Min
 		iAuthentication = newIAuthentication;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER__IAUTHENTICATION, oldIAuthentication, iAuthentication));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<AdditionalServiceComponent_AdditionalService> getAdditionalService() {
-		if (additionalService == null) {
-			additionalService = new EObjectResolvingEList<AdditionalServiceComponent_AdditionalService>(AdditionalServiceComponent_AdditionalService.class, this, ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER__ADDITIONAL_SERVICE);
-		}
-		return additionalService;
 	}
 
 	/**
