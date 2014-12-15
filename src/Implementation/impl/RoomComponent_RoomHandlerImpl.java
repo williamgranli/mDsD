@@ -68,10 +68,14 @@ public class RoomComponent_RoomHandlerImpl extends MinimalEObjectImpl.Container 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	protected RoomComponent_RoomHandlerImpl() {
 		super();
+
+		// Initialize rooms collection
+		bedRooms = (EList<RoomComponent_Room>) new ArrayList<RoomComponent_Room>();
+		conferenceRooms = (Elist<RoomComponent_ConferenceRoom) new ArrayList<RoomComponent_ConferenceRoom>();
 	}
 
 	/**
@@ -175,111 +179,240 @@ public class RoomComponent_RoomHandlerImpl extends MinimalEObjectImpl.Container 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public String getRoomInfo(int roomNumber) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+
+		for (RoomComponent_Room r : bedRooms) {
+
+			if (r.getRoomNumber() == roomNumber) {
+				return "bedRooms Number:\t" + r.getRoomNumber() + "\n"
+						+ "bedRooms Type:\t" + r.getRoomTypeName() + "\n"
+						+ "bedRooms Price:\t" + r.getPrice() + "\n"
+						+ "bedRooms Description:\t" + r.getDescription();
+			}
+
+		}
+
+		return "bedRooms not found for bedRooms number: " + roomNumber;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public EList<String> searchRoom(String roomTypeName) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+
+		EList<String> foundRooms = (EList<String>) new ArrayList<String>();
+
+		// Add all conference rooms if roomTypeName == conference
+		if (roomTypeName.equals("conference")) {
+			for (RoomComponent_ConferenceRoom cr : conferenceRooms) {
+				foundRooms.add(cr.getRoomNumber() + "," + cr.getRoomTypeName()
+						+ "," + cr.getPrice() + "," + cr.isProjector() + ","
+						+ cr.isConferencePhone() + "," + cr.getDescription()
+						+ ",");
+			}
+		}
+
+		// Add all bedrooms if roomTypeNaame == bedroom
+		if (roomTypeName.equals("bedroom")) {
+			for (RoomComponent_Bedroom br : bedRooms) {
+				foundRooms.add(br.getRoomNumber() + "," + br.getRoomTypeName()
+						+ "," + br.getPrice() + "," + br.getBedCount() + ","
+						+ br.getDescription());
+			}
+		}
+
+		if (foundRooms.size() == 0) {
+			System.out.println("No rooms found for the type: " + roomTypeName);
+			return null;
+		}
+
+		else {
+			return foundRooms;
+		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public EList<String> getRoomTypes() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		EList<String> foundRoomTypes = (EList<String>) new ArrayList<String>();
+		boolean typeInList = false;
+
+		for (RoomComponent_Room r : bedRooms) {
+
+			// Check if type already in list
+			for (String rt : foundRoomTypes) {
+				if ((r.getRoomTypeName()).equals(rt))
+					typeInList = true;
+			}
+
+			// Add to foundTypes if not already in list
+			if (!typeInList) {
+				foundRoomTypes.add(r.getRoomTypeName());
+			}
+
+			typeInList = false;
+		}
+
+		return foundRoomTypes;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public EList<Integer> getAllRoomNumbers() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		EList<Integer> allRoomNumbers = (EList<Integer>) new ArrayList<Integer>();
+
+		for (RoomComponent_Room r : bedRooms) {
+			allRoomNumbers.add(r.getRoomNumber());
+		}
+
+		return allRoomNumbers;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public int countNumberOfTotalRooms() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		return bedRooms.size();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void createBedRoom(int roomNumber, boolean usable, int price, String roomTypeName, String description, int bedCount) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		for (RoomComponent_Bedroom br : bedRooms) {
+			if (br.getRoomNumber() == roomNumber) {
+				System.out.println("Room with number: " + roomNumber
+						+ " already exists");
+				return;
+			}
+		}
+
+		RoomComponent_BedroomImpl bedroom = new RoomComponent_BedroomImpl();
+		bedroom.setRoomNumber(roomNumber);
+		bedroom.setUsable(usable);
+		bedroom.setPrice(price);
+		bedroom.setRoomTypeName(roomTypeName);
+		bedroom.setDescription(description);
+		bedroom.setBedCount(bedCount);
+
+		bedRooms.add(bedroom);
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void editBedRoom(int roomNumber, boolean usable, int price, String roomTypeName, String description, int bedCount) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		for (RoomComponent_Bedroom r : bedRooms) {
+
+			if (r.getRoomNumber() == roomNumber) {
+				r.setUsable(useable);
+				r.setPrice(price);
+				r.setRoomTypeName(roomTypeName);
+				r.setDescription(description);
+				r.setBedCount(bedCount);
+
+				return;
+			}
+
+		}
+
+		// Bedroom with room number is not found
+		System.out.println("Bedroom with room number: " + roomNumber
+				+ " was not found");
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void remove(int roomNumber) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		for (RoomComponent_Bedroom br : bedRooms) {
+
+			if (br.getRoomNumber() == roomNumber) {
+				bedRooms.remove(br);
+				return;
+			}
+		}
+
+		for (RoomComponent_ConferenceRoom cr : conferenceRooms) {
+
+			if (cr.getRoomNumber() == roomNumber) {
+				conferenceRooms.remove(cr);
+				return;
+			}
+		}
+
+		System.out.println("Room with ID: " + roomNumber
+				+ " could not be found");
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void createConferenceRoom(int roomNumber, boolean usable, int price, String roomTypeName, String description, int numberOfSeats, boolean projector, boolean conferencePhone) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		for (RoomComponent_ConferenceRoom cr : conferenceRooms) {
+			if (cr.getRoomNumber() == roomNumber) {
+				System.out.println("Conference Room with number: " + roomNumber
+						+ " already exists");
+				return;
+			}
+		}
+
+		RoomComponent_ConferenceRoomImpl conferenceRoom = new RoomComponent_ConferenceRoomImpl();
+		conferenceRoom.setRoomNumber(roomNumber);
+		conferenceRoom.setUsable(usable);
+		conferenceRoom.setPrice(price);
+		conferenceRoom.setRoomTypeName(roomTypeName);
+		conferenceRoom.setDescription(description);
+		conferenceRoom.setNumberOfSeats(numberOfSeats);
+		conferenceRoom.setProjector(projector);
+		conferenceRoom.setConferencePhone(conference);
+
+		conferenceRooms.add(conferenceRoom);
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void editConferenceRoom(int roomNumber, boolean usable, int price, String roomTypeName, String description, int numberOfSeats, boolean projector, boolean conferencePhone) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		for (RoomComponent_ConferenceRoom cr : conferenceRooms) {
+
+			if (cr.getRoomNumber() == roomNumber) {
+				cr.setUsable(usable);
+				cr.setPrice(price);
+				cr.setRoomTypeName(roomTypeName);
+				cr.setDescription(description);
+				cr.setNumberOfSeats(numberOfSeats);
+				cr.setProjector(projector);
+				cr.setConferencePhone(conference);
+
+				return;
+			}
+		}
+
+		// conference room with room number is not found
+		System.out.println("Room with id: " + roomNumber + " was not found.");
 	}
 
 	/**
