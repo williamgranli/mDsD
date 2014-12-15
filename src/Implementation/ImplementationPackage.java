@@ -955,7 +955,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PAYMENT_COMPONENT_IPAYMENT___MAKE_PAYMENT__STRING_STRING_STRING_STRING_STRING_STRING_DOUBLE = 0;
+	int PAYMENT_COMPONENT_IPAYMENT___MAKE_PAYMENT__STRING_STRING_INT_INT_STRING_STRING_DOUBLE = 0;
 
 	/**
 	 * The operation id for the '<em>Validate CC</em>' operation.
@@ -964,7 +964,43 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PAYMENT_COMPONENT_IPAYMENT___VALIDATE_CC__STRING_STRING_STRING_STRING_STRING_STRING_DOUBLE = 1;
+	int PAYMENT_COMPONENT_IPAYMENT___VALIDATE_CC__STRING_STRING_INT_INT_STRING_STRING_DOUBLE = 1;
+
+	/**
+	 * The operation id for the '<em>Add CC</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PAYMENT_COMPONENT_IPAYMENT___ADD_CC__STRING_STRING_INT_INT_STRING_STRING = 2;
+
+	/**
+	 * The operation id for the '<em>Check Balance</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PAYMENT_COMPONENT_IPAYMENT___CHECK_BALANCE__STRING_STRING_INT_INT_STRING_STRING = 3;
+
+	/**
+	 * The operation id for the '<em>Make Deposit</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PAYMENT_COMPONENT_IPAYMENT___MAKE_DEPOSIT__STRING_STRING_INT_INT_STRING_STRING_DOUBLE = 4;
+
+	/**
+	 * The operation id for the '<em>Remove CC</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PAYMENT_COMPONENT_IPAYMENT___REMOVE_CC__STRING_STRING_INT_INT_STRING_STRING = 5;
 
 	/**
 	 * The number of operations of the '<em>Payment Component IPayment</em>' class.
@@ -973,7 +1009,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PAYMENT_COMPONENT_IPAYMENT_OPERATION_COUNT = 2;
+	int PAYMENT_COMPONENT_IPAYMENT_OPERATION_COUNT = 6;
 
 	/**
 	 * The meta object id for the '{@link Implementation.impl.PaymentComponent_PaymentHandlerImpl <em>Payment Component Payment Handler</em>}' class.
@@ -1028,7 +1064,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PAYMENT_COMPONENT_PAYMENT_HANDLER___MAKE_PAYMENT__STRING_STRING_STRING_STRING_STRING_STRING_DOUBLE = PAYMENT_COMPONENT_IPAYMENT___MAKE_PAYMENT__STRING_STRING_STRING_STRING_STRING_STRING_DOUBLE;
+	int PAYMENT_COMPONENT_PAYMENT_HANDLER___MAKE_PAYMENT__STRING_STRING_INT_INT_STRING_STRING_DOUBLE = PAYMENT_COMPONENT_IPAYMENT___MAKE_PAYMENT__STRING_STRING_INT_INT_STRING_STRING_DOUBLE;
 
 	/**
 	 * The operation id for the '<em>Validate CC</em>' operation.
@@ -1037,7 +1073,43 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PAYMENT_COMPONENT_PAYMENT_HANDLER___VALIDATE_CC__STRING_STRING_STRING_STRING_STRING_STRING_DOUBLE = PAYMENT_COMPONENT_IPAYMENT___VALIDATE_CC__STRING_STRING_STRING_STRING_STRING_STRING_DOUBLE;
+	int PAYMENT_COMPONENT_PAYMENT_HANDLER___VALIDATE_CC__STRING_STRING_INT_INT_STRING_STRING_DOUBLE = PAYMENT_COMPONENT_IPAYMENT___VALIDATE_CC__STRING_STRING_INT_INT_STRING_STRING_DOUBLE;
+
+	/**
+	 * The operation id for the '<em>Add CC</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PAYMENT_COMPONENT_PAYMENT_HANDLER___ADD_CC__STRING_STRING_INT_INT_STRING_STRING = PAYMENT_COMPONENT_IPAYMENT___ADD_CC__STRING_STRING_INT_INT_STRING_STRING;
+
+	/**
+	 * The operation id for the '<em>Check Balance</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PAYMENT_COMPONENT_PAYMENT_HANDLER___CHECK_BALANCE__STRING_STRING_INT_INT_STRING_STRING = PAYMENT_COMPONENT_IPAYMENT___CHECK_BALANCE__STRING_STRING_INT_INT_STRING_STRING;
+
+	/**
+	 * The operation id for the '<em>Make Deposit</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PAYMENT_COMPONENT_PAYMENT_HANDLER___MAKE_DEPOSIT__STRING_STRING_INT_INT_STRING_STRING_DOUBLE = PAYMENT_COMPONENT_IPAYMENT___MAKE_DEPOSIT__STRING_STRING_INT_INT_STRING_STRING_DOUBLE;
+
+	/**
+	 * The operation id for the '<em>Remove CC</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PAYMENT_COMPONENT_PAYMENT_HANDLER___REMOVE_CC__STRING_STRING_INT_INT_STRING_STRING = PAYMENT_COMPONENT_IPAYMENT___REMOVE_CC__STRING_STRING_INT_INT_STRING_STRING;
 
 	/**
 	 * The number of operations of the '<em>Payment Component Payment Handler</em>' class.
@@ -3993,24 +4065,64 @@ public interface ImplementationPackage extends EPackage {
 	EClass getPaymentComponent_IPayment();
 
 	/**
-	 * Returns the meta object for the '{@link Implementation.PaymentComponent_IPayment#makePayment(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, double) <em>Make Payment</em>}' operation.
+	 * Returns the meta object for the '{@link Implementation.PaymentComponent_IPayment#makePayment(java.lang.String, java.lang.String, int, int, java.lang.String, java.lang.String, double) <em>Make Payment</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Make Payment</em>' operation.
-	 * @see Implementation.PaymentComponent_IPayment#makePayment(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, double)
+	 * @see Implementation.PaymentComponent_IPayment#makePayment(java.lang.String, java.lang.String, int, int, java.lang.String, java.lang.String, double)
 	 * @generated
 	 */
-	EOperation getPaymentComponent_IPayment__MakePayment__String_String_String_String_String_String_double();
+	EOperation getPaymentComponent_IPayment__MakePayment__String_String_int_int_String_String_double();
 
 	/**
-	 * Returns the meta object for the '{@link Implementation.PaymentComponent_IPayment#validateCC(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, double) <em>Validate CC</em>}' operation.
+	 * Returns the meta object for the '{@link Implementation.PaymentComponent_IPayment#validateCC(java.lang.String, java.lang.String, int, int, java.lang.String, java.lang.String, double) <em>Validate CC</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Validate CC</em>' operation.
-	 * @see Implementation.PaymentComponent_IPayment#validateCC(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, double)
+	 * @see Implementation.PaymentComponent_IPayment#validateCC(java.lang.String, java.lang.String, int, int, java.lang.String, java.lang.String, double)
 	 * @generated
 	 */
-	EOperation getPaymentComponent_IPayment__ValidateCC__String_String_String_String_String_String_double();
+	EOperation getPaymentComponent_IPayment__ValidateCC__String_String_int_int_String_String_double();
+
+	/**
+	 * Returns the meta object for the '{@link Implementation.PaymentComponent_IPayment#addCC(java.lang.String, java.lang.String, int, int, java.lang.String, java.lang.String) <em>Add CC</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Add CC</em>' operation.
+	 * @see Implementation.PaymentComponent_IPayment#addCC(java.lang.String, java.lang.String, int, int, java.lang.String, java.lang.String)
+	 * @generated
+	 */
+	EOperation getPaymentComponent_IPayment__AddCC__String_String_int_int_String_String();
+
+	/**
+	 * Returns the meta object for the '{@link Implementation.PaymentComponent_IPayment#checkBalance(java.lang.String, java.lang.String, int, int, java.lang.String, java.lang.String) <em>Check Balance</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Check Balance</em>' operation.
+	 * @see Implementation.PaymentComponent_IPayment#checkBalance(java.lang.String, java.lang.String, int, int, java.lang.String, java.lang.String)
+	 * @generated
+	 */
+	EOperation getPaymentComponent_IPayment__CheckBalance__String_String_int_int_String_String();
+
+	/**
+	 * Returns the meta object for the '{@link Implementation.PaymentComponent_IPayment#makeDeposit(java.lang.String, java.lang.String, int, int, java.lang.String, java.lang.String, double) <em>Make Deposit</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Make Deposit</em>' operation.
+	 * @see Implementation.PaymentComponent_IPayment#makeDeposit(java.lang.String, java.lang.String, int, int, java.lang.String, java.lang.String, double)
+	 * @generated
+	 */
+	EOperation getPaymentComponent_IPayment__MakeDeposit__String_String_int_int_String_String_double();
+
+	/**
+	 * Returns the meta object for the '{@link Implementation.PaymentComponent_IPayment#removeCC(java.lang.String, java.lang.String, int, int, java.lang.String, java.lang.String) <em>Remove CC</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Remove CC</em>' operation.
+	 * @see Implementation.PaymentComponent_IPayment#removeCC(java.lang.String, java.lang.String, int, int, java.lang.String, java.lang.String)
+	 * @generated
+	 */
+	EOperation getPaymentComponent_IPayment__RemoveCC__String_String_int_int_String_String();
 
 	/**
 	 * Returns the meta object for class '{@link Implementation.PaymentComponent_PaymentHandler <em>Payment Component Payment Handler</em>}'.
@@ -5999,7 +6111,7 @@ public interface ImplementationPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation PAYMENT_COMPONENT_IPAYMENT___MAKE_PAYMENT__STRING_STRING_STRING_STRING_STRING_STRING_DOUBLE = eINSTANCE.getPaymentComponent_IPayment__MakePayment__String_String_String_String_String_String_double();
+		EOperation PAYMENT_COMPONENT_IPAYMENT___MAKE_PAYMENT__STRING_STRING_INT_INT_STRING_STRING_DOUBLE = eINSTANCE.getPaymentComponent_IPayment__MakePayment__String_String_int_int_String_String_double();
 
 		/**
 		 * The meta object literal for the '<em><b>Validate CC</b></em>' operation.
@@ -6007,7 +6119,39 @@ public interface ImplementationPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation PAYMENT_COMPONENT_IPAYMENT___VALIDATE_CC__STRING_STRING_STRING_STRING_STRING_STRING_DOUBLE = eINSTANCE.getPaymentComponent_IPayment__ValidateCC__String_String_String_String_String_String_double();
+		EOperation PAYMENT_COMPONENT_IPAYMENT___VALIDATE_CC__STRING_STRING_INT_INT_STRING_STRING_DOUBLE = eINSTANCE.getPaymentComponent_IPayment__ValidateCC__String_String_int_int_String_String_double();
+
+		/**
+		 * The meta object literal for the '<em><b>Add CC</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation PAYMENT_COMPONENT_IPAYMENT___ADD_CC__STRING_STRING_INT_INT_STRING_STRING = eINSTANCE.getPaymentComponent_IPayment__AddCC__String_String_int_int_String_String();
+
+		/**
+		 * The meta object literal for the '<em><b>Check Balance</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation PAYMENT_COMPONENT_IPAYMENT___CHECK_BALANCE__STRING_STRING_INT_INT_STRING_STRING = eINSTANCE.getPaymentComponent_IPayment__CheckBalance__String_String_int_int_String_String();
+
+		/**
+		 * The meta object literal for the '<em><b>Make Deposit</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation PAYMENT_COMPONENT_IPAYMENT___MAKE_DEPOSIT__STRING_STRING_INT_INT_STRING_STRING_DOUBLE = eINSTANCE.getPaymentComponent_IPayment__MakeDeposit__String_String_int_int_String_String_double();
+
+		/**
+		 * The meta object literal for the '<em><b>Remove CC</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation PAYMENT_COMPONENT_IPAYMENT___REMOVE_CC__STRING_STRING_INT_INT_STRING_STRING = eINSTANCE.getPaymentComponent_IPayment__RemoveCC__String_String_int_int_String_String();
 
 		/**
 		 * The meta object literal for the '{@link Implementation.impl.PaymentComponent_PaymentHandlerImpl <em>Payment Component Payment Handler</em>}' class.

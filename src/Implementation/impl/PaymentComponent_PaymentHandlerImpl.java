@@ -10,14 +10,11 @@ import se.chalmers.cse.mdsd1415.banking.administratorRequires.*;
 
 import Implementation.Bank_AdministratorProvides;
 import Implementation.Bank_CustomerProvides;
-import Implementation.CustomerProvides;
 import Implementation.ImplementationPackage;
 import Implementation.PaymentComponent_Payment;
 import Implementation.PaymentComponent_PaymentHandler;
-
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
@@ -78,9 +75,6 @@ public class PaymentComponent_PaymentHandlerImpl extends MinimalEObjectImpl.Cont
 	 */
 	protected PaymentComponent_PaymentHandlerImpl() {
 		super();
-
-				
-		
 	}
 
 	/**
@@ -186,7 +180,7 @@ public class PaymentComponent_PaymentHandlerImpl extends MinimalEObjectImpl.Cont
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public boolean makePayment(String ccNumber, String ccv, String expiryYear, String expiryMonth, String firstName, String lastName, double price) {
+	public boolean makePayment(String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName, double price) {
 		// CustomerRequires interface
 		try {
 			// Acquire CustomerRequires object
@@ -194,19 +188,23 @@ public class PaymentComponent_PaymentHandlerImpl extends MinimalEObjectImpl.Cont
 					.instance();
 
 			// Make a payment
-			if (banking.makePayment(ccNumber, ccv, expiryYear, expiryMonth, firstName, lastName,
-					price)) {
+			if (banking.makePayment(ccNumber, ccv, expiryMonth, expiryYear, firstName,
+					lastName, price)) {
 				System.out.println("Payment of 25.50 successfully processed");
+				return true;
 			} else {
 				System.out
 						.println("Payment failed - invalid credit card or insufficient credit");
+				return false;
 			}
 
 		} catch (SOAPException e) {
 			System.err
 					.println("Error occurred while communicating with the bank");
 			e.printStackTrace();
+			return false;
 		}
+		
 
 		
 	}
@@ -216,14 +214,14 @@ public class PaymentComponent_PaymentHandlerImpl extends MinimalEObjectImpl.Cont
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public boolean validateCC(String ccNumber, String ccv, String expiryYear, String expiryMonth, String firstName, String lastName, double price) {
+	public boolean validateCC(String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName, double price) {
 		try {
 			// Acquire CustomerRequires object
 			se.chalmers.cse.mdsd1415.banking.customerRequires.CustomerRequires banking = se.chalmers.cse.mdsd1415.banking.customerRequires.CustomerRequires
 					.instance();
 			
 			// Check for credit card validity
-			if (banking.isCreditCardValid(ccNumber, ccv, expiryYear, expiryMonth, firstName,
+			if (banking.isCreditCardValid(ccNumber, ccv, expiryMonth, expiryYear, firstName,
 					lastName)) {
 				System.out.println("Valid credit card");
 				return true;
@@ -236,8 +234,143 @@ public class PaymentComponent_PaymentHandlerImpl extends MinimalEObjectImpl.Cont
 			System.err
 					.println("Error occurred while communicating with the bank");
 			e.printStackTrace();
+			return false;
+		}
+		
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public boolean addCC(String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName) {
+		// BankingAdministrationRequires interface
+		try {
+			// Acquire AdministratorRequires object
+			se.chalmers.cse.mdsd1415.banking.administratorRequires.AdministratorRequires bankingAdmin = se.chalmers.cse.mdsd1415.banking.administratorRequires.AdministratorRequires
+					.instance();
+			
+			// Add new credit card
+			if (bankingAdmin.addCreditCard(ccNumber, ccv, expiryMonth, expiryYear, firstName,
+					lastName)) {
+				System.out.println("Successfully added credit card.");
+				return true;
+			} else {
+				System.out.println("Error while adding credit card.");
+				return false;
+			}
+
+
+		} catch (SOAPException e) {
+			System.err
+					.println("Error occurred while communicating with the bank administration");
+			e.printStackTrace();
+			return false;
 		}
 	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public double checkBalance(String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName) {
+		// BankingAdministrationRequires interface
+		double resultBalance = -1;
+		try {
+			// Acquire AdministratorRequires object
+			se.chalmers.cse.mdsd1415.banking.administratorRequires.AdministratorRequires bankingAdmin = se.chalmers.cse.mdsd1415.banking.administratorRequires.AdministratorRequires
+					.instance();
+
+
+			// Get current Balance
+			resultBalance = bankingAdmin.getBalance(ccNumber, ccv, expiryMonth, expiryYear, firstName,
+					lastName);
+			if (resultBalance != -1.0) {
+				System.out.println("Balance: " + resultBalance);
+				
+			} else {
+				System.out.println("Error while checking Balance.");
+			}
+
+
+		} catch (SOAPException e) {
+			System.err
+					.println("Error occurred while communicating with the bank administration");
+			e.printStackTrace();
+		}
+		return resultBalance;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public double makeDeposit(String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName, double amount) {
+
+		
+		double resultBalance = -1;
+		// BankingAdministrationRequires interface
+		try {
+			// Acquire AdministratorRequires object
+			se.chalmers.cse.mdsd1415.banking.administratorRequires.AdministratorRequires bankingAdmin = se.chalmers.cse.mdsd1415.banking.administratorRequires.AdministratorRequires
+					.instance();
+			
+			// Make a deposit
+			resultBalance = bankingAdmin.makeDeposit(ccNumber, ccv, expiryMonth, expiryYear, firstName,
+					lastName, amount	);
+			if (resultBalance != -1.0) {
+				System.out.println("Successfully made a deposit: "
+						+ resultBalance);
+			} else {
+				System.out.println("Error while making deposit.");
+			}
+			
+
+
+		} catch (SOAPException e) {
+			System.err
+					.println("Error occurred while communicating with the bank administration");
+			e.printStackTrace();
+		}
+		
+		return resultBalance;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public boolean removeCC(String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName) {
+
+		
+		// BankingAdministrationRequires interface
+				try {
+					// Acquire AdministratorRequires object
+					se.chalmers.cse.mdsd1415.banking.administratorRequires.AdministratorRequires bankingAdmin = se.chalmers.cse.mdsd1415.banking.administratorRequires.AdministratorRequires
+							.instance();
+					
+					// Remove an existing credit card
+					if (bankingAdmin.removeCreditCard(ccNumber, ccv, expiryMonth, expiryYear, firstName,
+							lastName)) {
+						System.out.println("Successfully removed credit card.");
+						return true;
+					} else {
+						System.out.println("Error while removing credit card.");
+						return false;
+					}
+
+				} catch (SOAPException e) {
+					System.err
+							.println("Error occurred while communicating with the bank administration");
+					e.printStackTrace();
+					return false;
+				}
+	}
+
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -329,10 +462,18 @@ public class PaymentComponent_PaymentHandlerImpl extends MinimalEObjectImpl.Cont
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case ImplementationPackage.PAYMENT_COMPONENT_PAYMENT_HANDLER___MAKE_PAYMENT__STRING_STRING_STRING_STRING_STRING_STRING_DOUBLE:
-				return makePayment((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5), (Double)arguments.get(6));
-			case ImplementationPackage.PAYMENT_COMPONENT_PAYMENT_HANDLER___VALIDATE_CC__STRING_STRING_STRING_STRING_STRING_STRING_DOUBLE:
-				return validateCC((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5), (Double)arguments.get(6));
+			case ImplementationPackage.PAYMENT_COMPONENT_PAYMENT_HANDLER___MAKE_PAYMENT__STRING_STRING_INT_INT_STRING_STRING_DOUBLE:
+				return makePayment((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5), (Double)arguments.get(6));
+			case ImplementationPackage.PAYMENT_COMPONENT_PAYMENT_HANDLER___VALIDATE_CC__STRING_STRING_INT_INT_STRING_STRING_DOUBLE:
+				return validateCC((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5), (Double)arguments.get(6));
+			case ImplementationPackage.PAYMENT_COMPONENT_PAYMENT_HANDLER___ADD_CC__STRING_STRING_INT_INT_STRING_STRING:
+				return addCC((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5));
+			case ImplementationPackage.PAYMENT_COMPONENT_PAYMENT_HANDLER___CHECK_BALANCE__STRING_STRING_INT_INT_STRING_STRING:
+				return checkBalance((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5));
+			case ImplementationPackage.PAYMENT_COMPONENT_PAYMENT_HANDLER___MAKE_DEPOSIT__STRING_STRING_INT_INT_STRING_STRING_DOUBLE:
+				return makeDeposit((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5), (Double)arguments.get(6));
+			case ImplementationPackage.PAYMENT_COMPONENT_PAYMENT_HANDLER___REMOVE_CC__STRING_STRING_INT_INT_STRING_STRING:
+				return removeCC((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

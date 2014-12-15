@@ -1124,7 +1124,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getPaymentComponent_IPayment__MakePayment__String_String_String_String_String_String_double() {
+	public EOperation getPaymentComponent_IPayment__MakePayment__String_String_int_int_String_String_double() {
 		return paymentComponent_IPaymentEClass.getEOperations().get(0);
 	}
 
@@ -1133,8 +1133,44 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getPaymentComponent_IPayment__ValidateCC__String_String_String_String_String_String_double() {
+	public EOperation getPaymentComponent_IPayment__ValidateCC__String_String_int_int_String_String_double() {
 		return paymentComponent_IPaymentEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getPaymentComponent_IPayment__AddCC__String_String_int_int_String_String() {
+		return paymentComponent_IPaymentEClass.getEOperations().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getPaymentComponent_IPayment__CheckBalance__String_String_int_int_String_String() {
+		return paymentComponent_IPaymentEClass.getEOperations().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getPaymentComponent_IPayment__MakeDeposit__String_String_int_int_String_String_double() {
+		return paymentComponent_IPaymentEClass.getEOperations().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getPaymentComponent_IPayment__RemoveCC__String_String_int_int_String_String() {
+		return paymentComponent_IPaymentEClass.getEOperations().get(5);
 	}
 
 	/**
@@ -2382,8 +2418,12 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		paymentComponentEClass = createEClass(PAYMENT_COMPONENT);
 
 		paymentComponent_IPaymentEClass = createEClass(PAYMENT_COMPONENT_IPAYMENT);
-		createEOperation(paymentComponent_IPaymentEClass, PAYMENT_COMPONENT_IPAYMENT___MAKE_PAYMENT__STRING_STRING_STRING_STRING_STRING_STRING_DOUBLE);
-		createEOperation(paymentComponent_IPaymentEClass, PAYMENT_COMPONENT_IPAYMENT___VALIDATE_CC__STRING_STRING_STRING_STRING_STRING_STRING_DOUBLE);
+		createEOperation(paymentComponent_IPaymentEClass, PAYMENT_COMPONENT_IPAYMENT___MAKE_PAYMENT__STRING_STRING_INT_INT_STRING_STRING_DOUBLE);
+		createEOperation(paymentComponent_IPaymentEClass, PAYMENT_COMPONENT_IPAYMENT___VALIDATE_CC__STRING_STRING_INT_INT_STRING_STRING_DOUBLE);
+		createEOperation(paymentComponent_IPaymentEClass, PAYMENT_COMPONENT_IPAYMENT___ADD_CC__STRING_STRING_INT_INT_STRING_STRING);
+		createEOperation(paymentComponent_IPaymentEClass, PAYMENT_COMPONENT_IPAYMENT___CHECK_BALANCE__STRING_STRING_INT_INT_STRING_STRING);
+		createEOperation(paymentComponent_IPaymentEClass, PAYMENT_COMPONENT_IPAYMENT___MAKE_DEPOSIT__STRING_STRING_INT_INT_STRING_STRING_DOUBLE);
+		createEOperation(paymentComponent_IPaymentEClass, PAYMENT_COMPONENT_IPAYMENT___REMOVE_CC__STRING_STRING_INT_INT_STRING_STRING);
 
 		paymentComponent_PaymentHandlerEClass = createEClass(PAYMENT_COMPONENT_PAYMENT_HANDLER);
 		createEReference(paymentComponent_PaymentHandlerEClass, PAYMENT_COMPONENT_PAYMENT_HANDLER__PAYMENT);
@@ -2752,23 +2792,56 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 
 		initEClass(paymentComponent_IPaymentEClass, PaymentComponent_IPayment.class, "PaymentComponent_IPayment", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		op = initEOperation(getPaymentComponent_IPayment__MakePayment__String_String_String_String_String_String_double(), theTypesPackage.getBoolean(), "makePayment", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getPaymentComponent_IPayment__MakePayment__String_String_int_int_String_String_double(), theTypesPackage.getBoolean(), "makePayment", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "ccNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "ccv", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "expiryYear", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "expiryMonth", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getInteger(), "expiryMonth", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getInteger(), "expiryYear", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "firstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "lastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDouble(), "price", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getPaymentComponent_IPayment__ValidateCC__String_String_String_String_String_String_double(), theTypesPackage.getBoolean(), "validateCC", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getPaymentComponent_IPayment__ValidateCC__String_String_int_int_String_String_double(), theTypesPackage.getBoolean(), "validateCC", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "ccNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "ccv", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "expiryYear", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "expiryMonth", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getInteger(), "expiryMonth", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getInteger(), "expiryYear", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "firstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "lastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDouble(), "price", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getPaymentComponent_IPayment__AddCC__String_String_int_int_String_String(), theTypesPackage.getBoolean(), "addCC", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "ccNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "ccv", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getInteger(), "expiryMonth", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getInteger(), "expiryYear", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "firstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "lastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getPaymentComponent_IPayment__CheckBalance__String_String_int_int_String_String(), ecorePackage.getEDouble(), "checkBalance", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "ccNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "ccv", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getInteger(), "expiryMonth", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getInteger(), "expiryYear", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "firstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "lastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getPaymentComponent_IPayment__MakeDeposit__String_String_int_int_String_String_double(), ecorePackage.getEDouble(), "makeDeposit", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "ccNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "ccv", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getInteger(), "expiryMonth", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getInteger(), "expiryYear", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "firstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "lastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDouble(), "amount", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getPaymentComponent_IPayment__RemoveCC__String_String_int_int_String_String(), theTypesPackage.getBoolean(), "removeCC", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "ccNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "ccv", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getInteger(), "expiryMonth", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getInteger(), "expiryYear", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "firstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "lastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(paymentComponent_PaymentHandlerEClass, PaymentComponent_PaymentHandler.class, "PaymentComponent_PaymentHandler", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPaymentComponent_PaymentHandler_Payment(), this.getPaymentComponent_Payment(), null, "payment", null, 0, -1, PaymentComponent_PaymentHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -2780,8 +2853,8 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		initEAttribute(getPaymentComponent_Payment_Ccv(), theTypesPackage.getString(), "ccv", null, 1, 1, PaymentComponent_Payment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getPaymentComponent_Payment_FirstName(), theTypesPackage.getString(), "firstName", null, 1, 1, PaymentComponent_Payment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getPaymentComponent_Payment_LastName(), theTypesPackage.getString(), "lastName", null, 1, 1, PaymentComponent_Payment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getPaymentComponent_Payment_ExpiryMonth(), theTypesPackage.getString(), "expiryMonth", null, 1, 1, PaymentComponent_Payment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getPaymentComponent_Payment_ExpiryYear(), theTypesPackage.getString(), "expiryYear", null, 1, 1, PaymentComponent_Payment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getPaymentComponent_Payment_ExpiryMonth(), theTypesPackage.getInteger(), "expiryMonth", null, 1, 1, PaymentComponent_Payment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getPaymentComponent_Payment_ExpiryYear(), theTypesPackage.getInteger(), "expiryYear", null, 1, 1, PaymentComponent_Payment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getPaymentComponent_Payment_Price(), ecorePackage.getEDouble(), "price", null, 1, 1, PaymentComponent_Payment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(bank_CustomerProvidesEClass, Bank_CustomerProvides.class, "Bank_CustomerProvides", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

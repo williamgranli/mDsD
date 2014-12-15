@@ -174,8 +174,8 @@
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//PaymentComponent_IPayment/makePayment">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/makePayment/ccNumber"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/makePayment/ccv"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/makePayment/expiryYear"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/makePayment/expiryMonth"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/makePayment/expiryYear"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/makePayment/firstName"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/makePayment/lastName"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/makePayment/price"/>
@@ -183,11 +183,44 @@
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//PaymentComponent_IPayment/validateCC">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/validateCC/ccNumber"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/validateCC/ccv"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/validateCC/expiryYear"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/validateCC/expiryMonth"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/validateCC/expiryYear"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/validateCC/firstName"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/validateCC/lastName"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/validateCC/price"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//PaymentComponent_IPayment/addCC">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/addCC/ccNumber"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/addCC/ccv"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/addCC/expiryMonth"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/addCC/expiryYear"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/addCC/firstName"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/addCC/lastName"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//PaymentComponent_IPayment/checkBalance">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/checkBalance/ccNumber"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/checkBalance/ccv"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/checkBalance/expiryMonth"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/checkBalance/expiryYear"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/checkBalance/firstName"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/checkBalance/lastName"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//PaymentComponent_IPayment/makeDeposit">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/makeDeposit/ccNumber"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/makeDeposit/ccv"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/makeDeposit/expiryMonth"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/makeDeposit/expiryYear"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/makeDeposit/firstName"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/makeDeposit/lastName"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/makeDeposit/amount"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//PaymentComponent_IPayment/removeCC">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/removeCC/ccNumber"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/removeCC/ccv"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/removeCC/expiryMonth"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/removeCC/expiryYear"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/removeCC/firstName"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//PaymentComponent_IPayment/removeCC/lastName"/>
       </genOperations>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//PaymentComponent_PaymentHandler">

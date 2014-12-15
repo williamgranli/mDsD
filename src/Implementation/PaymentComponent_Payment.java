@@ -141,12 +141,12 @@ public interface PaymentComponent_Payment extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Expiry Month</em>' attribute.
-	 * @see #setExpiryMonth(String)
+	 * @see #setExpiryMonth(int)
 	 * @see Implementation.ImplementationPackage#getPaymentComponent_Payment_ExpiryMonth()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
 	 * @generated
 	 */
-	String getExpiryMonth();
+	int getExpiryMonth();
 
 	/**
 	 * Sets the value of the '{@link Implementation.PaymentComponent_Payment#getExpiryMonth <em>Expiry Month</em>}' attribute.
@@ -156,7 +156,7 @@ public interface PaymentComponent_Payment extends EObject {
 	 * @see #getExpiryMonth()
 	 * @generated
 	 */
-	void setExpiryMonth(String value);
+	void setExpiryMonth(int value);
 
 	/**
 	 * Returns the value of the '<em><b>Expiry Year</b></em>' attribute.
@@ -167,12 +167,12 @@ public interface PaymentComponent_Payment extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Expiry Year</em>' attribute.
-	 * @see #setExpiryYear(String)
+	 * @see #setExpiryYear(int)
 	 * @see Implementation.ImplementationPackage#getPaymentComponent_Payment_ExpiryYear()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
 	 * @generated
 	 */
-	String getExpiryYear();
+	int getExpiryYear();
 
 	/**
 	 * Sets the value of the '{@link Implementation.PaymentComponent_Payment#getExpiryYear <em>Expiry Year</em>}' attribute.
@@ -182,7 +182,7 @@ public interface PaymentComponent_Payment extends EObject {
 	 * @see #getExpiryYear()
 	 * @generated
 	 */
-	void setExpiryYear(String value);
+	void setExpiryYear(int value);
 
 	/**
 	 * Returns the value of the '<em><b>Price</b></em>' attribute.

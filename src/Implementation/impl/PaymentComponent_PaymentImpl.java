@@ -109,7 +109,7 @@ public class PaymentComponent_PaymentImpl extends MinimalEObjectImpl.Container i
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String EXPIRY_MONTH_EDEFAULT = null;
+	protected static final int EXPIRY_MONTH_EDEFAULT = 0;
 	/**
 	 * The cached value of the '{@link #getExpiryMonth() <em>Expiry Month</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -118,7 +118,7 @@ public class PaymentComponent_PaymentImpl extends MinimalEObjectImpl.Container i
 	 * @generated
 	 * @ordered
 	 */
-	protected String expiryMonth = EXPIRY_MONTH_EDEFAULT;
+	protected int expiryMonth = EXPIRY_MONTH_EDEFAULT;
 	/**
 	 * The default value of the '{@link #getExpiryYear() <em>Expiry Year</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -127,7 +127,7 @@ public class PaymentComponent_PaymentImpl extends MinimalEObjectImpl.Container i
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String EXPIRY_YEAR_EDEFAULT = null;
+	protected static final int EXPIRY_YEAR_EDEFAULT = 0;
 	/**
 	 * The cached value of the '{@link #getExpiryYear() <em>Expiry Year</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -136,7 +136,7 @@ public class PaymentComponent_PaymentImpl extends MinimalEObjectImpl.Container i
 	 * @generated
 	 * @ordered
 	 */
-	protected String expiryYear = EXPIRY_YEAR_EDEFAULT;
+	protected int expiryYear = EXPIRY_YEAR_EDEFAULT;
 	/**
 	 * The default value of the '{@link #getPrice() <em>Price</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -264,7 +264,7 @@ public class PaymentComponent_PaymentImpl extends MinimalEObjectImpl.Container i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getExpiryMonth() {
+	public int getExpiryMonth() {
 		return expiryMonth;
 	}
 
@@ -273,8 +273,8 @@ public class PaymentComponent_PaymentImpl extends MinimalEObjectImpl.Container i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setExpiryMonth(String newExpiryMonth) {
-		String oldExpiryMonth = expiryMonth;
+	public void setExpiryMonth(int newExpiryMonth) {
+		int oldExpiryMonth = expiryMonth;
 		expiryMonth = newExpiryMonth;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ImplementationPackage.PAYMENT_COMPONENT_PAYMENT__EXPIRY_MONTH, oldExpiryMonth, expiryMonth));
@@ -285,7 +285,7 @@ public class PaymentComponent_PaymentImpl extends MinimalEObjectImpl.Container i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getExpiryYear() {
+	public int getExpiryYear() {
 		return expiryYear;
 	}
 
@@ -294,8 +294,8 @@ public class PaymentComponent_PaymentImpl extends MinimalEObjectImpl.Container i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setExpiryYear(String newExpiryYear) {
-		String oldExpiryYear = expiryYear;
+	public void setExpiryYear(int newExpiryYear) {
+		int oldExpiryYear = expiryYear;
 		expiryYear = newExpiryYear;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ImplementationPackage.PAYMENT_COMPONENT_PAYMENT__EXPIRY_YEAR, oldExpiryYear, expiryYear));
@@ -369,10 +369,10 @@ public class PaymentComponent_PaymentImpl extends MinimalEObjectImpl.Container i
 				setLastName((String)newValue);
 				return;
 			case ImplementationPackage.PAYMENT_COMPONENT_PAYMENT__EXPIRY_MONTH:
-				setExpiryMonth((String)newValue);
+				setExpiryMonth((Integer)newValue);
 				return;
 			case ImplementationPackage.PAYMENT_COMPONENT_PAYMENT__EXPIRY_YEAR:
-				setExpiryYear((String)newValue);
+				setExpiryYear((Integer)newValue);
 				return;
 			case ImplementationPackage.PAYMENT_COMPONENT_PAYMENT__PRICE:
 				setPrice((Double)newValue);
@@ -431,9 +431,9 @@ public class PaymentComponent_PaymentImpl extends MinimalEObjectImpl.Container i
 			case ImplementationPackage.PAYMENT_COMPONENT_PAYMENT__LAST_NAME:
 				return LAST_NAME_EDEFAULT == null ? lastName != null : !LAST_NAME_EDEFAULT.equals(lastName);
 			case ImplementationPackage.PAYMENT_COMPONENT_PAYMENT__EXPIRY_MONTH:
-				return EXPIRY_MONTH_EDEFAULT == null ? expiryMonth != null : !EXPIRY_MONTH_EDEFAULT.equals(expiryMonth);
+				return expiryMonth != EXPIRY_MONTH_EDEFAULT;
 			case ImplementationPackage.PAYMENT_COMPONENT_PAYMENT__EXPIRY_YEAR:
-				return EXPIRY_YEAR_EDEFAULT == null ? expiryYear != null : !EXPIRY_YEAR_EDEFAULT.equals(expiryYear);
+				return expiryYear != EXPIRY_YEAR_EDEFAULT;
 			case ImplementationPackage.PAYMENT_COMPONENT_PAYMENT__PRICE:
 				return price != PRICE_EDEFAULT;
 		}
