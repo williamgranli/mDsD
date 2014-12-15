@@ -199,21 +199,12 @@ public class ImplementationSwitch<T> extends Switch<T> {
 			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE: {
 				AdditionalServiceComponent_AdditionalService additionalServiceComponent_AdditionalService = (AdditionalServiceComponent_AdditionalService)theEObject;
 				T result = caseAdditionalServiceComponent_AdditionalService(additionalServiceComponent_AdditionalService);
-				if (result == null) result = caseAdditionalServiceComponent_IAdditionalServiceDecision(additionalServiceComponent_AdditionalService);
-				if (result == null) result = caseAdditionalServiceComponent_IAdditionalServiceInformation(additionalServiceComponent_AdditionalService);
-				if (result == null) result = caseAdditionalServiceComponent_IAdditionalServiceAdministration(additionalServiceComponent_AdditionalService);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ImplementationPackage.STAFF_COMPONENT_IAUTHENTICATION: {
-				StaffComponent_IAuthentication staffComponent_IAuthentication = (StaffComponent_IAuthentication)theEObject;
-				T result = caseStaffComponent_IAuthentication(staffComponent_IAuthentication);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION: {
-				AdditionalServiceComponent_IAdditionalServiceInformation additionalServiceComponent_IAdditionalServiceInformation = (AdditionalServiceComponent_IAdditionalServiceInformation)theEObject;
-				T result = caseAdditionalServiceComponent_IAdditionalServiceInformation(additionalServiceComponent_IAdditionalServiceInformation);
+			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_EVENT: {
+				AdditionalServiceComponent_AdditionalServiceEvent additionalServiceComponent_AdditionalServiceEvent = (AdditionalServiceComponent_AdditionalServiceEvent)theEObject;
+				T result = caseAdditionalServiceComponent_AdditionalServiceEvent(additionalServiceComponent_AdditionalServiceEvent);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -223,9 +214,9 @@ public class ImplementationSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_EVENT: {
-				AdditionalServiceComponent_AdditionalServiceEvent additionalServiceComponent_AdditionalServiceEvent = (AdditionalServiceComponent_AdditionalServiceEvent)theEObject;
-				T result = caseAdditionalServiceComponent_AdditionalServiceEvent(additionalServiceComponent_AdditionalServiceEvent);
+			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION: {
+				AdditionalServiceComponent_IAdditionalServiceInformation additionalServiceComponent_IAdditionalServiceInformation = (AdditionalServiceComponent_IAdditionalServiceInformation)theEObject;
+				T result = caseAdditionalServiceComponent_IAdditionalServiceInformation(additionalServiceComponent_IAdditionalServiceInformation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -270,6 +261,12 @@ public class ImplementationSwitch<T> extends Switch<T> {
 				T result = caseBookingComponent_BookingManager(bookingComponent_BookingManager);
 				if (result == null) result = caseBookingComponent_IBooking(bookingComponent_BookingManager);
 				if (result == null) result = caseBookingComponent_IBookingDecision(bookingComponent_BookingManager);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ImplementationPackage.STAFF_COMPONENT_IAUTHENTICATION: {
+				StaffComponent_IAuthentication staffComponent_IAuthentication = (StaffComponent_IAuthentication)theEObject;
+				T result = caseStaffComponent_IAuthentication(staffComponent_IAuthentication);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -337,6 +334,15 @@ public class ImplementationSwitch<T> extends Switch<T> {
 				if (result == null) result = caseRoomComponent_IRoomDecision(roomComponent_RoomHandler);
 				if (result == null) result = caseRoomComponent_IRoomInformation(roomComponent_RoomHandler);
 				if (result == null) result = caseRoomComponent_IRoomAdministration(roomComponent_RoomHandler);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ImplementationPackage.ADDITIONAL_SERVICE_HANDLER: {
+				AdditionalServiceHandler additionalServiceHandler = (AdditionalServiceHandler)theEObject;
+				T result = caseAdditionalServiceHandler(additionalServiceHandler);
+				if (result == null) result = caseAdditionalServiceComponent_IAdditionalServiceInformation(additionalServiceHandler);
+				if (result == null) result = caseAdditionalServiceComponent_IAdditionalServiceDecision(additionalServiceHandler);
+				if (result == null) result = caseAdditionalServiceComponent_IAdditionalServiceAdministration(additionalServiceHandler);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -986,6 +992,21 @@ public class ImplementationSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseRoomComponent_RoomHandler(RoomComponent_RoomHandler object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Additional Service Handler</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Additional Service Handler</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAdditionalServiceHandler(AdditionalServiceHandler object) {
 		return null;
 	}
 

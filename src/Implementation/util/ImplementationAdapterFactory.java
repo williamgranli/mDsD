@@ -156,20 +156,16 @@ public class ImplementationAdapterFactory extends AdapterFactoryImpl {
 				return createAdditionalServiceComponent_AdditionalServiceAdapter();
 			}
 			@Override
-			public Adapter caseStaffComponent_IAuthentication(StaffComponent_IAuthentication object) {
-				return createStaffComponent_IAuthenticationAdapter();
-			}
-			@Override
-			public Adapter caseAdditionalServiceComponent_IAdditionalServiceInformation(AdditionalServiceComponent_IAdditionalServiceInformation object) {
-				return createAdditionalServiceComponent_IAdditionalServiceInformationAdapter();
+			public Adapter caseAdditionalServiceComponent_AdditionalServiceEvent(AdditionalServiceComponent_AdditionalServiceEvent object) {
+				return createAdditionalServiceComponent_AdditionalServiceEventAdapter();
 			}
 			@Override
 			public Adapter caseAdditionalServiceComponent_IAdditionalServiceAdministration(AdditionalServiceComponent_IAdditionalServiceAdministration object) {
 				return createAdditionalServiceComponent_IAdditionalServiceAdministrationAdapter();
 			}
 			@Override
-			public Adapter caseAdditionalServiceComponent_AdditionalServiceEvent(AdditionalServiceComponent_AdditionalServiceEvent object) {
-				return createAdditionalServiceComponent_AdditionalServiceEventAdapter();
+			public Adapter caseAdditionalServiceComponent_IAdditionalServiceInformation(AdditionalServiceComponent_IAdditionalServiceInformation object) {
+				return createAdditionalServiceComponent_IAdditionalServiceInformationAdapter();
 			}
 			@Override
 			public Adapter caseBookingComponent(BookingComponent object) {
@@ -198,6 +194,10 @@ public class ImplementationAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseBookingComponent_BookingManager(BookingComponent_BookingManager object) {
 				return createBookingComponent_BookingManagerAdapter();
+			}
+			@Override
+			public Adapter caseStaffComponent_IAuthentication(StaffComponent_IAuthentication object) {
+				return createStaffComponent_IAuthenticationAdapter();
 			}
 			@Override
 			public Adapter caseStaffComponent(StaffComponent object) {
@@ -238,6 +238,10 @@ public class ImplementationAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseRoomComponent_RoomHandler(RoomComponent_RoomHandler object) {
 				return createRoomComponent_RoomHandlerAdapter();
+			}
+			@Override
+			public Adapter caseAdditionalServiceHandler(AdditionalServiceHandler object) {
+				return createAdditionalServiceHandlerAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -858,6 +862,20 @@ public class ImplementationAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createRoomComponent_RoomHandlerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link Implementation.AdditionalServiceHandler <em>Additional Service Handler</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see Implementation.AdditionalServiceHandler
+	 * @generated
+	 */
+	public Adapter createAdditionalServiceHandlerAdapter() {
 		return null;
 	}
 

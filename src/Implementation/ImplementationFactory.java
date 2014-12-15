@@ -283,6 +283,15 @@ public interface ImplementationFactory extends EFactory {
 	RoomComponent_RoomHandler createRoomComponent_RoomHandler();
 
 	/**
+	 * Returns a new object of class '<em>Additional Service Handler</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Additional Service Handler</em>'.
+	 * @generated
+	 */
+	AdditionalServiceHandler createAdditionalServiceHandler();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

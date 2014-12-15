@@ -2,6 +2,9 @@
  */
 package Implementation;
 
+import java.util.Date;
+import org.eclipse.emf.ecore.EObject;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -14,9 +17,7 @@ package Implementation;
  *   <li>{@link Implementation.AdditionalServiceComponent_AdditionalService#getName <em>Name</em>}</li>
  *   <li>{@link Implementation.AdditionalServiceComponent_AdditionalService#isUsable <em>Usable</em>}</li>
  *   <li>{@link Implementation.AdditionalServiceComponent_AdditionalService#getPrice <em>Price</em>}</li>
- *   <li>{@link Implementation.AdditionalServiceComponent_AdditionalService#getMaxAttendant <em>Max Attendant</em>}</li>
  *   <li>{@link Implementation.AdditionalServiceComponent_AdditionalService#getDescription <em>Description</em>}</li>
- *   <li>{@link Implementation.AdditionalServiceComponent_AdditionalService#getIAuthentication <em>IAuthentication</em>}</li>
  * </ul>
  * </p>
  *
@@ -24,7 +25,7 @@ package Implementation;
  * @model
  * @generated
  */
-public interface AdditionalServiceComponent_AdditionalService extends AdditionalServiceComponent_IAdditionalServiceDecision, AdditionalServiceComponent_IAdditionalServiceInformation, AdditionalServiceComponent_IAdditionalServiceAdministration {
+public interface AdditionalServiceComponent_AdditionalService extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -104,32 +105,6 @@ public interface AdditionalServiceComponent_AdditionalService extends Additional
 	void setPrice(int value);
 
 	/**
-	 * Returns the value of the '<em><b>Max Attendant</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Max Attendant</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Max Attendant</em>' attribute.
-	 * @see #setMaxAttendant(int)
-	 * @see Implementation.ImplementationPackage#getAdditionalServiceComponent_AdditionalService_MaxAttendant()
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
-	 * @generated
-	 */
-	int getMaxAttendant();
-
-	/**
-	 * Sets the value of the '{@link Implementation.AdditionalServiceComponent_AdditionalService#getMaxAttendant <em>Max Attendant</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Max Attendant</em>' attribute.
-	 * @see #getMaxAttendant()
-	 * @generated
-	 */
-	void setMaxAttendant(int value);
-
-	/**
 	 * Returns the value of the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -156,29 +131,11 @@ public interface AdditionalServiceComponent_AdditionalService extends Additional
 	void setDescription(String value);
 
 	/**
-	 * Returns the value of the '<em><b>IAuthentication</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>IAuthentication</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>IAuthentication</em>' reference.
-	 * @see #setIAuthentication(StaffComponent_IAuthentication)
-	 * @see Implementation.ImplementationPackage#getAdditionalServiceComponent_AdditionalService_IAuthentication()
-	 * @model required="true" ordered="false"
-	 * @generated
-	 */
-	StaffComponent_IAuthentication getIAuthentication();
-
-	/**
-	 * Sets the value of the '{@link Implementation.AdditionalServiceComponent_AdditionalService#getIAuthentication <em>IAuthentication</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>IAuthentication</em>' reference.
-	 * @see #getIAuthentication()
+	 * @model dateRequired="true" dateOrdered="false"
 	 * @generated
 	 */
-	void setIAuthentication(StaffComponent_IAuthentication value);
+	void findEvent(Date date);
 
 } // AdditionalServiceComponent_AdditionalService

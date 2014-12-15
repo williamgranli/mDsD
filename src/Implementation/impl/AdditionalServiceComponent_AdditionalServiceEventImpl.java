@@ -26,10 +26,9 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * <ul>
  *   <li>{@link Implementation.impl.AdditionalServiceComponent_AdditionalServiceEventImpl#getDateTime <em>Date Time</em>}</li>
- *   <li>{@link Implementation.impl.AdditionalServiceComponent_AdditionalServiceEventImpl#getName <em>Name</em>}</li>
  *   <li>{@link Implementation.impl.AdditionalServiceComponent_AdditionalServiceEventImpl#getLocation <em>Location</em>}</li>
- *   <li>{@link Implementation.impl.AdditionalServiceComponent_AdditionalServiceEventImpl#getPrice <em>Price</em>}</li>
  *   <li>{@link Implementation.impl.AdditionalServiceComponent_AdditionalServiceEventImpl#getMaxAttendant <em>Max Attendant</em>}</li>
+ *   <li>{@link Implementation.impl.AdditionalServiceComponent_AdditionalServiceEventImpl#getCurrentAttendants <em>Current Attendants</em>}</li>
  * </ul>
  * </p>
  *
@@ -57,26 +56,6 @@ public class AdditionalServiceComponent_AdditionalServiceEventImpl extends Minim
 	protected Date dateTime = DATE_TIME_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
-
-	/**
 	 * The default value of the '{@link #getLocation() <em>Location</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -97,26 +76,6 @@ public class AdditionalServiceComponent_AdditionalServiceEventImpl extends Minim
 	protected String location = LOCATION_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getPrice() <em>Price</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPrice()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int PRICE_EDEFAULT = 0;
-
-	/**
-	 * The cached value of the '{@link #getPrice() <em>Price</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPrice()
-	 * @generated
-	 * @ordered
-	 */
-	protected int price = PRICE_EDEFAULT;
-
-	/**
 	 * The default value of the '{@link #getMaxAttendant() <em>Max Attendant</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -135,6 +94,26 @@ public class AdditionalServiceComponent_AdditionalServiceEventImpl extends Minim
 	 * @ordered
 	 */
 	protected int maxAttendant = MAX_ATTENDANT_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getCurrentAttendants() <em>Current Attendants</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCurrentAttendants()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int CURRENT_ATTENDANTS_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getCurrentAttendants() <em>Current Attendants</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCurrentAttendants()
+	 * @generated
+	 * @ordered
+	 */
+	protected int currentAttendants = CURRENT_ATTENDANTS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -181,27 +160,6 @@ public class AdditionalServiceComponent_AdditionalServiceEventImpl extends Minim
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_EVENT__NAME, oldName, name));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getLocation() {
 		return location;
 	}
@@ -216,27 +174,6 @@ public class AdditionalServiceComponent_AdditionalServiceEventImpl extends Minim
 		location = newLocation;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_EVENT__LOCATION, oldLocation, location));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int getPrice() {
-		return price;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setPrice(int newPrice) {
-		int oldPrice = price;
-		price = newPrice;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_EVENT__PRICE, oldPrice, price));
 	}
 
 	/**
@@ -265,6 +202,27 @@ public class AdditionalServiceComponent_AdditionalServiceEventImpl extends Minim
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public int getCurrentAttendants() {
+		return currentAttendants;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCurrentAttendants(int newCurrentAttendants) {
+		int oldCurrentAttendants = currentAttendants;
+		currentAttendants = newCurrentAttendants;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_EVENT__CURRENT_ATTENDANTS, oldCurrentAttendants, currentAttendants));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public void getAdditionalServiceInfo(String addtionalServiceName) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -281,14 +239,12 @@ public class AdditionalServiceComponent_AdditionalServiceEventImpl extends Minim
 		switch (featureID) {
 			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_EVENT__DATE_TIME:
 				return getDateTime();
-			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_EVENT__NAME:
-				return getName();
 			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_EVENT__LOCATION:
 				return getLocation();
-			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_EVENT__PRICE:
-				return getPrice();
 			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_EVENT__MAX_ATTENDANT:
 				return getMaxAttendant();
+			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_EVENT__CURRENT_ATTENDANTS:
+				return getCurrentAttendants();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -304,17 +260,14 @@ public class AdditionalServiceComponent_AdditionalServiceEventImpl extends Minim
 			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_EVENT__DATE_TIME:
 				setDateTime((Date)newValue);
 				return;
-			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_EVENT__NAME:
-				setName((String)newValue);
-				return;
 			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_EVENT__LOCATION:
 				setLocation((String)newValue);
 				return;
-			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_EVENT__PRICE:
-				setPrice((Integer)newValue);
-				return;
 			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_EVENT__MAX_ATTENDANT:
 				setMaxAttendant((Integer)newValue);
+				return;
+			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_EVENT__CURRENT_ATTENDANTS:
+				setCurrentAttendants((Integer)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -331,17 +284,14 @@ public class AdditionalServiceComponent_AdditionalServiceEventImpl extends Minim
 			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_EVENT__DATE_TIME:
 				setDateTime(DATE_TIME_EDEFAULT);
 				return;
-			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_EVENT__NAME:
-				setName(NAME_EDEFAULT);
-				return;
 			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_EVENT__LOCATION:
 				setLocation(LOCATION_EDEFAULT);
 				return;
-			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_EVENT__PRICE:
-				setPrice(PRICE_EDEFAULT);
-				return;
 			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_EVENT__MAX_ATTENDANT:
 				setMaxAttendant(MAX_ATTENDANT_EDEFAULT);
+				return;
+			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_EVENT__CURRENT_ATTENDANTS:
+				setCurrentAttendants(CURRENT_ATTENDANTS_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -357,14 +307,12 @@ public class AdditionalServiceComponent_AdditionalServiceEventImpl extends Minim
 		switch (featureID) {
 			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_EVENT__DATE_TIME:
 				return DATE_TIME_EDEFAULT == null ? dateTime != null : !DATE_TIME_EDEFAULT.equals(dateTime);
-			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_EVENT__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_EVENT__LOCATION:
 				return LOCATION_EDEFAULT == null ? location != null : !LOCATION_EDEFAULT.equals(location);
-			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_EVENT__PRICE:
-				return price != PRICE_EDEFAULT;
 			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_EVENT__MAX_ATTENDANT:
 				return maxAttendant != MAX_ATTENDANT_EDEFAULT;
+			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_EVENT__CURRENT_ATTENDANTS:
+				return currentAttendants != CURRENT_ATTENDANTS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -396,14 +344,12 @@ public class AdditionalServiceComponent_AdditionalServiceEventImpl extends Minim
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (dateTime: ");
 		result.append(dateTime);
-		result.append(", name: ");
-		result.append(name);
 		result.append(", location: ");
 		result.append(location);
-		result.append(", price: ");
-		result.append(price);
 		result.append(", maxAttendant: ");
 		result.append(maxAttendant);
+		result.append(", currentAttendants: ");
+		result.append(currentAttendants);
 		result.append(')');
 		return result.toString();
 	}

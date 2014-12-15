@@ -1148,7 +1148,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE__NAME = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_DECISION_FEATURE_COUNT + 0;
+	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE__NAME = 0;
 
 	/**
 	 * The feature id for the '<em><b>Usable</b></em>' attribute.
@@ -1157,7 +1157,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE__USABLE = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_DECISION_FEATURE_COUNT + 1;
+	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE__USABLE = 1;
 
 	/**
 	 * The feature id for the '<em><b>Price</b></em>' attribute.
@@ -1166,16 +1166,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE__PRICE = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_DECISION_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Max Attendant</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE__MAX_ATTENDANT = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_DECISION_FEATURE_COUNT + 3;
+	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE__PRICE = 2;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1184,16 +1175,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE__DESCRIPTION = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_DECISION_FEATURE_COUNT + 4;
-
-	/**
-	 * The feature id for the '<em><b>IAuthentication</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE__IAUTHENTICATION = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_DECISION_FEATURE_COUNT + 5;
+	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE__DESCRIPTION = 3;
 
 	/**
 	 * The number of structural features of the '<em>Additional Service Component Additional Service</em>' class.
@@ -1202,52 +1184,16 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_FEATURE_COUNT = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_DECISION_FEATURE_COUNT + 6;
+	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_FEATURE_COUNT = 4;
 
 	/**
-	 * The operation id for the '<em>Get Additional Service Info</em>' operation.
+	 * The operation id for the '<em>Find Event</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE___GET_ADDITIONAL_SERVICE_INFO__STRING = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_DECISION_OPERATION_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Get All Additional Services</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE___GET_ALL_ADDITIONAL_SERVICES = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_DECISION_OPERATION_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>Create Additional Service</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE___CREATE_ADDITIONAL_SERVICE__STRING_INT_INT = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_DECISION_OPERATION_COUNT + 2;
-
-	/**
-	 * The operation id for the '<em>Edit Additional Service</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE___EDIT_ADDITIONAL_SERVICE__STRING_STRING_INT_INT = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_DECISION_OPERATION_COUNT + 3;
-
-	/**
-	 * The operation id for the '<em>Remove Additional Service</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE___REMOVE_ADDITIONAL_SERVICE__STRING = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_DECISION_OPERATION_COUNT + 4;
+	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE___FIND_EVENT__DATE = 0;
 
 	/**
 	 * The number of operations of the '<em>Additional Service Component Additional Service</em>' class.
@@ -1256,7 +1202,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_OPERATION_COUNT = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_DECISION_OPERATION_COUNT + 5;
+	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_OPERATION_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link Implementation.StaffComponent_IAuthentication <em>Staff Component IAuthentication</em>}' class.
@@ -1266,52 +1212,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @see Implementation.impl.ImplementationPackageImpl#getStaffComponent_IAuthentication()
 	 * @generated
 	 */
-	int STAFF_COMPONENT_IAUTHENTICATION = 22;
-
-	/**
-	 * The number of structural features of the '<em>Staff Component IAuthentication</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAFF_COMPONENT_IAUTHENTICATION_FEATURE_COUNT = 0;
-
-	/**
-	 * The operation id for the '<em>Log In</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAFF_COMPONENT_IAUTHENTICATION___LOG_IN__STRING_STRING = 0;
-
-	/**
-	 * The operation id for the '<em>Log Out</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAFF_COMPONENT_IAUTHENTICATION___LOG_OUT__STRING = 1;
-
-	/**
-	 * The operation id for the '<em>Is Logged In</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAFF_COMPONENT_IAUTHENTICATION___IS_LOGGED_IN__STRING = 2;
-
-	/**
-	 * The number of operations of the '<em>Staff Component IAuthentication</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAFF_COMPONENT_IAUTHENTICATION_OPERATION_COUNT = 3;
+	int STAFF_COMPONENT_IAUTHENTICATION = 32;
 
 	/**
 	 * The meta object id for the '{@link Implementation.AdditionalServiceComponent_IAdditionalServiceInformation <em>Additional Service Component IAdditional Service Information</em>}' class.
@@ -1321,7 +1222,162 @@ public interface ImplementationPackage extends EPackage {
 	 * @see Implementation.impl.ImplementationPackageImpl#getAdditionalServiceComponent_IAdditionalServiceInformation()
 	 * @generated
 	 */
-	int ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION = 23;
+	int ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION = 24;
+
+	/**
+	 * The meta object id for the '{@link Implementation.AdditionalServiceComponent_IAdditionalServiceAdministration <em>Additional Service Component IAdditional Service Administration</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see Implementation.AdditionalServiceComponent_IAdditionalServiceAdministration
+	 * @see Implementation.impl.ImplementationPackageImpl#getAdditionalServiceComponent_IAdditionalServiceAdministration()
+	 * @generated
+	 */
+	int ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION = 23;
+
+	/**
+	 * The meta object id for the '{@link Implementation.impl.AdditionalServiceComponent_AdditionalServiceEventImpl <em>Additional Service Component Additional Service Event</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see Implementation.impl.AdditionalServiceComponent_AdditionalServiceEventImpl
+	 * @see Implementation.impl.ImplementationPackageImpl#getAdditionalServiceComponent_AdditionalServiceEvent()
+	 * @generated
+	 */
+	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_EVENT = 22;
+
+	/**
+	 * The feature id for the '<em><b>Date Time</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_EVENT__DATE_TIME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Location</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_EVENT__LOCATION = 1;
+
+	/**
+	 * The feature id for the '<em><b>Max Attendant</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_EVENT__MAX_ATTENDANT = 2;
+
+	/**
+	 * The feature id for the '<em><b>Current Attendants</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_EVENT__CURRENT_ATTENDANTS = 3;
+
+	/**
+	 * The number of structural features of the '<em>Additional Service Component Additional Service Event</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_EVENT_FEATURE_COUNT = 4;
+
+	/**
+	 * The operation id for the '<em>Get Additional Service Info</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_EVENT___GET_ADDITIONAL_SERVICE_INFO__STRING = 0;
+
+	/**
+	 * The number of operations of the '<em>Additional Service Component Additional Service Event</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_EVENT_OPERATION_COUNT = 1;
+
+	/**
+	 * The number of structural features of the '<em>Additional Service Component IAdditional Service Administration</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION_FEATURE_COUNT = 0;
+
+	/**
+	 * The operation id for the '<em>Create Additional Service</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___CREATE_ADDITIONAL_SERVICE__STRING_BOOLEAN_INT_STRING = 0;
+
+	/**
+	 * The operation id for the '<em>Edit Additional Service</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___EDIT_ADDITIONAL_SERVICE__STRING_STRING_BOOLEAN_INT_STRING = 1;
+
+	/**
+	 * The operation id for the '<em>Remove Additional Service</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___REMOVE_ADDITIONAL_SERVICE__STRING = 2;
+
+	/**
+	 * The operation id for the '<em>Create Event</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___CREATE_EVENT__STRING_DATE_STRING_INT_INT = 3;
+
+	/**
+	 * The operation id for the '<em>Edit Event</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___EDIT_EVENT__STRING_DATE_STRING_INT_INT = 4;
+
+	/**
+	 * The operation id for the '<em>Remove Event</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___REMOVE_EVENT__STRING_DATE_STRING = 5;
+
+	/**
+	 * The number of operations of the '<em>Additional Service Component IAdditional Service Administration</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION_OPERATION_COUNT = 6;
 
 	/**
 	 * The number of structural features of the '<em>Additional Service Component IAdditional Service Information</em>' class.
@@ -1360,143 +1416,6 @@ public interface ImplementationPackage extends EPackage {
 	int ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION_OPERATION_COUNT = 2;
 
 	/**
-	 * The meta object id for the '{@link Implementation.AdditionalServiceComponent_IAdditionalServiceAdministration <em>Additional Service Component IAdditional Service Administration</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see Implementation.AdditionalServiceComponent_IAdditionalServiceAdministration
-	 * @see Implementation.impl.ImplementationPackageImpl#getAdditionalServiceComponent_IAdditionalServiceAdministration()
-	 * @generated
-	 */
-	int ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION = 24;
-
-	/**
-	 * The number of structural features of the '<em>Additional Service Component IAdditional Service Administration</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION_FEATURE_COUNT = 0;
-
-	/**
-	 * The operation id for the '<em>Create Additional Service</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___CREATE_ADDITIONAL_SERVICE__STRING_INT_INT = 0;
-
-	/**
-	 * The operation id for the '<em>Edit Additional Service</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___EDIT_ADDITIONAL_SERVICE__STRING_STRING_INT_INT = 1;
-
-	/**
-	 * The operation id for the '<em>Remove Additional Service</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___REMOVE_ADDITIONAL_SERVICE__STRING = 2;
-
-	/**
-	 * The number of operations of the '<em>Additional Service Component IAdditional Service Administration</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION_OPERATION_COUNT = 3;
-
-	/**
-	 * The meta object id for the '{@link Implementation.impl.AdditionalServiceComponent_AdditionalServiceEventImpl <em>Additional Service Component Additional Service Event</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see Implementation.impl.AdditionalServiceComponent_AdditionalServiceEventImpl
-	 * @see Implementation.impl.ImplementationPackageImpl#getAdditionalServiceComponent_AdditionalServiceEvent()
-	 * @generated
-	 */
-	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_EVENT = 25;
-
-	/**
-	 * The feature id for the '<em><b>Date Time</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_EVENT__DATE_TIME = 0;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_EVENT__NAME = 1;
-
-	/**
-	 * The feature id for the '<em><b>Location</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_EVENT__LOCATION = 2;
-
-	/**
-	 * The feature id for the '<em><b>Price</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_EVENT__PRICE = 3;
-
-	/**
-	 * The feature id for the '<em><b>Max Attendant</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_EVENT__MAX_ATTENDANT = 4;
-
-	/**
-	 * The number of structural features of the '<em>Additional Service Component Additional Service Event</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_EVENT_FEATURE_COUNT = 5;
-
-	/**
-	 * The operation id for the '<em>Get Additional Service Info</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_EVENT___GET_ADDITIONAL_SERVICE_INFO__STRING = 0;
-
-	/**
-	 * The number of operations of the '<em>Additional Service Component Additional Service Event</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_EVENT_OPERATION_COUNT = 1;
-
-	/**
 	 * The meta object id for the '{@link Implementation.impl.BookingComponentImpl <em>Booking Component</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1504,7 +1423,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @see Implementation.impl.ImplementationPackageImpl#getBookingComponent()
 	 * @generated
 	 */
-	int BOOKING_COMPONENT = 26;
+	int BOOKING_COMPONENT = 25;
 
 	/**
 	 * The number of structural features of the '<em>Booking Component</em>' class.
@@ -1532,7 +1451,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @see Implementation.impl.ImplementationPackageImpl#getBookingComponent_PaymentDetails()
 	 * @generated
 	 */
-	int BOOKING_COMPONENT_PAYMENT_DETAILS = 27;
+	int BOOKING_COMPONENT_PAYMENT_DETAILS = 26;
 
 	/**
 	 * The feature id for the '<em><b>First Name</b></em>' attribute.
@@ -1623,7 +1542,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @see Implementation.impl.ImplementationPackageImpl#getBookingComponent_Booking()
 	 * @generated
 	 */
-	int BOOKING_COMPONENT_BOOKING = 28;
+	int BOOKING_COMPONENT_BOOKING = 27;
 
 	/**
 	 * The feature id for the '<em><b>Arrival Date</b></em>' attribute.
@@ -1813,7 +1732,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @see Implementation.impl.ImplementationPackageImpl#getBookingComponent_AdditionalService()
 	 * @generated
 	 */
-	int BOOKING_COMPONENT_ADDITIONAL_SERVICE = 29;
+	int BOOKING_COMPONENT_ADDITIONAL_SERVICE = 28;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1859,7 +1778,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @see Implementation.impl.ImplementationPackageImpl#getBookingComponent_BookingGuest()
 	 * @generated
 	 */
-	int BOOKING_COMPONENT_BOOKING_GUEST = 30;
+	int BOOKING_COMPONENT_BOOKING_GUEST = 29;
 
 	/**
 	 * The feature id for the '<em><b>First Name</b></em>' attribute.
@@ -1914,7 +1833,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @see Implementation.impl.ImplementationPackageImpl#getBookingComponent_RoomType()
 	 * @generated
 	 */
-	int BOOKING_COMPONENT_ROOM_TYPE = 31;
+	int BOOKING_COMPONENT_ROOM_TYPE = 30;
 
 	/**
 	 * The feature id for the '<em><b>Room Type</b></em>' attribute.
@@ -1960,7 +1879,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @see Implementation.impl.ImplementationPackageImpl#getBookingComponent_BookingManager()
 	 * @generated
 	 */
-	int BOOKING_COMPONENT_BOOKING_MANAGER = 32;
+	int BOOKING_COMPONENT_BOOKING_MANAGER = 31;
 
 	/**
 	 * The feature id for the '<em><b>Bookings</b></em>' reference list.
@@ -2132,6 +2051,51 @@ public interface ImplementationPackage extends EPackage {
 	 * @ordered
 	 */
 	int BOOKING_COMPONENT_BOOKING_MANAGER_OPERATION_COUNT = BOOKING_COMPONENT_IBOOKING_OPERATION_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Staff Component IAuthentication</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAFF_COMPONENT_IAUTHENTICATION_FEATURE_COUNT = 0;
+
+	/**
+	 * The operation id for the '<em>Log In</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAFF_COMPONENT_IAUTHENTICATION___LOG_IN__STRING_STRING = 0;
+
+	/**
+	 * The operation id for the '<em>Log Out</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAFF_COMPONENT_IAUTHENTICATION___LOG_OUT__STRING = 1;
+
+	/**
+	 * The operation id for the '<em>Is Logged In</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAFF_COMPONENT_IAUTHENTICATION___IS_LOGGED_IN__STRING = 2;
+
+	/**
+	 * The number of operations of the '<em>Staff Component IAuthentication</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAFF_COMPONENT_IAUTHENTICATION_OPERATION_COUNT = 3;
 
 	/**
 	 * The meta object id for the '{@link Implementation.impl.StaffComponentImpl <em>Staff Component</em>}' class.
@@ -2964,6 +2928,143 @@ public interface ImplementationPackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link Implementation.impl.AdditionalServiceHandlerImpl <em>Additional Service Handler</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see Implementation.impl.AdditionalServiceHandlerImpl
+	 * @see Implementation.impl.ImplementationPackageImpl#getAdditionalServiceHandler()
+	 * @generated
+	 */
+	int ADDITIONAL_SERVICE_HANDLER = 43;
+
+	/**
+	 * The feature id for the '<em><b>IAuthentication</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_HANDLER__IAUTHENTICATION = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Additional Service</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_HANDLER__ADDITIONAL_SERVICE = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Additional Service Event</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_HANDLER__ADDITIONAL_SERVICE_EVENT = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>Additional Service Handler</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_HANDLER_FEATURE_COUNT = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION_FEATURE_COUNT + 3;
+
+	/**
+	 * The operation id for the '<em>Get Additional Service Info</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_HANDLER___GET_ADDITIONAL_SERVICE_INFO__STRING = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION___GET_ADDITIONAL_SERVICE_INFO__STRING;
+
+	/**
+	 * The operation id for the '<em>Get All Additional Services</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_HANDLER___GET_ALL_ADDITIONAL_SERVICES = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION___GET_ALL_ADDITIONAL_SERVICES;
+
+	/**
+	 * The operation id for the '<em>Create Additional Service</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_HANDLER___CREATE_ADDITIONAL_SERVICE__STRING_BOOLEAN_INT_STRING = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION_OPERATION_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Edit Additional Service</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_HANDLER___EDIT_ADDITIONAL_SERVICE__STRING_STRING_BOOLEAN_INT_STRING = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION_OPERATION_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Remove Additional Service</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_HANDLER___REMOVE_ADDITIONAL_SERVICE__STRING = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION_OPERATION_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Create Event</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_HANDLER___CREATE_EVENT__STRING_DATE_STRING_INT_INT = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION_OPERATION_COUNT + 3;
+
+	/**
+	 * The operation id for the '<em>Edit Event</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_HANDLER___EDIT_EVENT__STRING_DATE_STRING_INT_INT = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION_OPERATION_COUNT + 4;
+
+	/**
+	 * The operation id for the '<em>Remove Event</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_HANDLER___REMOVE_EVENT__STRING_DATE_STRING = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION_OPERATION_COUNT + 5;
+
+	/**
+	 * The operation id for the '<em>Find Service</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_HANDLER___FIND_SERVICE__STRING = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION_OPERATION_COUNT + 6;
+
+	/**
+	 * The number of operations of the '<em>Additional Service Handler</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_HANDLER_OPERATION_COUNT = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION_OPERATION_COUNT + 7;
+
+
+	/**
 	 * Returns the meta object for class '{@link Implementation.DecisionSupportComponent <em>Decision Support Component</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3696,17 +3797,6 @@ public interface ImplementationPackage extends EPackage {
 	EAttribute getAdditionalServiceComponent_AdditionalService_Price();
 
 	/**
-	 * Returns the meta object for the attribute '{@link Implementation.AdditionalServiceComponent_AdditionalService#getMaxAttendant <em>Max Attendant</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Max Attendant</em>'.
-	 * @see Implementation.AdditionalServiceComponent_AdditionalService#getMaxAttendant()
-	 * @see #getAdditionalServiceComponent_AdditionalService()
-	 * @generated
-	 */
-	EAttribute getAdditionalServiceComponent_AdditionalService_MaxAttendant();
-
-	/**
 	 * Returns the meta object for the attribute '{@link Implementation.AdditionalServiceComponent_AdditionalService#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3718,15 +3808,14 @@ public interface ImplementationPackage extends EPackage {
 	EAttribute getAdditionalServiceComponent_AdditionalService_Description();
 
 	/**
-	 * Returns the meta object for the reference '{@link Implementation.AdditionalServiceComponent_AdditionalService#getIAuthentication <em>IAuthentication</em>}'.
+	 * Returns the meta object for the '{@link Implementation.AdditionalServiceComponent_AdditionalService#findEvent(java.util.Date) <em>Find Event</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>IAuthentication</em>'.
-	 * @see Implementation.AdditionalServiceComponent_AdditionalService#getIAuthentication()
-	 * @see #getAdditionalServiceComponent_AdditionalService()
+	 * @return the meta object for the '<em>Find Event</em>' operation.
+	 * @see Implementation.AdditionalServiceComponent_AdditionalService#findEvent(java.util.Date)
 	 * @generated
 	 */
-	EReference getAdditionalServiceComponent_AdditionalService_IAuthentication();
+	EOperation getAdditionalServiceComponent_AdditionalService__FindEvent__Date();
 
 	/**
 	 * Returns the meta object for class '{@link Implementation.StaffComponent_IAuthentication <em>Staff Component IAuthentication</em>}'.
@@ -3809,24 +3898,24 @@ public interface ImplementationPackage extends EPackage {
 	EClass getAdditionalServiceComponent_IAdditionalServiceAdministration();
 
 	/**
-	 * Returns the meta object for the '{@link Implementation.AdditionalServiceComponent_IAdditionalServiceAdministration#createAdditionalService(java.lang.String, int, int) <em>Create Additional Service</em>}' operation.
+	 * Returns the meta object for the '{@link Implementation.AdditionalServiceComponent_IAdditionalServiceAdministration#createAdditionalService(java.lang.String, boolean, int, java.lang.String) <em>Create Additional Service</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Additional Service</em>' operation.
-	 * @see Implementation.AdditionalServiceComponent_IAdditionalServiceAdministration#createAdditionalService(java.lang.String, int, int)
+	 * @see Implementation.AdditionalServiceComponent_IAdditionalServiceAdministration#createAdditionalService(java.lang.String, boolean, int, java.lang.String)
 	 * @generated
 	 */
-	EOperation getAdditionalServiceComponent_IAdditionalServiceAdministration__CreateAdditionalService__String_int_int();
+	EOperation getAdditionalServiceComponent_IAdditionalServiceAdministration__CreateAdditionalService__String_boolean_int_String();
 
 	/**
-	 * Returns the meta object for the '{@link Implementation.AdditionalServiceComponent_IAdditionalServiceAdministration#editAdditionalService(java.lang.String, java.lang.String, int, int) <em>Edit Additional Service</em>}' operation.
+	 * Returns the meta object for the '{@link Implementation.AdditionalServiceComponent_IAdditionalServiceAdministration#editAdditionalService(java.lang.String, java.lang.String, boolean, int, java.lang.String) <em>Edit Additional Service</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Edit Additional Service</em>' operation.
-	 * @see Implementation.AdditionalServiceComponent_IAdditionalServiceAdministration#editAdditionalService(java.lang.String, java.lang.String, int, int)
+	 * @see Implementation.AdditionalServiceComponent_IAdditionalServiceAdministration#editAdditionalService(java.lang.String, java.lang.String, boolean, int, java.lang.String)
 	 * @generated
 	 */
-	EOperation getAdditionalServiceComponent_IAdditionalServiceAdministration__EditAdditionalService__String_String_int_int();
+	EOperation getAdditionalServiceComponent_IAdditionalServiceAdministration__EditAdditionalService__String_String_boolean_int_String();
 
 	/**
 	 * Returns the meta object for the '{@link Implementation.AdditionalServiceComponent_IAdditionalServiceAdministration#removeAdditionalService(java.lang.String) <em>Remove Additional Service</em>}' operation.
@@ -3837,6 +3926,36 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getAdditionalServiceComponent_IAdditionalServiceAdministration__RemoveAdditionalService__String();
+
+	/**
+	 * Returns the meta object for the '{@link Implementation.AdditionalServiceComponent_IAdditionalServiceAdministration#createEvent(java.lang.String, java.util.Date, java.lang.String, int, int) <em>Create Event</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Create Event</em>' operation.
+	 * @see Implementation.AdditionalServiceComponent_IAdditionalServiceAdministration#createEvent(java.lang.String, java.util.Date, java.lang.String, int, int)
+	 * @generated
+	 */
+	EOperation getAdditionalServiceComponent_IAdditionalServiceAdministration__CreateEvent__String_Date_String_int_int();
+
+	/**
+	 * Returns the meta object for the '{@link Implementation.AdditionalServiceComponent_IAdditionalServiceAdministration#editEvent(java.lang.String, java.util.Date, java.lang.String, int, int) <em>Edit Event</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Edit Event</em>' operation.
+	 * @see Implementation.AdditionalServiceComponent_IAdditionalServiceAdministration#editEvent(java.lang.String, java.util.Date, java.lang.String, int, int)
+	 * @generated
+	 */
+	EOperation getAdditionalServiceComponent_IAdditionalServiceAdministration__EditEvent__String_Date_String_int_int();
+
+	/**
+	 * Returns the meta object for the '{@link Implementation.AdditionalServiceComponent_IAdditionalServiceAdministration#removeEvent(java.lang.String, java.util.Date, java.lang.String) <em>Remove Event</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Remove Event</em>' operation.
+	 * @see Implementation.AdditionalServiceComponent_IAdditionalServiceAdministration#removeEvent(java.lang.String, java.util.Date, java.lang.String)
+	 * @generated
+	 */
+	EOperation getAdditionalServiceComponent_IAdditionalServiceAdministration__RemoveEvent__String_Date_String();
 
 	/**
 	 * Returns the meta object for class '{@link Implementation.AdditionalServiceComponent_AdditionalServiceEvent <em>Additional Service Component Additional Service Event</em>}'.
@@ -3860,17 +3979,6 @@ public interface ImplementationPackage extends EPackage {
 	EAttribute getAdditionalServiceComponent_AdditionalServiceEvent_DateTime();
 
 	/**
-	 * Returns the meta object for the attribute '{@link Implementation.AdditionalServiceComponent_AdditionalServiceEvent#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see Implementation.AdditionalServiceComponent_AdditionalServiceEvent#getName()
-	 * @see #getAdditionalServiceComponent_AdditionalServiceEvent()
-	 * @generated
-	 */
-	EAttribute getAdditionalServiceComponent_AdditionalServiceEvent_Name();
-
-	/**
 	 * Returns the meta object for the attribute '{@link Implementation.AdditionalServiceComponent_AdditionalServiceEvent#getLocation <em>Location</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3882,17 +3990,6 @@ public interface ImplementationPackage extends EPackage {
 	EAttribute getAdditionalServiceComponent_AdditionalServiceEvent_Location();
 
 	/**
-	 * Returns the meta object for the attribute '{@link Implementation.AdditionalServiceComponent_AdditionalServiceEvent#getPrice <em>Price</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Price</em>'.
-	 * @see Implementation.AdditionalServiceComponent_AdditionalServiceEvent#getPrice()
-	 * @see #getAdditionalServiceComponent_AdditionalServiceEvent()
-	 * @generated
-	 */
-	EAttribute getAdditionalServiceComponent_AdditionalServiceEvent_Price();
-
-	/**
 	 * Returns the meta object for the attribute '{@link Implementation.AdditionalServiceComponent_AdditionalServiceEvent#getMaxAttendant <em>Max Attendant</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3902,6 +3999,17 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getAdditionalServiceComponent_AdditionalServiceEvent_MaxAttendant();
+
+	/**
+	 * Returns the meta object for the attribute '{@link Implementation.AdditionalServiceComponent_AdditionalServiceEvent#getCurrentAttendants <em>Current Attendants</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Current Attendants</em>'.
+	 * @see Implementation.AdditionalServiceComponent_AdditionalServiceEvent#getCurrentAttendants()
+	 * @see #getAdditionalServiceComponent_AdditionalServiceEvent()
+	 * @generated
+	 */
+	EAttribute getAdditionalServiceComponent_AdditionalServiceEvent_CurrentAttendants();
 
 	/**
 	 * Returns the meta object for the '{@link Implementation.AdditionalServiceComponent_AdditionalServiceEvent#getAdditionalServiceInfo(java.lang.String) <em>Get Additional Service Info</em>}' operation.
@@ -4862,6 +4970,59 @@ public interface ImplementationPackage extends EPackage {
 	EReference getRoomComponent_RoomHandler_ConferenceRooms();
 
 	/**
+	 * Returns the meta object for class '{@link Implementation.AdditionalServiceHandler <em>Additional Service Handler</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Additional Service Handler</em>'.
+	 * @see Implementation.AdditionalServiceHandler
+	 * @generated
+	 */
+	EClass getAdditionalServiceHandler();
+
+	/**
+	 * Returns the meta object for the reference '{@link Implementation.AdditionalServiceHandler#getIAuthentication <em>IAuthentication</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>IAuthentication</em>'.
+	 * @see Implementation.AdditionalServiceHandler#getIAuthentication()
+	 * @see #getAdditionalServiceHandler()
+	 * @generated
+	 */
+	EReference getAdditionalServiceHandler_IAuthentication();
+
+	/**
+	 * Returns the meta object for the reference list '{@link Implementation.AdditionalServiceHandler#getAdditionalService <em>Additional Service</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Additional Service</em>'.
+	 * @see Implementation.AdditionalServiceHandler#getAdditionalService()
+	 * @see #getAdditionalServiceHandler()
+	 * @generated
+	 */
+	EReference getAdditionalServiceHandler_AdditionalService();
+
+	/**
+	 * Returns the meta object for the reference list '{@link Implementation.AdditionalServiceHandler#getAdditionalServiceEvent <em>Additional Service Event</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Additional Service Event</em>'.
+	 * @see Implementation.AdditionalServiceHandler#getAdditionalServiceEvent()
+	 * @see #getAdditionalServiceHandler()
+	 * @generated
+	 */
+	EReference getAdditionalServiceHandler_AdditionalServiceEvent();
+
+	/**
+	 * Returns the meta object for the '{@link Implementation.AdditionalServiceHandler#findService(java.lang.String) <em>Find Service</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Find Service</em>' operation.
+	 * @see Implementation.AdditionalServiceHandler#findService(java.lang.String)
+	 * @generated
+	 */
+	EOperation getAdditionalServiceHandler__FindService__String();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5497,14 +5658,6 @@ public interface ImplementationPackage extends EPackage {
 		EAttribute ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE__PRICE = eINSTANCE.getAdditionalServiceComponent_AdditionalService_Price();
 
 		/**
-		 * The meta object literal for the '<em><b>Max Attendant</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE__MAX_ATTENDANT = eINSTANCE.getAdditionalServiceComponent_AdditionalService_MaxAttendant();
-
-		/**
 		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5513,12 +5666,12 @@ public interface ImplementationPackage extends EPackage {
 		EAttribute ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE__DESCRIPTION = eINSTANCE.getAdditionalServiceComponent_AdditionalService_Description();
 
 		/**
-		 * The meta object literal for the '<em><b>IAuthentication</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Find Event</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE__IAUTHENTICATION = eINSTANCE.getAdditionalServiceComponent_AdditionalService_IAuthentication();
+		EOperation ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE___FIND_EVENT__DATE = eINSTANCE.getAdditionalServiceComponent_AdditionalService__FindEvent__Date();
 
 		/**
 		 * The meta object literal for the '{@link Implementation.StaffComponent_IAuthentication <em>Staff Component IAuthentication</em>}' class.
@@ -5596,7 +5749,7 @@ public interface ImplementationPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___CREATE_ADDITIONAL_SERVICE__STRING_INT_INT = eINSTANCE.getAdditionalServiceComponent_IAdditionalServiceAdministration__CreateAdditionalService__String_int_int();
+		EOperation ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___CREATE_ADDITIONAL_SERVICE__STRING_BOOLEAN_INT_STRING = eINSTANCE.getAdditionalServiceComponent_IAdditionalServiceAdministration__CreateAdditionalService__String_boolean_int_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Edit Additional Service</b></em>' operation.
@@ -5604,7 +5757,7 @@ public interface ImplementationPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___EDIT_ADDITIONAL_SERVICE__STRING_STRING_INT_INT = eINSTANCE.getAdditionalServiceComponent_IAdditionalServiceAdministration__EditAdditionalService__String_String_int_int();
+		EOperation ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___EDIT_ADDITIONAL_SERVICE__STRING_STRING_BOOLEAN_INT_STRING = eINSTANCE.getAdditionalServiceComponent_IAdditionalServiceAdministration__EditAdditionalService__String_String_boolean_int_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Remove Additional Service</b></em>' operation.
@@ -5613,6 +5766,30 @@ public interface ImplementationPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___REMOVE_ADDITIONAL_SERVICE__STRING = eINSTANCE.getAdditionalServiceComponent_IAdditionalServiceAdministration__RemoveAdditionalService__String();
+
+		/**
+		 * The meta object literal for the '<em><b>Create Event</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___CREATE_EVENT__STRING_DATE_STRING_INT_INT = eINSTANCE.getAdditionalServiceComponent_IAdditionalServiceAdministration__CreateEvent__String_Date_String_int_int();
+
+		/**
+		 * The meta object literal for the '<em><b>Edit Event</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___EDIT_EVENT__STRING_DATE_STRING_INT_INT = eINSTANCE.getAdditionalServiceComponent_IAdditionalServiceAdministration__EditEvent__String_Date_String_int_int();
+
+		/**
+		 * The meta object literal for the '<em><b>Remove Event</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___REMOVE_EVENT__STRING_DATE_STRING = eINSTANCE.getAdditionalServiceComponent_IAdditionalServiceAdministration__RemoveEvent__String_Date_String();
 
 		/**
 		 * The meta object literal for the '{@link Implementation.impl.AdditionalServiceComponent_AdditionalServiceEventImpl <em>Additional Service Component Additional Service Event</em>}' class.
@@ -5633,14 +5810,6 @@ public interface ImplementationPackage extends EPackage {
 		EAttribute ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_EVENT__DATE_TIME = eINSTANCE.getAdditionalServiceComponent_AdditionalServiceEvent_DateTime();
 
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_EVENT__NAME = eINSTANCE.getAdditionalServiceComponent_AdditionalServiceEvent_Name();
-
-		/**
 		 * The meta object literal for the '<em><b>Location</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5649,20 +5818,20 @@ public interface ImplementationPackage extends EPackage {
 		EAttribute ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_EVENT__LOCATION = eINSTANCE.getAdditionalServiceComponent_AdditionalServiceEvent_Location();
 
 		/**
-		 * The meta object literal for the '<em><b>Price</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_EVENT__PRICE = eINSTANCE.getAdditionalServiceComponent_AdditionalServiceEvent_Price();
-
-		/**
 		 * The meta object literal for the '<em><b>Max Attendant</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_EVENT__MAX_ATTENDANT = eINSTANCE.getAdditionalServiceComponent_AdditionalServiceEvent_MaxAttendant();
+
+		/**
+		 * The meta object literal for the '<em><b>Current Attendants</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_EVENT__CURRENT_ATTENDANTS = eINSTANCE.getAdditionalServiceComponent_AdditionalServiceEvent_CurrentAttendants();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Additional Service Info</b></em>' operation.
@@ -6425,6 +6594,48 @@ public interface ImplementationPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ROOM_COMPONENT_ROOM_HANDLER__CONFERENCE_ROOMS = eINSTANCE.getRoomComponent_RoomHandler_ConferenceRooms();
+
+		/**
+		 * The meta object literal for the '{@link Implementation.impl.AdditionalServiceHandlerImpl <em>Additional Service Handler</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see Implementation.impl.AdditionalServiceHandlerImpl
+		 * @see Implementation.impl.ImplementationPackageImpl#getAdditionalServiceHandler()
+		 * @generated
+		 */
+		EClass ADDITIONAL_SERVICE_HANDLER = eINSTANCE.getAdditionalServiceHandler();
+
+		/**
+		 * The meta object literal for the '<em><b>IAuthentication</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ADDITIONAL_SERVICE_HANDLER__IAUTHENTICATION = eINSTANCE.getAdditionalServiceHandler_IAuthentication();
+
+		/**
+		 * The meta object literal for the '<em><b>Additional Service</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ADDITIONAL_SERVICE_HANDLER__ADDITIONAL_SERVICE = eINSTANCE.getAdditionalServiceHandler_AdditionalService();
+
+		/**
+		 * The meta object literal for the '<em><b>Additional Service Event</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ADDITIONAL_SERVICE_HANDLER__ADDITIONAL_SERVICE_EVENT = eINSTANCE.getAdditionalServiceHandler_AdditionalServiceEvent();
+
+		/**
+		 * The meta object literal for the '<em><b>Find Service</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ADDITIONAL_SERVICE_HANDLER___FIND_SERVICE__STRING = eINSTANCE.getAdditionalServiceHandler__FindService__String();
 
 	}
 

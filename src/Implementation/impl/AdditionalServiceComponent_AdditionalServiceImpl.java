@@ -3,20 +3,12 @@
 package Implementation.impl;
 
 import Implementation.AdditionalServiceComponent_AdditionalService;
-import Implementation.AdditionalServiceComponent_IAdditionalServiceAdministration;
-import Implementation.AdditionalServiceComponent_IAdditionalServiceInformation;
 import Implementation.ImplementationPackage;
-import Implementation.StaffComponent_IAuthentication;
-
 import java.lang.reflect.InvocationTargetException;
-
+import java.util.Date;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -30,9 +22,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link Implementation.impl.AdditionalServiceComponent_AdditionalServiceImpl#getName <em>Name</em>}</li>
  *   <li>{@link Implementation.impl.AdditionalServiceComponent_AdditionalServiceImpl#isUsable <em>Usable</em>}</li>
  *   <li>{@link Implementation.impl.AdditionalServiceComponent_AdditionalServiceImpl#getPrice <em>Price</em>}</li>
- *   <li>{@link Implementation.impl.AdditionalServiceComponent_AdditionalServiceImpl#getMaxAttendant <em>Max Attendant</em>}</li>
  *   <li>{@link Implementation.impl.AdditionalServiceComponent_AdditionalServiceImpl#getDescription <em>Description</em>}</li>
- *   <li>{@link Implementation.impl.AdditionalServiceComponent_AdditionalServiceImpl#getIAuthentication <em>IAuthentication</em>}</li>
  * </ul>
  * </p>
  *
@@ -100,26 +90,6 @@ public class AdditionalServiceComponent_AdditionalServiceImpl extends MinimalEOb
 	protected int price = PRICE_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getMaxAttendant() <em>Max Attendant</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getMaxAttendant()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int MAX_ATTENDANT_EDEFAULT = 0;
-
-	/**
-	 * The cached value of the '{@link #getMaxAttendant() <em>Max Attendant</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getMaxAttendant()
-	 * @generated
-	 * @ordered
-	 */
-	protected int maxAttendant = MAX_ATTENDANT_EDEFAULT;
-
-	/**
 	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -138,16 +108,6 @@ public class AdditionalServiceComponent_AdditionalServiceImpl extends MinimalEOb
 	 * @ordered
 	 */
 	protected String description = DESCRIPTION_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getIAuthentication() <em>IAuthentication</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIAuthentication()
-	 * @generated
-	 * @ordered
-	 */
-	protected StaffComponent_IAuthentication iAuthentication;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -236,27 +196,6 @@ public class AdditionalServiceComponent_AdditionalServiceImpl extends MinimalEOb
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getMaxAttendant() {
-		return maxAttendant;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setMaxAttendant(int newMaxAttendant) {
-		int oldMaxAttendant = maxAttendant;
-		maxAttendant = newMaxAttendant;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE__MAX_ATTENDANT, oldMaxAttendant, maxAttendant));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getDescription() {
 		return description;
 	}
@@ -278,89 +217,7 @@ public class AdditionalServiceComponent_AdditionalServiceImpl extends MinimalEOb
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public StaffComponent_IAuthentication getIAuthentication() {
-		if (iAuthentication != null && iAuthentication.eIsProxy()) {
-			InternalEObject oldIAuthentication = (InternalEObject)iAuthentication;
-			iAuthentication = (StaffComponent_IAuthentication)eResolveProxy(oldIAuthentication);
-			if (iAuthentication != oldIAuthentication) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE__IAUTHENTICATION, oldIAuthentication, iAuthentication));
-			}
-		}
-		return iAuthentication;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public StaffComponent_IAuthentication basicGetIAuthentication() {
-		return iAuthentication;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setIAuthentication(StaffComponent_IAuthentication newIAuthentication) {
-		StaffComponent_IAuthentication oldIAuthentication = iAuthentication;
-		iAuthentication = newIAuthentication;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE__IAUTHENTICATION, oldIAuthentication, iAuthentication));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<String> getAdditionalServiceInfo(String name) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<String> getAllAdditionalServices() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void createAdditionalService(String name, int price, int maxAttendants) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void editAdditionalService(String oldName, String name, int price, int maxAttendants) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void removeAdditionalService(String name) {
+	public void findEvent(Date date) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -380,13 +237,8 @@ public class AdditionalServiceComponent_AdditionalServiceImpl extends MinimalEOb
 				return isUsable();
 			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE__PRICE:
 				return getPrice();
-			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE__MAX_ATTENDANT:
-				return getMaxAttendant();
 			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE__DESCRIPTION:
 				return getDescription();
-			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE__IAUTHENTICATION:
-				if (resolve) return getIAuthentication();
-				return basicGetIAuthentication();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -408,14 +260,8 @@ public class AdditionalServiceComponent_AdditionalServiceImpl extends MinimalEOb
 			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE__PRICE:
 				setPrice((Integer)newValue);
 				return;
-			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE__MAX_ATTENDANT:
-				setMaxAttendant((Integer)newValue);
-				return;
 			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE__DESCRIPTION:
 				setDescription((String)newValue);
-				return;
-			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE__IAUTHENTICATION:
-				setIAuthentication((StaffComponent_IAuthentication)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -438,14 +284,8 @@ public class AdditionalServiceComponent_AdditionalServiceImpl extends MinimalEOb
 			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE__PRICE:
 				setPrice(PRICE_EDEFAULT);
 				return;
-			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE__MAX_ATTENDANT:
-				setMaxAttendant(MAX_ATTENDANT_EDEFAULT);
-				return;
 			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
-				return;
-			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE__IAUTHENTICATION:
-				setIAuthentication((StaffComponent_IAuthentication)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -465,12 +305,8 @@ public class AdditionalServiceComponent_AdditionalServiceImpl extends MinimalEOb
 				return usable != USABLE_EDEFAULT;
 			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE__PRICE:
 				return price != PRICE_EDEFAULT;
-			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE__MAX_ATTENDANT:
-				return maxAttendant != MAX_ATTENDANT_EDEFAULT;
 			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE__IAUTHENTICATION:
-				return iAuthentication != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -481,45 +317,10 @@ public class AdditionalServiceComponent_AdditionalServiceImpl extends MinimalEOb
 	 * @generated
 	 */
 	@Override
-	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
-		if (baseClass == AdditionalServiceComponent_IAdditionalServiceInformation.class) {
-			switch (baseOperationID) {
-				case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION___GET_ADDITIONAL_SERVICE_INFO__STRING: return ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE___GET_ADDITIONAL_SERVICE_INFO__STRING;
-				case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION___GET_ALL_ADDITIONAL_SERVICES: return ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE___GET_ALL_ADDITIONAL_SERVICES;
-				default: return -1;
-			}
-		}
-		if (baseClass == AdditionalServiceComponent_IAdditionalServiceAdministration.class) {
-			switch (baseOperationID) {
-				case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___CREATE_ADDITIONAL_SERVICE__STRING_INT_INT: return ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE___CREATE_ADDITIONAL_SERVICE__STRING_INT_INT;
-				case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___EDIT_ADDITIONAL_SERVICE__STRING_STRING_INT_INT: return ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE___EDIT_ADDITIONAL_SERVICE__STRING_STRING_INT_INT;
-				case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___REMOVE_ADDITIONAL_SERVICE__STRING: return ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE___REMOVE_ADDITIONAL_SERVICE__STRING;
-				default: return -1;
-			}
-		}
-		return super.eDerivedOperationID(baseOperationID, baseClass);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE___GET_ADDITIONAL_SERVICE_INFO__STRING:
-				return getAdditionalServiceInfo((String)arguments.get(0));
-			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE___GET_ALL_ADDITIONAL_SERVICES:
-				return getAllAdditionalServices();
-			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE___CREATE_ADDITIONAL_SERVICE__STRING_INT_INT:
-				createAdditionalService((String)arguments.get(0), (Integer)arguments.get(1), (Integer)arguments.get(2));
-				return null;
-			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE___EDIT_ADDITIONAL_SERVICE__STRING_STRING_INT_INT:
-				editAdditionalService((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3));
-				return null;
-			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE___REMOVE_ADDITIONAL_SERVICE__STRING:
-				removeAdditionalService((String)arguments.get(0));
+			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE___FIND_EVENT__DATE:
+				findEvent((Date)arguments.get(0));
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);
@@ -541,9 +342,7 @@ public class AdditionalServiceComponent_AdditionalServiceImpl extends MinimalEOb
 		result.append(usable);
 		result.append(", price: ");
 		result.append(price);
-		result.append(", maxAttendant: ");
-		result.append(maxAttendant);
-		result.append(", Description: ");
+		result.append(", description: ");
 		result.append(description);
 		result.append(')');
 		return result.toString();
