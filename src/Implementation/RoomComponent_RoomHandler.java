@@ -14,8 +14,8 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * <ul>
  *   <li>{@link Implementation.RoomComponent_RoomHandler#getAuthenticator <em>Authenticator</em>}</li>
- *   <li>{@link Implementation.RoomComponent_RoomHandler#getRoom <em>Room</em>}</li>
- *   <li>{@link Implementation.RoomComponent_RoomHandler#getConferenceRoom <em>Conference Room</em>}</li>
+ *   <li>{@link Implementation.RoomComponent_RoomHandler#getBedRooms <em>Bed Rooms</em>}</li>
+ *   <li>{@link Implementation.RoomComponent_RoomHandler#getConferenceRooms <em>Conference Rooms</em>}</li>
  * </ul>
  * </p>
  *
@@ -51,45 +51,35 @@ public interface RoomComponent_RoomHandler extends RoomComponent_IRoomDecision, 
 	void setAuthenticator(StaffComponent_IAuthentication value);
 
 	/**
-	 * Returns the value of the '<em><b>Room</b></em>' reference list.
+	 * Returns the value of the '<em><b>Bed Rooms</b></em>' reference list.
 	 * The list contents are of type {@link Implementation.RoomComponent_Bedroom}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Room</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Bed Rooms</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Room</em>' reference list.
-	 * @see Implementation.ImplementationPackage#getRoomComponent_RoomHandler_Room()
-	 * @model required="true" ordered="false"
+	 * @return the value of the '<em>Bed Rooms</em>' reference list.
+	 * @see Implementation.ImplementationPackage#getRoomComponent_RoomHandler_BedRooms()
+	 * @model ordered="false"
 	 * @generated
 	 */
-	EList<RoomComponent_Bedroom> getRoom();
+	EList<RoomComponent_Bedroom> getBedRooms();
 
 	/**
-	 * Returns the value of the '<em><b>Conference Room</b></em>' reference.
+	 * Returns the value of the '<em><b>Conference Rooms</b></em>' reference list.
+	 * The list contents are of type {@link Implementation.RoomComponent_ConferenceRoom}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Conference Room</em>' reference isn't clear,
+	 * If the meaning of the '<em>Conference Rooms</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Conference Room</em>' reference.
-	 * @see #setConferenceRoom(RoomComponent_ConferenceRoom)
-	 * @see Implementation.ImplementationPackage#getRoomComponent_RoomHandler_ConferenceRoom()
-	 * @model required="true" ordered="false"
+	 * @return the value of the '<em>Conference Rooms</em>' reference list.
+	 * @see Implementation.ImplementationPackage#getRoomComponent_RoomHandler_ConferenceRooms()
+	 * @model ordered="false"
 	 * @generated
 	 */
-	RoomComponent_ConferenceRoom getConferenceRoom();
-
-	/**
-	 * Sets the value of the '{@link Implementation.RoomComponent_RoomHandler#getConferenceRoom <em>Conference Room</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Conference Room</em>' reference.
-	 * @see #getConferenceRoom()
-	 * @generated
-	 */
-	void setConferenceRoom(RoomComponent_ConferenceRoom value);
+	EList<RoomComponent_ConferenceRoom> getConferenceRooms();
 
 } // RoomComponent_RoomHandler

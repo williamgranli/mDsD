@@ -628,7 +628,7 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 				return null;
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___SEARCH_FOR_BOOKING__STRING:
 				return searchForBooking((String)arguments.get(0));
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING:
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING:
 				addGuestToBooking((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3));
 				return null;
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___FIND_BOOKING__STRING:

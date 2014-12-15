@@ -925,7 +925,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getBookingComponent_IBooking__AddGuestToBooking__String_String_String() {
+	public EOperation getBookingComponent_IBooking__AddGuestToBooking__String_String_String_String() {
 		return bookingComponent_IBookingEClass.getEOperations().get(10);
 	}
 
@@ -2059,7 +2059,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getRoomComponent_RoomHandler_Room() {
+	public EReference getRoomComponent_RoomHandler_BedRooms() {
 		return (EReference)roomComponent_RoomHandlerEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -2068,7 +2068,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getRoomComponent_RoomHandler_ConferenceRoom() {
+	public EReference getRoomComponent_RoomHandler_ConferenceRooms() {
 		return (EReference)roomComponent_RoomHandlerEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -2169,7 +2169,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		createEOperation(bookingComponent_IBookingEClass, BOOKING_COMPONENT_IBOOKING___REMOVE_ADDIONAL_SERVICE__STRING_STRING);
 		createEOperation(bookingComponent_IBookingEClass, BOOKING_COMPONENT_IBOOKING___GENERATE_QUOTE__DATE_DATE_STRING);
 		createEOperation(bookingComponent_IBookingEClass, BOOKING_COMPONENT_IBOOKING___SEARCH_FOR_BOOKING__STRING);
-		createEOperation(bookingComponent_IBookingEClass, BOOKING_COMPONENT_IBOOKING___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING);
+		createEOperation(bookingComponent_IBookingEClass, BOOKING_COMPONENT_IBOOKING___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING);
 
 		paymentComponentEClass = createEClass(PAYMENT_COMPONENT);
 
@@ -2322,8 +2322,8 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 
 		roomComponent_RoomHandlerEClass = createEClass(ROOM_COMPONENT_ROOM_HANDLER);
 		createEReference(roomComponent_RoomHandlerEClass, ROOM_COMPONENT_ROOM_HANDLER__AUTHENTICATOR);
-		createEReference(roomComponent_RoomHandlerEClass, ROOM_COMPONENT_ROOM_HANDLER__ROOM);
-		createEReference(roomComponent_RoomHandlerEClass, ROOM_COMPONENT_ROOM_HANDLER__CONFERENCE_ROOM);
+		createEReference(roomComponent_RoomHandlerEClass, ROOM_COMPONENT_ROOM_HANDLER__BED_ROOMS);
+		createEReference(roomComponent_RoomHandlerEClass, ROOM_COMPONENT_ROOM_HANDLER__CONFERENCE_ROOMS);
 	}
 
 	/**
@@ -2510,7 +2510,8 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		op = initEOperation(getBookingComponent_IBooking__SearchForBooking__String(), theTypesPackage.getString(), "searchForBooking", 1, -1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "bookingReference", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getBookingComponent_IBooking__AddGuestToBooking__String_String_String(), null, "addGuestToBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getBookingComponent_IBooking__AddGuestToBooking__String_String_String_String(), null, "addGuestToBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "bookingReference", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "firstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "lastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "address", 1, 1, IS_UNIQUE, !IS_ORDERED);
@@ -2668,7 +2669,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		op = initEOperation(getBookingComponent_Booking__UpdatePaymentDetails__BookingComponent_PaymentDetails(), null, "updatePaymentDetails", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, this.getBookingComponent_PaymentDetails(), "newPaymentDetails", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getBookingComponent_Booking__GenerateReferenceNumber(), null, "generateReferenceNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		initEOperation(getBookingComponent_Booking__GenerateReferenceNumber(), theTypesPackage.getString(), "generateReferenceNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getBookingComponent_Booking__AddGuestToBooking__String_String_String(), null, "addGuestToBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "firstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
@@ -2838,8 +2839,8 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 
 		initEClass(roomComponent_RoomHandlerEClass, RoomComponent_RoomHandler.class, "RoomComponent_RoomHandler", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRoomComponent_RoomHandler_Authenticator(), this.getStaffComponent_IAuthentication(), null, "authenticator", null, 1, 1, RoomComponent_RoomHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getRoomComponent_RoomHandler_Room(), this.getRoomComponent_Bedroom(), null, "room", null, 1, -1, RoomComponent_RoomHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getRoomComponent_RoomHandler_ConferenceRoom(), this.getRoomComponent_ConferenceRoom(), null, "conferenceRoom", null, 1, 1, RoomComponent_RoomHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getRoomComponent_RoomHandler_BedRooms(), this.getRoomComponent_Bedroom(), null, "bedRooms", null, 0, -1, RoomComponent_RoomHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getRoomComponent_RoomHandler_ConferenceRooms(), this.getRoomComponent_ConferenceRoom(), null, "conferenceRooms", null, 0, -1, RoomComponent_RoomHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

@@ -2,6 +2,7 @@
  */
 package Implementation.impl;
 
+
 import Implementation.ImplementationPackage;
 import Implementation.RoomComponent_Bedroom;
 import Implementation.RoomComponent_ConferenceRoom;
@@ -9,8 +10,11 @@ import Implementation.RoomComponent_IRoomAdministration;
 import Implementation.RoomComponent_IRoomInformation;
 import Implementation.RoomComponent_RoomHandler;
 import Implementation.StaffComponent_IAuthentication;
+
 import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
@@ -18,6 +22,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -27,8 +32,8 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * The following features are implemented:
  * <ul>
  *   <li>{@link Implementation.impl.RoomComponent_RoomHandlerImpl#getAuthenticator <em>Authenticator</em>}</li>
- *   <li>{@link Implementation.impl.RoomComponent_RoomHandlerImpl#getRoom <em>Room</em>}</li>
- *   <li>{@link Implementation.impl.RoomComponent_RoomHandlerImpl#getConferenceRoom <em>Conference Room</em>}</li>
+ *   <li>{@link Implementation.impl.RoomComponent_RoomHandlerImpl#getBedRooms <em>Bed Rooms</em>}</li>
+ *   <li>{@link Implementation.impl.RoomComponent_RoomHandlerImpl#getConferenceRooms <em>Conference Rooms</em>}</li>
  * </ul>
  * </p>
  *
@@ -46,24 +51,24 @@ public class RoomComponent_RoomHandlerImpl extends MinimalEObjectImpl.Container 
 	protected StaffComponent_IAuthentication authenticator;
 
 	/**
-	 * The cached value of the '{@link #getRoom() <em>Room</em>}' reference list.
+	 * The cached value of the '{@link #getBedRooms() <em>Bed Rooms</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getRoom()
+	 * @see #getBedRooms()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<RoomComponent_Bedroom> room;
+	protected EList<RoomComponent_Bedroom> bedRooms;
 
 	/**
-	 * The cached value of the '{@link #getConferenceRoom() <em>Conference Room</em>}' reference.
+	 * The cached value of the '{@link #getConferenceRooms() <em>Conference Rooms</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getConferenceRoom()
+	 * @see #getConferenceRooms()
 	 * @generated
 	 * @ordered
 	 */
-	protected RoomComponent_ConferenceRoom conferenceRoom;
+	protected EList<RoomComponent_ConferenceRoom> conferenceRooms;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -74,8 +79,10 @@ public class RoomComponent_RoomHandlerImpl extends MinimalEObjectImpl.Container 
 		super();
 
 		// Initialize rooms collection
-		bedRooms = (EList<RoomComponent_Room>) new ArrayList<RoomComponent_Room>();
-		conferenceRooms = (Elist<RoomComponent_ConferenceRoom) new ArrayList<RoomComponent_ConferenceRoom>();
+		bedRooms = (EList<RoomComponent_Bedroom>) new ArrayList<RoomComponent_Bedroom>();
+		conferenceRooms = (EList<RoomComponent_ConferenceRoom>) new ArrayList<RoomComponent_ConferenceRoom>();
+	
+	
 	}
 
 	/**
@@ -131,11 +138,11 @@ public class RoomComponent_RoomHandlerImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<RoomComponent_Bedroom> getRoom() {
-		if (room == null) {
-			room = new EObjectResolvingEList<RoomComponent_Bedroom>(RoomComponent_Bedroom.class, this, ImplementationPackage.ROOM_COMPONENT_ROOM_HANDLER__ROOM);
+	public EList<RoomComponent_Bedroom> getBedRooms() {
+		if (bedRooms == null) {
+			bedRooms = new EObjectResolvingEList<RoomComponent_Bedroom>(RoomComponent_Bedroom.class, this, ImplementationPackage.ROOM_COMPONENT_ROOM_HANDLER__BED_ROOMS);
 		}
-		return room;
+		return bedRooms;
 	}
 
 	/**
@@ -143,37 +150,11 @@ public class RoomComponent_RoomHandlerImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RoomComponent_ConferenceRoom getConferenceRoom() {
-		if (conferenceRoom != null && conferenceRoom.eIsProxy()) {
-			InternalEObject oldConferenceRoom = (InternalEObject)conferenceRoom;
-			conferenceRoom = (RoomComponent_ConferenceRoom)eResolveProxy(oldConferenceRoom);
-			if (conferenceRoom != oldConferenceRoom) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ImplementationPackage.ROOM_COMPONENT_ROOM_HANDLER__CONFERENCE_ROOM, oldConferenceRoom, conferenceRoom));
-			}
+	public EList<RoomComponent_ConferenceRoom> getConferenceRooms() {
+		if (conferenceRooms == null) {
+			conferenceRooms = new EObjectResolvingEList<RoomComponent_ConferenceRoom>(RoomComponent_ConferenceRoom.class, this, ImplementationPackage.ROOM_COMPONENT_ROOM_HANDLER__CONFERENCE_ROOMS);
 		}
-		return conferenceRoom;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public RoomComponent_ConferenceRoom basicGetConferenceRoom() {
-		return conferenceRoom;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setConferenceRoom(RoomComponent_ConferenceRoom newConferenceRoom) {
-		RoomComponent_ConferenceRoom oldConferenceRoom = conferenceRoom;
-		conferenceRoom = newConferenceRoom;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ImplementationPackage.ROOM_COMPONENT_ROOM_HANDLER__CONFERENCE_ROOM, oldConferenceRoom, conferenceRoom));
+		return conferenceRooms;
 	}
 
 	/**
@@ -183,7 +164,7 @@ public class RoomComponent_RoomHandlerImpl extends MinimalEObjectImpl.Container 
 	 */
 	public String getRoomInfo(int roomNumber) {
 
-		for (RoomComponent_Room r : bedRooms) {
+		for (RoomComponent_Bedroom r : bedRooms) {
 
 			if (r.getRoomNumber() == roomNumber) {
 				return "bedRooms Number:\t" + r.getRoomNumber() + "\n"
@@ -244,7 +225,7 @@ public class RoomComponent_RoomHandlerImpl extends MinimalEObjectImpl.Container 
 		EList<String> foundRoomTypes = (EList<String>) new ArrayList<String>();
 		boolean typeInList = false;
 
-		for (RoomComponent_Room r : bedRooms) {
+		for (RoomComponent_Bedroom r : bedRooms) {
 
 			// Check if type already in list
 			for (String rt : foundRoomTypes) {
@@ -271,7 +252,7 @@ public class RoomComponent_RoomHandlerImpl extends MinimalEObjectImpl.Container 
 	public EList<Integer> getAllRoomNumbers() {
 		EList<Integer> allRoomNumbers = (EList<Integer>) new ArrayList<Integer>();
 
-		for (RoomComponent_Room r : bedRooms) {
+		for (RoomComponent_Bedroom r : bedRooms) {
 			allRoomNumbers.add(r.getRoomNumber());
 		}
 
@@ -321,7 +302,7 @@ public class RoomComponent_RoomHandlerImpl extends MinimalEObjectImpl.Container 
 		for (RoomComponent_Bedroom r : bedRooms) {
 
 			if (r.getRoomNumber() == roomNumber) {
-				r.setUsable(useable);
+				r.setUsable(usable);
 				r.setPrice(price);
 				r.setRoomTypeName(roomTypeName);
 				r.setDescription(description);
@@ -385,7 +366,7 @@ public class RoomComponent_RoomHandlerImpl extends MinimalEObjectImpl.Container 
 		conferenceRoom.setDescription(description);
 		conferenceRoom.setNumberOfSeats(numberOfSeats);
 		conferenceRoom.setProjector(projector);
-		conferenceRoom.setConferencePhone(conference);
+		conferenceRoom.setConferencePhone(conferencePhone);
 
 		conferenceRooms.add(conferenceRoom);
 	}
@@ -405,7 +386,7 @@ public class RoomComponent_RoomHandlerImpl extends MinimalEObjectImpl.Container 
 				cr.setDescription(description);
 				cr.setNumberOfSeats(numberOfSeats);
 				cr.setProjector(projector);
-				cr.setConferencePhone(conference);
+				cr.setConferencePhone(conferencePhone);
 
 				return;
 			}
@@ -426,11 +407,10 @@ public class RoomComponent_RoomHandlerImpl extends MinimalEObjectImpl.Container 
 			case ImplementationPackage.ROOM_COMPONENT_ROOM_HANDLER__AUTHENTICATOR:
 				if (resolve) return getAuthenticator();
 				return basicGetAuthenticator();
-			case ImplementationPackage.ROOM_COMPONENT_ROOM_HANDLER__ROOM:
-				return getRoom();
-			case ImplementationPackage.ROOM_COMPONENT_ROOM_HANDLER__CONFERENCE_ROOM:
-				if (resolve) return getConferenceRoom();
-				return basicGetConferenceRoom();
+			case ImplementationPackage.ROOM_COMPONENT_ROOM_HANDLER__BED_ROOMS:
+				return getBedRooms();
+			case ImplementationPackage.ROOM_COMPONENT_ROOM_HANDLER__CONFERENCE_ROOMS:
+				return getConferenceRooms();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -447,12 +427,13 @@ public class RoomComponent_RoomHandlerImpl extends MinimalEObjectImpl.Container 
 			case ImplementationPackage.ROOM_COMPONENT_ROOM_HANDLER__AUTHENTICATOR:
 				setAuthenticator((StaffComponent_IAuthentication)newValue);
 				return;
-			case ImplementationPackage.ROOM_COMPONENT_ROOM_HANDLER__ROOM:
-				getRoom().clear();
-				getRoom().addAll((Collection<? extends RoomComponent_Bedroom>)newValue);
+			case ImplementationPackage.ROOM_COMPONENT_ROOM_HANDLER__BED_ROOMS:
+				getBedRooms().clear();
+				getBedRooms().addAll((Collection<? extends RoomComponent_Bedroom>)newValue);
 				return;
-			case ImplementationPackage.ROOM_COMPONENT_ROOM_HANDLER__CONFERENCE_ROOM:
-				setConferenceRoom((RoomComponent_ConferenceRoom)newValue);
+			case ImplementationPackage.ROOM_COMPONENT_ROOM_HANDLER__CONFERENCE_ROOMS:
+				getConferenceRooms().clear();
+				getConferenceRooms().addAll((Collection<? extends RoomComponent_ConferenceRoom>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -469,11 +450,11 @@ public class RoomComponent_RoomHandlerImpl extends MinimalEObjectImpl.Container 
 			case ImplementationPackage.ROOM_COMPONENT_ROOM_HANDLER__AUTHENTICATOR:
 				setAuthenticator((StaffComponent_IAuthentication)null);
 				return;
-			case ImplementationPackage.ROOM_COMPONENT_ROOM_HANDLER__ROOM:
-				getRoom().clear();
+			case ImplementationPackage.ROOM_COMPONENT_ROOM_HANDLER__BED_ROOMS:
+				getBedRooms().clear();
 				return;
-			case ImplementationPackage.ROOM_COMPONENT_ROOM_HANDLER__CONFERENCE_ROOM:
-				setConferenceRoom((RoomComponent_ConferenceRoom)null);
+			case ImplementationPackage.ROOM_COMPONENT_ROOM_HANDLER__CONFERENCE_ROOMS:
+				getConferenceRooms().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -489,10 +470,10 @@ public class RoomComponent_RoomHandlerImpl extends MinimalEObjectImpl.Container 
 		switch (featureID) {
 			case ImplementationPackage.ROOM_COMPONENT_ROOM_HANDLER__AUTHENTICATOR:
 				return authenticator != null;
-			case ImplementationPackage.ROOM_COMPONENT_ROOM_HANDLER__ROOM:
-				return room != null && !room.isEmpty();
-			case ImplementationPackage.ROOM_COMPONENT_ROOM_HANDLER__CONFERENCE_ROOM:
-				return conferenceRoom != null;
+			case ImplementationPackage.ROOM_COMPONENT_ROOM_HANDLER__BED_ROOMS:
+				return bedRooms != null && !bedRooms.isEmpty();
+			case ImplementationPackage.ROOM_COMPONENT_ROOM_HANDLER__CONFERENCE_ROOMS:
+				return conferenceRooms != null && !conferenceRooms.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

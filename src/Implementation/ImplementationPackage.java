@@ -890,7 +890,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_COMPONENT_IBOOKING___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING = 10;
+	int BOOKING_COMPONENT_IBOOKING___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING = 10;
 
 	/**
 	 * The number of operations of the '<em>Booking Component IBooking</em>' class.
@@ -2113,7 +2113,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_COMPONENT_BOOKING_MANAGER___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING = BOOKING_COMPONENT_IBOOKING___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING;
+	int BOOKING_COMPONENT_BOOKING_MANAGER___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING = BOOKING_COMPONENT_IBOOKING___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING;
 
 	/**
 	 * The operation id for the '<em>Find Booking</em>' operation.
@@ -2837,22 +2837,22 @@ public interface ImplementationPackage extends EPackage {
 	int ROOM_COMPONENT_ROOM_HANDLER__AUTHENTICATOR = ROOM_COMPONENT_IROOM_DECISION_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Room</b></em>' reference list.
+	 * The feature id for the '<em><b>Bed Rooms</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_COMPONENT_ROOM_HANDLER__ROOM = ROOM_COMPONENT_IROOM_DECISION_FEATURE_COUNT + 1;
+	int ROOM_COMPONENT_ROOM_HANDLER__BED_ROOMS = ROOM_COMPONENT_IROOM_DECISION_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Conference Room</b></em>' reference.
+	 * The feature id for the '<em><b>Conference Rooms</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_COMPONENT_ROOM_HANDLER__CONFERENCE_ROOM = ROOM_COMPONENT_IROOM_DECISION_FEATURE_COUNT + 2;
+	int ROOM_COMPONENT_ROOM_HANDLER__CONFERENCE_ROOMS = ROOM_COMPONENT_IROOM_DECISION_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Room Component Room Handler</em>' class.
@@ -3521,14 +3521,14 @@ public interface ImplementationPackage extends EPackage {
 	EOperation getBookingComponent_IBooking__SearchForBooking__String();
 
 	/**
-	 * Returns the meta object for the '{@link Implementation.BookingComponent_IBooking#addGuestToBooking(java.lang.String, java.lang.String, java.lang.String) <em>Add Guest To Booking</em>}' operation.
+	 * Returns the meta object for the '{@link Implementation.BookingComponent_IBooking#addGuestToBooking(java.lang.String, java.lang.String, java.lang.String, java.lang.String) <em>Add Guest To Booking</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Add Guest To Booking</em>' operation.
-	 * @see Implementation.BookingComponent_IBooking#addGuestToBooking(java.lang.String, java.lang.String, java.lang.String)
+	 * @see Implementation.BookingComponent_IBooking#addGuestToBooking(java.lang.String, java.lang.String, java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	EOperation getBookingComponent_IBooking__AddGuestToBooking__String_String_String();
+	EOperation getBookingComponent_IBooking__AddGuestToBooking__String_String_String_String();
 
 	/**
 	 * Returns the meta object for class '{@link Implementation.PaymentComponent <em>Payment Component</em>}'.
@@ -4840,26 +4840,26 @@ public interface ImplementationPackage extends EPackage {
 	EReference getRoomComponent_RoomHandler_Authenticator();
 
 	/**
-	 * Returns the meta object for the reference list '{@link Implementation.RoomComponent_RoomHandler#getRoom <em>Room</em>}'.
+	 * Returns the meta object for the reference list '{@link Implementation.RoomComponent_RoomHandler#getBedRooms <em>Bed Rooms</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Room</em>'.
-	 * @see Implementation.RoomComponent_RoomHandler#getRoom()
+	 * @return the meta object for the reference list '<em>Bed Rooms</em>'.
+	 * @see Implementation.RoomComponent_RoomHandler#getBedRooms()
 	 * @see #getRoomComponent_RoomHandler()
 	 * @generated
 	 */
-	EReference getRoomComponent_RoomHandler_Room();
+	EReference getRoomComponent_RoomHandler_BedRooms();
 
 	/**
-	 * Returns the meta object for the reference '{@link Implementation.RoomComponent_RoomHandler#getConferenceRoom <em>Conference Room</em>}'.
+	 * Returns the meta object for the reference list '{@link Implementation.RoomComponent_RoomHandler#getConferenceRooms <em>Conference Rooms</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Conference Room</em>'.
-	 * @see Implementation.RoomComponent_RoomHandler#getConferenceRoom()
+	 * @return the meta object for the reference list '<em>Conference Rooms</em>'.
+	 * @see Implementation.RoomComponent_RoomHandler#getConferenceRooms()
 	 * @see #getRoomComponent_RoomHandler()
 	 * @generated
 	 */
-	EReference getRoomComponent_RoomHandler_ConferenceRoom();
+	EReference getRoomComponent_RoomHandler_ConferenceRooms();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -5354,7 +5354,7 @@ public interface ImplementationPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation BOOKING_COMPONENT_IBOOKING___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING = eINSTANCE.getBookingComponent_IBooking__AddGuestToBooking__String_String_String();
+		EOperation BOOKING_COMPONENT_IBOOKING___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING = eINSTANCE.getBookingComponent_IBooking__AddGuestToBooking__String_String_String_String();
 
 		/**
 		 * The meta object literal for the '{@link Implementation.impl.PaymentComponentImpl <em>Payment Component</em>}' class.
@@ -6411,20 +6411,20 @@ public interface ImplementationPackage extends EPackage {
 		EReference ROOM_COMPONENT_ROOM_HANDLER__AUTHENTICATOR = eINSTANCE.getRoomComponent_RoomHandler_Authenticator();
 
 		/**
-		 * The meta object literal for the '<em><b>Room</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Bed Rooms</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ROOM_COMPONENT_ROOM_HANDLER__ROOM = eINSTANCE.getRoomComponent_RoomHandler_Room();
+		EReference ROOM_COMPONENT_ROOM_HANDLER__BED_ROOMS = eINSTANCE.getRoomComponent_RoomHandler_BedRooms();
 
 		/**
-		 * The meta object literal for the '<em><b>Conference Room</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Conference Rooms</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ROOM_COMPONENT_ROOM_HANDLER__CONFERENCE_ROOM = eINSTANCE.getRoomComponent_RoomHandler_ConferenceRoom();
+		EReference ROOM_COMPONENT_ROOM_HANDLER__CONFERENCE_ROOMS = eINSTANCE.getRoomComponent_RoomHandler_ConferenceRooms();
 
 	}
 

@@ -101,7 +101,7 @@ public interface BookingComponent_IBooking extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model firstNameDataType="org.eclipse.uml2.types.String" firstNameRequired="true" firstNameOrdered="false" lastNameDataType="org.eclipse.uml2.types.String" lastNameRequired="true" lastNameOrdered="false" addressDataType="org.eclipse.uml2.types.String" addressRequired="true" addressOrdered="false"
+	 * @model bookingReferenceDataType="org.eclipse.uml2.types.String" bookingReferenceRequired="true" bookingReferenceOrdered="false" firstNameDataType="org.eclipse.uml2.types.String" firstNameRequired="true" firstNameOrdered="false" lastNameDataType="org.eclipse.uml2.types.String" lastNameRequired="true" lastNameOrdered="false" addressDataType="org.eclipse.uml2.types.String" addressRequired="true" addressOrdered="false"
 	 * @generated
 	 */
 	void addGuestToBooking(String bookingReference, String firstName, String lastName, String address);

@@ -217,10 +217,9 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 	 * @generated
 	 */
 	public void addAdditionalServiceToBooking(String newService, int price) {
-		BookingComponent_AdditionalService newAdditionalService = new BookingComponent_AdditionalServiceImpl();
-		newAdditionalService.setName(newService);
-		newAdditionalService.setCost(price);
-		additionalServices.add(newAdditionalService);
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -716,8 +715,7 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 				updatePaymentDetails((BookingComponent_PaymentDetails)arguments.get(0));
 				return null;
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING___GENERATE_REFERENCE_NUMBER:
-				generateReferenceNumber();
-				return null;
+				return generateReferenceNumber();
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING:
 				addGuestToBooking((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2));
 				return null;

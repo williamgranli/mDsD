@@ -1258,13 +1258,13 @@
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7UQhUYB9EeSVsryNkPPRZw" value="1"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7UQhUoB9EeSVsryNkPPRZw" value="1"/>
         </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_6YruAIE6EeSNiOPEdgrO9Q" name="room" type="_eIWJkHsTEeSLuMTWUFMNdg" association="_6YsVEIE6EeSNiOPEdgrO9Q">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_6YruAYE6EeSNiOPEdgrO9Q" value="1"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_6YruAIE6EeSNiOPEdgrO9Q" name="bedRooms" type="_eIWJkHsTEeSLuMTWUFMNdg" association="_6YsVEIE6EeSNiOPEdgrO9Q">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_6YruAYE6EeSNiOPEdgrO9Q"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_6YruAoE6EeSNiOPEdgrO9Q" value="*"/>
         </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_sRzHQIIIEeSsqI5NBtfIGg" name="conferenceRoom" type="_eIWwoHsTEeSLuMTWUFMNdg" association="_sRzuUIIIEeSsqI5NBtfIGg">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sRzHQYIIEeSsqI5NBtfIGg" value="1"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sRzHQoIIEeSsqI5NBtfIGg" value="1"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_sRzHQIIIEeSsqI5NBtfIGg" name="conferenceRooms" type="_eIWwoHsTEeSLuMTWUFMNdg" association="_sRzuUIIIEeSsqI5NBtfIGg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sRzHQYIIEeSsqI5NBtfIGg"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sRzHQoIIEeSsqI5NBtfIGg" value="*"/>
         </ownedAttribute>
         <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_JIbOIH-1EeSVo4U8yTxtOw" client="_CxzwoH4QEeS7R5Ychvo0mw" supplier="_hieNEH-zEeSVo4U8yTxtOw" contract="_hieNEH-zEeSVo4U8yTxtOw"/>
         <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_kSgqcIEhEeSZXsM8lF2eOA" name="HandlerToInterface" client="_CxzwoH4QEeS7R5Ychvo0mw" supplier="_4QGeMHpmEeS6O5zO6NZCqA" contract="_4QGeMHpmEeS6O5zO6NZCqA"/>
@@ -1285,7 +1285,6 @@
       </ownedEnd>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_sRzuUIIIEeSsqI5NBtfIGg" memberEnd="_sRzuUYIIEeSsqI5NBtfIGg _sRzHQIIIEeSsqI5NBtfIGg">
-      <name xsi:nil="true"/>
       <ownedEnd xmi:type="uml:Property" xmi:id="_sRzuUYIIEeSsqI5NBtfIGg" name="roomHandler" type="_CxzwoH4QEeS7R5Ychvo0mw" association="_sRzuUIIIEeSsqI5NBtfIGg">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sRzuUoIIEeSsqI5NBtfIGg" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sRzuU4IIEeSsqI5NBtfIGg" value="1"/>
@@ -1300,4 +1299,5 @@
     </profileApplication>
   </uml:Package>
   <ActionLanguage:TextualRepresentation xmi:id="_eIXXsHsTEeSLuMTWUFMNdg" base_Comment="_eIU7cnsTEeSLuMTWUFMNdg"/>
+  <ActionLanguage:TextualRepresentation xmi:id="_JGypUIQ9EeSoeaaLNVrs8Q" language="org.eclipse.papyrus.uml.textedit.property.xtext.UmlProperty"/>
 </xmi:XMI>

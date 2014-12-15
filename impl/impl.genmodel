@@ -163,6 +163,7 @@
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_IBooking/searchForBooking/bookingReference"/>
       </genOperations>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//BookingComponent_IBooking/addGuestToBooking">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_IBooking/addGuestToBooking/bookingReference"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_IBooking/addGuestToBooking/firstName"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_IBooking/addGuestToBooking/lastName"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_IBooking/addGuestToBooking/address"/>
@@ -497,9 +498,9 @@
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
           propertySortChoices="true" ecoreFeature="ecore:EReference Implementation.ecore#//RoomComponent_RoomHandler/authenticator"/>
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EReference Implementation.ecore#//RoomComponent_RoomHandler/room"/>
+          propertySortChoices="true" ecoreFeature="ecore:EReference Implementation.ecore#//RoomComponent_RoomHandler/bedRooms"/>
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EReference Implementation.ecore#//RoomComponent_RoomHandler/conferenceRoom"/>
+          propertySortChoices="true" ecoreFeature="ecore:EReference Implementation.ecore#//RoomComponent_RoomHandler/conferenceRooms"/>
     </genClasses>
   </genPackages>
   <genPackages xsi:type="genmodel:GenPackage" prefix="Types" basePackage="org.eclipse.uml2"
