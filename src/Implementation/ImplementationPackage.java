@@ -964,7 +964,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PAYMENT_COMPONENT_IPAYMENT___VALIDATE_CC__STRING_STRING_INT_INT_STRING_STRING_DOUBLE = 1;
+	int PAYMENT_COMPONENT_IPAYMENT___VALIDATE_CC__STRING_STRING_INT_INT_STRING_STRING = 1;
 
 	/**
 	 * The operation id for the '<em>Add CC</em>' operation.
@@ -1073,7 +1073,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PAYMENT_COMPONENT_PAYMENT_HANDLER___VALIDATE_CC__STRING_STRING_INT_INT_STRING_STRING_DOUBLE = PAYMENT_COMPONENT_IPAYMENT___VALIDATE_CC__STRING_STRING_INT_INT_STRING_STRING_DOUBLE;
+	int PAYMENT_COMPONENT_PAYMENT_HANDLER___VALIDATE_CC__STRING_STRING_INT_INT_STRING_STRING = PAYMENT_COMPONENT_IPAYMENT___VALIDATE_CC__STRING_STRING_INT_INT_STRING_STRING;
 
 	/**
 	 * The operation id for the '<em>Add CC</em>' operation.
@@ -1185,13 +1185,13 @@ public interface ImplementationPackage extends EPackage {
 	int PAYMENT_COMPONENT_PAYMENT__EXPIRY_YEAR = 5;
 
 	/**
-	 * The feature id for the '<em><b>Price</b></em>' attribute.
+	 * The feature id for the '<em><b>Amount</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PAYMENT_COMPONENT_PAYMENT__PRICE = 6;
+	int PAYMENT_COMPONENT_PAYMENT__AMOUNT = 6;
 
 	/**
 	 * The number of structural features of the '<em>Payment Component Payment</em>' class.
@@ -3964,15 +3964,15 @@ public interface ImplementationPackage extends EPackage {
 	EAttribute getPaymentComponent_Payment_ExpiryYear();
 
 	/**
-	 * Returns the meta object for the attribute '{@link Implementation.PaymentComponent_Payment#getPrice <em>Price</em>}'.
+	 * Returns the meta object for the attribute '{@link Implementation.PaymentComponent_Payment#getAmount <em>Amount</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Price</em>'.
-	 * @see Implementation.PaymentComponent_Payment#getPrice()
+	 * @return the meta object for the attribute '<em>Amount</em>'.
+	 * @see Implementation.PaymentComponent_Payment#getAmount()
 	 * @see #getPaymentComponent_Payment()
 	 * @generated
 	 */
-	EAttribute getPaymentComponent_Payment_Price();
+	EAttribute getPaymentComponent_Payment_Amount();
 
 	/**
 	 * Returns the meta object for class '{@link Implementation.Bank_CustomerProvides <em>Bank Customer Provides</em>}'.
@@ -4075,14 +4075,14 @@ public interface ImplementationPackage extends EPackage {
 	EOperation getPaymentComponent_IPayment__MakePayment__String_String_int_int_String_String_double();
 
 	/**
-	 * Returns the meta object for the '{@link Implementation.PaymentComponent_IPayment#validateCC(java.lang.String, java.lang.String, int, int, java.lang.String, java.lang.String, double) <em>Validate CC</em>}' operation.
+	 * Returns the meta object for the '{@link Implementation.PaymentComponent_IPayment#validateCC(java.lang.String, java.lang.String, int, int, java.lang.String, java.lang.String) <em>Validate CC</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Validate CC</em>' operation.
-	 * @see Implementation.PaymentComponent_IPayment#validateCC(java.lang.String, java.lang.String, int, int, java.lang.String, java.lang.String, double)
+	 * @see Implementation.PaymentComponent_IPayment#validateCC(java.lang.String, java.lang.String, int, int, java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	EOperation getPaymentComponent_IPayment__ValidateCC__String_String_int_int_String_String_double();
+	EOperation getPaymentComponent_IPayment__ValidateCC__String_String_int_int_String_String();
 
 	/**
 	 * Returns the meta object for the '{@link Implementation.PaymentComponent_IPayment#addCC(java.lang.String, java.lang.String, int, int, java.lang.String, java.lang.String) <em>Add CC</em>}' operation.
@@ -6020,12 +6020,12 @@ public interface ImplementationPackage extends EPackage {
 		EAttribute PAYMENT_COMPONENT_PAYMENT__EXPIRY_YEAR = eINSTANCE.getPaymentComponent_Payment_ExpiryYear();
 
 		/**
-		 * The meta object literal for the '<em><b>Price</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Amount</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute PAYMENT_COMPONENT_PAYMENT__PRICE = eINSTANCE.getPaymentComponent_Payment_Price();
+		EAttribute PAYMENT_COMPONENT_PAYMENT__AMOUNT = eINSTANCE.getPaymentComponent_Payment_Amount();
 
 		/**
 		 * The meta object literal for the '{@link Implementation.Bank_CustomerProvides <em>Bank Customer Provides</em>}' class.
@@ -6119,7 +6119,7 @@ public interface ImplementationPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation PAYMENT_COMPONENT_IPAYMENT___VALIDATE_CC__STRING_STRING_INT_INT_STRING_STRING_DOUBLE = eINSTANCE.getPaymentComponent_IPayment__ValidateCC__String_String_int_int_String_String_double();
+		EOperation PAYMENT_COMPONENT_IPAYMENT___VALIDATE_CC__STRING_STRING_INT_INT_STRING_STRING = eINSTANCE.getPaymentComponent_IPayment__ValidateCC__String_String_int_int_String_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Add CC</b></em>' operation.

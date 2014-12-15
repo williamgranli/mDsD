@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link Implementation.PaymentComponent_Payment#getLastName <em>Last Name</em>}</li>
  *   <li>{@link Implementation.PaymentComponent_Payment#getExpiryMonth <em>Expiry Month</em>}</li>
  *   <li>{@link Implementation.PaymentComponent_Payment#getExpiryYear <em>Expiry Year</em>}</li>
- *   <li>{@link Implementation.PaymentComponent_Payment#getPrice <em>Price</em>}</li>
+ *   <li>{@link Implementation.PaymentComponent_Payment#getAmount <em>Amount</em>}</li>
  * </ul>
  * </p>
  *
@@ -185,28 +185,28 @@ public interface PaymentComponent_Payment extends EObject {
 	void setExpiryYear(int value);
 
 	/**
-	 * Returns the value of the '<em><b>Price</b></em>' attribute.
+	 * Returns the value of the '<em><b>Amount</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Price</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Amount</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Price</em>' attribute.
-	 * @see #setPrice(double)
-	 * @see Implementation.ImplementationPackage#getPaymentComponent_Payment_Price()
+	 * @return the value of the '<em>Amount</em>' attribute.
+	 * @see #setAmount(double)
+	 * @see Implementation.ImplementationPackage#getPaymentComponent_Payment_Amount()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	double getPrice();
+	double getAmount();
 
 	/**
-	 * Sets the value of the '{@link Implementation.PaymentComponent_Payment#getPrice <em>Price</em>}' attribute.
+	 * Sets the value of the '{@link Implementation.PaymentComponent_Payment#getAmount <em>Amount</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Price</em>' attribute.
-	 * @see #getPrice()
+	 * @param value the new value of the '<em>Amount</em>' attribute.
+	 * @see #getAmount()
 	 * @generated
 	 */
-	void setPrice(double value);
+	void setAmount(double value);
 } // PaymentComponent_Payment

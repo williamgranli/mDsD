@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link Implementation.impl.PaymentComponent_PaymentImpl#getLastName <em>Last Name</em>}</li>
  *   <li>{@link Implementation.impl.PaymentComponent_PaymentImpl#getExpiryMonth <em>Expiry Month</em>}</li>
  *   <li>{@link Implementation.impl.PaymentComponent_PaymentImpl#getExpiryYear <em>Expiry Year</em>}</li>
- *   <li>{@link Implementation.impl.PaymentComponent_PaymentImpl#getPrice <em>Price</em>}</li>
+ *   <li>{@link Implementation.impl.PaymentComponent_PaymentImpl#getAmount <em>Amount</em>}</li>
  * </ul>
  * </p>
  *
@@ -138,24 +138,23 @@ public class PaymentComponent_PaymentImpl extends MinimalEObjectImpl.Container i
 	 */
 	protected int expiryYear = EXPIRY_YEAR_EDEFAULT;
 	/**
-	 * The default value of the '{@link #getPrice() <em>Price</em>}' attribute.
+	 * The default value of the '{@link #getAmount() <em>Amount</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPrice()
+	 * @see #getAmount()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final double PRICE_EDEFAULT = 0.0;
+	protected static final double AMOUNT_EDEFAULT = 0.0;
 	/**
-	 * The cached value of the '{@link #getPrice() <em>Price</em>}' attribute.
+	 * The cached value of the '{@link #getAmount() <em>Amount</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPrice()
+	 * @see #getAmount()
 	 * @generated
 	 * @ordered
 	 */
-	protected double price = PRICE_EDEFAULT;
-
+	protected double amount = AMOUNT_EDEFAULT;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -306,8 +305,8 @@ public class PaymentComponent_PaymentImpl extends MinimalEObjectImpl.Container i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public double getPrice() {
-		return price;
+	public double getAmount() {
+		return amount;
 	}
 
 	/**
@@ -315,11 +314,11 @@ public class PaymentComponent_PaymentImpl extends MinimalEObjectImpl.Container i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPrice(double newPrice) {
-		double oldPrice = price;
-		price = newPrice;
+	public void setAmount(double newAmount) {
+		double oldAmount = amount;
+		amount = newAmount;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ImplementationPackage.PAYMENT_COMPONENT_PAYMENT__PRICE, oldPrice, price));
+			eNotify(new ENotificationImpl(this, Notification.SET, ImplementationPackage.PAYMENT_COMPONENT_PAYMENT__AMOUNT, oldAmount, amount));
 	}
 
 	/**
@@ -342,8 +341,8 @@ public class PaymentComponent_PaymentImpl extends MinimalEObjectImpl.Container i
 				return getExpiryMonth();
 			case ImplementationPackage.PAYMENT_COMPONENT_PAYMENT__EXPIRY_YEAR:
 				return getExpiryYear();
-			case ImplementationPackage.PAYMENT_COMPONENT_PAYMENT__PRICE:
-				return getPrice();
+			case ImplementationPackage.PAYMENT_COMPONENT_PAYMENT__AMOUNT:
+				return getAmount();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -374,8 +373,8 @@ public class PaymentComponent_PaymentImpl extends MinimalEObjectImpl.Container i
 			case ImplementationPackage.PAYMENT_COMPONENT_PAYMENT__EXPIRY_YEAR:
 				setExpiryYear((Integer)newValue);
 				return;
-			case ImplementationPackage.PAYMENT_COMPONENT_PAYMENT__PRICE:
-				setPrice((Double)newValue);
+			case ImplementationPackage.PAYMENT_COMPONENT_PAYMENT__AMOUNT:
+				setAmount((Double)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -407,8 +406,8 @@ public class PaymentComponent_PaymentImpl extends MinimalEObjectImpl.Container i
 			case ImplementationPackage.PAYMENT_COMPONENT_PAYMENT__EXPIRY_YEAR:
 				setExpiryYear(EXPIRY_YEAR_EDEFAULT);
 				return;
-			case ImplementationPackage.PAYMENT_COMPONENT_PAYMENT__PRICE:
-				setPrice(PRICE_EDEFAULT);
+			case ImplementationPackage.PAYMENT_COMPONENT_PAYMENT__AMOUNT:
+				setAmount(AMOUNT_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -434,8 +433,8 @@ public class PaymentComponent_PaymentImpl extends MinimalEObjectImpl.Container i
 				return expiryMonth != EXPIRY_MONTH_EDEFAULT;
 			case ImplementationPackage.PAYMENT_COMPONENT_PAYMENT__EXPIRY_YEAR:
 				return expiryYear != EXPIRY_YEAR_EDEFAULT;
-			case ImplementationPackage.PAYMENT_COMPONENT_PAYMENT__PRICE:
-				return price != PRICE_EDEFAULT;
+			case ImplementationPackage.PAYMENT_COMPONENT_PAYMENT__AMOUNT:
+				return amount != AMOUNT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -462,8 +461,8 @@ public class PaymentComponent_PaymentImpl extends MinimalEObjectImpl.Container i
 		result.append(expiryMonth);
 		result.append(", expiryYear: ");
 		result.append(expiryYear);
-		result.append(", price: ");
-		result.append(price);
+		result.append(", amount: ");
+		result.append(amount);
 		result.append(')');
 		return result.toString();
 	}

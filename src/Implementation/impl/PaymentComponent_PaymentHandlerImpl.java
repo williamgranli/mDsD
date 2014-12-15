@@ -4,10 +4,6 @@ package Implementation.impl;
 
 //banking
 import javax.xml.soap.SOAPException;
-import se.chalmers.cse.mdsd1415.banking.customerRequires.*;
-import se.chalmers.cse.mdsd1415.banking.administratorRequires.*;
-
-
 import Implementation.Bank_AdministratorProvides;
 import Implementation.Bank_CustomerProvides;
 import Implementation.ImplementationPackage;
@@ -180,7 +176,7 @@ public class PaymentComponent_PaymentHandlerImpl extends MinimalEObjectImpl.Cont
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public boolean makePayment(String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName, double price) {
+	public boolean makePayment(String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName, double amount) {
 		// CustomerRequires interface
 		try {
 			// Acquire CustomerRequires object
@@ -189,7 +185,7 @@ public class PaymentComponent_PaymentHandlerImpl extends MinimalEObjectImpl.Cont
 
 			// Make a payment
 			if (banking.makePayment(ccNumber, ccv, expiryMonth, expiryYear, firstName,
-					lastName, price)) {
+					lastName, amount)) {
 				System.out.println("Payment of 25.50 successfully processed");
 				return true;
 			} else {
@@ -212,9 +208,9 @@ public class PaymentComponent_PaymentHandlerImpl extends MinimalEObjectImpl.Cont
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * @generated
 	 */
-	public boolean validateCC(String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName, double price) {
+	public boolean validateCC(String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName) {
 		try {
 			// Acquire CustomerRequires object
 			se.chalmers.cse.mdsd1415.banking.customerRequires.CustomerRequires banking = se.chalmers.cse.mdsd1415.banking.customerRequires.CustomerRequires
@@ -236,8 +232,9 @@ public class PaymentComponent_PaymentHandlerImpl extends MinimalEObjectImpl.Cont
 			e.printStackTrace();
 			return false;
 		}
-		
 	}
+
+
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -464,8 +461,8 @@ public class PaymentComponent_PaymentHandlerImpl extends MinimalEObjectImpl.Cont
 		switch (operationID) {
 			case ImplementationPackage.PAYMENT_COMPONENT_PAYMENT_HANDLER___MAKE_PAYMENT__STRING_STRING_INT_INT_STRING_STRING_DOUBLE:
 				return makePayment((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5), (Double)arguments.get(6));
-			case ImplementationPackage.PAYMENT_COMPONENT_PAYMENT_HANDLER___VALIDATE_CC__STRING_STRING_INT_INT_STRING_STRING_DOUBLE:
-				return validateCC((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5), (Double)arguments.get(6));
+			case ImplementationPackage.PAYMENT_COMPONENT_PAYMENT_HANDLER___VALIDATE_CC__STRING_STRING_INT_INT_STRING_STRING:
+				return validateCC((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5));
 			case ImplementationPackage.PAYMENT_COMPONENT_PAYMENT_HANDLER___ADD_CC__STRING_STRING_INT_INT_STRING_STRING:
 				return addCC((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5));
 			case ImplementationPackage.PAYMENT_COMPONENT_PAYMENT_HANDLER___CHECK_BALANCE__STRING_STRING_INT_INT_STRING_STRING:

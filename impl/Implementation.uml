@@ -225,7 +225,7 @@
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_IheC0IRKEeSMS5FZ7DY3uw" name="lastName">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedParameter>
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_Kq3YQIRKEeSMS5FZ7DY3uw" name="price">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_Kq3YQIRKEeSMS5FZ7DY3uw" name="amount">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDouble"/>
           </ownedParameter>
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_ipku8IRcEeS5TvfISGxxPQ" name="returnValue" direction="return">
@@ -250,9 +250,6 @@
           </ownedParameter>
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_ZiNnAIRKEeSMS5FZ7DY3uw" name="lastName">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-          </ownedParameter>
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_bYyuIIRKEeSMS5FZ7DY3uw" name="price">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
           </ownedParameter>
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_dd24AIRcEeS5TvfISGxxPQ" name="returnValue" direction="return">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
@@ -388,7 +385,7 @@
         <ownedAttribute xmi:type="uml:Property" xmi:id="_sXm1IIRJEeSMS5FZ7DY3uw" name="expiryYear">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_2zVNIIRJEeSMS5FZ7DY3uw" name="price">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_2zVNIIRJEeSMS5FZ7DY3uw" name="amount">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
         </ownedAttribute>
       </nestedClassifier>
