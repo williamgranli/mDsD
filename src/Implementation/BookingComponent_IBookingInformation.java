@@ -40,4 +40,20 @@ public interface BookingComponent_IBookingInformation extends EObject {
 	 */
 	EList<String> searchForBooking(String bookingReference);
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false" bookingReferenceDataType="org.eclipse.uml2.types.String" bookingReferenceRequired="true" bookingReferenceOrdered="false"
+	 * @generated
+	 */
+	boolean isPaidFor(String bookingReference);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false" bookingReferenceDataType="org.eclipse.uml2.types.String" bookingReferenceRequired="true" bookingReferenceOrdered="false"
+	 * @generated
+	 */
+	boolean makePayment(String bookingReference);
+
 } // BookingComponent_IBookingInformation

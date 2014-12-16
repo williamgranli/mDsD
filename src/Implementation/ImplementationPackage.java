@@ -572,7 +572,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OCCUPANCY_COMPONENT_IOCCUPANCY___CHECK_OUT_GUEST__STRING_STRING_STRING = 1;
+	int OCCUPANCY_COMPONENT_IOCCUPANCY___CHECK_OUT_GUEST__INT_STRING_STRING = 1;
 
 	/**
 	 * The operation id for the '<em>List Guests In Room</em>' operation.
@@ -681,7 +681,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___CHECK_OUT_GUEST__STRING_STRING_STRING = OCCUPANCY_COMPONENT_IOCCUPANCY_DECISION_OPERATION_COUNT + 1;
+	int OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___CHECK_OUT_GUEST__INT_STRING_STRING = OCCUPANCY_COMPONENT_IOCCUPANCY_DECISION_OPERATION_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>List Guests In Room</em>' operation.
@@ -866,13 +866,31 @@ public interface ImplementationPackage extends EPackage {
 	int BOOKING_COMPONENT_IBOOKING_INFORMATION___SEARCH_FOR_BOOKING__STRING = 2;
 
 	/**
+	 * The operation id for the '<em>Is Paid For</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_COMPONENT_IBOOKING_INFORMATION___IS_PAID_FOR__STRING = 3;
+
+	/**
+	 * The operation id for the '<em>Make Payment</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_COMPONENT_IBOOKING_INFORMATION___MAKE_PAYMENT__STRING = 4;
+
+	/**
 	 * The number of operations of the '<em>Booking Component IBooking Information</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT = 3;
+	int BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT = 5;
 
 	/**
 	 * The meta object id for the '{@link Implementation.impl.PaymentComponentImpl <em>Payment Component</em>}' class.
@@ -2174,13 +2192,22 @@ public interface ImplementationPackage extends EPackage {
 	int BOOKING_COMPONENT_BOOKING__ROOMS = 7;
 
 	/**
+	 * The feature id for the '<em><b>Is Paid</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_COMPONENT_BOOKING__IS_PAID = 8;
+
+	/**
 	 * The number of structural features of the '<em>Booking Component Booking</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_COMPONENT_BOOKING_FEATURE_COUNT = 8;
+	int BOOKING_COMPONENT_BOOKING_FEATURE_COUNT = 9;
 
 	/**
 	 * The operation id for the '<em>Add Additional Service To Booking</em>' operation.
@@ -2496,6 +2523,24 @@ public interface ImplementationPackage extends EPackage {
 	 * @ordered
 	 */
 	int BOOKING_COMPONENT_BOOKING_MANAGER___SEARCH_FOR_BOOKING__STRING = BOOKING_COMPONENT_IBOOKING_INFORMATION___SEARCH_FOR_BOOKING__STRING;
+
+	/**
+	 * The operation id for the '<em>Is Paid For</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_COMPONENT_BOOKING_MANAGER___IS_PAID_FOR__STRING = BOOKING_COMPONENT_IBOOKING_INFORMATION___IS_PAID_FOR__STRING;
+
+	/**
+	 * The operation id for the '<em>Make Payment</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_COMPONENT_BOOKING_MANAGER___MAKE_PAYMENT__STRING = BOOKING_COMPONENT_IBOOKING_INFORMATION___MAKE_PAYMENT__STRING;
 
 	/**
 	 * The operation id for the '<em>Make Booking</em>' operation.
@@ -3803,7 +3848,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @see Implementation.OccupancyComponent_IOccupancy#checkOutGuest(int, java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	EOperation getOccupancyComponent_IOccupancy__CheckOutGuest__String_String_String();
+	EOperation getOccupancyComponent_IOccupancy__CheckOutGuest__int_String_String();
 
 	/**
 	 * Returns the meta object for the '{@link Implementation.OccupancyComponent_IOccupancy#listGuestsInRoom(int) <em>List Guests In Room</em>}' operation.
@@ -4007,6 +4052,26 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getBookingComponent_IBookingInformation__SearchForBooking__String();
+
+	/**
+	 * Returns the meta object for the '{@link Implementation.BookingComponent_IBookingInformation#isPaidFor(java.lang.String) <em>Is Paid For</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Paid For</em>' operation.
+	 * @see Implementation.BookingComponent_IBookingInformation#isPaidFor(java.lang.String)
+	 * @generated
+	 */
+	EOperation getBookingComponent_IBookingInformation__IsPaidFor__String();
+
+	/**
+	 * Returns the meta object for the '{@link Implementation.BookingComponent_IBookingInformation#makePayment(java.lang.String) <em>Make Payment</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Make Payment</em>' operation.
+	 * @see Implementation.BookingComponent_IBookingInformation#makePayment(java.lang.String)
+	 * @generated
+	 */
+	EOperation getBookingComponent_IBookingInformation__MakePayment__String();
 
 	/**
 	 * Returns the meta object for class '{@link Implementation.PaymentComponent <em>Payment Component</em>}'.
@@ -4874,6 +4939,17 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getBookingComponent_Booking_Rooms();
+
+	/**
+	 * Returns the meta object for the attribute '{@link Implementation.BookingComponent_Booking#isPaid <em>Is Paid</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Is Paid</em>'.
+	 * @see Implementation.BookingComponent_Booking#isPaid()
+	 * @see #getBookingComponent_Booking()
+	 * @generated
+	 */
+	EAttribute getBookingComponent_Booking_IsPaid();
 
 	/**
 	 * Returns the meta object for the '{@link Implementation.BookingComponent_Booking#addAdditionalServiceToBooking(java.lang.String, int) <em>Add Additional Service To Booking</em>}' operation.
@@ -6063,7 +6139,7 @@ public interface ImplementationPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation OCCUPANCY_COMPONENT_IOCCUPANCY___CHECK_OUT_GUEST__STRING_STRING_STRING = eINSTANCE.getOccupancyComponent_IOccupancy__CheckOutGuest__String_String_String();
+		EOperation OCCUPANCY_COMPONENT_IOCCUPANCY___CHECK_OUT_GUEST__INT_STRING_STRING = eINSTANCE.getOccupancyComponent_IOccupancy__CheckOutGuest__int_String_String();
 
 		/**
 		 * The meta object literal for the '<em><b>List Guests In Room</b></em>' operation.
@@ -6230,6 +6306,22 @@ public interface ImplementationPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation BOOKING_COMPONENT_IBOOKING_INFORMATION___SEARCH_FOR_BOOKING__STRING = eINSTANCE.getBookingComponent_IBookingInformation__SearchForBooking__String();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Paid For</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation BOOKING_COMPONENT_IBOOKING_INFORMATION___IS_PAID_FOR__STRING = eINSTANCE.getBookingComponent_IBookingInformation__IsPaidFor__String();
+
+		/**
+		 * The meta object literal for the '<em><b>Make Payment</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation BOOKING_COMPONENT_IBOOKING_INFORMATION___MAKE_PAYMENT__STRING = eINSTANCE.getBookingComponent_IBookingInformation__MakePayment__String();
 
 		/**
 		 * The meta object literal for the '{@link Implementation.impl.PaymentComponentImpl <em>Payment Component</em>}' class.
@@ -6926,6 +7018,14 @@ public interface ImplementationPackage extends EPackage {
 		 * @generated
 		 */
 		EReference BOOKING_COMPONENT_BOOKING__ROOMS = eINSTANCE.getBookingComponent_Booking_Rooms();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Paid</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BOOKING_COMPONENT_BOOKING__IS_PAID = eINSTANCE.getBookingComponent_Booking_IsPaid();
 
 		/**
 		 * The meta object literal for the '<em><b>Add Additional Service To Booking</b></em>' operation.

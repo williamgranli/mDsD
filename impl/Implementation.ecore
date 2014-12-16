@@ -130,6 +130,12 @@
         eType="ecore:EDataType types.ecore#//String">
       <eParameters name="bookingReference" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     </eOperations>
+    <eOperations name="isPaidFor" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Boolean">
+      <eParameters name="bookingReference" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+    </eOperations>
+    <eOperations name="makePayment" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Boolean">
+      <eParameters name="bookingReference" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+    </eOperations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PaymentComponent"/>
   <eClassifiers xsi:type="ecore:EClass" name="PaymentComponent_IPayment" abstract="true"
@@ -454,6 +460,8 @@
         lowerBound="1" eType="#//BookingComponent_PaymentDetails"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="rooms" ordered="false"
         lowerBound="1" upperBound="-1" eType="#//BookingComponent_RoomType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isPaid" ordered="false"
+        lowerBound="1" eType="ecore:EDataType types.ecore#//Boolean" defaultValueLiteral="false"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BookingComponent_AdditionalService">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"

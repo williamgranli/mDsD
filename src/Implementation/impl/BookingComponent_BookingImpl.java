@@ -35,6 +35,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link Implementation.impl.BookingComponent_BookingImpl#getGuests <em>Guests</em>}</li>
  *   <li>{@link Implementation.impl.BookingComponent_BookingImpl#getPaymentDetails <em>Payment Details</em>}</li>
  *   <li>{@link Implementation.impl.BookingComponent_BookingImpl#getRooms <em>Rooms</em>}</li>
+ *   <li>{@link Implementation.impl.BookingComponent_BookingImpl#isPaid <em>Is Paid</em>}</li>
  * </ul>
  * </p>
  *
@@ -160,6 +161,26 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 	 * @ordered
 	 */
 	protected EList<BookingComponent_RoomType> rooms;
+
+	/**
+	 * The default value of the '{@link #isPaid() <em>Is Paid</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isPaid()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean IS_PAID_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isPaid() <em>Is Paid</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isPaid()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean isPaid = IS_PAID_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -390,6 +411,27 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isPaid() {
+		return isPaid;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setIsPaid(boolean newIsPaid) {
+		boolean oldIsPaid = isPaid;
+		isPaid = newIsPaid;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ImplementationPackage.BOOKING_COMPONENT_BOOKING__IS_PAID, oldIsPaid, isPaid));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public void addAdditionalServiceToBooking(BookingComponent_AdditionalService newService) {
@@ -604,6 +646,8 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 				return basicGetPaymentDetails();
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING__ROOMS:
 				return getRooms();
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING__IS_PAID:
+				return isPaid();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -644,6 +688,9 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 				getRooms().clear();
 				getRooms().addAll((Collection<? extends BookingComponent_RoomType>)newValue);
 				return;
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING__IS_PAID:
+				setIsPaid((Boolean)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -680,6 +727,9 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING__ROOMS:
 				getRooms().clear();
 				return;
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING__IS_PAID:
+				setIsPaid(IS_PAID_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -708,6 +758,8 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 				return paymentDetails != null;
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING__ROOMS:
 				return rooms != null && !rooms.isEmpty();
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING__IS_PAID:
+				return isPaid != IS_PAID_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -774,6 +826,8 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 		result.append(referenceNumber);
 		result.append(", currentCost: ");
 		result.append(currentCost);
+		result.append(", isPaid: ");
+		result.append(isPaid);
 		result.append(')');
 		return result.toString();
 	}

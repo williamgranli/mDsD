@@ -522,6 +522,32 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
+	public boolean isPaidFor(String bookingReference) {
+		for (BookingComponent_Booking booking : bookings) {
+			if (booking.getReferenceNumber().equals(bookingReference)) {
+				return booking.isPaid();
+			}
+		}
+		//should not happen
+		return false;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean makePayment(String bookingReference) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
 	public void addGuestToBooking(String bookingReference, String firstName, String lastName, String address) {
 		BookingComponent_Booking bookingToChange = findBooking(bookingReference);
 		if(bookingToChange.equals("NULL"))
@@ -701,6 +727,10 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 				return getRoomTypesInBooking((String)arguments.get(0));
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___SEARCH_FOR_BOOKING__STRING:
 				return searchForBooking((String)arguments.get(0));
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___IS_PAID_FOR__STRING:
+				return isPaidFor((String)arguments.get(0));
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___MAKE_PAYMENT__STRING:
+				return makePayment((String)arguments.get(0));
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___MAKE_BOOKING__STRING_DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_STRING_STRING:
 				makeBooking((String)arguments.get(0), (Date)arguments.get(1), (Date)arguments.get(2), (String)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5), (String)arguments.get(6), (String)arguments.get(7), (String)arguments.get(8), (String)arguments.get(9), (String)arguments.get(10));
 				return null;

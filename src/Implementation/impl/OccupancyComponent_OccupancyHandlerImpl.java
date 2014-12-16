@@ -273,24 +273,30 @@ public class OccupancyComponent_OccupancyHandlerImpl extends MinimalEObjectImpl.
 				new EObjectResolvingEList<String>(BookingComponent_Booking.class, 
 						this, ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER__OCCUPANCY);
 		
-		
+		//Get guests from occupancy object with this roomNumber
 		guestsInRoom = listGuestsInRoom(roomNumber);
 				
+		//Iterate through the guests in the room to match it
+		//with the one talking to the receptionist
 		for(String guest: guestsInRoom) {
 			if (guest == fullName) {
-				
 				for (OccupancyComponent_Occupancy currentOccupancy : occupancy) {
+					//If this occupancy is not checked out...
 					if (currentOccupancy.getRoomNumber() == roomNumber 
 							&& currentOccupancy.getCheckOutDateTime() != 0L) {
-						
+						//...check out the occupancy
 						currentOccupancy.setCheckOutDateTime(System.currentTimeMillis());
-
-					}
-				
-				
-
-				
+						if (iBooking.isPaidFor(currentOccupancy.getBookingReference()) == true) {
+							System.out.println("Booking has already been paid for!");
+						}
+						else { 
+							iBooking.makePayment(currentOccupancy.getBookingReference());
+						}
+					}				
 				}
+			}
+			else {
+				System.out.println("Room number and name of guest does not match an occupancy");
 			}
 		}
 	}
@@ -515,7 +521,7 @@ public class OccupancyComponent_OccupancyHandlerImpl extends MinimalEObjectImpl.
 		if (baseClass == OccupancyComponent_IOccupancy.class) {
 			switch (baseOperationID) {
 				case ImplementationPackage.OCCUPANCY_COMPONENT_IOCCUPANCY___CHECK_IN_GUEST__STRING_STRING_STRING_STRING_STRING_STRING: return ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___CHECK_IN_GUEST__STRING_STRING_STRING_STRING_STRING_STRING;
-				case ImplementationPackage.OCCUPANCY_COMPONENT_IOCCUPANCY___CHECK_OUT_GUEST__STRING_STRING_STRING: return ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___CHECK_OUT_GUEST__STRING_STRING_STRING;
+				case ImplementationPackage.OCCUPANCY_COMPONENT_IOCCUPANCY___CHECK_OUT_GUEST__INT_STRING_STRING: return ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___CHECK_OUT_GUEST__INT_STRING_STRING;
 				case ImplementationPackage.OCCUPANCY_COMPONENT_IOCCUPANCY___LIST_GUESTS_IN_ROOM__INT: return ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___LIST_GUESTS_IN_ROOM__INT;
 				case ImplementationPackage.OCCUPANCY_COMPONENT_IOCCUPANCY___NUMBER_OF_GUESTS_IN_HOTEL: return ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___NUMBER_OF_GUESTS_IN_HOTEL;
 				case ImplementationPackage.OCCUPANCY_COMPONENT_IOCCUPANCY___IS_OCCUPIED__INT: return ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___IS_OCCUPIED__INT;
@@ -538,7 +544,7 @@ public class OccupancyComponent_OccupancyHandlerImpl extends MinimalEObjectImpl.
 			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___CHECK_IN_GUEST__STRING_STRING_STRING_STRING_STRING_STRING:
 				checkInGuest((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5));
 				return null;
-			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___CHECK_OUT_GUEST__STRING_STRING_STRING:
+			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___CHECK_OUT_GUEST__INT_STRING_STRING:
 				checkOutGuest((Integer)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2));
 				return null;
 			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___LIST_GUESTS_IN_ROOM__INT:

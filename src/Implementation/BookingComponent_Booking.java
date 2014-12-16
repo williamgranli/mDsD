@@ -24,6 +24,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link Implementation.BookingComponent_Booking#getGuests <em>Guests</em>}</li>
  *   <li>{@link Implementation.BookingComponent_Booking#getPaymentDetails <em>Payment Details</em>}</li>
  *   <li>{@link Implementation.BookingComponent_Booking#getRooms <em>Rooms</em>}</li>
+ *   <li>{@link Implementation.BookingComponent_Booking#isPaid <em>Is Paid</em>}</li>
  * </ul>
  * </p>
  *
@@ -209,6 +210,33 @@ public interface BookingComponent_Booking extends EObject {
 	 * @generated
 	 */
 	EList<BookingComponent_RoomType> getRooms();
+
+	/**
+	 * Returns the value of the '<em><b>Is Paid</b></em>' attribute.
+	 * The default value is <code>"false"</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Is Paid</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Is Paid</em>' attribute.
+	 * @see #setIsPaid(boolean)
+	 * @see Implementation.ImplementationPackage#getBookingComponent_Booking_IsPaid()
+	 * @model default="false" dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false"
+	 * @generated
+	 */
+	boolean isPaid();
+
+	/**
+	 * Sets the value of the '{@link Implementation.BookingComponent_Booking#isPaid <em>Is Paid</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Is Paid</em>' attribute.
+	 * @see #isPaid()
+	 * @generated
+	 */
+	void setIsPaid(boolean value);
 
 	/**
 	 * <!-- begin-user-doc -->
