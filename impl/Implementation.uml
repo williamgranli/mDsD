@@ -84,10 +84,6 @@
         <ownedAttribute xmi:type="uml:Property" xmi:id="_QFMgQHsFEeSN3_59vLF8fg" name="checkOutDateTime">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
         </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_WxMMQHsHEeSN3_59vLF8fg" name="Guest" type="_sQm7MHsHEeSN3_59vLF8fg">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_2xjKYHsHEeSN3_59vLF8fg" value="1"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_2xjxcHsHEeSN3_59vLF8fg" value="*"/>
-        </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_cz5OMHsKEeSN3_59vLF8fg" name="bookingReference">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedAttribute>
@@ -131,14 +127,6 @@
         <ownedAttribute xmi:type="uml:Property" xmi:id="_NLVP0HsIEeSN3_59vLF8fg" name="lastName">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedAttribute>
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_GMLacHsKEeSN3_59vLF8fg" name="Guest">
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_RRRfkHsKEeSN3_59vLF8fg" name="firstName">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-          </ownedParameter>
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_T5NLIHsKEeSN3_59vLF8fg" name="lastName">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-          </ownedParameter>
-        </ownedOperation>
       </nestedClassifier>
       <nestedClassifier xmi:type="uml:Interface" xmi:id="_at5KQHp2EeS6O5zO6NZCqA" name="IOccupancy">
         <ownedOperation xmi:type="uml:Operation" xmi:id="_qWr7QHr-EeS88peCe4NMnw" name="checkInGuest">

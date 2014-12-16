@@ -119,10 +119,6 @@
           <element xmi:type="uml:Property" href="Implementation.uml#_QFMgQHsFEeSN3_59vLF8fg"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_QFPjkXsFEeSN3_59vLF8fg"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_WxREwHsHEeSN3_59vLF8fg" type="3012">
-          <element xmi:type="uml:Property" href="Implementation.uml#_WxMMQHsHEeSN3_59vLF8fg"/>
-          <layoutConstraint xmi:type="notation:Location" xmi:id="_WxREwXsHEeSN3_59vLF8fg"/>
-        </children>
         <children xmi:type="notation:Shape" xmi:id="_cz7qcHsKEeSN3_59vLF8fg" type="3012">
           <element xmi:type="uml:Property" href="Implementation.uml#_cz5OMHsKEeSN3_59vLF8fg"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_cz7qcXsKEeSN3_59vLF8fg"/>
@@ -172,17 +168,6 @@
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sQpXdXsHEeSN3_59vLF8fg"/>
       </children>
       <children xmi:type="notation:BasicCompartment" xmi:id="_sQpXdnsHEeSN3_59vLF8fg" type="7018">
-        <children xmi:type="notation:Shape" xmi:id="_GMOdwHsKEeSN3_59vLF8fg" type="3013">
-          <styles xmi:type="notation:StringListValueStyle" xmi:id="_WIXxYHsKEeSN3_59vLF8fg" name="maskLabel">
-            <stringListValue>parametersType</stringListValue>
-            <stringListValue>parametersName</stringListValue>
-            <stringListValue>visibility</stringListValue>
-            <stringListValue>name</stringListValue>
-            <stringListValue>returnType</stringListValue>
-          </styles>
-          <element xmi:type="uml:Operation" href="Implementation.uml#_GMLacHsKEeSN3_59vLF8fg"/>
-          <layoutConstraint xmi:type="notation:Location" xmi:id="_GMOdwXsKEeSN3_59vLF8fg"/>
-        </children>
         <styles xmi:type="notation:TitleStyle" xmi:id="_sQpXd3sHEeSN3_59vLF8fg"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_sQpXeHsHEeSN3_59vLF8fg"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_sQpXeXsHEeSN3_59vLF8fg"/>
