@@ -5,7 +5,10 @@ package Implementation.impl;
 import Implementation.ImplementationPackage;
 import Implementation.OccupancyComponent_Guest;
 import Implementation.OccupancyComponent_Occupancy;
+
+import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
@@ -60,7 +63,7 @@ public class OccupancyComponent_OccupancyImpl extends MinimalEObjectImpl.Contain
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int CHECK_IN_DATE_TIME_EDEFAULT = 0;
+	protected static final long CHECK_IN_DATE_TIME_EDEFAULT = 0L;
 
 	/**
 	 * The cached value of the '{@link #getCheckInDateTime() <em>Check In Date Time</em>}' attribute.
@@ -70,7 +73,7 @@ public class OccupancyComponent_OccupancyImpl extends MinimalEObjectImpl.Contain
 	 * @generated
 	 * @ordered
 	 */
-	protected int checkInDateTime = CHECK_IN_DATE_TIME_EDEFAULT;
+	protected long checkInDateTime = CHECK_IN_DATE_TIME_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getCheckOutDateTime() <em>Check Out Date Time</em>}' attribute.
@@ -80,7 +83,7 @@ public class OccupancyComponent_OccupancyImpl extends MinimalEObjectImpl.Contain
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int CHECK_OUT_DATE_TIME_EDEFAULT = 0;
+	protected static final long CHECK_OUT_DATE_TIME_EDEFAULT = 0L;
 
 	/**
 	 * The cached value of the '{@link #getCheckOutDateTime() <em>Check Out Date Time</em>}' attribute.
@@ -90,7 +93,7 @@ public class OccupancyComponent_OccupancyImpl extends MinimalEObjectImpl.Contain
 	 * @generated
 	 * @ordered
 	 */
-	protected int checkOutDateTime = CHECK_OUT_DATE_TIME_EDEFAULT;
+	protected long checkOutDateTime = CHECK_OUT_DATE_TIME_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getGuest() <em>Guest</em>}' reference list.
@@ -177,7 +180,7 @@ public class OccupancyComponent_OccupancyImpl extends MinimalEObjectImpl.Contain
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getCheckInDateTime() {
+	public long getCheckInDateTime() {
 		return checkInDateTime;
 	}
 
@@ -186,8 +189,20 @@ public class OccupancyComponent_OccupancyImpl extends MinimalEObjectImpl.Contain
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public void setCheckInDateTime(long newCheckInDateTime) {
+		long oldCheckInDateTime = checkInDateTime;
+		checkInDateTime = newCheckInDateTime;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY__CHECK_IN_DATE_TIME, oldCheckInDateTime, checkInDateTime));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
 	public void setCheckInDateTime(int newCheckInDateTime) {
-		int oldCheckInDateTime = checkInDateTime;
+		int oldCheckInDateTime = newCheckInDateTime;
 		checkInDateTime = newCheckInDateTime;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY__CHECK_IN_DATE_TIME, oldCheckInDateTime, checkInDateTime));
@@ -198,7 +213,7 @@ public class OccupancyComponent_OccupancyImpl extends MinimalEObjectImpl.Contain
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getCheckOutDateTime() {
+	public long getCheckOutDateTime() {
 		return checkOutDateTime;
 	}
 
@@ -207,8 +222,8 @@ public class OccupancyComponent_OccupancyImpl extends MinimalEObjectImpl.Contain
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCheckOutDateTime(int newCheckOutDateTime) {
-		int oldCheckOutDateTime = checkOutDateTime;
+	public void setCheckOutDateTime(long newCheckOutDateTime) {
+		long oldCheckOutDateTime = checkOutDateTime;
 		checkOutDateTime = newCheckOutDateTime;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY__CHECK_OUT_DATE_TIME, oldCheckOutDateTime, checkOutDateTime));
@@ -262,6 +277,44 @@ public class OccupancyComponent_OccupancyImpl extends MinimalEObjectImpl.Contain
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public String getPartner(String firstName, String lastName) {
+		for(OccupancyComponent_Guest guest: guests){
+			if ((guest.getFirstName()).equals(firstName) && (guest.getLastName()).equals(lastName))
+				return firstName + "," + lastName;
+		}
+		
+		return null;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public boolean addGuestToOccupancy(String firstName, String lastName) {
+
+		guests.add(new OccupancyComponent_GuestImpl(firstName, lastName));
+		return true;
+
+		
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public boolean isInOccupancy(EList<String> roomTypes, String guestRoomType) {
+		return false; //sdadfdsffdsfdsfdsfdsfds
+	}
+
+
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -296,10 +349,10 @@ public class OccupancyComponent_OccupancyImpl extends MinimalEObjectImpl.Contain
 				setRoomNumber((Integer)newValue);
 				return;
 			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY__CHECK_IN_DATE_TIME:
-				setCheckInDateTime((Integer)newValue);
+				setCheckInDateTime((Long)newValue);
 				return;
 			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY__CHECK_OUT_DATE_TIME:
-				setCheckOutDateTime((Integer)newValue);
+				setCheckOutDateTime((Long)newValue);
 				return;
 			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY__GUEST:
 				getGuest().clear();
@@ -368,6 +421,25 @@ public class OccupancyComponent_OccupancyImpl extends MinimalEObjectImpl.Contain
 				return guests != null && !guests.isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	@SuppressWarnings("unchecked")
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY___GET_PARTNER__STRING_STRING:
+				return getPartner((String)arguments.get(0), (String)arguments.get(1));
+			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY___ADD_GUEST_TO_OCCUPANCY__STRING_STRING:
+				return addGuestToOccupancy((String)arguments.get(0), (String)arguments.get(1));
+			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY___IS_IN_OCCUPANCY__ELIST_STRING:
+				return isInOccupancy((EList<String>)arguments.get(0), (String)arguments.get(1));
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

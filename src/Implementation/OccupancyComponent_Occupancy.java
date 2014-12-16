@@ -63,12 +63,12 @@ public interface OccupancyComponent_Occupancy extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Check In Date Time</em>' attribute.
-	 * @see #setCheckInDateTime(int)
+	 * @see #setCheckInDateTime(long)
 	 * @see Implementation.ImplementationPackage#getOccupancyComponent_Occupancy_CheckInDateTime()
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
+	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	int getCheckInDateTime();
+	long getCheckInDateTime();
 
 	/**
 	 * Sets the value of the '{@link Implementation.OccupancyComponent_Occupancy#getCheckInDateTime <em>Check In Date Time</em>}' attribute.
@@ -78,7 +78,7 @@ public interface OccupancyComponent_Occupancy extends EObject {
 	 * @see #getCheckInDateTime()
 	 * @generated
 	 */
-	void setCheckInDateTime(int value);
+	void setCheckInDateTime(long value);
 
 	/**
 	 * Returns the value of the '<em><b>Check Out Date Time</b></em>' attribute.
@@ -89,12 +89,12 @@ public interface OccupancyComponent_Occupancy extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Check Out Date Time</em>' attribute.
-	 * @see #setCheckOutDateTime(int)
+	 * @see #setCheckOutDateTime(long)
 	 * @see Implementation.ImplementationPackage#getOccupancyComponent_Occupancy_CheckOutDateTime()
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
+	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	int getCheckOutDateTime();
+	long getCheckOutDateTime();
 
 	/**
 	 * Sets the value of the '{@link Implementation.OccupancyComponent_Occupancy#getCheckOutDateTime <em>Check Out Date Time</em>}' attribute.
@@ -104,7 +104,7 @@ public interface OccupancyComponent_Occupancy extends EObject {
 	 * @see #getCheckOutDateTime()
 	 * @generated
 	 */
-	void setCheckOutDateTime(int value);
+	void setCheckOutDateTime(long value);
 
 	/**
 	 * Returns the value of the '<em><b>Guest</b></em>' reference list.
@@ -163,5 +163,29 @@ public interface OccupancyComponent_Occupancy extends EObject {
 	 * @generated
 	 */
 	EList<OccupancyComponent_Guest> getGuests();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" firstNameDataType="org.eclipse.uml2.types.String" firstNameRequired="true" firstNameOrdered="false" lastNameDataType="org.eclipse.uml2.types.String" lastNameRequired="true" lastNameOrdered="false"
+	 * @generated
+	 */
+	String getPartner(String firstName, String lastName);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false" firstNameDataType="org.eclipse.uml2.types.String" firstNameRequired="true" firstNameOrdered="false" lastNameDataType="org.eclipse.uml2.types.String" lastNameRequired="true" lastNameOrdered="false"
+	 * @generated
+	 */
+	boolean addGuestToOccupancy(String firstName, String lastName);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false" roomTypesDataType="org.eclipse.uml2.types.String" roomTypesMany="true" roomTypesOrdered="false" guestRoomTypeDataType="org.eclipse.uml2.types.String" guestRoomTypeRequired="true" guestRoomTypeOrdered="false"
+	 * @generated
+	 */
+	boolean isInOccupancy(EList<String> roomTypes, String guestRoomType);
 
 } // OccupancyComponent_Occupancy

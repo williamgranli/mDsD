@@ -63,6 +63,18 @@
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//OccupancyComponent_Occupancy/bookingReference"/>
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
           propertySortChoices="true" ecoreFeature="ecore:EReference Implementation.ecore#//OccupancyComponent_Occupancy/guests"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//OccupancyComponent_Occupancy/getPartner">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//OccupancyComponent_Occupancy/getPartner/firstName"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//OccupancyComponent_Occupancy/getPartner/lastName"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//OccupancyComponent_Occupancy/addGuestToOccupancy">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//OccupancyComponent_Occupancy/addGuestToOccupancy/firstName"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//OccupancyComponent_Occupancy/addGuestToOccupancy/lastName"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//OccupancyComponent_Occupancy/isInOccupancy">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//OccupancyComponent_Occupancy/isInOccupancy/roomTypes"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//OccupancyComponent_Occupancy/isInOccupancy/guestRoomType"/>
+      </genOperations>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//OccupancyComponent_Guest">
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//OccupancyComponent_Guest/firstName"/>
@@ -77,6 +89,9 @@
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//OccupancyComponent_IOccupancy/checkInGuest/bookingReference"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//OccupancyComponent_IOccupancy/checkInGuest/firstName"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//OccupancyComponent_IOccupancy/checkInGuest/lastName"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//OccupancyComponent_IOccupancy/checkInGuest/roomType"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//OccupancyComponent_IOccupancy/checkInGuest/partnerFirstName"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//OccupancyComponent_IOccupancy/checkInGuest/partnerLastName"/>
       </genOperations>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//OccupancyComponent_IOccupancy/checkOutGuest">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//OccupancyComponent_IOccupancy/checkOutGuest/bookingReference"/>
@@ -91,9 +106,8 @@
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//OccupancyComponent_IOccupancy/isOccupied">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//OccupancyComponent_IOccupancy/isOccupied/roomNumber"/>
       </genOperations>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//OccupancyComponent_IOccupancy/addGuestToOccupancy">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//OccupancyComponent_IOccupancy/addGuestToOccupancy/firstName"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//OccupancyComponent_IOccupancy/addGuestToOccupancy/lastName"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//OccupancyComponent_IOccupancy/getAvailableRooms">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//OccupancyComponent_IOccupancy/getAvailableRooms/roomType"/>
       </genOperations>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//OccupancyComponent_OccupancyHandler">

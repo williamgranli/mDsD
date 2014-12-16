@@ -465,13 +465,40 @@ public interface ImplementationPackage extends EPackage {
 	int OCCUPANCY_COMPONENT_OCCUPANCY_FEATURE_COUNT = 6;
 
 	/**
+	 * The operation id for the '<em>Get Partner</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OCCUPANCY_COMPONENT_OCCUPANCY___GET_PARTNER__STRING_STRING = 0;
+
+	/**
+	 * The operation id for the '<em>Add Guest To Occupancy</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OCCUPANCY_COMPONENT_OCCUPANCY___ADD_GUEST_TO_OCCUPANCY__STRING_STRING = 1;
+
+	/**
+	 * The operation id for the '<em>Is In Occupancy</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OCCUPANCY_COMPONENT_OCCUPANCY___IS_IN_OCCUPANCY__ELIST_STRING = 2;
+
+	/**
 	 * The number of operations of the '<em>Occupancy Component Occupancy</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OCCUPANCY_COMPONENT_OCCUPANCY_OPERATION_COUNT = 0;
+	int OCCUPANCY_COMPONENT_OCCUPANCY_OPERATION_COUNT = 3;
 
 	/**
 	 * The meta object id for the '{@link Implementation.impl.OccupancyComponent_GuestImpl <em>Occupancy Component Guest</em>}' class.
@@ -554,7 +581,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OCCUPANCY_COMPONENT_IOCCUPANCY___CHECK_IN_GUEST__STRING_STRING_STRING = 0;
+	int OCCUPANCY_COMPONENT_IOCCUPANCY___CHECK_IN_GUEST__STRING_STRING_STRING_STRING_STRING_STRING = 0;
 
 	/**
 	 * The operation id for the '<em>Check Out Guest</em>' operation.
@@ -599,16 +626,16 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OCCUPANCY_COMPONENT_IOCCUPANCY___IS_OCCUPIED__STRING = 5;
+	int OCCUPANCY_COMPONENT_IOCCUPANCY___IS_OCCUPIED__INT = 5;
 
 	/**
-	 * The operation id for the '<em>Add Guest To Occupancy</em>' operation.
+	 * The operation id for the '<em>Get Available Rooms</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OCCUPANCY_COMPONENT_IOCCUPANCY___ADD_GUEST_TO_OCCUPANCY__STRING_STRING = 6;
+	int OCCUPANCY_COMPONENT_IOCCUPANCY___GET_AVAILABLE_ROOMS__STRING = 6;
 
 	/**
 	 * The number of operations of the '<em>Occupancy Component IOccupancy</em>' class.
@@ -672,7 +699,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___CHECK_IN_GUEST__STRING_STRING_STRING = OCCUPANCY_COMPONENT_IOCCUPANCY_DECISION_OPERATION_COUNT + 0;
+	int OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___CHECK_IN_GUEST__STRING_STRING_STRING_STRING_STRING_STRING = OCCUPANCY_COMPONENT_IOCCUPANCY_DECISION_OPERATION_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Check Out Guest</em>' operation.
@@ -717,16 +744,16 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___IS_OCCUPIED__STRING = OCCUPANCY_COMPONENT_IOCCUPANCY_DECISION_OPERATION_COUNT + 5;
+	int OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___IS_OCCUPIED__INT = OCCUPANCY_COMPONENT_IOCCUPANCY_DECISION_OPERATION_COUNT + 5;
 
 	/**
-	 * The operation id for the '<em>Add Guest To Occupancy</em>' operation.
+	 * The operation id for the '<em>Get Available Rooms</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___ADD_GUEST_TO_OCCUPANCY__STRING_STRING = OCCUPANCY_COMPONENT_IOCCUPANCY_DECISION_OPERATION_COUNT + 6;
+	int OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___GET_AVAILABLE_ROOMS__STRING = OCCUPANCY_COMPONENT_IOCCUPANCY_DECISION_OPERATION_COUNT + 6;
 
 	/**
 	 * The number of operations of the '<em>Occupancy Component Occupancy Handler</em>' class.
@@ -3716,6 +3743,36 @@ public interface ImplementationPackage extends EPackage {
 	EReference getOccupancyComponent_Occupancy_Guests();
 
 	/**
+	 * Returns the meta object for the '{@link Implementation.OccupancyComponent_Occupancy#getPartner(java.lang.String, java.lang.String) <em>Get Partner</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Partner</em>' operation.
+	 * @see Implementation.OccupancyComponent_Occupancy#getPartner(java.lang.String, java.lang.String)
+	 * @generated
+	 */
+	EOperation getOccupancyComponent_Occupancy__GetPartner__String_String();
+
+	/**
+	 * Returns the meta object for the '{@link Implementation.OccupancyComponent_Occupancy#addGuestToOccupancy(java.lang.String, java.lang.String) <em>Add Guest To Occupancy</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Add Guest To Occupancy</em>' operation.
+	 * @see Implementation.OccupancyComponent_Occupancy#addGuestToOccupancy(java.lang.String, java.lang.String)
+	 * @generated
+	 */
+	EOperation getOccupancyComponent_Occupancy__AddGuestToOccupancy__String_String();
+
+	/**
+	 * Returns the meta object for the '{@link Implementation.OccupancyComponent_Occupancy#isInOccupancy(org.eclipse.emf.common.util.EList, java.lang.String) <em>Is In Occupancy</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is In Occupancy</em>' operation.
+	 * @see Implementation.OccupancyComponent_Occupancy#isInOccupancy(org.eclipse.emf.common.util.EList, java.lang.String)
+	 * @generated
+	 */
+	EOperation getOccupancyComponent_Occupancy__IsInOccupancy__EList_String();
+
+	/**
 	 * Returns the meta object for class '{@link Implementation.OccupancyComponent_Guest <em>Occupancy Component Guest</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3768,14 +3825,14 @@ public interface ImplementationPackage extends EPackage {
 	EClass getOccupancyComponent_IOccupancy();
 
 	/**
-	 * Returns the meta object for the '{@link Implementation.OccupancyComponent_IOccupancy#checkInGuest(java.lang.String, java.lang.String, java.lang.String) <em>Check In Guest</em>}' operation.
+	 * Returns the meta object for the '{@link Implementation.OccupancyComponent_IOccupancy#checkInGuest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String) <em>Check In Guest</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Check In Guest</em>' operation.
-	 * @see Implementation.OccupancyComponent_IOccupancy#checkInGuest(java.lang.String, java.lang.String, java.lang.String)
+	 * @see Implementation.OccupancyComponent_IOccupancy#checkInGuest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	EOperation getOccupancyComponent_IOccupancy__CheckInGuest__String_String_String();
+	EOperation getOccupancyComponent_IOccupancy__CheckInGuest__String_String_String_String_String_String();
 
 	/**
 	 * Returns the meta object for the '{@link Implementation.OccupancyComponent_IOccupancy#checkOutGuest(java.lang.String, java.lang.String, java.lang.String) <em>Check Out Guest</em>}' operation.
@@ -3818,24 +3875,24 @@ public interface ImplementationPackage extends EPackage {
 	EOperation getOccupancyComponent_IOccupancy__NumberOfGuestsInHotel();
 
 	/**
-	 * Returns the meta object for the '{@link Implementation.OccupancyComponent_IOccupancy#isOccupied(java.lang.String) <em>Is Occupied</em>}' operation.
+	 * Returns the meta object for the '{@link Implementation.OccupancyComponent_IOccupancy#isOccupied(int) <em>Is Occupied</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is Occupied</em>' operation.
-	 * @see Implementation.OccupancyComponent_IOccupancy#isOccupied(java.lang.String)
+	 * @see Implementation.OccupancyComponent_IOccupancy#isOccupied(int)
 	 * @generated
 	 */
-	EOperation getOccupancyComponent_IOccupancy__IsOccupied__String();
+	EOperation getOccupancyComponent_IOccupancy__IsOccupied__int();
 
 	/**
-	 * Returns the meta object for the '{@link Implementation.OccupancyComponent_IOccupancy#addGuestToOccupancy(java.lang.String, java.lang.String) <em>Add Guest To Occupancy</em>}' operation.
+	 * Returns the meta object for the '{@link Implementation.OccupancyComponent_IOccupancy#getAvailableRooms(java.lang.String) <em>Get Available Rooms</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Add Guest To Occupancy</em>' operation.
-	 * @see Implementation.OccupancyComponent_IOccupancy#addGuestToOccupancy(java.lang.String, java.lang.String)
+	 * @return the meta object for the '<em>Get Available Rooms</em>' operation.
+	 * @see Implementation.OccupancyComponent_IOccupancy#getAvailableRooms(java.lang.String)
 	 * @generated
 	 */
-	EOperation getOccupancyComponent_IOccupancy__AddGuestToOccupancy__String_String();
+	EOperation getOccupancyComponent_IOccupancy__GetAvailableRooms__String();
 
 	/**
 	 * Returns the meta object for class '{@link Implementation.OccupancyComponent_OccupancyHandler <em>Occupancy Component Occupancy Handler</em>}'.
@@ -5970,6 +6027,30 @@ public interface ImplementationPackage extends EPackage {
 		EReference OCCUPANCY_COMPONENT_OCCUPANCY__GUESTS = eINSTANCE.getOccupancyComponent_Occupancy_Guests();
 
 		/**
+		 * The meta object literal for the '<em><b>Get Partner</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation OCCUPANCY_COMPONENT_OCCUPANCY___GET_PARTNER__STRING_STRING = eINSTANCE.getOccupancyComponent_Occupancy__GetPartner__String_String();
+
+		/**
+		 * The meta object literal for the '<em><b>Add Guest To Occupancy</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation OCCUPANCY_COMPONENT_OCCUPANCY___ADD_GUEST_TO_OCCUPANCY__STRING_STRING = eINSTANCE.getOccupancyComponent_Occupancy__AddGuestToOccupancy__String_String();
+
+		/**
+		 * The meta object literal for the '<em><b>Is In Occupancy</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation OCCUPANCY_COMPONENT_OCCUPANCY___IS_IN_OCCUPANCY__ELIST_STRING = eINSTANCE.getOccupancyComponent_Occupancy__IsInOccupancy__EList_String();
+
+		/**
 		 * The meta object literal for the '{@link Implementation.impl.OccupancyComponent_GuestImpl <em>Occupancy Component Guest</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6019,7 +6100,7 @@ public interface ImplementationPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation OCCUPANCY_COMPONENT_IOCCUPANCY___CHECK_IN_GUEST__STRING_STRING_STRING = eINSTANCE.getOccupancyComponent_IOccupancy__CheckInGuest__String_String_String();
+		EOperation OCCUPANCY_COMPONENT_IOCCUPANCY___CHECK_IN_GUEST__STRING_STRING_STRING_STRING_STRING_STRING = eINSTANCE.getOccupancyComponent_IOccupancy__CheckInGuest__String_String_String_String_String_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Check Out Guest</b></em>' operation.
@@ -6059,15 +6140,15 @@ public interface ImplementationPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation OCCUPANCY_COMPONENT_IOCCUPANCY___IS_OCCUPIED__STRING = eINSTANCE.getOccupancyComponent_IOccupancy__IsOccupied__String();
+		EOperation OCCUPANCY_COMPONENT_IOCCUPANCY___IS_OCCUPIED__INT = eINSTANCE.getOccupancyComponent_IOccupancy__IsOccupied__int();
 
 		/**
-		 * The meta object literal for the '<em><b>Add Guest To Occupancy</b></em>' operation.
+		 * The meta object literal for the '<em><b>Get Available Rooms</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation OCCUPANCY_COMPONENT_IOCCUPANCY___ADD_GUEST_TO_OCCUPANCY__STRING_STRING = eINSTANCE.getOccupancyComponent_IOccupancy__AddGuestToOccupancy__String_String();
+		EOperation OCCUPANCY_COMPONENT_IOCCUPANCY___GET_AVAILABLE_ROOMS__STRING = eINSTANCE.getOccupancyComponent_IOccupancy__GetAvailableRooms__String();
 
 		/**
 		 * The meta object literal for the '{@link Implementation.impl.OccupancyComponent_OccupancyHandlerImpl <em>Occupancy Component Occupancy Handler</em>}' class.

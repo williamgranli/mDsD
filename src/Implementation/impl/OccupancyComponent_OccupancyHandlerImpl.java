@@ -8,8 +8,11 @@ import Implementation.OccupancyComponent_IOccupancy;
 import Implementation.OccupancyComponent_Occupancy;
 import Implementation.OccupancyComponent_OccupancyHandler;
 import Implementation.RoomComponent_IRoomInformation;
+
 import java.lang.reflect.InvocationTargetException;
+import java.sql.Date;
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
@@ -174,13 +177,88 @@ public class OccupancyComponent_OccupancyHandlerImpl extends MinimalEObjectImpl.
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public void checkInGuest(String bookingReference, String firstName, String lastName) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public void checkInGuest(String bookingReference, String firstName, String lastName, String roomType, String partnerFirstName, String partnerLastName) {
+		// Returns a list of guests and room types for a booking
+				EList<String> bookingInfo= iBooking.searchForBooking(bookingReference);
+				
+				String[] guestsForBooking = null;
+				String[] roomTypesArray = null;
+				String roomTypes = null;
+				
+				// If  reference does'nt return booking Info
+				if(bookingInfo != null){
+					
+					roomTypes = bookingInfo.get(0);
+					guestsForBooking = (bookingInfo.get(1)).split(";");
+					
+					
+				}else{
+					System.out.println("Booking reference does not match a booking");
+					return;
+				}
+				
+				for(String guest: guestsForBooking){
+					String[] guestInfo = guest.split(",");
+					
+					// if guest firstName and lastName matches a guest in list
+					if((guestInfo[0].equals(firstName)) && (guestInfo[1].equals(lastName))){
+						
+						roomTypesArray = roomTypes.split(",");
+						
+						// if roomType provided by guest is in booking // check
+						if(isInRoomTypes(roomTypesArray, roomType)){
+							
+							// Check if a partner info is not null check if partner exist in booking and
+							// check guest in the same room
+							if((partnerFirstName != null) && (partnerLastName != null)){
+								OccupancyComponent_Occupancy occupan = findOccupancy(bookingReference, partnerFirstName, partnerLastName);
+								
+								// Check if occupancy exits for partner and bookingReference
+								if(occupan != null){
+									occupan.addGuestToOccupancy(firstName, lastName);
+									System.out.println("Guest: " + firstName + " " + lastName + " is check in in the same room: " + 
+									occupan.getRoomNumber() +  "with " + partnerFirstName + " " + partnerLastName);
+									
+									return;
+								}
+								
+								//if partner is not found for specified partnerFirstName and partnerLastName
+								else{
+									System.out.println("No occupancy was found for the specified booking: " + bookingReference 
+											+ " and partner information : " + partnerFirstName + " " + partnerLastName);
+									return;
+								}
+							}
+							
+							
+							
+							int roomAvailable = getAvailableRooms(roomType);
+							
+							if(roomAvailable != 0){
+								OccupancyComponent_OccupancyImpl currentOccupancy = new OccupancyComponent_OccupancyImpl();
+								currentOccupancy.setRoomNumber(roomAvailable);
+								
+								// todo change checkInDateTime variable to Date instead of int 
+								// and regenerate getters and setters to accept date.
+								currentOccupancy.setCheckInDateTime(new Date());
+								currentOccupancy.setBookingReference(bookingReference);
+								currentOccupancy.addGuestToOccupancy(firstName, lastName);
+								occupancy.add(currentOccupancy);
+								
+								return;
+							}
+							
+						}else{
+							System.out.println("Room type provided by guest doesn't match types in booking");
+						}
+						
+					}
+				}
 	}
+
+
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -229,6 +307,17 @@ public class OccupancyComponent_OccupancyHandlerImpl extends MinimalEObjectImpl.
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isOccupied(int roomNumber) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public boolean isOccupied(String roomNumber) {
@@ -240,14 +329,34 @@ public class OccupancyComponent_OccupancyHandlerImpl extends MinimalEObjectImpl.
 		return false;
 	}
 
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public boolean addGuestToOccupancy(String firstName, String lastName) {
-		guests.add(new OccupancyComponent_GuestImpl(firstName, lastName));
-		return true;
+	public int getAvailableRooms(String roomType) {
+		EList<Integer> allRoomNumbers = iRoomInformation.getAllRoomNumbers();
+		EList<String> allRoomInfo = null;
+		
+		for(Integer roomNumber: allRoomNumbers){
+			allRoomInfo.add(iRoomInformation.getRoomInfo(roomNumber));
+		}
+		
+		
+		// Search for room in list that matches the type and is not occupied
+		for(String roomInfo: allRoomInfo){
+			String[] roomInfoArray = roomInfo.split(",");
+			
+			int roomNumber = Integer.valueOf(roomInfoArray[0]);
+			//Change roomNumber to int (in the args)
+			if(!isOccupied(roomNumber) && roomType.equals(roomInfoArray[1]))
+				return roomNumber;
+		}
+		
+		// Potential over-booking scenario 
+		System.out.println("No rooms are available for this type "); 
+		return 0;
 	}
 
 	/**
@@ -341,13 +450,13 @@ public class OccupancyComponent_OccupancyHandlerImpl extends MinimalEObjectImpl.
 	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
 		if (baseClass == OccupancyComponent_IOccupancy.class) {
 			switch (baseOperationID) {
-				case ImplementationPackage.OCCUPANCY_COMPONENT_IOCCUPANCY___CHECK_IN_GUEST__STRING_STRING_STRING: return ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___CHECK_IN_GUEST__STRING_STRING_STRING;
+				case ImplementationPackage.OCCUPANCY_COMPONENT_IOCCUPANCY___CHECK_IN_GUEST__STRING_STRING_STRING_STRING_STRING_STRING: return ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___CHECK_IN_GUEST__STRING_STRING_STRING_STRING_STRING_STRING;
 				case ImplementationPackage.OCCUPANCY_COMPONENT_IOCCUPANCY___CHECK_OUT_GUEST__STRING_STRING_STRING: return ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___CHECK_OUT_GUEST__STRING_STRING_STRING;
 				case ImplementationPackage.OCCUPANCY_COMPONENT_IOCCUPANCY___LIST_FREE_ROOMS: return ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___LIST_FREE_ROOMS;
 				case ImplementationPackage.OCCUPANCY_COMPONENT_IOCCUPANCY___LIST_GUESTS_IN_ROOM__INT: return ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___LIST_GUESTS_IN_ROOM__INT;
 				case ImplementationPackage.OCCUPANCY_COMPONENT_IOCCUPANCY___NUMBER_OF_GUESTS_IN_HOTEL: return ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___NUMBER_OF_GUESTS_IN_HOTEL;
-				case ImplementationPackage.OCCUPANCY_COMPONENT_IOCCUPANCY___IS_OCCUPIED__STRING: return ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___IS_OCCUPIED__STRING;
-				case ImplementationPackage.OCCUPANCY_COMPONENT_IOCCUPANCY___ADD_GUEST_TO_OCCUPANCY__STRING_STRING: return ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___ADD_GUEST_TO_OCCUPANCY__STRING_STRING;
+				case ImplementationPackage.OCCUPANCY_COMPONENT_IOCCUPANCY___IS_OCCUPIED__INT: return ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___IS_OCCUPIED__INT;
+				case ImplementationPackage.OCCUPANCY_COMPONENT_IOCCUPANCY___GET_AVAILABLE_ROOMS__STRING: return ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___GET_AVAILABLE_ROOMS__STRING;
 				default: return -1;
 			}
 		}
@@ -362,8 +471,8 @@ public class OccupancyComponent_OccupancyHandlerImpl extends MinimalEObjectImpl.
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___CHECK_IN_GUEST__STRING_STRING_STRING:
-				checkInGuest((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2));
+			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___CHECK_IN_GUEST__STRING_STRING_STRING_STRING_STRING_STRING:
+				checkInGuest((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5));
 				return null;
 			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___CHECK_OUT_GUEST__STRING_STRING_STRING:
 				checkOutGuest((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2));
@@ -374,10 +483,10 @@ public class OccupancyComponent_OccupancyHandlerImpl extends MinimalEObjectImpl.
 				return listGuestsInRoom((Integer)arguments.get(0));
 			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___NUMBER_OF_GUESTS_IN_HOTEL:
 				return numberOfGuestsInHotel();
-			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___IS_OCCUPIED__STRING:
-				return isOccupied((String)arguments.get(0));
-			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___ADD_GUEST_TO_OCCUPANCY__STRING_STRING:
-				return addGuestToOccupancy((String)arguments.get(0), (String)arguments.get(1));
+			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___IS_OCCUPIED__INT:
+				return isOccupied((Integer)arguments.get(0));
+			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___GET_AVAILABLE_ROOMS__STRING:
+				return getAvailableRooms((String)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
