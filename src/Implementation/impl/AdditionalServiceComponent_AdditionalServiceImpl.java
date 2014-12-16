@@ -517,18 +517,15 @@ public class AdditionalServiceComponent_AdditionalServiceImpl extends MinimalEOb
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (name: ");
 		result.append(name);
-		result.append(", ");
+		result.append(", usable: ");
 		result.append(usable);
-		result.append(", ");
+		result.append(", price: ");
 		result.append(price);
-		result.append(", ");
+		result.append(", description: ");
 		result.append(description);
-		result.append(", [");
-		for (AdditionalServiceComponent_AdditionalServiceEvent e : additionalServiceEvent) {
-			result.append(e.toString());
-		}
-		result.append("];");
+		result.append(')');
 		return result.toString();
 	}
 

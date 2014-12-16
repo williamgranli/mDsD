@@ -8,12 +8,9 @@ import Implementation.OccupancyComponent_IOccupancy;
 import Implementation.OccupancyComponent_Occupancy;
 import Implementation.OccupancyComponent_OccupancyHandler;
 import Implementation.RoomComponent_IRoomInformation;
-
 import java.lang.reflect.InvocationTargetException;
-import java.sql.Date;
 import java.util.Arrays;
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
