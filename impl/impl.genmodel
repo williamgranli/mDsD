@@ -88,6 +88,13 @@
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//OccupancyComponent_IOccupancy/listGuestsInRoom/roomNumber"/>
       </genOperations>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//OccupancyComponent_IOccupancy/numberOfGuestsInHotel"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//OccupancyComponent_IOccupancy/isOccupied">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//OccupancyComponent_IOccupancy/isOccupied/roomNumber"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//OccupancyComponent_IOccupancy/addGuestToOccupancy">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//OccupancyComponent_IOccupancy/addGuestToOccupancy/firstName"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//OccupancyComponent_IOccupancy/addGuestToOccupancy/lastName"/>
+      </genOperations>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//OccupancyComponent_OccupancyHandler">
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
@@ -111,6 +118,12 @@
     <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Implementation.ecore#//BookingComponent_IBookingInformation">
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//BookingComponent_IBookingInformation/getGuestsInBooking">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_IBookingInformation/getGuestsInBooking/bookingReference"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//BookingComponent_IBookingInformation/getRoomTypesInBooking">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_IBookingInformation/getRoomTypesInBooking/bookingReference"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//BookingComponent_IBookingInformation/searchForBooking">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_IBookingInformation/searchForBooking/bookingReference"/>
       </genOperations>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//PaymentComponent"/>
@@ -401,6 +414,7 @@
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_Booking/removeGuestFromBooking/address"/>
       </genOperations>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//BookingComponent_Booking/getGuestsInBooking"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//BookingComponent_Booking/getRoomTypesInBooking"/>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//BookingComponent_AdditionalService">
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//BookingComponent_AdditionalService/name"/>
@@ -486,9 +500,6 @@
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//IBookingAdministration/addGuestToBooking/firstName"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//IBookingAdministration/addGuestToBooking/lastName"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//IBookingAdministration/addGuestToBooking/address"/>
-      </genOperations>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//IBookingAdministration/searchForBooking">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//IBookingAdministration/searchForBooking/bookingReference"/>
       </genOperations>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//StaffComponent"/>

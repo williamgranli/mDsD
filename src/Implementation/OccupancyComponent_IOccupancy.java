@@ -57,4 +57,20 @@ public interface OccupancyComponent_IOccupancy extends EObject {
 	 */
 	int numberOfGuestsInHotel();
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false" roomNumberDataType="org.eclipse.uml2.types.String" roomNumberRequired="true" roomNumberOrdered="false"
+	 * @generated
+	 */
+	boolean isOccupied(String roomNumber);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false" firstNameDataType="org.eclipse.uml2.types.String" firstNameRequired="true" firstNameOrdered="false" lastNameDataType="org.eclipse.uml2.types.String" lastNameRequired="true" lastNameOrdered="false"
+	 * @generated
+	 */
+	boolean addGuestToOccupancy(String firstName, String lastName);
+
 } // OccupancyComponent_IOccupancy

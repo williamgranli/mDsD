@@ -79,6 +79,18 @@ public class OccupancyComponent_GuestImpl extends MinimalEObjectImpl.Container i
 	protected OccupancyComponent_GuestImpl() {
 		super();
 	}
+	
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	protected OccupancyComponent_GuestImpl(String firstName, String lastName){
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+	}
 
 	/**
 	 * <!-- begin-user-doc -->

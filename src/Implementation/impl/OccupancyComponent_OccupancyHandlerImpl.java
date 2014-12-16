@@ -229,6 +229,30 @@ public class OccupancyComponent_OccupancyHandlerImpl extends MinimalEObjectImpl.
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public boolean isOccupied(String roomNumber) {
+		for(OccupancyComponent_Occupancy occupan: occupancy){
+			if(occupan.getRoomNumber() == Integer.valueOf(roomNumber))
+				return true;
+		}
+
+		return false;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public boolean addGuestToOccupancy(String firstName, String lastName) {
+		guests.add(new OccupancyComponent_GuestImpl(firstName, lastName));
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -322,6 +346,8 @@ public class OccupancyComponent_OccupancyHandlerImpl extends MinimalEObjectImpl.
 				case ImplementationPackage.OCCUPANCY_COMPONENT_IOCCUPANCY___LIST_FREE_ROOMS: return ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___LIST_FREE_ROOMS;
 				case ImplementationPackage.OCCUPANCY_COMPONENT_IOCCUPANCY___LIST_GUESTS_IN_ROOM__INT: return ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___LIST_GUESTS_IN_ROOM__INT;
 				case ImplementationPackage.OCCUPANCY_COMPONENT_IOCCUPANCY___NUMBER_OF_GUESTS_IN_HOTEL: return ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___NUMBER_OF_GUESTS_IN_HOTEL;
+				case ImplementationPackage.OCCUPANCY_COMPONENT_IOCCUPANCY___IS_OCCUPIED__STRING: return ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___IS_OCCUPIED__STRING;
+				case ImplementationPackage.OCCUPANCY_COMPONENT_IOCCUPANCY___ADD_GUEST_TO_OCCUPANCY__STRING_STRING: return ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___ADD_GUEST_TO_OCCUPANCY__STRING_STRING;
 				default: return -1;
 			}
 		}
@@ -348,6 +374,10 @@ public class OccupancyComponent_OccupancyHandlerImpl extends MinimalEObjectImpl.
 				return listGuestsInRoom((Integer)arguments.get(0));
 			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___NUMBER_OF_GUESTS_IN_HOTEL:
 				return numberOfGuestsInHotel();
+			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___IS_OCCUPIED__STRING:
+				return isOccupied((String)arguments.get(0));
+			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___ADD_GUEST_TO_OCCUPANCY__STRING_STRING:
+				return addGuestToOccupancy((String)arguments.get(0), (String)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

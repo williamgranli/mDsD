@@ -12,12 +12,9 @@ import Implementation.ImplementationPackage;
 import Implementation.PaymentComponent_IPayment;
 import Implementation.RoomComponent_IRoomInformation;
 import Implementation.StaffComponent_IAuthentication;
-
 import java.lang.reflect.InvocationTargetException;
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
@@ -244,12 +241,42 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public String getGuestsInBooking(String bookingReference) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		String foundGuests = "";
+		
+		
+		for(BookingComponent_Booking booking : bookings){
+			if (bookingReference.equals(booking.getReferenceNumber())) {
+				foundGuests = booking.getGuestsInBooking();
+
+			}
+		}
+
+		return foundGuests;
+		
+		
+		
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public String getRoomTypesInBooking(String bookingReference) {
+		String foundRoomTypes = null;
+		
+		
+		for(BookingComponent_Booking booking : bookings){
+			if (bookingReference.equals(booking.getReferenceNumber())) {
+				foundRoomTypes = booking.getRoomTypesInBooking();
+
+			}
+		}
+
+		return foundRoomTypes;
 	}
 
 	/**
@@ -451,18 +478,43 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 	 * @generated NOT
 	 */
 	public EList<String> searchForBooking(String bookingReference) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		EList<String> foundGuests = (EList<String>) new ArrayList<String>();
-		for(BookingComponent_Booking x : bookings)
-		{
-			if(x.getReferenceNumber().equals(bookingReference))
-			{
-				//Add to return list
-				x.getGuests();
+
+		Date todaysDate = new Date();
+
+		EList<String> bookingInfo = new EObjectResolvingEList<String>(BookingComponent_Booking.class, this, ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__BOOKINGS);
+
+		for(BookingComponent_Booking booking : bookings){
+
+			// Booking is found for the reference number
+			if(booking.getReferenceNumber().equals(bookingReference)){
+
+				// Check that booking date is not in the future
+				if((booking.getArrivalDate()).compareTo(todaysDate) <= 0){
+
+					// Check if booking check out that has not passed
+					if(booking.getDepartureDate().compareTo(todaysDate) <= 0){
+						System.out.println("Booking departure date is already passed\n"
+							+ "Departure date was on: " + (booking.getDepartureDate()).toString());
+						return null;
+					}
+
+				}
+
+				// Booking date is in the future
+				else{
+					System.out.println("Booking arrival date will be on: " + (booking.getArrivalDate()).toString());
+					return null;
+				}
+
+				bookingInfo.add(booking.getRoomTypesInBooking());
+				bookingInfo.add(booking.getGuestsInBooking());
+
+				return bookingInfo;
 			}
 		}
-		return foundGuests;
+
+		// return null if bookingReference doesn't match any booking
+		return null;
 	}
 
 	/**
@@ -629,7 +681,6 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 				case ImplementationPackage.IBOOKING_ADMINISTRATION___REMOVE_ADDIONAL_SERVICE__STRING_STRING: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___REMOVE_ADDIONAL_SERVICE__STRING_STRING;
 				case ImplementationPackage.IBOOKING_ADMINISTRATION___GENERATE_QUOTE__DATE_DATE_STRING: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___GENERATE_QUOTE__DATE_DATE_STRING;
 				case ImplementationPackage.IBOOKING_ADMINISTRATION___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING;
-				case ImplementationPackage.IBOOKING_ADMINISTRATION___SEARCH_FOR_BOOKING__STRING: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___SEARCH_FOR_BOOKING__STRING;
 				default: return -1;
 			}
 		}
@@ -646,6 +697,10 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 		switch (operationID) {
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___GET_GUESTS_IN_BOOKING__STRING:
 				return getGuestsInBooking((String)arguments.get(0));
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___GET_ROOM_TYPES_IN_BOOKING__STRING:
+				return getRoomTypesInBooking((String)arguments.get(0));
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___SEARCH_FOR_BOOKING__STRING:
+				return searchForBooking((String)arguments.get(0));
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___MAKE_BOOKING__STRING_DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_STRING_STRING:
 				makeBooking((String)arguments.get(0), (Date)arguments.get(1), (Date)arguments.get(2), (String)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5), (String)arguments.get(6), (String)arguments.get(7), (String)arguments.get(8), (String)arguments.get(9), (String)arguments.get(10));
 				return null;
@@ -676,8 +731,6 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING:
 				addGuestToBooking((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3));
 				return null;
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___SEARCH_FOR_BOOKING__STRING:
-				return searchForBooking((String)arguments.get(0));
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___FIND_BOOKING__STRING:
 				return findBooking((String)arguments.get(0));
 		}

@@ -199,18 +199,16 @@ public class BookingComponent_RoomTypeImpl extends MinimalEObjectImpl.Container 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (roomType: ");
-		result.append(roomType);
-		result.append(", cost: ");
+		result.append("");
+		result.append(roomType + ",");
 		result.append(cost);
-		result.append(')');
 		return result.toString();
 	}
 

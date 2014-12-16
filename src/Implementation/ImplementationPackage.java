@@ -593,13 +593,31 @@ public interface ImplementationPackage extends EPackage {
 	int OCCUPANCY_COMPONENT_IOCCUPANCY___NUMBER_OF_GUESTS_IN_HOTEL = 4;
 
 	/**
+	 * The operation id for the '<em>Is Occupied</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OCCUPANCY_COMPONENT_IOCCUPANCY___IS_OCCUPIED__STRING = 5;
+
+	/**
+	 * The operation id for the '<em>Add Guest To Occupancy</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OCCUPANCY_COMPONENT_IOCCUPANCY___ADD_GUEST_TO_OCCUPANCY__STRING_STRING = 6;
+
+	/**
 	 * The number of operations of the '<em>Occupancy Component IOccupancy</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OCCUPANCY_COMPONENT_IOCCUPANCY_OPERATION_COUNT = 5;
+	int OCCUPANCY_COMPONENT_IOCCUPANCY_OPERATION_COUNT = 7;
 
 	/**
 	 * The meta object id for the '{@link Implementation.impl.OccupancyComponent_OccupancyHandlerImpl <em>Occupancy Component Occupancy Handler</em>}' class.
@@ -693,13 +711,31 @@ public interface ImplementationPackage extends EPackage {
 	int OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___NUMBER_OF_GUESTS_IN_HOTEL = OCCUPANCY_COMPONENT_IOCCUPANCY_DECISION_OPERATION_COUNT + 4;
 
 	/**
+	 * The operation id for the '<em>Is Occupied</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___IS_OCCUPIED__STRING = OCCUPANCY_COMPONENT_IOCCUPANCY_DECISION_OPERATION_COUNT + 5;
+
+	/**
+	 * The operation id for the '<em>Add Guest To Occupancy</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___ADD_GUEST_TO_OCCUPANCY__STRING_STRING = OCCUPANCY_COMPONENT_IOCCUPANCY_DECISION_OPERATION_COUNT + 6;
+
+	/**
 	 * The number of operations of the '<em>Occupancy Component Occupancy Handler</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER_OPERATION_COUNT = OCCUPANCY_COMPONENT_IOCCUPANCY_DECISION_OPERATION_COUNT + 5;
+	int OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER_OPERATION_COUNT = OCCUPANCY_COMPONENT_IOCCUPANCY_DECISION_OPERATION_COUNT + 7;
 
 	/**
 	 * The meta object id for the '{@link Implementation.RoomComponent_IRoomInformation <em>Room Component IRoom Information</em>}' class.
@@ -803,13 +839,31 @@ public interface ImplementationPackage extends EPackage {
 	int BOOKING_COMPONENT_IBOOKING_INFORMATION___GET_GUESTS_IN_BOOKING__STRING = 0;
 
 	/**
+	 * The operation id for the '<em>Get Room Types In Booking</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_COMPONENT_IBOOKING_INFORMATION___GET_ROOM_TYPES_IN_BOOKING__STRING = 1;
+
+	/**
+	 * The operation id for the '<em>Search For Booking</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_COMPONENT_IBOOKING_INFORMATION___SEARCH_FOR_BOOKING__STRING = 2;
+
+	/**
 	 * The number of operations of the '<em>Booking Component IBooking Information</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT = 1;
+	int BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT = 3;
 
 	/**
 	 * The meta object id for the '{@link Implementation.impl.PaymentComponentImpl <em>Payment Component</em>}' class.
@@ -2219,13 +2273,22 @@ public interface ImplementationPackage extends EPackage {
 	int BOOKING_COMPONENT_BOOKING___GET_GUESTS_IN_BOOKING = 10;
 
 	/**
+	 * The operation id for the '<em>Get Room Types In Booking</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_COMPONENT_BOOKING___GET_ROOM_TYPES_IN_BOOKING = 11;
+
+	/**
 	 * The number of operations of the '<em>Booking Component Booking</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_COMPONENT_BOOKING_OPERATION_COUNT = 11;
+	int BOOKING_COMPONENT_BOOKING_OPERATION_COUNT = 12;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2408,6 +2471,24 @@ public interface ImplementationPackage extends EPackage {
 	int BOOKING_COMPONENT_BOOKING_MANAGER___GET_GUESTS_IN_BOOKING__STRING = BOOKING_COMPONENT_IBOOKING_INFORMATION___GET_GUESTS_IN_BOOKING__STRING;
 
 	/**
+	 * The operation id for the '<em>Get Room Types In Booking</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_COMPONENT_BOOKING_MANAGER___GET_ROOM_TYPES_IN_BOOKING__STRING = BOOKING_COMPONENT_IBOOKING_INFORMATION___GET_ROOM_TYPES_IN_BOOKING__STRING;
+
+	/**
+	 * The operation id for the '<em>Search For Booking</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_COMPONENT_BOOKING_MANAGER___SEARCH_FOR_BOOKING__STRING = BOOKING_COMPONENT_IBOOKING_INFORMATION___SEARCH_FOR_BOOKING__STRING;
+
+	/**
 	 * The operation id for the '<em>Make Booking</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2498,22 +2579,13 @@ public interface ImplementationPackage extends EPackage {
 	int BOOKING_COMPONENT_BOOKING_MANAGER___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 9;
 
 	/**
-	 * The operation id for the '<em>Search For Booking</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING_COMPONENT_BOOKING_MANAGER___SEARCH_FOR_BOOKING__STRING = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 10;
-
-	/**
 	 * The operation id for the '<em>Find Booking</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_COMPONENT_BOOKING_MANAGER___FIND_BOOKING__STRING = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 11;
+	int BOOKING_COMPONENT_BOOKING_MANAGER___FIND_BOOKING__STRING = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 10;
 
 	/**
 	 * The number of operations of the '<em>Booking Component Booking Manager</em>' class.
@@ -2522,7 +2594,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_COMPONENT_BOOKING_MANAGER_OPERATION_COUNT = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 12;
+	int BOOKING_COMPONENT_BOOKING_MANAGER_OPERATION_COUNT = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 11;
 
 	/**
 	 * The meta object id for the '{@link Implementation.IBookingAdministration <em>IBooking Administration</em>}' class.
@@ -2634,22 +2706,13 @@ public interface ImplementationPackage extends EPackage {
 	int IBOOKING_ADMINISTRATION___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING = 9;
 
 	/**
-	 * The operation id for the '<em>Search For Booking</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IBOOKING_ADMINISTRATION___SEARCH_FOR_BOOKING__STRING = 10;
-
-	/**
 	 * The number of operations of the '<em>IBooking Administration</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKING_ADMINISTRATION_OPERATION_COUNT = 11;
+	int IBOOKING_ADMINISTRATION_OPERATION_COUNT = 10;
 
 	/**
 	 * The number of structural features of the '<em>Staff Component</em>' class.
@@ -3755,6 +3818,26 @@ public interface ImplementationPackage extends EPackage {
 	EOperation getOccupancyComponent_IOccupancy__NumberOfGuestsInHotel();
 
 	/**
+	 * Returns the meta object for the '{@link Implementation.OccupancyComponent_IOccupancy#isOccupied(java.lang.String) <em>Is Occupied</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Occupied</em>' operation.
+	 * @see Implementation.OccupancyComponent_IOccupancy#isOccupied(java.lang.String)
+	 * @generated
+	 */
+	EOperation getOccupancyComponent_IOccupancy__IsOccupied__String();
+
+	/**
+	 * Returns the meta object for the '{@link Implementation.OccupancyComponent_IOccupancy#addGuestToOccupancy(java.lang.String, java.lang.String) <em>Add Guest To Occupancy</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Add Guest To Occupancy</em>' operation.
+	 * @see Implementation.OccupancyComponent_IOccupancy#addGuestToOccupancy(java.lang.String, java.lang.String)
+	 * @generated
+	 */
+	EOperation getOccupancyComponent_IOccupancy__AddGuestToOccupancy__String_String();
+
+	/**
 	 * Returns the meta object for class '{@link Implementation.OccupancyComponent_OccupancyHandler <em>Occupancy Component Occupancy Handler</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3876,6 +3959,26 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getBookingComponent_IBookingInformation__GetGuestsInBooking__String();
+
+	/**
+	 * Returns the meta object for the '{@link Implementation.BookingComponent_IBookingInformation#getRoomTypesInBooking(java.lang.String) <em>Get Room Types In Booking</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Room Types In Booking</em>' operation.
+	 * @see Implementation.BookingComponent_IBookingInformation#getRoomTypesInBooking(java.lang.String)
+	 * @generated
+	 */
+	EOperation getBookingComponent_IBookingInformation__GetRoomTypesInBooking__String();
+
+	/**
+	 * Returns the meta object for the '{@link Implementation.BookingComponent_IBookingInformation#searchForBooking(java.lang.String) <em>Search For Booking</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Search For Booking</em>' operation.
+	 * @see Implementation.BookingComponent_IBookingInformation#searchForBooking(java.lang.String)
+	 * @generated
+	 */
+	EOperation getBookingComponent_IBookingInformation__SearchForBooking__String();
 
 	/**
 	 * Returns the meta object for class '{@link Implementation.PaymentComponent <em>Payment Component</em>}'.
@@ -4855,6 +4958,16 @@ public interface ImplementationPackage extends EPackage {
 	EOperation getBookingComponent_Booking__GetGuestsInBooking();
 
 	/**
+	 * Returns the meta object for the '{@link Implementation.BookingComponent_Booking#getRoomTypesInBooking() <em>Get Room Types In Booking</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Room Types In Booking</em>' operation.
+	 * @see Implementation.BookingComponent_Booking#getRoomTypesInBooking()
+	 * @generated
+	 */
+	EOperation getBookingComponent_Booking__GetRoomTypesInBooking();
+
+	/**
 	 * Returns the meta object for class '{@link Implementation.BookingComponent_AdditionalService <em>Booking Component Additional Service</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5145,16 +5258,6 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getIBookingAdministration__AddGuestToBooking__String_String_String_String();
-
-	/**
-	 * Returns the meta object for the '{@link Implementation.IBookingAdministration#searchForBooking(java.lang.String) <em>Search For Booking</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Search For Booking</em>' operation.
-	 * @see Implementation.IBookingAdministration#searchForBooking(java.lang.String)
-	 * @generated
-	 */
-	EOperation getIBookingAdministration__SearchForBooking__String();
 
 	/**
 	 * Returns the meta object for class '{@link Implementation.StaffComponent <em>Staff Component</em>}'.
@@ -5951,6 +6054,22 @@ public interface ImplementationPackage extends EPackage {
 		EOperation OCCUPANCY_COMPONENT_IOCCUPANCY___NUMBER_OF_GUESTS_IN_HOTEL = eINSTANCE.getOccupancyComponent_IOccupancy__NumberOfGuestsInHotel();
 
 		/**
+		 * The meta object literal for the '<em><b>Is Occupied</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation OCCUPANCY_COMPONENT_IOCCUPANCY___IS_OCCUPIED__STRING = eINSTANCE.getOccupancyComponent_IOccupancy__IsOccupied__String();
+
+		/**
+		 * The meta object literal for the '<em><b>Add Guest To Occupancy</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation OCCUPANCY_COMPONENT_IOCCUPANCY___ADD_GUEST_TO_OCCUPANCY__STRING_STRING = eINSTANCE.getOccupancyComponent_IOccupancy__AddGuestToOccupancy__String_String();
+
+		/**
 		 * The meta object literal for the '{@link Implementation.impl.OccupancyComponent_OccupancyHandlerImpl <em>Occupancy Component Occupancy Handler</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6051,6 +6170,22 @@ public interface ImplementationPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation BOOKING_COMPONENT_IBOOKING_INFORMATION___GET_GUESTS_IN_BOOKING__STRING = eINSTANCE.getBookingComponent_IBookingInformation__GetGuestsInBooking__String();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Room Types In Booking</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation BOOKING_COMPONENT_IBOOKING_INFORMATION___GET_ROOM_TYPES_IN_BOOKING__STRING = eINSTANCE.getBookingComponent_IBookingInformation__GetRoomTypesInBooking__String();
+
+		/**
+		 * The meta object literal for the '<em><b>Search For Booking</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation BOOKING_COMPONENT_IBOOKING_INFORMATION___SEARCH_FOR_BOOKING__STRING = eINSTANCE.getBookingComponent_IBookingInformation__SearchForBooking__String();
 
 		/**
 		 * The meta object literal for the '{@link Implementation.impl.PaymentComponentImpl <em>Payment Component</em>}' class.
@@ -6837,6 +6972,14 @@ public interface ImplementationPackage extends EPackage {
 		EOperation BOOKING_COMPONENT_BOOKING___GET_GUESTS_IN_BOOKING = eINSTANCE.getBookingComponent_Booking__GetGuestsInBooking();
 
 		/**
+		 * The meta object literal for the '<em><b>Get Room Types In Booking</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation BOOKING_COMPONENT_BOOKING___GET_ROOM_TYPES_IN_BOOKING = eINSTANCE.getBookingComponent_Booking__GetRoomTypesInBooking();
+
+		/**
 		 * The meta object literal for the '{@link Implementation.impl.BookingComponent_AdditionalServiceImpl <em>Booking Component Additional Service</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -7069,14 +7212,6 @@ public interface ImplementationPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation IBOOKING_ADMINISTRATION___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING = eINSTANCE.getIBookingAdministration__AddGuestToBooking__String_String_String_String();
-
-		/**
-		 * The meta object literal for the '<em><b>Search For Booking</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation IBOOKING_ADMINISTRATION___SEARCH_FOR_BOOKING__STRING = eINSTANCE.getIBookingAdministration__SearchForBooking__String();
 
 		/**
 		 * The meta object literal for the '{@link Implementation.impl.StaffComponentImpl <em>Staff Component</em>}' class.

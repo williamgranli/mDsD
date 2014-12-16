@@ -2,6 +2,7 @@
  */
 package Implementation;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -22,5 +23,21 @@ public interface BookingComponent_IBookingInformation extends EObject {
 	 * @generated
 	 */
 	String getGuestsInBooking(String bookingReference);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" bookingReferenceDataType="org.eclipse.uml2.types.String" bookingReferenceRequired="true" bookingReferenceOrdered="false"
+	 * @generated
+	 */
+	String getRoomTypesInBooking(String bookingReference);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" bookingReferenceDataType="org.eclipse.uml2.types.String" bookingReferenceRequired="true" bookingReferenceOrdered="false"
+	 * @generated
+	 */
+	EList<String> searchForBooking(String bookingReference);
 
 } // BookingComponent_IBookingInformation

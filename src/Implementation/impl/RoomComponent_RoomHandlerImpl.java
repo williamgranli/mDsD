@@ -163,19 +163,18 @@ public class RoomComponent_RoomHandlerImpl extends MinimalEObjectImpl.Container 
 	 * @generated NOT
 	 */
 	public String getRoomInfo(int roomNumber) {
-
 		for (RoomComponent_Bedroom r : bedRooms) {
 
 			if (r.getRoomNumber() == roomNumber) {
-				return "bedRooms Number:\t" + r.getRoomNumber() + "\n"
-						+ "bedRooms Type:\t" + r.getRoomTypeName() + "\n"
-						+ "bedRooms Price:\t" + r.getPrice() + "\n"
-						+ "bedRooms Description:\t" + r.getDescription();
+				return  r.getRoomNumber() + "," 
+				+r.getRoomTypeName() + ","
+				+ r.getPrice() + ","
+				+  r.getDescription();
 			}
 
 		}
 
-		return "bedRooms not found for bedRooms number: " + roomNumber;
+		return null;
 	}
 
 	/**
@@ -254,6 +253,10 @@ public class RoomComponent_RoomHandlerImpl extends MinimalEObjectImpl.Container 
 
 		for (RoomComponent_Bedroom r : bedRooms) {
 			allRoomNumbers.add(r.getRoomNumber());
+		}
+		
+		for(RoomComponent_ConferenceRoom cr: conferenceRooms){
+			allRoomNumbers.add(cr.getRoomNumber());
 		}
 
 		return allRoomNumbers;

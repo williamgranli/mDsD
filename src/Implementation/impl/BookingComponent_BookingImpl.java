@@ -553,12 +553,30 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public BookingComponent_BookingGuest getGuestsInBooking() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public String getGuestsInBooking() {
+		String foundGuests = "";
+		
+		for(BookingComponent_BookingGuest guest : guests){
+			foundGuests += (guest.toString() + ";");
+		}
+		return foundGuests;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public String getRoomTypesInBooking() {
+		String foundRoomTypes = null;
+		
+		for(BookingComponent_RoomType roomType: rooms){
+			foundRoomTypes += (roomType.getRoomType() + ",");
+		}
+		
+		return foundRoomTypes;
 	}
 
 	/**
@@ -732,6 +750,8 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 				return null;
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING___GET_GUESTS_IN_BOOKING:
 				return getGuestsInBooking();
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING___GET_ROOM_TYPES_IN_BOOKING:
+				return getRoomTypesInBooking();
 		}
 		return super.eInvoke(operationID, arguments);
 	}
