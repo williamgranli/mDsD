@@ -2,15 +2,19 @@
  */
 package Implementation.impl;
 
+import Implementation.BookingComponent_Booking;
 import Implementation.BookingComponent_IBookingInformation;
 import Implementation.ImplementationPackage;
+import Implementation.OccupancyComponent_Guest;
 import Implementation.OccupancyComponent_IOccupancy;
 import Implementation.OccupancyComponent_Occupancy;
 import Implementation.OccupancyComponent_OccupancyHandler;
 import Implementation.RoomComponent_IRoomInformation;
+
 import java.lang.reflect.InvocationTargetException;
 import java.util.Arrays;
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
@@ -266,20 +270,31 @@ public class OccupancyComponent_OccupancyHandlerImpl extends MinimalEObjectImpl.
 	 * @generated
 	 */
 	public void checkOutGuest(String roomNumber, String firstName, String lastName) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public EList<String> listGuestsInRoom(int roomNumber) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if (!isOccupied(roomNumber)) {
+			System.out.println("Ther oom is not occupied");
+			return null;
+		}
+		
+		EList<String> guestsInRoom = 
+				new EObjectResolvingEList<String>(BookingComponent_Booking.class, 
+						this, ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER__OCCUPANCY);
+		
+		
+		for(OccupancyComponent_Occupancy eachOccupancy: occupancy) {
+			if (roomNumber == eachOccupancy.getRoomNumber()) {
+				guestsInRoom = eachOccupancy.listGuests();
+			}
+		}
+		return guestsInRoom;
 	}
 
 	/**

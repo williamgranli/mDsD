@@ -691,6 +691,15 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getOccupancyComponent_Occupancy__ListGuests() {
+		return occupancyComponent_OccupancyEClass.getEOperations().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getOccupancyComponent_Guest() {
 		return occupancyComponent_GuestEClass;
 	}
@@ -2503,6 +2512,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		createEReference(occupancyComponent_OccupancyEClass, OCCUPANCY_COMPONENT_OCCUPANCY__GUESTS);
 		createEOperation(occupancyComponent_OccupancyEClass, OCCUPANCY_COMPONENT_OCCUPANCY___GET_PARTNER__STRING_STRING);
 		createEOperation(occupancyComponent_OccupancyEClass, OCCUPANCY_COMPONENT_OCCUPANCY___ADD_GUEST_TO_OCCUPANCY__STRING_STRING);
+		createEOperation(occupancyComponent_OccupancyEClass, OCCUPANCY_COMPONENT_OCCUPANCY___LIST_GUESTS);
 
 		occupancyComponent_GuestEClass = createEClass(OCCUPANCY_COMPONENT_GUEST);
 		createEAttribute(occupancyComponent_GuestEClass, OCCUPANCY_COMPONENT_GUEST__FIRST_NAME);
@@ -2827,6 +2837,8 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		op = initEOperation(getOccupancyComponent_Occupancy__AddGuestToOccupancy__String_String(), theTypesPackage.getBoolean(), "addGuestToOccupancy", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "firstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "lastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		initEOperation(getOccupancyComponent_Occupancy__ListGuests(), theTypesPackage.getString(), "listGuests", 1, -1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(occupancyComponent_GuestEClass, OccupancyComponent_Guest.class, "OccupancyComponent_Guest", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getOccupancyComponent_Guest_FirstName(), theTypesPackage.getString(), "firstName", null, 1, 1, OccupancyComponent_Guest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);

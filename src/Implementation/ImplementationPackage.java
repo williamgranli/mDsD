@@ -474,13 +474,22 @@ public interface ImplementationPackage extends EPackage {
 	int OCCUPANCY_COMPONENT_OCCUPANCY___ADD_GUEST_TO_OCCUPANCY__STRING_STRING = 1;
 
 	/**
+	 * The operation id for the '<em>List Guests</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OCCUPANCY_COMPONENT_OCCUPANCY___LIST_GUESTS = 2;
+
+	/**
 	 * The number of operations of the '<em>Occupancy Component Occupancy</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OCCUPANCY_COMPONENT_OCCUPANCY_OPERATION_COUNT = 2;
+	int OCCUPANCY_COMPONENT_OCCUPANCY_OPERATION_COUNT = 3;
 
 	/**
 	 * The meta object id for the '{@link Implementation.impl.OccupancyComponent_GuestImpl <em>Occupancy Component Guest</em>}' class.
@@ -3725,6 +3734,16 @@ public interface ImplementationPackage extends EPackage {
 	EOperation getOccupancyComponent_Occupancy__AddGuestToOccupancy__String_String();
 
 	/**
+	 * Returns the meta object for the '{@link Implementation.OccupancyComponent_Occupancy#listGuests() <em>List Guests</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>List Guests</em>' operation.
+	 * @see Implementation.OccupancyComponent_Occupancy#listGuests()
+	 * @generated
+	 */
+	EOperation getOccupancyComponent_Occupancy__ListGuests();
+
+	/**
 	 * Returns the meta object for class '{@link Implementation.OccupancyComponent_Guest <em>Occupancy Component Guest</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5985,6 +6004,14 @@ public interface ImplementationPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation OCCUPANCY_COMPONENT_OCCUPANCY___ADD_GUEST_TO_OCCUPANCY__STRING_STRING = eINSTANCE.getOccupancyComponent_Occupancy__AddGuestToOccupancy__String_String();
+
+		/**
+		 * The meta object literal for the '<em><b>List Guests</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation OCCUPANCY_COMPONENT_OCCUPANCY___LIST_GUESTS = eINSTANCE.getOccupancyComponent_Occupancy__ListGuests();
 
 		/**
 		 * The meta object literal for the '{@link Implementation.impl.OccupancyComponent_GuestImpl <em>Occupancy Component Guest</em>}' class.

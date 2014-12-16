@@ -113,6 +113,13 @@
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
           </ownedParameter>
         </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_Yb_iwIUvEeS93fj9yg1HxA" name="listGuests" visibility="public">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_cFA34IUvEeS93fj9yg1HxA" name="guests" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_emlcwIUvEeS93fj9yg1HxA" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_emmq4IUvEeS93fj9yg1HxA" value="*"/>
+          </ownedParameter>
+        </ownedOperation>
         <nestedClassifier xmi:type="uml:Association" xmi:id="_LVfPYIElEeSZXsM8lF2eOA" memberEnd="_LVfPYYElEeSZXsM8lF2eOA _LVeoUIElEeSZXsM8lF2eOA">
           <ownedEnd xmi:type="uml:Property" xmi:id="_LVfPYYElEeSZXsM8lF2eOA" name="occupancy" type="_x4aGoHsGEeSN3_59vLF8fg" association="_LVfPYIElEeSZXsM8lF2eOA">
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_LVfPYoElEeSZXsM8lF2eOA" value="1"/>

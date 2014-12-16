@@ -2,6 +2,7 @@
  */
 package Implementation.impl;
 
+import Implementation.BookingComponent_Booking;
 import Implementation.ImplementationPackage;
 import Implementation.OccupancyComponent_Guest;
 import Implementation.OccupancyComponent_Occupancy;
@@ -284,6 +285,26 @@ public class OccupancyComponent_OccupancyImpl extends MinimalEObjectImpl.Contain
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public EList<String> listGuests() {
+
+		EList<String> guestsInRoom = 
+				new EObjectResolvingEList<String>(BookingComponent_Booking.class, 
+						this, ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY__GUESTS);
+		
+		String fullName = null;
+		for(OccupancyComponent_Guest guest: guests) {
+			fullName = "" + guest.getFirstName() + ","+ guest.getLastName();
+			guestsInRoom.add(fullName);
+		}
+		
+		return guestsInRoom;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -394,6 +415,8 @@ public class OccupancyComponent_OccupancyImpl extends MinimalEObjectImpl.Contain
 				return getPartner((String)arguments.get(0), (String)arguments.get(1));
 			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY___ADD_GUEST_TO_OCCUPANCY__STRING_STRING:
 				return addGuestToOccupancy((String)arguments.get(0), (String)arguments.get(1));
+			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY___LIST_GUESTS:
+				return listGuests();
 		}
 		return super.eInvoke(operationID, arguments);
 	}

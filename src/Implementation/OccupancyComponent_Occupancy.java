@@ -163,4 +163,12 @@ public interface OccupancyComponent_Occupancy extends EObject {
 	 */
 	boolean addGuestToOccupancy(String firstName, String lastName);
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
+	 * @generated
+	 */
+	EList<String> listGuests();
+
 } // OccupancyComponent_Occupancy
