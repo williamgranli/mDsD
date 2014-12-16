@@ -1304,6 +1304,42 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getAdditionalServiceComponent_AdditionalService__CreateEvent__Date_String_int_int() {
+		return additionalServiceComponent_AdditionalServiceEClass.getEOperations().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getAdditionalServiceComponent_AdditionalService__EditEvent__Date_String_int_int() {
+		return additionalServiceComponent_AdditionalServiceEClass.getEOperations().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getAdditionalServiceComponent_AdditionalService__RemoveEvent__Date_String() {
+		return additionalServiceComponent_AdditionalServiceEClass.getEOperations().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getAdditionalServiceComponent_AdditionalService__RemoveEvents__Date() {
+		return additionalServiceComponent_AdditionalServiceEClass.getEOperations().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getStaffComponent_IAuthentication() {
 		return staffComponent_IAuthenticationEClass;
 	}
@@ -1439,7 +1475,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getAdditionalServiceComponent_IAdditionalServiceAdministration__CreateEvent__String_Date_String_int_int_boolean() {
+	public EOperation getAdditionalServiceComponent_IAdditionalServiceAdministration__CreateEvent__String_Date_String_int_int() {
 		return additionalServiceComponent_IAdditionalServiceAdministrationEClass.getEOperations().get(3);
 	}
 
@@ -1448,7 +1484,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getAdditionalServiceComponent_IAdditionalServiceAdministration__EditEvent__String_Date_String_int_int_boolean() {
+	public EOperation getAdditionalServiceComponent_IAdditionalServiceAdministration__EditEvent__String_Date_String_int_int() {
 		return additionalServiceComponent_IAdditionalServiceAdministrationEClass.getEOperations().get(4);
 	}
 
@@ -2469,6 +2505,10 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		createEReference(additionalServiceComponent_AdditionalServiceEClass, ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE__TEMP_EVENTS);
 		createEOperation(additionalServiceComponent_AdditionalServiceEClass, ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE___FIND_EVENT__DATE_STRING);
 		createEOperation(additionalServiceComponent_AdditionalServiceEClass, ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE___FIND_EVENTS__DATE);
+		createEOperation(additionalServiceComponent_AdditionalServiceEClass, ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE___CREATE_EVENT__DATE_STRING_INT_INT);
+		createEOperation(additionalServiceComponent_AdditionalServiceEClass, ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE___EDIT_EVENT__DATE_STRING_INT_INT);
+		createEOperation(additionalServiceComponent_AdditionalServiceEClass, ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE___REMOVE_EVENT__DATE_STRING);
+		createEOperation(additionalServiceComponent_AdditionalServiceEClass, ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE___REMOVE_EVENTS__DATE);
 
 		additionalServiceComponent_AdditionalServiceEventEClass = createEClass(ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_EVENT);
 		createEAttribute(additionalServiceComponent_AdditionalServiceEventEClass, ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_EVENT__DATE_TIME);
@@ -2480,8 +2520,8 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		createEOperation(additionalServiceComponent_IAdditionalServiceAdministrationEClass, ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___CREATE_ADDITIONAL_SERVICE__STRING_BOOLEAN_INT_STRING);
 		createEOperation(additionalServiceComponent_IAdditionalServiceAdministrationEClass, ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___EDIT_ADDITIONAL_SERVICE__STRING_STRING_BOOLEAN_INT_STRING);
 		createEOperation(additionalServiceComponent_IAdditionalServiceAdministrationEClass, ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___REMOVE_ADDITIONAL_SERVICE__STRING);
-		createEOperation(additionalServiceComponent_IAdditionalServiceAdministrationEClass, ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___CREATE_EVENT__STRING_DATE_STRING_INT_INT_BOOLEAN);
-		createEOperation(additionalServiceComponent_IAdditionalServiceAdministrationEClass, ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___EDIT_EVENT__STRING_DATE_STRING_INT_INT_BOOLEAN);
+		createEOperation(additionalServiceComponent_IAdditionalServiceAdministrationEClass, ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___CREATE_EVENT__STRING_DATE_STRING_INT_INT);
+		createEOperation(additionalServiceComponent_IAdditionalServiceAdministrationEClass, ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___EDIT_EVENT__STRING_DATE_STRING_INT_INT);
 		createEOperation(additionalServiceComponent_IAdditionalServiceAdministrationEClass, ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___REMOVE_EVENT__STRING_DATE_STRING);
 
 		additionalServiceComponent_IAdditionalServiceInformationEClass = createEClass(ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION);
@@ -2937,6 +2977,25 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		op = initEOperation(getAdditionalServiceComponent_AdditionalService__FindEvents__Date(), this.getAdditionalServiceComponent_AdditionalServiceEvent(), "findEvents", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDate(), "dateTime", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
+		op = initEOperation(getAdditionalServiceComponent_AdditionalService__CreateEvent__Date_String_int_int(), theTypesPackage.getBoolean(), "createEvent", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "dateTime", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "location", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getInteger(), "maxAttendants", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getInteger(), "currentAttendants", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getAdditionalServiceComponent_AdditionalService__EditEvent__Date_String_int_int(), theTypesPackage.getBoolean(), "editEvent", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "dateTime", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "location", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getInteger(), "maxAttendants", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getInteger(), "currentAttendants", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getAdditionalServiceComponent_AdditionalService__RemoveEvent__Date_String(), theTypesPackage.getBoolean(), "removeEvent", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "date", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "location", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getAdditionalServiceComponent_AdditionalService__RemoveEvents__Date(), theTypesPackage.getBoolean(), "removeEvents", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "date", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
 		initEClass(additionalServiceComponent_AdditionalServiceEventEClass, AdditionalServiceComponent_AdditionalServiceEvent.class, "AdditionalServiceComponent_AdditionalServiceEvent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAdditionalServiceComponent_AdditionalServiceEvent_DateTime(), ecorePackage.getEDate(), "dateTime", null, 1, 1, AdditionalServiceComponent_AdditionalServiceEvent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getAdditionalServiceComponent_AdditionalServiceEvent_Location(), theTypesPackage.getString(), "location", null, 1, 1, AdditionalServiceComponent_AdditionalServiceEvent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -2961,21 +3020,19 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		op = initEOperation(getAdditionalServiceComponent_IAdditionalServiceAdministration__RemoveAdditionalService__String(), theTypesPackage.getBoolean(), "removeAdditionalService", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "name", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getAdditionalServiceComponent_IAdditionalServiceAdministration__CreateEvent__String_Date_String_int_int_boolean(), null, "createEvent", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getAdditionalServiceComponent_IAdditionalServiceAdministration__CreateEvent__String_Date_String_int_int(), theTypesPackage.getBoolean(), "createEvent", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "name", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDate(), "dateTime", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "location", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "maxAttendants", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "currentAttendants", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getBoolean(), "returnValue", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getAdditionalServiceComponent_IAdditionalServiceAdministration__EditEvent__String_Date_String_int_int_boolean(), null, "editEvent", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getAdditionalServiceComponent_IAdditionalServiceAdministration__EditEvent__String_Date_String_int_int(), theTypesPackage.getBoolean(), "editEvent", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "name", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDate(), "dateTime", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "location", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "maxAttendants", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "currentAttendants", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getBoolean(), "returnValue", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getAdditionalServiceComponent_IAdditionalServiceAdministration__RemoveEvent__String_Date_String(), theTypesPackage.getBoolean(), "removeEvent", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "name", 1, 1, IS_UNIQUE, !IS_ORDERED);
