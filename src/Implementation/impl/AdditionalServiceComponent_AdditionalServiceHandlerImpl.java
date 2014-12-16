@@ -64,10 +64,11 @@ public class AdditionalServiceComponent_AdditionalServiceHandlerImpl extends Min
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	protected AdditionalServiceComponent_AdditionalServiceHandlerImpl() {
 		super();
+		this.additionalService = getAdditionalService();
 	}
 
 	/**
@@ -133,100 +134,147 @@ public class AdditionalServiceComponent_AdditionalServiceHandlerImpl extends Min
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public String getAdditionalServiceInfo(String name) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		AdditionalServiceComponent_AdditionalService service = findService(name);
+		if (service != null) {
+			return service.toString();
+		} else {
+			return "No service found (" + name + ")";
+		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public EList<String> getAllAdditionalServices() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		EList<String> result = new EList<String>();
+		for (AdditionalServiceComponent_AdditionalService s : additionalService) {
+			result.add(s.toString());
+		}
+		if (result.isEmpty()) {
+			result.add("No additional services found...");
+		}
+		return result;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean createAdditionalService(String name, boolean usable, int price, String description) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		AdditionalServiceComponent_AdditionalService service = findService(name);
+		if (service == null) {
+			additionalService.add(new AdditionalServiceComponent_AdditionalServiceImpl(name, usable, price, description));
+			System.out.println("A service with the name \"" + name + "\" was created!");
+			return true;
+		} else {
+			System.out.println("ERROR: A service with the name \"" + name + "\" already exist...");
+		}
+		return false;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean editAdditionalService(String oldName, String name, boolean usable, int price, String description) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		AdditionalServiceComponent_AdditionalService service = findService(oldName);
+		if (service != null) {
+			if (removeAdditionalService(oldName)) {
+				return createAdditionalService(name, usable, price, description);
+			}
+		}
+		return false;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean removeAdditionalService(String name) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		AdditionalServiceComponent_AdditionalService service = findService(name);
+		if (service == null) {
+			System.out.println("A service with the name \"" + name + "\" does not exist...");
+			return false;
+		} else {
+			additionalService.remove(service);
+			System.out.println("A service with the name \"" + name + "\" was removed!");
+		}
+		return true;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean createEvent(String name, Date dateTime, String location, int maxAttendants, int currentAttendants) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		AdditionalServiceComponent_AdditionalService service = findService(name);
+		if (service == null) {
+			System.out.println("A service with name " + name + " does not exist. Creating...");
+			if (createAdditionalService(name,true,0,"description")) {
+				service = findService(name);
+			} else {
+				return false;
+			}
+		} else {
+			if (service.createEvent(dateTime,location,maxAttendants,currentAttendants)) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean editEvent(String name, Date dateTime, String location, int maxAttendants, int currentAttendants) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		AdditionalServiceComponent_AdditionalService service = findService(name);
+		if (service != null) {
+			if(service.editEvent(dateTime,location,maxAttendants,currentAttendants)){
+				return true;
+			}
+		}
+		return false;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean removeEvent(String name, Date date, String location) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		AdditionalServiceComponent_AdditionalService service = findService(name);
+		if (service != null) {
+			if (service.removeEvent(date,location)) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public AdditionalServiceComponent_AdditionalService findService(String name) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		for (AdditionalServiceComponent_AdditionalService s : additionalService) {
+			if (s.getName() == name) {
+				return this;
+			}
+		}
+		System.out.println("findService(): Service not found (" + name + ")");
+		return null;
 	}
 
 	/**

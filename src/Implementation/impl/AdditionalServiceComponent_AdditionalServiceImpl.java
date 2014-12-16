@@ -146,6 +146,20 @@ public class AdditionalServiceComponent_AdditionalServiceImpl extends MinimalEOb
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	protected AdditionalServiceComponent_AdditionalServiceImpl(String name, boolean usable, int price, String description) {
+		super();
+		this.setName(name);
+		this.setUsable(usable);
+		this.setPrice(price);
+		this.setDescription(description);
+		this.additionalServiceEvent = getAdditionalServiceEvent();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -264,65 +278,95 @@ public class AdditionalServiceComponent_AdditionalServiceImpl extends MinimalEOb
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public AdditionalServiceComponent_AdditionalServiceEvent findEvent(Date date, String location) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		for (AdditionalServiceComponent_AdditionalServiceEvent e : additionalServiceEvent) {
+			if (e.getDateTime() == date && e.getLocation == location) {
+				return this;
+			}
+		}
+		System.out.println("findEvent(): Event not found (" + date + " at " + location + ")");
+		return null;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public AdditionalServiceComponent_AdditionalServiceEvent findEvents(Date dateTime) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		tempEvents = null;
+		EList<AdditionalServiceComponent_AdditionalServiceEvent> tempEvents = getTempEvents();
+
+		for (AdditionalServiceComponent_AdditionalServiceEvent e : additionalServiceEvent) {
+			if (s.getDateTime() == date) {
+				tempEvents.add(this);
+			}
+		}
+		if (tempEvents != null) {
+			return tempEvents;
+		}
+		System.out.println("findEvents(): Events not found (" + date + ")");
+		return null;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean createEvent(Date dateTime, String location, int maxAttendants, int currentAttendants) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		AdditionalServiceComponent_AdditionalServiceEvent event = findEvent(dateTime,location);
+		if (event != null) {
+			this.getAdditionalServiceEvent().add(new AdditionalServiceComponent_AdditionalServiceEvent(date,location));
+			System.out.println("Event created!");
+			return true;
+		}
+		return false;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean editEvent(Date dateTime, String location, int maxAttendants, int currentAttendants) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		AdditionalServiceComponent_AdditionalServiceEvent event = findEvent(dateTime,location);
+		if (event != null) {
+			if (currentAttendants <= maxAttendants) {
+				event.setMaxAttendants(maxAttendants);
+				event.setCurrentAttendants(currentAttendants);
+				return true;
+			} else {
+				System.out.println("Max number of attendants is " + maxAttendants + ". Cannot change to " + currentAttendants + "!");
+			}
+		}
+		return false;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean removeEvent(Date date, String location) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		AdditionalServiceComponent_AdditionalServiceEvent event = findEvent(dateTime,location);
+		if (event != null) {
+			this.getAdditionalServiceEvent().remove(event);
+			System.out.println("Event removed!");
+			return true;
+		}
+		return false;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean removeEvents(Date date) {
-		// TODO: implement this method
+		// TODO: Not implemented. The administrator interface need 'boolean removeEvents(String name, Date date)'. ServiceHandler shall access this method.
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
 	}
@@ -472,15 +516,18 @@ public class AdditionalServiceComponent_AdditionalServiceImpl extends MinimalEOb
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
 		result.append(name);
-		result.append(", usable: ");
+		result.append(", ");
 		result.append(usable);
-		result.append(", price: ");
+		result.append(", ");
 		result.append(price);
-		result.append(", description: ");
+		result.append(", ");
 		result.append(description);
-		result.append(')');
+		result.append(", [");
+		for (AdditionalServiceComponent_AdditionalServiceEvent e : additionalServiceEvent) {
+			result.append(e.toString());
+		}
+		result.append('];');
 		return result.toString();
 	}
 

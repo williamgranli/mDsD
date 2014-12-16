@@ -119,6 +119,19 @@ public class AdditionalServiceComponent_AdditionalServiceEventImpl extends Minim
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	protected AdditionalServiceComponent_AdditionalServiceEventImpl(Date dateTime, String location, int maxAttendants, int currentAttendants) {
+		super();
+		this.setDateTime(dateTime);
+		this.setLocation(location);
+		this.setMaxAttendant(maxAttendants);
+		this.setCurrentAttendants(currentAttendants);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -301,22 +314,21 @@ public class AdditionalServiceComponent_AdditionalServiceEventImpl extends Minim
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (dateTime: ");
 		result.append(dateTime);
-		result.append(", location: ");
+		result.append(", ");
 		result.append(location);
-		result.append(", maxAttendant: ");
+		result.append(", ");
 		result.append(maxAttendant);
-		result.append(", currentAttendants: ");
+		result.append(", ");
 		result.append(currentAttendants);
-		result.append(')');
+		result.append(';');
 		return result.toString();
 	}
 
