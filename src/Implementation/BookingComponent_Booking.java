@@ -290,4 +290,12 @@ public interface BookingComponent_Booking extends EObject {
 	 */
 	void removeGuestFromBooking(String firstName, String lastName, String address);
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model kind="operation" required="true" ordered="false"
+	 * @generated
+	 */
+	BookingComponent_BookingGuest getGuestsInBooking();
+
 } // BookingComponent_Booking

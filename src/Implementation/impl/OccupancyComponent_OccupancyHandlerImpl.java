@@ -2,27 +2,20 @@
  */
 package Implementation.impl;
 
-import Implementation.BookingComponent_IBooking;
+import Implementation.BookingComponent_IBookingInformation;
 import Implementation.ImplementationPackage;
 import Implementation.OccupancyComponent_IOccupancy;
 import Implementation.OccupancyComponent_Occupancy;
 import Implementation.OccupancyComponent_OccupancyHandler;
 import Implementation.RoomComponent_IRoomInformation;
-
 import java.lang.reflect.InvocationTargetException;
-
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
@@ -59,7 +52,7 @@ public class OccupancyComponent_OccupancyHandlerImpl extends MinimalEObjectImpl.
 	 * @generated
 	 * @ordered
 	 */
-	protected BookingComponent_IBooking iBooking;
+	protected BookingComponent_IBookingInformation iBooking;
 
 	/**
 	 * The cached value of the '{@link #getOccupancy() <em>Occupancy</em>}' reference list.
@@ -133,10 +126,10 @@ public class OccupancyComponent_OccupancyHandlerImpl extends MinimalEObjectImpl.
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public BookingComponent_IBooking getIBooking() {
+	public BookingComponent_IBookingInformation getIBooking() {
 		if (iBooking != null && iBooking.eIsProxy()) {
 			InternalEObject oldIBooking = (InternalEObject)iBooking;
-			iBooking = (BookingComponent_IBooking)eResolveProxy(oldIBooking);
+			iBooking = (BookingComponent_IBookingInformation)eResolveProxy(oldIBooking);
 			if (iBooking != oldIBooking) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER__IBOOKING, oldIBooking, iBooking));
@@ -150,7 +143,7 @@ public class OccupancyComponent_OccupancyHandlerImpl extends MinimalEObjectImpl.
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public BookingComponent_IBooking basicGetIBooking() {
+	public BookingComponent_IBookingInformation basicGetIBooking() {
 		return iBooking;
 	}
 
@@ -159,8 +152,8 @@ public class OccupancyComponent_OccupancyHandlerImpl extends MinimalEObjectImpl.
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setIBooking(BookingComponent_IBooking newIBooking) {
-		BookingComponent_IBooking oldIBooking = iBooking;
+	public void setIBooking(BookingComponent_IBookingInformation newIBooking) {
+		BookingComponent_IBookingInformation oldIBooking = iBooking;
 		iBooking = newIBooking;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER__IBOOKING, oldIBooking, iBooking));
@@ -266,7 +259,7 @@ public class OccupancyComponent_OccupancyHandlerImpl extends MinimalEObjectImpl.
 				setIRoomInformation((RoomComponent_IRoomInformation)newValue);
 				return;
 			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER__IBOOKING:
-				setIBooking((BookingComponent_IBooking)newValue);
+				setIBooking((BookingComponent_IBookingInformation)newValue);
 				return;
 			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER__OCCUPANCY:
 				getOccupancy().clear();
@@ -288,7 +281,7 @@ public class OccupancyComponent_OccupancyHandlerImpl extends MinimalEObjectImpl.
 				setIRoomInformation((RoomComponent_IRoomInformation)null);
 				return;
 			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER__IBOOKING:
-				setIBooking((BookingComponent_IBooking)null);
+				setIBooking((BookingComponent_IBookingInformation)null);
 				return;
 			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER__OCCUPANCY:
 				getOccupancy().clear();

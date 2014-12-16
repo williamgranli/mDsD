@@ -555,6 +555,17 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public BookingComponent_BookingGuest getGuestsInBooking() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -719,6 +730,8 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING___REMOVE_GUEST_FROM_BOOKING__STRING_STRING_STRING:
 				removeGuestFromBooking((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2));
 				return null;
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING___GET_GUESTS_IN_BOOKING:
+				return getGuestsInBooking();
 		}
 		return super.eInvoke(operationID, arguments);
 	}

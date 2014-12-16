@@ -159,9 +159,9 @@ public class ImplementationSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ImplementationPackage.BOOKING_COMPONENT_IBOOKING: {
-				BookingComponent_IBooking bookingComponent_IBooking = (BookingComponent_IBooking)theEObject;
-				T result = caseBookingComponent_IBooking(bookingComponent_IBooking);
+			case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_INFORMATION: {
+				BookingComponent_IBookingInformation bookingComponent_IBookingInformation = (BookingComponent_IBookingInformation)theEObject;
+				T result = caseBookingComponent_IBookingInformation(bookingComponent_IBookingInformation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -286,8 +286,15 @@ public class ImplementationSwitch<T> extends Switch<T> {
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER: {
 				BookingComponent_BookingManager bookingComponent_BookingManager = (BookingComponent_BookingManager)theEObject;
 				T result = caseBookingComponent_BookingManager(bookingComponent_BookingManager);
-				if (result == null) result = caseBookingComponent_IBooking(bookingComponent_BookingManager);
+				if (result == null) result = caseBookingComponent_IBookingInformation(bookingComponent_BookingManager);
 				if (result == null) result = caseBookingComponent_IBookingDecision(bookingComponent_BookingManager);
+				if (result == null) result = caseIBookingAdministration(bookingComponent_BookingManager);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ImplementationPackage.IBOOKING_ADMINISTRATION: {
+				IBookingAdministration iBookingAdministration = (IBookingAdministration)theEObject;
+				T result = caseIBookingAdministration(iBookingAdministration);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -594,17 +601,17 @@ public class ImplementationSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Booking Component IBooking</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Booking Component IBooking Information</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Booking Component IBooking</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Booking Component IBooking Information</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseBookingComponent_IBooking(BookingComponent_IBooking object) {
+	public T caseBookingComponent_IBookingInformation(BookingComponent_IBookingInformation object) {
 		return null;
 	}
 
@@ -905,6 +912,21 @@ public class ImplementationSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseBookingComponent_BookingManager(BookingComponent_BookingManager object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>IBooking Administration</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>IBooking Administration</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseIBookingAdministration(IBookingAdministration object) {
 		return null;
 	}
 

@@ -58,12 +58,12 @@ public interface OccupancyComponent_OccupancyHandler extends OccupancyComponent_
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>IBooking</em>' reference.
-	 * @see #setIBooking(BookingComponent_IBooking)
+	 * @see #setIBooking(BookingComponent_IBookingInformation)
 	 * @see Implementation.ImplementationPackage#getOccupancyComponent_OccupancyHandler_IBooking()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	BookingComponent_IBooking getIBooking();
+	BookingComponent_IBookingInformation getIBooking();
 
 	/**
 	 * Sets the value of the '{@link Implementation.OccupancyComponent_OccupancyHandler#getIBooking <em>IBooking</em>}' reference.
@@ -73,7 +73,7 @@ public interface OccupancyComponent_OccupancyHandler extends OccupancyComponent_
 	 * @see #getIBooking()
 	 * @generated
 	 */
-	void setIBooking(BookingComponent_IBooking value);
+	void setIBooking(BookingComponent_IBookingInformation value);
 
 	/**
 	 * Returns the value of the '<em><b>Occupancy</b></em>' reference list.

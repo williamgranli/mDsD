@@ -128,8 +128,8 @@ public class ImplementationAdapterFactory extends AdapterFactoryImpl {
 				return createRoomComponent_IRoomInformationAdapter();
 			}
 			@Override
-			public Adapter caseBookingComponent_IBooking(BookingComponent_IBooking object) {
-				return createBookingComponent_IBookingAdapter();
+			public Adapter caseBookingComponent_IBookingInformation(BookingComponent_IBookingInformation object) {
+				return createBookingComponent_IBookingInformationAdapter();
 			}
 			@Override
 			public Adapter casePaymentComponent(PaymentComponent object) {
@@ -210,6 +210,10 @@ public class ImplementationAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseBookingComponent_BookingManager(BookingComponent_BookingManager object) {
 				return createBookingComponent_BookingManagerAdapter();
+			}
+			@Override
+			public Adapter caseIBookingAdministration(IBookingAdministration object) {
+				return createIBookingAdministrationAdapter();
 			}
 			@Override
 			public Adapter caseStaffComponent(StaffComponent object) {
@@ -486,16 +490,16 @@ public class ImplementationAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link Implementation.BookingComponent_IBooking <em>Booking Component IBooking</em>}'.
+	 * Creates a new adapter for an object of class '{@link Implementation.BookingComponent_IBookingInformation <em>Booking Component IBooking Information</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see Implementation.BookingComponent_IBooking
+	 * @see Implementation.BookingComponent_IBookingInformation
 	 * @generated
 	 */
-	public Adapter createBookingComponent_IBookingAdapter() {
+	public Adapter createBookingComponent_IBookingInformationAdapter() {
 		return null;
 	}
 
@@ -776,6 +780,20 @@ public class ImplementationAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createBookingComponent_BookingManagerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link Implementation.IBookingAdministration <em>IBooking Administration</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see Implementation.IBookingAdministration
+	 * @generated
+	 */
+	public Adapter createIBookingAdministrationAdapter() {
 		return null;
 	}
 
