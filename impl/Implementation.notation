@@ -32,10 +32,6 @@
           <element xmi:type="uml:Operation" href="Implementation.uml#_shmToHr-EeS88peCe4NMnw"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_shrMIXr-EeS88peCe4NMnw"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_-08uMHsJEeSN3_59vLF8fg" type="3013">
-          <element xmi:type="uml:Operation" href="Implementation.uml#_-065AHsJEeSN3_59vLF8fg"/>
-          <layoutConstraint xmi:type="notation:Location" xmi:id="_-08uMXsJEeSN3_59vLF8fg"/>
-        </children>
         <children xmi:type="notation:Shape" xmi:id="_NVLykHsMEeSN3_59vLF8fg" type="3013">
           <styles xmi:type="notation:StringListValueStyle" xmi:id="_TAVXgHsMEeSN3_59vLF8fg" name="maskLabel">
             <stringListValue>parametersType</stringListValue>

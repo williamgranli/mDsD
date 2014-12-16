@@ -655,17 +655,8 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getOccupancyComponent_Occupancy_Guest() {
-		return (EReference)occupancyComponent_OccupancyEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getOccupancyComponent_Occupancy_BookingReference() {
-		return (EAttribute)occupancyComponent_OccupancyEClass.getEStructuralFeatures().get(4);
+		return (EAttribute)occupancyComponent_OccupancyEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -674,7 +665,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * @generated
 	 */
 	public EReference getOccupancyComponent_Occupancy_Guests() {
-		return (EReference)occupancyComponent_OccupancyEClass.getEStructuralFeatures().get(5);
+		return (EReference)occupancyComponent_OccupancyEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -727,15 +718,6 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getOccupancyComponent_Guest__Guest__String_String() {
-		return occupancyComponent_GuestEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getOccupancyComponent_IOccupancy() {
 		return occupancyComponent_IOccupancyEClass;
 	}
@@ -763,7 +745,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getOccupancyComponent_IOccupancy__ListFreeRooms() {
+	public EOperation getOccupancyComponent_IOccupancy__ListGuestsInRoom__int() {
 		return occupancyComponent_IOccupancyEClass.getEOperations().get(2);
 	}
 
@@ -772,7 +754,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getOccupancyComponent_IOccupancy__ListGuestsInRoom__int() {
+	public EOperation getOccupancyComponent_IOccupancy__NumberOfGuestsInHotel() {
 		return occupancyComponent_IOccupancyEClass.getEOperations().get(3);
 	}
 
@@ -781,7 +763,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getOccupancyComponent_IOccupancy__NumberOfGuestsInHotel() {
+	public EOperation getOccupancyComponent_IOccupancy__IsOccupied__int() {
 		return occupancyComponent_IOccupancyEClass.getEOperations().get(4);
 	}
 
@@ -790,17 +772,8 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getOccupancyComponent_IOccupancy__IsOccupied__int() {
-		return occupancyComponent_IOccupancyEClass.getEOperations().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EOperation getOccupancyComponent_IOccupancy__GetAvailableRooms__String() {
-		return occupancyComponent_IOccupancyEClass.getEOperations().get(6);
+		return occupancyComponent_IOccupancyEClass.getEOperations().get(5);
 	}
 
 	/**
@@ -2526,7 +2499,6 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		createEAttribute(occupancyComponent_OccupancyEClass, OCCUPANCY_COMPONENT_OCCUPANCY__ROOM_NUMBER);
 		createEAttribute(occupancyComponent_OccupancyEClass, OCCUPANCY_COMPONENT_OCCUPANCY__CHECK_IN_DATE_TIME);
 		createEAttribute(occupancyComponent_OccupancyEClass, OCCUPANCY_COMPONENT_OCCUPANCY__CHECK_OUT_DATE_TIME);
-		createEReference(occupancyComponent_OccupancyEClass, OCCUPANCY_COMPONENT_OCCUPANCY__GUEST);
 		createEAttribute(occupancyComponent_OccupancyEClass, OCCUPANCY_COMPONENT_OCCUPANCY__BOOKING_REFERENCE);
 		createEReference(occupancyComponent_OccupancyEClass, OCCUPANCY_COMPONENT_OCCUPANCY__GUESTS);
 		createEOperation(occupancyComponent_OccupancyEClass, OCCUPANCY_COMPONENT_OCCUPANCY___GET_PARTNER__STRING_STRING);
@@ -2535,12 +2507,10 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		occupancyComponent_GuestEClass = createEClass(OCCUPANCY_COMPONENT_GUEST);
 		createEAttribute(occupancyComponent_GuestEClass, OCCUPANCY_COMPONENT_GUEST__FIRST_NAME);
 		createEAttribute(occupancyComponent_GuestEClass, OCCUPANCY_COMPONENT_GUEST__LAST_NAME);
-		createEOperation(occupancyComponent_GuestEClass, OCCUPANCY_COMPONENT_GUEST___GUEST__STRING_STRING);
 
 		occupancyComponent_IOccupancyEClass = createEClass(OCCUPANCY_COMPONENT_IOCCUPANCY);
 		createEOperation(occupancyComponent_IOccupancyEClass, OCCUPANCY_COMPONENT_IOCCUPANCY___CHECK_IN_GUEST__STRING_STRING_STRING_STRING_STRING_STRING);
 		createEOperation(occupancyComponent_IOccupancyEClass, OCCUPANCY_COMPONENT_IOCCUPANCY___CHECK_OUT_GUEST__STRING_STRING_STRING);
-		createEOperation(occupancyComponent_IOccupancyEClass, OCCUPANCY_COMPONENT_IOCCUPANCY___LIST_FREE_ROOMS);
 		createEOperation(occupancyComponent_IOccupancyEClass, OCCUPANCY_COMPONENT_IOCCUPANCY___LIST_GUESTS_IN_ROOM__INT);
 		createEOperation(occupancyComponent_IOccupancyEClass, OCCUPANCY_COMPONENT_IOCCUPANCY___NUMBER_OF_GUESTS_IN_HOTEL);
 		createEOperation(occupancyComponent_IOccupancyEClass, OCCUPANCY_COMPONENT_IOCCUPANCY___IS_OCCUPIED__INT);
@@ -2847,7 +2817,6 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		initEAttribute(getOccupancyComponent_Occupancy_RoomNumber(), theTypesPackage.getInteger(), "roomNumber", null, 1, 1, OccupancyComponent_Occupancy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getOccupancyComponent_Occupancy_CheckInDateTime(), ecorePackage.getELong(), "checkInDateTime", null, 1, 1, OccupancyComponent_Occupancy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getOccupancyComponent_Occupancy_CheckOutDateTime(), ecorePackage.getELong(), "checkOutDateTime", null, 1, 1, OccupancyComponent_Occupancy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getOccupancyComponent_Occupancy_Guest(), this.getOccupancyComponent_Guest(), null, "Guest", null, 1, -1, OccupancyComponent_Occupancy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getOccupancyComponent_Occupancy_BookingReference(), theTypesPackage.getString(), "bookingReference", null, 1, 1, OccupancyComponent_Occupancy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getOccupancyComponent_Occupancy_Guests(), this.getOccupancyComponent_Guest(), null, "guests", null, 1, -1, OccupancyComponent_Occupancy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
@@ -2863,10 +2832,6 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		initEAttribute(getOccupancyComponent_Guest_FirstName(), theTypesPackage.getString(), "firstName", null, 1, 1, OccupancyComponent_Guest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getOccupancyComponent_Guest_LastName(), theTypesPackage.getString(), "lastName", null, 1, 1, OccupancyComponent_Guest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		op = initEOperation(getOccupancyComponent_Guest__Guest__String_String(), null, "Guest", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "firstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "lastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
 		initEClass(occupancyComponent_IOccupancyEClass, OccupancyComponent_IOccupancy.class, "OccupancyComponent_IOccupancy", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		op = initEOperation(getOccupancyComponent_IOccupancy__CheckInGuest__String_String_String_String_String_String(), null, "checkInGuest", 1, 1, IS_UNIQUE, !IS_ORDERED);
@@ -2878,11 +2843,9 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		addEParameter(op, theTypesPackage.getString(), "partnerLastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getOccupancyComponent_IOccupancy__CheckOutGuest__String_String_String(), null, "checkOutGuest", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "bookingReference", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "roomNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "firstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "lastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getOccupancyComponent_IOccupancy__ListFreeRooms(), theTypesPackage.getString(), "listFreeRooms", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getOccupancyComponent_IOccupancy__ListGuestsInRoom__int(), theTypesPackage.getString(), "listGuestsInRoom", 1, -1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "roomNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);

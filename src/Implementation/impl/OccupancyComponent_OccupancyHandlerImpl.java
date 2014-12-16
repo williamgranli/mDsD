@@ -265,18 +265,7 @@ public class OccupancyComponent_OccupancyHandlerImpl extends MinimalEObjectImpl.
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void checkOutGuest(String bookingReference, String firstName, String lastName) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<String> listFreeRooms() {
+	public void checkOutGuest(String roomNumber, String firstName, String lastName) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -495,7 +484,6 @@ public class OccupancyComponent_OccupancyHandlerImpl extends MinimalEObjectImpl.
 			switch (baseOperationID) {
 				case ImplementationPackage.OCCUPANCY_COMPONENT_IOCCUPANCY___CHECK_IN_GUEST__STRING_STRING_STRING_STRING_STRING_STRING: return ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___CHECK_IN_GUEST__STRING_STRING_STRING_STRING_STRING_STRING;
 				case ImplementationPackage.OCCUPANCY_COMPONENT_IOCCUPANCY___CHECK_OUT_GUEST__STRING_STRING_STRING: return ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___CHECK_OUT_GUEST__STRING_STRING_STRING;
-				case ImplementationPackage.OCCUPANCY_COMPONENT_IOCCUPANCY___LIST_FREE_ROOMS: return ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___LIST_FREE_ROOMS;
 				case ImplementationPackage.OCCUPANCY_COMPONENT_IOCCUPANCY___LIST_GUESTS_IN_ROOM__INT: return ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___LIST_GUESTS_IN_ROOM__INT;
 				case ImplementationPackage.OCCUPANCY_COMPONENT_IOCCUPANCY___NUMBER_OF_GUESTS_IN_HOTEL: return ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___NUMBER_OF_GUESTS_IN_HOTEL;
 				case ImplementationPackage.OCCUPANCY_COMPONENT_IOCCUPANCY___IS_OCCUPIED__INT: return ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___IS_OCCUPIED__INT;
@@ -521,8 +509,6 @@ public class OccupancyComponent_OccupancyHandlerImpl extends MinimalEObjectImpl.
 			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___CHECK_OUT_GUEST__STRING_STRING_STRING:
 				checkOutGuest((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2));
 				return null;
-			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___LIST_FREE_ROOMS:
-				return listFreeRooms();
 			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___LIST_GUESTS_IN_ROOM__INT:
 				return listGuestsInRoom((Integer)arguments.get(0));
 			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___NUMBER_OF_GUESTS_IN_HOTEL:

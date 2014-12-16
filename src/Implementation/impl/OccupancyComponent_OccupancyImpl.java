@@ -26,7 +26,6 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link Implementation.impl.OccupancyComponent_OccupancyImpl#getRoomNumber <em>Room Number</em>}</li>
  *   <li>{@link Implementation.impl.OccupancyComponent_OccupancyImpl#getCheckInDateTime <em>Check In Date Time</em>}</li>
  *   <li>{@link Implementation.impl.OccupancyComponent_OccupancyImpl#getCheckOutDateTime <em>Check Out Date Time</em>}</li>
- *   <li>{@link Implementation.impl.OccupancyComponent_OccupancyImpl#getGuest <em>Guest</em>}</li>
  *   <li>{@link Implementation.impl.OccupancyComponent_OccupancyImpl#getBookingReference <em>Booking Reference</em>}</li>
  *   <li>{@link Implementation.impl.OccupancyComponent_OccupancyImpl#getGuests <em>Guests</em>}</li>
  * </ul>
@@ -94,16 +93,6 @@ public class OccupancyComponent_OccupancyImpl extends MinimalEObjectImpl.Contain
 	 * @ordered
 	 */
 	protected long checkOutDateTime = CHECK_OUT_DATE_TIME_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getGuest() <em>Guest</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getGuest()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<OccupancyComponent_Guest> guest;
 
 	/**
 	 * The default value of the '{@link #getBookingReference() <em>Booking Reference</em>}' attribute.
@@ -234,18 +223,6 @@ public class OccupancyComponent_OccupancyImpl extends MinimalEObjectImpl.Contain
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<OccupancyComponent_Guest> getGuest() {
-		if (guest == null) {
-			guest = new EObjectResolvingEList<OccupancyComponent_Guest>(OccupancyComponent_Guest.class, this, ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY__GUEST);
-		}
-		return guest;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getBookingReference() {
 		return bookingReference;
 	}
@@ -318,8 +295,6 @@ public class OccupancyComponent_OccupancyImpl extends MinimalEObjectImpl.Contain
 				return getCheckInDateTime();
 			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY__CHECK_OUT_DATE_TIME:
 				return getCheckOutDateTime();
-			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY__GUEST:
-				return getGuest();
 			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY__BOOKING_REFERENCE:
 				return getBookingReference();
 			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY__GUESTS:
@@ -345,10 +320,6 @@ public class OccupancyComponent_OccupancyImpl extends MinimalEObjectImpl.Contain
 				return;
 			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY__CHECK_OUT_DATE_TIME:
 				setCheckOutDateTime((Long)newValue);
-				return;
-			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY__GUEST:
-				getGuest().clear();
-				getGuest().addAll((Collection<? extends OccupancyComponent_Guest>)newValue);
 				return;
 			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY__BOOKING_REFERENCE:
 				setBookingReference((String)newValue);
@@ -378,9 +349,6 @@ public class OccupancyComponent_OccupancyImpl extends MinimalEObjectImpl.Contain
 			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY__CHECK_OUT_DATE_TIME:
 				setCheckOutDateTime(CHECK_OUT_DATE_TIME_EDEFAULT);
 				return;
-			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY__GUEST:
-				getGuest().clear();
-				return;
 			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY__BOOKING_REFERENCE:
 				setBookingReference(BOOKING_REFERENCE_EDEFAULT);
 				return;
@@ -405,8 +373,6 @@ public class OccupancyComponent_OccupancyImpl extends MinimalEObjectImpl.Contain
 				return checkInDateTime != CHECK_IN_DATE_TIME_EDEFAULT;
 			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY__CHECK_OUT_DATE_TIME:
 				return checkOutDateTime != CHECK_OUT_DATE_TIME_EDEFAULT;
-			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY__GUEST:
-				return guest != null && !guest.isEmpty();
 			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY__BOOKING_REFERENCE:
 				return BOOKING_REFERENCE_EDEFAULT == null ? bookingReference != null : !BOOKING_REFERENCE_EDEFAULT.equals(bookingReference);
 			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY__GUESTS:

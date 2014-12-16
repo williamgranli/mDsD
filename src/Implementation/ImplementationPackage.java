@@ -429,22 +429,13 @@ public interface ImplementationPackage extends EPackage {
 	int OCCUPANCY_COMPONENT_OCCUPANCY__CHECK_OUT_DATE_TIME = 2;
 
 	/**
-	 * The feature id for the '<em><b>Guest</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OCCUPANCY_COMPONENT_OCCUPANCY__GUEST = 3;
-
-	/**
 	 * The feature id for the '<em><b>Booking Reference</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OCCUPANCY_COMPONENT_OCCUPANCY__BOOKING_REFERENCE = 4;
+	int OCCUPANCY_COMPONENT_OCCUPANCY__BOOKING_REFERENCE = 3;
 
 	/**
 	 * The feature id for the '<em><b>Guests</b></em>' reference list.
@@ -453,7 +444,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OCCUPANCY_COMPONENT_OCCUPANCY__GUESTS = 5;
+	int OCCUPANCY_COMPONENT_OCCUPANCY__GUESTS = 4;
 
 	/**
 	 * The number of structural features of the '<em>Occupancy Component Occupancy</em>' class.
@@ -462,7 +453,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OCCUPANCY_COMPONENT_OCCUPANCY_FEATURE_COUNT = 6;
+	int OCCUPANCY_COMPONENT_OCCUPANCY_FEATURE_COUNT = 5;
 
 	/**
 	 * The operation id for the '<em>Get Partner</em>' operation.
@@ -529,22 +520,13 @@ public interface ImplementationPackage extends EPackage {
 	int OCCUPANCY_COMPONENT_GUEST_FEATURE_COUNT = 2;
 
 	/**
-	 * The operation id for the '<em>Guest</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OCCUPANCY_COMPONENT_GUEST___GUEST__STRING_STRING = 0;
-
-	/**
 	 * The number of operations of the '<em>Occupancy Component Guest</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OCCUPANCY_COMPONENT_GUEST_OPERATION_COUNT = 1;
+	int OCCUPANCY_COMPONENT_GUEST_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link Implementation.OccupancyComponent_IOccupancy <em>Occupancy Component IOccupancy</em>}' class.
@@ -584,22 +566,13 @@ public interface ImplementationPackage extends EPackage {
 	int OCCUPANCY_COMPONENT_IOCCUPANCY___CHECK_OUT_GUEST__STRING_STRING_STRING = 1;
 
 	/**
-	 * The operation id for the '<em>List Free Rooms</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OCCUPANCY_COMPONENT_IOCCUPANCY___LIST_FREE_ROOMS = 2;
-
-	/**
 	 * The operation id for the '<em>List Guests In Room</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OCCUPANCY_COMPONENT_IOCCUPANCY___LIST_GUESTS_IN_ROOM__INT = 3;
+	int OCCUPANCY_COMPONENT_IOCCUPANCY___LIST_GUESTS_IN_ROOM__INT = 2;
 
 	/**
 	 * The operation id for the '<em>Number Of Guests In Hotel</em>' operation.
@@ -608,7 +581,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OCCUPANCY_COMPONENT_IOCCUPANCY___NUMBER_OF_GUESTS_IN_HOTEL = 4;
+	int OCCUPANCY_COMPONENT_IOCCUPANCY___NUMBER_OF_GUESTS_IN_HOTEL = 3;
 
 	/**
 	 * The operation id for the '<em>Is Occupied</em>' operation.
@@ -617,7 +590,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OCCUPANCY_COMPONENT_IOCCUPANCY___IS_OCCUPIED__INT = 5;
+	int OCCUPANCY_COMPONENT_IOCCUPANCY___IS_OCCUPIED__INT = 4;
 
 	/**
 	 * The operation id for the '<em>Get Available Rooms</em>' operation.
@@ -626,7 +599,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OCCUPANCY_COMPONENT_IOCCUPANCY___GET_AVAILABLE_ROOMS__STRING = 6;
+	int OCCUPANCY_COMPONENT_IOCCUPANCY___GET_AVAILABLE_ROOMS__STRING = 5;
 
 	/**
 	 * The number of operations of the '<em>Occupancy Component IOccupancy</em>' class.
@@ -635,7 +608,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OCCUPANCY_COMPONENT_IOCCUPANCY_OPERATION_COUNT = 7;
+	int OCCUPANCY_COMPONENT_IOCCUPANCY_OPERATION_COUNT = 6;
 
 	/**
 	 * The meta object id for the '{@link Implementation.impl.OccupancyComponent_OccupancyHandlerImpl <em>Occupancy Component Occupancy Handler</em>}' class.
@@ -702,22 +675,13 @@ public interface ImplementationPackage extends EPackage {
 	int OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___CHECK_OUT_GUEST__STRING_STRING_STRING = OCCUPANCY_COMPONENT_IOCCUPANCY_DECISION_OPERATION_COUNT + 1;
 
 	/**
-	 * The operation id for the '<em>List Free Rooms</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___LIST_FREE_ROOMS = OCCUPANCY_COMPONENT_IOCCUPANCY_DECISION_OPERATION_COUNT + 2;
-
-	/**
 	 * The operation id for the '<em>List Guests In Room</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___LIST_GUESTS_IN_ROOM__INT = OCCUPANCY_COMPONENT_IOCCUPANCY_DECISION_OPERATION_COUNT + 3;
+	int OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___LIST_GUESTS_IN_ROOM__INT = OCCUPANCY_COMPONENT_IOCCUPANCY_DECISION_OPERATION_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Number Of Guests In Hotel</em>' operation.
@@ -726,7 +690,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___NUMBER_OF_GUESTS_IN_HOTEL = OCCUPANCY_COMPONENT_IOCCUPANCY_DECISION_OPERATION_COUNT + 4;
+	int OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___NUMBER_OF_GUESTS_IN_HOTEL = OCCUPANCY_COMPONENT_IOCCUPANCY_DECISION_OPERATION_COUNT + 3;
 
 	/**
 	 * The operation id for the '<em>Is Occupied</em>' operation.
@@ -735,7 +699,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___IS_OCCUPIED__INT = OCCUPANCY_COMPONENT_IOCCUPANCY_DECISION_OPERATION_COUNT + 5;
+	int OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___IS_OCCUPIED__INT = OCCUPANCY_COMPONENT_IOCCUPANCY_DECISION_OPERATION_COUNT + 4;
 
 	/**
 	 * The operation id for the '<em>Get Available Rooms</em>' operation.
@@ -744,7 +708,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___GET_AVAILABLE_ROOMS__STRING = OCCUPANCY_COMPONENT_IOCCUPANCY_DECISION_OPERATION_COUNT + 6;
+	int OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___GET_AVAILABLE_ROOMS__STRING = OCCUPANCY_COMPONENT_IOCCUPANCY_DECISION_OPERATION_COUNT + 5;
 
 	/**
 	 * The operation id for the '<em>Find Occupancy</em>' operation.
@@ -753,7 +717,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___FIND_OCCUPANCY__STRING_STRING_STRING = OCCUPANCY_COMPONENT_IOCCUPANCY_DECISION_OPERATION_COUNT + 7;
+	int OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___FIND_OCCUPANCY__STRING_STRING_STRING = OCCUPANCY_COMPONENT_IOCCUPANCY_DECISION_OPERATION_COUNT + 6;
 
 	/**
 	 * The operation id for the '<em>Is In Room Types</em>' operation.
@@ -762,7 +726,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___IS_IN_ROOM_TYPES__ELIST_STRING = OCCUPANCY_COMPONENT_IOCCUPANCY_DECISION_OPERATION_COUNT + 8;
+	int OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___IS_IN_ROOM_TYPES__ELIST_STRING = OCCUPANCY_COMPONENT_IOCCUPANCY_DECISION_OPERATION_COUNT + 7;
 
 	/**
 	 * The number of operations of the '<em>Occupancy Component Occupancy Handler</em>' class.
@@ -771,7 +735,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER_OPERATION_COUNT = OCCUPANCY_COMPONENT_IOCCUPANCY_DECISION_OPERATION_COUNT + 9;
+	int OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER_OPERATION_COUNT = OCCUPANCY_COMPONENT_IOCCUPANCY_DECISION_OPERATION_COUNT + 8;
 
 	/**
 	 * The meta object id for the '{@link Implementation.RoomComponent_IRoomInformation <em>Room Component IRoom Information</em>}' class.
@@ -3719,17 +3683,6 @@ public interface ImplementationPackage extends EPackage {
 	EAttribute getOccupancyComponent_Occupancy_CheckOutDateTime();
 
 	/**
-	 * Returns the meta object for the reference list '{@link Implementation.OccupancyComponent_Occupancy#getGuest <em>Guest</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Guest</em>'.
-	 * @see Implementation.OccupancyComponent_Occupancy#getGuest()
-	 * @see #getOccupancyComponent_Occupancy()
-	 * @generated
-	 */
-	EReference getOccupancyComponent_Occupancy_Guest();
-
-	/**
 	 * Returns the meta object for the attribute '{@link Implementation.OccupancyComponent_Occupancy#getBookingReference <em>Booking Reference</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3804,16 +3757,6 @@ public interface ImplementationPackage extends EPackage {
 	EAttribute getOccupancyComponent_Guest_LastName();
 
 	/**
-	 * Returns the meta object for the '{@link Implementation.OccupancyComponent_Guest#Guest(java.lang.String, java.lang.String) <em>Guest</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Guest</em>' operation.
-	 * @see Implementation.OccupancyComponent_Guest#Guest(java.lang.String, java.lang.String)
-	 * @generated
-	 */
-	EOperation getOccupancyComponent_Guest__Guest__String_String();
-
-	/**
 	 * Returns the meta object for class '{@link Implementation.OccupancyComponent_IOccupancy <em>Occupancy Component IOccupancy</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3842,16 +3785,6 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getOccupancyComponent_IOccupancy__CheckOutGuest__String_String_String();
-
-	/**
-	 * Returns the meta object for the '{@link Implementation.OccupancyComponent_IOccupancy#listFreeRooms() <em>List Free Rooms</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>List Free Rooms</em>' operation.
-	 * @see Implementation.OccupancyComponent_IOccupancy#listFreeRooms()
-	 * @generated
-	 */
-	EOperation getOccupancyComponent_IOccupancy__ListFreeRooms();
 
 	/**
 	 * Returns the meta object for the '{@link Implementation.OccupancyComponent_IOccupancy#listGuestsInRoom(int) <em>List Guests In Room</em>}' operation.
@@ -6022,14 +5955,6 @@ public interface ImplementationPackage extends EPackage {
 		EAttribute OCCUPANCY_COMPONENT_OCCUPANCY__CHECK_OUT_DATE_TIME = eINSTANCE.getOccupancyComponent_Occupancy_CheckOutDateTime();
 
 		/**
-		 * The meta object literal for the '<em><b>Guest</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference OCCUPANCY_COMPONENT_OCCUPANCY__GUEST = eINSTANCE.getOccupancyComponent_Occupancy_Guest();
-
-		/**
 		 * The meta object literal for the '<em><b>Booking Reference</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6088,14 +6013,6 @@ public interface ImplementationPackage extends EPackage {
 		EAttribute OCCUPANCY_COMPONENT_GUEST__LAST_NAME = eINSTANCE.getOccupancyComponent_Guest_LastName();
 
 		/**
-		 * The meta object literal for the '<em><b>Guest</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation OCCUPANCY_COMPONENT_GUEST___GUEST__STRING_STRING = eINSTANCE.getOccupancyComponent_Guest__Guest__String_String();
-
-		/**
 		 * The meta object literal for the '{@link Implementation.OccupancyComponent_IOccupancy <em>Occupancy Component IOccupancy</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6120,14 +6037,6 @@ public interface ImplementationPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation OCCUPANCY_COMPONENT_IOCCUPANCY___CHECK_OUT_GUEST__STRING_STRING_STRING = eINSTANCE.getOccupancyComponent_IOccupancy__CheckOutGuest__String_String_String();
-
-		/**
-		 * The meta object literal for the '<em><b>List Free Rooms</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation OCCUPANCY_COMPONENT_IOCCUPANCY___LIST_FREE_ROOMS = eINSTANCE.getOccupancyComponent_IOccupancy__ListFreeRooms();
 
 		/**
 		 * The meta object literal for the '<em><b>List Guests In Room</b></em>' operation.

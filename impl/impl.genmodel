@@ -58,8 +58,6 @@
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//OccupancyComponent_Occupancy/roomNumber"/>
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//OccupancyComponent_Occupancy/checkInDateTime"/>
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//OccupancyComponent_Occupancy/checkOutDateTime"/>
-      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EReference Implementation.ecore#//OccupancyComponent_Occupancy/Guest"/>
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//OccupancyComponent_Occupancy/bookingReference"/>
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
           propertySortChoices="true" ecoreFeature="ecore:EReference Implementation.ecore#//OccupancyComponent_Occupancy/guests"/>
@@ -75,10 +73,6 @@
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//OccupancyComponent_Guest">
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//OccupancyComponent_Guest/firstName"/>
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//OccupancyComponent_Guest/lastName"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//OccupancyComponent_Guest/Guest">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//OccupancyComponent_Guest/Guest/firstName"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//OccupancyComponent_Guest/Guest/lastName"/>
-      </genOperations>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Implementation.ecore#//OccupancyComponent_IOccupancy">
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//OccupancyComponent_IOccupancy/checkInGuest">
@@ -90,11 +84,10 @@
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//OccupancyComponent_IOccupancy/checkInGuest/partnerLastName"/>
       </genOperations>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//OccupancyComponent_IOccupancy/checkOutGuest">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//OccupancyComponent_IOccupancy/checkOutGuest/bookingReference"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//OccupancyComponent_IOccupancy/checkOutGuest/roomNumber"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//OccupancyComponent_IOccupancy/checkOutGuest/firstName"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//OccupancyComponent_IOccupancy/checkOutGuest/lastName"/>
       </genOperations>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//OccupancyComponent_IOccupancy/listFreeRooms"/>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//OccupancyComponent_IOccupancy/listGuestsInRoom">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//OccupancyComponent_IOccupancy/listGuestsInRoom/roomNumber"/>
       </genOperations>

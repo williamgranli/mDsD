@@ -150,7 +150,7 @@
           </ownedParameter>
         </ownedOperation>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_shmToHr-EeS88peCe4NMnw" name="checkOutGuest">
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_9erf0Hr-EeS88peCe4NMnw" name="bookingReference">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_9erf0Hr-EeS88peCe4NMnw" name="roomNumber">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedParameter>
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_AhKZYHr_EeS88peCe4NMnw" name="firstName">
@@ -158,13 +158,6 @@
           </ownedParameter>
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_z3hFYHsLEeSN3_59vLF8fg" name="lastName">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-          </ownedParameter>
-        </ownedOperation>
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_-065AHsJEeSN3_59vLF8fg" name="listFreeRooms">
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_P40GEIEkEeSZXsM8lF2eOA" name="currentRooms" direction="return">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RRgscIEmEeSZXsM8lF2eOA"/>
-            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RRoBMIEmEeSZXsM8lF2eOA" value="*"/>
           </ownedParameter>
         </ownedOperation>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_NVJWUHsMEeSN3_59vLF8fg" name="listGuestsInRoom" visibility="public">

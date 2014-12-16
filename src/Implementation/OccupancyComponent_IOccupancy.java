@@ -28,18 +28,10 @@ public interface OccupancyComponent_IOccupancy extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model bookingReferenceDataType="org.eclipse.uml2.types.String" bookingReferenceRequired="true" bookingReferenceOrdered="false" firstNameDataType="org.eclipse.uml2.types.String" firstNameRequired="true" firstNameOrdered="false" lastNameDataType="org.eclipse.uml2.types.String" lastNameRequired="true" lastNameOrdered="false"
+	 * @model roomNumberDataType="org.eclipse.uml2.types.String" roomNumberRequired="true" roomNumberOrdered="false" firstNameDataType="org.eclipse.uml2.types.String" firstNameRequired="true" firstNameOrdered="false" lastNameDataType="org.eclipse.uml2.types.String" lastNameRequired="true" lastNameOrdered="false"
 	 * @generated
 	 */
-	void checkOutGuest(String bookingReference, String firstName, String lastName);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.uml2.types.String" ordered="false"
-	 * @generated
-	 */
-	EList<String> listFreeRooms();
+	void checkOutGuest(String roomNumber, String firstName, String lastName);
 
 	/**
 	 * <!-- begin-user-doc -->

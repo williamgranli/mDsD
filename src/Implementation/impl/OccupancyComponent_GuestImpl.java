@@ -4,15 +4,8 @@ package Implementation.impl;
 
 import Implementation.ImplementationPackage;
 import Implementation.OccupancyComponent_Guest;
-
-import java.lang.reflect.InvocationTargetException;
-
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -149,17 +142,6 @@ public class OccupancyComponent_GuestImpl extends MinimalEObjectImpl.Container i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void Guest(String firstName, String lastName) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -221,21 +203,6 @@ public class OccupancyComponent_GuestImpl extends MinimalEObjectImpl.Container i
 				return LAST_NAME_EDEFAULT == null ? lastName != null : !LAST_NAME_EDEFAULT.equals(lastName);
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case ImplementationPackage.OCCUPANCY_COMPONENT_GUEST___GUEST__STRING_STRING:
-				Guest((String)arguments.get(0), (String)arguments.get(1));
-				return null;
-		}
-		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

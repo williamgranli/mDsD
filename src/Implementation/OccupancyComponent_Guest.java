@@ -74,12 +74,4 @@ public interface OccupancyComponent_Guest extends EObject {
 	 */
 	void setLastName(String value);
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model firstNameDataType="org.eclipse.uml2.types.String" firstNameRequired="true" firstNameOrdered="false" lastNameDataType="org.eclipse.uml2.types.String" lastNameRequired="true" lastNameOrdered="false"
-	 * @generated
-	 */
-	void Guest(String firstName, String lastName);
-
 } // OccupancyComponent_Guest
