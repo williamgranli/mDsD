@@ -794,7 +794,9 @@
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedParameter>
         </ownedOperation>
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_tW9R4IUQEeSnMfn5T1z3aA" name="getGuestsInBooking" visibility="public"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_tW9R4IUQEeSnMfn5T1z3aA" name="getGuestsInBooking" visibility="public">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_CIdgAIUTEeSnMfn5T1z3aA" name="foundGuests" type="_vH6RgH4SEeS7R5Ychvo0mw" direction="return"/>
+        </ownedOperation>
       </nestedClassifier>
       <nestedClassifier xmi:type="uml:Class" xmi:id="_gomS13uiEeSz04gN9GtPDA" name="BookingManager">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_gooIBXuiEeSz04gN9GtPDA" name="bookings" type="_gokdoHuiEeSz04gN9GtPDA" association="_gooIAXuiEeSz04gN9GtPDA">
@@ -852,7 +854,16 @@
           </ownedEnd>
         </nestedClassifier>
       </nestedClassifier>
-      <nestedClassifier xmi:type="uml:Interface" xmi:id="_5-C0cHprEeS6O5zO6NZCqA" name="IBookingInformation"/>
+      <nestedClassifier xmi:type="uml:Interface" xmi:id="_5-C0cHprEeS6O5zO6NZCqA" name="IBookingInformation">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_pe1e4IUSEeSnMfn5T1z3aA" name="getGuestsInBooking" visibility="public">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_vgkX0IUSEeSnMfn5T1z3aA" name="bookingReference">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_ySaNUIUSEeSnMfn5T1z3aA" name="foundGuests" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+      </nestedClassifier>
       <nestedClassifier xmi:type="uml:Class" xmi:id="_pll4cH4SEeS7R5Ychvo0mw" name="AdditionalService">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_gong8XuiEeSz04gN9GtPDA" name="name">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
