@@ -483,22 +483,13 @@ public interface ImplementationPackage extends EPackage {
 	int OCCUPANCY_COMPONENT_OCCUPANCY___ADD_GUEST_TO_OCCUPANCY__STRING_STRING = 1;
 
 	/**
-	 * The operation id for the '<em>Is In Occupancy</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OCCUPANCY_COMPONENT_OCCUPANCY___IS_IN_OCCUPANCY__ELIST_STRING = 2;
-
-	/**
 	 * The number of operations of the '<em>Occupancy Component Occupancy</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OCCUPANCY_COMPONENT_OCCUPANCY_OPERATION_COUNT = 3;
+	int OCCUPANCY_COMPONENT_OCCUPANCY_OPERATION_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link Implementation.impl.OccupancyComponent_GuestImpl <em>Occupancy Component Guest</em>}' class.
@@ -756,13 +747,31 @@ public interface ImplementationPackage extends EPackage {
 	int OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___GET_AVAILABLE_ROOMS__STRING = OCCUPANCY_COMPONENT_IOCCUPANCY_DECISION_OPERATION_COUNT + 6;
 
 	/**
+	 * The operation id for the '<em>Find Occupancy</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___FIND_OCCUPANCY__STRING_STRING_STRING = OCCUPANCY_COMPONENT_IOCCUPANCY_DECISION_OPERATION_COUNT + 7;
+
+	/**
+	 * The operation id for the '<em>Is In Room Types</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___IS_IN_ROOM_TYPES__ELIST_STRING = OCCUPANCY_COMPONENT_IOCCUPANCY_DECISION_OPERATION_COUNT + 8;
+
+	/**
 	 * The number of operations of the '<em>Occupancy Component Occupancy Handler</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER_OPERATION_COUNT = OCCUPANCY_COMPONENT_IOCCUPANCY_DECISION_OPERATION_COUNT + 7;
+	int OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER_OPERATION_COUNT = OCCUPANCY_COMPONENT_IOCCUPANCY_DECISION_OPERATION_COUNT + 9;
 
 	/**
 	 * The meta object id for the '{@link Implementation.RoomComponent_IRoomInformation <em>Room Component IRoom Information</em>}' class.
@@ -3763,16 +3772,6 @@ public interface ImplementationPackage extends EPackage {
 	EOperation getOccupancyComponent_Occupancy__AddGuestToOccupancy__String_String();
 
 	/**
-	 * Returns the meta object for the '{@link Implementation.OccupancyComponent_Occupancy#isInOccupancy(org.eclipse.emf.common.util.EList, java.lang.String) <em>Is In Occupancy</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is In Occupancy</em>' operation.
-	 * @see Implementation.OccupancyComponent_Occupancy#isInOccupancy(org.eclipse.emf.common.util.EList, java.lang.String)
-	 * @generated
-	 */
-	EOperation getOccupancyComponent_Occupancy__IsInOccupancy__EList_String();
-
-	/**
 	 * Returns the meta object for class '{@link Implementation.OccupancyComponent_Guest <em>Occupancy Component Guest</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3936,6 +3935,26 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getOccupancyComponent_OccupancyHandler_Occupancy();
+
+	/**
+	 * Returns the meta object for the '{@link Implementation.OccupancyComponent_OccupancyHandler#findOccupancy(java.lang.String, java.lang.String, java.lang.String) <em>Find Occupancy</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Find Occupancy</em>' operation.
+	 * @see Implementation.OccupancyComponent_OccupancyHandler#findOccupancy(java.lang.String, java.lang.String, java.lang.String)
+	 * @generated
+	 */
+	EOperation getOccupancyComponent_OccupancyHandler__FindOccupancy__String_String_String();
+
+	/**
+	 * Returns the meta object for the '{@link Implementation.OccupancyComponent_OccupancyHandler#isInRoomTypes(org.eclipse.emf.common.util.EList, java.lang.String) <em>Is In Room Types</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is In Room Types</em>' operation.
+	 * @see Implementation.OccupancyComponent_OccupancyHandler#isInRoomTypes(org.eclipse.emf.common.util.EList, java.lang.String)
+	 * @generated
+	 */
+	EOperation getOccupancyComponent_OccupancyHandler__IsInRoomTypes__EList_String();
 
 	/**
 	 * Returns the meta object for class '{@link Implementation.RoomComponent_IRoomInformation <em>Room Component IRoom Information</em>}'.
@@ -6043,14 +6062,6 @@ public interface ImplementationPackage extends EPackage {
 		EOperation OCCUPANCY_COMPONENT_OCCUPANCY___ADD_GUEST_TO_OCCUPANCY__STRING_STRING = eINSTANCE.getOccupancyComponent_Occupancy__AddGuestToOccupancy__String_String();
 
 		/**
-		 * The meta object literal for the '<em><b>Is In Occupancy</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation OCCUPANCY_COMPONENT_OCCUPANCY___IS_IN_OCCUPANCY__ELIST_STRING = eINSTANCE.getOccupancyComponent_Occupancy__IsInOccupancy__EList_String();
-
-		/**
 		 * The meta object literal for the '{@link Implementation.impl.OccupancyComponent_GuestImpl <em>Occupancy Component Guest</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6183,6 +6194,22 @@ public interface ImplementationPackage extends EPackage {
 		 * @generated
 		 */
 		EReference OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER__OCCUPANCY = eINSTANCE.getOccupancyComponent_OccupancyHandler_Occupancy();
+
+		/**
+		 * The meta object literal for the '<em><b>Find Occupancy</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___FIND_OCCUPANCY__STRING_STRING_STRING = eINSTANCE.getOccupancyComponent_OccupancyHandler__FindOccupancy__String_String_String();
+
+		/**
+		 * The meta object literal for the '<em><b>Is In Room Types</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___IS_IN_ROOM_TYPES__ELIST_STRING = eINSTANCE.getOccupancyComponent_OccupancyHandler__IsInRoomTypes__EList_String();
 
 		/**
 		 * The meta object literal for the '{@link Implementation.RoomComponent_IRoomInformation <em>Room Component IRoom Information</em>}' class.

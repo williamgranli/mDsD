@@ -301,14 +301,6 @@ public class OccupancyComponent_OccupancyImpl extends MinimalEObjectImpl.Contain
 		
 	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public boolean isInOccupancy(EList<String> roomTypes, String guestRoomType) {
-		return false; //sdadfdsffdsfdsfdsfdsfds
-	}
 
 
 
@@ -436,8 +428,6 @@ public class OccupancyComponent_OccupancyImpl extends MinimalEObjectImpl.Contain
 				return getPartner((String)arguments.get(0), (String)arguments.get(1));
 			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY___ADD_GUEST_TO_OCCUPANCY__STRING_STRING:
 				return addGuestToOccupancy((String)arguments.get(0), (String)arguments.get(1));
-			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY___IS_IN_OCCUPANCY__ELIST_STRING:
-				return isInOccupancy((EList<String>)arguments.get(0), (String)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

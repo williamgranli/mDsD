@@ -39,10 +39,6 @@
       <eParameters name="firstName" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       <eParameters name="lastName" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     </eOperations>
-    <eOperations name="isInOccupancy" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Boolean">
-      <eParameters name="roomTypes" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String"/>
-      <eParameters name="guestRoomType" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-    </eOperations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="roomNumber" ordered="false"
         lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="checkInDateTime" ordered="false"
@@ -96,6 +92,15 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="OccupancyComponent_OccupancyHandler"
       eSuperTypes="#//OccupancyComponent_IOccupancyDecision #//OccupancyComponent_IOccupancy">
+    <eOperations name="findOccupancy" ordered="false" lowerBound="1" eType="#//OccupancyComponent_Occupancy">
+      <eParameters name="bookingReference" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="partnerFirstName" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="partnerLastName" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+    </eOperations>
+    <eOperations name="isInRoomTypes" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Boolean">
+      <eParameters name="roomTypes" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="guestInRoomType" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+    </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="iRoomInformation" ordered="false"
         lowerBound="1" eType="#//RoomComponent_IRoomInformation"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="iBooking" ordered="false"

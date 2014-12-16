@@ -91,4 +91,20 @@ public interface OccupancyComponent_OccupancyHandler extends OccupancyComponent_
 	 */
 	EList<OccupancyComponent_Occupancy> getOccupancy();
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model required="true" ordered="false" bookingReferenceDataType="org.eclipse.uml2.types.String" bookingReferenceRequired="true" bookingReferenceOrdered="false" partnerFirstNameDataType="org.eclipse.uml2.types.String" partnerFirstNameRequired="true" partnerFirstNameOrdered="false" partnerLastNameDataType="org.eclipse.uml2.types.String" partnerLastNameRequired="true" partnerLastNameOrdered="false"
+	 * @generated
+	 */
+	OccupancyComponent_Occupancy findOccupancy(String bookingReference, String partnerFirstName, String partnerLastName);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false" roomTypesDataType="org.eclipse.uml2.types.String" roomTypesMany="true" roomTypesOrdered="false" guestInRoomTypeDataType="org.eclipse.uml2.types.String" guestInRoomTypeRequired="true" guestInRoomTypeOrdered="false"
+	 * @generated
+	 */
+	boolean isInRoomTypes(EList<String> roomTypes, String guestInRoomType);
+
 } // OccupancyComponent_OccupancyHandler

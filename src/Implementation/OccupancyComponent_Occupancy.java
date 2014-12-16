@@ -180,12 +180,4 @@ public interface OccupancyComponent_Occupancy extends EObject {
 	 */
 	boolean addGuestToOccupancy(String firstName, String lastName);
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false" roomTypesDataType="org.eclipse.uml2.types.String" roomTypesMany="true" roomTypesOrdered="false" guestRoomTypeDataType="org.eclipse.uml2.types.String" guestRoomTypeRequired="true" guestRoomTypeOrdered="false"
-	 * @generated
-	 */
-	boolean isInOccupancy(EList<String> roomTypes, String guestRoomType);
-
 } // OccupancyComponent_Occupancy

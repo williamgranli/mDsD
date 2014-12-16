@@ -11,6 +11,7 @@ import Implementation.RoomComponent_IRoomInformation;
 
 import java.lang.reflect.InvocationTargetException;
 import java.sql.Date;
+import java.util.Arrays;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -184,7 +185,7 @@ public class OccupancyComponent_OccupancyHandlerImpl extends MinimalEObjectImpl.
 				EList<String> bookingInfo= iBooking.searchForBooking(bookingReference);
 				
 				String[] guestsForBooking = null;
-				String[] roomTypesArray = null;
+				EList<String> roomTypesArray = null;
 				String roomTypes = null;
 				
 				// If  reference does'nt return booking Info
@@ -205,7 +206,9 @@ public class OccupancyComponent_OccupancyHandlerImpl extends MinimalEObjectImpl.
 					// if guest firstName and lastName matches a guest in list
 					if((guestInfo[0].equals(firstName)) && (guestInfo[1].equals(lastName))){
 						
-						roomTypesArray = roomTypes.split(",");
+						String[] x = roomTypes.split(",");
+						
+						roomTypesArray =  (EList<String>) Arrays.asList(x);
 						
 						// if roomType provided by guest is in booking // check
 						if(isInRoomTypes(roomTypesArray, roomType)){
@@ -242,7 +245,7 @@ public class OccupancyComponent_OccupancyHandlerImpl extends MinimalEObjectImpl.
 								
 								// todo change checkInDateTime variable to Date instead of int 
 								// and regenerate getters and setters to accept date.
-								currentOccupancy.setCheckInDateTime(new Date());
+								currentOccupancy.setCheckInDateTime(System.currentTimeMillis());
 								currentOccupancy.setBookingReference(bookingReference);
 								currentOccupancy.addGuestToOccupancy(firstName, lastName);
 								occupancy.add(currentOccupancy);
@@ -362,6 +365,49 @@ public class OccupancyComponent_OccupancyHandlerImpl extends MinimalEObjectImpl.
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public OccupancyComponent_Occupancy findOccupancy(String bookingReference, String partnerFirstName, String partnerLastName) {
+		for(OccupancyComponent_Occupancy occupan : occupancy){
+			
+			String partnerInBooking = occupan.getPartner(partnerFirstName, partnerLastName);
+			boolean partnerExist = false;
+			if(partnerInBooking != null){
+				partnerExist = partnerInBooking.equals(partnerFirstName + "," + partnerLastName);
+			}
+			
+			
+			// if reference is in occupancy and partner specified is also in occupancy return occupancy
+			if((occupan.getBookingReference()).equals(bookingReference) && partnerExist){
+				return occupan;
+			}
+		}
+		
+		return null;
+	}
+
+
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public boolean isInRoomTypes(EList<String> roomTypes, String guestInRoomType) {
+
+			for(String roomType: roomTypes){
+				if(roomType.equals(guestInRoomType))
+					return true;
+			}
+			
+			return false;
+		
+
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -469,6 +515,7 @@ public class OccupancyComponent_OccupancyHandlerImpl extends MinimalEObjectImpl.
 	 * @generated
 	 */
 	@Override
+	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
 			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___CHECK_IN_GUEST__STRING_STRING_STRING_STRING_STRING_STRING:
@@ -487,6 +534,10 @@ public class OccupancyComponent_OccupancyHandlerImpl extends MinimalEObjectImpl.
 				return isOccupied((Integer)arguments.get(0));
 			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___GET_AVAILABLE_ROOMS__STRING:
 				return getAvailableRooms((String)arguments.get(0));
+			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___FIND_OCCUPANCY__STRING_STRING_STRING:
+				return findOccupancy((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2));
+			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___IS_IN_ROOM_TYPES__ELIST_STRING:
+				return isInRoomTypes((EList<String>)arguments.get(0), (String)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
