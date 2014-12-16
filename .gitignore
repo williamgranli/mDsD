@@ -2,8 +2,6 @@
 
 %Classpath ignore
 *.classpath
-bin/
-*.class
 *.DS_Store
 *Implementation.ecore
 
