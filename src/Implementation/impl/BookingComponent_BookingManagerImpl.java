@@ -535,12 +535,25 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean makePayment(String bookingReference) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		boolean successful = false;
+		
+		for (BookingComponent_Booking booking : bookings) {
+			if (booking.getReferenceNumber().equals(bookingReference)) {
+				String paymentString = booking.getPaymentDetails().toString();
+				String [] paymentArray = paymentString.split(",");
+				successful = iPayment.makePayment(paymentArray[0], paymentArray[1], Integer.parseInt(paymentArray[2]), 
+						Integer.parseInt(paymentArray[3]), paymentArray[4], paymentArray[5], booking.getCurrentCost());
+				if (successful == true) {
+					booking.setIsPaid(true);
+				}
+			}
+		}
+		
+		return successful;
+		
 	}
 
 	/**
