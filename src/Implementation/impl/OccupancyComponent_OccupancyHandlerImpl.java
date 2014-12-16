@@ -5,16 +5,13 @@ package Implementation.impl;
 import Implementation.BookingComponent_Booking;
 import Implementation.BookingComponent_IBookingInformation;
 import Implementation.ImplementationPackage;
-import Implementation.OccupancyComponent_Guest;
 import Implementation.OccupancyComponent_IOccupancy;
 import Implementation.OccupancyComponent_Occupancy;
 import Implementation.OccupancyComponent_OccupancyHandler;
 import Implementation.RoomComponent_IRoomInformation;
-
 import java.lang.reflect.InvocationTargetException;
 import java.util.Arrays;
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
@@ -267,20 +264,45 @@ public class OccupancyComponent_OccupancyHandlerImpl extends MinimalEObjectImpl.
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public void checkOutGuest(String roomNumber, String firstName, String lastName) {
+	public void checkOutGuest(int roomNumber, String firstName, String lastName) {
+		String fullName = "" + firstName + "," + lastName;
+		
+		EList<String> guestsInRoom = 
+				new EObjectResolvingEList<String>(BookingComponent_Booking.class, 
+						this, ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER__OCCUPANCY);
+		
+		
+		guestsInRoom = listGuestsInRoom(roomNumber);
+				
+		for(String guest: guestsInRoom) {
+			if (guest == fullName) {
+				
+				for (OccupancyComponent_Occupancy currentOccupancy : occupancy) {
+					if (currentOccupancy.getRoomNumber() == roomNumber 
+							&& currentOccupancy.getCheckOutDateTime() != 0L) {
+						
+						currentOccupancy.setCheckOutDateTime(System.currentTimeMillis());
 
+					}
+				
+				
+
+				
+				}
+			}
+		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated NOT
-	 */
+ 	 */
 	public EList<String> listGuestsInRoom(int roomNumber) {
 		if (!isOccupied(roomNumber)) {
-			System.out.println("Ther oom is not occupied");
+			System.out.println("The room is not occupied");
 			return null;
 		}
 		
@@ -297,6 +319,9 @@ public class OccupancyComponent_OccupancyHandlerImpl extends MinimalEObjectImpl.
 		return guestsInRoom;
 	}
 
+
+	
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -311,27 +336,19 @@ public class OccupancyComponent_OccupancyHandlerImpl extends MinimalEObjectImpl.
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isOccupied(int roomNumber) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public boolean isOccupied(String roomNumber) {
+	public boolean isOccupied(int roomNumber) {
 		for(OccupancyComponent_Occupancy occupan: occupancy){
-			if(occupan.getRoomNumber() == Integer.valueOf(roomNumber))
+			if(occupan.getRoomNumber() == Integer.valueOf(roomNumber)
+					&& occupan.getCheckOutDateTime() != 0L)
 				return true;
 		}
 
 		return false;
 	}
+
+
 
 
 	/**
@@ -522,7 +539,7 @@ public class OccupancyComponent_OccupancyHandlerImpl extends MinimalEObjectImpl.
 				checkInGuest((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5));
 				return null;
 			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___CHECK_OUT_GUEST__STRING_STRING_STRING:
-				checkOutGuest((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2));
+				checkOutGuest((Integer)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2));
 				return null;
 			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___LIST_GUESTS_IN_ROOM__INT:
 				return listGuestsInRoom((Integer)arguments.get(0));

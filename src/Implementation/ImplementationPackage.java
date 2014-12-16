@@ -3796,11 +3796,11 @@ public interface ImplementationPackage extends EPackage {
 	EOperation getOccupancyComponent_IOccupancy__CheckInGuest__String_String_String_String_String_String();
 
 	/**
-	 * Returns the meta object for the '{@link Implementation.OccupancyComponent_IOccupancy#checkOutGuest(java.lang.String, java.lang.String, java.lang.String) <em>Check Out Guest</em>}' operation.
+	 * Returns the meta object for the '{@link Implementation.OccupancyComponent_IOccupancy#checkOutGuest(int, java.lang.String, java.lang.String) <em>Check Out Guest</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Check Out Guest</em>' operation.
-	 * @see Implementation.OccupancyComponent_IOccupancy#checkOutGuest(java.lang.String, java.lang.String, java.lang.String)
+	 * @see Implementation.OccupancyComponent_IOccupancy#checkOutGuest(int, java.lang.String, java.lang.String)
 	 * @generated
 	 */
 	EOperation getOccupancyComponent_IOccupancy__CheckOutGuest__String_String_String();

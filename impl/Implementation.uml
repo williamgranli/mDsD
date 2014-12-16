@@ -158,7 +158,7 @@
         </ownedOperation>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_shmToHr-EeS88peCe4NMnw" name="checkOutGuest">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_9erf0Hr-EeS88peCe4NMnw" name="roomNumber">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
           </ownedParameter>
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_AhKZYHr_EeS88peCe4NMnw" name="firstName">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
