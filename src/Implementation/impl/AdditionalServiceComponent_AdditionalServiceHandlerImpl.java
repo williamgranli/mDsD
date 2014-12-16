@@ -151,7 +151,7 @@ public class AdditionalServiceComponent_AdditionalServiceHandlerImpl extends Min
 	 * @generated NOT
 	 */
 	public EList<String> getAllAdditionalServices() {
-		EList<String> result = new EList<String>();
+		EList<String> result = new EObjectResolvingEList<String>(AdditionalServiceComponent_AdditionalService.class, this, ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER__ADDITIONAL_SERVICE);
 		for (AdditionalServiceComponent_AdditionalService s : additionalService) {
 			result.add(s.toString());
 		}
@@ -270,7 +270,7 @@ public class AdditionalServiceComponent_AdditionalServiceHandlerImpl extends Min
 	public AdditionalServiceComponent_AdditionalService findService(String name) {
 		for (AdditionalServiceComponent_AdditionalService s : additionalService) {
 			if (s.getName() == name) {
-				return this;
+				return s;
 			}
 		}
 		System.out.println("findService(): Service not found (" + name + ")");

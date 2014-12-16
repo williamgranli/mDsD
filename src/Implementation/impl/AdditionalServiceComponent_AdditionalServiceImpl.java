@@ -282,8 +282,8 @@ public class AdditionalServiceComponent_AdditionalServiceImpl extends MinimalEOb
 	 */
 	public AdditionalServiceComponent_AdditionalServiceEvent findEvent(Date date, String location) {
 		for (AdditionalServiceComponent_AdditionalServiceEvent e : additionalServiceEvent) {
-			if (e.getDateTime() == date && e.getLocation == location) {
-				return this;
+			if (e.getDateTime() == date && e.getLocation() == location) {
+				return e;
 			}
 		}
 		System.out.println("findEvent(): Event not found (" + date + " at " + location + ")");
@@ -300,14 +300,15 @@ public class AdditionalServiceComponent_AdditionalServiceImpl extends MinimalEOb
 		EList<AdditionalServiceComponent_AdditionalServiceEvent> tempEvents = getTempEvents();
 
 		for (AdditionalServiceComponent_AdditionalServiceEvent e : additionalServiceEvent) {
-			if (s.getDateTime() == date) {
-				tempEvents.add(this);
+			if (e.getDateTime() == dateTime) {
+				tempEvents.add(e);
 			}
 		}
 		if (tempEvents != null) {
-			return tempEvents;
+			//TODO Change this to return tempEvents
+			return null;
 		}
-		System.out.println("findEvents(): Events not found (" + date + ")");
+		System.out.println("findEvents(): Events not found (" + dateTime + ")");
 		return null;
 	}
 
@@ -319,7 +320,7 @@ public class AdditionalServiceComponent_AdditionalServiceImpl extends MinimalEOb
 	public boolean createEvent(Date dateTime, String location, int maxAttendants, int currentAttendants) {
 		AdditionalServiceComponent_AdditionalServiceEvent event = findEvent(dateTime,location);
 		if (event != null) {
-			this.getAdditionalServiceEvent().add(new AdditionalServiceComponent_AdditionalServiceEvent(date,location));
+			this.getAdditionalServiceEvent().add(new AdditionalServiceComponent_AdditionalServiceEventImpl(dateTime,location, maxAttendants, currentAttendants));
 			System.out.println("Event created!");
 			return true;
 		}
@@ -335,7 +336,7 @@ public class AdditionalServiceComponent_AdditionalServiceImpl extends MinimalEOb
 		AdditionalServiceComponent_AdditionalServiceEvent event = findEvent(dateTime,location);
 		if (event != null) {
 			if (currentAttendants <= maxAttendants) {
-				event.setMaxAttendants(maxAttendants);
+				event.setMaxAttendant(maxAttendants);
 				event.setCurrentAttendants(currentAttendants);
 				return true;
 			} else {
@@ -351,7 +352,7 @@ public class AdditionalServiceComponent_AdditionalServiceImpl extends MinimalEOb
 	 * @generated NOT
 	 */
 	public boolean removeEvent(Date date, String location) {
-		AdditionalServiceComponent_AdditionalServiceEvent event = findEvent(dateTime,location);
+		AdditionalServiceComponent_AdditionalServiceEvent event = findEvent(date,location);
 		if (event != null) {
 			this.getAdditionalServiceEvent().remove(event);
 			System.out.println("Event removed!");
@@ -527,7 +528,7 @@ public class AdditionalServiceComponent_AdditionalServiceImpl extends MinimalEOb
 		for (AdditionalServiceComponent_AdditionalServiceEvent e : additionalServiceEvent) {
 			result.append(e.toString());
 		}
-		result.append('];');
+		result.append("];");
 		return result.toString();
 	}
 
