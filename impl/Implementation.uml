@@ -765,6 +765,9 @@
         <ownedAttribute xmi:type="uml:Property" xmi:id="_eQyG53uiEeSz04gN9GtPDA" name="expiryYear">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_YDUYQIXYEeS_xs5TLHXXQQ" name="ssn">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
         <nestedClassifier xmi:type="uml:Association" xmi:id="_3CjSMH4lEeSmVbbLtf9LGA" memberEnd="_3CjSMX4lEeSmVbbLtf9LGA _3CfAwH4lEeSmVbbLtf9LGA">
           <ownedEnd xmi:type="uml:Property" xmi:id="_3CfAwH4lEeSmVbbLtf9LGA" name="booking" type="_gokdoHuiEeSz04gN9GtPDA" association="_3CjSMH4lEeSmVbbLtf9LGA">
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_3CfAwX4lEeSmVbbLtf9LGA" value="1"/>
@@ -1030,7 +1033,13 @@
           </ownedEnd>
         </nestedClassifier>
       </nestedClassifier>
-      <nestedClassifier xmi:type="uml:Interface" xmi:id="_eX8x0H-zEeSVo4U8yTxtOw" name="IBookingDecision"/>
+      <nestedClassifier xmi:type="uml:Interface" xmi:id="_eX8x0H-zEeSVo4U8yTxtOw" name="IBookingDecision">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_qyf0MIXYEeS_xs5TLHXXQQ" name="getDSSInfo">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_8khEUIXYEeS_xs5TLHXXQQ" name="statistics" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+      </nestedClassifier>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_gong9XuiEeSz04gN9GtPDA" client="_gokdoHuiEeSz04gN9GtPDA">
         <supplier xmi:type="uml:Class" href="../../SequenceDiagram/model.uml#_t8iwMHsVEeSdPKzPJV8cOA"/>
       </packagedElement>
