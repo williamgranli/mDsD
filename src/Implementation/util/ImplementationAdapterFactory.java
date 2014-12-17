@@ -176,8 +176,8 @@ public class ImplementationAdapterFactory extends AdapterFactoryImpl {
 				return createAdditionalServiceComponent_IAdditionalServiceAdministrationAdapter();
 			}
 			@Override
-			public Adapter caseAdditionalServiceComponent_IAdditionalServiceInformation(AdditionalServiceComponent_IAdditionalServiceInformation object) {
-				return createAdditionalServiceComponent_IAdditionalServiceInformationAdapter();
+			public Adapter caseAdditionalServiceComponent_IEventManagement(AdditionalServiceComponent_IEventManagement object) {
+				return createAdditionalServiceComponent_IEventManagementAdapter();
 			}
 			@Override
 			public Adapter caseAdditionalServiceComponent_AdditionalServiceHandler(AdditionalServiceComponent_AdditionalServiceHandler object) {
@@ -648,20 +648,6 @@ public class ImplementationAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link Implementation.AdditionalServiceComponent_IAdditionalServiceInformation <em>Additional Service Component IAdditional Service Information</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see Implementation.AdditionalServiceComponent_IAdditionalServiceInformation
-	 * @generated
-	 */
-	public Adapter createAdditionalServiceComponent_IAdditionalServiceInformationAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link Implementation.AdditionalServiceComponent_AdditionalServiceHandler <em>Additional Service Component Additional Service Handler</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -686,6 +672,20 @@ public class ImplementationAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createAdditionalServiceComponent_IAdditionalServiceAdministrationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link Implementation.AdditionalServiceComponent_IEventManagement <em>Additional Service Component IEvent Management</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see Implementation.AdditionalServiceComponent_IEventManagement
+	 * @generated
+	 */
+	public Adapter createAdditionalServiceComponent_IEventManagementAdapter() {
 		return null;
 	}
 

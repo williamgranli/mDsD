@@ -136,13 +136,15 @@ public class AdditionalServiceComponent_AdditionalServiceHandlerImpl extends Min
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public String getAdditionalServiceInfo(String name) {
-		AdditionalServiceComponent_AdditionalService service = findService(name);
-		if (service != null) {
-			return service.toString();
-		} else {
-			return "No service found (" + name + ")";
+	public EList<String> getServices() {
+		EList<String> result = new EObjectResolvingEList<String>(AdditionalServiceComponent_AdditionalService.class, this, ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER__ADDITIONAL_SERVICE);
+		for (AdditionalServiceComponent_AdditionalService s : additionalService) {
+			result.add(s.getName());
 		}
+		if (result.isEmpty()) {
+			result.add("No additional services found...");
+		}
+		return result;
 	}
 
 	/**
@@ -150,15 +152,38 @@ public class AdditionalServiceComponent_AdditionalServiceHandlerImpl extends Min
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public EList<String> getAllAdditionalServices() {
-		EList<String> result = new EObjectResolvingEList<String>(AdditionalServiceComponent_AdditionalService.class, this, ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER__ADDITIONAL_SERVICE);
-		for (AdditionalServiceComponent_AdditionalService s : additionalService) {
-			result.add(s.toString());
+	public EList<String> getEvents(String name) {
+		AdditionalServiceComponent_AdditionalService service = findService(name);
+		if (service != null) {
+			for (AdditionalServiceComponent_AdditionalServiceEvent e : service.getAdditionalServiceEvent()) {
+				
+			}
+			//return service.toString();
+		} else {
+			//return "No service found (" + name + ")";
 		}
-		if (result.isEmpty()) {
-			result.add("No additional services found...");
-		}
-		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean addGuestToEvent(String name, Date dateTime, String location, int guests) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean removeGuestsFromEvent(String name, Date dateTime, String location, int guests) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -397,10 +422,14 @@ public class AdditionalServiceComponent_AdditionalServiceHandlerImpl extends Min
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER___GET_ADDITIONAL_SERVICE_INFO__STRING:
-				return getAdditionalServiceInfo((String)arguments.get(0));
-			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER___GET_ALL_ADDITIONAL_SERVICES:
-				return getAllAdditionalServices();
+			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER___GET_SERVICES:
+				return getServices();
+			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER___GET_EVENTS__STRING:
+				return getEvents((String)arguments.get(0));
+			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER___ADD_GUEST_TO_EVENT__STRING_DATE_STRING_INT:
+				return addGuestToEvent((String)arguments.get(0), (Date)arguments.get(1), (String)arguments.get(2), (Integer)arguments.get(3));
+			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER___REMOVE_GUESTS_FROM_EVENT__STRING_DATE_STRING_INT:
+				return removeGuestsFromEvent((String)arguments.get(0), (Date)arguments.get(1), (String)arguments.get(2), (Integer)arguments.get(3));
 			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER___CREATE_ADDITIONAL_SERVICE__STRING_BOOLEAN_INT_STRING:
 				return createAdditionalService((String)arguments.get(0), (Boolean)arguments.get(1), (Integer)arguments.get(2), (String)arguments.get(3));
 			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER___EDIT_ADDITIONAL_SERVICE__STRING_STRING_BOOLEAN_INT_STRING:

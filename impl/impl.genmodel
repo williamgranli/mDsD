@@ -409,11 +409,23 @@
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//AdditionalServiceComponent_IAdditionalServiceAdministration/removeEvents/dateTime"/>
       </genOperations>
     </genClasses>
-    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Implementation.ecore#//AdditionalServiceComponent_IAdditionalServiceInformation">
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//AdditionalServiceComponent_IAdditionalServiceInformation/getAdditionalServiceInfo">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//AdditionalServiceComponent_IAdditionalServiceInformation/getAdditionalServiceInfo/name"/>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Implementation.ecore#//AdditionalServiceComponent_IEventManagement">
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//AdditionalServiceComponent_IEventManagement/getServices"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//AdditionalServiceComponent_IEventManagement/getEvents">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//AdditionalServiceComponent_IEventManagement/getEvents/name"/>
       </genOperations>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//AdditionalServiceComponent_IAdditionalServiceInformation/getAllAdditionalServices"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//AdditionalServiceComponent_IEventManagement/addGuestToEvent">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//AdditionalServiceComponent_IEventManagement/addGuestToEvent/name"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//AdditionalServiceComponent_IEventManagement/addGuestToEvent/dateTime"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//AdditionalServiceComponent_IEventManagement/addGuestToEvent/location"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//AdditionalServiceComponent_IEventManagement/addGuestToEvent/guests"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//AdditionalServiceComponent_IEventManagement/removeGuestsFromEvent">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//AdditionalServiceComponent_IEventManagement/removeGuestsFromEvent/name"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//AdditionalServiceComponent_IEventManagement/removeGuestsFromEvent/dateTime"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//AdditionalServiceComponent_IEventManagement/removeGuestsFromEvent/location"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//AdditionalServiceComponent_IEventManagement/removeGuestsFromEvent/guests"/>
+      </genOperations>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//AdditionalServiceComponent_AdditionalServiceHandler">
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"

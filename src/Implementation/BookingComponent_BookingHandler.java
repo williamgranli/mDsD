@@ -102,12 +102,12 @@ public interface BookingComponent_BookingHandler extends BookingComponent_IBooki
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>IAdditional Service Information</em>' reference.
-	 * @see #setIAdditionalServiceInformation(AdditionalServiceComponent_IAdditionalServiceInformation)
+	 * @see #setIAdditionalServiceInformation(AdditionalServiceComponent_IEventManagement)
 	 * @see Implementation.ImplementationPackage#getBookingComponent_BookingHandler_IAdditionalServiceInformation()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	AdditionalServiceComponent_IAdditionalServiceInformation getIAdditionalServiceInformation();
+	AdditionalServiceComponent_IEventManagement getIAdditionalServiceInformation();
 
 	/**
 	 * Sets the value of the '{@link Implementation.BookingComponent_BookingHandler#getIAdditionalServiceInformation <em>IAdditional Service Information</em>}' reference.
@@ -117,7 +117,7 @@ public interface BookingComponent_BookingHandler extends BookingComponent_IBooki
 	 * @see #getIAdditionalServiceInformation()
 	 * @generated
 	 */
-	void setIAdditionalServiceInformation(AdditionalServiceComponent_IAdditionalServiceInformation value);
+	void setIAdditionalServiceInformation(AdditionalServiceComponent_IEventManagement value);
 
 	/**
 	 * Returns the value of the '<em><b>IPayment</b></em>' reference.

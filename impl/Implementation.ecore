@@ -437,16 +437,27 @@
       <eParameters name="dateTime" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
     </eOperations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="AdditionalServiceComponent_IAdditionalServiceInformation"
+  <eClassifiers xsi:type="ecore:EClass" name="AdditionalServiceComponent_IEventManagement"
       abstract="true" interface="true">
-    <eOperations name="getAdditionalServiceInfo" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String">
+    <eOperations name="getServices" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String"/>
+    <eOperations name="getEvents" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String">
       <eParameters name="name" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     </eOperations>
-    <eOperations name="getAllAdditionalServices" ordered="false" lowerBound="1" upperBound="-1"
-        eType="ecore:EDataType types.ecore#//String"/>
+    <eOperations name="addGuestToEvent" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Boolean">
+      <eParameters name="name" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="dateTime" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+      <eParameters name="location" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="guests" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
+    </eOperations>
+    <eOperations name="removeGuestsFromEvent" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Boolean">
+      <eParameters name="name" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="dateTime" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+      <eParameters name="location" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="guests" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
+    </eOperations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AdditionalServiceComponent_AdditionalServiceHandler"
-      eSuperTypes="#//AdditionalServiceComponent_IAdditionalServiceInformation #//AdditionalServiceComponent_IAdditionalServiceDecision #//AdditionalServiceComponent_IAdditionalServiceAdministration">
+      eSuperTypes="#//AdditionalServiceComponent_IEventManagement #//AdditionalServiceComponent_IAdditionalServiceDecision #//AdditionalServiceComponent_IAdditionalServiceAdministration">
     <eOperations name="findService" ordered="false" lowerBound="1" eType="#//AdditionalServiceComponent_AdditionalService">
       <eParameters name="name" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     </eOperations>
@@ -573,7 +584,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="iRoomInformation" ordered="false"
         lowerBound="1" eType="#//RoomComponent_IRoomInformation"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="iAdditionalServiceInformation"
-        ordered="false" lowerBound="1" eType="#//AdditionalServiceComponent_IAdditionalServiceInformation"/>
+        ordered="false" lowerBound="1" eType="#//AdditionalServiceComponent_IEventManagement"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="iPayment" ordered="false"
         lowerBound="1" eType="#//PaymentComponent_IPayment"/>
   </eClassifiers>

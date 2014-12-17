@@ -2,7 +2,7 @@
  */
 package Implementation.impl;
 
-import Implementation.AdditionalServiceComponent_IAdditionalServiceInformation;
+import Implementation.AdditionalServiceComponent_IEventManagement;
 import Implementation.BookingComponent_AdditionalService;
 import Implementation.BookingComponent_Booking;
 import Implementation.BookingComponent_BookingHandler;
@@ -12,11 +12,9 @@ import Implementation.ImplementationPackage;
 import Implementation.PaymentComponent_IPayment;
 import Implementation.RoomComponent_IRoomInformation;
 import Implementation.StaffComponent_IAuthentication;
-
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 import java.util.Date;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
@@ -81,7 +79,7 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 	 * @generated
 	 * @ordered
 	 */
-	protected AdditionalServiceComponent_IAdditionalServiceInformation iAdditionalServiceInformation;
+	protected AdditionalServiceComponent_IEventManagement iAdditionalServiceInformation;
 
 	/**
 	 * The cached value of the '{@link #getIPayment() <em>IPayment</em>}' reference.
@@ -206,10 +204,10 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AdditionalServiceComponent_IAdditionalServiceInformation getIAdditionalServiceInformation() {
+	public AdditionalServiceComponent_IEventManagement getIAdditionalServiceInformation() {
 		if (iAdditionalServiceInformation != null && iAdditionalServiceInformation.eIsProxy()) {
 			InternalEObject oldIAdditionalServiceInformation = (InternalEObject)iAdditionalServiceInformation;
-			iAdditionalServiceInformation = (AdditionalServiceComponent_IAdditionalServiceInformation)eResolveProxy(oldIAdditionalServiceInformation);
+			iAdditionalServiceInformation = (AdditionalServiceComponent_IEventManagement)eResolveProxy(oldIAdditionalServiceInformation);
 			if (iAdditionalServiceInformation != oldIAdditionalServiceInformation) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER__IADDITIONAL_SERVICE_INFORMATION, oldIAdditionalServiceInformation, iAdditionalServiceInformation));
@@ -223,7 +221,7 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AdditionalServiceComponent_IAdditionalServiceInformation basicGetIAdditionalServiceInformation() {
+	public AdditionalServiceComponent_IEventManagement basicGetIAdditionalServiceInformation() {
 		return iAdditionalServiceInformation;
 	}
 
@@ -232,8 +230,8 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setIAdditionalServiceInformation(AdditionalServiceComponent_IAdditionalServiceInformation newIAdditionalServiceInformation) {
-		AdditionalServiceComponent_IAdditionalServiceInformation oldIAdditionalServiceInformation = iAdditionalServiceInformation;
+	public void setIAdditionalServiceInformation(AdditionalServiceComponent_IEventManagement newIAdditionalServiceInformation) {
+		AdditionalServiceComponent_IEventManagement oldIAdditionalServiceInformation = iAdditionalServiceInformation;
 		iAdditionalServiceInformation = newIAdditionalServiceInformation;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER__IADDITIONAL_SERVICE_INFORMATION, oldIAdditionalServiceInformation, iAdditionalServiceInformation));
@@ -658,7 +656,7 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 				setIRoomInformation((RoomComponent_IRoomInformation)newValue);
 				return;
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER__IADDITIONAL_SERVICE_INFORMATION:
-				setIAdditionalServiceInformation((AdditionalServiceComponent_IAdditionalServiceInformation)newValue);
+				setIAdditionalServiceInformation((AdditionalServiceComponent_IEventManagement)newValue);
 				return;
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER__IPAYMENT:
 				setIPayment((PaymentComponent_IPayment)newValue);
@@ -685,7 +683,7 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 				setIRoomInformation((RoomComponent_IRoomInformation)null);
 				return;
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER__IADDITIONAL_SERVICE_INFORMATION:
-				setIAdditionalServiceInformation((AdditionalServiceComponent_IAdditionalServiceInformation)null);
+				setIAdditionalServiceInformation((AdditionalServiceComponent_IEventManagement)null);
 				return;
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER__IPAYMENT:
 				setIPayment((PaymentComponent_IPayment)null);

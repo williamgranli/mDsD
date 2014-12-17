@@ -8,7 +8,7 @@ import Implementation.AdditionalServiceComponent_AdditionalServiceEvent;
 import Implementation.AdditionalServiceComponent_AdditionalServiceHandler;
 import Implementation.AdditionalServiceComponent_IAdditionalServiceAdministration;
 import Implementation.AdditionalServiceComponent_IAdditionalServiceDecision;
-import Implementation.AdditionalServiceComponent_IAdditionalServiceInformation;
+import Implementation.AdditionalServiceComponent_IEventManagement;
 import Implementation.Bank;
 import Implementation.Bank_AdministratorProvides;
 import Implementation.Bank_CustomerProvides;
@@ -256,13 +256,6 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass additionalServiceComponent_IAdditionalServiceInformationEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass additionalServiceComponent_AdditionalServiceHandlerEClass = null;
 
 	/**
@@ -271,6 +264,13 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * @generated
 	 */
 	private EClass additionalServiceComponent_IAdditionalServiceAdministrationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass additionalServiceComponent_IEventManagementEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -564,7 +564,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getDecisionSupportComponent_IDecisionSupport__GetNumberOfOccupanciesOfRoom__String() {
+	public EOperation getDecisionSupportComponent_IDecisionSupport__GetNumberOfOccupanciesOfRoom__int() {
 		return decisionSupportComponent_IDecisionSupportEClass.getEOperations().get(7);
 	}
 
@@ -1644,33 +1644,6 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getAdditionalServiceComponent_IAdditionalServiceInformation() {
-		return additionalServiceComponent_IAdditionalServiceInformationEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getAdditionalServiceComponent_IAdditionalServiceInformation__GetAdditionalServiceInfo__String() {
-		return additionalServiceComponent_IAdditionalServiceInformationEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getAdditionalServiceComponent_IAdditionalServiceInformation__GetAllAdditionalServices() {
-		return additionalServiceComponent_IAdditionalServiceInformationEClass.getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getAdditionalServiceComponent_AdditionalServiceHandler() {
 		return additionalServiceComponent_AdditionalServiceHandlerEClass;
 	}
@@ -1772,6 +1745,51 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 */
 	public EOperation getAdditionalServiceComponent_IAdditionalServiceAdministration__RemoveEvents__String_Date() {
 		return additionalServiceComponent_IAdditionalServiceAdministrationEClass.getEOperations().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getAdditionalServiceComponent_IEventManagement() {
+		return additionalServiceComponent_IEventManagementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getAdditionalServiceComponent_IEventManagement__GetServices() {
+		return additionalServiceComponent_IEventManagementEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getAdditionalServiceComponent_IEventManagement__GetEvents__String() {
+		return additionalServiceComponent_IEventManagementEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getAdditionalServiceComponent_IEventManagement__AddGuestToEvent__String_Date_String_int() {
+		return additionalServiceComponent_IEventManagementEClass.getEOperations().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getAdditionalServiceComponent_IEventManagement__RemoveGuestsFromEvent__String_Date_String_int() {
+		return additionalServiceComponent_IEventManagementEClass.getEOperations().get(3);
 	}
 
 	/**
@@ -2820,7 +2838,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		createEOperation(decisionSupportComponent_IDecisionSupportEClass, DECISION_SUPPORT_COMPONENT_IDECISION_SUPPORT___GET_ALL_CUSTOMER_BOOKING_FREQUENCY);
 		createEOperation(decisionSupportComponent_IDecisionSupportEClass, DECISION_SUPPORT_COMPONENT_IDECISION_SUPPORT___GET_CUSTOMER_BOOKING_FREQUENCY__STRING);
 		createEOperation(decisionSupportComponent_IDecisionSupportEClass, DECISION_SUPPORT_COMPONENT_IDECISION_SUPPORT___GET_DSS_OCCUPANCY_INFO);
-		createEOperation(decisionSupportComponent_IDecisionSupportEClass, DECISION_SUPPORT_COMPONENT_IDECISION_SUPPORT___GET_NUMBER_OF_OCCUPANCIES_OF_ROOM__STRING);
+		createEOperation(decisionSupportComponent_IDecisionSupportEClass, DECISION_SUPPORT_COMPONENT_IDECISION_SUPPORT___GET_NUMBER_OF_OCCUPANCIES_OF_ROOM__INT);
 
 		decisionSupportComponent_BookingDSSInfoEClass = createEClass(DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO);
 		createEAttribute(decisionSupportComponent_BookingDSSInfoEClass, DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO__NUMBER_OF_GUESTS);
@@ -2975,9 +2993,11 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		createEOperation(additionalServiceComponent_IAdditionalServiceAdministrationEClass, ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___REMOVE_EVENT__STRING_DATE_STRING);
 		createEOperation(additionalServiceComponent_IAdditionalServiceAdministrationEClass, ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___REMOVE_EVENTS__STRING_DATE);
 
-		additionalServiceComponent_IAdditionalServiceInformationEClass = createEClass(ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION);
-		createEOperation(additionalServiceComponent_IAdditionalServiceInformationEClass, ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION___GET_ADDITIONAL_SERVICE_INFO__STRING);
-		createEOperation(additionalServiceComponent_IAdditionalServiceInformationEClass, ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION___GET_ALL_ADDITIONAL_SERVICES);
+		additionalServiceComponent_IEventManagementEClass = createEClass(ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT);
+		createEOperation(additionalServiceComponent_IEventManagementEClass, ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT___GET_SERVICES);
+		createEOperation(additionalServiceComponent_IEventManagementEClass, ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT___GET_EVENTS__STRING);
+		createEOperation(additionalServiceComponent_IEventManagementEClass, ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT___ADD_GUEST_TO_EVENT__STRING_DATE_STRING_INT);
+		createEOperation(additionalServiceComponent_IEventManagementEClass, ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT___REMOVE_GUESTS_FROM_EVENT__STRING_DATE_STRING_INT);
 
 		additionalServiceComponent_AdditionalServiceHandlerEClass = createEClass(ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER);
 		createEReference(additionalServiceComponent_AdditionalServiceHandlerEClass, ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER__ADDITIONAL_SERVICE);
@@ -3151,7 +3171,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		occupancyComponent_OccupancyHandlerEClass.getESuperTypes().add(this.getOccupancyComponent_IOccupancyDecision());
 		occupancyComponent_OccupancyHandlerEClass.getESuperTypes().add(this.getOccupancyComponent_IOccupancy());
 		paymentComponent_PaymentHandlerEClass.getESuperTypes().add(this.getPaymentComponent_IPayment());
-		additionalServiceComponent_AdditionalServiceHandlerEClass.getESuperTypes().add(this.getAdditionalServiceComponent_IAdditionalServiceInformation());
+		additionalServiceComponent_AdditionalServiceHandlerEClass.getESuperTypes().add(this.getAdditionalServiceComponent_IEventManagement());
 		additionalServiceComponent_AdditionalServiceHandlerEClass.getESuperTypes().add(this.getAdditionalServiceComponent_IAdditionalServiceDecision());
 		additionalServiceComponent_AdditionalServiceHandlerEClass.getESuperTypes().add(this.getAdditionalServiceComponent_IAdditionalServiceAdministration());
 		bookingComponent_BookingHandlerEClass.getESuperTypes().add(this.getBookingComponent_IBookingInformation());
@@ -3188,7 +3208,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 
 		initEOperation(getDecisionSupportComponent_IDecisionSupport__GetDSSOccupancyInfo(), null, "getDSSOccupancyInfo", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getDecisionSupportComponent_IDecisionSupport__GetNumberOfOccupanciesOfRoom__String(), theTypesPackage.getInteger(), "getNumberOfOccupanciesOfRoom", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getDecisionSupportComponent_IDecisionSupport__GetNumberOfOccupanciesOfRoom__int(), theTypesPackage.getInteger(), "getNumberOfOccupanciesOfRoom", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "roomNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(decisionSupportComponent_BookingDSSInfoEClass, DecisionSupportComponent_BookingDSSInfo.class, "DecisionSupportComponent_BookingDSSInfo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -3544,12 +3564,24 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		addEParameter(op, theTypesPackage.getString(), "name", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDate(), "dateTime", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEClass(additionalServiceComponent_IAdditionalServiceInformationEClass, AdditionalServiceComponent_IAdditionalServiceInformation.class, "AdditionalServiceComponent_IAdditionalServiceInformation", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(additionalServiceComponent_IEventManagementEClass, AdditionalServiceComponent_IEventManagement.class, "AdditionalServiceComponent_IEventManagement", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		op = initEOperation(getAdditionalServiceComponent_IAdditionalServiceInformation__GetAdditionalServiceInfo__String(), theTypesPackage.getString(), "getAdditionalServiceInfo", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		initEOperation(getAdditionalServiceComponent_IEventManagement__GetServices(), theTypesPackage.getString(), "getServices", 0, -1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getAdditionalServiceComponent_IEventManagement__GetEvents__String(), theTypesPackage.getString(), "getEvents", 0, -1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "name", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getAdditionalServiceComponent_IAdditionalServiceInformation__GetAllAdditionalServices(), theTypesPackage.getString(), "getAllAdditionalServices", 1, -1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getAdditionalServiceComponent_IEventManagement__AddGuestToEvent__String_Date_String_int(), theTypesPackage.getBoolean(), "addGuestToEvent", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "name", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "dateTime", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "location", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getInteger(), "guests", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getAdditionalServiceComponent_IEventManagement__RemoveGuestsFromEvent__String_Date_String_int(), theTypesPackage.getBoolean(), "removeGuestsFromEvent", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "name", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "dateTime", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "location", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getInteger(), "guests", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(additionalServiceComponent_AdditionalServiceHandlerEClass, AdditionalServiceComponent_AdditionalServiceHandler.class, "AdditionalServiceComponent_AdditionalServiceHandler", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAdditionalServiceComponent_AdditionalServiceHandler_AdditionalService(), this.getAdditionalServiceComponent_AdditionalService(), null, "additionalService", null, 0, -1, AdditionalServiceComponent_AdditionalServiceHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -3649,7 +3681,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		initEReference(getBookingComponent_BookingHandler_Bookings(), this.getBookingComponent_Booking(), null, "bookings", null, 0, -1, BookingComponent_BookingHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getBookingComponent_BookingHandler_Authentication(), this.getStaffComponent_IAuthentication(), null, "authentication", null, 1, 1, BookingComponent_BookingHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getBookingComponent_BookingHandler_IRoomInformation(), this.getRoomComponent_IRoomInformation(), null, "iRoomInformation", null, 1, 1, BookingComponent_BookingHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getBookingComponent_BookingHandler_IAdditionalServiceInformation(), this.getAdditionalServiceComponent_IAdditionalServiceInformation(), null, "iAdditionalServiceInformation", null, 1, 1, BookingComponent_BookingHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getBookingComponent_BookingHandler_IAdditionalServiceInformation(), this.getAdditionalServiceComponent_IEventManagement(), null, "iAdditionalServiceInformation", null, 1, 1, BookingComponent_BookingHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getBookingComponent_BookingHandler_IPayment(), this.getPaymentComponent_IPayment(), null, "iPayment", null, 1, 1, BookingComponent_BookingHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		op = initEOperation(getBookingComponent_BookingHandler__FindBooking__String(), this.getBookingComponent_Booking(), "findBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);

@@ -21,7 +21,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface AdditionalServiceComponent_AdditionalServiceHandler extends AdditionalServiceComponent_IAdditionalServiceInformation, AdditionalServiceComponent_IAdditionalServiceDecision, AdditionalServiceComponent_IAdditionalServiceAdministration {
+public interface AdditionalServiceComponent_AdditionalServiceHandler extends AdditionalServiceComponent_IEventManagement, AdditionalServiceComponent_IAdditionalServiceDecision, AdditionalServiceComponent_IAdditionalServiceAdministration {
 	/**
 	 * Returns the value of the '<em><b>IAuthentication</b></em>' reference.
 	 * <!-- begin-user-doc -->
