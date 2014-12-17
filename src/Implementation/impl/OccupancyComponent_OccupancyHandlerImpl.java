@@ -9,10 +9,13 @@ import Implementation.OccupancyComponent_IOccupancy;
 import Implementation.OccupancyComponent_Occupancy;
 import Implementation.OccupancyComponent_OccupancyHandler;
 import Implementation.RoomComponent_IRoomInformation;
+
 import java.lang.reflect.InvocationTargetException;
 import java.util.Arrays;
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -69,10 +72,11 @@ public class OccupancyComponent_OccupancyHandlerImpl extends MinimalEObjectImpl.
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	protected OccupancyComponent_OccupancyHandlerImpl() {
 		super();
+		occupancy = new BasicEList<OccupancyComponent_Occupancy>();
 	}
 
 	/**
@@ -200,6 +204,7 @@ public class OccupancyComponent_OccupancyHandlerImpl extends MinimalEObjectImpl.
 	public void checkInGuest(String bookingReference, String firstName, String lastName, String roomType, String partnerFirstName, String partnerLastName) {
 		// Returns a list of guests and room types for a booking
 				EList<String> bookingInfo= iBooking.searchForBooking(bookingReference);
+				
 				
 				String[] guestsForBooking = null;
 				EList<String> roomTypesArray = null;
