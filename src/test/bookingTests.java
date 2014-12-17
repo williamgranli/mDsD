@@ -48,9 +48,7 @@ public class bookingTests {
 	}
 	
 	public void setupRoomHandler() {
-		System.out.println(booking.getIRoomInformation().countNumberOfTotalRooms());
 		roomHandler.createBedRoom(1, true, 100, "Single Room", "A small single room with a single bed", 1);
-		System.out.println(booking.getIRoomInformation().countNumberOfTotalRooms());
 	}
 	
 	public void setupAdditionalServiceHandler() {
@@ -164,6 +162,25 @@ public class bookingTests {
     @Test
     public void findBookingsByDateAndType() {
     	//TODO - Implement
+    	
+    	long theFuture = System.currentTimeMillis() + (86400 * 7 * 1000);
+    	Date nextWeek = new Date(theFuture);
+    	
+    	long theFuture2 = System.currentTimeMillis() + (86400 * 14 * 1000);
+    	Date nextWeek2 = new Date(theFuture2);
+    	
+    	String refernceNumber = booking.makeBooking(nextWeek, nextWeek2, "880923", "John", "Burchell", "MyHouse", "123456789", "123", "september", "2015");
+    
+    	booking.findBooking(refernceNumber).addRoomToBooking("singleRoom", 100);
+    	booking.findBooking(refernceNumber).addRoomToBooking("doubleRoom", 200);
+    	booking.findBooking(refernceNumber).addRoomToBooking("singleRoom", 100);
+    	booking.findBooking(refernceNumber).addRoomToBooking("singleRoom", 100);
+    	booking.findBooking(refernceNumber).addRoomToBooking("singleRoom", 100);
+    	booking.findBooking(refernceNumber).addRoomToBooking("singleRoom", 100);
+    	
+    	
+    	System.out.println("Number found of \"singleRoom\" " + booking.findBookingsByDateAndType(nextWeek, nextWeek2, "singleRoom"));
+    	
     }
 
     @Ignore

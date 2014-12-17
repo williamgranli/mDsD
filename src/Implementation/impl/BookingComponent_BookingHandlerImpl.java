@@ -14,8 +14,10 @@ import Implementation.RoomComponent_IRoomInformation;
 import Implementation.StaffComponent_IAuthentication;
 
 import java.lang.reflect.InvocationTargetException;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.Date;
+import java.util.List;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.BasicEList;
@@ -621,10 +623,10 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 		iRoomInformation = getIRoomInformation();
 		
 		//This count should come from room counts
-		int count = 20;
+		int roomCount = 5;
 		int bookingsDuringDate = findBookingsByDate(startDate, endDate);
-		
-		return count - bookingsDuringDate > 0;
+		System.out.println("Current available rooms on these dates: " + (roomCount - bookingsDuringDate));
+		return roomCount - bookingsDuringDate > 0;
 	}
 
 	/**
@@ -633,7 +635,8 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 	 * @generated NOT
 	 */
 	public int findBookingsByDateAndType(Date startDate, Date endDate, String roomType) {
-		EList<BookingComponent_Booking> bookingsInDate = new BasicEList<BookingComponent_Booking>();
+		
+		int count = 0;
 		
 		for(BookingComponent_Booking booking : bookings) {
 			
@@ -642,14 +645,20 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 			if((booking.getArrivalDate().after(startDate) || booking.getArrivalDate().equals(startDate)) 
 					&& (booking.getDepartureDate().before(endDate) || booking.getDepartureDate().equals(endDate))) {
 				
-				//If the type is the same as the room, add
+				//TODO - Fix bug in the below function.
 				String types = booking.getRoomTypesInBooking();
-				types.matches("(" + roomType + ")");
-				bookingsInDate.add(booking);
+				List<String> roomList = Arrays.asList(types.split(","));
+				System.out.println(types);
+				System.out.println(roomList);
+				for(String foundTypes : roomList) {
+					if(foundTypes.equals(roomType)){
+						++count;
+					}
+				}
 			}
 		}
 		
-		return bookingsInDate.size();
+		return count;
 	}
 
 	/**
