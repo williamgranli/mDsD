@@ -236,4 +236,18 @@ public class AdditionalServicesTests {
 		
 		org.junit.Assert.assertTrue(as.findService("SERVICE").findEvents(date).size() == 4);
 	}
+	
+	@Test
+	public void getServiceNames() {
+		System.out.print("\n\n### FUNC: ");
+		System.out.println("getServiceNames()\n");
+		
+		as.createAdditionalService("SERVICE1", true, 500, "Test description");
+		as.createAdditionalService("SERVICE2", true, 500, "Test description");
+		as.createAdditionalService("SERVICE3", true, 500, "Test description");
+		as.createAdditionalService("SERVICE4", true, 500, "Test description");
+		as.createAdditionalService("SERVICE5", true, 500, "Test description");
+		
+		org.junit.Assert.assertTrue(as.getServices().size() == 5);
+	}
 }

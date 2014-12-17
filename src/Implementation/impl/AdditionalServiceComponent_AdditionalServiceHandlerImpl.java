@@ -154,36 +154,48 @@ public class AdditionalServiceComponent_AdditionalServiceHandlerImpl extends Min
 	 */
 	public EList<String> getEvents(String name) {
 		AdditionalServiceComponent_AdditionalService service = findService(name);
-		if (service != null) {
-			for (AdditionalServiceComponent_AdditionalServiceEvent e : service.getAdditionalServiceEvent()) {
+		EList<String> result =  new EObjectResolvingEList<String>(AdditionalServiceComponent_AdditionalService.class, this, ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER__ADDITIONAL_SERVICE);
 				
+		if (service != null) {
+			for (int i = 0; i < service.getAdditionalServiceEvent().size(); i++) {
+				result.add(service.getAdditionalServiceEvent().get(i).getDateTime() + " # " + service.getAdditionalServiceEvent().get(i).getLocation() + ";");
 			}
-			//return service.toString();
 		} else {
-			//return "No service found (" + name + ")";
+			result.add("No service found (" + name + ")");
 		}
+		return result;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean addGuestToEvent(String name, Date dateTime, String location, int guests) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		AdditionalServiceComponent_AdditionalService service = findService(name);
+		if (service != null) {
+			int max = service.findEvent(dateTime, location).getMaxAttendant();
+			int curr = service.findEvent(dateTime, location).getCurrentAttendants();
+			
+			return service.editEvent(dateTime, location, max, (curr+guests));
+		}
+		return false;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean removeGuestsFromEvent(String name, Date dateTime, String location, int guests) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		AdditionalServiceComponent_AdditionalService service = findService(name);
+		if (service != null) {
+			int max = service.findEvent(dateTime, location).getMaxAttendant();
+			int curr = service.findEvent(dateTime, location).getCurrentAttendants();
+			
+			return service.editEvent(dateTime, location, max, (curr+guests));
+		}
+		return false;
 	}
 
 	/**
