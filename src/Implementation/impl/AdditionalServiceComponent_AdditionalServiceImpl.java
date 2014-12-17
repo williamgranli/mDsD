@@ -319,7 +319,7 @@ public class AdditionalServiceComponent_AdditionalServiceImpl extends MinimalEOb
 	 */
 	public boolean createEvent(Date dateTime, String location, int maxAttendants, int currentAttendants) {
 		AdditionalServiceComponent_AdditionalServiceEvent event = findEvent(dateTime,location);
-		if (event != null) {
+		if (event == null) {
 			this.getAdditionalServiceEvent().add(new AdditionalServiceComponent_AdditionalServiceEventImpl(dateTime,location, maxAttendants, currentAttendants));
 			System.out.println("Event created!");
 			return true;
