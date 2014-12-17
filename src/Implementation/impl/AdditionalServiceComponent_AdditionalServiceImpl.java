@@ -280,13 +280,13 @@ public class AdditionalServiceComponent_AdditionalServiceImpl extends MinimalEOb
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public AdditionalServiceComponent_AdditionalServiceEvent findEvent(Date date, String location) {
+	public AdditionalServiceComponent_AdditionalServiceEvent findEvent(Date dateTime, String location) {
 		for (AdditionalServiceComponent_AdditionalServiceEvent e : additionalServiceEvent) {
-			if (e.getDateTime() == date && e.getLocation() == location) {
+			if (e.getDateTime() == dateTime && e.getLocation() == location) {
 				return e;
 			}
 		}
-		System.out.println("findEvent(): Event not found (" + date + " at " + location + ")");
+		System.out.println("findEvent(): Event not found (" + dateTime + " at " + location + ")");
 		return null;
 	}
 
@@ -351,8 +351,8 @@ public class AdditionalServiceComponent_AdditionalServiceImpl extends MinimalEOb
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public boolean removeEvent(Date date, String location) {
-		AdditionalServiceComponent_AdditionalServiceEvent event = findEvent(date,location);
+	public boolean removeEvent(Date dateTime, String location) {
+		AdditionalServiceComponent_AdditionalServiceEvent event = findEvent(dateTime,location);
 		if (event != null) {
 			this.getAdditionalServiceEvent().remove(event);
 			System.out.println("Event removed!");
@@ -366,10 +366,16 @@ public class AdditionalServiceComponent_AdditionalServiceImpl extends MinimalEOb
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public boolean removeEvents(Date date) {
-		// TODO: Not implemented. The administrator interface need 'boolean removeEvents(String name, Date date)'. ServiceHandler shall access this method.
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public boolean removeEvents(Date dateTime) {
+		EList<AdditionalServiceComponent_AdditionalServiceEvent> event = findEvents(dateTime);
+		if (event != null) {
+			for (AdditionalServiceComponent_AdditionalServiceEvent e : event) {
+				this.getAdditionalServiceEvent().remove(e);
+				System.out.println("Event removed!");
+			}
+			return true;
+		}
+		return false;
 	}
 
 	/**
@@ -510,22 +516,25 @@ public class AdditionalServiceComponent_AdditionalServiceImpl extends MinimalEOb
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
+		StringBuffer result = new StringBuffer();
 		result.append(name);
-		result.append(", usable: ");
+		result.append(", ");
 		result.append(usable);
-		result.append(", price: ");
+		result.append(", ");
 		result.append(price);
-		result.append(", description: ");
+		result.append(", ");
 		result.append(description);
-		result.append(')');
+		result.append(", [");
+		for (AdditionalServiceComponent_AdditionalServiceEvent e : additionalServiceEvent) {
+			result.append(e.toString());
+		}
+		result.append("];");
 		return result.toString();
 	}
 

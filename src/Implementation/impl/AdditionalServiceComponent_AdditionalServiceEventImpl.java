@@ -320,7 +320,7 @@ public class AdditionalServiceComponent_AdditionalServiceEventImpl extends Minim
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuffer result = new StringBuffer();
 		result.append(dateTime);
 		result.append(", ");
 		result.append(location);

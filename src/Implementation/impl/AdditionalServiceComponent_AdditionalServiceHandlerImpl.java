@@ -224,10 +224,9 @@ public class AdditionalServiceComponent_AdditionalServiceHandlerImpl extends Min
 			} else {
 				return false;
 			}
-		} else {
-			if (service.createEvent(dateTime,location,maxAttendants,currentAttendants)) {
-				return true;
-			}
+		}
+		if (service.createEvent(dateTime,location,maxAttendants,currentAttendants)) {
+			return true;
 		}
 		return false;
 	}
@@ -252,10 +251,10 @@ public class AdditionalServiceComponent_AdditionalServiceHandlerImpl extends Min
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public boolean removeEvent(String name, Date date, String location) {
+	public boolean removeEvent(String name, Date dateTime, String location) {
 		AdditionalServiceComponent_AdditionalService service = findService(name);
 		if (service != null) {
-			if (service.removeEvent(date,location)) {
+			if (service.removeEvent(dateTime,location)) {
 				return true;
 			}
 		}
@@ -268,9 +267,13 @@ public class AdditionalServiceComponent_AdditionalServiceHandlerImpl extends Min
 	 * @generated
 	 */
 	public boolean removeEvents(String name, Date dateTime) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		AdditionalServiceComponent_AdditionalService service = findService(name);
+		if (service != null) {
+			if (service.removeEvents(dateTime)) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 	/**
