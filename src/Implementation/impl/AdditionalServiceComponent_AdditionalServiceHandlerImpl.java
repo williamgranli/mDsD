@@ -264,16 +264,17 @@ public class AdditionalServiceComponent_AdditionalServiceHandlerImpl extends Min
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean removeEvents(String name, Date dateTime) {
-		AdditionalServiceComponent_AdditionalService service = findService(name);
-		if (service != null) {
-			if (service.removeEvents(dateTime)) {
-				return true;
-			}
-		}
-		return false;
+        AdditionalServiceComponent_AdditionalService service = findService(name);
+               if (service != null) {
+                       if (service.removeEvents(dateTime)) {
+                               return true;
+                       }
+               }
+               return false;
+
 	}
 
 	/**
