@@ -190,6 +190,9 @@
     <eOperations name="getAllRoomNumbers" ordered="false" lowerBound="1" upperBound="-1"
         eType="ecore:EDataType types.ecore#//Integer"/>
     <eOperations name="countNumberOfTotalRooms" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
+    <eOperations name="getCountOfRoomType" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer">
+      <eParameters name="roomType" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+    </eOperations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BookingComponent_IBookingInformation"
       abstract="true" interface="true">

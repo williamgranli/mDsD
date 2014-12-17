@@ -1181,13 +1181,22 @@ public interface ImplementationPackage extends EPackage {
 	int ROOM_COMPONENT_IROOM_INFORMATION___COUNT_NUMBER_OF_TOTAL_ROOMS = 4;
 
 	/**
+	 * The operation id for the '<em>Get Count Of Room Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_COMPONENT_IROOM_INFORMATION___GET_COUNT_OF_ROOM_TYPE__STRING = 5;
+
+	/**
 	 * The number of operations of the '<em>Room Component IRoom Information</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_COMPONENT_IROOM_INFORMATION_OPERATION_COUNT = 5;
+	int ROOM_COMPONENT_IROOM_INFORMATION_OPERATION_COUNT = 6;
 
 	/**
 	 * The meta object id for the '{@link Implementation.BookingComponent_IBookingInformation <em>Booking Component IBooking Information</em>}' class.
@@ -3904,13 +3913,22 @@ public interface ImplementationPackage extends EPackage {
 	int ROOM_COMPONENT_ROOM_HANDLER___COUNT_NUMBER_OF_TOTAL_ROOMS = ROOM_COMPONENT_IROOM_DECISION_OPERATION_COUNT + 4;
 
 	/**
+	 * The operation id for the '<em>Get Count Of Room Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_COMPONENT_ROOM_HANDLER___GET_COUNT_OF_ROOM_TYPE__STRING = ROOM_COMPONENT_IROOM_DECISION_OPERATION_COUNT + 5;
+
+	/**
 	 * The operation id for the '<em>Create Bed Room</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_COMPONENT_ROOM_HANDLER___CREATE_BED_ROOM__INT_BOOLEAN_INT_STRING_STRING_INT = ROOM_COMPONENT_IROOM_DECISION_OPERATION_COUNT + 5;
+	int ROOM_COMPONENT_ROOM_HANDLER___CREATE_BED_ROOM__INT_BOOLEAN_INT_STRING_STRING_INT = ROOM_COMPONENT_IROOM_DECISION_OPERATION_COUNT + 6;
 
 	/**
 	 * The operation id for the '<em>Edit Bed Room</em>' operation.
@@ -3919,7 +3937,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_COMPONENT_ROOM_HANDLER___EDIT_BED_ROOM__INT_BOOLEAN_INT_STRING_STRING_INT = ROOM_COMPONENT_IROOM_DECISION_OPERATION_COUNT + 6;
+	int ROOM_COMPONENT_ROOM_HANDLER___EDIT_BED_ROOM__INT_BOOLEAN_INT_STRING_STRING_INT = ROOM_COMPONENT_IROOM_DECISION_OPERATION_COUNT + 7;
 
 	/**
 	 * The operation id for the '<em>Remove</em>' operation.
@@ -3928,7 +3946,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_COMPONENT_ROOM_HANDLER___REMOVE__INT = ROOM_COMPONENT_IROOM_DECISION_OPERATION_COUNT + 7;
+	int ROOM_COMPONENT_ROOM_HANDLER___REMOVE__INT = ROOM_COMPONENT_IROOM_DECISION_OPERATION_COUNT + 8;
 
 	/**
 	 * The operation id for the '<em>Create Conference Room</em>' operation.
@@ -3937,7 +3955,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_COMPONENT_ROOM_HANDLER___CREATE_CONFERENCE_ROOM__INT_BOOLEAN_INT_STRING_STRING_INT_BOOLEAN_BOOLEAN = ROOM_COMPONENT_IROOM_DECISION_OPERATION_COUNT + 8;
+	int ROOM_COMPONENT_ROOM_HANDLER___CREATE_CONFERENCE_ROOM__INT_BOOLEAN_INT_STRING_STRING_INT_BOOLEAN_BOOLEAN = ROOM_COMPONENT_IROOM_DECISION_OPERATION_COUNT + 9;
 
 	/**
 	 * The operation id for the '<em>Edit Conference Room</em>' operation.
@@ -3946,7 +3964,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_COMPONENT_ROOM_HANDLER___EDIT_CONFERENCE_ROOM__INT_BOOLEAN_INT_STRING_STRING_INT_BOOLEAN_BOOLEAN = ROOM_COMPONENT_IROOM_DECISION_OPERATION_COUNT + 9;
+	int ROOM_COMPONENT_ROOM_HANDLER___EDIT_CONFERENCE_ROOM__INT_BOOLEAN_INT_STRING_STRING_INT_BOOLEAN_BOOLEAN = ROOM_COMPONENT_IROOM_DECISION_OPERATION_COUNT + 10;
 
 	/**
 	 * The number of operations of the '<em>Room Component Room Handler</em>' class.
@@ -3955,7 +3973,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_COMPONENT_ROOM_HANDLER_OPERATION_COUNT = ROOM_COMPONENT_IROOM_DECISION_OPERATION_COUNT + 10;
+	int ROOM_COMPONENT_ROOM_HANDLER_OPERATION_COUNT = ROOM_COMPONENT_IROOM_DECISION_OPERATION_COUNT + 11;
 
 
 	/**
@@ -4788,6 +4806,16 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getRoomComponent_IRoomInformation__CountNumberOfTotalRooms();
+
+	/**
+	 * Returns the meta object for the '{@link Implementation.RoomComponent_IRoomInformation#getCountOfRoomType(java.lang.String) <em>Get Count Of Room Type</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Count Of Room Type</em>' operation.
+	 * @see Implementation.RoomComponent_IRoomInformation#getCountOfRoomType(java.lang.String)
+	 * @generated
+	 */
+	EOperation getRoomComponent_IRoomInformation__GetCountOfRoomType__String();
 
 	/**
 	 * Returns the meta object for class '{@link Implementation.BookingComponent_IBookingInformation <em>Booking Component IBooking Information</em>}'.
@@ -7341,6 +7369,14 @@ public interface ImplementationPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation ROOM_COMPONENT_IROOM_INFORMATION___COUNT_NUMBER_OF_TOTAL_ROOMS = eINSTANCE.getRoomComponent_IRoomInformation__CountNumberOfTotalRooms();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Count Of Room Type</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ROOM_COMPONENT_IROOM_INFORMATION___GET_COUNT_OF_ROOM_TYPE__STRING = eINSTANCE.getRoomComponent_IRoomInformation__GetCountOfRoomType__String();
 
 		/**
 		 * The meta object literal for the '{@link Implementation.BookingComponent_IBookingInformation <em>Booking Component IBooking Information</em>}' class.

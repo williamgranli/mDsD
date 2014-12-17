@@ -1799,6 +1799,14 @@
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
           </ownedParameter>
         </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_poV38IYJEeSKObteDkHFZQ" name="getCountOfRoomType">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_tKphEIYJEeSKObteDkHFZQ" name="count" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_wl-_gIYJEeSKObteDkHFZQ" name="roomType">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
       </nestedClassifier>
       <nestedClassifier xmi:type="uml:Class" xmi:id="_CxzwoH4QEeS7R5Ychvo0mw" name="RoomHandler">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_7UQhUIB9EeSVsryNkPPRZw" name="authenticator" type="_yNtywnumEeSUpK3HS5a0Lg" association="_7URvcIB9EeSVsryNkPPRZw">

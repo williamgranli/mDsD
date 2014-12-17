@@ -275,6 +275,29 @@ public class RoomComponent_RoomHandlerImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
+	public int getCountOfRoomType(String roomType) {
+		int count = 0;
+		for(RoomComponent_Bedroom bedroom: bedRooms){
+			if(bedroom.getRoomTypeName().equals(roomType)){
+				count++;
+			}
+				
+		}
+		
+		for(RoomComponent_ConferenceRoom confRooms: conferenceRooms){
+			if(confRooms.getRoomTypeName().equals(roomType)){
+				count++;
+			}
+		}
+			
+		return count;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
 	public void createBedRoom(int roomNumber, boolean usable, int price, String roomTypeName, String description, int bedCount) {
 		for (RoomComponent_Bedroom br : bedRooms) {
 			if (br.getRoomNumber() == roomNumber) {
@@ -494,6 +517,7 @@ public class RoomComponent_RoomHandlerImpl extends MinimalEObjectImpl.Container 
 				case ImplementationPackage.ROOM_COMPONENT_IROOM_INFORMATION___GET_ROOM_TYPES: return ImplementationPackage.ROOM_COMPONENT_ROOM_HANDLER___GET_ROOM_TYPES;
 				case ImplementationPackage.ROOM_COMPONENT_IROOM_INFORMATION___GET_ALL_ROOM_NUMBERS: return ImplementationPackage.ROOM_COMPONENT_ROOM_HANDLER___GET_ALL_ROOM_NUMBERS;
 				case ImplementationPackage.ROOM_COMPONENT_IROOM_INFORMATION___COUNT_NUMBER_OF_TOTAL_ROOMS: return ImplementationPackage.ROOM_COMPONENT_ROOM_HANDLER___COUNT_NUMBER_OF_TOTAL_ROOMS;
+				case ImplementationPackage.ROOM_COMPONENT_IROOM_INFORMATION___GET_COUNT_OF_ROOM_TYPE__STRING: return ImplementationPackage.ROOM_COMPONENT_ROOM_HANDLER___GET_COUNT_OF_ROOM_TYPE__STRING;
 				default: return -1;
 			}
 		}
@@ -528,6 +552,8 @@ public class RoomComponent_RoomHandlerImpl extends MinimalEObjectImpl.Container 
 				return getAllRoomNumbers();
 			case ImplementationPackage.ROOM_COMPONENT_ROOM_HANDLER___COUNT_NUMBER_OF_TOTAL_ROOMS:
 				return countNumberOfTotalRooms();
+			case ImplementationPackage.ROOM_COMPONENT_ROOM_HANDLER___GET_COUNT_OF_ROOM_TYPE__STRING:
+				return getCountOfRoomType((String)arguments.get(0));
 			case ImplementationPackage.ROOM_COMPONENT_ROOM_HANDLER___CREATE_BED_ROOM__INT_BOOLEAN_INT_STRING_STRING_INT:
 				createBedRoom((Integer)arguments.get(0), (Boolean)arguments.get(1), (Integer)arguments.get(2), (String)arguments.get(3), (String)arguments.get(4), (Integer)arguments.get(5));
 				return null;

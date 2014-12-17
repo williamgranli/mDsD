@@ -183,6 +183,9 @@
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//RoomComponent_IRoomInformation/getRoomTypes"/>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//RoomComponent_IRoomInformation/getAllRoomNumbers"/>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//RoomComponent_IRoomInformation/countNumberOfTotalRooms"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//RoomComponent_IRoomInformation/getCountOfRoomType">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_IRoomInformation/getCountOfRoomType/roomType"/>
+      </genOperations>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Implementation.ecore#//BookingComponent_IBookingInformation">
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//BookingComponent_IBookingInformation/getGuestsInBooking">

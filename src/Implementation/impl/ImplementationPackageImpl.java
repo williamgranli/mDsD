@@ -1176,6 +1176,15 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getRoomComponent_IRoomInformation__GetCountOfRoomType__String() {
+		return roomComponent_IRoomInformationEClass.getEOperations().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getBookingComponent_IBookingInformation() {
 		return bookingComponent_IBookingInformationEClass;
 	}
@@ -2920,6 +2929,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		createEOperation(roomComponent_IRoomInformationEClass, ROOM_COMPONENT_IROOM_INFORMATION___GET_ROOM_TYPES);
 		createEOperation(roomComponent_IRoomInformationEClass, ROOM_COMPONENT_IROOM_INFORMATION___GET_ALL_ROOM_NUMBERS);
 		createEOperation(roomComponent_IRoomInformationEClass, ROOM_COMPONENT_IROOM_INFORMATION___COUNT_NUMBER_OF_TOTAL_ROOMS);
+		createEOperation(roomComponent_IRoomInformationEClass, ROOM_COMPONENT_IROOM_INFORMATION___GET_COUNT_OF_ROOM_TYPE__STRING);
 
 		bookingComponent_IBookingInformationEClass = createEClass(BOOKING_COMPONENT_IBOOKING_INFORMATION);
 		createEOperation(bookingComponent_IBookingInformationEClass, BOOKING_COMPONENT_IBOOKING_INFORMATION___GET_GUESTS_IN_BOOKING__STRING);
@@ -3341,6 +3351,9 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		initEOperation(getRoomComponent_IRoomInformation__GetAllRoomNumbers(), theTypesPackage.getInteger(), "getAllRoomNumbers", 1, -1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getRoomComponent_IRoomInformation__CountNumberOfTotalRooms(), theTypesPackage.getInteger(), "countNumberOfTotalRooms", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getRoomComponent_IRoomInformation__GetCountOfRoomType__String(), theTypesPackage.getInteger(), "getCountOfRoomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "roomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(bookingComponent_IBookingInformationEClass, BookingComponent_IBookingInformation.class, "BookingComponent_IBookingInformation", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
