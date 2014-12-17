@@ -2,6 +2,7 @@
  */
 package Implementation;
 
+import java.util.Date;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -152,5 +153,29 @@ public interface BookingComponent_BookingHandler extends BookingComponent_IBooki
 	 * @generated
 	 */
 	BookingComponent_Booking findBooking(String referenceNumber);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model required="true" ordered="false" startDateRequired="true" startDateOrdered="false" endDateRequired="true" endDateOrdered="false"
+	 * @generated
+	 */
+	boolean bookingAvailable(Date startDate, Date endDate);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" startDateRequired="true" startDateOrdered="false" endDateRequired="true" endDateOrdered="false" roomTypeDataType="org.eclipse.uml2.types.String" roomTypeRequired="true" roomTypeOrdered="false"
+	 * @generated
+	 */
+	int findBookingsByDateAndType(Date startDate, Date endDate, String roomType);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" startDateRequired="true" startDateOrdered="false" endDateRequired="true" endDateOrdered="false"
+	 * @generated
+	 */
+	int findBookingsByDate(Date startDate, Date endDate);
 
 } // BookingComponent_BookingHandler

@@ -615,6 +615,39 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean bookingAvailable(Date startDate, Date endDate) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int findBookingsByDateAndType(Date startDate, Date endDate, String roomType) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int findBookingsByDate(Date startDate, Date endDate) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -800,6 +833,12 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 				return null;
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___FIND_BOOKING__STRING:
 				return findBooking((String)arguments.get(0));
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___BOOKING_AVAILABLE__DATE_DATE:
+				return bookingAvailable((Date)arguments.get(0), (Date)arguments.get(1));
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___FIND_BOOKINGS_BY_DATE_AND_TYPE__DATE_DATE_STRING:
+				return findBookingsByDateAndType((Date)arguments.get(0), (Date)arguments.get(1), (String)arguments.get(2));
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___FIND_BOOKINGS_BY_DATE__DATE_DATE:
+				return findBookingsByDate((Date)arguments.get(0), (Date)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

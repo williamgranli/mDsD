@@ -580,6 +580,19 @@
     <eOperations name="findBooking" ordered="false" lowerBound="1" eType="#//BookingComponent_Booking">
       <eParameters name="referenceNumber" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     </eOperations>
+    <eOperations name="bookingAvailable" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="startDate" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+      <eParameters name="endDate" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+    </eOperations>
+    <eOperations name="findBookingsByDateAndType" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer">
+      <eParameters name="startDate" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+      <eParameters name="endDate" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+      <eParameters name="roomType" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+    </eOperations>
+    <eOperations name="findBookingsByDate" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer">
+      <eParameters name="startDate" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+      <eParameters name="endDate" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+    </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="bookings" ordered="false"
         upperBound="-1" eType="#//BookingComponent_Booking"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="authentication" ordered="false"
@@ -808,20 +821,6 @@
     </eOperations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RoomComponent_RoomHandler" eSuperTypes="#//RoomComponent_IRoomDecision #//RoomComponent_IRoomInformation #//RoomComponent_IRoomAdministration">
-    <eOperations name="findBookingsByDateAndType" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer">
-      <eParameters name="startDate" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-      <eParameters name="endDate" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-      <eParameters name="roomType" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-    </eOperations>
-    <eOperations name="findBookingsByDate" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer">
-      <eParameters name="startDate" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-      <eParameters name="endDate" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-    </eOperations>
-    <eOperations name="bookingAvailable" ordered="false" lowerBound="1">
-      <eParameters name="startDate" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-      <eParameters name="endDate" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-      <eParameters name="isAvailable" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="authenticator" ordered="false"
         lowerBound="1" eType="#//StaffComponent_IAuthentication"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="bedRooms" ordered="false"

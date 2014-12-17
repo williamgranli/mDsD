@@ -2292,6 +2292,33 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getBookingComponent_BookingHandler__BookingAvailable__Date_Date() {
+		return bookingComponent_BookingHandlerEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getBookingComponent_BookingHandler__FindBookingsByDateAndType__Date_Date_String() {
+		return bookingComponent_BookingHandlerEClass.getEOperations().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getBookingComponent_BookingHandler__FindBookingsByDate__Date_Date() {
+		return bookingComponent_BookingHandlerEClass.getEOperations().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getBookingComponent_IBookingAdministration() {
 		return bookingComponent_IBookingAdministrationEClass;
 	}
@@ -2805,33 +2832,6 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRoomComponent_RoomHandler__FindBookingsByDateAndType__Date_Date_String() {
-		return roomComponent_RoomHandlerEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getRoomComponent_RoomHandler__FindBookingsByDate__Date_Date() {
-		return roomComponent_RoomHandlerEClass.getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getRoomComponent_RoomHandler__BookingAvailable__Date_Date_boolean() {
-		return roomComponent_RoomHandlerEClass.getEOperations().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getBank() {
 		return bankEClass;
 	}
@@ -3101,6 +3101,9 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		createEReference(bookingComponent_BookingHandlerEClass, BOOKING_COMPONENT_BOOKING_HANDLER__IADDITIONAL_SERVICE_INFORMATION);
 		createEReference(bookingComponent_BookingHandlerEClass, BOOKING_COMPONENT_BOOKING_HANDLER__IPAYMENT);
 		createEOperation(bookingComponent_BookingHandlerEClass, BOOKING_COMPONENT_BOOKING_HANDLER___FIND_BOOKING__STRING);
+		createEOperation(bookingComponent_BookingHandlerEClass, BOOKING_COMPONENT_BOOKING_HANDLER___BOOKING_AVAILABLE__DATE_DATE);
+		createEOperation(bookingComponent_BookingHandlerEClass, BOOKING_COMPONENT_BOOKING_HANDLER___FIND_BOOKINGS_BY_DATE_AND_TYPE__DATE_DATE_STRING);
+		createEOperation(bookingComponent_BookingHandlerEClass, BOOKING_COMPONENT_BOOKING_HANDLER___FIND_BOOKINGS_BY_DATE__DATE_DATE);
 
 		bookingComponent_IBookingAdministrationEClass = createEClass(BOOKING_COMPONENT_IBOOKING_ADMINISTRATION);
 		createEOperation(bookingComponent_IBookingAdministrationEClass, BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___MAKE_BOOKING__DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_STRING_STRING);
@@ -3169,9 +3172,6 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		createEReference(roomComponent_RoomHandlerEClass, ROOM_COMPONENT_ROOM_HANDLER__AUTHENTICATOR);
 		createEReference(roomComponent_RoomHandlerEClass, ROOM_COMPONENT_ROOM_HANDLER__BED_ROOMS);
 		createEReference(roomComponent_RoomHandlerEClass, ROOM_COMPONENT_ROOM_HANDLER__CONFERENCE_ROOMS);
-		createEOperation(roomComponent_RoomHandlerEClass, ROOM_COMPONENT_ROOM_HANDLER___FIND_BOOKINGS_BY_DATE_AND_TYPE__DATE_DATE_STRING);
-		createEOperation(roomComponent_RoomHandlerEClass, ROOM_COMPONENT_ROOM_HANDLER___FIND_BOOKINGS_BY_DATE__DATE_DATE);
-		createEOperation(roomComponent_RoomHandlerEClass, ROOM_COMPONENT_ROOM_HANDLER___BOOKING_AVAILABLE__DATE_DATE_BOOLEAN);
 
 		bankEClass = createEClass(BANK);
 	}
@@ -3730,6 +3730,19 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		op = initEOperation(getBookingComponent_BookingHandler__FindBooking__String(), this.getBookingComponent_Booking(), "findBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "referenceNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
+		op = initEOperation(getBookingComponent_BookingHandler__BookingAvailable__Date_Date(), ecorePackage.getEBoolean(), "bookingAvailable", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "startDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "endDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getBookingComponent_BookingHandler__FindBookingsByDateAndType__Date_Date_String(), theTypesPackage.getInteger(), "findBookingsByDateAndType", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "startDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "endDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "roomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getBookingComponent_BookingHandler__FindBookingsByDate__Date_Date(), theTypesPackage.getInteger(), "findBookingsByDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "startDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "endDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
 		initEClass(bookingComponent_IBookingAdministrationEClass, BookingComponent_IBookingAdministration.class, "BookingComponent_IBookingAdministration", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		op = initEOperation(getBookingComponent_IBookingAdministration__MakeBooking__Date_Date_String_String_String_String_String_String_String_String(), theTypesPackage.getString(), "makeBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
@@ -3932,20 +3945,6 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		initEReference(getRoomComponent_RoomHandler_Authenticator(), this.getStaffComponent_IAuthentication(), null, "authenticator", null, 1, 1, RoomComponent_RoomHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getRoomComponent_RoomHandler_BedRooms(), this.getRoomComponent_Bedroom(), null, "bedRooms", null, 0, -1, RoomComponent_RoomHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getRoomComponent_RoomHandler_ConferenceRooms(), this.getRoomComponent_ConferenceRoom(), null, "conferenceRooms", null, 0, -1, RoomComponent_RoomHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		op = initEOperation(getRoomComponent_RoomHandler__FindBookingsByDateAndType__Date_Date_String(), theTypesPackage.getInteger(), "findBookingsByDateAndType", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDate(), "startDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDate(), "endDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "roomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		op = initEOperation(getRoomComponent_RoomHandler__FindBookingsByDate__Date_Date(), theTypesPackage.getInteger(), "findBookingsByDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDate(), "startDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDate(), "endDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		op = initEOperation(getRoomComponent_RoomHandler__BookingAvailable__Date_Date_boolean(), null, "bookingAvailable", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDate(), "startDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDate(), "endDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEBoolean(), "isAvailable", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(bankEClass, Bank.class, "Bank", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
