@@ -76,12 +76,12 @@ public class ImplementationAdapterFactory extends AdapterFactoryImpl {
 				return createDecisionSupportComponent_IDecisionSupportAdapter();
 			}
 			@Override
-			public Adapter caseDecisionSupportComponent_DSSProcessor(DecisionSupportComponent_DSSProcessor object) {
-				return createDecisionSupportComponent_DSSProcessorAdapter();
+			public Adapter caseDecisionSupportComponent_BookingDSSInfo(DecisionSupportComponent_BookingDSSInfo object) {
+				return createDecisionSupportComponent_BookingDSSInfoAdapter();
 			}
 			@Override
-			public Adapter caseDecisionSupportComponent_DSSPresenter(DecisionSupportComponent_DSSPresenter object) {
-				return createDecisionSupportComponent_DSSPresenterAdapter();
+			public Adapter caseDecisionSupportComponent_AdditionalServiceDSSInfo(DecisionSupportComponent_AdditionalServiceDSSInfo object) {
+				return createDecisionSupportComponent_AdditionalServiceDSSInfoAdapter();
 			}
 			@Override
 			public Adapter caseDecisionSupportComponent_DSSController(DecisionSupportComponent_DSSController object) {
@@ -102,6 +102,10 @@ public class ImplementationAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseBookingComponent_IBookingDecision(BookingComponent_IBookingDecision object) {
 				return createBookingComponent_IBookingDecisionAdapter();
+			}
+			@Override
+			public Adapter caseDecisionSupportComponent_OccupancyDSSInfo(DecisionSupportComponent_OccupancyDSSInfo object) {
+				return createDecisionSupportComponent_OccupancyDSSInfoAdapter();
 			}
 			@Override
 			public Adapter caseOccupancyComponent(OccupancyComponent object) {
@@ -212,8 +216,8 @@ public class ImplementationAdapterFactory extends AdapterFactoryImpl {
 				return createBookingComponent_BookingHandlerAdapter();
 			}
 			@Override
-			public Adapter caseIBookingAdministration(IBookingAdministration object) {
-				return createIBookingAdministrationAdapter();
+			public Adapter caseBookingComponent_IBookingAdministration(BookingComponent_IBookingAdministration object) {
+				return createBookingComponent_IBookingAdministrationAdapter();
 			}
 			@Override
 			public Adapter caseStaffComponent(StaffComponent object) {
@@ -308,30 +312,16 @@ public class ImplementationAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link Implementation.DecisionSupportComponent_DSSProcessor <em>Decision Support Component DSS Processor</em>}'.
+	 * Creates a new adapter for an object of class '{@link Implementation.DecisionSupportComponent_BookingDSSInfo <em>Decision Support Component Booking DSS Info</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see Implementation.DecisionSupportComponent_DSSProcessor
+	 * @see Implementation.DecisionSupportComponent_BookingDSSInfo
 	 * @generated
 	 */
-	public Adapter createDecisionSupportComponent_DSSProcessorAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link Implementation.DecisionSupportComponent_DSSPresenter <em>Decision Support Component DSS Presenter</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see Implementation.DecisionSupportComponent_DSSPresenter
-	 * @generated
-	 */
-	public Adapter createDecisionSupportComponent_DSSPresenterAdapter() {
+	public Adapter createDecisionSupportComponent_BookingDSSInfoAdapter() {
 		return null;
 	}
 
@@ -402,6 +392,34 @@ public class ImplementationAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createBookingComponent_IBookingDecisionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link Implementation.DecisionSupportComponent_OccupancyDSSInfo <em>Decision Support Component Occupancy DSS Info</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see Implementation.DecisionSupportComponent_OccupancyDSSInfo
+	 * @generated
+	 */
+	public Adapter createDecisionSupportComponent_OccupancyDSSInfoAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link Implementation.DecisionSupportComponent_AdditionalServiceDSSInfo <em>Decision Support Component Additional Service DSS Info</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see Implementation.DecisionSupportComponent_AdditionalServiceDSSInfo
+	 * @generated
+	 */
+	public Adapter createDecisionSupportComponent_AdditionalServiceDSSInfoAdapter() {
 		return null;
 	}
 
@@ -784,16 +802,16 @@ public class ImplementationAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link Implementation.IBookingAdministration <em>IBooking Administration</em>}'.
+	 * Creates a new adapter for an object of class '{@link Implementation.BookingComponent_IBookingAdministration <em>Booking Component IBooking Administration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see Implementation.IBookingAdministration
+	 * @see Implementation.BookingComponent_IBookingAdministration
 	 * @generated
 	 */
-	public Adapter createIBookingAdministrationAdapter() {
+	public Adapter createBookingComponent_IBookingAdministrationAdapter() {
 		return null;
 	}
 

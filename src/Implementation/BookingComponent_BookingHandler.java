@@ -24,7 +24,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface BookingComponent_BookingHandler extends BookingComponent_IBookingInformation, BookingComponent_IBookingDecision, IBookingAdministration {
+public interface BookingComponent_BookingHandler extends BookingComponent_IBookingInformation, BookingComponent_IBookingDecision, BookingComponent_IBookingAdministration {
 	/**
 	 * Returns the value of the '<em><b>Bookings</b></em>' reference list.
 	 * The list contents are of type {@link Implementation.BookingComponent_Booking}.

@@ -178,6 +178,25 @@ public class OccupancyComponent_OccupancyHandlerImpl extends MinimalEObjectImpl.
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
+	public String getDSSOccupancyInfo() {
+		String dssOccupancyInfo = "";
+		for (OccupancyComponent_Occupancy occupan: occupancy){
+			if (dssOccupancyInfo.isEmpty()){
+				dssOccupancyInfo = occupan.getRoomNumber() + "," + occupan.getCheckInDateTime() + "," + occupan.getCheckOutDateTime();
+			}
+			else{
+				dssOccupancyInfo += ";" + occupan.getRoomNumber() + "," + occupan.getCheckInDateTime() + "," + occupan.getCheckOutDateTime();
+			}
+		}
+		return dssOccupancyInfo;
+		//return numberOfCheckins;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
 	public void checkInGuest(String bookingReference, String firstName, String lastName, String roomType, String partnerFirstName, String partnerLastName) {
 		// Returns a list of guests and room types for a booking
 				EList<String> bookingInfo= iBooking.searchForBooking(bookingReference);
@@ -541,6 +560,8 @@ public class OccupancyComponent_OccupancyHandlerImpl extends MinimalEObjectImpl.
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
+			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___GET_DSS_OCCUPANCY_INFO:
+				return getDSSOccupancyInfo();
 			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER___CHECK_IN_GUEST__STRING_STRING_STRING_STRING_STRING_STRING:
 				checkInGuest((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5));
 				return null;

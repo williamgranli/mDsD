@@ -4,6 +4,7 @@ package Implementation;
 
 import org.eclipse.emf.common.util.EList;
 
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Decision Support Component DSS Controller</b></em>'.
@@ -12,12 +13,13 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link Implementation.DecisionSupportComponent_DSSController#getDSSProcessor <em>DSS Processor</em>}</li>
- *   <li>{@link Implementation.DecisionSupportComponent_DSSController#getDSSPresenter <em>DSS Presenter</em>}</li>
  *   <li>{@link Implementation.DecisionSupportComponent_DSSController#getIRoomDecision <em>IRoom Decision</em>}</li>
  *   <li>{@link Implementation.DecisionSupportComponent_DSSController#getIOccupancyDecision <em>IOccupancy Decision</em>}</li>
  *   <li>{@link Implementation.DecisionSupportComponent_DSSController#getIAdditionalServiceDecision <em>IAdditional Service Decision</em>}</li>
  *   <li>{@link Implementation.DecisionSupportComponent_DSSController#getIBookingDecision <em>IBooking Decision</em>}</li>
+ *   <li>{@link Implementation.DecisionSupportComponent_DSSController#getOccupancyDSSInfo <em>Occupancy DSS Info</em>}</li>
+ *   <li>{@link Implementation.DecisionSupportComponent_DSSController#getAdditionalServiceDSSInfo <em>Additional Service DSS Info</em>}</li>
+ *   <li>{@link Implementation.DecisionSupportComponent_DSSController#getBookingDSSInfo <em>Booking DSS Info</em>}</li>
  * </ul>
  * </p>
  *
@@ -26,48 +28,6 @@ import org.eclipse.emf.common.util.EList;
  * @generated
  */
 public interface DecisionSupportComponent_DSSController extends DecisionSupportComponent_IDecisionSupport {
-	/**
-	 * Returns the value of the '<em><b>DSS Processor</b></em>' reference list.
-	 * The list contents are of type {@link Implementation.DecisionSupportComponent_DSSProcessor}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>DSS Processor</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>DSS Processor</em>' reference list.
-	 * @see Implementation.ImplementationPackage#getDecisionSupportComponent_DSSController_DSSProcessor()
-	 * @model ordered="false"
-	 * @generated
-	 */
-	EList<DecisionSupportComponent_DSSProcessor> getDSSProcessor();
-
-	/**
-	 * Returns the value of the '<em><b>DSS Presenter</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>DSS Presenter</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>DSS Presenter</em>' reference.
-	 * @see #setDSSPresenter(DecisionSupportComponent_DSSPresenter)
-	 * @see Implementation.ImplementationPackage#getDecisionSupportComponent_DSSController_DSSPresenter()
-	 * @model required="true" ordered="false"
-	 * @generated
-	 */
-	DecisionSupportComponent_DSSPresenter getDSSPresenter();
-
-	/**
-	 * Sets the value of the '{@link Implementation.DecisionSupportComponent_DSSController#getDSSPresenter <em>DSS Presenter</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>DSS Presenter</em>' reference.
-	 * @see #getDSSPresenter()
-	 * @generated
-	 */
-	void setDSSPresenter(DecisionSupportComponent_DSSPresenter value);
-
 	/**
 	 * Returns the value of the '<em><b>IRoom Decision</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -171,5 +131,99 @@ public interface DecisionSupportComponent_DSSController extends DecisionSupportC
 	 * @generated
 	 */
 	void setIBookingDecision(BookingComponent_IBookingDecision value);
+
+	/**
+	 * Returns the value of the '<em><b>Occupancy DSS Info</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Occupancy DSS Info</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Occupancy DSS Info</em>' reference.
+	 * @see #setOccupancyDSSInfo(DecisionSupportComponent_OccupancyDSSInfo)
+	 * @see Implementation.ImplementationPackage#getDecisionSupportComponent_DSSController_OccupancyDSSInfo()
+	 * @model required="true" ordered="false"
+	 * @generated
+	 */
+	DecisionSupportComponent_OccupancyDSSInfo getOccupancyDSSInfo();
+
+	/**
+	 * Sets the value of the '{@link Implementation.DecisionSupportComponent_DSSController#getOccupancyDSSInfo <em>Occupancy DSS Info</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Occupancy DSS Info</em>' reference.
+	 * @see #getOccupancyDSSInfo()
+	 * @generated
+	 */
+	void setOccupancyDSSInfo(DecisionSupportComponent_OccupancyDSSInfo value);
+
+	/**
+	 * Returns the value of the '<em><b>Additional Service DSS Info</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Additional Service DSS Info</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Additional Service DSS Info</em>' reference.
+	 * @see #setAdditionalServiceDSSInfo(DecisionSupportComponent_AdditionalServiceDSSInfo)
+	 * @see Implementation.ImplementationPackage#getDecisionSupportComponent_DSSController_AdditionalServiceDSSInfo()
+	 * @model required="true" ordered="false"
+	 * @generated
+	 */
+	DecisionSupportComponent_AdditionalServiceDSSInfo getAdditionalServiceDSSInfo();
+
+	/**
+	 * Sets the value of the '{@link Implementation.DecisionSupportComponent_DSSController#getAdditionalServiceDSSInfo <em>Additional Service DSS Info</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Additional Service DSS Info</em>' reference.
+	 * @see #getAdditionalServiceDSSInfo()
+	 * @generated
+	 */
+	void setAdditionalServiceDSSInfo(DecisionSupportComponent_AdditionalServiceDSSInfo value);
+
+	/**
+	 * Returns the value of the '<em><b>Booking DSS Info</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Booking DSS Info</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Booking DSS Info</em>' reference.
+	 * @see #setBookingDSSInfo(DecisionSupportComponent_BookingDSSInfo)
+	 * @see Implementation.ImplementationPackage#getDecisionSupportComponent_DSSController_BookingDSSInfo()
+	 * @model required="true" ordered="false"
+	 * @generated
+	 */
+	DecisionSupportComponent_BookingDSSInfo getBookingDSSInfo();
+
+	/**
+	 * Sets the value of the '{@link Implementation.DecisionSupportComponent_DSSController#getBookingDSSInfo <em>Booking DSS Info</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Booking DSS Info</em>' reference.
+	 * @see #getBookingDSSInfo()
+	 * @generated
+	 */
+	void setBookingDSSInfo(DecisionSupportComponent_BookingDSSInfo value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" bookingDSSInfoMany="true" bookingDSSInfoOrdered="false" customerSSNDataType="org.eclipse.uml2.types.String" customerSSNRequired="true" customerSSNOrdered="false"
+	 * @generated
+	 */
+	int countCustomerBooking(EList<DecisionSupportComponent_BookingDSSInfo> bookingDSSInfo, String customerSSN);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" listToCheckDataType="org.eclipse.uml2.types.String" listToCheckMany="true" listToCheckOrdered="false" elementDataType="org.eclipse.uml2.types.String" elementRequired="true" elementOrdered="false"
+	 * @generated
+	 */
+	int getPositionInList(EList<String> listToCheck, String element);
 
 } // DecisionSupportComponent_DSSController

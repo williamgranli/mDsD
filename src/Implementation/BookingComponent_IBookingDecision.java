@@ -2,6 +2,7 @@
  */
 package Implementation;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -19,8 +20,8 @@ public interface BookingComponent_IBookingDecision extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model kind="operation" dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
+	 * @model kind="operation" dataType="org.eclipse.uml2.types.String" ordered="false"
 	 * @generated
 	 */
-	String getDSSInfo();
+	EList<String> getDSSInfo();
 } // BookingComponent_IBookingDecision

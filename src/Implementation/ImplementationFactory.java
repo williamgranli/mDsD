@@ -31,22 +31,13 @@ public interface ImplementationFactory extends EFactory {
 	DecisionSupportComponent createDecisionSupportComponent();
 
 	/**
-	 * Returns a new object of class '<em>Decision Support Component DSS Processor</em>'.
+	 * Returns a new object of class '<em>Decision Support Component Booking DSS Info</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Decision Support Component DSS Processor</em>'.
+	 * @return a new object of class '<em>Decision Support Component Booking DSS Info</em>'.
 	 * @generated
 	 */
-	DecisionSupportComponent_DSSProcessor createDecisionSupportComponent_DSSProcessor();
-
-	/**
-	 * Returns a new object of class '<em>Decision Support Component DSS Presenter</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Decision Support Component DSS Presenter</em>'.
-	 * @generated
-	 */
-	DecisionSupportComponent_DSSPresenter createDecisionSupportComponent_DSSPresenter();
+	DecisionSupportComponent_BookingDSSInfo createDecisionSupportComponent_BookingDSSInfo();
 
 	/**
 	 * Returns a new object of class '<em>Decision Support Component DSS Controller</em>'.
@@ -56,6 +47,24 @@ public interface ImplementationFactory extends EFactory {
 	 * @generated
 	 */
 	DecisionSupportComponent_DSSController createDecisionSupportComponent_DSSController();
+
+	/**
+	 * Returns a new object of class '<em>Decision Support Component Occupancy DSS Info</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Decision Support Component Occupancy DSS Info</em>'.
+	 * @generated
+	 */
+	DecisionSupportComponent_OccupancyDSSInfo createDecisionSupportComponent_OccupancyDSSInfo();
+
+	/**
+	 * Returns a new object of class '<em>Decision Support Component Additional Service DSS Info</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Decision Support Component Additional Service DSS Info</em>'.
+	 * @generated
+	 */
+	DecisionSupportComponent_AdditionalServiceDSSInfo createDecisionSupportComponent_AdditionalServiceDSSInfo();
 
 	/**
 	 * Returns a new object of class '<em>Occupancy Component</em>'.

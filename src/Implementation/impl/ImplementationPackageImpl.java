@@ -17,16 +17,17 @@ import Implementation.BookingComponent_AdditionalService;
 import Implementation.BookingComponent_Booking;
 import Implementation.BookingComponent_BookingGuest;
 import Implementation.BookingComponent_BookingHandler;
+import Implementation.BookingComponent_IBookingAdministration;
 import Implementation.BookingComponent_IBookingDecision;
 import Implementation.BookingComponent_IBookingInformation;
 import Implementation.BookingComponent_PaymentDetails;
 import Implementation.BookingComponent_RoomType;
 import Implementation.DecisionSupportComponent;
+import Implementation.DecisionSupportComponent_AdditionalServiceDSSInfo;
+import Implementation.DecisionSupportComponent_BookingDSSInfo;
 import Implementation.DecisionSupportComponent_DSSController;
-import Implementation.DecisionSupportComponent_DSSPresenter;
-import Implementation.DecisionSupportComponent_DSSProcessor;
 import Implementation.DecisionSupportComponent_IDecisionSupport;
-import Implementation.IBookingAdministration;
+import Implementation.DecisionSupportComponent_OccupancyDSSInfo;
 import Implementation.ImplementationFactory;
 import Implementation.ImplementationPackage;
 import Implementation.OccupancyComponent;
@@ -87,14 +88,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass decisionSupportComponent_DSSProcessorEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass decisionSupportComponent_DSSPresenterEClass = null;
+	private EClass decisionSupportComponent_BookingDSSInfoEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -130,6 +124,20 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * @generated
 	 */
 	private EClass bookingComponent_IBookingDecisionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass decisionSupportComponent_OccupancyDSSInfoEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass decisionSupportComponent_AdditionalServiceDSSInfoEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -325,7 +333,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass iBookingAdministrationEClass = null;
+	private EClass bookingComponent_IBookingAdministrationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -493,8 +501,8 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getDecisionSupportComponent_DSSProcessor() {
-		return decisionSupportComponent_DSSProcessorEClass;
+	public EOperation getDecisionSupportComponent_IDecisionSupport__GetDSSData() {
+		return decisionSupportComponent_IDecisionSupportEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -502,8 +510,152 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getDecisionSupportComponent_DSSPresenter() {
-		return decisionSupportComponent_DSSPresenterEClass;
+	public EOperation getDecisionSupportComponent_IDecisionSupport__GetAllRoomTypeFrequency() {
+		return decisionSupportComponent_IDecisionSupportEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getDecisionSupportComponent_IDecisionSupport__GetRoomTypeFrequency__String() {
+		return decisionSupportComponent_IDecisionSupportEClass.getEOperations().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getDecisionSupportComponent_IDecisionSupport__CountRoomType__EList_String() {
+		return decisionSupportComponent_IDecisionSupportEClass.getEOperations().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getDecisionSupportComponent_IDecisionSupport__GetAllCustomerBookingFrequency() {
+		return decisionSupportComponent_IDecisionSupportEClass.getEOperations().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getDecisionSupportComponent_IDecisionSupport__GetCustomerBookingFrequency__String() {
+		return decisionSupportComponent_IDecisionSupportEClass.getEOperations().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getDecisionSupportComponent_IDecisionSupport__GetDSSOccupancyInfo() {
+		return decisionSupportComponent_IDecisionSupportEClass.getEOperations().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getDecisionSupportComponent_IDecisionSupport__GetNumberOfOccupanciesOfRoom__String() {
+		return decisionSupportComponent_IDecisionSupportEClass.getEOperations().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getDecisionSupportComponent_BookingDSSInfo() {
+		return decisionSupportComponent_BookingDSSInfoEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDecisionSupportComponent_BookingDSSInfo_NumberOfGuests() {
+		return (EAttribute)decisionSupportComponent_BookingDSSInfoEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDecisionSupportComponent_BookingDSSInfo_RoomType() {
+		return (EAttribute)decisionSupportComponent_BookingDSSInfoEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDecisionSupportComponent_BookingDSSInfo_ArrivalDate() {
+		return (EAttribute)decisionSupportComponent_BookingDSSInfoEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDecisionSupportComponent_BookingDSSInfo_DepartureDate() {
+		return (EAttribute)decisionSupportComponent_BookingDSSInfoEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDecisionSupportComponent_BookingDSSInfo_CustomerSSN() {
+		return (EAttribute)decisionSupportComponent_BookingDSSInfoEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getDecisionSupportComponent_BookingDSSInfo_AdditionalServices() {
+		return (EReference)decisionSupportComponent_BookingDSSInfoEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDecisionSupportComponent_BookingDSSInfo_CustomerFirstName() {
+		return (EAttribute)decisionSupportComponent_BookingDSSInfoEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDecisionSupportComponent_BookingDSSInfo_CustomerLastName() {
+		return (EAttribute)decisionSupportComponent_BookingDSSInfoEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDecisionSupportComponent_BookingDSSInfo_Address() {
+		return (EAttribute)decisionSupportComponent_BookingDSSInfoEClass.getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -520,7 +672,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDecisionSupportComponent_DSSController_DSSProcessor() {
+	public EReference getDecisionSupportComponent_DSSController_IRoomDecision() {
 		return (EReference)decisionSupportComponent_DSSControllerEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -529,7 +681,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDecisionSupportComponent_DSSController_DSSPresenter() {
+	public EReference getDecisionSupportComponent_DSSController_IOccupancyDecision() {
 		return (EReference)decisionSupportComponent_DSSControllerEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -538,7 +690,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDecisionSupportComponent_DSSController_IRoomDecision() {
+	public EReference getDecisionSupportComponent_DSSController_IAdditionalServiceDecision() {
 		return (EReference)decisionSupportComponent_DSSControllerEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -547,7 +699,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDecisionSupportComponent_DSSController_IOccupancyDecision() {
+	public EReference getDecisionSupportComponent_DSSController_IBookingDecision() {
 		return (EReference)decisionSupportComponent_DSSControllerEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -556,7 +708,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDecisionSupportComponent_DSSController_IAdditionalServiceDecision() {
+	public EReference getDecisionSupportComponent_DSSController_OccupancyDSSInfo() {
 		return (EReference)decisionSupportComponent_DSSControllerEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -565,8 +717,35 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDecisionSupportComponent_DSSController_IBookingDecision() {
+	public EReference getDecisionSupportComponent_DSSController_AdditionalServiceDSSInfo() {
 		return (EReference)decisionSupportComponent_DSSControllerEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getDecisionSupportComponent_DSSController_BookingDSSInfo() {
+		return (EReference)decisionSupportComponent_DSSControllerEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getDecisionSupportComponent_DSSController__CountCustomerBooking__EList_String() {
+		return decisionSupportComponent_DSSControllerEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getDecisionSupportComponent_DSSController__GetPositionInList__EList_String() {
+		return decisionSupportComponent_DSSControllerEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -585,6 +764,15 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 */
 	public EClass getOccupancyComponent_IOccupancyDecision() {
 		return occupancyComponent_IOccupancyDecisionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getOccupancyComponent_IOccupancyDecision__GetDSSOccupancyInfo() {
+		return occupancyComponent_IOccupancyDecisionEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -612,6 +800,78 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 */
 	public EOperation getBookingComponent_IBookingDecision__GetDSSInfo() {
 		return bookingComponent_IBookingDecisionEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getDecisionSupportComponent_OccupancyDSSInfo() {
+		return decisionSupportComponent_OccupancyDSSInfoEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDecisionSupportComponent_OccupancyDSSInfo_RoomNumber() {
+		return (EAttribute)decisionSupportComponent_OccupancyDSSInfoEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDecisionSupportComponent_OccupancyDSSInfo_CheckInDateTime() {
+		return (EAttribute)decisionSupportComponent_OccupancyDSSInfoEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDecisionSupportComponent_OccupancyDSSInfo_CheckOutDateTime() {
+		return (EAttribute)decisionSupportComponent_OccupancyDSSInfoEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDecisionSupportComponent_OccupancyDSSInfo_NumberOfGuests() {
+		return (EAttribute)decisionSupportComponent_OccupancyDSSInfoEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getDecisionSupportComponent_AdditionalServiceDSSInfo() {
+		return decisionSupportComponent_AdditionalServiceDSSInfoEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDecisionSupportComponent_AdditionalServiceDSSInfo_AdditionalServiceName() {
+		return (EAttribute)decisionSupportComponent_AdditionalServiceDSSInfoEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDecisionSupportComponent_AdditionalServiceDSSInfo_AdditionalServicePrice() {
+		return (EAttribute)decisionSupportComponent_AdditionalServiceDSSInfoEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1996,8 +2256,8 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getIBookingAdministration() {
-		return iBookingAdministrationEClass;
+	public EClass getBookingComponent_IBookingAdministration() {
+		return bookingComponent_IBookingAdministrationEClass;
 	}
 
 	/**
@@ -2005,8 +2265,8 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBookingAdministration__MakeBooking__Date_Date_String_String_String_String_String_String_String_String() {
-		return iBookingAdministrationEClass.getEOperations().get(0);
+	public EOperation getBookingComponent_IBookingAdministration__MakeBooking__Date_Date_String_String_String_String_String_String_String_String() {
+		return bookingComponent_IBookingAdministrationEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -2014,8 +2274,8 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBookingAdministration__AddRoom__String_String_int() {
-		return iBookingAdministrationEClass.getEOperations().get(1);
+	public EOperation getBookingComponent_IBookingAdministration__AddRoom__String_String_int() {
+		return bookingComponent_IBookingAdministrationEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -2023,8 +2283,8 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBookingAdministration__RequestQuote__String_int_Date_Date() {
-		return iBookingAdministrationEClass.getEOperations().get(2);
+	public EOperation getBookingComponent_IBookingAdministration__RequestQuote__String_int_Date_Date() {
+		return bookingComponent_IBookingAdministrationEClass.getEOperations().get(2);
 	}
 
 	/**
@@ -2032,8 +2292,8 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBookingAdministration__EditBooking__String_Date_Date() {
-		return iBookingAdministrationEClass.getEOperations().get(3);
+	public EOperation getBookingComponent_IBookingAdministration__EditBooking__String_Date_Date() {
+		return bookingComponent_IBookingAdministrationEClass.getEOperations().get(3);
 	}
 
 	/**
@@ -2041,8 +2301,8 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBookingAdministration__CancelBooking__String() {
-		return iBookingAdministrationEClass.getEOperations().get(4);
+	public EOperation getBookingComponent_IBookingAdministration__CancelBooking__String() {
+		return bookingComponent_IBookingAdministrationEClass.getEOperations().get(4);
 	}
 
 	/**
@@ -2050,8 +2310,8 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBookingAdministration__AddAdditionalService__String_String_int() {
-		return iBookingAdministrationEClass.getEOperations().get(5);
+	public EOperation getBookingComponent_IBookingAdministration__AddAdditionalService__String_String_int() {
+		return bookingComponent_IBookingAdministrationEClass.getEOperations().get(5);
 	}
 
 	/**
@@ -2059,8 +2319,8 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBookingAdministration__RemoveRoom__String_String() {
-		return iBookingAdministrationEClass.getEOperations().get(6);
+	public EOperation getBookingComponent_IBookingAdministration__RemoveRoom__String_String() {
+		return bookingComponent_IBookingAdministrationEClass.getEOperations().get(6);
 	}
 
 	/**
@@ -2068,8 +2328,8 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBookingAdministration__RemoveAdditionalService__String_String() {
-		return iBookingAdministrationEClass.getEOperations().get(7);
+	public EOperation getBookingComponent_IBookingAdministration__RemoveAdditionalService__String_String() {
+		return bookingComponent_IBookingAdministrationEClass.getEOperations().get(7);
 	}
 
 	/**
@@ -2077,8 +2337,8 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBookingAdministration__GenerateQuote__Date_Date_String() {
-		return iBookingAdministrationEClass.getEOperations().get(8);
+	public EOperation getBookingComponent_IBookingAdministration__GenerateQuote__Date_Date_String() {
+		return bookingComponent_IBookingAdministrationEClass.getEOperations().get(8);
 	}
 
 	/**
@@ -2086,8 +2346,8 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBookingAdministration__AddGuestToBooking__String_String_String_String() {
-		return iBookingAdministrationEClass.getEOperations().get(9);
+	public EOperation getBookingComponent_IBookingAdministration__AddGuestToBooking__String_String_String_String() {
+		return bookingComponent_IBookingAdministrationEClass.getEOperations().get(9);
 	}
 
 	/**
@@ -2095,8 +2355,8 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBookingAdministration__RemoveGuest__String_String_String_String() {
-		return iBookingAdministrationEClass.getEOperations().get(10);
+	public EOperation getBookingComponent_IBookingAdministration__RemoveGuest__String_String_String_String() {
+		return bookingComponent_IBookingAdministrationEClass.getEOperations().get(10);
 	}
 
 	/**
@@ -2544,27 +2804,56 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		decisionSupportComponentEClass = createEClass(DECISION_SUPPORT_COMPONENT);
 
 		decisionSupportComponent_IDecisionSupportEClass = createEClass(DECISION_SUPPORT_COMPONENT_IDECISION_SUPPORT);
+		createEOperation(decisionSupportComponent_IDecisionSupportEClass, DECISION_SUPPORT_COMPONENT_IDECISION_SUPPORT___GET_DSS_DATA);
+		createEOperation(decisionSupportComponent_IDecisionSupportEClass, DECISION_SUPPORT_COMPONENT_IDECISION_SUPPORT___GET_ALL_ROOM_TYPE_FREQUENCY);
+		createEOperation(decisionSupportComponent_IDecisionSupportEClass, DECISION_SUPPORT_COMPONENT_IDECISION_SUPPORT___GET_ROOM_TYPE_FREQUENCY__STRING);
+		createEOperation(decisionSupportComponent_IDecisionSupportEClass, DECISION_SUPPORT_COMPONENT_IDECISION_SUPPORT___COUNT_ROOM_TYPE__ELIST_STRING);
+		createEOperation(decisionSupportComponent_IDecisionSupportEClass, DECISION_SUPPORT_COMPONENT_IDECISION_SUPPORT___GET_ALL_CUSTOMER_BOOKING_FREQUENCY);
+		createEOperation(decisionSupportComponent_IDecisionSupportEClass, DECISION_SUPPORT_COMPONENT_IDECISION_SUPPORT___GET_CUSTOMER_BOOKING_FREQUENCY__STRING);
+		createEOperation(decisionSupportComponent_IDecisionSupportEClass, DECISION_SUPPORT_COMPONENT_IDECISION_SUPPORT___GET_DSS_OCCUPANCY_INFO);
+		createEOperation(decisionSupportComponent_IDecisionSupportEClass, DECISION_SUPPORT_COMPONENT_IDECISION_SUPPORT___GET_NUMBER_OF_OCCUPANCIES_OF_ROOM__STRING);
 
-		decisionSupportComponent_DSSProcessorEClass = createEClass(DECISION_SUPPORT_COMPONENT_DSS_PROCESSOR);
+		decisionSupportComponent_BookingDSSInfoEClass = createEClass(DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO);
+		createEAttribute(decisionSupportComponent_BookingDSSInfoEClass, DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO__NUMBER_OF_GUESTS);
+		createEAttribute(decisionSupportComponent_BookingDSSInfoEClass, DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO__ROOM_TYPE);
+		createEAttribute(decisionSupportComponent_BookingDSSInfoEClass, DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO__ARRIVAL_DATE);
+		createEAttribute(decisionSupportComponent_BookingDSSInfoEClass, DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO__DEPARTURE_DATE);
+		createEAttribute(decisionSupportComponent_BookingDSSInfoEClass, DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO__CUSTOMER_SSN);
+		createEReference(decisionSupportComponent_BookingDSSInfoEClass, DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO__ADDITIONAL_SERVICES);
+		createEAttribute(decisionSupportComponent_BookingDSSInfoEClass, DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO__CUSTOMER_FIRST_NAME);
+		createEAttribute(decisionSupportComponent_BookingDSSInfoEClass, DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO__CUSTOMER_LAST_NAME);
+		createEAttribute(decisionSupportComponent_BookingDSSInfoEClass, DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO__ADDRESS);
 
-		decisionSupportComponent_DSSPresenterEClass = createEClass(DECISION_SUPPORT_COMPONENT_DSS_PRESENTER);
+		decisionSupportComponent_AdditionalServiceDSSInfoEClass = createEClass(DECISION_SUPPORT_COMPONENT_ADDITIONAL_SERVICE_DSS_INFO);
+		createEAttribute(decisionSupportComponent_AdditionalServiceDSSInfoEClass, DECISION_SUPPORT_COMPONENT_ADDITIONAL_SERVICE_DSS_INFO__ADDITIONAL_SERVICE_NAME);
+		createEAttribute(decisionSupportComponent_AdditionalServiceDSSInfoEClass, DECISION_SUPPORT_COMPONENT_ADDITIONAL_SERVICE_DSS_INFO__ADDITIONAL_SERVICE_PRICE);
 
 		decisionSupportComponent_DSSControllerEClass = createEClass(DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER);
-		createEReference(decisionSupportComponent_DSSControllerEClass, DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__DSS_PROCESSOR);
-		createEReference(decisionSupportComponent_DSSControllerEClass, DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__DSS_PRESENTER);
 		createEReference(decisionSupportComponent_DSSControllerEClass, DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__IROOM_DECISION);
 		createEReference(decisionSupportComponent_DSSControllerEClass, DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__IOCCUPANCY_DECISION);
 		createEReference(decisionSupportComponent_DSSControllerEClass, DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__IADDITIONAL_SERVICE_DECISION);
 		createEReference(decisionSupportComponent_DSSControllerEClass, DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__IBOOKING_DECISION);
+		createEReference(decisionSupportComponent_DSSControllerEClass, DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__OCCUPANCY_DSS_INFO);
+		createEReference(decisionSupportComponent_DSSControllerEClass, DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__ADDITIONAL_SERVICE_DSS_INFO);
+		createEReference(decisionSupportComponent_DSSControllerEClass, DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__BOOKING_DSS_INFO);
+		createEOperation(decisionSupportComponent_DSSControllerEClass, DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER___COUNT_CUSTOMER_BOOKING__ELIST_STRING);
+		createEOperation(decisionSupportComponent_DSSControllerEClass, DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER___GET_POSITION_IN_LIST__ELIST_STRING);
 
 		roomComponent_IRoomDecisionEClass = createEClass(ROOM_COMPONENT_IROOM_DECISION);
 
 		occupancyComponent_IOccupancyDecisionEClass = createEClass(OCCUPANCY_COMPONENT_IOCCUPANCY_DECISION);
+		createEOperation(occupancyComponent_IOccupancyDecisionEClass, OCCUPANCY_COMPONENT_IOCCUPANCY_DECISION___GET_DSS_OCCUPANCY_INFO);
 
 		additionalServiceComponent_IAdditionalServiceDecisionEClass = createEClass(ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_DECISION);
 
 		bookingComponent_IBookingDecisionEClass = createEClass(BOOKING_COMPONENT_IBOOKING_DECISION);
 		createEOperation(bookingComponent_IBookingDecisionEClass, BOOKING_COMPONENT_IBOOKING_DECISION___GET_DSS_INFO);
+
+		decisionSupportComponent_OccupancyDSSInfoEClass = createEClass(DECISION_SUPPORT_COMPONENT_OCCUPANCY_DSS_INFO);
+		createEAttribute(decisionSupportComponent_OccupancyDSSInfoEClass, DECISION_SUPPORT_COMPONENT_OCCUPANCY_DSS_INFO__ROOM_NUMBER);
+		createEAttribute(decisionSupportComponent_OccupancyDSSInfoEClass, DECISION_SUPPORT_COMPONENT_OCCUPANCY_DSS_INFO__CHECK_IN_DATE_TIME);
+		createEAttribute(decisionSupportComponent_OccupancyDSSInfoEClass, DECISION_SUPPORT_COMPONENT_OCCUPANCY_DSS_INFO__CHECK_OUT_DATE_TIME);
+		createEAttribute(decisionSupportComponent_OccupancyDSSInfoEClass, DECISION_SUPPORT_COMPONENT_OCCUPANCY_DSS_INFO__NUMBER_OF_GUESTS);
 
 		occupancyComponentEClass = createEClass(OCCUPANCY_COMPONENT);
 
@@ -2746,18 +3035,18 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		createEReference(bookingComponent_BookingHandlerEClass, BOOKING_COMPONENT_BOOKING_HANDLER__IPAYMENT);
 		createEOperation(bookingComponent_BookingHandlerEClass, BOOKING_COMPONENT_BOOKING_HANDLER___FIND_BOOKING__STRING);
 
-		iBookingAdministrationEClass = createEClass(IBOOKING_ADMINISTRATION);
-		createEOperation(iBookingAdministrationEClass, IBOOKING_ADMINISTRATION___MAKE_BOOKING__DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_STRING_STRING);
-		createEOperation(iBookingAdministrationEClass, IBOOKING_ADMINISTRATION___ADD_ROOM__STRING_STRING_INT);
-		createEOperation(iBookingAdministrationEClass, IBOOKING_ADMINISTRATION___REQUEST_QUOTE__STRING_INT_DATE_DATE);
-		createEOperation(iBookingAdministrationEClass, IBOOKING_ADMINISTRATION___EDIT_BOOKING__STRING_DATE_DATE);
-		createEOperation(iBookingAdministrationEClass, IBOOKING_ADMINISTRATION___CANCEL_BOOKING__STRING);
-		createEOperation(iBookingAdministrationEClass, IBOOKING_ADMINISTRATION___ADD_ADDITIONAL_SERVICE__STRING_STRING_INT);
-		createEOperation(iBookingAdministrationEClass, IBOOKING_ADMINISTRATION___REMOVE_ROOM__STRING_STRING);
-		createEOperation(iBookingAdministrationEClass, IBOOKING_ADMINISTRATION___REMOVE_ADDITIONAL_SERVICE__STRING_STRING);
-		createEOperation(iBookingAdministrationEClass, IBOOKING_ADMINISTRATION___GENERATE_QUOTE__DATE_DATE_STRING);
-		createEOperation(iBookingAdministrationEClass, IBOOKING_ADMINISTRATION___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING);
-		createEOperation(iBookingAdministrationEClass, IBOOKING_ADMINISTRATION___REMOVE_GUEST__STRING_STRING_STRING_STRING);
+		bookingComponent_IBookingAdministrationEClass = createEClass(BOOKING_COMPONENT_IBOOKING_ADMINISTRATION);
+		createEOperation(bookingComponent_IBookingAdministrationEClass, BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___MAKE_BOOKING__DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_STRING_STRING);
+		createEOperation(bookingComponent_IBookingAdministrationEClass, BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___ADD_ROOM__STRING_STRING_INT);
+		createEOperation(bookingComponent_IBookingAdministrationEClass, BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___REQUEST_QUOTE__STRING_INT_DATE_DATE);
+		createEOperation(bookingComponent_IBookingAdministrationEClass, BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___EDIT_BOOKING__STRING_DATE_DATE);
+		createEOperation(bookingComponent_IBookingAdministrationEClass, BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___CANCEL_BOOKING__STRING);
+		createEOperation(bookingComponent_IBookingAdministrationEClass, BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___ADD_ADDITIONAL_SERVICE__STRING_STRING_INT);
+		createEOperation(bookingComponent_IBookingAdministrationEClass, BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___REMOVE_ROOM__STRING_STRING);
+		createEOperation(bookingComponent_IBookingAdministrationEClass, BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___REMOVE_ADDITIONAL_SERVICE__STRING_STRING);
+		createEOperation(bookingComponent_IBookingAdministrationEClass, BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___GENERATE_QUOTE__DATE_DATE_STRING);
+		createEOperation(bookingComponent_IBookingAdministrationEClass, BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING);
+		createEOperation(bookingComponent_IBookingAdministrationEClass, BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___REMOVE_GUEST__STRING_STRING_STRING_STRING);
 
 		staffComponentEClass = createEClass(STAFF_COMPONENT);
 
@@ -2857,7 +3146,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		additionalServiceComponent_AdditionalServiceHandlerEClass.getESuperTypes().add(this.getAdditionalServiceComponent_IAdditionalServiceAdministration());
 		bookingComponent_BookingHandlerEClass.getESuperTypes().add(this.getBookingComponent_IBookingInformation());
 		bookingComponent_BookingHandlerEClass.getESuperTypes().add(this.getBookingComponent_IBookingDecision());
-		bookingComponent_BookingHandlerEClass.getESuperTypes().add(this.getIBookingAdministration());
+		bookingComponent_BookingHandlerEClass.getESuperTypes().add(this.getBookingComponent_IBookingAdministration());
 		staffComponent_AccountManagerEClass.getESuperTypes().add(this.getStaffComponent_IAuthentication());
 		staffComponent_AccountManagerEClass.getESuperTypes().add(this.getStaffComponent_IAccountAdministration());
 		roomComponent_BedroomEClass.getESuperTypes().add(this.getRoomComponent_Room());
@@ -2871,27 +3160,76 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 
 		initEClass(decisionSupportComponent_IDecisionSupportEClass, DecisionSupportComponent_IDecisionSupport.class, "DecisionSupportComponent_IDecisionSupport", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(decisionSupportComponent_DSSProcessorEClass, DecisionSupportComponent_DSSProcessor.class, "DecisionSupportComponent_DSSProcessor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEOperation(getDecisionSupportComponent_IDecisionSupport__GetDSSData(), null, "getDSSData", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEClass(decisionSupportComponent_DSSPresenterEClass, DecisionSupportComponent_DSSPresenter.class, "DecisionSupportComponent_DSSPresenter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEOperation(getDecisionSupportComponent_IDecisionSupport__GetAllRoomTypeFrequency(), theTypesPackage.getString(), "getAllRoomTypeFrequency", 0, -1, IS_UNIQUE, !IS_ORDERED);
+
+		EOperation op = initEOperation(getDecisionSupportComponent_IDecisionSupport__GetRoomTypeFrequency__String(), theTypesPackage.getString(), "getRoomTypeFrequency", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "roomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getDecisionSupportComponent_IDecisionSupport__CountRoomType__EList_String(), theTypesPackage.getInteger(), "countRoomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, this.getDecisionSupportComponent_BookingDSSInfo(), "bookingDSSInfo", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "roomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		initEOperation(getDecisionSupportComponent_IDecisionSupport__GetAllCustomerBookingFrequency(), theTypesPackage.getString(), "getAllCustomerBookingFrequency", 0, -1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getDecisionSupportComponent_IDecisionSupport__GetCustomerBookingFrequency__String(), theTypesPackage.getString(), "getCustomerBookingFrequency", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "customerSSN", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		initEOperation(getDecisionSupportComponent_IDecisionSupport__GetDSSOccupancyInfo(), null, "getDSSOccupancyInfo", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getDecisionSupportComponent_IDecisionSupport__GetNumberOfOccupanciesOfRoom__String(), theTypesPackage.getInteger(), "getNumberOfOccupanciesOfRoom", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "roomNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		initEClass(decisionSupportComponent_BookingDSSInfoEClass, DecisionSupportComponent_BookingDSSInfo.class, "DecisionSupportComponent_BookingDSSInfo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getDecisionSupportComponent_BookingDSSInfo_NumberOfGuests(), theTypesPackage.getInteger(), "numberOfGuests", null, 1, 1, DecisionSupportComponent_BookingDSSInfo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getDecisionSupportComponent_BookingDSSInfo_RoomType(), theTypesPackage.getString(), "roomType", null, 1, 1, DecisionSupportComponent_BookingDSSInfo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getDecisionSupportComponent_BookingDSSInfo_ArrivalDate(), ecorePackage.getEDate(), "arrivalDate", null, 1, 1, DecisionSupportComponent_BookingDSSInfo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getDecisionSupportComponent_BookingDSSInfo_DepartureDate(), ecorePackage.getEDate(), "departureDate", null, 1, 1, DecisionSupportComponent_BookingDSSInfo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getDecisionSupportComponent_BookingDSSInfo_CustomerSSN(), theTypesPackage.getString(), "customerSSN", null, 1, 1, DecisionSupportComponent_BookingDSSInfo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getDecisionSupportComponent_BookingDSSInfo_AdditionalServices(), this.getDecisionSupportComponent_AdditionalServiceDSSInfo(), null, "additionalServices", null, 1, 1, DecisionSupportComponent_BookingDSSInfo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getDecisionSupportComponent_BookingDSSInfo_CustomerFirstName(), theTypesPackage.getString(), "customerFirstName", null, 1, 1, DecisionSupportComponent_BookingDSSInfo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getDecisionSupportComponent_BookingDSSInfo_CustomerLastName(), theTypesPackage.getString(), "customerLastName", null, 1, 1, DecisionSupportComponent_BookingDSSInfo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getDecisionSupportComponent_BookingDSSInfo_Address(), theTypesPackage.getString(), "address", null, 1, 1, DecisionSupportComponent_BookingDSSInfo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(decisionSupportComponent_AdditionalServiceDSSInfoEClass, DecisionSupportComponent_AdditionalServiceDSSInfo.class, "DecisionSupportComponent_AdditionalServiceDSSInfo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getDecisionSupportComponent_AdditionalServiceDSSInfo_AdditionalServiceName(), theTypesPackage.getString(), "additionalServiceName", null, 1, 1, DecisionSupportComponent_AdditionalServiceDSSInfo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getDecisionSupportComponent_AdditionalServiceDSSInfo_AdditionalServicePrice(), theTypesPackage.getString(), "additionalServicePrice", null, 1, 1, DecisionSupportComponent_AdditionalServiceDSSInfo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(decisionSupportComponent_DSSControllerEClass, DecisionSupportComponent_DSSController.class, "DecisionSupportComponent_DSSController", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDecisionSupportComponent_DSSController_DSSProcessor(), this.getDecisionSupportComponent_DSSProcessor(), null, "dSSProcessor", null, 0, -1, DecisionSupportComponent_DSSController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getDecisionSupportComponent_DSSController_DSSPresenter(), this.getDecisionSupportComponent_DSSPresenter(), null, "dSSPresenter", null, 1, 1, DecisionSupportComponent_DSSController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getDecisionSupportComponent_DSSController_IRoomDecision(), this.getRoomComponent_IRoomDecision(), null, "iRoomDecision", null, 1, 1, DecisionSupportComponent_DSSController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getDecisionSupportComponent_DSSController_IOccupancyDecision(), this.getOccupancyComponent_IOccupancyDecision(), null, "iOccupancyDecision", null, 1, 1, DecisionSupportComponent_DSSController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getDecisionSupportComponent_DSSController_IAdditionalServiceDecision(), this.getAdditionalServiceComponent_IAdditionalServiceDecision(), null, "iAdditionalServiceDecision", null, 1, 1, DecisionSupportComponent_DSSController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getDecisionSupportComponent_DSSController_IBookingDecision(), this.getBookingComponent_IBookingDecision(), null, "iBookingDecision", null, 1, 1, DecisionSupportComponent_DSSController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getDecisionSupportComponent_DSSController_OccupancyDSSInfo(), this.getDecisionSupportComponent_OccupancyDSSInfo(), null, "occupancyDSSInfo", null, 1, 1, DecisionSupportComponent_DSSController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getDecisionSupportComponent_DSSController_AdditionalServiceDSSInfo(), this.getDecisionSupportComponent_AdditionalServiceDSSInfo(), null, "additionalServiceDSSInfo", null, 1, 1, DecisionSupportComponent_DSSController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getDecisionSupportComponent_DSSController_BookingDSSInfo(), this.getDecisionSupportComponent_BookingDSSInfo(), null, "bookingDSSInfo", null, 1, 1, DecisionSupportComponent_DSSController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		op = initEOperation(getDecisionSupportComponent_DSSController__CountCustomerBooking__EList_String(), theTypesPackage.getInteger(), "countCustomerBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, this.getDecisionSupportComponent_BookingDSSInfo(), "bookingDSSInfo", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "customerSSN", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getDecisionSupportComponent_DSSController__GetPositionInList__EList_String(), theTypesPackage.getInteger(), "getPositionInList", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "listToCheck", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "element", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(roomComponent_IRoomDecisionEClass, RoomComponent_IRoomDecision.class, "RoomComponent_IRoomDecision", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(occupancyComponent_IOccupancyDecisionEClass, OccupancyComponent_IOccupancyDecision.class, "OccupancyComponent_IOccupancyDecision", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
+		initEOperation(getOccupancyComponent_IOccupancyDecision__GetDSSOccupancyInfo(), theTypesPackage.getString(), "getDSSOccupancyInfo", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
 		initEClass(additionalServiceComponent_IAdditionalServiceDecisionEClass, AdditionalServiceComponent_IAdditionalServiceDecision.class, "AdditionalServiceComponent_IAdditionalServiceDecision", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(bookingComponent_IBookingDecisionEClass, BookingComponent_IBookingDecision.class, "BookingComponent_IBookingDecision", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEOperation(getBookingComponent_IBookingDecision__GetDSSInfo(), theTypesPackage.getString(), "getDSSInfo", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		initEOperation(getBookingComponent_IBookingDecision__GetDSSInfo(), theTypesPackage.getString(), "getDSSInfo", 0, -1, IS_UNIQUE, !IS_ORDERED);
+
+		initEClass(decisionSupportComponent_OccupancyDSSInfoEClass, DecisionSupportComponent_OccupancyDSSInfo.class, "DecisionSupportComponent_OccupancyDSSInfo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getDecisionSupportComponent_OccupancyDSSInfo_RoomNumber(), theTypesPackage.getInteger(), "roomNumber", null, 1, 1, DecisionSupportComponent_OccupancyDSSInfo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getDecisionSupportComponent_OccupancyDSSInfo_CheckInDateTime(), ecorePackage.getEDate(), "checkInDateTime", null, 1, 1, DecisionSupportComponent_OccupancyDSSInfo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getDecisionSupportComponent_OccupancyDSSInfo_CheckOutDateTime(), ecorePackage.getEDate(), "checkOutDateTime", null, 1, 1, DecisionSupportComponent_OccupancyDSSInfo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getDecisionSupportComponent_OccupancyDSSInfo_NumberOfGuests(), theTypesPackage.getInteger(), "numberOfGuests", null, 1, 1, DecisionSupportComponent_OccupancyDSSInfo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(occupancyComponentEClass, OccupancyComponent.class, "OccupancyComponent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -2902,7 +3240,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		initEAttribute(getOccupancyComponent_Occupancy_BookingReference(), theTypesPackage.getString(), "bookingReference", null, 1, 1, OccupancyComponent_Occupancy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getOccupancyComponent_Occupancy_Guests(), this.getOccupancyComponent_Guest(), null, "guests", null, 1, -1, OccupancyComponent_Occupancy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		EOperation op = initEOperation(getOccupancyComponent_Occupancy__GetPartner__String_String(), theTypesPackage.getString(), "getPartner", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getOccupancyComponent_Occupancy__GetPartner__String_String(), theTypesPackage.getString(), "getPartner", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "firstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "lastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
@@ -3303,9 +3641,9 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		op = initEOperation(getBookingComponent_BookingHandler__FindBooking__String(), this.getBookingComponent_Booking(), "findBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "referenceNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEClass(iBookingAdministrationEClass, IBookingAdministration.class, "IBookingAdministration", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(bookingComponent_IBookingAdministrationEClass, BookingComponent_IBookingAdministration.class, "BookingComponent_IBookingAdministration", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		op = initEOperation(getIBookingAdministration__MakeBooking__Date_Date_String_String_String_String_String_String_String_String(), theTypesPackage.getString(), "makeBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getBookingComponent_IBookingAdministration__MakeBooking__Date_Date_String_String_String_String_String_String_String_String(), theTypesPackage.getString(), "makeBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDate(), "arrivalDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDate(), "departureDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "customerSSN", 1, 1, IS_UNIQUE, !IS_ORDERED);
@@ -3317,50 +3655,50 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		addEParameter(op, theTypesPackage.getString(), "expiryMonth", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "expiryYear", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getIBookingAdministration__AddRoom__String_String_int(), null, "addRoom", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getBookingComponent_IBookingAdministration__AddRoom__String_String_int(), null, "addRoom", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "bookingReference", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "roomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "price", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getIBookingAdministration__RequestQuote__String_int_Date_Date(), null, "requestQuote", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getBookingComponent_IBookingAdministration__RequestQuote__String_int_Date_Date(), null, "requestQuote", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "roomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "price", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDate(), "arrivalDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDate(), "departureDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getIBookingAdministration__EditBooking__String_Date_Date(), null, "editBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getBookingComponent_IBookingAdministration__EditBooking__String_Date_Date(), null, "editBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "bookingReference", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDate(), "arrivalDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDate(), "departureDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getIBookingAdministration__CancelBooking__String(), null, "cancelBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getBookingComponent_IBookingAdministration__CancelBooking__String(), null, "cancelBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "bookingReference", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getIBookingAdministration__AddAdditionalService__String_String_int(), null, "addAdditionalService", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getBookingComponent_IBookingAdministration__AddAdditionalService__String_String_int(), null, "addAdditionalService", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "bookingReference", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "additionalServiceName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "cost", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getIBookingAdministration__RemoveRoom__String_String(), null, "removeRoom", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getBookingComponent_IBookingAdministration__RemoveRoom__String_String(), null, "removeRoom", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "bookingReference", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "roomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getIBookingAdministration__RemoveAdditionalService__String_String(), null, "removeAdditionalService", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getBookingComponent_IBookingAdministration__RemoveAdditionalService__String_String(), null, "removeAdditionalService", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "bookingReference", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "additionalServiceName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getIBookingAdministration__GenerateQuote__Date_Date_String(), null, "generateQuote", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getBookingComponent_IBookingAdministration__GenerateQuote__Date_Date_String(), null, "generateQuote", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDate(), "startDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDate(), "endDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "roomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getIBookingAdministration__AddGuestToBooking__String_String_String_String(), null, "addGuestToBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getBookingComponent_IBookingAdministration__AddGuestToBooking__String_String_String_String(), null, "addGuestToBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "bookingReference", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "firstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "lastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "address", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getIBookingAdministration__RemoveGuest__String_String_String_String(), null, "removeGuest", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getBookingComponent_IBookingAdministration__RemoveGuest__String_String_String_String(), null, "removeGuest", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "bookingReference", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "firstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "lastName", 1, 1, IS_UNIQUE, !IS_ORDERED);

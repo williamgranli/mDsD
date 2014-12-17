@@ -57,9 +57,10 @@ public class ImplementationFactoryImpl extends EFactoryImpl implements Implement
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case ImplementationPackage.DECISION_SUPPORT_COMPONENT: return createDecisionSupportComponent();
-			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_PROCESSOR: return createDecisionSupportComponent_DSSProcessor();
-			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_PRESENTER: return createDecisionSupportComponent_DSSPresenter();
+			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO: return createDecisionSupportComponent_BookingDSSInfo();
+			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_ADDITIONAL_SERVICE_DSS_INFO: return createDecisionSupportComponent_AdditionalServiceDSSInfo();
 			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER: return createDecisionSupportComponent_DSSController();
+			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_OCCUPANCY_DSS_INFO: return createDecisionSupportComponent_OccupancyDSSInfo();
 			case ImplementationPackage.OCCUPANCY_COMPONENT: return createOccupancyComponent();
 			case ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY: return createOccupancyComponent_Occupancy();
 			case ImplementationPackage.OCCUPANCY_COMPONENT_GUEST: return createOccupancyComponent_Guest();
@@ -107,19 +108,9 @@ public class ImplementationFactoryImpl extends EFactoryImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DecisionSupportComponent_DSSProcessor createDecisionSupportComponent_DSSProcessor() {
-		DecisionSupportComponent_DSSProcessorImpl decisionSupportComponent_DSSProcessor = new DecisionSupportComponent_DSSProcessorImpl();
-		return decisionSupportComponent_DSSProcessor;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public DecisionSupportComponent_DSSPresenter createDecisionSupportComponent_DSSPresenter() {
-		DecisionSupportComponent_DSSPresenterImpl decisionSupportComponent_DSSPresenter = new DecisionSupportComponent_DSSPresenterImpl();
-		return decisionSupportComponent_DSSPresenter;
+	public DecisionSupportComponent_BookingDSSInfo createDecisionSupportComponent_BookingDSSInfo() {
+		DecisionSupportComponent_BookingDSSInfoImpl decisionSupportComponent_BookingDSSInfo = new DecisionSupportComponent_BookingDSSInfoImpl();
+		return decisionSupportComponent_BookingDSSInfo;
 	}
 
 	/**
@@ -130,6 +121,26 @@ public class ImplementationFactoryImpl extends EFactoryImpl implements Implement
 	public DecisionSupportComponent_DSSController createDecisionSupportComponent_DSSController() {
 		DecisionSupportComponent_DSSControllerImpl decisionSupportComponent_DSSController = new DecisionSupportComponent_DSSControllerImpl();
 		return decisionSupportComponent_DSSController;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DecisionSupportComponent_OccupancyDSSInfo createDecisionSupportComponent_OccupancyDSSInfo() {
+		DecisionSupportComponent_OccupancyDSSInfoImpl decisionSupportComponent_OccupancyDSSInfo = new DecisionSupportComponent_OccupancyDSSInfoImpl();
+		return decisionSupportComponent_OccupancyDSSInfo;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DecisionSupportComponent_AdditionalServiceDSSInfo createDecisionSupportComponent_AdditionalServiceDSSInfo() {
+		DecisionSupportComponent_AdditionalServiceDSSInfoImpl decisionSupportComponent_AdditionalServiceDSSInfo = new DecisionSupportComponent_AdditionalServiceDSSInfoImpl();
+		return decisionSupportComponent_AdditionalServiceDSSInfo;
 	}
 
 	/**

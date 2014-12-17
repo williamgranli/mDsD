@@ -78,15 +78,15 @@ public class ImplementationSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_PROCESSOR: {
-				DecisionSupportComponent_DSSProcessor decisionSupportComponent_DSSProcessor = (DecisionSupportComponent_DSSProcessor)theEObject;
-				T result = caseDecisionSupportComponent_DSSProcessor(decisionSupportComponent_DSSProcessor);
+			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO: {
+				DecisionSupportComponent_BookingDSSInfo decisionSupportComponent_BookingDSSInfo = (DecisionSupportComponent_BookingDSSInfo)theEObject;
+				T result = caseDecisionSupportComponent_BookingDSSInfo(decisionSupportComponent_BookingDSSInfo);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_PRESENTER: {
-				DecisionSupportComponent_DSSPresenter decisionSupportComponent_DSSPresenter = (DecisionSupportComponent_DSSPresenter)theEObject;
-				T result = caseDecisionSupportComponent_DSSPresenter(decisionSupportComponent_DSSPresenter);
+			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_ADDITIONAL_SERVICE_DSS_INFO: {
+				DecisionSupportComponent_AdditionalServiceDSSInfo decisionSupportComponent_AdditionalServiceDSSInfo = (DecisionSupportComponent_AdditionalServiceDSSInfo)theEObject;
+				T result = caseDecisionSupportComponent_AdditionalServiceDSSInfo(decisionSupportComponent_AdditionalServiceDSSInfo);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -118,6 +118,12 @@ public class ImplementationSwitch<T> extends Switch<T> {
 			case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_DECISION: {
 				BookingComponent_IBookingDecision bookingComponent_IBookingDecision = (BookingComponent_IBookingDecision)theEObject;
 				T result = caseBookingComponent_IBookingDecision(bookingComponent_IBookingDecision);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_OCCUPANCY_DSS_INFO: {
+				DecisionSupportComponent_OccupancyDSSInfo decisionSupportComponent_OccupancyDSSInfo = (DecisionSupportComponent_OccupancyDSSInfo)theEObject;
+				T result = caseDecisionSupportComponent_OccupancyDSSInfo(decisionSupportComponent_OccupancyDSSInfo);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -288,13 +294,13 @@ public class ImplementationSwitch<T> extends Switch<T> {
 				T result = caseBookingComponent_BookingHandler(bookingComponent_BookingHandler);
 				if (result == null) result = caseBookingComponent_IBookingInformation(bookingComponent_BookingHandler);
 				if (result == null) result = caseBookingComponent_IBookingDecision(bookingComponent_BookingHandler);
-				if (result == null) result = caseIBookingAdministration(bookingComponent_BookingHandler);
+				if (result == null) result = caseBookingComponent_IBookingAdministration(bookingComponent_BookingHandler);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ImplementationPackage.IBOOKING_ADMINISTRATION: {
-				IBookingAdministration iBookingAdministration = (IBookingAdministration)theEObject;
-				T result = caseIBookingAdministration(iBookingAdministration);
+			case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_ADMINISTRATION: {
+				BookingComponent_IBookingAdministration bookingComponent_IBookingAdministration = (BookingComponent_IBookingAdministration)theEObject;
+				T result = caseBookingComponent_IBookingAdministration(bookingComponent_IBookingAdministration);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -406,32 +412,17 @@ public class ImplementationSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Decision Support Component DSS Processor</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Decision Support Component Booking DSS Info</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Decision Support Component DSS Processor</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Decision Support Component Booking DSS Info</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDecisionSupportComponent_DSSProcessor(DecisionSupportComponent_DSSProcessor object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Decision Support Component DSS Presenter</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Decision Support Component DSS Presenter</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseDecisionSupportComponent_DSSPresenter(DecisionSupportComponent_DSSPresenter object) {
+	public T caseDecisionSupportComponent_BookingDSSInfo(DecisionSupportComponent_BookingDSSInfo object) {
 		return null;
 	}
 
@@ -507,6 +498,36 @@ public class ImplementationSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseBookingComponent_IBookingDecision(BookingComponent_IBookingDecision object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Decision Support Component Occupancy DSS Info</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Decision Support Component Occupancy DSS Info</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDecisionSupportComponent_OccupancyDSSInfo(DecisionSupportComponent_OccupancyDSSInfo object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Decision Support Component Additional Service DSS Info</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Decision Support Component Additional Service DSS Info</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDecisionSupportComponent_AdditionalServiceDSSInfo(DecisionSupportComponent_AdditionalServiceDSSInfo object) {
 		return null;
 	}
 
@@ -916,17 +937,17 @@ public class ImplementationSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>IBooking Administration</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Booking Component IBooking Administration</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>IBooking Administration</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Booking Component IBooking Administration</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseIBookingAdministration(IBookingAdministration object) {
+	public T caseBookingComponent_IBookingAdministration(BookingComponent_IBookingAdministration object) {
 		return null;
 	}
 
