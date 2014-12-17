@@ -542,6 +542,17 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getDSSInfo() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public void addGuestToBooking(String bookingReference, String firstName, String lastName, String address) {
@@ -702,6 +713,7 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
 		if (baseClass == BookingComponent_IBookingDecision.class) {
 			switch (baseOperationID) {
+				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_DECISION___GET_DSS_INFO: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___GET_DSS_INFO;
 				default: return -1;
 			}
 		}
@@ -742,6 +754,8 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 				return isPaidFor((String)arguments.get(0));
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___MAKE_PAYMENT__STRING:
 				return makePayment((String)arguments.get(0));
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___GET_DSS_INFO:
+				return getDSSInfo();
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___MAKE_BOOKING__STRING_DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_STRING_STRING:
 				makeBooking((String)arguments.get(0), (Date)arguments.get(1), (Date)arguments.get(2), (String)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5), (String)arguments.get(6), (String)arguments.get(7), (String)arguments.get(8), (String)arguments.get(9), (String)arguments.get(10));
 				return null;

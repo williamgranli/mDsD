@@ -295,7 +295,7 @@ public class AdditionalServiceComponent_AdditionalServiceImpl extends MinimalEOb
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public AdditionalServiceComponent_AdditionalServiceEvent findEvents(Date dateTime) {
+	public EList<AdditionalServiceComponent_AdditionalServiceEvent> findEvents(Date dateTime) {
 		tempEvents = null;
 		EList<AdditionalServiceComponent_AdditionalServiceEvent> tempEvents = getTempEvents();
 
@@ -306,7 +306,7 @@ public class AdditionalServiceComponent_AdditionalServiceImpl extends MinimalEOb
 		}
 		if (tempEvents != null) {
 			//TODO Change this to return tempEvents
-			return null;
+			return tempEvents;
 		}
 		System.out.println("findEvents(): Events not found (" + dateTime + ")");
 		return null;

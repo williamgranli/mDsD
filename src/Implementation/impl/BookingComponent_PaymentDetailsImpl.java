@@ -26,6 +26,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link Implementation.impl.BookingComponent_PaymentDetailsImpl#getCcv <em>Ccv</em>}</li>
  *   <li>{@link Implementation.impl.BookingComponent_PaymentDetailsImpl#getExpiryMonth <em>Expiry Month</em>}</li>
  *   <li>{@link Implementation.impl.BookingComponent_PaymentDetailsImpl#getExpiryYear <em>Expiry Year</em>}</li>
+ *   <li>{@link Implementation.impl.BookingComponent_PaymentDetailsImpl#getSsn <em>Ssn</em>}</li>
  * </ul>
  * </p>
  *
@@ -171,6 +172,26 @@ public class BookingComponent_PaymentDetailsImpl extends MinimalEObjectImpl.Cont
 	 * @ordered
 	 */
 	protected String expiryYear = EXPIRY_YEAR_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getSsn() <em>Ssn</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSsn()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String SSN_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getSsn() <em>Ssn</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSsn()
+	 * @generated
+	 * @ordered
+	 */
+	protected String ssn = SSN_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -343,6 +364,27 @@ public class BookingComponent_PaymentDetailsImpl extends MinimalEObjectImpl.Cont
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getSsn() {
+		return ssn;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSsn(String newSsn) {
+		String oldSsn = ssn;
+		ssn = newSsn;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ImplementationPackage.BOOKING_COMPONENT_PAYMENT_DETAILS__SSN, oldSsn, ssn));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -360,6 +402,8 @@ public class BookingComponent_PaymentDetailsImpl extends MinimalEObjectImpl.Cont
 				return getExpiryMonth();
 			case ImplementationPackage.BOOKING_COMPONENT_PAYMENT_DETAILS__EXPIRY_YEAR:
 				return getExpiryYear();
+			case ImplementationPackage.BOOKING_COMPONENT_PAYMENT_DETAILS__SSN:
+				return getSsn();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -392,6 +436,9 @@ public class BookingComponent_PaymentDetailsImpl extends MinimalEObjectImpl.Cont
 				return;
 			case ImplementationPackage.BOOKING_COMPONENT_PAYMENT_DETAILS__EXPIRY_YEAR:
 				setExpiryYear((String)newValue);
+				return;
+			case ImplementationPackage.BOOKING_COMPONENT_PAYMENT_DETAILS__SSN:
+				setSsn((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -426,6 +473,9 @@ public class BookingComponent_PaymentDetailsImpl extends MinimalEObjectImpl.Cont
 			case ImplementationPackage.BOOKING_COMPONENT_PAYMENT_DETAILS__EXPIRY_YEAR:
 				setExpiryYear(EXPIRY_YEAR_EDEFAULT);
 				return;
+			case ImplementationPackage.BOOKING_COMPONENT_PAYMENT_DETAILS__SSN:
+				setSsn(SSN_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -452,6 +502,8 @@ public class BookingComponent_PaymentDetailsImpl extends MinimalEObjectImpl.Cont
 				return EXPIRY_MONTH_EDEFAULT == null ? expiryMonth != null : !EXPIRY_MONTH_EDEFAULT.equals(expiryMonth);
 			case ImplementationPackage.BOOKING_COMPONENT_PAYMENT_DETAILS__EXPIRY_YEAR:
 				return EXPIRY_YEAR_EDEFAULT == null ? expiryYear != null : !EXPIRY_YEAR_EDEFAULT.equals(expiryYear);
+			case ImplementationPackage.BOOKING_COMPONENT_PAYMENT_DETAILS__SSN:
+				return SSN_EDEFAULT == null ? ssn != null : !SSN_EDEFAULT.equals(ssn);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -480,6 +532,8 @@ public class BookingComponent_PaymentDetailsImpl extends MinimalEObjectImpl.Cont
 		result.append(expiryMonth);
 		result.append(", expiryYear: ");
 		result.append(expiryYear);
+		result.append(", ssn: ");
+		result.append(ssn);
 		result.append(')');
 		return result.toString();
 	}

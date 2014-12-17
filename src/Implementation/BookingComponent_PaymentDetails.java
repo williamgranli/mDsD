@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link Implementation.BookingComponent_PaymentDetails#getCcv <em>Ccv</em>}</li>
  *   <li>{@link Implementation.BookingComponent_PaymentDetails#getExpiryMonth <em>Expiry Month</em>}</li>
  *   <li>{@link Implementation.BookingComponent_PaymentDetails#getExpiryYear <em>Expiry Year</em>}</li>
+ *   <li>{@link Implementation.BookingComponent_PaymentDetails#getSsn <em>Ssn</em>}</li>
  * </ul>
  * </p>
  *
@@ -208,5 +209,31 @@ public interface BookingComponent_PaymentDetails extends EObject {
 	 * @generated
 	 */
 	void setExpiryYear(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Ssn</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Ssn</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Ssn</em>' attribute.
+	 * @see #setSsn(String)
+	 * @see Implementation.ImplementationPackage#getBookingComponent_PaymentDetails_Ssn()
+	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
+	 * @generated
+	 */
+	String getSsn();
+
+	/**
+	 * Sets the value of the '{@link Implementation.BookingComponent_PaymentDetails#getSsn <em>Ssn</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Ssn</em>' attribute.
+	 * @see #getSsn()
+	 * @generated
+	 */
+	void setSsn(String value);
 
 } // BookingComponent_PaymentDetails
