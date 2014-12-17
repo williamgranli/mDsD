@@ -286,7 +286,7 @@ public class AdditionalServiceComponent_AdditionalServiceImpl extends MinimalEOb
 				return e;
 			}
 		}
-		System.out.println("findEvent(): Event not found (" + dateTime + " at " + location + ")");
+		//System.out.println("findEvent(): Event not found (" + dateTime + " at " + location + ")");
 		return null;
 	}
 
@@ -308,7 +308,7 @@ public class AdditionalServiceComponent_AdditionalServiceImpl extends MinimalEOb
 			//TODO Change this to return tempEvents
 			return tempEvents;
 		}
-		System.out.println("findEvents(): Events not found (" + dateTime + ")");
+		//System.out.println("findEvents(): Events not found (" + dateTime + ")");
 		return null;
 	}
 
@@ -321,7 +321,7 @@ public class AdditionalServiceComponent_AdditionalServiceImpl extends MinimalEOb
 		AdditionalServiceComponent_AdditionalServiceEvent event = findEvent(dateTime,location);
 		if (event == null) {
 			this.getAdditionalServiceEvent().add(new AdditionalServiceComponent_AdditionalServiceEventImpl(dateTime,location, maxAttendants, currentAttendants));
-			System.out.println("Event created!");
+			//System.out.println("Event created!");
 			return true;
 		}
 		return false;
@@ -340,7 +340,7 @@ public class AdditionalServiceComponent_AdditionalServiceImpl extends MinimalEOb
 				event.setCurrentAttendants(currentAttendants);
 				return true;
 			} else {
-				System.out.println("Max number of attendants is " + maxAttendants + ". Cannot change to " + currentAttendants + "!");
+				//System.out.println("Max number of attendants is " + maxAttendants + ". Cannot change to " + currentAttendants + "!");
 			}
 		}
 		return false;
@@ -355,7 +355,7 @@ public class AdditionalServiceComponent_AdditionalServiceImpl extends MinimalEOb
 		AdditionalServiceComponent_AdditionalServiceEvent event = findEvent(dateTime,location);
 		if (event != null) {
 			this.getAdditionalServiceEvent().remove(event);
-			System.out.println("Event removed!");
+			//System.out.println("Event removed!");
 			return true;
 		}
 		return false;
@@ -371,7 +371,7 @@ public class AdditionalServiceComponent_AdditionalServiceImpl extends MinimalEOb
 		if (event != null) {
 			for (AdditionalServiceComponent_AdditionalServiceEvent e : event) {
 				this.getAdditionalServiceEvent().remove(e);
-				System.out.println("Event removed!");
+				//System.out.println("Event removed!");
 			}
 			return true;
 		}

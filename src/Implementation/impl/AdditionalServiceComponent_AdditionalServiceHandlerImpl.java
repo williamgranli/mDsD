@@ -10,20 +10,16 @@ import Implementation.ImplementationPackage;
 import Implementation.StaffComponent_IAuthentication;
 
 import java.lang.reflect.InvocationTargetException;
-
 import java.util.Collection;
 import java.util.Date;
 
 import org.eclipse.emf.common.notify.Notification;
-
+import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
@@ -137,7 +133,7 @@ public class AdditionalServiceComponent_AdditionalServiceHandlerImpl extends Min
 	 * @generated NOT
 	 */
 	public EList<String> getServices() {
-		EList<String> result = new EObjectResolvingEList<String>(AdditionalServiceComponent_AdditionalService.class, this, ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER__ADDITIONAL_SERVICE);
+		EList<String> result = new BasicEList<String>();
 		for (AdditionalServiceComponent_AdditionalService s : additionalService) {
 			result.add(s.getName());
 		}
@@ -154,7 +150,7 @@ public class AdditionalServiceComponent_AdditionalServiceHandlerImpl extends Min
 	 */
 	public EList<String> getEvents(String name) {
 		AdditionalServiceComponent_AdditionalService service = findService(name);
-		EList<String> result =  new EObjectResolvingEList<String>(AdditionalServiceComponent_AdditionalService.class, this, ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER__ADDITIONAL_SERVICE);
+		EList<String> result = new BasicEList<String>();
 				
 		if (service != null) {
 			for (int i = 0; i < service.getAdditionalServiceEvent().size(); i++) {
@@ -207,10 +203,10 @@ public class AdditionalServiceComponent_AdditionalServiceHandlerImpl extends Min
 		AdditionalServiceComponent_AdditionalService service = findService(name);
 		if (service == null) {
 			additionalService.add(new AdditionalServiceComponent_AdditionalServiceImpl(name, usable, price, description));
-			System.out.println("A service with the name \"" + name + "\" was created!");
+			//System.out.println("A service with the name \"" + name + "\" was created!");
 			return true;
 		} else {
-			System.out.println("ERROR: A service with the name \"" + name + "\" already exist...");
+			//System.out.println("ERROR: A service with the name \"" + name + "\" already exist...");
 		}
 		return false;
 	}
@@ -238,11 +234,11 @@ public class AdditionalServiceComponent_AdditionalServiceHandlerImpl extends Min
 	public boolean removeAdditionalService(String name) {
 		AdditionalServiceComponent_AdditionalService service = findService(name);
 		if (service == null) {
-			System.out.println("A service with the name \"" + name + "\" does not exist...");
+			//System.out.println("A service with the name \"" + name + "\" does not exist...");
 			return false;
 		} else {
 			additionalService.remove(service);
-			System.out.println("A service with the name \"" + name + "\" was removed!");
+			//System.out.println("A service with the name \"" + name + "\" was removed!");
 		}
 		return true;
 	}
@@ -255,7 +251,7 @@ public class AdditionalServiceComponent_AdditionalServiceHandlerImpl extends Min
 	public boolean createEvent(String name, Date dateTime, String location, int maxAttendants, int currentAttendants) {
 		AdditionalServiceComponent_AdditionalService service = findService(name);
 		if (service == null) {
-			System.out.println("A service with name " + name + " does not exist. Creating...");
+			//System.out.println("A service with name " + name + " does not exist. Creating...");
 			if (createAdditionalService(name,true,0,"description")) {
 				service = findService(name);
 			} else {
@@ -324,7 +320,7 @@ public class AdditionalServiceComponent_AdditionalServiceHandlerImpl extends Min
 				return s;
 			}
 		}
-		System.out.println("findService(): Service not found (" + name + ")");
+		//System.out.println("findService(): Service not found (" + name + ")");
 		return null;
 	}
 
