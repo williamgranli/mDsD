@@ -12,7 +12,6 @@ import Implementation.RoomComponent_RoomHandler;
 import Implementation.StaffComponent_IAuthentication;
 
 import java.lang.reflect.InvocationTargetException;
-import java.util.ArrayList;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -79,8 +78,8 @@ public class RoomComponent_RoomHandlerImpl extends MinimalEObjectImpl.Container 
 		super();
 
 		// Initialize rooms collection
-		bedRooms = (EList<RoomComponent_Bedroom>) new ArrayList<RoomComponent_Bedroom>();
-		conferenceRooms = (EList<RoomComponent_ConferenceRoom>) new ArrayList<RoomComponent_ConferenceRoom>();
+		bedRooms = getBedRooms();
+		conferenceRooms = getConferenceRooms();
 	
 	
 	}
@@ -184,7 +183,7 @@ public class RoomComponent_RoomHandlerImpl extends MinimalEObjectImpl.Container 
 	 */
 	public EList<String> searchRoom(String roomTypeName) {
 
-		EList<String> foundRooms = (EList<String>) new ArrayList<String>();
+		EList<String> foundRooms = new EObjectResolvingEList<String>(RoomComponent_Bedroom.class, this, ImplementationPackage.ROOM_COMPONENT_ROOM_HANDLER__BED_ROOMS);
 
 		// Add all conference rooms if roomTypeName == conference
 		if (roomTypeName.equals("conference")) {
@@ -221,7 +220,7 @@ public class RoomComponent_RoomHandlerImpl extends MinimalEObjectImpl.Container 
 	 * @generated NOT
 	 */
 	public EList<String> getRoomTypes() {
-		EList<String> foundRoomTypes = (EList<String>) new ArrayList<String>();
+		EList<String> foundRoomTypes = new EObjectResolvingEList<String>(RoomComponent_Bedroom.class, this, ImplementationPackage.ROOM_COMPONENT_ROOM_HANDLER__BED_ROOMS);
 		boolean typeInList = false;
 
 		for (RoomComponent_Bedroom r : bedRooms) {
@@ -249,7 +248,7 @@ public class RoomComponent_RoomHandlerImpl extends MinimalEObjectImpl.Container 
 	 * @generated NOT
 	 */
 	public EList<Integer> getAllRoomNumbers() {
-		EList<Integer> allRoomNumbers = (EList<Integer>) new ArrayList<Integer>();
+		EList<Integer> allRoomNumbers = new EObjectResolvingEList<Integer>(RoomComponent_Bedroom.class, this, ImplementationPackage.ROOM_COMPONENT_ROOM_HANDLER__BED_ROOMS);
 
 		for (RoomComponent_Bedroom r : bedRooms) {
 			allRoomNumbers.add(r.getRoomNumber());
