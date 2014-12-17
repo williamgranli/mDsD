@@ -4,42 +4,49 @@ package Implementation.impl;
 
 import Implementation.AdditionalServiceComponent_IAdditionalServiceInformation;
 import Implementation.BookingComponent_Booking;
-import Implementation.BookingComponent_BookingManager;
+import Implementation.BookingComponent_BookingHandler;
 import Implementation.BookingComponent_IBookingDecision;
 import Implementation.IBookingAdministration;
 import Implementation.ImplementationPackage;
 import Implementation.PaymentComponent_IPayment;
 import Implementation.RoomComponent_IRoomInformation;
 import Implementation.StaffComponent_IAuthentication;
+
 import java.lang.reflect.InvocationTargetException;
+
 import java.util.Collection;
 import java.util.Date;
+
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Booking Component Booking Manager</b></em>'.
+ * An implementation of the model object '<em><b>Booking Component Booking Handler</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link Implementation.impl.BookingComponent_BookingManagerImpl#getBookings <em>Bookings</em>}</li>
- *   <li>{@link Implementation.impl.BookingComponent_BookingManagerImpl#getAuthentication <em>Authentication</em>}</li>
- *   <li>{@link Implementation.impl.BookingComponent_BookingManagerImpl#getIRoomInformation <em>IRoom Information</em>}</li>
- *   <li>{@link Implementation.impl.BookingComponent_BookingManagerImpl#getIAdditionalServiceInformation <em>IAdditional Service Information</em>}</li>
- *   <li>{@link Implementation.impl.BookingComponent_BookingManagerImpl#getIPayment <em>IPayment</em>}</li>
+ *   <li>{@link Implementation.impl.BookingComponent_BookingHandlerImpl#getBookings <em>Bookings</em>}</li>
+ *   <li>{@link Implementation.impl.BookingComponent_BookingHandlerImpl#getAuthentication <em>Authentication</em>}</li>
+ *   <li>{@link Implementation.impl.BookingComponent_BookingHandlerImpl#getIRoomInformation <em>IRoom Information</em>}</li>
+ *   <li>{@link Implementation.impl.BookingComponent_BookingHandlerImpl#getIAdditionalServiceInformation <em>IAdditional Service Information</em>}</li>
+ *   <li>{@link Implementation.impl.BookingComponent_BookingHandlerImpl#getIPayment <em>IPayment</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Container implements BookingComponent_BookingManager {
+public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Container implements BookingComponent_BookingHandler {
 	/**
 	 * The cached value of the '{@link #getBookings() <em>Bookings</em>}' reference list.
 	 * <!-- begin-user-doc -->
@@ -89,16 +96,13 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 	 * @ordered
 	 */
 	protected PaymentComponent_IPayment iPayment;
-	
-
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated NOT
-	 */
-	@SuppressWarnings("unchecked")
-	protected BookingComponent_BookingManagerImpl() {
+	 */	
+	protected BookingComponent_BookingHandlerImpl() {
 		super();
 		bookings = getBookings();
 	}
@@ -110,7 +114,7 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ImplementationPackage.Literals.BOOKING_COMPONENT_BOOKING_MANAGER;
+		return ImplementationPackage.Literals.BOOKING_COMPONENT_BOOKING_HANDLER;
 	}
 
 	/**
@@ -120,7 +124,7 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 	 */
 	public EList<BookingComponent_Booking> getBookings() {
 		if (bookings == null) {
-			bookings = new EObjectResolvingEList<BookingComponent_Booking>(BookingComponent_Booking.class, this, ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__BOOKINGS);
+			bookings = new EObjectResolvingEList<BookingComponent_Booking>(BookingComponent_Booking.class, this, ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER__BOOKINGS);
 		}
 		return bookings;
 	}
@@ -136,7 +140,7 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 			authentication = (StaffComponent_IAuthentication)eResolveProxy(oldAuthentication);
 			if (authentication != oldAuthentication) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__AUTHENTICATION, oldAuthentication, authentication));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER__AUTHENTICATION, oldAuthentication, authentication));
 			}
 		}
 		return authentication;
@@ -160,7 +164,7 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 		StaffComponent_IAuthentication oldAuthentication = authentication;
 		authentication = newAuthentication;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__AUTHENTICATION, oldAuthentication, authentication));
+			eNotify(new ENotificationImpl(this, Notification.SET, ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER__AUTHENTICATION, oldAuthentication, authentication));
 	}
 
 	/**
@@ -174,7 +178,7 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 			iRoomInformation = (RoomComponent_IRoomInformation)eResolveProxy(oldIRoomInformation);
 			if (iRoomInformation != oldIRoomInformation) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__IROOM_INFORMATION, oldIRoomInformation, iRoomInformation));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER__IROOM_INFORMATION, oldIRoomInformation, iRoomInformation));
 			}
 		}
 		return iRoomInformation;
@@ -198,86 +202,7 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 		RoomComponent_IRoomInformation oldIRoomInformation = iRoomInformation;
 		iRoomInformation = newIRoomInformation;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__IROOM_INFORMATION, oldIRoomInformation, iRoomInformation));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public PaymentComponent_IPayment getIPayment() {
-		if (iPayment != null && iPayment.eIsProxy()) {
-			InternalEObject oldIPayment = (InternalEObject)iPayment;
-			iPayment = (PaymentComponent_IPayment)eResolveProxy(oldIPayment);
-			if (iPayment != oldIPayment) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__IPAYMENT, oldIPayment, iPayment));
-			}
-		}
-		return iPayment;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public PaymentComponent_IPayment basicGetIPayment() {
-		return iPayment;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setIPayment(PaymentComponent_IPayment newIPayment) {
-		PaymentComponent_IPayment oldIPayment = iPayment;
-		iPayment = newIPayment;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__IPAYMENT, oldIPayment, iPayment));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public String getGuestsInBooking(String bookingReference) {
-		String foundGuests = "";
-		
-		
-		for(BookingComponent_Booking booking : bookings){
-			if (bookingReference.equals(booking.getReferenceNumber())) {
-				foundGuests = booking.getGuestsInBooking();
-
-			}
-		}
-
-		return foundGuests;
-		
-		
-		
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public String getRoomTypesInBooking(String bookingReference) {
-		String foundRoomTypes = null;
-		
-		
-		for(BookingComponent_Booking booking : bookings){
-			if (bookingReference.equals(booking.getReferenceNumber())) {
-				foundRoomTypes = booking.getRoomTypesInBooking();
-
-			}
-		}
-
-		return foundRoomTypes;
+			eNotify(new ENotificationImpl(this, Notification.SET, ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER__IROOM_INFORMATION, oldIRoomInformation, iRoomInformation));
 	}
 
 	/**
@@ -291,7 +216,7 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 			iAdditionalServiceInformation = (AdditionalServiceComponent_IAdditionalServiceInformation)eResolveProxy(oldIAdditionalServiceInformation);
 			if (iAdditionalServiceInformation != oldIAdditionalServiceInformation) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__IADDITIONAL_SERVICE_INFORMATION, oldIAdditionalServiceInformation, iAdditionalServiceInformation));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER__IADDITIONAL_SERVICE_INFORMATION, oldIAdditionalServiceInformation, iAdditionalServiceInformation));
 			}
 		}
 		return iAdditionalServiceInformation;
@@ -315,9 +240,177 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 		AdditionalServiceComponent_IAdditionalServiceInformation oldIAdditionalServiceInformation = iAdditionalServiceInformation;
 		iAdditionalServiceInformation = newIAdditionalServiceInformation;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__IADDITIONAL_SERVICE_INFORMATION, oldIAdditionalServiceInformation, iAdditionalServiceInformation));
+			eNotify(new ENotificationImpl(this, Notification.SET, ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER__IADDITIONAL_SERVICE_INFORMATION, oldIAdditionalServiceInformation, iAdditionalServiceInformation));
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PaymentComponent_IPayment getIPayment() {
+		if (iPayment != null && iPayment.eIsProxy()) {
+			InternalEObject oldIPayment = (InternalEObject)iPayment;
+			iPayment = (PaymentComponent_IPayment)eResolveProxy(oldIPayment);
+			if (iPayment != oldIPayment) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER__IPAYMENT, oldIPayment, iPayment));
+			}
+		}
+		return iPayment;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PaymentComponent_IPayment basicGetIPayment() {
+		return iPayment;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setIPayment(PaymentComponent_IPayment newIPayment) {
+		PaymentComponent_IPayment oldIPayment = iPayment;
+		iPayment = newIPayment;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER__IPAYMENT, oldIPayment, iPayment));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public String getGuestsInBooking(String bookingReference) {
+		String foundGuests = "";
+		
+		
+		for(BookingComponent_Booking booking : bookings){
+			if (bookingReference.equals(booking.getReferenceNumber())) {
+				foundGuests = booking.getGuestsInBooking();
+
+			}
+		}
+
+		return foundGuests;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public String getRoomTypesInBooking(String bookingReference) {
+	String foundRoomTypes = null;
+		
+		
+		for(BookingComponent_Booking booking : bookings){
+			if (bookingReference.equals(booking.getReferenceNumber())) {
+				foundRoomTypes = booking.getRoomTypesInBooking();
+
+			}
+		}
+
+		return foundRoomTypes;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public EList<String> searchForBooking(String bookingReference) {
+		Date todaysDate = new Date();
+
+		EList<String> bookingInfo = new EObjectResolvingEList<String>(BookingComponent_Booking.class, this, ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER__BOOKINGS);
+
+		for(BookingComponent_Booking booking : bookings){
+
+			// Booking is found for the reference number
+			if(booking.getReferenceNumber().equals(bookingReference)){
+
+				// Check that booking date is not in the future
+				if((booking.getArrivalDate()).compareTo(todaysDate) <= 0){
+
+					// Check if booking check out that has not passed
+					if(booking.getDepartureDate().compareTo(todaysDate) <= 0){
+						System.out.println("Booking departure date is already passed\n"
+							+ "Departure date was on: " + (booking.getDepartureDate()).toString());
+						return null;
+					}
+
+				}
+
+				// Booking date is in the future
+				else{
+					System.out.println("Booking arrival date will be on: " + (booking.getArrivalDate()).toString());
+					return null;
+				}
+
+				bookingInfo.add(booking.getRoomTypesInBooking());
+				bookingInfo.add(booking.getGuestsInBooking());
+
+				return bookingInfo;
+			}
+		}
+
+		// return null if bookingReference doesn't match any booking
+		return null;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public boolean isPaidFor(String bookingReference) {
+		for (BookingComponent_Booking booking : bookings) {
+			if (booking.getReferenceNumber().equals(bookingReference)) {
+				return booking.isPaid();
+			}
+		}
+		//should not happen
+		return false;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public boolean makePayment(String bookingReference) {
+		boolean successful = false;
+		
+		for (BookingComponent_Booking booking : bookings) {
+			if (booking.getReferenceNumber().equals(bookingReference)) {
+				String paymentString = booking.getPaymentDetails().toString();
+				String [] paymentArray = paymentString.split(",");
+				successful = iPayment.makePayment(paymentArray[0], paymentArray[1], Integer.parseInt(paymentArray[2]), 
+						Integer.parseInt(paymentArray[3]), paymentArray[4], paymentArray[5], booking.getCurrentCost());
+				if (successful == true) {
+					booking.setIsPaid(true);
+				}
+			}
+		}
+		
+		return successful;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getDSSInfo() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -460,101 +553,6 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public EList<String> searchForBooking(String bookingReference) {
-
-		Date todaysDate = new Date();
-
-		EList<String> bookingInfo = new EObjectResolvingEList<String>(BookingComponent_Booking.class, this, ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__BOOKINGS);
-
-		for(BookingComponent_Booking booking : bookings){
-
-			// Booking is found for the reference number
-			if(booking.getReferenceNumber().equals(bookingReference)){
-
-				// Check that booking date is not in the future
-				if((booking.getArrivalDate()).compareTo(todaysDate) <= 0){
-
-					// Check if booking check out that has not passed
-					if(booking.getDepartureDate().compareTo(todaysDate) <= 0){
-						System.out.println("Booking departure date is already passed\n"
-							+ "Departure date was on: " + (booking.getDepartureDate()).toString());
-						return null;
-					}
-
-				}
-
-				// Booking date is in the future
-				else{
-					System.out.println("Booking arrival date will be on: " + (booking.getArrivalDate()).toString());
-					return null;
-				}
-
-				bookingInfo.add(booking.getRoomTypesInBooking());
-				bookingInfo.add(booking.getGuestsInBooking());
-
-				return bookingInfo;
-			}
-		}
-
-		// return null if bookingReference doesn't match any booking
-		return null;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public boolean isPaidFor(String bookingReference) {
-		for (BookingComponent_Booking booking : bookings) {
-			if (booking.getReferenceNumber().equals(bookingReference)) {
-				return booking.isPaid();
-			}
-		}
-		//should not happen
-		return false;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public boolean makePayment(String bookingReference) {
-		boolean successful = false;
-		
-		for (BookingComponent_Booking booking : bookings) {
-			if (booking.getReferenceNumber().equals(bookingReference)) {
-				String paymentString = booking.getPaymentDetails().toString();
-				String [] paymentArray = paymentString.split(",");
-				successful = iPayment.makePayment(paymentArray[0], paymentArray[1], Integer.parseInt(paymentArray[2]), 
-						Integer.parseInt(paymentArray[3]), paymentArray[4], paymentArray[5], booking.getCurrentCost());
-				if (successful == true) {
-					booking.setIsPaid(true);
-				}
-			}
-		}
-		
-		return successful;
-		
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getDSSInfo() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
 	public void addGuestToBooking(String bookingReference, String firstName, String lastName, String address) {
 		BookingComponent_Booking bookingToChange = findBooking(bookingReference);
 		if(bookingToChange.getReferenceNumber().equals("NULL"))
@@ -586,8 +584,7 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public BookingComponent_Booking findBooking(String referenceNumber) 	
-	{
+	public BookingComponent_Booking findBooking(String referenceNumber) {
 		BookingComponent_Booking targetBooking = new BookingComponent_BookingImpl();
 		
 		for(BookingComponent_Booking x : bookings)
@@ -608,18 +605,18 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__BOOKINGS:
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER__BOOKINGS:
 				return getBookings();
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__AUTHENTICATION:
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER__AUTHENTICATION:
 				if (resolve) return getAuthentication();
 				return basicGetAuthentication();
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__IROOM_INFORMATION:
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER__IROOM_INFORMATION:
 				if (resolve) return getIRoomInformation();
 				return basicGetIRoomInformation();
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__IADDITIONAL_SERVICE_INFORMATION:
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER__IADDITIONAL_SERVICE_INFORMATION:
 				if (resolve) return getIAdditionalServiceInformation();
 				return basicGetIAdditionalServiceInformation();
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__IPAYMENT:
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER__IPAYMENT:
 				if (resolve) return getIPayment();
 				return basicGetIPayment();
 		}
@@ -635,20 +632,20 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__BOOKINGS:
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER__BOOKINGS:
 				getBookings().clear();
 				getBookings().addAll((Collection<? extends BookingComponent_Booking>)newValue);
 				return;
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__AUTHENTICATION:
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER__AUTHENTICATION:
 				setAuthentication((StaffComponent_IAuthentication)newValue);
 				return;
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__IROOM_INFORMATION:
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER__IROOM_INFORMATION:
 				setIRoomInformation((RoomComponent_IRoomInformation)newValue);
 				return;
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__IADDITIONAL_SERVICE_INFORMATION:
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER__IADDITIONAL_SERVICE_INFORMATION:
 				setIAdditionalServiceInformation((AdditionalServiceComponent_IAdditionalServiceInformation)newValue);
 				return;
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__IPAYMENT:
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER__IPAYMENT:
 				setIPayment((PaymentComponent_IPayment)newValue);
 				return;
 		}
@@ -663,19 +660,19 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__BOOKINGS:
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER__BOOKINGS:
 				getBookings().clear();
 				return;
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__AUTHENTICATION:
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER__AUTHENTICATION:
 				setAuthentication((StaffComponent_IAuthentication)null);
 				return;
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__IROOM_INFORMATION:
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER__IROOM_INFORMATION:
 				setIRoomInformation((RoomComponent_IRoomInformation)null);
 				return;
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__IADDITIONAL_SERVICE_INFORMATION:
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER__IADDITIONAL_SERVICE_INFORMATION:
 				setIAdditionalServiceInformation((AdditionalServiceComponent_IAdditionalServiceInformation)null);
 				return;
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__IPAYMENT:
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER__IPAYMENT:
 				setIPayment((PaymentComponent_IPayment)null);
 				return;
 		}
@@ -690,15 +687,15 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__BOOKINGS:
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER__BOOKINGS:
 				return bookings != null && !bookings.isEmpty();
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__AUTHENTICATION:
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER__AUTHENTICATION:
 				return authentication != null;
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__IROOM_INFORMATION:
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER__IROOM_INFORMATION:
 				return iRoomInformation != null;
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__IADDITIONAL_SERVICE_INFORMATION:
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER__IADDITIONAL_SERVICE_INFORMATION:
 				return iAdditionalServiceInformation != null;
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__IPAYMENT:
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER__IPAYMENT:
 				return iPayment != null;
 		}
 		return super.eIsSet(featureID);
@@ -713,23 +710,23 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
 		if (baseClass == BookingComponent_IBookingDecision.class) {
 			switch (baseOperationID) {
-				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_DECISION___GET_DSS_INFO: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___GET_DSS_INFO;
+				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_DECISION___GET_DSS_INFO: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___GET_DSS_INFO;
 				default: return -1;
 			}
 		}
 		if (baseClass == IBookingAdministration.class) {
 			switch (baseOperationID) {
-				case ImplementationPackage.IBOOKING_ADMINISTRATION___MAKE_BOOKING__STRING_DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_STRING_STRING: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___MAKE_BOOKING__STRING_DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_STRING_STRING;
-				case ImplementationPackage.IBOOKING_ADMINISTRATION___ADD_ROOM__STRING_STRING_INT: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___ADD_ROOM__STRING_STRING_INT;
-				case ImplementationPackage.IBOOKING_ADMINISTRATION___REQUEST_QUOTE__STRING_INT_DATE_DATE: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___REQUEST_QUOTE__STRING_INT_DATE_DATE;
-				case ImplementationPackage.IBOOKING_ADMINISTRATION___EDIT_BOOKING__STRING_DATE_DATE: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___EDIT_BOOKING__STRING_DATE_DATE;
-				case ImplementationPackage.IBOOKING_ADMINISTRATION___CANCEL_BOOKING__STRING: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___CANCEL_BOOKING__STRING;
-				case ImplementationPackage.IBOOKING_ADMINISTRATION___ADD_ADDITIONAL_SERVICE__STRING_STRING_INT: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___ADD_ADDITIONAL_SERVICE__STRING_STRING_INT;
-				case ImplementationPackage.IBOOKING_ADMINISTRATION___REMOVE_ROOM__STRING_STRING: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___REMOVE_ROOM__STRING_STRING;
-				case ImplementationPackage.IBOOKING_ADMINISTRATION___REMOVE_ADDITIONAL_SERVICE__STRING_STRING: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___REMOVE_ADDITIONAL_SERVICE__STRING_STRING;
-				case ImplementationPackage.IBOOKING_ADMINISTRATION___GENERATE_QUOTE__DATE_DATE_STRING: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___GENERATE_QUOTE__DATE_DATE_STRING;
-				case ImplementationPackage.IBOOKING_ADMINISTRATION___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING;
-				case ImplementationPackage.IBOOKING_ADMINISTRATION___REMOVE_GUEST__STRING_STRING_STRING_STRING: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___REMOVE_GUEST__STRING_STRING_STRING_STRING;
+				case ImplementationPackage.IBOOKING_ADMINISTRATION___MAKE_BOOKING__STRING_DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_STRING_STRING: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___MAKE_BOOKING__STRING_DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_STRING_STRING;
+				case ImplementationPackage.IBOOKING_ADMINISTRATION___ADD_ROOM__STRING_STRING_INT: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___ADD_ROOM__STRING_STRING_INT;
+				case ImplementationPackage.IBOOKING_ADMINISTRATION___REQUEST_QUOTE__STRING_INT_DATE_DATE: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___REQUEST_QUOTE__STRING_INT_DATE_DATE;
+				case ImplementationPackage.IBOOKING_ADMINISTRATION___EDIT_BOOKING__STRING_DATE_DATE: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___EDIT_BOOKING__STRING_DATE_DATE;
+				case ImplementationPackage.IBOOKING_ADMINISTRATION___CANCEL_BOOKING__STRING: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___CANCEL_BOOKING__STRING;
+				case ImplementationPackage.IBOOKING_ADMINISTRATION___ADD_ADDITIONAL_SERVICE__STRING_STRING_INT: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___ADD_ADDITIONAL_SERVICE__STRING_STRING_INT;
+				case ImplementationPackage.IBOOKING_ADMINISTRATION___REMOVE_ROOM__STRING_STRING: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___REMOVE_ROOM__STRING_STRING;
+				case ImplementationPackage.IBOOKING_ADMINISTRATION___REMOVE_ADDITIONAL_SERVICE__STRING_STRING: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___REMOVE_ADDITIONAL_SERVICE__STRING_STRING;
+				case ImplementationPackage.IBOOKING_ADMINISTRATION___GENERATE_QUOTE__DATE_DATE_STRING: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___GENERATE_QUOTE__DATE_DATE_STRING;
+				case ImplementationPackage.IBOOKING_ADMINISTRATION___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING;
+				case ImplementationPackage.IBOOKING_ADMINISTRATION___REMOVE_GUEST__STRING_STRING_STRING_STRING: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___REMOVE_GUEST__STRING_STRING_STRING_STRING;
 				default: return -1;
 			}
 		}
@@ -744,55 +741,55 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___GET_GUESTS_IN_BOOKING__STRING:
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___GET_GUESTS_IN_BOOKING__STRING:
 				return getGuestsInBooking((String)arguments.get(0));
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___GET_ROOM_TYPES_IN_BOOKING__STRING:
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___GET_ROOM_TYPES_IN_BOOKING__STRING:
 				return getRoomTypesInBooking((String)arguments.get(0));
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___SEARCH_FOR_BOOKING__STRING:
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___SEARCH_FOR_BOOKING__STRING:
 				return searchForBooking((String)arguments.get(0));
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___IS_PAID_FOR__STRING:
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___IS_PAID_FOR__STRING:
 				return isPaidFor((String)arguments.get(0));
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___MAKE_PAYMENT__STRING:
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___MAKE_PAYMENT__STRING:
 				return makePayment((String)arguments.get(0));
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___GET_DSS_INFO:
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___GET_DSS_INFO:
 				return getDSSInfo();
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___MAKE_BOOKING__STRING_DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_STRING_STRING:
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___MAKE_BOOKING__STRING_DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_STRING_STRING:
 				makeBooking((String)arguments.get(0), (Date)arguments.get(1), (Date)arguments.get(2), (String)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5), (String)arguments.get(6), (String)arguments.get(7), (String)arguments.get(8), (String)arguments.get(9), (String)arguments.get(10));
 				return null;
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___ADD_ROOM__STRING_STRING_INT:
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___ADD_ROOM__STRING_STRING_INT:
 				addRoom((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2));
 				return null;
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___REQUEST_QUOTE__STRING_INT_DATE_DATE:
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___REQUEST_QUOTE__STRING_INT_DATE_DATE:
 				requestQuote((String)arguments.get(0), (Integer)arguments.get(1), (Date)arguments.get(2), (Date)arguments.get(3));
 				return null;
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___EDIT_BOOKING__STRING_DATE_DATE:
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___EDIT_BOOKING__STRING_DATE_DATE:
 				editBooking((String)arguments.get(0), (Date)arguments.get(1), (Date)arguments.get(2));
 				return null;
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___CANCEL_BOOKING__STRING:
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___CANCEL_BOOKING__STRING:
 				cancelBooking((String)arguments.get(0));
 				return null;
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___ADD_ADDITIONAL_SERVICE__STRING_STRING_INT:
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___ADD_ADDITIONAL_SERVICE__STRING_STRING_INT:
 				addAdditionalService((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2));
 				return null;
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___REMOVE_ROOM__STRING_STRING:
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___REMOVE_ROOM__STRING_STRING:
 				removeRoom((String)arguments.get(0), (String)arguments.get(1));
 				return null;
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___REMOVE_ADDITIONAL_SERVICE__STRING_STRING:
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___REMOVE_ADDITIONAL_SERVICE__STRING_STRING:
 				removeAdditionalService((String)arguments.get(0), (String)arguments.get(1));
 				return null;
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___GENERATE_QUOTE__DATE_DATE_STRING:
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___GENERATE_QUOTE__DATE_DATE_STRING:
 				generateQuote((Date)arguments.get(0), (Date)arguments.get(1), (String)arguments.get(2));
 				return null;
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING:
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING:
 				addGuestToBooking((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3));
 				return null;
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___REMOVE_GUEST__STRING_STRING_STRING_STRING:
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___REMOVE_GUEST__STRING_STRING_STRING_STRING:
 				removeGuest((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3));
 				return null;
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___FIND_BOOKING__STRING:
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___FIND_BOOKING__STRING:
 				return findBooking((String)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
 
-} //BookingComponent_BookingManagerImpl
+} //BookingComponent_BookingHandlerImpl

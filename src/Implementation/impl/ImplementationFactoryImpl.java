@@ -77,7 +77,7 @@ public class ImplementationFactoryImpl extends EFactoryImpl implements Implement
 			case ImplementationPackage.BOOKING_COMPONENT_ADDITIONAL_SERVICE: return createBookingComponent_AdditionalService();
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_GUEST: return createBookingComponent_BookingGuest();
 			case ImplementationPackage.BOOKING_COMPONENT_ROOM_TYPE: return createBookingComponent_RoomType();
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER: return createBookingComponent_BookingManager();
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER: return createBookingComponent_BookingHandler();
 			case ImplementationPackage.STAFF_COMPONENT: return createStaffComponent();
 			case ImplementationPackage.STAFF_COMPONENT_ACCOUNT_MANAGER: return createStaffComponent_AccountManager();
 			case ImplementationPackage.STAFF_COMPONENT_EMPLOYEE: return createStaffComponent_Employee();
@@ -307,9 +307,9 @@ public class ImplementationFactoryImpl extends EFactoryImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public BookingComponent_BookingManager createBookingComponent_BookingManager() {
-		BookingComponent_BookingManagerImpl bookingComponent_BookingManager = new BookingComponent_BookingManagerImpl();
-		return bookingComponent_BookingManager;
+	public BookingComponent_BookingHandler createBookingComponent_BookingHandler() {
+		BookingComponent_BookingHandlerImpl bookingComponent_BookingHandler = new BookingComponent_BookingHandlerImpl();
+		return bookingComponent_BookingHandler;
 	}
 
 	/**

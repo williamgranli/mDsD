@@ -283,12 +283,12 @@ public class ImplementationSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER: {
-				BookingComponent_BookingManager bookingComponent_BookingManager = (BookingComponent_BookingManager)theEObject;
-				T result = caseBookingComponent_BookingManager(bookingComponent_BookingManager);
-				if (result == null) result = caseBookingComponent_IBookingInformation(bookingComponent_BookingManager);
-				if (result == null) result = caseBookingComponent_IBookingDecision(bookingComponent_BookingManager);
-				if (result == null) result = caseIBookingAdministration(bookingComponent_BookingManager);
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER: {
+				BookingComponent_BookingHandler bookingComponent_BookingHandler = (BookingComponent_BookingHandler)theEObject;
+				T result = caseBookingComponent_BookingHandler(bookingComponent_BookingHandler);
+				if (result == null) result = caseBookingComponent_IBookingInformation(bookingComponent_BookingHandler);
+				if (result == null) result = caseBookingComponent_IBookingDecision(bookingComponent_BookingHandler);
+				if (result == null) result = caseIBookingAdministration(bookingComponent_BookingHandler);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -901,17 +901,17 @@ public class ImplementationSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Booking Component Booking Manager</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Booking Component Booking Handler</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Booking Component Booking Manager</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Booking Component Booking Handler</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseBookingComponent_BookingManager(BookingComponent_BookingManager object) {
+	public T caseBookingComponent_BookingHandler(BookingComponent_BookingHandler object) {
 		return null;
 	}
 

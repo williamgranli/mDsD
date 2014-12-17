@@ -211,13 +211,13 @@ public interface ImplementationFactory extends EFactory {
 	BookingComponent_RoomType createBookingComponent_RoomType();
 
 	/**
-	 * Returns a new object of class '<em>Booking Component Booking Manager</em>'.
+	 * Returns a new object of class '<em>Booking Component Booking Handler</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Booking Component Booking Manager</em>'.
+	 * @return a new object of class '<em>Booking Component Booking Handler</em>'.
 	 * @generated
 	 */
-	BookingComponent_BookingManager createBookingComponent_BookingManager();
+	BookingComponent_BookingHandler createBookingComponent_BookingHandler();
 
 	/**
 	 * Returns a new object of class '<em>Staff Component</em>'.

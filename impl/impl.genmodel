@@ -456,19 +456,19 @@
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//BookingComponent_RoomType/roomType"/>
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//BookingComponent_RoomType/cost"/>
     </genClasses>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//BookingComponent_BookingManager">
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//BookingComponent_BookingHandler">
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EReference Implementation.ecore#//BookingComponent_BookingManager/bookings"/>
+          propertySortChoices="true" ecoreFeature="ecore:EReference Implementation.ecore#//BookingComponent_BookingHandler/bookings"/>
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EReference Implementation.ecore#//BookingComponent_BookingManager/authentication"/>
+          propertySortChoices="true" ecoreFeature="ecore:EReference Implementation.ecore#//BookingComponent_BookingHandler/authentication"/>
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EReference Implementation.ecore#//BookingComponent_BookingManager/iRoomInformation"/>
+          propertySortChoices="true" ecoreFeature="ecore:EReference Implementation.ecore#//BookingComponent_BookingHandler/iRoomInformation"/>
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EReference Implementation.ecore#//BookingComponent_BookingManager/iAdditionalServiceInformation"/>
+          propertySortChoices="true" ecoreFeature="ecore:EReference Implementation.ecore#//BookingComponent_BookingHandler/iAdditionalServiceInformation"/>
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EReference Implementation.ecore#//BookingComponent_BookingManager/iPayment"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//BookingComponent_BookingManager/findBooking">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_BookingManager/findBooking/referenceNumber"/>
+          propertySortChoices="true" ecoreFeature="ecore:EReference Implementation.ecore#//BookingComponent_BookingHandler/iPayment"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//BookingComponent_BookingHandler/findBooking">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_BookingHandler/findBooking/referenceNumber"/>
       </genOperations>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Implementation.ecore#//IBookingAdministration">

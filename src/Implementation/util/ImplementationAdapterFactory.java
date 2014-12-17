@@ -208,8 +208,8 @@ public class ImplementationAdapterFactory extends AdapterFactoryImpl {
 				return createBookingComponent_RoomTypeAdapter();
 			}
 			@Override
-			public Adapter caseBookingComponent_BookingManager(BookingComponent_BookingManager object) {
-				return createBookingComponent_BookingManagerAdapter();
+			public Adapter caseBookingComponent_BookingHandler(BookingComponent_BookingHandler object) {
+				return createBookingComponent_BookingHandlerAdapter();
 			}
 			@Override
 			public Adapter caseIBookingAdministration(IBookingAdministration object) {
@@ -770,16 +770,16 @@ public class ImplementationAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link Implementation.BookingComponent_BookingManager <em>Booking Component Booking Manager</em>}'.
+	 * Creates a new adapter for an object of class '{@link Implementation.BookingComponent_BookingHandler <em>Booking Component Booking Handler</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see Implementation.BookingComponent_BookingManager
+	 * @see Implementation.BookingComponent_BookingHandler
 	 * @generated
 	 */
-	public Adapter createBookingComponent_BookingManagerAdapter() {
+	public Adapter createBookingComponent_BookingHandlerAdapter() {
 		return null;
 	}
 
