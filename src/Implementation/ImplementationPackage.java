@@ -3967,13 +3967,40 @@ public interface ImplementationPackage extends EPackage {
 	int ROOM_COMPONENT_ROOM_HANDLER___EDIT_CONFERENCE_ROOM__INT_INT_BOOLEAN_INT_STRING_STRING_INT_BOOLEAN_BOOLEAN = ROOM_COMPONENT_IROOM_DECISION_OPERATION_COUNT + 10;
 
 	/**
+	 * The operation id for the '<em>Find Bookings By Date And Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_COMPONENT_ROOM_HANDLER___FIND_BOOKINGS_BY_DATE_AND_TYPE__DATE_DATE_STRING = ROOM_COMPONENT_IROOM_DECISION_OPERATION_COUNT + 11;
+
+	/**
+	 * The operation id for the '<em>Find Bookings By Date</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_COMPONENT_ROOM_HANDLER___FIND_BOOKINGS_BY_DATE__DATE_DATE = ROOM_COMPONENT_IROOM_DECISION_OPERATION_COUNT + 12;
+
+	/**
+	 * The operation id for the '<em>Booking Available</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_COMPONENT_ROOM_HANDLER___BOOKING_AVAILABLE__DATE_DATE_BOOLEAN = ROOM_COMPONENT_IROOM_DECISION_OPERATION_COUNT + 13;
+
+	/**
 	 * The number of operations of the '<em>Room Component Room Handler</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_COMPONENT_ROOM_HANDLER_OPERATION_COUNT = ROOM_COMPONENT_IROOM_DECISION_OPERATION_COUNT + 11;
+	int ROOM_COMPONENT_ROOM_HANDLER_OPERATION_COUNT = ROOM_COMPONENT_IROOM_DECISION_OPERATION_COUNT + 14;
 
 
 	/**
@@ -6690,6 +6717,36 @@ public interface ImplementationPackage extends EPackage {
 	EReference getRoomComponent_RoomHandler_ConferenceRooms();
 
 	/**
+	 * Returns the meta object for the '{@link Implementation.RoomComponent_RoomHandler#findBookingsByDateAndType(java.util.Date, java.util.Date, java.lang.String) <em>Find Bookings By Date And Type</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Find Bookings By Date And Type</em>' operation.
+	 * @see Implementation.RoomComponent_RoomHandler#findBookingsByDateAndType(java.util.Date, java.util.Date, java.lang.String)
+	 * @generated
+	 */
+	EOperation getRoomComponent_RoomHandler__FindBookingsByDateAndType__Date_Date_String();
+
+	/**
+	 * Returns the meta object for the '{@link Implementation.RoomComponent_RoomHandler#findBookingsByDate(java.util.Date, java.util.Date) <em>Find Bookings By Date</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Find Bookings By Date</em>' operation.
+	 * @see Implementation.RoomComponent_RoomHandler#findBookingsByDate(java.util.Date, java.util.Date)
+	 * @generated
+	 */
+	EOperation getRoomComponent_RoomHandler__FindBookingsByDate__Date_Date();
+
+	/**
+	 * Returns the meta object for the '{@link Implementation.RoomComponent_RoomHandler#bookingAvailable(java.util.Date, java.util.Date, boolean) <em>Booking Available</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Booking Available</em>' operation.
+	 * @see Implementation.RoomComponent_RoomHandler#bookingAvailable(java.util.Date, java.util.Date, boolean)
+	 * @generated
+	 */
+	EOperation getRoomComponent_RoomHandler__BookingAvailable__Date_Date_boolean();
+
+	/**
 	 * Returns the meta object for class '{@link Implementation.Bank <em>Bank</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8881,6 +8938,30 @@ public interface ImplementationPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ROOM_COMPONENT_ROOM_HANDLER__CONFERENCE_ROOMS = eINSTANCE.getRoomComponent_RoomHandler_ConferenceRooms();
+
+		/**
+		 * The meta object literal for the '<em><b>Find Bookings By Date And Type</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ROOM_COMPONENT_ROOM_HANDLER___FIND_BOOKINGS_BY_DATE_AND_TYPE__DATE_DATE_STRING = eINSTANCE.getRoomComponent_RoomHandler__FindBookingsByDateAndType__Date_Date_String();
+
+		/**
+		 * The meta object literal for the '<em><b>Find Bookings By Date</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ROOM_COMPONENT_ROOM_HANDLER___FIND_BOOKINGS_BY_DATE__DATE_DATE = eINSTANCE.getRoomComponent_RoomHandler__FindBookingsByDate__Date_Date();
+
+		/**
+		 * The meta object literal for the '<em><b>Booking Available</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ROOM_COMPONENT_ROOM_HANDLER___BOOKING_AVAILABLE__DATE_DATE_BOOLEAN = eINSTANCE.getRoomComponent_RoomHandler__BookingAvailable__Date_Date_boolean();
 
 		/**
 		 * The meta object literal for the '{@link Implementation.impl.BankImpl <em>Bank</em>}' class.

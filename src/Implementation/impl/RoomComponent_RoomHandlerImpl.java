@@ -14,6 +14,7 @@ import Implementation.StaffComponent_IAuthentication;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 
+import java.util.Date;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
@@ -421,6 +422,39 @@ public class RoomComponent_RoomHandlerImpl extends MinimalEObjectImpl.Container 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int findBookingsByDateAndType(Date startDate, Date endDate, String roomType) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int findBookingsByDate(Date startDate, Date endDate) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void bookingAvailable(Date startDate, Date endDate, boolean isAvailable) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public void editConferenceRoom(int roomNumber, boolean usable, int price, String roomTypeName, String description, int numberOfSeats, boolean projector, boolean conferencePhone) {
@@ -590,6 +624,13 @@ public class RoomComponent_RoomHandlerImpl extends MinimalEObjectImpl.Container 
 				return null;
 			case ImplementationPackage.ROOM_COMPONENT_ROOM_HANDLER___EDIT_CONFERENCE_ROOM__INT_INT_BOOLEAN_INT_STRING_STRING_INT_BOOLEAN_BOOLEAN:
 				editConferenceRoom((Integer)arguments.get(0), (Integer)arguments.get(1), (Boolean)arguments.get(2), (Integer)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5), (Integer)arguments.get(6), (Boolean)arguments.get(7), (Boolean)arguments.get(8));
+				return null;
+			case ImplementationPackage.ROOM_COMPONENT_ROOM_HANDLER___FIND_BOOKINGS_BY_DATE_AND_TYPE__DATE_DATE_STRING:
+				return findBookingsByDateAndType((Date)arguments.get(0), (Date)arguments.get(1), (String)arguments.get(2));
+			case ImplementationPackage.ROOM_COMPONENT_ROOM_HANDLER___FIND_BOOKINGS_BY_DATE__DATE_DATE:
+				return findBookingsByDate((Date)arguments.get(0), (Date)arguments.get(1));
+			case ImplementationPackage.ROOM_COMPONENT_ROOM_HANDLER___BOOKING_AVAILABLE__DATE_DATE_BOOLEAN:
+				bookingAvailable((Date)arguments.get(0), (Date)arguments.get(1), (Boolean)arguments.get(2));
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);
