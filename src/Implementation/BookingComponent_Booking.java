@@ -273,10 +273,10 @@ public interface BookingComponent_Booking extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model additionalServiceRequired="true" additionalServiceOrdered="false"
+	 * @model additionalServiceNameDataType="org.eclipse.uml2.types.String" additionalServiceNameRequired="true" additionalServiceNameOrdered="false"
 	 * @generated
 	 */
-	void removeAdditionalServiceFromBooking(BookingComponent_AdditionalService additionalService);
+	void removeAdditionalServiceFromBooking(String additionalServiceName);
 
 	/**
 	 * <!-- begin-user-doc -->

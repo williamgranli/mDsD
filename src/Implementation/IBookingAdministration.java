@@ -78,7 +78,7 @@ public interface IBookingAdministration extends EObject {
 	 * @model bookingReferenceDataType="org.eclipse.uml2.types.String" bookingReferenceRequired="true" bookingReferenceOrdered="false" additionalServiceNameDataType="org.eclipse.uml2.types.String" additionalServiceNameRequired="true" additionalServiceNameOrdered="false"
 	 * @generated
 	 */
-	void removeAddionalService(String bookingReference, String additionalServiceName);
+	void removeAdditionalService(String bookingReference, String additionalServiceName);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -95,5 +95,13 @@ public interface IBookingAdministration extends EObject {
 	 * @generated
 	 */
 	void addGuestToBooking(String bookingReference, String firstName, String lastName, String address);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model bookingReferenceDataType="org.eclipse.uml2.types.String" bookingReferenceRequired="true" bookingReferenceOrdered="false" firstNameDataType="org.eclipse.uml2.types.String" firstNameRequired="true" firstNameOrdered="false" lastNameDataType="org.eclipse.uml2.types.String" lastNameRequired="true" lastNameOrdered="false" addressDataType="org.eclipse.uml2.types.String" addressRequired="true" addressOrdered="false"
+	 * @generated
+	 */
+	void removeGuest(String bookingReference, String firstName, String lastName, String address);
 
 } // IBookingAdministration

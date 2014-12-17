@@ -6,7 +6,6 @@ import Implementation.AdditionalServiceComponent_IAdditionalServiceInformation;
 import Implementation.BookingComponent_Booking;
 import Implementation.BookingComponent_BookingManager;
 import Implementation.BookingComponent_IBookingDecision;
-import Implementation.BookingComponent_RoomType;
 import Implementation.IBookingAdministration;
 import Implementation.ImplementationPackage;
 import Implementation.PaymentComponent_IPayment;
@@ -90,6 +89,8 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 	 * @ordered
 	 */
 	protected PaymentComponent_IPayment iPayment;
+	
+
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -422,16 +423,7 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 		}
 		else
 		{
-			EList<BookingComponent_RoomType> rooms = bookingToRemove.getRooms();
-			for(int i = 0; i < rooms.size(); ++i)
-			{
-				//Remove only one instance of the room type, not all.
-				if(rooms.get(i).getRoomType().equals(roomType))
-				{
-					rooms.remove(i);
-					return;
-				}
-			}
+			bookingToRemove.removeRoomFromBooking(roomType);
 		}
 	}
 
@@ -440,24 +432,15 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public void removeAddionalService(String bookingReference, String additionalServiceName) {
-		BookingComponent_Booking additionalServiceToRemove = findBooking(bookingReference);
-		if(additionalServiceToRemove.equals("NULL"))
+	public void removeAdditionalService(String bookingReference, String additionalServiceName) {
+		BookingComponent_Booking bookingToRemove = findBooking(bookingReference);
+		if(bookingToRemove.equals("NULL"))
 		{
 			System.out.println("Invalid Reference Number");
 		}
 		else
 		{
-			EList<BookingComponent_RoomType> additionalServices = additionalServiceToRemove.getRooms();
-			for(int i = 0; i < additionalServices.size(); ++i)
-			{
-				//Remove only one instance of the room type, not all.
-				if(additionalServices.get(i).getRoomType().equals(additionalServiceName))
-				{
-					additionalServices.remove(i);
-					return;
-				}
-			}
+			bookingToRemove.removeAdditionalServiceFromBooking(additionalServiceName);
 		}
 	}
 
@@ -563,13 +546,27 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 	 */
 	public void addGuestToBooking(String bookingReference, String firstName, String lastName, String address) {
 		BookingComponent_Booking bookingToChange = findBooking(bookingReference);
-		if(bookingToChange.equals("NULL"))
+		if(bookingToChange.getReferenceNumber().equals("NULL"))
 		{
-			System.out.println("Invalid Reference Number");
+			System.out.println("Invalid Booking Reference");
 		}
 		else
 		{
 			bookingToChange.addGuestToBooking(firstName, lastName, address);
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public void removeGuest(String bookingReference, String firstName, String lastName, String address) {
+		BookingComponent_Booking targetBooking = findBooking(bookingReference);
+		if(targetBooking.getReferenceNumber().equals("NULL")) {
+			System.out.println("Invalid Booking Reference");
+		} else {
+			targetBooking.removeGuestFromBooking(firstName, lastName, address);
 		}
 	}
 
@@ -717,9 +714,10 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 				case ImplementationPackage.IBOOKING_ADMINISTRATION___CANCEL_BOOKING__STRING: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___CANCEL_BOOKING__STRING;
 				case ImplementationPackage.IBOOKING_ADMINISTRATION___ADD_ADDITIONAL_SERVICE__STRING_STRING_INT: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___ADD_ADDITIONAL_SERVICE__STRING_STRING_INT;
 				case ImplementationPackage.IBOOKING_ADMINISTRATION___REMOVE_ROOM__STRING_STRING: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___REMOVE_ROOM__STRING_STRING;
-				case ImplementationPackage.IBOOKING_ADMINISTRATION___REMOVE_ADDIONAL_SERVICE__STRING_STRING: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___REMOVE_ADDIONAL_SERVICE__STRING_STRING;
+				case ImplementationPackage.IBOOKING_ADMINISTRATION___REMOVE_ADDITIONAL_SERVICE__STRING_STRING: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___REMOVE_ADDITIONAL_SERVICE__STRING_STRING;
 				case ImplementationPackage.IBOOKING_ADMINISTRATION___GENERATE_QUOTE__DATE_DATE_STRING: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___GENERATE_QUOTE__DATE_DATE_STRING;
 				case ImplementationPackage.IBOOKING_ADMINISTRATION___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING;
+				case ImplementationPackage.IBOOKING_ADMINISTRATION___REMOVE_GUEST__STRING_STRING_STRING_STRING: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___REMOVE_GUEST__STRING_STRING_STRING_STRING;
 				default: return -1;
 			}
 		}
@@ -765,14 +763,17 @@ public class BookingComponent_BookingManagerImpl extends MinimalEObjectImpl.Cont
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___REMOVE_ROOM__STRING_STRING:
 				removeRoom((String)arguments.get(0), (String)arguments.get(1));
 				return null;
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___REMOVE_ADDIONAL_SERVICE__STRING_STRING:
-				removeAddionalService((String)arguments.get(0), (String)arguments.get(1));
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___REMOVE_ADDITIONAL_SERVICE__STRING_STRING:
+				removeAdditionalService((String)arguments.get(0), (String)arguments.get(1));
 				return null;
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___GENERATE_QUOTE__DATE_DATE_STRING:
 				generateQuote((Date)arguments.get(0), (Date)arguments.get(1), (String)arguments.get(2));
 				return null;
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING:
 				addGuestToBooking((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3));
+				return null;
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___REMOVE_GUEST__STRING_STRING_STRING_STRING:
+				removeGuest((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3));
 				return null;
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER___FIND_BOOKING__STRING:
 				return findBooking((String)arguments.get(0));

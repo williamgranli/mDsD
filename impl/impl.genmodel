@@ -416,7 +416,7 @@
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_Booking/updateBooking/departureDate"/>
       </genOperations>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//BookingComponent_Booking/removeAdditionalServiceFromBooking">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_Booking/removeAdditionalServiceFromBooking/additionalService"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_Booking/removeAdditionalServiceFromBooking/additionalServiceName"/>
       </genOperations>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//BookingComponent_Booking/currentCost"/>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//BookingComponent_Booking/updatePaymentDetails">
@@ -506,9 +506,9 @@
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//IBookingAdministration/removeRoom/bookingReference"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//IBookingAdministration/removeRoom/roomType"/>
       </genOperations>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//IBookingAdministration/removeAddionalService">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//IBookingAdministration/removeAddionalService/bookingReference"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//IBookingAdministration/removeAddionalService/additionalServiceName"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//IBookingAdministration/removeAdditionalService">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//IBookingAdministration/removeAdditionalService/bookingReference"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//IBookingAdministration/removeAdditionalService/additionalServiceName"/>
       </genOperations>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//IBookingAdministration/generateQuote">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//IBookingAdministration/generateQuote/startDate"/>
@@ -520,6 +520,12 @@
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//IBookingAdministration/addGuestToBooking/firstName"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//IBookingAdministration/addGuestToBooking/lastName"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//IBookingAdministration/addGuestToBooking/address"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//IBookingAdministration/removeGuest">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//IBookingAdministration/removeGuest/bookingReference"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//IBookingAdministration/removeGuest/firstName"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//IBookingAdministration/removeGuest/lastName"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//IBookingAdministration/removeGuest/address"/>
       </genOperations>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//StaffComponent"/>

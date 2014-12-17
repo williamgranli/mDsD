@@ -8,10 +8,12 @@ import Implementation.BookingComponent_BookingGuest;
 import Implementation.BookingComponent_PaymentDetails;
 import Implementation.BookingComponent_RoomType;
 import Implementation.ImplementationPackage;
+
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 import java.util.Date;
 import java.util.Random;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
@@ -195,10 +197,14 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 		this.referenceNumber = generateReferenceNumber();
 	}
 	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
 	protected BookingComponent_BookingImpl(Date arrivalDate, Date departureDate)
 	{
 		super();
-		
 		this.arrivalDate = arrivalDate;
 		this.departureDate = departureDate;
 		
@@ -213,31 +219,11 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public BookingComponent_Booking Booking() {
-		return this;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public BookingComponent_Booking Booking(Date arrivalDate, Date departureDate) {
-		this.arrivalDate = arrivalDate;
-		this.departureDate = departureDate;
-		generateReferenceNumber();
-		return this;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public void addAdditionalServiceToBooking(String newService, int price) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		BookingComponent_AdditionalService service = new BookingComponent_AdditionalServiceImpl();
+		service.setName(newService);
+		service.setCost(price);
+		additionalServices.add(service);
 	}
 
 	/**
@@ -455,7 +441,7 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public BookingComponent_Booking Booking(String roomType, Date arrivalDate, Date departureDate, String customerSSN, String customerFirstName, String customerLastName, String customerAddress, String customerEmail, String ccNumber, String ccv, String expiryMonth, String expiryYear) {
+	public BookingComponent_BookingImpl(String roomType, Date arrivalDate, Date departureDate, String customerSSN, String customerFirstName, String customerLastName, String customerAddress, String customerEmail, String ccNumber, String ccv, String expiryMonth, String expiryYear) {
 		BookingComponent_RoomType newRoom = new BookingComponent_RoomTypeImpl();
 		BookingComponent_PaymentDetails newPayment = new BookingComponent_PaymentDetailsImpl();
 		BookingComponent_BookingGuest newGuest = new BookingComponent_BookingGuestImpl();
@@ -481,8 +467,6 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 		
 		this.guests.add(newGuest);
 		this.paymentDetails = newPayment;
-		
-		return this;
 	}
 
 	/**
@@ -500,9 +484,13 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 	 * @generated NOT
 	 */
 	public void removeRoomFromBooking(String roomType) {
-		if(rooms.contains(roomType))
+		for(int i = 0; i < rooms.size(); ++i)
 		{
-			rooms.remove(roomType);
+			if(rooms.get(i).getRoomType().equals(roomType))
+			{
+				rooms.remove(i);
+				i = rooms.size();
+			}
 		}
 	}
 
@@ -521,10 +509,14 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public void removeAdditionalServiceFromBooking(BookingComponent_AdditionalService additionalService) {
-		if(additionalServices.contains(additionalService))
+	public void removeAdditionalServiceFromBooking(String additionalServiceName) {
+		for(int i = 0; i < additionalServices.size(); ++i)
 		{
-			additionalServices.remove(additionalService);
+			if(additionalServices.get(i).getName().equals(additionalServiceName))
+			{
+				additionalServices.remove(i);
+				i = additionalServices.size();
+			}
 		}
 	}
 
@@ -583,11 +575,12 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 	 * @generated NOT
 	 */
 	public void removeGuestFromBooking(String firstName, String lastName, String address) {
-		for(BookingComponent_BookingGuest guest : guests)
+		for(int i = 0; i < guests.size(); ++i)
 		{
-			if(guest.getFirstName().equals(firstName) && guest.getLastName().equals(lastName) && guest.getAddress().equals(address))
+			if(guests.get(i).getFirstName().equals(firstName) && guests.get(i).getLastName().equals(lastName) && guests.get(i).getAddress().equals(address))
 			{
-				guests.remove(guest);
+				guests.remove(i);
+				i = guests.size();
 			}
 		}
 	}
@@ -784,8 +777,8 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING___UPDATE_BOOKING__DATE_DATE:
 				updateBooking((Date)arguments.get(0), (Date)arguments.get(1));
 				return null;
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING___REMOVE_ADDITIONAL_SERVICE_FROM_BOOKING__BOOKINGCOMPONENT_ADDITIONALSERVICE:
-				removeAdditionalServiceFromBooking((BookingComponent_AdditionalService)arguments.get(0));
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING___REMOVE_ADDITIONAL_SERVICE_FROM_BOOKING__STRING:
+				removeAdditionalServiceFromBooking((String)arguments.get(0));
 				return null;
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING___CURRENT_COST:
 				return currentCost();

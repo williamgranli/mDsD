@@ -2252,7 +2252,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_COMPONENT_BOOKING___REMOVE_ADDITIONAL_SERVICE_FROM_BOOKING__BOOKINGCOMPONENT_ADDITIONALSERVICE = 4;
+	int BOOKING_COMPONENT_BOOKING___REMOVE_ADDITIONAL_SERVICE_FROM_BOOKING__STRING = 4;
 
 	/**
 	 * The operation id for the '<em>Current Cost</em>' operation.
@@ -2606,13 +2606,13 @@ public interface ImplementationPackage extends EPackage {
 	int BOOKING_COMPONENT_BOOKING_MANAGER___REMOVE_ROOM__STRING_STRING = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 6;
 
 	/**
-	 * The operation id for the '<em>Remove Addional Service</em>' operation.
+	 * The operation id for the '<em>Remove Additional Service</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_COMPONENT_BOOKING_MANAGER___REMOVE_ADDIONAL_SERVICE__STRING_STRING = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 7;
+	int BOOKING_COMPONENT_BOOKING_MANAGER___REMOVE_ADDITIONAL_SERVICE__STRING_STRING = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 7;
 
 	/**
 	 * The operation id for the '<em>Generate Quote</em>' operation.
@@ -2633,13 +2633,22 @@ public interface ImplementationPackage extends EPackage {
 	int BOOKING_COMPONENT_BOOKING_MANAGER___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 9;
 
 	/**
+	 * The operation id for the '<em>Remove Guest</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_COMPONENT_BOOKING_MANAGER___REMOVE_GUEST__STRING_STRING_STRING_STRING = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 10;
+
+	/**
 	 * The operation id for the '<em>Find Booking</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_COMPONENT_BOOKING_MANAGER___FIND_BOOKING__STRING = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 10;
+	int BOOKING_COMPONENT_BOOKING_MANAGER___FIND_BOOKING__STRING = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 11;
 
 	/**
 	 * The number of operations of the '<em>Booking Component Booking Manager</em>' class.
@@ -2648,7 +2657,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_COMPONENT_BOOKING_MANAGER_OPERATION_COUNT = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 11;
+	int BOOKING_COMPONENT_BOOKING_MANAGER_OPERATION_COUNT = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 12;
 
 	/**
 	 * The meta object id for the '{@link Implementation.IBookingAdministration <em>IBooking Administration</em>}' class.
@@ -2733,13 +2742,13 @@ public interface ImplementationPackage extends EPackage {
 	int IBOOKING_ADMINISTRATION___REMOVE_ROOM__STRING_STRING = 6;
 
 	/**
-	 * The operation id for the '<em>Remove Addional Service</em>' operation.
+	 * The operation id for the '<em>Remove Additional Service</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKING_ADMINISTRATION___REMOVE_ADDIONAL_SERVICE__STRING_STRING = 7;
+	int IBOOKING_ADMINISTRATION___REMOVE_ADDITIONAL_SERVICE__STRING_STRING = 7;
 
 	/**
 	 * The operation id for the '<em>Generate Quote</em>' operation.
@@ -2760,13 +2769,22 @@ public interface ImplementationPackage extends EPackage {
 	int IBOOKING_ADMINISTRATION___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING = 9;
 
 	/**
+	 * The operation id for the '<em>Remove Guest</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IBOOKING_ADMINISTRATION___REMOVE_GUEST__STRING_STRING_STRING_STRING = 10;
+
+	/**
 	 * The number of operations of the '<em>IBooking Administration</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKING_ADMINISTRATION_OPERATION_COUNT = 10;
+	int IBOOKING_ADMINISTRATION_OPERATION_COUNT = 11;
 
 	/**
 	 * The number of structural features of the '<em>Staff Component</em>' class.
@@ -4992,14 +5010,14 @@ public interface ImplementationPackage extends EPackage {
 	EOperation getBookingComponent_Booking__UpdateBooking__Date_Date();
 
 	/**
-	 * Returns the meta object for the '{@link Implementation.BookingComponent_Booking#removeAdditionalServiceFromBooking(Implementation.BookingComponent_AdditionalService) <em>Remove Additional Service From Booking</em>}' operation.
+	 * Returns the meta object for the '{@link Implementation.BookingComponent_Booking#removeAdditionalServiceFromBooking(java.lang.String) <em>Remove Additional Service From Booking</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Remove Additional Service From Booking</em>' operation.
-	 * @see Implementation.BookingComponent_Booking#removeAdditionalServiceFromBooking(Implementation.BookingComponent_AdditionalService)
+	 * @see Implementation.BookingComponent_Booking#removeAdditionalServiceFromBooking(java.lang.String)
 	 * @generated
 	 */
-	EOperation getBookingComponent_Booking__RemoveAdditionalServiceFromBooking__BookingComponent_AdditionalService();
+	EOperation getBookingComponent_Booking__RemoveAdditionalServiceFromBooking__String();
 
 	/**
 	 * Returns the meta object for the '{@link Implementation.BookingComponent_Booking#currentCost() <em>Current Cost</em>}' operation.
@@ -5334,14 +5352,14 @@ public interface ImplementationPackage extends EPackage {
 	EOperation getIBookingAdministration__RemoveRoom__String_String();
 
 	/**
-	 * Returns the meta object for the '{@link Implementation.IBookingAdministration#removeAddionalService(java.lang.String, java.lang.String) <em>Remove Addional Service</em>}' operation.
+	 * Returns the meta object for the '{@link Implementation.IBookingAdministration#removeAdditionalService(java.lang.String, java.lang.String) <em>Remove Additional Service</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Remove Addional Service</em>' operation.
-	 * @see Implementation.IBookingAdministration#removeAddionalService(java.lang.String, java.lang.String)
+	 * @return the meta object for the '<em>Remove Additional Service</em>' operation.
+	 * @see Implementation.IBookingAdministration#removeAdditionalService(java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	EOperation getIBookingAdministration__RemoveAddionalService__String_String();
+	EOperation getIBookingAdministration__RemoveAdditionalService__String_String();
 
 	/**
 	 * Returns the meta object for the '{@link Implementation.IBookingAdministration#generateQuote(java.util.Date, java.util.Date, java.lang.String) <em>Generate Quote</em>}' operation.
@@ -5362,6 +5380,16 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getIBookingAdministration__AddGuestToBooking__String_String_String_String();
+
+	/**
+	 * Returns the meta object for the '{@link Implementation.IBookingAdministration#removeGuest(java.lang.String, java.lang.String, java.lang.String, java.lang.String) <em>Remove Guest</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Remove Guest</em>' operation.
+	 * @see Implementation.IBookingAdministration#removeGuest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)
+	 * @generated
+	 */
+	EOperation getIBookingAdministration__RemoveGuest__String_String_String_String();
 
 	/**
 	 * Returns the meta object for class '{@link Implementation.StaffComponent <em>Staff Component</em>}'.
@@ -7065,7 +7093,7 @@ public interface ImplementationPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation BOOKING_COMPONENT_BOOKING___REMOVE_ADDITIONAL_SERVICE_FROM_BOOKING__BOOKINGCOMPONENT_ADDITIONALSERVICE = eINSTANCE.getBookingComponent_Booking__RemoveAdditionalServiceFromBooking__BookingComponent_AdditionalService();
+		EOperation BOOKING_COMPONENT_BOOKING___REMOVE_ADDITIONAL_SERVICE_FROM_BOOKING__STRING = eINSTANCE.getBookingComponent_Booking__RemoveAdditionalServiceFromBooking__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Current Cost</b></em>' operation.
@@ -7334,12 +7362,12 @@ public interface ImplementationPackage extends EPackage {
 		EOperation IBOOKING_ADMINISTRATION___REMOVE_ROOM__STRING_STRING = eINSTANCE.getIBookingAdministration__RemoveRoom__String_String();
 
 		/**
-		 * The meta object literal for the '<em><b>Remove Addional Service</b></em>' operation.
+		 * The meta object literal for the '<em><b>Remove Additional Service</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBOOKING_ADMINISTRATION___REMOVE_ADDIONAL_SERVICE__STRING_STRING = eINSTANCE.getIBookingAdministration__RemoveAddionalService__String_String();
+		EOperation IBOOKING_ADMINISTRATION___REMOVE_ADDITIONAL_SERVICE__STRING_STRING = eINSTANCE.getIBookingAdministration__RemoveAdditionalService__String_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Generate Quote</b></em>' operation.
@@ -7356,6 +7384,14 @@ public interface ImplementationPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation IBOOKING_ADMINISTRATION___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING = eINSTANCE.getIBookingAdministration__AddGuestToBooking__String_String_String_String();
+
+		/**
+		 * The meta object literal for the '<em><b>Remove Guest</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation IBOOKING_ADMINISTRATION___REMOVE_GUEST__STRING_STRING_STRING_STRING = eINSTANCE.getIBookingAdministration__RemoveGuest__String_String_String_String();
 
 		/**
 		 * The meta object literal for the '{@link Implementation.impl.StaffComponentImpl <em>Staff Component</em>}' class.
