@@ -3793,7 +3793,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_COMPONENT_IROOM_ADMINISTRATION___EDIT_BED_ROOM__INT_BOOLEAN_INT_STRING_STRING_INT = 1;
+	int ROOM_COMPONENT_IROOM_ADMINISTRATION___EDIT_BED_ROOM__INT_INT_BOOLEAN_INT_STRING_STRING_INT = 1;
 
 	/**
 	 * The operation id for the '<em>Remove</em>' operation.
@@ -3820,7 +3820,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_COMPONENT_IROOM_ADMINISTRATION___EDIT_CONFERENCE_ROOM__INT_BOOLEAN_INT_STRING_STRING_INT_BOOLEAN_BOOLEAN = 4;
+	int ROOM_COMPONENT_IROOM_ADMINISTRATION___EDIT_CONFERENCE_ROOM__INT_INT_BOOLEAN_INT_STRING_STRING_INT_BOOLEAN_BOOLEAN = 4;
 
 	/**
 	 * The number of operations of the '<em>Room Component IRoom Administration</em>' class.
@@ -3937,7 +3937,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_COMPONENT_ROOM_HANDLER___EDIT_BED_ROOM__INT_BOOLEAN_INT_STRING_STRING_INT = ROOM_COMPONENT_IROOM_DECISION_OPERATION_COUNT + 7;
+	int ROOM_COMPONENT_ROOM_HANDLER___EDIT_BED_ROOM__INT_INT_BOOLEAN_INT_STRING_STRING_INT = ROOM_COMPONENT_IROOM_DECISION_OPERATION_COUNT + 7;
 
 	/**
 	 * The operation id for the '<em>Remove</em>' operation.
@@ -3964,7 +3964,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_COMPONENT_ROOM_HANDLER___EDIT_CONFERENCE_ROOM__INT_BOOLEAN_INT_STRING_STRING_INT_BOOLEAN_BOOLEAN = ROOM_COMPONENT_IROOM_DECISION_OPERATION_COUNT + 10;
+	int ROOM_COMPONENT_ROOM_HANDLER___EDIT_CONFERENCE_ROOM__INT_INT_BOOLEAN_INT_STRING_STRING_INT_BOOLEAN_BOOLEAN = ROOM_COMPONENT_IROOM_DECISION_OPERATION_COUNT + 10;
 
 	/**
 	 * The number of operations of the '<em>Room Component Room Handler</em>' class.
@@ -6607,14 +6607,14 @@ public interface ImplementationPackage extends EPackage {
 	EOperation getRoomComponent_IRoomAdministration__CreateBedRoom__int_boolean_int_String_String_int();
 
 	/**
-	 * Returns the meta object for the '{@link Implementation.RoomComponent_IRoomAdministration#editBedRoom(int, boolean, int, java.lang.String, java.lang.String, int) <em>Edit Bed Room</em>}' operation.
+	 * Returns the meta object for the '{@link Implementation.RoomComponent_IRoomAdministration#editBedRoom(int, int, boolean, int, java.lang.String, java.lang.String, int) <em>Edit Bed Room</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Edit Bed Room</em>' operation.
-	 * @see Implementation.RoomComponent_IRoomAdministration#editBedRoom(int, boolean, int, java.lang.String, java.lang.String, int)
+	 * @see Implementation.RoomComponent_IRoomAdministration#editBedRoom(int, int, boolean, int, java.lang.String, java.lang.String, int)
 	 * @generated
 	 */
-	EOperation getRoomComponent_IRoomAdministration__EditBedRoom__int_boolean_int_String_String_int();
+	EOperation getRoomComponent_IRoomAdministration__EditBedRoom__int_int_boolean_int_String_String_int();
 
 	/**
 	 * Returns the meta object for the '{@link Implementation.RoomComponent_IRoomAdministration#remove(int) <em>Remove</em>}' operation.
@@ -6637,14 +6637,14 @@ public interface ImplementationPackage extends EPackage {
 	EOperation getRoomComponent_IRoomAdministration__CreateConferenceRoom__int_boolean_int_String_String_int_boolean_boolean();
 
 	/**
-	 * Returns the meta object for the '{@link Implementation.RoomComponent_IRoomAdministration#editConferenceRoom(int, boolean, int, java.lang.String, java.lang.String, int, boolean, boolean) <em>Edit Conference Room</em>}' operation.
+	 * Returns the meta object for the '{@link Implementation.RoomComponent_IRoomAdministration#editConferenceRoom(int, int, boolean, int, java.lang.String, java.lang.String, int, boolean, boolean) <em>Edit Conference Room</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Edit Conference Room</em>' operation.
-	 * @see Implementation.RoomComponent_IRoomAdministration#editConferenceRoom(int, boolean, int, java.lang.String, java.lang.String, int, boolean, boolean)
+	 * @see Implementation.RoomComponent_IRoomAdministration#editConferenceRoom(int, int, boolean, int, java.lang.String, java.lang.String, int, boolean, boolean)
 	 * @generated
 	 */
-	EOperation getRoomComponent_IRoomAdministration__EditConferenceRoom__int_boolean_int_String_String_int_boolean_boolean();
+	EOperation getRoomComponent_IRoomAdministration__EditConferenceRoom__int_int_boolean_int_String_String_int_boolean_boolean();
 
 	/**
 	 * Returns the meta object for class '{@link Implementation.RoomComponent_RoomHandler <em>Room Component Room Handler</em>}'.
@@ -8822,7 +8822,7 @@ public interface ImplementationPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ROOM_COMPONENT_IROOM_ADMINISTRATION___EDIT_BED_ROOM__INT_BOOLEAN_INT_STRING_STRING_INT = eINSTANCE.getRoomComponent_IRoomAdministration__EditBedRoom__int_boolean_int_String_String_int();
+		EOperation ROOM_COMPONENT_IROOM_ADMINISTRATION___EDIT_BED_ROOM__INT_INT_BOOLEAN_INT_STRING_STRING_INT = eINSTANCE.getRoomComponent_IRoomAdministration__EditBedRoom__int_int_boolean_int_String_String_int();
 
 		/**
 		 * The meta object literal for the '<em><b>Remove</b></em>' operation.
@@ -8846,7 +8846,7 @@ public interface ImplementationPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ROOM_COMPONENT_IROOM_ADMINISTRATION___EDIT_CONFERENCE_ROOM__INT_BOOLEAN_INT_STRING_STRING_INT_BOOLEAN_BOOLEAN = eINSTANCE.getRoomComponent_IRoomAdministration__EditConferenceRoom__int_boolean_int_String_String_int_boolean_boolean();
+		EOperation ROOM_COMPONENT_IROOM_ADMINISTRATION___EDIT_CONFERENCE_ROOM__INT_INT_BOOLEAN_INT_STRING_STRING_INT_BOOLEAN_BOOLEAN = eINSTANCE.getRoomComponent_IRoomAdministration__EditConferenceRoom__int_int_boolean_int_String_String_int_boolean_boolean();
 
 		/**
 		 * The meta object literal for the '{@link Implementation.impl.RoomComponent_RoomHandlerImpl <em>Room Component Room Handler</em>}' class.
