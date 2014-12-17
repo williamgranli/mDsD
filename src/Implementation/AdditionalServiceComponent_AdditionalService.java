@@ -168,18 +168,18 @@ public interface AdditionalServiceComponent_AdditionalService extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model required="true" ordered="false" dateRequired="true" dateOrdered="false" locationDataType="org.eclipse.uml2.types.String" locationRequired="true" locationOrdered="false"
+	 * @model required="true" ordered="false" dateTimeRequired="true" dateTimeOrdered="false" locationDataType="org.eclipse.uml2.types.String" locationRequired="true" locationOrdered="false"
 	 * @generated
 	 */
-	AdditionalServiceComponent_AdditionalServiceEvent findEvent(Date date, String location);
+	AdditionalServiceComponent_AdditionalServiceEvent findEvent(Date dateTime, String location);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model required="true" ordered="false" dateTimeRequired="true" dateTimeOrdered="false"
+	 * @model ordered="false" dateTimeRequired="true" dateTimeOrdered="false"
 	 * @generated
 	 */
-	AdditionalServiceComponent_AdditionalServiceEvent findEvents(Date dateTime);
+	EList<AdditionalServiceComponent_AdditionalServiceEvent> findEvents(Date dateTime);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -200,17 +200,17 @@ public interface AdditionalServiceComponent_AdditionalService extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false" dateRequired="true" dateOrdered="false" locationDataType="org.eclipse.uml2.types.String" locationRequired="true" locationOrdered="false"
+	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false" dateTimeRequired="true" dateTimeOrdered="false" locationDataType="org.eclipse.uml2.types.String" locationRequired="true" locationOrdered="false"
 	 * @generated
 	 */
-	boolean removeEvent(Date date, String location);
+	boolean removeEvent(Date dateTime, String location);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false" dateRequired="true" dateOrdered="false"
+	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false" dateTimeRequired="true" dateTimeOrdered="false"
 	 * @generated
 	 */
-	boolean removeEvents(Date date);
+	boolean removeEvents(Date dateTime);
 
 } // AdditionalServiceComponent_AdditionalService
