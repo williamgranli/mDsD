@@ -3,6 +3,7 @@
 package Implementation.impl;
 
 import Implementation.AdditionalServiceComponent_IAdditionalServiceInformation;
+import Implementation.BookingComponent_AdditionalService;
 import Implementation.BookingComponent_Booking;
 import Implementation.BookingComponent_BookingHandler;
 import Implementation.BookingComponent_IBookingAdministration;
@@ -11,9 +12,11 @@ import Implementation.ImplementationPackage;
 import Implementation.PaymentComponent_IPayment;
 import Implementation.RoomComponent_IRoomInformation;
 import Implementation.StaffComponent_IAuthentication;
+
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 import java.util.Date;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
@@ -400,7 +403,8 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 	 * @generated NOT
 	 */
 	public EList<String> getDSSInfo() {
-		EList<String> DSSInfo = new EObjectResolvingEList<String>(BookingComponent_Booking.class, this, ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__BOOKINGS);
+		EList<String> DSSInfo = new EObjectResolvingEList<String>(BookingComponent_Booking.class, this, 
+				ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER__BOOKINGS);
 		for (BookingComponent_Booking booking: bookings){
 			String currentBookings=booking.getRoomTypesInBooking()+","+booking.getArrivalDate()+","+booking.getDepartureDate()+","
 					+booking.getPaymentDetails().getSsn()+","+booking.getPaymentDetails().getFirstName()+","

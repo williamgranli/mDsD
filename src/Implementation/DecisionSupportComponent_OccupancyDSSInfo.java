@@ -2,8 +2,6 @@
  */
 package Implementation;
 
-import java.util.Date;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -61,12 +59,12 @@ public interface DecisionSupportComponent_OccupancyDSSInfo extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Check In Date Time</em>' attribute.
-	 * @see #setCheckInDateTime(Date)
+	 * @see #setCheckInDateTime(String)
 	 * @see Implementation.ImplementationPackage#getDecisionSupportComponent_OccupancyDSSInfo_CheckInDateTime()
-	 * @model required="true" ordered="false"
+	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
-	Date getCheckInDateTime();
+	String getCheckInDateTime();
 
 	/**
 	 * Sets the value of the '{@link Implementation.DecisionSupportComponent_OccupancyDSSInfo#getCheckInDateTime <em>Check In Date Time</em>}' attribute.
@@ -76,7 +74,7 @@ public interface DecisionSupportComponent_OccupancyDSSInfo extends EObject {
 	 * @see #getCheckInDateTime()
 	 * @generated
 	 */
-	void setCheckInDateTime(Date value);
+	void setCheckInDateTime(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Check Out Date Time</b></em>' attribute.
@@ -87,12 +85,12 @@ public interface DecisionSupportComponent_OccupancyDSSInfo extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Check Out Date Time</em>' attribute.
-	 * @see #setCheckOutDateTime(Date)
+	 * @see #setCheckOutDateTime(String)
 	 * @see Implementation.ImplementationPackage#getDecisionSupportComponent_OccupancyDSSInfo_CheckOutDateTime()
-	 * @model required="true" ordered="false"
+	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
-	Date getCheckOutDateTime();
+	String getCheckOutDateTime();
 
 	/**
 	 * Sets the value of the '{@link Implementation.DecisionSupportComponent_OccupancyDSSInfo#getCheckOutDateTime <em>Check Out Date Time</em>}' attribute.
@@ -102,7 +100,7 @@ public interface DecisionSupportComponent_OccupancyDSSInfo extends EObject {
 	 * @see #getCheckOutDateTime()
 	 * @generated
 	 */
-	void setCheckOutDateTime(Date value);
+	void setCheckOutDateTime(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Number Of Guests</b></em>' attribute.

@@ -663,6 +663,15 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getDecisionSupportComponent_BookingDSSInfo__AddAdditionalService__String_long() {
+		return decisionSupportComponent_BookingDSSInfoEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getDecisionSupportComponent_DSSController() {
 		return decisionSupportComponent_DSSControllerEClass;
 	}
@@ -2823,6 +2832,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		createEAttribute(decisionSupportComponent_BookingDSSInfoEClass, DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO__CUSTOMER_FIRST_NAME);
 		createEAttribute(decisionSupportComponent_BookingDSSInfoEClass, DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO__CUSTOMER_LAST_NAME);
 		createEAttribute(decisionSupportComponent_BookingDSSInfoEClass, DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO__ADDRESS);
+		createEOperation(decisionSupportComponent_BookingDSSInfoEClass, DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO___ADD_ADDITIONAL_SERVICE__STRING_LONG);
 
 		decisionSupportComponent_AdditionalServiceDSSInfoEClass = createEClass(DECISION_SUPPORT_COMPONENT_ADDITIONAL_SERVICE_DSS_INFO);
 		createEAttribute(decisionSupportComponent_AdditionalServiceDSSInfoEClass, DECISION_SUPPORT_COMPONENT_ADDITIONAL_SERVICE_DSS_INFO__ADDITIONAL_SERVICE_NAME);
@@ -3179,31 +3189,35 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		initEOperation(getDecisionSupportComponent_IDecisionSupport__GetDSSOccupancyInfo(), null, "getDSSOccupancyInfo", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getDecisionSupportComponent_IDecisionSupport__GetNumberOfOccupanciesOfRoom__String(), theTypesPackage.getInteger(), "getNumberOfOccupanciesOfRoom", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "roomNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getInteger(), "roomNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(decisionSupportComponent_BookingDSSInfoEClass, DecisionSupportComponent_BookingDSSInfo.class, "DecisionSupportComponent_BookingDSSInfo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDecisionSupportComponent_BookingDSSInfo_NumberOfGuests(), theTypesPackage.getInteger(), "numberOfGuests", null, 1, 1, DecisionSupportComponent_BookingDSSInfo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getDecisionSupportComponent_BookingDSSInfo_RoomType(), theTypesPackage.getString(), "roomType", null, 1, 1, DecisionSupportComponent_BookingDSSInfo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getDecisionSupportComponent_BookingDSSInfo_ArrivalDate(), ecorePackage.getEDate(), "arrivalDate", null, 1, 1, DecisionSupportComponent_BookingDSSInfo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getDecisionSupportComponent_BookingDSSInfo_DepartureDate(), ecorePackage.getEDate(), "departureDate", null, 1, 1, DecisionSupportComponent_BookingDSSInfo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getDecisionSupportComponent_BookingDSSInfo_ArrivalDate(), theTypesPackage.getString(), "arrivalDate", null, 1, 1, DecisionSupportComponent_BookingDSSInfo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getDecisionSupportComponent_BookingDSSInfo_DepartureDate(), theTypesPackage.getString(), "departureDate", null, 1, 1, DecisionSupportComponent_BookingDSSInfo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getDecisionSupportComponent_BookingDSSInfo_CustomerSSN(), theTypesPackage.getString(), "customerSSN", null, 1, 1, DecisionSupportComponent_BookingDSSInfo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getDecisionSupportComponent_BookingDSSInfo_AdditionalServices(), this.getDecisionSupportComponent_AdditionalServiceDSSInfo(), null, "additionalServices", null, 1, 1, DecisionSupportComponent_BookingDSSInfo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getDecisionSupportComponent_BookingDSSInfo_AdditionalServices(), this.getDecisionSupportComponent_AdditionalServiceDSSInfo(), null, "additionalServices", null, 0, -1, DecisionSupportComponent_BookingDSSInfo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getDecisionSupportComponent_BookingDSSInfo_CustomerFirstName(), theTypesPackage.getString(), "customerFirstName", null, 1, 1, DecisionSupportComponent_BookingDSSInfo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getDecisionSupportComponent_BookingDSSInfo_CustomerLastName(), theTypesPackage.getString(), "customerLastName", null, 1, 1, DecisionSupportComponent_BookingDSSInfo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getDecisionSupportComponent_BookingDSSInfo_Address(), theTypesPackage.getString(), "address", null, 1, 1, DecisionSupportComponent_BookingDSSInfo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
+		op = initEOperation(getDecisionSupportComponent_BookingDSSInfo__AddAdditionalService__String_long(), null, "addAdditionalService", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "additionalServiceName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getELong(), "additionalServicePrice", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
 		initEClass(decisionSupportComponent_AdditionalServiceDSSInfoEClass, DecisionSupportComponent_AdditionalServiceDSSInfo.class, "DecisionSupportComponent_AdditionalServiceDSSInfo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDecisionSupportComponent_AdditionalServiceDSSInfo_AdditionalServiceName(), theTypesPackage.getString(), "additionalServiceName", null, 1, 1, DecisionSupportComponent_AdditionalServiceDSSInfo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getDecisionSupportComponent_AdditionalServiceDSSInfo_AdditionalServicePrice(), theTypesPackage.getString(), "additionalServicePrice", null, 1, 1, DecisionSupportComponent_AdditionalServiceDSSInfo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getDecisionSupportComponent_AdditionalServiceDSSInfo_AdditionalServicePrice(), ecorePackage.getELong(), "additionalServicePrice", null, 1, 1, DecisionSupportComponent_AdditionalServiceDSSInfo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(decisionSupportComponent_DSSControllerEClass, DecisionSupportComponent_DSSController.class, "DecisionSupportComponent_DSSController", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDecisionSupportComponent_DSSController_IRoomDecision(), this.getRoomComponent_IRoomDecision(), null, "iRoomDecision", null, 1, 1, DecisionSupportComponent_DSSController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getDecisionSupportComponent_DSSController_IOccupancyDecision(), this.getOccupancyComponent_IOccupancyDecision(), null, "iOccupancyDecision", null, 1, 1, DecisionSupportComponent_DSSController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getDecisionSupportComponent_DSSController_IAdditionalServiceDecision(), this.getAdditionalServiceComponent_IAdditionalServiceDecision(), null, "iAdditionalServiceDecision", null, 1, 1, DecisionSupportComponent_DSSController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getDecisionSupportComponent_DSSController_IBookingDecision(), this.getBookingComponent_IBookingDecision(), null, "iBookingDecision", null, 1, 1, DecisionSupportComponent_DSSController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getDecisionSupportComponent_DSSController_OccupancyDSSInfo(), this.getDecisionSupportComponent_OccupancyDSSInfo(), null, "occupancyDSSInfo", null, 1, 1, DecisionSupportComponent_DSSController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getDecisionSupportComponent_DSSController_AdditionalServiceDSSInfo(), this.getDecisionSupportComponent_AdditionalServiceDSSInfo(), null, "additionalServiceDSSInfo", null, 1, 1, DecisionSupportComponent_DSSController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getDecisionSupportComponent_DSSController_BookingDSSInfo(), this.getDecisionSupportComponent_BookingDSSInfo(), null, "bookingDSSInfo", null, 1, 1, DecisionSupportComponent_DSSController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getDecisionSupportComponent_DSSController_OccupancyDSSInfo(), this.getDecisionSupportComponent_OccupancyDSSInfo(), null, "occupancyDSSInfo", null, 0, -1, DecisionSupportComponent_DSSController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getDecisionSupportComponent_DSSController_AdditionalServiceDSSInfo(), this.getDecisionSupportComponent_AdditionalServiceDSSInfo(), null, "additionalServiceDSSInfo", null, 0, -1, DecisionSupportComponent_DSSController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getDecisionSupportComponent_DSSController_BookingDSSInfo(), this.getDecisionSupportComponent_BookingDSSInfo(), null, "bookingDSSInfo", null, 0, -1, DecisionSupportComponent_DSSController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		op = initEOperation(getDecisionSupportComponent_DSSController__CountCustomerBooking__EList_String(), theTypesPackage.getInteger(), "countCustomerBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, this.getDecisionSupportComponent_BookingDSSInfo(), "bookingDSSInfo", 0, -1, IS_UNIQUE, !IS_ORDERED);
@@ -3227,8 +3241,8 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 
 		initEClass(decisionSupportComponent_OccupancyDSSInfoEClass, DecisionSupportComponent_OccupancyDSSInfo.class, "DecisionSupportComponent_OccupancyDSSInfo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDecisionSupportComponent_OccupancyDSSInfo_RoomNumber(), theTypesPackage.getInteger(), "roomNumber", null, 1, 1, DecisionSupportComponent_OccupancyDSSInfo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getDecisionSupportComponent_OccupancyDSSInfo_CheckInDateTime(), ecorePackage.getEDate(), "checkInDateTime", null, 1, 1, DecisionSupportComponent_OccupancyDSSInfo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getDecisionSupportComponent_OccupancyDSSInfo_CheckOutDateTime(), ecorePackage.getEDate(), "checkOutDateTime", null, 1, 1, DecisionSupportComponent_OccupancyDSSInfo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getDecisionSupportComponent_OccupancyDSSInfo_CheckInDateTime(), theTypesPackage.getString(), "checkInDateTime", null, 1, 1, DecisionSupportComponent_OccupancyDSSInfo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getDecisionSupportComponent_OccupancyDSSInfo_CheckOutDateTime(), theTypesPackage.getString(), "checkOutDateTime", null, 1, 1, DecisionSupportComponent_OccupancyDSSInfo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getDecisionSupportComponent_OccupancyDSSInfo_NumberOfGuests(), theTypesPackage.getInteger(), "numberOfGuests", null, 1, 1, DecisionSupportComponent_OccupancyDSSInfo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(occupancyComponentEClass, OccupancyComponent.class, "OccupancyComponent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

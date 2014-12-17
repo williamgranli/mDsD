@@ -4,13 +4,8 @@ package Implementation.impl;
 
 import Implementation.DecisionSupportComponent_OccupancyDSSInfo;
 import Implementation.ImplementationPackage;
-
-import java.util.Date;
-
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -59,7 +54,7 @@ public class DecisionSupportComponent_OccupancyDSSInfoImpl extends MinimalEObjec
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Date CHECK_IN_DATE_TIME_EDEFAULT = null;
+	protected static final String CHECK_IN_DATE_TIME_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getCheckInDateTime() <em>Check In Date Time</em>}' attribute.
@@ -69,7 +64,7 @@ public class DecisionSupportComponent_OccupancyDSSInfoImpl extends MinimalEObjec
 	 * @generated
 	 * @ordered
 	 */
-	protected Date checkInDateTime = CHECK_IN_DATE_TIME_EDEFAULT;
+	protected String checkInDateTime = CHECK_IN_DATE_TIME_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getCheckOutDateTime() <em>Check Out Date Time</em>}' attribute.
@@ -79,7 +74,7 @@ public class DecisionSupportComponent_OccupancyDSSInfoImpl extends MinimalEObjec
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Date CHECK_OUT_DATE_TIME_EDEFAULT = null;
+	protected static final String CHECK_OUT_DATE_TIME_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getCheckOutDateTime() <em>Check Out Date Time</em>}' attribute.
@@ -89,7 +84,7 @@ public class DecisionSupportComponent_OccupancyDSSInfoImpl extends MinimalEObjec
 	 * @generated
 	 * @ordered
 	 */
-	protected Date checkOutDateTime = CHECK_OUT_DATE_TIME_EDEFAULT;
+	protected String checkOutDateTime = CHECK_OUT_DATE_TIME_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getNumberOfGuests() <em>Number Of Guests</em>}' attribute.
@@ -118,6 +113,18 @@ public class DecisionSupportComponent_OccupancyDSSInfoImpl extends MinimalEObjec
 	 */
 	protected DecisionSupportComponent_OccupancyDSSInfoImpl() {
 		super();
+	}
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	protected DecisionSupportComponent_OccupancyDSSInfoImpl(int roomNumber, String checkInDateTime, String checkOutDateTime, int numberOfGuests){
+		this.roomNumber = roomNumber;
+		this.checkInDateTime = checkInDateTime;
+		this.checkOutDateTime = checkOutDateTime;
+		this.numberOfGuests = numberOfGuests;
 	}
 
 	/**
@@ -156,7 +163,7 @@ public class DecisionSupportComponent_OccupancyDSSInfoImpl extends MinimalEObjec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Date getCheckInDateTime() {
+	public String getCheckInDateTime() {
 		return checkInDateTime;
 	}
 
@@ -165,8 +172,8 @@ public class DecisionSupportComponent_OccupancyDSSInfoImpl extends MinimalEObjec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCheckInDateTime(Date newCheckInDateTime) {
-		Date oldCheckInDateTime = checkInDateTime;
+	public void setCheckInDateTime(String newCheckInDateTime) {
+		String oldCheckInDateTime = checkInDateTime;
 		checkInDateTime = newCheckInDateTime;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ImplementationPackage.DECISION_SUPPORT_COMPONENT_OCCUPANCY_DSS_INFO__CHECK_IN_DATE_TIME, oldCheckInDateTime, checkInDateTime));
@@ -177,7 +184,7 @@ public class DecisionSupportComponent_OccupancyDSSInfoImpl extends MinimalEObjec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Date getCheckOutDateTime() {
+	public String getCheckOutDateTime() {
 		return checkOutDateTime;
 	}
 
@@ -186,8 +193,8 @@ public class DecisionSupportComponent_OccupancyDSSInfoImpl extends MinimalEObjec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCheckOutDateTime(Date newCheckOutDateTime) {
-		Date oldCheckOutDateTime = checkOutDateTime;
+	public void setCheckOutDateTime(String newCheckOutDateTime) {
+		String oldCheckOutDateTime = checkOutDateTime;
 		checkOutDateTime = newCheckOutDateTime;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ImplementationPackage.DECISION_SUPPORT_COMPONENT_OCCUPANCY_DSS_INFO__CHECK_OUT_DATE_TIME, oldCheckOutDateTime, checkOutDateTime));
@@ -246,10 +253,10 @@ public class DecisionSupportComponent_OccupancyDSSInfoImpl extends MinimalEObjec
 				setRoomNumber((Integer)newValue);
 				return;
 			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_OCCUPANCY_DSS_INFO__CHECK_IN_DATE_TIME:
-				setCheckInDateTime((Date)newValue);
+				setCheckInDateTime((String)newValue);
 				return;
 			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_OCCUPANCY_DSS_INFO__CHECK_OUT_DATE_TIME:
-				setCheckOutDateTime((Date)newValue);
+				setCheckOutDateTime((String)newValue);
 				return;
 			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_OCCUPANCY_DSS_INFO__NUMBER_OF_GUESTS:
 				setNumberOfGuests((Integer)newValue);

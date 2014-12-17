@@ -22,22 +22,26 @@
     <eOperations name="getDSSOccupancyInfo" ordered="false" lowerBound="1"/>
     <eOperations name="getNumberOfOccupanciesOfRoom" ordered="false" lowerBound="1"
         eType="ecore:EDataType types.ecore#//Integer">
-      <eParameters name="roomNumber" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="roomNumber" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
     </eOperations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DecisionSupportComponent_BookingDSSInfo">
+    <eOperations name="addAdditionalService" ordered="false" lowerBound="1">
+      <eParameters name="additionalServiceName" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="additionalServicePrice" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+    </eOperations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfGuests" ordered="false"
         lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="roomType" ordered="false"
         lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="arrivalDate" ordered="false"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+        lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="departureDate" ordered="false"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+        lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="customerSSN" ordered="false"
         lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="additionalServices" ordered="false"
-        lowerBound="1" eType="#//DecisionSupportComponent_AdditionalServiceDSSInfo"/>
+        upperBound="-1" eType="#//DecisionSupportComponent_AdditionalServiceDSSInfo"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="customerFirstName" ordered="false"
         lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="customerLastName" ordered="false"
@@ -49,7 +53,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="additionalServiceName"
         ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="additionalServicePrice"
-        ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+        ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DecisionSupportComponent_DSSController"
       eSuperTypes="#//DecisionSupportComponent_IDecisionSupport">
@@ -70,11 +74,11 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="iBookingDecision" ordered="false"
         lowerBound="1" eType="#//BookingComponent_IBookingDecision"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="occupancyDSSInfo" ordered="false"
-        lowerBound="1" eType="#//DecisionSupportComponent_OccupancyDSSInfo"/>
+        upperBound="-1" eType="#//DecisionSupportComponent_OccupancyDSSInfo"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="additionalServiceDSSInfo"
-        ordered="false" lowerBound="1" eType="#//DecisionSupportComponent_AdditionalServiceDSSInfo"/>
+        ordered="false" upperBound="-1" eType="#//DecisionSupportComponent_AdditionalServiceDSSInfo"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="bookingDSSInfo" ordered="false"
-        lowerBound="1" eType="#//DecisionSupportComponent_BookingDSSInfo"/>
+        upperBound="-1" eType="#//DecisionSupportComponent_BookingDSSInfo"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RoomComponent_IRoomDecision" abstract="true"
       interface="true"/>
@@ -92,9 +96,9 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="roomNumber" ordered="false"
         lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="checkInDateTime" ordered="false"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+        lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="checkOutDateTime" ordered="false"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+        lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfGuests" ordered="false"
         lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
   </eClassifiers>

@@ -76,8 +76,8 @@ public interface DecisionSupportComponent_IDecisionSupport extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" roomNumberDataType="org.eclipse.uml2.types.String" roomNumberRequired="true" roomNumberOrdered="false"
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" roomNumberDataType="org.eclipse.uml2.types.Integer" roomNumberRequired="true" roomNumberOrdered="false"
 	 * @generated
 	 */
-	int getNumberOfOccupanciesOfRoom(String roomNumber);
+	int getNumberOfOccupanciesOfRoom(int roomNumber);
 } // DecisionSupportComponent_IDecisionSupport

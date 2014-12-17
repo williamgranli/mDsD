@@ -5,14 +5,14 @@ package Implementation.impl;
 import Implementation.DecisionSupportComponent_AdditionalServiceDSSInfo;
 import Implementation.DecisionSupportComponent_BookingDSSInfo;
 import Implementation.ImplementationPackage;
-
-import java.util.Date;
+import java.lang.reflect.InvocationTargetException;
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -80,7 +80,7 @@ public class DecisionSupportComponent_BookingDSSInfoImpl extends MinimalEObjectI
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Date ARRIVAL_DATE_EDEFAULT = null;
+	protected static final String ARRIVAL_DATE_EDEFAULT = null;
 	/**
 	 * The cached value of the '{@link #getArrivalDate() <em>Arrival Date</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -89,7 +89,7 @@ public class DecisionSupportComponent_BookingDSSInfoImpl extends MinimalEObjectI
 	 * @generated
 	 * @ordered
 	 */
-	protected Date arrivalDate = ARRIVAL_DATE_EDEFAULT;
+	protected String arrivalDate = ARRIVAL_DATE_EDEFAULT;
 	/**
 	 * The default value of the '{@link #getDepartureDate() <em>Departure Date</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -98,7 +98,7 @@ public class DecisionSupportComponent_BookingDSSInfoImpl extends MinimalEObjectI
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Date DEPARTURE_DATE_EDEFAULT = null;
+	protected static final String DEPARTURE_DATE_EDEFAULT = null;
 	/**
 	 * The cached value of the '{@link #getDepartureDate() <em>Departure Date</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -107,7 +107,7 @@ public class DecisionSupportComponent_BookingDSSInfoImpl extends MinimalEObjectI
 	 * @generated
 	 * @ordered
 	 */
-	protected Date departureDate = DEPARTURE_DATE_EDEFAULT;
+	protected String departureDate = DEPARTURE_DATE_EDEFAULT;
 	/**
 	 * The default value of the '{@link #getCustomerSSN() <em>Customer SSN</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -127,14 +127,14 @@ public class DecisionSupportComponent_BookingDSSInfoImpl extends MinimalEObjectI
 	 */
 	protected String customerSSN = CUSTOMER_SSN_EDEFAULT;
 	/**
-	 * The cached value of the '{@link #getAdditionalServices() <em>Additional Services</em>}' reference.
+	 * The cached value of the '{@link #getAdditionalServices() <em>Additional Services</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getAdditionalServices()
 	 * @generated
 	 * @ordered
 	 */
-	protected DecisionSupportComponent_AdditionalServiceDSSInfo additionalServices;
+	protected EList<DecisionSupportComponent_AdditionalServiceDSSInfo> additionalServices;
 	/**
 	 * The default value of the '{@link #getCustomerFirstName() <em>Customer First Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -198,6 +198,28 @@ public class DecisionSupportComponent_BookingDSSInfoImpl extends MinimalEObjectI
 	protected DecisionSupportComponent_BookingDSSInfoImpl() {
 		super();
 	}
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	protected DecisionSupportComponent_BookingDSSInfoImpl(String roomType, String arrivalDate,
+			String departureDate, String customerSSN, String customerFirstName,
+			String customerLastName, String address, int numberOfGuests) {
+		super();
+		this.roomType= roomType;
+		this.arrivalDate = arrivalDate;
+		this.departureDate = departureDate;
+		this.customerSSN = customerSSN;
+		this.customerFirstName = customerFirstName;
+		this.customerLastName = customerLastName;
+		this.address = address;
+		this.numberOfGuests = numberOfGuests;
+		this.additionalServices = null;
+	}
+	
+	
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -256,7 +278,7 @@ public class DecisionSupportComponent_BookingDSSInfoImpl extends MinimalEObjectI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Date getArrivalDate() {
+	public String getArrivalDate() {
 		return arrivalDate;
 	}
 
@@ -265,8 +287,8 @@ public class DecisionSupportComponent_BookingDSSInfoImpl extends MinimalEObjectI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setArrivalDate(Date newArrivalDate) {
-		Date oldArrivalDate = arrivalDate;
+	public void setArrivalDate(String newArrivalDate) {
+		String oldArrivalDate = arrivalDate;
 		arrivalDate = newArrivalDate;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ImplementationPackage.DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO__ARRIVAL_DATE, oldArrivalDate, arrivalDate));
@@ -277,7 +299,7 @@ public class DecisionSupportComponent_BookingDSSInfoImpl extends MinimalEObjectI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Date getDepartureDate() {
+	public String getDepartureDate() {
 		return departureDate;
 	}
 
@@ -286,8 +308,8 @@ public class DecisionSupportComponent_BookingDSSInfoImpl extends MinimalEObjectI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDepartureDate(Date newDepartureDate) {
-		Date oldDepartureDate = departureDate;
+	public void setDepartureDate(String newDepartureDate) {
+		String oldDepartureDate = departureDate;
 		departureDate = newDepartureDate;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ImplementationPackage.DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO__DEPARTURE_DATE, oldDepartureDate, departureDate));
@@ -319,37 +341,11 @@ public class DecisionSupportComponent_BookingDSSInfoImpl extends MinimalEObjectI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DecisionSupportComponent_AdditionalServiceDSSInfo getAdditionalServices() {
-		if (additionalServices != null && additionalServices.eIsProxy()) {
-			InternalEObject oldAdditionalServices = (InternalEObject)additionalServices;
-			additionalServices = (DecisionSupportComponent_AdditionalServiceDSSInfo)eResolveProxy(oldAdditionalServices);
-			if (additionalServices != oldAdditionalServices) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ImplementationPackage.DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO__ADDITIONAL_SERVICES, oldAdditionalServices, additionalServices));
-			}
+	public EList<DecisionSupportComponent_AdditionalServiceDSSInfo> getAdditionalServices() {
+		if (additionalServices == null) {
+			additionalServices = new EObjectResolvingEList<DecisionSupportComponent_AdditionalServiceDSSInfo>(DecisionSupportComponent_AdditionalServiceDSSInfo.class, this, ImplementationPackage.DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO__ADDITIONAL_SERVICES);
 		}
 		return additionalServices;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public DecisionSupportComponent_AdditionalServiceDSSInfo basicGetAdditionalServices() {
-		return additionalServices;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setAdditionalServices(DecisionSupportComponent_AdditionalServiceDSSInfo newAdditionalServices) {
-		DecisionSupportComponent_AdditionalServiceDSSInfo oldAdditionalServices = additionalServices;
-		additionalServices = newAdditionalServices;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ImplementationPackage.DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO__ADDITIONAL_SERVICES, oldAdditionalServices, additionalServices));
 	}
 
 	/**
@@ -418,6 +414,16 @@ public class DecisionSupportComponent_BookingDSSInfoImpl extends MinimalEObjectI
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public void addAdditionalService(String additionalServiceName, long additionalServicePrice) {
+		additionalServices.add(new DecisionSupportComponent_AdditionalServiceDSSInfoImpl
+				(additionalServiceName, additionalServicePrice));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -434,8 +440,7 @@ public class DecisionSupportComponent_BookingDSSInfoImpl extends MinimalEObjectI
 			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO__CUSTOMER_SSN:
 				return getCustomerSSN();
 			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO__ADDITIONAL_SERVICES:
-				if (resolve) return getAdditionalServices();
-				return basicGetAdditionalServices();
+				return getAdditionalServices();
 			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO__CUSTOMER_FIRST_NAME:
 				return getCustomerFirstName();
 			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO__CUSTOMER_LAST_NAME:
@@ -451,6 +456,7 @@ public class DecisionSupportComponent_BookingDSSInfoImpl extends MinimalEObjectI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -461,16 +467,17 @@ public class DecisionSupportComponent_BookingDSSInfoImpl extends MinimalEObjectI
 				setRoomType((String)newValue);
 				return;
 			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO__ARRIVAL_DATE:
-				setArrivalDate((Date)newValue);
+				setArrivalDate((String)newValue);
 				return;
 			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO__DEPARTURE_DATE:
-				setDepartureDate((Date)newValue);
+				setDepartureDate((String)newValue);
 				return;
 			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO__CUSTOMER_SSN:
 				setCustomerSSN((String)newValue);
 				return;
 			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO__ADDITIONAL_SERVICES:
-				setAdditionalServices((DecisionSupportComponent_AdditionalServiceDSSInfo)newValue);
+				getAdditionalServices().clear();
+				getAdditionalServices().addAll((Collection<? extends DecisionSupportComponent_AdditionalServiceDSSInfo>)newValue);
 				return;
 			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO__CUSTOMER_FIRST_NAME:
 				setCustomerFirstName((String)newValue);
@@ -509,7 +516,7 @@ public class DecisionSupportComponent_BookingDSSInfoImpl extends MinimalEObjectI
 				setCustomerSSN(CUSTOMER_SSN_EDEFAULT);
 				return;
 			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO__ADDITIONAL_SERVICES:
-				setAdditionalServices((DecisionSupportComponent_AdditionalServiceDSSInfo)null);
+				getAdditionalServices().clear();
 				return;
 			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO__CUSTOMER_FIRST_NAME:
 				setCustomerFirstName(CUSTOMER_FIRST_NAME_EDEFAULT);
@@ -543,7 +550,7 @@ public class DecisionSupportComponent_BookingDSSInfoImpl extends MinimalEObjectI
 			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO__CUSTOMER_SSN:
 				return CUSTOMER_SSN_EDEFAULT == null ? customerSSN != null : !CUSTOMER_SSN_EDEFAULT.equals(customerSSN);
 			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO__ADDITIONAL_SERVICES:
-				return additionalServices != null;
+				return additionalServices != null && !additionalServices.isEmpty();
 			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO__CUSTOMER_FIRST_NAME:
 				return CUSTOMER_FIRST_NAME_EDEFAULT == null ? customerFirstName != null : !CUSTOMER_FIRST_NAME_EDEFAULT.equals(customerFirstName);
 			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO__CUSTOMER_LAST_NAME:
@@ -552,6 +559,21 @@ public class DecisionSupportComponent_BookingDSSInfoImpl extends MinimalEObjectI
 				return ADDRESS_EDEFAULT == null ? address != null : !ADDRESS_EDEFAULT.equals(address);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO___ADD_ADDITIONAL_SERVICE__STRING_LONG:
+				addAdditionalService((String)arguments.get(0), (Long)arguments.get(1));
+				return null;
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

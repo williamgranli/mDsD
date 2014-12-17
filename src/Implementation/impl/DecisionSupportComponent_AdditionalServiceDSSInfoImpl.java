@@ -52,7 +52,7 @@ public class DecisionSupportComponent_AdditionalServiceDSSInfoImpl extends Minim
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String ADDITIONAL_SERVICE_PRICE_EDEFAULT = null;
+	protected static final long ADDITIONAL_SERVICE_PRICE_EDEFAULT = 0L;
 	/**
 	 * The cached value of the '{@link #getAdditionalServicePrice() <em>Additional Service Price</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -61,7 +61,7 @@ public class DecisionSupportComponent_AdditionalServiceDSSInfoImpl extends Minim
 	 * @generated
 	 * @ordered
 	 */
-	protected String additionalServicePrice = ADDITIONAL_SERVICE_PRICE_EDEFAULT;
+	protected long additionalServicePrice = ADDITIONAL_SERVICE_PRICE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -70,6 +70,17 @@ public class DecisionSupportComponent_AdditionalServiceDSSInfoImpl extends Minim
 	 */
 	protected DecisionSupportComponent_AdditionalServiceDSSInfoImpl() {
 		super();
+	}
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	protected DecisionSupportComponent_AdditionalServiceDSSInfoImpl(String additionalServiceName, long additionalServicePrice) {
+		super();
+		this.additionalServiceName = additionalServiceName;
+		this.additionalServicePrice = additionalServicePrice;
 	}
 
 	/**
@@ -108,7 +119,7 @@ public class DecisionSupportComponent_AdditionalServiceDSSInfoImpl extends Minim
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getAdditionalServicePrice() {
+	public long getAdditionalServicePrice() {
 		return additionalServicePrice;
 	}
 
@@ -117,8 +128,8 @@ public class DecisionSupportComponent_AdditionalServiceDSSInfoImpl extends Minim
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAdditionalServicePrice(String newAdditionalServicePrice) {
-		String oldAdditionalServicePrice = additionalServicePrice;
+	public void setAdditionalServicePrice(long newAdditionalServicePrice) {
+		long oldAdditionalServicePrice = additionalServicePrice;
 		additionalServicePrice = newAdditionalServicePrice;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ImplementationPackage.DECISION_SUPPORT_COMPONENT_ADDITIONAL_SERVICE_DSS_INFO__ADDITIONAL_SERVICE_PRICE, oldAdditionalServicePrice, additionalServicePrice));
@@ -152,7 +163,7 @@ public class DecisionSupportComponent_AdditionalServiceDSSInfoImpl extends Minim
 				setAdditionalServiceName((String)newValue);
 				return;
 			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_ADDITIONAL_SERVICE_DSS_INFO__ADDITIONAL_SERVICE_PRICE:
-				setAdditionalServicePrice((String)newValue);
+				setAdditionalServicePrice((Long)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -187,7 +198,7 @@ public class DecisionSupportComponent_AdditionalServiceDSSInfoImpl extends Minim
 			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_ADDITIONAL_SERVICE_DSS_INFO__ADDITIONAL_SERVICE_NAME:
 				return ADDITIONAL_SERVICE_NAME_EDEFAULT == null ? additionalServiceName != null : !ADDITIONAL_SERVICE_NAME_EDEFAULT.equals(additionalServiceName);
 			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_ADDITIONAL_SERVICE_DSS_INFO__ADDITIONAL_SERVICE_PRICE:
-				return ADDITIONAL_SERVICE_PRICE_EDEFAULT == null ? additionalServicePrice != null : !ADDITIONAL_SERVICE_PRICE_EDEFAULT.equals(additionalServicePrice);
+				return additionalServicePrice != ADDITIONAL_SERVICE_PRICE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}

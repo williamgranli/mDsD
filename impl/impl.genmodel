@@ -62,6 +62,10 @@
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//DecisionSupportComponent_BookingDSSInfo/customerFirstName"/>
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//DecisionSupportComponent_BookingDSSInfo/customerLastName"/>
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//DecisionSupportComponent_BookingDSSInfo/address"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//DecisionSupportComponent_BookingDSSInfo/addAdditionalService">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//DecisionSupportComponent_BookingDSSInfo/addAdditionalService/additionalServiceName"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//DecisionSupportComponent_BookingDSSInfo/addAdditionalService/additionalServicePrice"/>
+      </genOperations>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//DecisionSupportComponent_AdditionalServiceDSSInfo">
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//DecisionSupportComponent_AdditionalServiceDSSInfo/additionalServiceName"/>

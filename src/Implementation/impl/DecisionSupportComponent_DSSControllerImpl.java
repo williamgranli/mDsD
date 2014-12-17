@@ -12,12 +12,14 @@ import Implementation.ImplementationPackage;
 import Implementation.OccupancyComponent_IOccupancyDecision;
 import Implementation.RoomComponent_IRoomDecision;
 import java.lang.reflect.InvocationTargetException;
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -80,34 +82,34 @@ public class DecisionSupportComponent_DSSControllerImpl extends MinimalEObjectIm
 	protected BookingComponent_IBookingDecision iBookingDecision;
 
 	/**
-	 * The cached value of the '{@link #getOccupancyDSSInfo() <em>Occupancy DSS Info</em>}' reference.
+	 * The cached value of the '{@link #getOccupancyDSSInfo() <em>Occupancy DSS Info</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getOccupancyDSSInfo()
 	 * @generated
 	 * @ordered
 	 */
-	protected DecisionSupportComponent_OccupancyDSSInfo occupancyDSSInfo;
+	protected EList<DecisionSupportComponent_OccupancyDSSInfo> occupancyDSSInfo;
 
 	/**
-	 * The cached value of the '{@link #getAdditionalServiceDSSInfo() <em>Additional Service DSS Info</em>}' reference.
+	 * The cached value of the '{@link #getAdditionalServiceDSSInfo() <em>Additional Service DSS Info</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getAdditionalServiceDSSInfo()
 	 * @generated
 	 * @ordered
 	 */
-	protected DecisionSupportComponent_AdditionalServiceDSSInfo additionalServiceDSSInfo;
+	protected EList<DecisionSupportComponent_AdditionalServiceDSSInfo> additionalServiceDSSInfo;
 
 	/**
-	 * The cached value of the '{@link #getBookingDSSInfo() <em>Booking DSS Info</em>}' reference.
+	 * The cached value of the '{@link #getBookingDSSInfo() <em>Booking DSS Info</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getBookingDSSInfo()
 	 * @generated
 	 * @ordered
 	 */
-	protected DecisionSupportComponent_BookingDSSInfo bookingDSSInfo;
+	protected EList<DecisionSupportComponent_BookingDSSInfo> bookingDSSInfo;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -285,14 +287,9 @@ public class DecisionSupportComponent_DSSControllerImpl extends MinimalEObjectIm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DecisionSupportComponent_OccupancyDSSInfo getOccupancyDSSInfo() {
-		if (occupancyDSSInfo != null && occupancyDSSInfo.eIsProxy()) {
-			InternalEObject oldOccupancyDSSInfo = (InternalEObject)occupancyDSSInfo;
-			occupancyDSSInfo = (DecisionSupportComponent_OccupancyDSSInfo)eResolveProxy(oldOccupancyDSSInfo);
-			if (occupancyDSSInfo != oldOccupancyDSSInfo) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__OCCUPANCY_DSS_INFO, oldOccupancyDSSInfo, occupancyDSSInfo));
-			}
+	public EList<DecisionSupportComponent_OccupancyDSSInfo> getOccupancyDSSInfo() {
+		if (occupancyDSSInfo == null) {
+			occupancyDSSInfo = new EObjectResolvingEList<DecisionSupportComponent_OccupancyDSSInfo>(DecisionSupportComponent_OccupancyDSSInfo.class, this, ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__OCCUPANCY_DSS_INFO);
 		}
 		return occupancyDSSInfo;
 	}
@@ -302,35 +299,9 @@ public class DecisionSupportComponent_DSSControllerImpl extends MinimalEObjectIm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DecisionSupportComponent_OccupancyDSSInfo basicGetOccupancyDSSInfo() {
-		return occupancyDSSInfo;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setOccupancyDSSInfo(DecisionSupportComponent_OccupancyDSSInfo newOccupancyDSSInfo) {
-		DecisionSupportComponent_OccupancyDSSInfo oldOccupancyDSSInfo = occupancyDSSInfo;
-		occupancyDSSInfo = newOccupancyDSSInfo;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__OCCUPANCY_DSS_INFO, oldOccupancyDSSInfo, occupancyDSSInfo));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public DecisionSupportComponent_AdditionalServiceDSSInfo getAdditionalServiceDSSInfo() {
-		if (additionalServiceDSSInfo != null && additionalServiceDSSInfo.eIsProxy()) {
-			InternalEObject oldAdditionalServiceDSSInfo = (InternalEObject)additionalServiceDSSInfo;
-			additionalServiceDSSInfo = (DecisionSupportComponent_AdditionalServiceDSSInfo)eResolveProxy(oldAdditionalServiceDSSInfo);
-			if (additionalServiceDSSInfo != oldAdditionalServiceDSSInfo) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__ADDITIONAL_SERVICE_DSS_INFO, oldAdditionalServiceDSSInfo, additionalServiceDSSInfo));
-			}
+	public EList<DecisionSupportComponent_AdditionalServiceDSSInfo> getAdditionalServiceDSSInfo() {
+		if (additionalServiceDSSInfo == null) {
+			additionalServiceDSSInfo = new EObjectResolvingEList<DecisionSupportComponent_AdditionalServiceDSSInfo>(DecisionSupportComponent_AdditionalServiceDSSInfo.class, this, ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__ADDITIONAL_SERVICE_DSS_INFO);
 		}
 		return additionalServiceDSSInfo;
 	}
@@ -340,58 +311,11 @@ public class DecisionSupportComponent_DSSControllerImpl extends MinimalEObjectIm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DecisionSupportComponent_AdditionalServiceDSSInfo basicGetAdditionalServiceDSSInfo() {
-		return additionalServiceDSSInfo;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setAdditionalServiceDSSInfo(DecisionSupportComponent_AdditionalServiceDSSInfo newAdditionalServiceDSSInfo) {
-		DecisionSupportComponent_AdditionalServiceDSSInfo oldAdditionalServiceDSSInfo = additionalServiceDSSInfo;
-		additionalServiceDSSInfo = newAdditionalServiceDSSInfo;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__ADDITIONAL_SERVICE_DSS_INFO, oldAdditionalServiceDSSInfo, additionalServiceDSSInfo));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public DecisionSupportComponent_BookingDSSInfo getBookingDSSInfo() {
-		if (bookingDSSInfo != null && bookingDSSInfo.eIsProxy()) {
-			InternalEObject oldBookingDSSInfo = (InternalEObject)bookingDSSInfo;
-			bookingDSSInfo = (DecisionSupportComponent_BookingDSSInfo)eResolveProxy(oldBookingDSSInfo);
-			if (bookingDSSInfo != oldBookingDSSInfo) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__BOOKING_DSS_INFO, oldBookingDSSInfo, bookingDSSInfo));
-			}
+	public EList<DecisionSupportComponent_BookingDSSInfo> getBookingDSSInfo() {
+		if (bookingDSSInfo == null) {
+			bookingDSSInfo = new EObjectResolvingEList<DecisionSupportComponent_BookingDSSInfo>(DecisionSupportComponent_BookingDSSInfo.class, this, ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__BOOKING_DSS_INFO);
 		}
 		return bookingDSSInfo;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public DecisionSupportComponent_BookingDSSInfo basicGetBookingDSSInfo() {
-		return bookingDSSInfo;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setBookingDSSInfo(DecisionSupportComponent_BookingDSSInfo newBookingDSSInfo) {
-		DecisionSupportComponent_BookingDSSInfo oldBookingDSSInfo = bookingDSSInfo;
-		bookingDSSInfo = newBookingDSSInfo;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__BOOKING_DSS_INFO, oldBookingDSSInfo, bookingDSSInfo));
 	}
 
 	/**
@@ -400,25 +324,35 @@ public class DecisionSupportComponent_DSSControllerImpl extends MinimalEObjectIm
 	 * @generated NOT
 	 */
 	public void getDSSData() {
-		if (bookingDSSInfo == null){
-			bookingDSSInfo =new EObjectResolvingEList<DecisionSupportComponent_BookingDSSInfo>(DecisionSupportComponent_BookingDSSInfo.class, this,
-					ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__BOOKINGS);
-		}
+//		if (bookingDSSInfo == null){
+//			bookingDSSInfo = new EObjectResolvingEList<DecisionSupportComponent_BookingDSSInfo>(DecisionSupportComponent_BookingDSSInfo.class, this,
+//					ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__BOOKINGS);
+//		}
+	
+
+
 		EList<String> dssInfo = iBookingDecision.getDSSInfo();
 		
 		for (String dssData: dssInfo){
 			String[] DSSDataList= dssData.split(";");
 			String[] DSSBookingList = DSSDataList[0].split(",");
 			String[] additionalService = DSSDataList[1].split(",");
-			DecisionSupportComponent_BookingDSSInfo bookingDSSInformation=new DecisionSupportComponent_BookingDSSInfo(DSSBookingList[0],
+			
+			
+			DecisionSupportComponent_BookingDSSInfo bookingDSSInformation = new DecisionSupportComponent_BookingDSSInfoImpl(DSSBookingList[0],
 					DSSBookingList[1],DSSBookingList[2],DSSBookingList[3],DSSBookingList[4],
-					DSSBookingList[5],DSSBookingList[6],DSSBookingList[7]);
+					DSSBookingList[5],DSSBookingList[6], Integer.parseInt(DSSBookingList[7]));
+			
+//			EList<String> DSSInfo = new EObjectResolvingEList<String>(BookingComponent_Booking.class, this, 
+//			ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER__BOOKINGS);		
+			
+			
 			EList<DecisionSupportComponent_AdditionalServiceDSSInfo> addServices = new EObjectResolvingEList<DecisionSupportComponent_AdditionalServiceDSSInfo>
-			(DecisionSupportComponent_AdditionalServiceDSSInfo.class, this, ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__BOOKINGS);
+			(DecisionSupportComponent_AdditionalServiceDSSInfo.class, this, ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__OCCUPANCY_DSS_INFO);
 			for (String addService:additionalService){
 				if(addService != null){
 					String[] addServiceList= addService.split(":");
-					bookingDSSInformation.addAdditionalService(addServiceList[0], addServiceList[1]);
+					bookingDSSInformation.addAdditionalService(addServiceList[0], Long.parseLong(addServiceList[1], 10));
 				}
 			}
 			bookingDSSInfo.add(bookingDSSInformation);
@@ -433,11 +367,11 @@ public class DecisionSupportComponent_DSSControllerImpl extends MinimalEObjectIm
 	 */
 	public EList<String> getAllRoomTypeFrequency() {
 		EList<String> roomTypeFrequency = new EObjectResolvingEList<String>(DecisionSupportComponent_DSSControllerImpl.class, this, 
-				ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__BOOKINGS);
+				ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__OCCUPANCY_DSS_INFO);
 
 		int[] count = new int[bookingDSSInfo.size()];
 		EList<String> roomTypes = new EObjectResolvingEList<String>(DecisionSupportComponent_DSSControllerImpl.class, this, 
-				ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__BOOKINGS);
+				ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__OCCUPANCY_DSS_INFO);
 
 
 		// Add all unique roomtypes to a list
@@ -491,11 +425,11 @@ public class DecisionSupportComponent_DSSControllerImpl extends MinimalEObjectIm
 	 */
 	public EList<String> getAllCustomerBookingFrequency() {
 		EList<String> customerBookingFrequency = new EObjectResolvingEList<String>(DecisionSupportComponent_DSSControllerImpl.class, this, 
-				ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__BOOKINGS);
+				ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__OCCUPANCY_DSS_INFO);
 
 		int[] count = new int[bookingDSSInfo.size()];
 		EList<String> customers = new EObjectResolvingEList<String>(DecisionSupportComponent_DSSControllerImpl.class, this, 
-				ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__BOOKINGS);
+				ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__OCCUPANCY_DSS_INFO);
 
 
 		// Add all unique customers to a list
@@ -531,16 +465,13 @@ public class DecisionSupportComponent_DSSControllerImpl extends MinimalEObjectIm
 	 * @generated NOT
 	 */
 	public void getDSSOccupancyInfo() {
-		if(dssOccupancyInfo == null){
-			dssOccupancyInfo = new EObjectResolvingEList<DecisionSupportComponent_OccupancyDSSInfo>(DecisionSupportComponent_OccupancyDSSInfo.class, this,
-					ImplementationPackage.BOOKING_COMPONENT_BOOKING_MANAGER__BOOKINGS);
-		}
+
 		String DSSOccupancyInformation = iOccupancyDecision.getDSSOccupancyInfo();
 		String[] DSSOccupancyList = DSSOccupancyInformation.split(";");
 		for (String DSSOccupancy: DSSOccupancyList){
 			String[] dssOccupanList = DSSOccupancy.split(",");
-			dssOccupancyInfo.add(new DecisionSupportComponent_OccupancyDSSInfo(dssOccupanList[0],dssOccupanList[1]
-					,dssOccupanList[2],dssOccupanList[3]));
+			occupancyDSSInfo.add(new DecisionSupportComponent_OccupancyDSSInfoImpl(Integer.parseInt(dssOccupanList[0]),dssOccupanList[1]
+					,dssOccupanList[2],Integer.parseInt(dssOccupanList[3])));
 		}
 	}
 
@@ -549,16 +480,17 @@ public class DecisionSupportComponent_DSSControllerImpl extends MinimalEObjectIm
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public int getNumberOfOccupanciesOfRoom(String roomNumber) {
+	public int getNumberOfOccupanciesOfRoom(int roomNumber) {
 		int roomFrequency = 0;
-		for(DecisionSupportComponent_OccupancyDSSInfo dssOccuInfo: dssOccupancyInfo){
-			String roomNo = dssOccuInfo.getRoomNumber();
-			if(roomNo.equals(roomNumber)){
+		for(DecisionSupportComponent_OccupancyDSSInfo dssOccuInfo: occupancyDSSInfo){
+			int roomNo = dssOccuInfo.getRoomNumber();
+			if(roomNo == roomNumber){
 				roomFrequency ++;
 			}
 		}
 		return roomFrequency;
 	}
+
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -613,14 +545,11 @@ public class DecisionSupportComponent_DSSControllerImpl extends MinimalEObjectIm
 				if (resolve) return getIBookingDecision();
 				return basicGetIBookingDecision();
 			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__OCCUPANCY_DSS_INFO:
-				if (resolve) return getOccupancyDSSInfo();
-				return basicGetOccupancyDSSInfo();
+				return getOccupancyDSSInfo();
 			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__ADDITIONAL_SERVICE_DSS_INFO:
-				if (resolve) return getAdditionalServiceDSSInfo();
-				return basicGetAdditionalServiceDSSInfo();
+				return getAdditionalServiceDSSInfo();
 			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__BOOKING_DSS_INFO:
-				if (resolve) return getBookingDSSInfo();
-				return basicGetBookingDSSInfo();
+				return getBookingDSSInfo();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -647,13 +576,16 @@ public class DecisionSupportComponent_DSSControllerImpl extends MinimalEObjectIm
 				setIBookingDecision((BookingComponent_IBookingDecision)newValue);
 				return;
 			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__OCCUPANCY_DSS_INFO:
-				setOccupancyDSSInfo((DecisionSupportComponent_OccupancyDSSInfo)newValue);
+				getOccupancyDSSInfo().clear();
+				getOccupancyDSSInfo().addAll((Collection<? extends DecisionSupportComponent_OccupancyDSSInfo>)newValue);
 				return;
 			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__ADDITIONAL_SERVICE_DSS_INFO:
-				setAdditionalServiceDSSInfo((DecisionSupportComponent_AdditionalServiceDSSInfo)newValue);
+				getAdditionalServiceDSSInfo().clear();
+				getAdditionalServiceDSSInfo().addAll((Collection<? extends DecisionSupportComponent_AdditionalServiceDSSInfo>)newValue);
 				return;
 			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__BOOKING_DSS_INFO:
-				setBookingDSSInfo((DecisionSupportComponent_BookingDSSInfo)newValue);
+				getBookingDSSInfo().clear();
+				getBookingDSSInfo().addAll((Collection<? extends DecisionSupportComponent_BookingDSSInfo>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -680,13 +612,13 @@ public class DecisionSupportComponent_DSSControllerImpl extends MinimalEObjectIm
 				setIBookingDecision((BookingComponent_IBookingDecision)null);
 				return;
 			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__OCCUPANCY_DSS_INFO:
-				setOccupancyDSSInfo((DecisionSupportComponent_OccupancyDSSInfo)null);
+				getOccupancyDSSInfo().clear();
 				return;
 			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__ADDITIONAL_SERVICE_DSS_INFO:
-				setAdditionalServiceDSSInfo((DecisionSupportComponent_AdditionalServiceDSSInfo)null);
+				getAdditionalServiceDSSInfo().clear();
 				return;
 			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__BOOKING_DSS_INFO:
-				setBookingDSSInfo((DecisionSupportComponent_BookingDSSInfo)null);
+				getBookingDSSInfo().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -709,11 +641,11 @@ public class DecisionSupportComponent_DSSControllerImpl extends MinimalEObjectIm
 			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__IBOOKING_DECISION:
 				return iBookingDecision != null;
 			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__OCCUPANCY_DSS_INFO:
-				return occupancyDSSInfo != null;
+				return occupancyDSSInfo != null && !occupancyDSSInfo.isEmpty();
 			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__ADDITIONAL_SERVICE_DSS_INFO:
-				return additionalServiceDSSInfo != null;
+				return additionalServiceDSSInfo != null && !additionalServiceDSSInfo.isEmpty();
 			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__BOOKING_DSS_INFO:
-				return bookingDSSInfo != null;
+				return bookingDSSInfo != null && !bookingDSSInfo.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -744,7 +676,7 @@ public class DecisionSupportComponent_DSSControllerImpl extends MinimalEObjectIm
 				getDSSOccupancyInfo();
 				return null;
 			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER___GET_NUMBER_OF_OCCUPANCIES_OF_ROOM__STRING:
-				return getNumberOfOccupanciesOfRoom((String)arguments.get(0));
+				return getNumberOfOccupanciesOfRoom((Integer)arguments.get(0));
 			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER___COUNT_CUSTOMER_BOOKING__ELIST_STRING:
 				return countCustomerBooking((EList<DecisionSupportComponent_BookingDSSInfo>)arguments.get(0), (String)arguments.get(1));
 			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER___GET_POSITION_IN_LIST__ELIST_STRING:

@@ -241,7 +241,7 @@ public interface ImplementationPackage extends EPackage {
 	int DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO__CUSTOMER_SSN = 4;
 
 	/**
-	 * The feature id for the '<em><b>Additional Services</b></em>' reference.
+	 * The feature id for the '<em><b>Additional Services</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -286,13 +286,22 @@ public interface ImplementationPackage extends EPackage {
 	int DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO_FEATURE_COUNT = 9;
 
 	/**
+	 * The operation id for the '<em>Add Additional Service</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO___ADD_ADDITIONAL_SERVICE__STRING_LONG = 0;
+
+	/**
 	 * The number of operations of the '<em>Decision Support Component Booking DSS Info</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO_OPERATION_COUNT = 0;
+	int DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO_OPERATION_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link Implementation.impl.DecisionSupportComponent_DSSControllerImpl <em>Decision Support Component DSS Controller</em>}' class.
@@ -437,7 +446,7 @@ public interface ImplementationPackage extends EPackage {
 	int DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__IBOOKING_DECISION = DECISION_SUPPORT_COMPONENT_IDECISION_SUPPORT_FEATURE_COUNT + 3;
 
 	/**
-	 * The feature id for the '<em><b>Occupancy DSS Info</b></em>' reference.
+	 * The feature id for the '<em><b>Occupancy DSS Info</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -446,7 +455,7 @@ public interface ImplementationPackage extends EPackage {
 	int DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__OCCUPANCY_DSS_INFO = DECISION_SUPPORT_COMPONENT_IDECISION_SUPPORT_FEATURE_COUNT + 4;
 
 	/**
-	 * The feature id for the '<em><b>Additional Service DSS Info</b></em>' reference.
+	 * The feature id for the '<em><b>Additional Service DSS Info</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -455,7 +464,7 @@ public interface ImplementationPackage extends EPackage {
 	int DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__ADDITIONAL_SERVICE_DSS_INFO = DECISION_SUPPORT_COMPONENT_IDECISION_SUPPORT_FEATURE_COUNT + 5;
 
 	/**
-	 * The feature id for the '<em><b>Booking DSS Info</b></em>' reference.
+	 * The feature id for the '<em><b>Booking DSS Info</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4033,11 +4042,11 @@ public interface ImplementationPackage extends EPackage {
 	EOperation getDecisionSupportComponent_IDecisionSupport__GetDSSOccupancyInfo();
 
 	/**
-	 * Returns the meta object for the '{@link Implementation.DecisionSupportComponent_IDecisionSupport#getNumberOfOccupanciesOfRoom(java.lang.String) <em>Get Number Of Occupancies Of Room</em>}' operation.
+	 * Returns the meta object for the '{@link Implementation.DecisionSupportComponent_IDecisionSupport#getNumberOfOccupanciesOfRoom(int) <em>Get Number Of Occupancies Of Room</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Number Of Occupancies Of Room</em>' operation.
-	 * @see Implementation.DecisionSupportComponent_IDecisionSupport#getNumberOfOccupanciesOfRoom(java.lang.String)
+	 * @see Implementation.DecisionSupportComponent_IDecisionSupport#getNumberOfOccupanciesOfRoom(int)
 	 * @generated
 	 */
 	EOperation getDecisionSupportComponent_IDecisionSupport__GetNumberOfOccupanciesOfRoom__String();
@@ -4108,10 +4117,10 @@ public interface ImplementationPackage extends EPackage {
 	EAttribute getDecisionSupportComponent_BookingDSSInfo_CustomerSSN();
 
 	/**
-	 * Returns the meta object for the reference '{@link Implementation.DecisionSupportComponent_BookingDSSInfo#getAdditionalServices <em>Additional Services</em>}'.
+	 * Returns the meta object for the reference list '{@link Implementation.DecisionSupportComponent_BookingDSSInfo#getAdditionalServices <em>Additional Services</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Additional Services</em>'.
+	 * @return the meta object for the reference list '<em>Additional Services</em>'.
 	 * @see Implementation.DecisionSupportComponent_BookingDSSInfo#getAdditionalServices()
 	 * @see #getDecisionSupportComponent_BookingDSSInfo()
 	 * @generated
@@ -4150,6 +4159,16 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getDecisionSupportComponent_BookingDSSInfo_Address();
+
+	/**
+	 * Returns the meta object for the '{@link Implementation.DecisionSupportComponent_BookingDSSInfo#addAdditionalService(java.lang.String, long) <em>Add Additional Service</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Add Additional Service</em>' operation.
+	 * @see Implementation.DecisionSupportComponent_BookingDSSInfo#addAdditionalService(java.lang.String, long)
+	 * @generated
+	 */
+	EOperation getDecisionSupportComponent_BookingDSSInfo__AddAdditionalService__String_long();
 
 	/**
 	 * Returns the meta object for class '{@link Implementation.DecisionSupportComponent_DSSController <em>Decision Support Component DSS Controller</em>}'.
@@ -4206,10 +4225,10 @@ public interface ImplementationPackage extends EPackage {
 	EReference getDecisionSupportComponent_DSSController_IBookingDecision();
 
 	/**
-	 * Returns the meta object for the reference '{@link Implementation.DecisionSupportComponent_DSSController#getOccupancyDSSInfo <em>Occupancy DSS Info</em>}'.
+	 * Returns the meta object for the reference list '{@link Implementation.DecisionSupportComponent_DSSController#getOccupancyDSSInfo <em>Occupancy DSS Info</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Occupancy DSS Info</em>'.
+	 * @return the meta object for the reference list '<em>Occupancy DSS Info</em>'.
 	 * @see Implementation.DecisionSupportComponent_DSSController#getOccupancyDSSInfo()
 	 * @see #getDecisionSupportComponent_DSSController()
 	 * @generated
@@ -4217,10 +4236,10 @@ public interface ImplementationPackage extends EPackage {
 	EReference getDecisionSupportComponent_DSSController_OccupancyDSSInfo();
 
 	/**
-	 * Returns the meta object for the reference '{@link Implementation.DecisionSupportComponent_DSSController#getAdditionalServiceDSSInfo <em>Additional Service DSS Info</em>}'.
+	 * Returns the meta object for the reference list '{@link Implementation.DecisionSupportComponent_DSSController#getAdditionalServiceDSSInfo <em>Additional Service DSS Info</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Additional Service DSS Info</em>'.
+	 * @return the meta object for the reference list '<em>Additional Service DSS Info</em>'.
 	 * @see Implementation.DecisionSupportComponent_DSSController#getAdditionalServiceDSSInfo()
 	 * @see #getDecisionSupportComponent_DSSController()
 	 * @generated
@@ -4228,10 +4247,10 @@ public interface ImplementationPackage extends EPackage {
 	EReference getDecisionSupportComponent_DSSController_AdditionalServiceDSSInfo();
 
 	/**
-	 * Returns the meta object for the reference '{@link Implementation.DecisionSupportComponent_DSSController#getBookingDSSInfo <em>Booking DSS Info</em>}'.
+	 * Returns the meta object for the reference list '{@link Implementation.DecisionSupportComponent_DSSController#getBookingDSSInfo <em>Booking DSS Info</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Booking DSS Info</em>'.
+	 * @return the meta object for the reference list '<em>Booking DSS Info</em>'.
 	 * @see Implementation.DecisionSupportComponent_DSSController#getBookingDSSInfo()
 	 * @see #getDecisionSupportComponent_DSSController()
 	 * @generated
@@ -6754,7 +6773,7 @@ public interface ImplementationPackage extends EPackage {
 		EAttribute DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO__CUSTOMER_SSN = eINSTANCE.getDecisionSupportComponent_BookingDSSInfo_CustomerSSN();
 
 		/**
-		 * The meta object literal for the '<em><b>Additional Services</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Additional Services</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -6784,6 +6803,14 @@ public interface ImplementationPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO__ADDRESS = eINSTANCE.getDecisionSupportComponent_BookingDSSInfo_Address();
+
+		/**
+		 * The meta object literal for the '<em><b>Add Additional Service</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO___ADD_ADDITIONAL_SERVICE__STRING_LONG = eINSTANCE.getDecisionSupportComponent_BookingDSSInfo__AddAdditionalService__String_long();
 
 		/**
 		 * The meta object literal for the '{@link Implementation.impl.DecisionSupportComponent_DSSControllerImpl <em>Decision Support Component DSS Controller</em>}' class.
@@ -6828,7 +6855,7 @@ public interface ImplementationPackage extends EPackage {
 		EReference DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__IBOOKING_DECISION = eINSTANCE.getDecisionSupportComponent_DSSController_IBookingDecision();
 
 		/**
-		 * The meta object literal for the '<em><b>Occupancy DSS Info</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Occupancy DSS Info</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -6836,7 +6863,7 @@ public interface ImplementationPackage extends EPackage {
 		EReference DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__OCCUPANCY_DSS_INFO = eINSTANCE.getDecisionSupportComponent_DSSController_OccupancyDSSInfo();
 
 		/**
-		 * The meta object literal for the '<em><b>Additional Service DSS Info</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Additional Service DSS Info</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -6844,7 +6871,7 @@ public interface ImplementationPackage extends EPackage {
 		EReference DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__ADDITIONAL_SERVICE_DSS_INFO = eINSTANCE.getDecisionSupportComponent_DSSController_AdditionalServiceDSSInfo();
 
 		/**
-		 * The meta object literal for the '<em><b>Booking DSS Info</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Booking DSS Info</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

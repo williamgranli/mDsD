@@ -2,7 +2,7 @@
  */
 package Implementation;
 
-import java.util.Date;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -92,12 +92,12 @@ public interface DecisionSupportComponent_BookingDSSInfo extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Arrival Date</em>' attribute.
-	 * @see #setArrivalDate(Date)
+	 * @see #setArrivalDate(String)
 	 * @see Implementation.ImplementationPackage#getDecisionSupportComponent_BookingDSSInfo_ArrivalDate()
-	 * @model required="true" ordered="false"
+	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
-	Date getArrivalDate();
+	String getArrivalDate();
 
 	/**
 	 * Sets the value of the '{@link Implementation.DecisionSupportComponent_BookingDSSInfo#getArrivalDate <em>Arrival Date</em>}' attribute.
@@ -107,7 +107,7 @@ public interface DecisionSupportComponent_BookingDSSInfo extends EObject {
 	 * @see #getArrivalDate()
 	 * @generated
 	 */
-	void setArrivalDate(Date value);
+	void setArrivalDate(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Departure Date</b></em>' attribute.
@@ -118,12 +118,12 @@ public interface DecisionSupportComponent_BookingDSSInfo extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Departure Date</em>' attribute.
-	 * @see #setDepartureDate(Date)
+	 * @see #setDepartureDate(String)
 	 * @see Implementation.ImplementationPackage#getDecisionSupportComponent_BookingDSSInfo_DepartureDate()
-	 * @model required="true" ordered="false"
+	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
-	Date getDepartureDate();
+	String getDepartureDate();
 
 	/**
 	 * Sets the value of the '{@link Implementation.DecisionSupportComponent_BookingDSSInfo#getDepartureDate <em>Departure Date</em>}' attribute.
@@ -133,7 +133,7 @@ public interface DecisionSupportComponent_BookingDSSInfo extends EObject {
 	 * @see #getDepartureDate()
 	 * @generated
 	 */
-	void setDepartureDate(Date value);
+	void setDepartureDate(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Customer SSN</b></em>' attribute.
@@ -162,30 +162,20 @@ public interface DecisionSupportComponent_BookingDSSInfo extends EObject {
 	void setCustomerSSN(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Additional Services</b></em>' reference.
+	 * Returns the value of the '<em><b>Additional Services</b></em>' reference list.
+	 * The list contents are of type {@link Implementation.DecisionSupportComponent_AdditionalServiceDSSInfo}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Additional Services</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Additional Services</em>' reference.
-	 * @see #setAdditionalServices(DecisionSupportComponent_AdditionalServiceDSSInfo)
+	 * @return the value of the '<em>Additional Services</em>' reference list.
 	 * @see Implementation.ImplementationPackage#getDecisionSupportComponent_BookingDSSInfo_AdditionalServices()
-	 * @model required="true" ordered="false"
+	 * @model ordered="false"
 	 * @generated
 	 */
-	DecisionSupportComponent_AdditionalServiceDSSInfo getAdditionalServices();
-
-	/**
-	 * Sets the value of the '{@link Implementation.DecisionSupportComponent_BookingDSSInfo#getAdditionalServices <em>Additional Services</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Additional Services</em>' reference.
-	 * @see #getAdditionalServices()
-	 * @generated
-	 */
-	void setAdditionalServices(DecisionSupportComponent_AdditionalServiceDSSInfo value);
+	EList<DecisionSupportComponent_AdditionalServiceDSSInfo> getAdditionalServices();
 
 	/**
 	 * Returns the value of the '<em><b>Customer First Name</b></em>' attribute.
@@ -264,4 +254,12 @@ public interface DecisionSupportComponent_BookingDSSInfo extends EObject {
 	 * @generated
 	 */
 	void setAddress(String value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model additionalServiceNameDataType="org.eclipse.uml2.types.String" additionalServiceNameRequired="true" additionalServiceNameOrdered="false" additionalServicePriceRequired="true" additionalServicePriceOrdered="false"
+	 * @generated
+	 */
+	void addAdditionalService(String additionalServiceName, long additionalServicePrice);
 } // DecisionSupportComponent_BookingDSSInfo

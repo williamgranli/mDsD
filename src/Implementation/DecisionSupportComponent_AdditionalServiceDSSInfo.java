@@ -58,12 +58,12 @@ public interface DecisionSupportComponent_AdditionalServiceDSSInfo extends EObje
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Additional Service Price</em>' attribute.
-	 * @see #setAdditionalServicePrice(String)
+	 * @see #setAdditionalServicePrice(long)
 	 * @see Implementation.ImplementationPackage#getDecisionSupportComponent_AdditionalServiceDSSInfo_AdditionalServicePrice()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
+	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	String getAdditionalServicePrice();
+	long getAdditionalServicePrice();
 
 	/**
 	 * Sets the value of the '{@link Implementation.DecisionSupportComponent_AdditionalServiceDSSInfo#getAdditionalServicePrice <em>Additional Service Price</em>}' attribute.
@@ -73,5 +73,5 @@ public interface DecisionSupportComponent_AdditionalServiceDSSInfo extends EObje
 	 * @see #getAdditionalServicePrice()
 	 * @generated
 	 */
-	void setAdditionalServicePrice(String value);
+	void setAdditionalServicePrice(long value);
 } // DecisionSupportComponent_AdditionalServiceDSSInfo
