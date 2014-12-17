@@ -45,18 +45,18 @@ public class occupancyTests {
 	public void checkIn() {
 	  	booking.getBookings().clear();
     	org.junit.Assert.assertTrue(booking.getBookings().size() == 0);
-    	booking.makeBooking("SingleRoom", new Date(), new Date(), "880923", "John", "Burchell", "MyHouse", "123456789", "123", "september", "2015");
+    	String bookingReference = booking.makeBooking(new Date(), new Date(), "880923", "John", "Burchell", "MyHouse", "123456789", "123", "september", "2015");
     	org.junit.Assert.assertTrue(booking.getBookings().size() == 1);
 		
 		occupancy.getOccupancy().clear();
 		org.junit.Assert.assertTrue(occupancy.getOccupancy().size() == 0);
 		
-		occupancy.checkInGuest("testReference1", "William", "Granli", "Suite", "William", "Granli");
-		occupancy.checkInGuest("testReference1", "Sofia", "Cao", "Suite", "William", "Granli");
-		occupancy.checkInGuest("testReference1", "Patrik", "Bäckström", "Suite", "William", "Granli");
-		occupancy.checkInGuest("testReference1", "John", "Burchell", "Suite", "William", "Granli");
-		occupancy.checkInGuest("testReference1", "Amirab", "Madna", "Suite", "William", "Granli");
-		occupancy.checkInGuest("testReference1", "Ioannis", "Kellaris", "Suite", "William", "Granli");
+		occupancy.checkInGuest(bookingReference, "William", "Granli", "Suite", "William", "Granli");
+		occupancy.checkInGuest(bookingReference, "Sofia", "Cao", "Suite", "William", "Granli");
+		occupancy.checkInGuest(bookingReference, "Patrik", "Bäckström", "Suite", "William", "Granli");
+		occupancy.checkInGuest(bookingReference, "John", "Burchell", "Suite", "William", "Granli");
+		occupancy.checkInGuest(bookingReference, "Amirab", "Madna", "Suite", "William", "Granli");
+		occupancy.checkInGuest(bookingReference, "Ioannis", "Kellaris", "Suite", "William", "Granli");
 		
 		org.junit.Assert.assertTrue(occupancy.getOccupancy().size() == 6);
 
