@@ -12,10 +12,13 @@ import Implementation.ImplementationPackage;
 import Implementation.PaymentComponent_IPayment;
 import Implementation.RoomComponent_IRoomInformation;
 import Implementation.StaffComponent_IAuthentication;
+
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 import java.util.Date;
+
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -321,7 +324,7 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 	public EList<String> searchForBooking(String bookingReference) {
 		Date todaysDate = new Date();
 
-		EList<String> bookingInfo = new EObjectResolvingEList<String>(BookingComponent_Booking.class, this, ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER__BOOKINGS);
+		EList<String> bookingInfo = new BasicEList<String>();
 
 		for(BookingComponent_Booking booking : bookings){
 
@@ -401,8 +404,7 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 	 * @generated NOT
 	 */
 	public EList<String> getDSSInfo() {
-		EList<String> DSSInfo = new EObjectResolvingEList<String>(BookingComponent_Booking.class, this, 
-				ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER__BOOKINGS);
+		EList<String> DSSInfo = new BasicEList<String>();
 		for (BookingComponent_Booking booking: bookings){
 			String currentBookings=booking.getRoomTypesInBooking()+","+booking.getArrivalDate()+","+booking.getDepartureDate()+","
 					+booking.getPaymentDetails().getSsn()+","+booking.getPaymentDetails().getFirstName()+","
@@ -613,34 +615,62 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean bookingAvailable(Date startDate, Date endDate) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		iRoomInformation = getIRoomInformation();
+		
+		//This count should come from room counts
+		int count = 20;
+		int bookingsDuringDate = findBookingsByDate(startDate, endDate);
+		
+		return count - bookingsDuringDate > 0;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public int findBookingsByDateAndType(Date startDate, Date endDate, String roomType) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		EList<BookingComponent_Booking> bookingsInDate = new BasicEList<BookingComponent_Booking>();
+		
+		for(BookingComponent_Booking booking : bookings) {
+			
+			//Add all bookings which are greater than, or equal to start date and add all dates which
+			//Are less than or equal to end date
+			if((booking.getArrivalDate().after(startDate) || booking.getArrivalDate().equals(startDate)) 
+					&& (booking.getDepartureDate().before(endDate) || booking.getDepartureDate().equals(endDate))) {
+				
+				//If the type is the same as the room, add
+				String types = booking.getRoomTypesInBooking();
+				types.matches("(" + roomType + ")");
+				bookingsInDate.add(booking);
+			}
+		}
+		
+		return bookingsInDate.size();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public int findBookingsByDate(Date startDate, Date endDate) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		EList<BookingComponent_Booking> bookingsInDate = new BasicEList<BookingComponent_Booking>();
+		
+		for(BookingComponent_Booking booking : bookings) {
+			
+			//Add all bookings which are greater than, or equal to start date and add all dates which
+			//Are less than or equal to end date
+			if((booking.getArrivalDate().after(startDate) || booking.getArrivalDate().equals(startDate)) 
+					&& (booking.getDepartureDate().before(endDate) || booking.getDepartureDate().equals(endDate))) {
+				bookingsInDate.add(booking);
+			}
+		}
+		
+		return bookingsInDate.size();
 	}
 
 	/**

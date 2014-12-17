@@ -61,8 +61,11 @@ public class bookingTests {
     @Test
     public void makeBooking() {
     	setupRoomHandler();
+    	long theFuture = System.currentTimeMillis() + (86400 * 7 * 1000);
+    	Date nextWeek = new Date(theFuture);
+    	
     	org.junit.Assert.assertTrue(booking.getBookings().size() == 0);
-    	booking.makeBooking(new Date(), new Date(), "880923", "John", "Burchell", "MyHouse", "123456789", "123", "september", "2015");
+    	booking.makeBooking(new Date(), nextWeek, "880923", "John", "Burchell", "MyHouse", "123456789", "123", "september", "2015");
     	org.junit.Assert.assertTrue(booking.getBookings().size() == 1);
     }
     
@@ -82,7 +85,6 @@ public class bookingTests {
     	String referenceNumber = booking.makeBooking(new Date(), new Date(2014, 12, 31), "880923", "John", "Burchell", "MyHouse", "123456789", "123", "september", "2015");
     	booking.cancelBooking(referenceNumber);
     	org.junit.Assert.assertFalse((booking.findBooking(referenceNumber) == null));
-    	
     }
     
     @Test
@@ -147,6 +149,21 @@ public class bookingTests {
     @Test
     public void generateQuote() {
     	//TODO - Fix once implemented
+    }
+    
+    @Test
+    public void searchForBooking() {
+    	//TODO - Implement
+    }
+    
+    @Test
+    public void findBookingsByDate() {
+    	//TODO - Implement
+    }
+    
+    @Test
+    public void findBookingsByDateAndType() {
+    	//TODO - Implement
     }
 
     @Ignore
