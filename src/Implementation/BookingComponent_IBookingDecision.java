@@ -15,4 +15,12 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface BookingComponent_IBookingDecision extends EObject {
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model kind="operation" dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
+	 * @generated
+	 */
+	String getDSSInfo();
 } // BookingComponent_IBookingDecision

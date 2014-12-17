@@ -486,7 +486,7 @@
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_NefY0oR-EeSYk4YdkyNYLQ" value="*"/>
         </ownedAttribute>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_lU-HkIRDEeSY_7x5FILowQ" name="findEvent">
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_prpM4IRDEeSY_7x5FILowQ" name="date">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_prpM4IRDEeSY_7x5FILowQ" name="dateTime">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
           </ownedParameter>
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_7gapsIR9EeSYk4YdkyNYLQ" name="location">
@@ -498,7 +498,10 @@
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_GHA08IR-EeSYk4YdkyNYLQ" name="dateTime">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
           </ownedParameter>
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_IfLmMIR-EeSYk4YdkyNYLQ" name="returnValue" type="_BKP58HvAEeSAJb-qAtupNw" direction="return"/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_IfLmMIR-EeSYk4YdkyNYLQ" name="returnValue" type="_BKP58HvAEeSAJb-qAtupNw" direction="return">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_IGtAAIXXEeS_xs5TLHXXQQ"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_IGtnEIXXEeS_xs5TLHXXQQ" value="*"/>
+          </ownedParameter>
         </ownedOperation>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_-LzYQISFEeSSp9A1SvY27w" name="createEvent" visibility="public">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_-LzYQoSFEeSSp9A1SvY27w" name="dateTime">
@@ -535,7 +538,7 @@
           </ownedParameter>
         </ownedOperation>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_w7rdMIUNEeSnMfn5T1z3aA" name="removeEvent" visibility="public">
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_1_LMQIUNEeSnMfn5T1z3aA" name="date">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_1_LMQIUNEeSnMfn5T1z3aA" name="dateTime">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
           </ownedParameter>
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_3IbTUIUNEeSnMfn5T1z3aA" name="location">
@@ -546,7 +549,7 @@
           </ownedParameter>
         </ownedOperation>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_7T_74IUNEeSnMfn5T1z3aA" name="removeEvents">
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="__JJBcIUNEeSnMfn5T1z3aA" name="date">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="__JJBcIUNEeSnMfn5T1z3aA" name="dateTime">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
           </ownedParameter>
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_FhEM0IUOEeSnMfn5T1z3aA" name="returnValue" direction="return">
@@ -658,13 +661,24 @@
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_PUIbsIRFEeSY_7x5FILowQ" name="name">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedParameter>
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_QW114IRFEeSY_7x5FILowQ" name="date">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_QW114IRFEeSY_7x5FILowQ" name="dateTime">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
           </ownedParameter>
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_TE9B8IRFEeSY_7x5FILowQ" name="location">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedParameter>
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_9lhp8IRaEeSwC95jIvSgtA" name="returnValue" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_OlXFgIXXEeS_xs5TLHXXQQ" name="removeEvents">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_STcg0IXXEeS_xs5TLHXXQQ" name="name">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_V_Nn8IXXEeS_xs5TLHXXQQ" name="dateTime">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_YeNZ8IXXEeS_xs5TLHXXQQ" name="returnValue" direction="return">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
           </ownedParameter>
         </ownedOperation>
@@ -749,6 +763,9 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_eQyG53uiEeSz04gN9GtPDA" name="expiryYear">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_YDUYQIXYEeS_xs5TLHXXQQ" name="ssn">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedAttribute>
         <nestedClassifier xmi:type="uml:Association" xmi:id="_3CjSMH4lEeSmVbbLtf9LGA" memberEnd="_3CjSMX4lEeSmVbbLtf9LGA _3CfAwH4lEeSmVbbLtf9LGA">
@@ -1016,7 +1033,13 @@
           </ownedEnd>
         </nestedClassifier>
       </nestedClassifier>
-      <nestedClassifier xmi:type="uml:Interface" xmi:id="_eX8x0H-zEeSVo4U8yTxtOw" name="IBookingDecision"/>
+      <nestedClassifier xmi:type="uml:Interface" xmi:id="_eX8x0H-zEeSVo4U8yTxtOw" name="IBookingDecision">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_qyf0MIXYEeS_xs5TLHXXQQ" name="getDSSInfo">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_8khEUIXYEeS_xs5TLHXXQQ" name="statistics" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+      </nestedClassifier>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_gong9XuiEeSz04gN9GtPDA" client="_gokdoHuiEeSz04gN9GtPDA">
         <supplier xmi:type="uml:Class" href="../../SequenceDiagram/model.uml#_t8iwMHsVEeSdPKzPJV8cOA"/>
       </packagedElement>
