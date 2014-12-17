@@ -28,7 +28,9 @@
   <eClassifiers xsi:type="ecore:EClass" name="AdditionalServiceComponent_IAdditionalServiceDecision"
       abstract="true" interface="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="BookingComponent_IBookingDecision" abstract="true"
-      interface="true"/>
+      interface="true">
+    <eOperations name="getDSSInfo" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="OccupancyComponent"/>
   <eClassifiers xsi:type="ecore:EClass" name="OccupancyComponent_Occupancy">
     <eOperations name="getPartner" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String">
@@ -411,6 +413,8 @@
         lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="expiryYear" ordered="false"
         lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ssn" ordered="false" lowerBound="1"
+        eType="ecore:EDataType types.ecore#//String"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BookingComponent_Booking">
     <eOperations name="addAdditionalServiceToBooking" ordered="false" lowerBound="1">

@@ -52,7 +52,9 @@
     <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Implementation.ecore#//RoomComponent_IRoomDecision"/>
     <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Implementation.ecore#//OccupancyComponent_IOccupancyDecision"/>
     <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Implementation.ecore#//AdditionalServiceComponent_IAdditionalServiceDecision"/>
-    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Implementation.ecore#//BookingComponent_IBookingDecision"/>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Implementation.ecore#//BookingComponent_IBookingDecision">
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//BookingComponent_IBookingDecision/getDSSInfo"/>
+    </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//OccupancyComponent"/>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//OccupancyComponent_Occupancy">
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//OccupancyComponent_Occupancy/roomNumber"/>
@@ -389,6 +391,7 @@
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//BookingComponent_PaymentDetails/ccv"/>
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//BookingComponent_PaymentDetails/expiryMonth"/>
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//BookingComponent_PaymentDetails/expiryYear"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//BookingComponent_PaymentDetails/ssn"/>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//BookingComponent_Booking">
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//BookingComponent_Booking/arrivalDate"/>
@@ -678,9 +681,9 @@
   <genPackages xsi:type="genmodel:GenPackage" prefix="Types" basePackage="org.eclipse.uml2"
       disposableProviderFactory="true" ecorePackage="types.ecore#/">
     <genDataTypes xsi:type="genmodel:GenDataType" ecoreDataType="types.ecore#//Boolean"/>
-    <genDataTypes xsi:type="genmodel:GenDataType" ecoreDataType="types.ecore#//Real"/>
-    <genDataTypes xsi:type="genmodel:GenDataType" ecoreDataType="types.ecore#//String"/>
-    <genDataTypes xsi:type="genmodel:GenDataType" ecoreDataType="types.ecore#//UnlimitedNatural"/>
     <genDataTypes xsi:type="genmodel:GenDataType" ecoreDataType="types.ecore#//Integer"/>
+    <genDataTypes xsi:type="genmodel:GenDataType" ecoreDataType="types.ecore#//Real"/>
+    <genDataTypes xsi:type="genmodel:GenDataType" ecoreDataType="types.ecore#//UnlimitedNatural"/>
+    <genDataTypes xsi:type="genmodel:GenDataType" ecoreDataType="types.ecore#//String"/>
   </genPackages>
 </genmodel:GenModel>
