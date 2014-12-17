@@ -2005,7 +2005,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBookingAdministration__MakeBooking__String_Date_Date_String_String_String_String_String_String_String_String() {
+	public EOperation getIBookingAdministration__MakeBooking__Date_Date_String_String_String_String_String_String_String_String() {
 		return iBookingAdministrationEClass.getEOperations().get(0);
 	}
 
@@ -2747,7 +2747,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		createEOperation(bookingComponent_BookingHandlerEClass, BOOKING_COMPONENT_BOOKING_HANDLER___FIND_BOOKING__STRING);
 
 		iBookingAdministrationEClass = createEClass(IBOOKING_ADMINISTRATION);
-		createEOperation(iBookingAdministrationEClass, IBOOKING_ADMINISTRATION___MAKE_BOOKING__STRING_DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_STRING_STRING);
+		createEOperation(iBookingAdministrationEClass, IBOOKING_ADMINISTRATION___MAKE_BOOKING__DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_STRING_STRING);
 		createEOperation(iBookingAdministrationEClass, IBOOKING_ADMINISTRATION___ADD_ROOM__STRING_STRING_INT);
 		createEOperation(iBookingAdministrationEClass, IBOOKING_ADMINISTRATION___REQUEST_QUOTE__STRING_INT_DATE_DATE);
 		createEOperation(iBookingAdministrationEClass, IBOOKING_ADMINISTRATION___EDIT_BOOKING__STRING_DATE_DATE);
@@ -3305,8 +3305,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 
 		initEClass(iBookingAdministrationEClass, IBookingAdministration.class, "IBookingAdministration", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		op = initEOperation(getIBookingAdministration__MakeBooking__String_Date_Date_String_String_String_String_String_String_String_String(), null, "makeBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "roomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIBookingAdministration__MakeBooking__Date_Date_String_String_String_String_String_String_String_String(), theTypesPackage.getString(), "makeBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDate(), "arrivalDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDate(), "departureDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "customerSSN", 1, 1, IS_UNIQUE, !IS_ORDERED);
