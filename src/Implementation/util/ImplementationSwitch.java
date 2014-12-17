@@ -232,16 +232,16 @@ public class ImplementationSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION: {
-				AdditionalServiceComponent_IAdditionalServiceInformation additionalServiceComponent_IAdditionalServiceInformation = (AdditionalServiceComponent_IAdditionalServiceInformation)theEObject;
-				T result = caseAdditionalServiceComponent_IAdditionalServiceInformation(additionalServiceComponent_IAdditionalServiceInformation);
+			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT: {
+				AdditionalServiceComponent_IEventManagement additionalServiceComponent_IEventManagement = (AdditionalServiceComponent_IEventManagement)theEObject;
+				T result = caseAdditionalServiceComponent_IEventManagement(additionalServiceComponent_IEventManagement);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER: {
 				AdditionalServiceComponent_AdditionalServiceHandler additionalServiceComponent_AdditionalServiceHandler = (AdditionalServiceComponent_AdditionalServiceHandler)theEObject;
 				T result = caseAdditionalServiceComponent_AdditionalServiceHandler(additionalServiceComponent_AdditionalServiceHandler);
-				if (result == null) result = caseAdditionalServiceComponent_IAdditionalServiceInformation(additionalServiceComponent_AdditionalServiceHandler);
+				if (result == null) result = caseAdditionalServiceComponent_IEventManagement(additionalServiceComponent_AdditionalServiceHandler);
 				if (result == null) result = caseAdditionalServiceComponent_IAdditionalServiceDecision(additionalServiceComponent_AdditionalServiceHandler);
 				if (result == null) result = caseAdditionalServiceComponent_IAdditionalServiceAdministration(additionalServiceComponent_AdditionalServiceHandler);
 				if (result == null) result = defaultCase(theEObject);
@@ -772,21 +772,6 @@ public class ImplementationSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Additional Service Component IAdditional Service Information</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Additional Service Component IAdditional Service Information</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseAdditionalServiceComponent_IAdditionalServiceInformation(AdditionalServiceComponent_IAdditionalServiceInformation object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Additional Service Component Additional Service Handler</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -813,6 +798,21 @@ public class ImplementationSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseAdditionalServiceComponent_IAdditionalServiceAdministration(AdditionalServiceComponent_IAdditionalServiceAdministration object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Additional Service Component IEvent Management</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Additional Service Component IEvent Management</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAdditionalServiceComponent_IEventManagement(AdditionalServiceComponent_IEventManagement object) {
 		return null;
 	}
 

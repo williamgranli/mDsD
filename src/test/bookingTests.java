@@ -13,59 +13,83 @@ import org.junit.Test;
 
 public class bookingTests {
 
+	static Implementation.ImplementationFactory factory;
+	static Implementation.BookingComponent_BookingHandler booking;
+	static Implementation.RoomComponent_RoomHandler roomHandler;
+	static Implementation.OccupancyComponent_OccupancyHandler occupancy;
+	static Implementation.OccupancyComponent_IOccupancy occupancyHandler;
+	static Implementation.AdditionalServiceComponent_IEventManagement additionalService;
+	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
+		factory = Implementation.impl.ImplementationFactoryImpl.init();
+		booking = factory.createBookingComponent_BookingHandler();
+		roomHandler = factory.createRoomComponent_RoomHandler();
+		additionalService =	factory.createAdditionalServiceComponent_AdditionalServiceHandler();
+		occupancyHandler = factory.createOccupancyComponent_OccupancyHandler();
+		booking.setIRoomInformation(roomHandler);
+		booking.setIAdditionalServiceInformation(additionalService);
 	}
 
 	@AfterClass
 	public static void tearDownAfterClass() throws Exception {
+		factory = null;
+		booking = null;
 	}
 
 	@Before
 	public void setUp() throws Exception {
+		booking.getBookings().clear();
 	}
 
 	@After
 	public void tearDown() throws Exception {
+		
 	}
 	
-	//My Stuff
-	Implementation.ImplementationFactory factory = Implementation.impl.ImplementationFactoryImpl.init();
-	Implementation.BookingComponent_BookingHandler booking = factory.createBookingComponent_BookingHandler();
+	public void setupRoomHandler() {
+		System.out.println(booking.getIRoomInformation().countNumberOfTotalRooms());
+		roomHandler.createBedRoom(1, true, 100, "Single Room", "A small single room with a single bed", 1);
+		System.out.println(booking.getIRoomInformation().countNumberOfTotalRooms());
+	}
+	
+	public void setupAdditionalServiceHandler() {
+		
+		booking.getIAdditionalServiceInformation();
+	}
 	
     @Test
     public void makeBooking() {
-    	booking.getBookings().clear();
+    	setupRoomHandler();
+    	long theFuture = System.currentTimeMillis() + (86400 * 7 * 1000);
+    	Date nextWeek = new Date(theFuture);
+    	
     	org.junit.Assert.assertTrue(booking.getBookings().size() == 0);
-    	booking.makeBooking("SingleRoom", new Date(), new Date(), "880923", "John", "Burchell", "MyHouse", "123456789", "123", "september", "2015");
+    	booking.makeBooking(new Date(), nextWeek, "880923", "John", "Burchell", "MyHouse", "123456789", "123", "september", "2015");
     	org.junit.Assert.assertTrue(booking.getBookings().size() == 1);
     }
     
     @Test
     public void makeMultipleBookings() {
-    	booking.getBookings().clear();
     	org.junit.Assert.assertTrue(booking.getBookings().size() == 0);
-    	booking.makeBooking("SingleRoom", new Date(), new Date(), "880923", "John", "Burchell", "MyHouse", "123456789", "123", "september", "2015");
-    	booking.makeBooking("SingleRoom", new Date(), new Date(), "880923", "Jani", "Kellaris", "MyHouse", "123456789", "123", "september", "2015");
-    	booking.makeBooking("SingleRoom", new Date(), new Date(), "880923", "Patrik", "Backstrom", "MyHouse", "123456789", "123", "september", "2015");
-    	booking.makeBooking("SingleRoom", new Date(), new Date(), "880923", "William", "Granli", "MyHouse", "123456789", "123", "september", "2015");
-    	booking.makeBooking("SingleRoom", new Date(), new Date(), "880923", "Sofia", "Chao", "MyHouse", "123456789", "123", "september", "2015");
+    	booking.makeBooking(new Date(), new Date(), "880923", "John", "Burchell", "MyHouse", "123456789", "123", "september", "2015");
+    	booking.makeBooking(new Date(), new Date(), "880923", "Jani", "Kellaris", "MyHouse", "123456789", "123", "september", "2015");
+    	booking.makeBooking(new Date(), new Date(), "880923", "Patrik", "Backstrom", "MyHouse", "123456789", "123", "september", "2015");
+    	booking.makeBooking(new Date(), new Date(), "880923", "William", "Granli", "MyHouse", "123456789", "123", "september", "2015");
+    	booking.makeBooking(new Date(), new Date(), "880923", "Sofia", "Chao", "MyHouse", "123456789", "123", "september", "2015");
     	org.junit.Assert.assertTrue(booking.getBookings().size() == 5);
     }
     
     @Test
     public void cancelBooking() {
-    	makeBooking();
-    	String bookingReference = booking.getBookings().get(0).getBookingReference();
-    	booking.cancelBooking(bookingReference);
-    	org.junit.Assert.assertFalse((booking.findBooking(bookingReference) == null));
+    	String referenceNumber = booking.makeBooking(new Date(), new Date(2014, 12, 31), "880923", "John", "Burchell", "MyHouse", "123456789", "123", "september", "2015");
+    	booking.cancelBooking(referenceNumber);
+    	org.junit.Assert.assertFalse((booking.findBooking(referenceNumber) == null));
     }
     
     @Test
     public void addRoomToBooking() {
-    	booking.getBookings().clear();
-    	booking.makeBooking("SingleRoom", new Date(), new Date(2014, 12, 31), "880923", "John", "Burchell", "MyHouse", "123456789", "123", "september", "2015");
-    	String referenceNumber = booking.getBookings().get(0).getBookingReference();
+    	String referenceNumber = booking.makeBooking(new Date(), new Date(2014, 12, 31), "880923", "John", "Burchell", "MyHouse", "123456789", "123", "september", "2015");
     	//TODO - Connect to room manager to get room type information
     	booking.addRoom(referenceNumber, "SingleRoom", 100);
     	org.junit.Assert.assertTrue(booking.findBooking(referenceNumber).getRooms().get(0) != null);
@@ -73,13 +97,10 @@ public class bookingTests {
     
     @Test
     public void removeRoom() {
-    	booking.getBookings().clear();
-    	
     	String roomType = "SingleRoom";
     	String roomTypeTwo = "DoubleRoom";
     	
-    	booking.makeBooking(roomType, new Date(), new Date(2014, 12, 31), "880923", "John", "Burchell", "MyHouse", "123456789", "123", "september", "2015");
-    	String referenceNumber = booking.getBookings().get(0).getBookingReference();
+    	String referenceNumber = booking.makeBooking(new Date(), new Date(2014, 12, 31), "880923", "John", "Burchell", "MyHouse", "123456789", "123", "september", "2015");
     	booking.addRoom(referenceNumber, roomTypeTwo, 150);
     	booking.removeRoom(referenceNumber, roomType);
     	org.junit.Assert.assertTrue(booking.findBooking(referenceNumber).getRooms().get(0).getRoomType().equals(roomTypeTwo));
@@ -87,9 +108,7 @@ public class bookingTests {
     
     @Test
     public void addGuestToBooking() {
-    	booking.getBookings().clear();
-    	booking.makeBooking("SingleRoom", new Date(), new Date(), "880923", "John", "Burchell", "MyHouse", "123456789", "123", "september", "2015");
-    	String referenceNumber = booking.getBookings().get(0).getBookingReference();
+    	String referenceNumber = booking.makeBooking(new Date(), new Date(2014, 12, 31), "880923", "John", "Burchell", "MyHouse", "123456789", "123", "september", "2015");
     	booking.addGuestToBooking(referenceNumber, "Frodo", "Baggins", "The Shire");
     	booking.addGuestToBooking(referenceNumber, "Bilbo", "Baggins", "The Old Shire");
     	org.junit.Assert.assertTrue(booking.findBooking(referenceNumber).getGuests().size() == 2);
@@ -99,11 +118,9 @@ public class bookingTests {
     
     @Test
     public void removeGuest() {
-    	booking.getBookings().clear();
-    	booking.makeBooking("SingleRoom", new Date(), new Date(), "880923", "John", "Burchell", "MyHouse", "123456789", "123", "september", "2015");
-    	String referenceNumber = booking.getBookings().get(0).getBookingReference();
+    	String referenceNumber = booking.makeBooking(new Date(), new Date(), "880923", "John", "Burchell", "MyHouse", "123456789", "123", "september", "2015");
     	booking.addGuestToBooking(referenceNumber, "Frodo", "Baggins", "The Shire");
-    	booking.addGuestToBooking(referenceNumber, "Bilbo", "Baggins", "The Old Shire");
+    	booking.addGuestToBooking(referenceNumber, "Bilbo", "Baggins", "Mordor");
     	booking.removeGuest(referenceNumber, "Frodo", "Baggins", "The Shire");
     	org.junit.Assert.assertTrue(booking.findBooking(referenceNumber).getGuests().size() == 1);
     	org.junit.Assert.assertTrue(booking.findBooking(referenceNumber).getGuests().get(0).getFirstName().equals("Bilbo"));
@@ -111,20 +128,16 @@ public class bookingTests {
     
     @Test
     public void addAdditionalService() {
-    	booking.makeBooking("SingleRoom", new Date(), new Date(2014, 12, 31), "880923", "John", "Burchell", "MyHouse", "123456789", "123", "september", "2015");
-    	String referenceNumber = booking.getBookings().get(0).getBookingReference();
+    	String referenceNumber = booking.makeBooking(new Date(), new Date(2014, 12, 31), "880923", "John", "Burchell", "MyHouse", "123456789", "123", "september", "2015");
     	booking.findBooking(referenceNumber).addAdditionalServiceToBooking("Massage From Andams Mum", 10);
     	booking.findBooking(referenceNumber).addAdditionalServiceToBooking("Massage From Willys Mum", 100);
     	org.junit.Assert.assertTrue(booking.findBooking(referenceNumber).getAdditionalServices().size() == 2);
     	org.junit.Assert.assertTrue(booking.findBooking(referenceNumber).getAdditionalServices().get(0).getName().equals("Massage From Andams Mum"));
-    	booking.getBookings().clear();
     }
     
     @Test
     public void removeAdditionalService() {
-    	booking.getBookings().clear();
-    	booking.makeBooking("SingleRoom", new Date(), new Date(2014, 12, 31), "880923", "John", "Burchell", "MyHouse", "123456789", "123", "september", "2015");
-    	String referenceNumber = booking.getBookings().get(0).getBookingReference();
+    	String referenceNumber = booking.makeBooking(new Date(), new Date(2014, 12, 31), "880923", "John", "Burchell", "MyHouse", "123456789", "123", "september", "2015");
     	booking.findBooking(referenceNumber).addAdditionalServiceToBooking("Massage From Andams Mum", 10);
     	booking.findBooking(referenceNumber).addAdditionalServiceToBooking("Massage From Willys Mum", 100);
     	booking.removeAdditionalService(referenceNumber, "Massage From Andams Mum");
@@ -136,6 +149,21 @@ public class bookingTests {
     @Test
     public void generateQuote() {
     	//TODO - Fix once implemented
+    }
+    
+    @Test
+    public void searchForBooking() {
+    	//TODO - Implement
+    }
+    
+    @Test
+    public void findBookingsByDate() {
+    	//TODO - Implement
+    }
+    
+    @Test
+    public void findBookingsByDateAndType() {
+    	//TODO - Implement
     }
 
     @Ignore

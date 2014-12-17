@@ -190,6 +190,9 @@
     <eOperations name="getAllRoomNumbers" ordered="false" lowerBound="1" upperBound="-1"
         eType="ecore:EDataType types.ecore#//Integer"/>
     <eOperations name="countNumberOfTotalRooms" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
+    <eOperations name="getCountOfRoomType" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer">
+      <eParameters name="roomType" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+    </eOperations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BookingComponent_IBookingInformation"
       abstract="true" interface="true">
@@ -437,16 +440,27 @@
       <eParameters name="dateTime" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
     </eOperations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="AdditionalServiceComponent_IAdditionalServiceInformation"
+  <eClassifiers xsi:type="ecore:EClass" name="AdditionalServiceComponent_IEventManagement"
       abstract="true" interface="true">
-    <eOperations name="getAdditionalServiceInfo" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String">
+    <eOperations name="getServices" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String"/>
+    <eOperations name="getEvents" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String">
       <eParameters name="name" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     </eOperations>
-    <eOperations name="getAllAdditionalServices" ordered="false" lowerBound="1" upperBound="-1"
-        eType="ecore:EDataType types.ecore#//String"/>
+    <eOperations name="addGuestToEvent" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Boolean">
+      <eParameters name="name" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="dateTime" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+      <eParameters name="location" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="guests" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
+    </eOperations>
+    <eOperations name="removeGuestsFromEvent" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Boolean">
+      <eParameters name="name" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="dateTime" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+      <eParameters name="location" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="guests" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
+    </eOperations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AdditionalServiceComponent_AdditionalServiceHandler"
-      eSuperTypes="#//AdditionalServiceComponent_IAdditionalServiceInformation #//AdditionalServiceComponent_IAdditionalServiceDecision #//AdditionalServiceComponent_IAdditionalServiceAdministration">
+      eSuperTypes="#//AdditionalServiceComponent_IEventManagement #//AdditionalServiceComponent_IAdditionalServiceDecision #//AdditionalServiceComponent_IAdditionalServiceAdministration">
     <eOperations name="findService" ordered="false" lowerBound="1" eType="#//AdditionalServiceComponent_AdditionalService">
       <eParameters name="name" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     </eOperations>
@@ -566,6 +580,19 @@
     <eOperations name="findBooking" ordered="false" lowerBound="1" eType="#//BookingComponent_Booking">
       <eParameters name="referenceNumber" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     </eOperations>
+    <eOperations name="bookingAvailable" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="startDate" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+      <eParameters name="endDate" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+    </eOperations>
+    <eOperations name="findBookingsByDateAndType" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer">
+      <eParameters name="startDate" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+      <eParameters name="endDate" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+      <eParameters name="roomType" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+    </eOperations>
+    <eOperations name="findBookingsByDate" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer">
+      <eParameters name="startDate" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+      <eParameters name="endDate" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+    </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="bookings" ordered="false"
         upperBound="-1" eType="#//BookingComponent_Booking"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="authentication" ordered="false"
@@ -573,7 +600,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="iRoomInformation" ordered="false"
         lowerBound="1" eType="#//RoomComponent_IRoomInformation"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="iAdditionalServiceInformation"
-        ordered="false" lowerBound="1" eType="#//AdditionalServiceComponent_IAdditionalServiceInformation"/>
+        ordered="false" lowerBound="1" eType="#//AdditionalServiceComponent_IEventManagement"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="iPayment" ordered="false"
         lowerBound="1" eType="#//PaymentComponent_IPayment"/>
   </eClassifiers>
@@ -760,6 +787,7 @@
       <eParameters name="bedCount" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
     </eOperations>
     <eOperations name="editBedRoom" ordered="false" lowerBound="1">
+      <eParameters name="currentRoomNumber" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
       <eParameters name="roomNumber" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
       <eParameters name="usable" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Boolean"/>
       <eParameters name="price" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
@@ -781,6 +809,7 @@
       <eParameters name="conferencePhone" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Boolean"/>
     </eOperations>
     <eOperations name="editConferenceRoom" ordered="false" lowerBound="1">
+      <eParameters name="currentRoomNumber" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
       <eParameters name="roomNumber" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
       <eParameters name="usable" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Boolean"/>
       <eParameters name="price" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>

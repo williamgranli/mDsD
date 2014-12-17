@@ -174,7 +174,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DECISION_SUPPORT_COMPONENT_IDECISION_SUPPORT___GET_NUMBER_OF_OCCUPANCIES_OF_ROOM__STRING = 7;
+	int DECISION_SUPPORT_COMPONENT_IDECISION_SUPPORT___GET_NUMBER_OF_OCCUPANCIES_OF_ROOM__INT = 7;
 
 	/**
 	 * The number of operations of the '<em>Decision Support Component IDecision Support</em>' class.
@@ -551,7 +551,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER___GET_NUMBER_OF_OCCUPANCIES_OF_ROOM__STRING = DECISION_SUPPORT_COMPONENT_IDECISION_SUPPORT___GET_NUMBER_OF_OCCUPANCIES_OF_ROOM__STRING;
+	int DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER___GET_NUMBER_OF_OCCUPANCIES_OF_ROOM__INT = DECISION_SUPPORT_COMPONENT_IDECISION_SUPPORT___GET_NUMBER_OF_OCCUPANCIES_OF_ROOM__INT;
 
 	/**
 	 * The operation id for the '<em>Count Customer Booking</em>' operation.
@@ -1181,13 +1181,22 @@ public interface ImplementationPackage extends EPackage {
 	int ROOM_COMPONENT_IROOM_INFORMATION___COUNT_NUMBER_OF_TOTAL_ROOMS = 4;
 
 	/**
+	 * The operation id for the '<em>Get Count Of Room Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_COMPONENT_IROOM_INFORMATION___GET_COUNT_OF_ROOM_TYPE__STRING = 5;
+
+	/**
 	 * The number of operations of the '<em>Room Component IRoom Information</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_COMPONENT_IROOM_INFORMATION_OPERATION_COUNT = 5;
+	int ROOM_COMPONENT_IROOM_INFORMATION_OPERATION_COUNT = 6;
 
 	/**
 	 * The meta object id for the '{@link Implementation.BookingComponent_IBookingInformation <em>Booking Component IBooking Information</em>}' class.
@@ -1713,16 +1722,6 @@ public interface ImplementationPackage extends EPackage {
 	int STAFF_COMPONENT_IAUTHENTICATION = 29;
 
 	/**
-	 * The meta object id for the '{@link Implementation.AdditionalServiceComponent_IAdditionalServiceInformation <em>Additional Service Component IAdditional Service Information</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see Implementation.AdditionalServiceComponent_IAdditionalServiceInformation
-	 * @see Implementation.impl.ImplementationPackageImpl#getAdditionalServiceComponent_IAdditionalServiceInformation()
-	 * @generated
-	 */
-	int ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION = 27;
-
-	/**
 	 * The meta object id for the '{@link Implementation.AdditionalServiceComponent_IAdditionalServiceAdministration <em>Additional Service Component IAdditional Service Administration</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2192,40 +2191,68 @@ public interface ImplementationPackage extends EPackage {
 	int ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION_OPERATION_COUNT = 7;
 
 	/**
-	 * The number of structural features of the '<em>Additional Service Component IAdditional Service Information</em>' class.
+	 * The meta object id for the '{@link Implementation.AdditionalServiceComponent_IEventManagement <em>Additional Service Component IEvent Management</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see Implementation.AdditionalServiceComponent_IEventManagement
+	 * @see Implementation.impl.ImplementationPackageImpl#getAdditionalServiceComponent_IEventManagement()
 	 * @generated
-	 * @ordered
 	 */
-	int ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION_FEATURE_COUNT = 0;
+	int ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT = 27;
 
 	/**
-	 * The operation id for the '<em>Get Additional Service Info</em>' operation.
+	 * The number of structural features of the '<em>Additional Service Component IEvent Management</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION___GET_ADDITIONAL_SERVICE_INFO__STRING = 0;
+	int ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT_FEATURE_COUNT = 0;
 
 	/**
-	 * The operation id for the '<em>Get All Additional Services</em>' operation.
+	 * The operation id for the '<em>Get Services</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION___GET_ALL_ADDITIONAL_SERVICES = 1;
+	int ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT___GET_SERVICES = 0;
 
 	/**
-	 * The number of operations of the '<em>Additional Service Component IAdditional Service Information</em>' class.
+	 * The operation id for the '<em>Get Events</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION_OPERATION_COUNT = 2;
+	int ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT___GET_EVENTS__STRING = 1;
+
+	/**
+	 * The operation id for the '<em>Add Guest To Event</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT___ADD_GUEST_TO_EVENT__STRING_DATE_STRING_INT = 2;
+
+	/**
+	 * The operation id for the '<em>Remove Guests From Event</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT___REMOVE_GUESTS_FROM_EVENT__STRING_DATE_STRING_INT = 3;
+
+	/**
+	 * The number of operations of the '<em>Additional Service Component IEvent Management</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT_OPERATION_COUNT = 4;
 
 	/**
 	 * The feature id for the '<em><b>Additional Service</b></em>' reference list.
@@ -2234,7 +2261,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER__ADDITIONAL_SERVICE = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION_FEATURE_COUNT + 0;
+	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER__ADDITIONAL_SERVICE = ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>IAuthentication</b></em>' reference.
@@ -2243,7 +2270,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER__IAUTHENTICATION = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION_FEATURE_COUNT + 1;
+	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER__IAUTHENTICATION = ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Additional Service Component Additional Service Handler</em>' class.
@@ -2252,25 +2279,43 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER_FEATURE_COUNT = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION_FEATURE_COUNT + 2;
+	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER_FEATURE_COUNT = ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT_FEATURE_COUNT + 2;
 
 	/**
-	 * The operation id for the '<em>Get Additional Service Info</em>' operation.
+	 * The operation id for the '<em>Get Services</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER___GET_ADDITIONAL_SERVICE_INFO__STRING = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION___GET_ADDITIONAL_SERVICE_INFO__STRING;
+	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER___GET_SERVICES = ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT___GET_SERVICES;
 
 	/**
-	 * The operation id for the '<em>Get All Additional Services</em>' operation.
+	 * The operation id for the '<em>Get Events</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER___GET_ALL_ADDITIONAL_SERVICES = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION___GET_ALL_ADDITIONAL_SERVICES;
+	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER___GET_EVENTS__STRING = ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT___GET_EVENTS__STRING;
+
+	/**
+	 * The operation id for the '<em>Add Guest To Event</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER___ADD_GUEST_TO_EVENT__STRING_DATE_STRING_INT = ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT___ADD_GUEST_TO_EVENT__STRING_DATE_STRING_INT;
+
+	/**
+	 * The operation id for the '<em>Remove Guests From Event</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER___REMOVE_GUESTS_FROM_EVENT__STRING_DATE_STRING_INT = ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT___REMOVE_GUESTS_FROM_EVENT__STRING_DATE_STRING_INT;
 
 	/**
 	 * The operation id for the '<em>Create Additional Service</em>' operation.
@@ -2279,7 +2324,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER___CREATE_ADDITIONAL_SERVICE__STRING_BOOLEAN_INT_STRING = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION_OPERATION_COUNT + 0;
+	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER___CREATE_ADDITIONAL_SERVICE__STRING_BOOLEAN_INT_STRING = ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Edit Additional Service</em>' operation.
@@ -2288,7 +2333,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER___EDIT_ADDITIONAL_SERVICE__STRING_STRING_BOOLEAN_INT_STRING = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION_OPERATION_COUNT + 1;
+	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER___EDIT_ADDITIONAL_SERVICE__STRING_STRING_BOOLEAN_INT_STRING = ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT_OPERATION_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Remove Additional Service</em>' operation.
@@ -2297,7 +2342,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER___REMOVE_ADDITIONAL_SERVICE__STRING = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION_OPERATION_COUNT + 2;
+	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER___REMOVE_ADDITIONAL_SERVICE__STRING = ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT_OPERATION_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Create Event</em>' operation.
@@ -2306,7 +2351,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER___CREATE_EVENT__STRING_DATE_STRING_INT_INT = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION_OPERATION_COUNT + 3;
+	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER___CREATE_EVENT__STRING_DATE_STRING_INT_INT = ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT_OPERATION_COUNT + 3;
 
 	/**
 	 * The operation id for the '<em>Edit Event</em>' operation.
@@ -2315,7 +2360,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER___EDIT_EVENT__STRING_DATE_STRING_INT_INT = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION_OPERATION_COUNT + 4;
+	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER___EDIT_EVENT__STRING_DATE_STRING_INT_INT = ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT_OPERATION_COUNT + 4;
 
 	/**
 	 * The operation id for the '<em>Remove Event</em>' operation.
@@ -2324,7 +2369,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER___REMOVE_EVENT__STRING_DATE_STRING = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION_OPERATION_COUNT + 5;
+	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER___REMOVE_EVENT__STRING_DATE_STRING = ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT_OPERATION_COUNT + 5;
 
 	/**
 	 * The operation id for the '<em>Remove Events</em>' operation.
@@ -2333,7 +2378,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER___REMOVE_EVENTS__STRING_DATE = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION_OPERATION_COUNT + 6;
+	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER___REMOVE_EVENTS__STRING_DATE = ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT_OPERATION_COUNT + 6;
 
 	/**
 	 * The operation id for the '<em>Find Service</em>' operation.
@@ -2342,7 +2387,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER___FIND_SERVICE__STRING = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION_OPERATION_COUNT + 7;
+	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER___FIND_SERVICE__STRING = ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT_OPERATION_COUNT + 7;
 
 	/**
 	 * The number of operations of the '<em>Additional Service Component Additional Service Handler</em>' class.
@@ -2351,7 +2396,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER_OPERATION_COUNT = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION_OPERATION_COUNT + 8;
+	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER_OPERATION_COUNT = ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT_OPERATION_COUNT + 8;
 
 	/**
 	 * The number of structural features of the '<em>Staff Component IAuthentication</em>' class.
@@ -3057,13 +3102,40 @@ public interface ImplementationPackage extends EPackage {
 	int BOOKING_COMPONENT_BOOKING_HANDLER___FIND_BOOKING__STRING = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 12;
 
 	/**
+	 * The operation id for the '<em>Booking Available</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_COMPONENT_BOOKING_HANDLER___BOOKING_AVAILABLE__DATE_DATE = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 13;
+
+	/**
+	 * The operation id for the '<em>Find Bookings By Date And Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_COMPONENT_BOOKING_HANDLER___FIND_BOOKINGS_BY_DATE_AND_TYPE__DATE_DATE_STRING = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 14;
+
+	/**
+	 * The operation id for the '<em>Find Bookings By Date</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_COMPONENT_BOOKING_HANDLER___FIND_BOOKINGS_BY_DATE__DATE_DATE = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 15;
+
+	/**
 	 * The number of operations of the '<em>Booking Component Booking Handler</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_COMPONENT_BOOKING_HANDLER_OPERATION_COUNT = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 13;
+	int BOOKING_COMPONENT_BOOKING_HANDLER_OPERATION_COUNT = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 16;
 
 	/**
 	 * The meta object id for the '{@link Implementation.BookingComponent_IBookingAdministration <em>Booking Component IBooking Administration</em>}' class.
@@ -3748,7 +3820,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_COMPONENT_IROOM_ADMINISTRATION___EDIT_BED_ROOM__INT_BOOLEAN_INT_STRING_STRING_INT = 1;
+	int ROOM_COMPONENT_IROOM_ADMINISTRATION___EDIT_BED_ROOM__INT_INT_BOOLEAN_INT_STRING_STRING_INT = 1;
 
 	/**
 	 * The operation id for the '<em>Remove</em>' operation.
@@ -3775,7 +3847,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_COMPONENT_IROOM_ADMINISTRATION___EDIT_CONFERENCE_ROOM__INT_BOOLEAN_INT_STRING_STRING_INT_BOOLEAN_BOOLEAN = 4;
+	int ROOM_COMPONENT_IROOM_ADMINISTRATION___EDIT_CONFERENCE_ROOM__INT_INT_BOOLEAN_INT_STRING_STRING_INT_BOOLEAN_BOOLEAN = 4;
 
 	/**
 	 * The number of operations of the '<em>Room Component IRoom Administration</em>' class.
@@ -3868,13 +3940,22 @@ public interface ImplementationPackage extends EPackage {
 	int ROOM_COMPONENT_ROOM_HANDLER___COUNT_NUMBER_OF_TOTAL_ROOMS = ROOM_COMPONENT_IROOM_DECISION_OPERATION_COUNT + 4;
 
 	/**
+	 * The operation id for the '<em>Get Count Of Room Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_COMPONENT_ROOM_HANDLER___GET_COUNT_OF_ROOM_TYPE__STRING = ROOM_COMPONENT_IROOM_DECISION_OPERATION_COUNT + 5;
+
+	/**
 	 * The operation id for the '<em>Create Bed Room</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_COMPONENT_ROOM_HANDLER___CREATE_BED_ROOM__INT_BOOLEAN_INT_STRING_STRING_INT = ROOM_COMPONENT_IROOM_DECISION_OPERATION_COUNT + 5;
+	int ROOM_COMPONENT_ROOM_HANDLER___CREATE_BED_ROOM__INT_BOOLEAN_INT_STRING_STRING_INT = ROOM_COMPONENT_IROOM_DECISION_OPERATION_COUNT + 6;
 
 	/**
 	 * The operation id for the '<em>Edit Bed Room</em>' operation.
@@ -3883,7 +3964,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_COMPONENT_ROOM_HANDLER___EDIT_BED_ROOM__INT_BOOLEAN_INT_STRING_STRING_INT = ROOM_COMPONENT_IROOM_DECISION_OPERATION_COUNT + 6;
+	int ROOM_COMPONENT_ROOM_HANDLER___EDIT_BED_ROOM__INT_INT_BOOLEAN_INT_STRING_STRING_INT = ROOM_COMPONENT_IROOM_DECISION_OPERATION_COUNT + 7;
 
 	/**
 	 * The operation id for the '<em>Remove</em>' operation.
@@ -3892,7 +3973,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_COMPONENT_ROOM_HANDLER___REMOVE__INT = ROOM_COMPONENT_IROOM_DECISION_OPERATION_COUNT + 7;
+	int ROOM_COMPONENT_ROOM_HANDLER___REMOVE__INT = ROOM_COMPONENT_IROOM_DECISION_OPERATION_COUNT + 8;
 
 	/**
 	 * The operation id for the '<em>Create Conference Room</em>' operation.
@@ -3901,7 +3982,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_COMPONENT_ROOM_HANDLER___CREATE_CONFERENCE_ROOM__INT_BOOLEAN_INT_STRING_STRING_INT_BOOLEAN_BOOLEAN = ROOM_COMPONENT_IROOM_DECISION_OPERATION_COUNT + 8;
+	int ROOM_COMPONENT_ROOM_HANDLER___CREATE_CONFERENCE_ROOM__INT_BOOLEAN_INT_STRING_STRING_INT_BOOLEAN_BOOLEAN = ROOM_COMPONENT_IROOM_DECISION_OPERATION_COUNT + 9;
 
 	/**
 	 * The operation id for the '<em>Edit Conference Room</em>' operation.
@@ -3910,7 +3991,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_COMPONENT_ROOM_HANDLER___EDIT_CONFERENCE_ROOM__INT_BOOLEAN_INT_STRING_STRING_INT_BOOLEAN_BOOLEAN = ROOM_COMPONENT_IROOM_DECISION_OPERATION_COUNT + 9;
+	int ROOM_COMPONENT_ROOM_HANDLER___EDIT_CONFERENCE_ROOM__INT_INT_BOOLEAN_INT_STRING_STRING_INT_BOOLEAN_BOOLEAN = ROOM_COMPONENT_IROOM_DECISION_OPERATION_COUNT + 10;
 
 	/**
 	 * The number of operations of the '<em>Room Component Room Handler</em>' class.
@@ -3919,7 +4000,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_COMPONENT_ROOM_HANDLER_OPERATION_COUNT = ROOM_COMPONENT_IROOM_DECISION_OPERATION_COUNT + 10;
+	int ROOM_COMPONENT_ROOM_HANDLER_OPERATION_COUNT = ROOM_COMPONENT_IROOM_DECISION_OPERATION_COUNT + 11;
 
 
 	/**
@@ -4049,7 +4130,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @see Implementation.DecisionSupportComponent_IDecisionSupport#getNumberOfOccupanciesOfRoom(int)
 	 * @generated
 	 */
-	EOperation getDecisionSupportComponent_IDecisionSupport__GetNumberOfOccupanciesOfRoom__String();
+	EOperation getDecisionSupportComponent_IDecisionSupport__GetNumberOfOccupanciesOfRoom__int();
 
 	/**
 	 * Returns the meta object for class '{@link Implementation.DecisionSupportComponent_BookingDSSInfo <em>Decision Support Component Booking DSS Info</em>}'.
@@ -4754,6 +4835,16 @@ public interface ImplementationPackage extends EPackage {
 	EOperation getRoomComponent_IRoomInformation__CountNumberOfTotalRooms();
 
 	/**
+	 * Returns the meta object for the '{@link Implementation.RoomComponent_IRoomInformation#getCountOfRoomType(java.lang.String) <em>Get Count Of Room Type</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Count Of Room Type</em>' operation.
+	 * @see Implementation.RoomComponent_IRoomInformation#getCountOfRoomType(java.lang.String)
+	 * @generated
+	 */
+	EOperation getRoomComponent_IRoomInformation__GetCountOfRoomType__String();
+
+	/**
 	 * Returns the meta object for class '{@link Implementation.BookingComponent_IBookingInformation <em>Booking Component IBooking Information</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5290,36 +5381,6 @@ public interface ImplementationPackage extends EPackage {
 	EOperation getStaffComponent_IAuthentication__IsLoggedIn__String();
 
 	/**
-	 * Returns the meta object for class '{@link Implementation.AdditionalServiceComponent_IAdditionalServiceInformation <em>Additional Service Component IAdditional Service Information</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Additional Service Component IAdditional Service Information</em>'.
-	 * @see Implementation.AdditionalServiceComponent_IAdditionalServiceInformation
-	 * @generated
-	 */
-	EClass getAdditionalServiceComponent_IAdditionalServiceInformation();
-
-	/**
-	 * Returns the meta object for the '{@link Implementation.AdditionalServiceComponent_IAdditionalServiceInformation#getAdditionalServiceInfo(java.lang.String) <em>Get Additional Service Info</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Additional Service Info</em>' operation.
-	 * @see Implementation.AdditionalServiceComponent_IAdditionalServiceInformation#getAdditionalServiceInfo(java.lang.String)
-	 * @generated
-	 */
-	EOperation getAdditionalServiceComponent_IAdditionalServiceInformation__GetAdditionalServiceInfo__String();
-
-	/**
-	 * Returns the meta object for the '{@link Implementation.AdditionalServiceComponent_IAdditionalServiceInformation#getAllAdditionalServices() <em>Get All Additional Services</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get All Additional Services</em>' operation.
-	 * @see Implementation.AdditionalServiceComponent_IAdditionalServiceInformation#getAllAdditionalServices()
-	 * @generated
-	 */
-	EOperation getAdditionalServiceComponent_IAdditionalServiceInformation__GetAllAdditionalServices();
-
-	/**
 	 * Returns the meta object for class '{@link Implementation.AdditionalServiceComponent_AdditionalServiceHandler <em>Additional Service Component Additional Service Handler</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5440,6 +5501,56 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getAdditionalServiceComponent_IAdditionalServiceAdministration__RemoveEvents__String_Date();
+
+	/**
+	 * Returns the meta object for class '{@link Implementation.AdditionalServiceComponent_IEventManagement <em>Additional Service Component IEvent Management</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Additional Service Component IEvent Management</em>'.
+	 * @see Implementation.AdditionalServiceComponent_IEventManagement
+	 * @generated
+	 */
+	EClass getAdditionalServiceComponent_IEventManagement();
+
+	/**
+	 * Returns the meta object for the '{@link Implementation.AdditionalServiceComponent_IEventManagement#getServices() <em>Get Services</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Services</em>' operation.
+	 * @see Implementation.AdditionalServiceComponent_IEventManagement#getServices()
+	 * @generated
+	 */
+	EOperation getAdditionalServiceComponent_IEventManagement__GetServices();
+
+	/**
+	 * Returns the meta object for the '{@link Implementation.AdditionalServiceComponent_IEventManagement#getEvents(java.lang.String) <em>Get Events</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Events</em>' operation.
+	 * @see Implementation.AdditionalServiceComponent_IEventManagement#getEvents(java.lang.String)
+	 * @generated
+	 */
+	EOperation getAdditionalServiceComponent_IEventManagement__GetEvents__String();
+
+	/**
+	 * Returns the meta object for the '{@link Implementation.AdditionalServiceComponent_IEventManagement#addGuestToEvent(java.lang.String, java.util.Date, java.lang.String, int) <em>Add Guest To Event</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Add Guest To Event</em>' operation.
+	 * @see Implementation.AdditionalServiceComponent_IEventManagement#addGuestToEvent(java.lang.String, java.util.Date, java.lang.String, int)
+	 * @generated
+	 */
+	EOperation getAdditionalServiceComponent_IEventManagement__AddGuestToEvent__String_Date_String_int();
+
+	/**
+	 * Returns the meta object for the '{@link Implementation.AdditionalServiceComponent_IEventManagement#removeGuestsFromEvent(java.lang.String, java.util.Date, java.lang.String, int) <em>Remove Guests From Event</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Remove Guests From Event</em>' operation.
+	 * @see Implementation.AdditionalServiceComponent_IEventManagement#removeGuestsFromEvent(java.lang.String, java.util.Date, java.lang.String, int)
+	 * @generated
+	 */
+	EOperation getAdditionalServiceComponent_IEventManagement__RemoveGuestsFromEvent__String_Date_String_int();
 
 	/**
 	 * Returns the meta object for class '{@link Implementation.AdditionalServiceComponent_AdditionalServiceEvent <em>Additional Service Component Additional Service Event</em>}'.
@@ -6015,6 +6126,36 @@ public interface ImplementationPackage extends EPackage {
 	EOperation getBookingComponent_BookingHandler__FindBooking__String();
 
 	/**
+	 * Returns the meta object for the '{@link Implementation.BookingComponent_BookingHandler#bookingAvailable(java.util.Date, java.util.Date) <em>Booking Available</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Booking Available</em>' operation.
+	 * @see Implementation.BookingComponent_BookingHandler#bookingAvailable(java.util.Date, java.util.Date)
+	 * @generated
+	 */
+	EOperation getBookingComponent_BookingHandler__BookingAvailable__Date_Date();
+
+	/**
+	 * Returns the meta object for the '{@link Implementation.BookingComponent_BookingHandler#findBookingsByDateAndType(java.util.Date, java.util.Date, java.lang.String) <em>Find Bookings By Date And Type</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Find Bookings By Date And Type</em>' operation.
+	 * @see Implementation.BookingComponent_BookingHandler#findBookingsByDateAndType(java.util.Date, java.util.Date, java.lang.String)
+	 * @generated
+	 */
+	EOperation getBookingComponent_BookingHandler__FindBookingsByDateAndType__Date_Date_String();
+
+	/**
+	 * Returns the meta object for the '{@link Implementation.BookingComponent_BookingHandler#findBookingsByDate(java.util.Date, java.util.Date) <em>Find Bookings By Date</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Find Bookings By Date</em>' operation.
+	 * @see Implementation.BookingComponent_BookingHandler#findBookingsByDate(java.util.Date, java.util.Date)
+	 * @generated
+	 */
+	EOperation getBookingComponent_BookingHandler__FindBookingsByDate__Date_Date();
+
+	/**
 	 * Returns the meta object for class '{@link Implementation.BookingComponent_IBookingAdministration <em>Booking Component IBooking Administration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6523,14 +6664,14 @@ public interface ImplementationPackage extends EPackage {
 	EOperation getRoomComponent_IRoomAdministration__CreateBedRoom__int_boolean_int_String_String_int();
 
 	/**
-	 * Returns the meta object for the '{@link Implementation.RoomComponent_IRoomAdministration#editBedRoom(int, boolean, int, java.lang.String, java.lang.String, int) <em>Edit Bed Room</em>}' operation.
+	 * Returns the meta object for the '{@link Implementation.RoomComponent_IRoomAdministration#editBedRoom(int, int, boolean, int, java.lang.String, java.lang.String, int) <em>Edit Bed Room</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Edit Bed Room</em>' operation.
-	 * @see Implementation.RoomComponent_IRoomAdministration#editBedRoom(int, boolean, int, java.lang.String, java.lang.String, int)
+	 * @see Implementation.RoomComponent_IRoomAdministration#editBedRoom(int, int, boolean, int, java.lang.String, java.lang.String, int)
 	 * @generated
 	 */
-	EOperation getRoomComponent_IRoomAdministration__EditBedRoom__int_boolean_int_String_String_int();
+	EOperation getRoomComponent_IRoomAdministration__EditBedRoom__int_int_boolean_int_String_String_int();
 
 	/**
 	 * Returns the meta object for the '{@link Implementation.RoomComponent_IRoomAdministration#remove(int) <em>Remove</em>}' operation.
@@ -6553,14 +6694,14 @@ public interface ImplementationPackage extends EPackage {
 	EOperation getRoomComponent_IRoomAdministration__CreateConferenceRoom__int_boolean_int_String_String_int_boolean_boolean();
 
 	/**
-	 * Returns the meta object for the '{@link Implementation.RoomComponent_IRoomAdministration#editConferenceRoom(int, boolean, int, java.lang.String, java.lang.String, int, boolean, boolean) <em>Edit Conference Room</em>}' operation.
+	 * Returns the meta object for the '{@link Implementation.RoomComponent_IRoomAdministration#editConferenceRoom(int, int, boolean, int, java.lang.String, java.lang.String, int, boolean, boolean) <em>Edit Conference Room</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Edit Conference Room</em>' operation.
-	 * @see Implementation.RoomComponent_IRoomAdministration#editConferenceRoom(int, boolean, int, java.lang.String, java.lang.String, int, boolean, boolean)
+	 * @see Implementation.RoomComponent_IRoomAdministration#editConferenceRoom(int, int, boolean, int, java.lang.String, java.lang.String, int, boolean, boolean)
 	 * @generated
 	 */
-	EOperation getRoomComponent_IRoomAdministration__EditConferenceRoom__int_boolean_int_String_String_int_boolean_boolean();
+	EOperation getRoomComponent_IRoomAdministration__EditConferenceRoom__int_int_boolean_int_String_String_int_boolean_boolean();
 
 	/**
 	 * Returns the meta object for class '{@link Implementation.RoomComponent_RoomHandler <em>Room Component Room Handler</em>}'.
@@ -6720,7 +6861,7 @@ public interface ImplementationPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation DECISION_SUPPORT_COMPONENT_IDECISION_SUPPORT___GET_NUMBER_OF_OCCUPANCIES_OF_ROOM__STRING = eINSTANCE.getDecisionSupportComponent_IDecisionSupport__GetNumberOfOccupanciesOfRoom__String();
+		EOperation DECISION_SUPPORT_COMPONENT_IDECISION_SUPPORT___GET_NUMBER_OF_OCCUPANCIES_OF_ROOM__INT = eINSTANCE.getDecisionSupportComponent_IDecisionSupport__GetNumberOfOccupanciesOfRoom__int();
 
 		/**
 		 * The meta object literal for the '{@link Implementation.impl.DecisionSupportComponent_BookingDSSInfoImpl <em>Decision Support Component Booking DSS Info</em>}' class.
@@ -7287,6 +7428,14 @@ public interface ImplementationPackage extends EPackage {
 		EOperation ROOM_COMPONENT_IROOM_INFORMATION___COUNT_NUMBER_OF_TOTAL_ROOMS = eINSTANCE.getRoomComponent_IRoomInformation__CountNumberOfTotalRooms();
 
 		/**
+		 * The meta object literal for the '<em><b>Get Count Of Room Type</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ROOM_COMPONENT_IROOM_INFORMATION___GET_COUNT_OF_ROOM_TYPE__STRING = eINSTANCE.getRoomComponent_IRoomInformation__GetCountOfRoomType__String();
+
+		/**
 		 * The meta object literal for the '{@link Implementation.BookingComponent_IBookingInformation <em>Booking Component IBooking Information</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -7723,32 +7872,6 @@ public interface ImplementationPackage extends EPackage {
 		EOperation STAFF_COMPONENT_IAUTHENTICATION___IS_LOGGED_IN__STRING = eINSTANCE.getStaffComponent_IAuthentication__IsLoggedIn__String();
 
 		/**
-		 * The meta object literal for the '{@link Implementation.AdditionalServiceComponent_IAdditionalServiceInformation <em>Additional Service Component IAdditional Service Information</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see Implementation.AdditionalServiceComponent_IAdditionalServiceInformation
-		 * @see Implementation.impl.ImplementationPackageImpl#getAdditionalServiceComponent_IAdditionalServiceInformation()
-		 * @generated
-		 */
-		EClass ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION = eINSTANCE.getAdditionalServiceComponent_IAdditionalServiceInformation();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Additional Service Info</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION___GET_ADDITIONAL_SERVICE_INFO__STRING = eINSTANCE.getAdditionalServiceComponent_IAdditionalServiceInformation__GetAdditionalServiceInfo__String();
-
-		/**
-		 * The meta object literal for the '<em><b>Get All Additional Services</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_INFORMATION___GET_ALL_ADDITIONAL_SERVICES = eINSTANCE.getAdditionalServiceComponent_IAdditionalServiceInformation__GetAllAdditionalServices();
-
-		/**
 		 * The meta object literal for the '{@link Implementation.impl.AdditionalServiceComponent_AdditionalServiceHandlerImpl <em>Additional Service Component Additional Service Handler</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -7847,6 +7970,48 @@ public interface ImplementationPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___REMOVE_EVENTS__STRING_DATE = eINSTANCE.getAdditionalServiceComponent_IAdditionalServiceAdministration__RemoveEvents__String_Date();
+
+		/**
+		 * The meta object literal for the '{@link Implementation.AdditionalServiceComponent_IEventManagement <em>Additional Service Component IEvent Management</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see Implementation.AdditionalServiceComponent_IEventManagement
+		 * @see Implementation.impl.ImplementationPackageImpl#getAdditionalServiceComponent_IEventManagement()
+		 * @generated
+		 */
+		EClass ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT = eINSTANCE.getAdditionalServiceComponent_IEventManagement();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Services</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT___GET_SERVICES = eINSTANCE.getAdditionalServiceComponent_IEventManagement__GetServices();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Events</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT___GET_EVENTS__STRING = eINSTANCE.getAdditionalServiceComponent_IEventManagement__GetEvents__String();
+
+		/**
+		 * The meta object literal for the '<em><b>Add Guest To Event</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT___ADD_GUEST_TO_EVENT__STRING_DATE_STRING_INT = eINSTANCE.getAdditionalServiceComponent_IEventManagement__AddGuestToEvent__String_Date_String_int();
+
+		/**
+		 * The meta object literal for the '<em><b>Remove Guests From Event</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT___REMOVE_GUESTS_FROM_EVENT__STRING_DATE_STRING_INT = eINSTANCE.getAdditionalServiceComponent_IEventManagement__RemoveGuestsFromEvent__String_Date_String_int();
 
 		/**
 		 * The meta object literal for the '{@link Implementation.impl.AdditionalServiceComponent_AdditionalServiceEventImpl <em>Additional Service Component Additional Service Event</em>}' class.
@@ -8297,6 +8462,30 @@ public interface ImplementationPackage extends EPackage {
 		EOperation BOOKING_COMPONENT_BOOKING_HANDLER___FIND_BOOKING__STRING = eINSTANCE.getBookingComponent_BookingHandler__FindBooking__String();
 
 		/**
+		 * The meta object literal for the '<em><b>Booking Available</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation BOOKING_COMPONENT_BOOKING_HANDLER___BOOKING_AVAILABLE__DATE_DATE = eINSTANCE.getBookingComponent_BookingHandler__BookingAvailable__Date_Date();
+
+		/**
+		 * The meta object literal for the '<em><b>Find Bookings By Date And Type</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation BOOKING_COMPONENT_BOOKING_HANDLER___FIND_BOOKINGS_BY_DATE_AND_TYPE__DATE_DATE_STRING = eINSTANCE.getBookingComponent_BookingHandler__FindBookingsByDateAndType__Date_Date_String();
+
+		/**
+		 * The meta object literal for the '<em><b>Find Bookings By Date</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation BOOKING_COMPONENT_BOOKING_HANDLER___FIND_BOOKINGS_BY_DATE__DATE_DATE = eINSTANCE.getBookingComponent_BookingHandler__FindBookingsByDate__Date_Date();
+
+		/**
 		 * The meta object literal for the '{@link Implementation.BookingComponent_IBookingAdministration <em>Booking Component IBooking Administration</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -8714,7 +8903,7 @@ public interface ImplementationPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ROOM_COMPONENT_IROOM_ADMINISTRATION___EDIT_BED_ROOM__INT_BOOLEAN_INT_STRING_STRING_INT = eINSTANCE.getRoomComponent_IRoomAdministration__EditBedRoom__int_boolean_int_String_String_int();
+		EOperation ROOM_COMPONENT_IROOM_ADMINISTRATION___EDIT_BED_ROOM__INT_INT_BOOLEAN_INT_STRING_STRING_INT = eINSTANCE.getRoomComponent_IRoomAdministration__EditBedRoom__int_int_boolean_int_String_String_int();
 
 		/**
 		 * The meta object literal for the '<em><b>Remove</b></em>' operation.
@@ -8738,7 +8927,7 @@ public interface ImplementationPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ROOM_COMPONENT_IROOM_ADMINISTRATION___EDIT_CONFERENCE_ROOM__INT_BOOLEAN_INT_STRING_STRING_INT_BOOLEAN_BOOLEAN = eINSTANCE.getRoomComponent_IRoomAdministration__EditConferenceRoom__int_boolean_int_String_String_int_boolean_boolean();
+		EOperation ROOM_COMPONENT_IROOM_ADMINISTRATION___EDIT_CONFERENCE_ROOM__INT_INT_BOOLEAN_INT_STRING_STRING_INT_BOOLEAN_BOOLEAN = eINSTANCE.getRoomComponent_IRoomAdministration__EditConferenceRoom__int_int_boolean_int_String_String_int_boolean_boolean();
 
 		/**
 		 * The meta object literal for the '{@link Implementation.impl.RoomComponent_RoomHandlerImpl <em>Room Component Room Handler</em>}' class.

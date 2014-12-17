@@ -2,7 +2,7 @@
  */
 package Implementation.impl;
 
-import Implementation.AdditionalServiceComponent_IAdditionalServiceInformation;
+import Implementation.AdditionalServiceComponent_IEventManagement;
 import Implementation.BookingComponent_AdditionalService;
 import Implementation.BookingComponent_Booking;
 import Implementation.BookingComponent_BookingHandler;
@@ -18,6 +18,7 @@ import java.util.Collection;
 import java.util.Date;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -81,7 +82,7 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 	 * @generated
 	 * @ordered
 	 */
-	protected AdditionalServiceComponent_IAdditionalServiceInformation iAdditionalServiceInformation;
+	protected AdditionalServiceComponent_IEventManagement iAdditionalServiceInformation;
 
 	/**
 	 * The cached value of the '{@link #getIPayment() <em>IPayment</em>}' reference.
@@ -206,10 +207,10 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AdditionalServiceComponent_IAdditionalServiceInformation getIAdditionalServiceInformation() {
+	public AdditionalServiceComponent_IEventManagement getIAdditionalServiceInformation() {
 		if (iAdditionalServiceInformation != null && iAdditionalServiceInformation.eIsProxy()) {
 			InternalEObject oldIAdditionalServiceInformation = (InternalEObject)iAdditionalServiceInformation;
-			iAdditionalServiceInformation = (AdditionalServiceComponent_IAdditionalServiceInformation)eResolveProxy(oldIAdditionalServiceInformation);
+			iAdditionalServiceInformation = (AdditionalServiceComponent_IEventManagement)eResolveProxy(oldIAdditionalServiceInformation);
 			if (iAdditionalServiceInformation != oldIAdditionalServiceInformation) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER__IADDITIONAL_SERVICE_INFORMATION, oldIAdditionalServiceInformation, iAdditionalServiceInformation));
@@ -223,7 +224,7 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AdditionalServiceComponent_IAdditionalServiceInformation basicGetIAdditionalServiceInformation() {
+	public AdditionalServiceComponent_IEventManagement basicGetIAdditionalServiceInformation() {
 		return iAdditionalServiceInformation;
 	}
 
@@ -232,8 +233,8 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setIAdditionalServiceInformation(AdditionalServiceComponent_IAdditionalServiceInformation newIAdditionalServiceInformation) {
-		AdditionalServiceComponent_IAdditionalServiceInformation oldIAdditionalServiceInformation = iAdditionalServiceInformation;
+	public void setIAdditionalServiceInformation(AdditionalServiceComponent_IEventManagement newIAdditionalServiceInformation) {
+		AdditionalServiceComponent_IEventManagement oldIAdditionalServiceInformation = iAdditionalServiceInformation;
 		iAdditionalServiceInformation = newIAdditionalServiceInformation;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER__IADDITIONAL_SERVICE_INFORMATION, oldIAdditionalServiceInformation, iAdditionalServiceInformation));
@@ -323,7 +324,7 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 	public EList<String> searchForBooking(String bookingReference) {
 		Date todaysDate = new Date();
 
-		EList<String> bookingInfo = new EObjectResolvingEList<String>(BookingComponent_Booking.class, this, ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER__BOOKINGS);
+		EList<String> bookingInfo = new BasicEList<String>();
 
 		for(BookingComponent_Booking booking : bookings){
 
@@ -403,8 +404,7 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 	 * @generated NOT
 	 */
 	public EList<String> getDSSInfo() {
-		EList<String> DSSInfo = new EObjectResolvingEList<String>(BookingComponent_Booking.class, this, 
-				ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER__BOOKINGS);
+		EList<String> DSSInfo = new BasicEList<String>();
 		for (BookingComponent_Booking booking: bookings){
 			String currentBookings=booking.getRoomTypesInBooking()+","+booking.getArrivalDate()+","+booking.getDepartureDate()+","
 					+booking.getPaymentDetails().getSsn()+","+booking.getPaymentDetails().getFirstName()+","
@@ -615,6 +615,67 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public boolean bookingAvailable(Date startDate, Date endDate) {
+		iRoomInformation = getIRoomInformation();
+		
+		//This count should come from room counts
+		int count = 20;
+		int bookingsDuringDate = findBookingsByDate(startDate, endDate);
+		
+		return count - bookingsDuringDate > 0;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public int findBookingsByDateAndType(Date startDate, Date endDate, String roomType) {
+		EList<BookingComponent_Booking> bookingsInDate = new BasicEList<BookingComponent_Booking>();
+		
+		for(BookingComponent_Booking booking : bookings) {
+			
+			//Add all bookings which are greater than, or equal to start date and add all dates which
+			//Are less than or equal to end date
+			if((booking.getArrivalDate().after(startDate) || booking.getArrivalDate().equals(startDate)) 
+					&& (booking.getDepartureDate().before(endDate) || booking.getDepartureDate().equals(endDate))) {
+				
+				//If the type is the same as the room, add
+				String types = booking.getRoomTypesInBooking();
+				types.matches("(" + roomType + ")");
+				bookingsInDate.add(booking);
+			}
+		}
+		
+		return bookingsInDate.size();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public int findBookingsByDate(Date startDate, Date endDate) {
+		EList<BookingComponent_Booking> bookingsInDate = new BasicEList<BookingComponent_Booking>();
+		
+		for(BookingComponent_Booking booking : bookings) {
+			
+			//Add all bookings which are greater than, or equal to start date and add all dates which
+			//Are less than or equal to end date
+			if((booking.getArrivalDate().after(startDate) || booking.getArrivalDate().equals(startDate)) 
+					&& (booking.getDepartureDate().before(endDate) || booking.getDepartureDate().equals(endDate))) {
+				bookingsInDate.add(booking);
+			}
+		}
+		
+		return bookingsInDate.size();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -658,7 +719,7 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 				setIRoomInformation((RoomComponent_IRoomInformation)newValue);
 				return;
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER__IADDITIONAL_SERVICE_INFORMATION:
-				setIAdditionalServiceInformation((AdditionalServiceComponent_IAdditionalServiceInformation)newValue);
+				setIAdditionalServiceInformation((AdditionalServiceComponent_IEventManagement)newValue);
 				return;
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER__IPAYMENT:
 				setIPayment((PaymentComponent_IPayment)newValue);
@@ -685,7 +746,7 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 				setIRoomInformation((RoomComponent_IRoomInformation)null);
 				return;
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER__IADDITIONAL_SERVICE_INFORMATION:
-				setIAdditionalServiceInformation((AdditionalServiceComponent_IAdditionalServiceInformation)null);
+				setIAdditionalServiceInformation((AdditionalServiceComponent_IEventManagement)null);
 				return;
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER__IPAYMENT:
 				setIPayment((PaymentComponent_IPayment)null);
@@ -802,6 +863,12 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 				return null;
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___FIND_BOOKING__STRING:
 				return findBooking((String)arguments.get(0));
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___BOOKING_AVAILABLE__DATE_DATE:
+				return bookingAvailable((Date)arguments.get(0), (Date)arguments.get(1));
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___FIND_BOOKINGS_BY_DATE_AND_TYPE__DATE_DATE_STRING:
+				return findBookingsByDateAndType((Date)arguments.get(0), (Date)arguments.get(1), (String)arguments.get(2));
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___FIND_BOOKINGS_BY_DATE__DATE_DATE:
+				return findBookingsByDate((Date)arguments.get(0), (Date)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

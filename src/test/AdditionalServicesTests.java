@@ -6,6 +6,7 @@ import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class AdditionalServicesTests {
@@ -235,5 +236,80 @@ public class AdditionalServicesTests {
 		as.findService("SERVICE").findEvents(date);
 		
 		org.junit.Assert.assertTrue(as.findService("SERVICE").findEvents(date).size() == 4);
+	}
+	
+	@Test
+	public void getServiceNamesForBooking() {
+		System.out.print("\n\n### FUNC: ");
+		System.out.println("getServiceNames()\n");
+		
+		as.createAdditionalService("SERVICE1", true, 500, "Test description");
+		as.createAdditionalService("SERVICE2", true, 500, "Test description");
+		as.createAdditionalService("SERVICE3", true, 500, "Test description");
+		as.createAdditionalService("SERVICE4", true, 500, "Test description");
+		as.createAdditionalService("SERVICE5", true, 500, "Test description");
+		
+		System.out.println(as.getServices());
+		
+		org.junit.Assert.assertTrue(as.getServices().size() == 5);
+	}
+	
+	@Test
+	public void getEventInfoForBooking() {
+		System.out.print("\n\n### FUNC: ");
+		System.out.println("getEventInfoForBooking()\n");
+		
+		Date date = new Date();
+		
+		as.createAdditionalService("SERVICE1", true, 500, "Test description");
+		as.createEvent("SERVICE", date, "Location 1", 10, 5);
+		as.createEvent("SERVICE", date, "Location 2", 10, 5);
+		as.createEvent("SERVICE", date, "Location 3", 10, 5);
+		as.createEvent("SERVICE", date, "Location 4", 10, 5);
+		
+		System.out.println(as.getEvents("SERVICE"));
+		
+		org.junit.Assert.assertTrue(as.getEvents("SERVICE").size() == 4);
+	}
+	
+	@Test
+	public void addGueststoEventFromBooking() {
+		System.out.print("\n\n### FUNC: ");
+		System.out.println("addGueststoEventFromBooking()\n");
+		
+		Date date = new Date();
+		
+		as.createAdditionalService("SERVICE1", true, 500, "Test description");
+		as.createEvent("SERVICE", date, "Location 1", 10, 5);
+		
+		org.junit.Assert.assertTrue(as.addGuestToEvent("SERVICE", date, "Location 1", 5) == true);
+	}
+	
+	@Test
+	public void addTooManyGueststoEventFromBooking() {
+		System.out.print("\n\n### FUNC: ");
+		System.out.println("addTooManyGueststoEventFromBooking()\n");
+		
+		Date date = new Date();
+		
+		as.createAdditionalService("SERVICE1", true, 500, "Test description");
+		as.createEvent("SERVICE", date, "Location 1", 10, 5);
+		
+
+		org.junit.Assert.assertTrue(as.addGuestToEvent("SERVICE", date, "Location 1", 6) == false);
+	}
+	
+	@Test
+	public void removeGueststoEventFromBooking() {
+		System.out.print("\n\n### FUNC: ");
+		System.out.println("removeGueststoEventFromBooking()\n");
+		
+		Date date = new Date();
+		
+		as.createAdditionalService("SERVICE1", true, 500, "Test description");
+		as.createEvent("SERVICE", date, "Location 1", 10, 5);
+		
+
+		org.junit.Assert.assertTrue(as.addGuestToEvent("SERVICE", date, "Location 1", 2) == true);
 	}
 }

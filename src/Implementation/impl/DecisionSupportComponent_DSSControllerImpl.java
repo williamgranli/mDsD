@@ -675,7 +675,7 @@ public class DecisionSupportComponent_DSSControllerImpl extends MinimalEObjectIm
 			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER___GET_DSS_OCCUPANCY_INFO:
 				getDSSOccupancyInfo();
 				return null;
-			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER___GET_NUMBER_OF_OCCUPANCIES_OF_ROOM__STRING:
+			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER___GET_NUMBER_OF_OCCUPANCIES_OF_ROOM__INT:
 				return getNumberOfOccupanciesOfRoom((Integer)arguments.get(0));
 			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER___COUNT_CUSTOMER_BOOKING__ELIST_STRING:
 				return countCustomerBooking((EList<DecisionSupportComponent_BookingDSSInfo>)arguments.get(0), (String)arguments.get(1));
