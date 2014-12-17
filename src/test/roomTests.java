@@ -93,18 +93,18 @@ public class roomTests {
 	@Test
 	public void testEditBedroom_changeAllFields() {
 		
-		roomhandler.createBedRoom(101,true, 100, "Double", "A bedroom, which is nice to sleep in.", 2);
-		roomhandler.editBedRoom(101, 100, false, 200, "Single", "A bedroom, which is even better to sleep in.", 1);
-		org.junit.Assert.assertTrue(roomhandler.getRoomInfo(100).equals("100" + "," + "Single" + "," + "200" + "," 
+		roomhandler.createBedRoom(101,true, 100, "bedroom", "A bedroom, which is nice to sleep in.", 2);
+		roomhandler.editBedRoom(101, 100, false, 200, "bedroom", "A bedroom, which is even better to sleep in.", 1);
+		org.junit.Assert.assertTrue(roomhandler.getRoomInfo(100).equals("100" + "," + "bedroom" + "," + "200" + "," 
 		+ "A bedroom, which is even better to sleep in."));
 	}
 	
 	@Test
 	public void testEditConferenceRoom_changeAllFields() {
 		
-		roomhandler.createConferenceRoom(101,true, 100, "Conference Room", "A conference room, for conferences.",50, true, false);
-		roomhandler.editConferenceRoom(101, 100, false, 200, "Mega-Conference Room", "A very, very big conference room.", 150, false, true);
-		org.junit.Assert.assertTrue(roomhandler.getRoomInfo(100).equals("101" + "," + "Mega-Conference Room" + "," + "200" + "," 
+		roomhandler.createConferenceRoom(101,true, 100, "conference", "A conference room, for conferences.",50, true, false);
+		roomhandler.editConferenceRoom(101, 100, false, 200, "conference", "A very, very big conference room.", 150, false, true);
+		org.junit.Assert.assertTrue(roomhandler.getRoomInfo(100).equals("100" + "," + "conference" + "," + "200" + "," 
 		+ "A very, very big conference room."));
 	}
 

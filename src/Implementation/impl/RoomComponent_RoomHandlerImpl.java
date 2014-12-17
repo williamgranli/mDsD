@@ -13,6 +13,7 @@ import Implementation.StaffComponent_IAuthentication;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -170,6 +171,17 @@ public class RoomComponent_RoomHandlerImpl extends MinimalEObjectImpl.Container 
 			}
 
 		}
+		
+		for (RoomComponent_ConferenceRoom r : conferenceRooms) {
+
+			if (r.getRoomNumber() == roomNumber) {
+				return  r.getRoomNumber() + "," 
+				+r.getRoomTypeName() + ","
+				+ r.getPrice() + ","
+				+  r.getDescription();
+			}
+
+		}
 
 		return null;
 	}
@@ -181,22 +193,21 @@ public class RoomComponent_RoomHandlerImpl extends MinimalEObjectImpl.Container 
 	 */
 	public EList<String> searchRoom(String roomTypeName) {
 
-		EList<String> foundRooms = new EObjectResolvingEList<String>(RoomComponent_Bedroom.class, this, ImplementationPackage.ROOM_COMPONENT_ROOM_HANDLER__BED_ROOMS);
+		EList<String> foundRooms = new BasicEList<String>();
 
 		// Add all conference rooms if roomTypeName == conference
 		if (roomTypeName.equals("conference")) {
 			for (RoomComponent_ConferenceRoom cr : conferenceRooms) {
-				foundRooms.add(cr.getRoomNumber() + "," + cr.getRoomTypeName()
-						+ "," + cr.getPrice() + "," + cr.isProjector() + ","
-						+ cr.isConferencePhone() + "," + cr.getDescription()
-						+ ",");
+				foundRooms.add(cr.getRoomNumber() + "," + cr.isUsable() + "," + cr.getRoomTypeName()
+						+ "," + cr.getPrice() + "," + cr.getNumberOfSeats() + "," + cr.isProjector() + ","
+						+ cr.isConferencePhone() + "," + cr.getDescription());
 			}
 		}
 
 		// Add all bedrooms if roomTypeNaame == bedroom
 		if (roomTypeName.equals("bedroom")) {
 			for (RoomComponent_Bedroom br : bedRooms) {
-				foundRooms.add(br.getRoomNumber() + "," + br.getRoomTypeName()
+				foundRooms.add(br.getRoomNumber() + "," + br.isUsable() + "," + br.getRoomTypeName()
 						+ "," + br.getPrice() + "," + br.getBedCount() + ","
 						+ br.getDescription());
 			}
@@ -212,16 +223,33 @@ public class RoomComponent_RoomHandlerImpl extends MinimalEObjectImpl.Container 
 		}
 	}
 
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public EList<String> getRoomTypes() {
-		EList<String> foundRoomTypes = new EObjectResolvingEList<String>(RoomComponent_Bedroom.class, this, ImplementationPackage.ROOM_COMPONENT_ROOM_HANDLER__BED_ROOMS);
+		EList<String> foundRoomTypes = new BasicEList<String>();
 		boolean typeInList = false;
 
 		for (RoomComponent_Bedroom r : bedRooms) {
+
+			// Check if type already in list
+			for (String rt : foundRoomTypes) {
+				if ((r.getRoomTypeName()).equals(rt))
+					typeInList = true;
+			}
+
+			// Add to foundTypes if not already in list
+			if (!typeInList) {
+				foundRoomTypes.add(r.getRoomTypeName());
+			}
+
+			typeInList = false;
+		}
+		
+		for (RoomComponent_ConferenceRoom r : conferenceRooms) {
 
 			// Check if type already in list
 			for (String rt : foundRoomTypes) {
@@ -240,13 +268,14 @@ public class RoomComponent_RoomHandlerImpl extends MinimalEObjectImpl.Container 
 		return foundRoomTypes;
 	}
 
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public EList<Integer> getAllRoomNumbers() {
-		EList<Integer> allRoomNumbers = new EObjectResolvingEList<Integer>(RoomComponent_Bedroom.class, this, ImplementationPackage.ROOM_COMPONENT_ROOM_HANDLER__BED_ROOMS);
+		EList<Integer> allRoomNumbers = new  BasicEList<Integer>();
 
 		for (RoomComponent_Bedroom r : bedRooms) {
 			allRoomNumbers.add(r.getRoomNumber());
@@ -305,37 +334,21 @@ public class RoomComponent_RoomHandlerImpl extends MinimalEObjectImpl.Container 
 			}
 		}
 
-		RoomComponent_BedroomImpl bedroom = new RoomComponent_BedroomImpl();
-		bedroom.setRoomNumber(roomNumber);
-		bedroom.setUsable(usable);
-		bedroom.setPrice(price);
-		bedroom.setRoomTypeName(roomTypeName);
-		bedroom.setDescription(description);
-		bedroom.setBedCount(bedCount);
-
+		RoomComponent_BedroomImpl bedroom = new RoomComponent_BedroomImpl(roomNumber, usable, price, roomTypeName, description, bedCount);
 		bedRooms.add(bedroom);
 	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void editBedRoom(int currentRoomNumber, int roomNumber, boolean usable, int price, String roomTypeName, String description, int bedCount) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public void editBedRoom(int roomNumber, boolean usable, int price, String roomTypeName, String description, int bedCount) {
+	public void editBedRoom(int currentRoomNumber, int roomNumber, boolean usable, int price, String roomTypeName, String description, int bedCount) {
 		for (RoomComponent_Bedroom r : bedRooms) {
 
-			if (r.getRoomNumber() == roomNumber) {
+			if (r.getRoomNumber() == currentRoomNumber) {
+				r.setRoomNumber(roomNumber);
 				r.setUsable(usable);
 				r.setPrice(price);
 				r.setRoomTypeName(roomTypeName);
@@ -392,15 +405,7 @@ public class RoomComponent_RoomHandlerImpl extends MinimalEObjectImpl.Container 
 			}
 		}
 
-		RoomComponent_ConferenceRoomImpl conferenceRoom = new RoomComponent_ConferenceRoomImpl();
-		conferenceRoom.setRoomNumber(roomNumber);
-		conferenceRoom.setUsable(usable);
-		conferenceRoom.setPrice(price);
-		conferenceRoom.setRoomTypeName(roomTypeName);
-		conferenceRoom.setDescription(description);
-		conferenceRoom.setNumberOfSeats(numberOfSeats);
-		conferenceRoom.setProjector(projector);
-		conferenceRoom.setConferencePhone(conferencePhone);
+		RoomComponent_ConferenceRoomImpl conferenceRoom = new RoomComponent_ConferenceRoomImpl(roomNumber, usable, price, roomTypeName, description, numberOfSeats, projector, conferencePhone);
 
 		conferenceRooms.add(conferenceRoom);
 	}
@@ -408,23 +413,13 @@ public class RoomComponent_RoomHandlerImpl extends MinimalEObjectImpl.Container 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void editConferenceRoom(int currentRoomNumber, int roomNumber, boolean usable, int price, String roomTypeName, String description, int numberOfSeats, boolean projector, boolean conferencePhone) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public void editConferenceRoom(int roomNumber, boolean usable, int price, String roomTypeName, String description, int numberOfSeats, boolean projector, boolean conferencePhone) {
+	public void editConferenceRoom(int currentRoomNumber, int roomNumber, boolean usable, int price, String roomTypeName, String description, int numberOfSeats, boolean projector, boolean conferencePhone) {
 		for (RoomComponent_ConferenceRoom cr : conferenceRooms) {
 
-			if (cr.getRoomNumber() == roomNumber) {
+			if (cr.getRoomNumber() == currentRoomNumber) {
+				cr.setRoomNumber(roomNumber);
 				cr.setUsable(usable);
 				cr.setPrice(price);
 				cr.setRoomTypeName(roomTypeName);
