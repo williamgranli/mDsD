@@ -1753,7 +1753,7 @@
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_hjRf8HpxEeS6O5zO6NZCqA" name="additionalServiceName">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_0_0FsIFXEeSNiOPEdgrO9Q" name="price">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_0_0FsIFXEeSNiOPEdgrO9Q" name="cost">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedParameter>
       </ownedOperation>

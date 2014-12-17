@@ -59,10 +59,10 @@ public interface IBookingAdministration extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model bookingReferenceDataType="org.eclipse.uml2.types.String" bookingReferenceRequired="true" bookingReferenceOrdered="false" additionalServiceNameDataType="org.eclipse.uml2.types.String" additionalServiceNameRequired="true" additionalServiceNameOrdered="false" priceDataType="org.eclipse.uml2.types.Integer" priceRequired="true" priceOrdered="false"
+	 * @model bookingReferenceDataType="org.eclipse.uml2.types.String" bookingReferenceRequired="true" bookingReferenceOrdered="false" additionalServiceNameDataType="org.eclipse.uml2.types.String" additionalServiceNameRequired="true" additionalServiceNameOrdered="false" costDataType="org.eclipse.uml2.types.Integer" costRequired="true" costOrdered="false"
 	 * @generated
 	 */
-	void addAdditionalService(String bookingReference, String additionalServiceName, int price);
+	void addAdditionalService(String bookingReference, String additionalServiceName, int cost);
 
 	/**
 	 * <!-- begin-user-doc -->

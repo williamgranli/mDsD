@@ -507,7 +507,7 @@
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//IBookingAdministration/addAdditionalService">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//IBookingAdministration/addAdditionalService/bookingReference"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//IBookingAdministration/addAdditionalService/additionalServiceName"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//IBookingAdministration/addAdditionalService/price"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//IBookingAdministration/addAdditionalService/cost"/>
       </genOperations>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//IBookingAdministration/removeRoom">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//IBookingAdministration/removeRoom/bookingReference"/>

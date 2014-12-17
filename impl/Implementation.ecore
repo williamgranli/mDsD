@@ -543,7 +543,7 @@
     <eOperations name="addAdditionalService" ordered="false" lowerBound="1">
       <eParameters name="bookingReference" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       <eParameters name="additionalServiceName" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-      <eParameters name="price" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
+      <eParameters name="cost" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
     </eOperations>
     <eOperations name="removeRoom" ordered="false" lowerBound="1">
       <eParameters name="bookingReference" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
