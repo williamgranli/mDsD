@@ -18,7 +18,7 @@ public class bookingTests {
 	static Implementation.RoomComponent_RoomHandler roomHandler;
 	static Implementation.OccupancyComponent_OccupancyHandler occupancy;
 	static Implementation.OccupancyComponent_IOccupancy occupancyHandler;
-	static Implementation.AdditionalServiceComponent_IAdditionalServiceInformation additionalService;
+	static Implementation.AdditionalServiceComponent_IEventManagement additionalService;
 	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
