@@ -1672,7 +1672,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getBookingComponent_Booking_ReferenceNumber() {
+	public EAttribute getBookingComponent_Booking_BookingReference() {
 		return (EAttribute)bookingComponent_BookingEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -2705,7 +2705,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		bookingComponent_BookingEClass = createEClass(BOOKING_COMPONENT_BOOKING);
 		createEAttribute(bookingComponent_BookingEClass, BOOKING_COMPONENT_BOOKING__ARRIVAL_DATE);
 		createEAttribute(bookingComponent_BookingEClass, BOOKING_COMPONENT_BOOKING__DEPARTURE_DATE);
-		createEAttribute(bookingComponent_BookingEClass, BOOKING_COMPONENT_BOOKING__REFERENCE_NUMBER);
+		createEAttribute(bookingComponent_BookingEClass, BOOKING_COMPONENT_BOOKING__BOOKING_REFERENCE);
 		createEAttribute(bookingComponent_BookingEClass, BOOKING_COMPONENT_BOOKING__CURRENT_COST);
 		createEReference(bookingComponent_BookingEClass, BOOKING_COMPONENT_BOOKING__ADDITIONAL_SERVICES);
 		createEReference(bookingComponent_BookingEClass, BOOKING_COMPONENT_BOOKING__GUESTS);
@@ -3233,7 +3233,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		initEClass(bookingComponent_BookingEClass, BookingComponent_Booking.class, "BookingComponent_Booking", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getBookingComponent_Booking_ArrivalDate(), ecorePackage.getEDate(), "arrivalDate", null, 1, 1, BookingComponent_Booking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getBookingComponent_Booking_DepartureDate(), ecorePackage.getEDate(), "departureDate", null, 1, 1, BookingComponent_Booking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getBookingComponent_Booking_ReferenceNumber(), theTypesPackage.getString(), "referenceNumber", null, 1, 1, BookingComponent_Booking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getBookingComponent_Booking_BookingReference(), theTypesPackage.getString(), "bookingReference", null, 1, 1, BookingComponent_Booking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getBookingComponent_Booking_CurrentCost(), theTypesPackage.getInteger(), "currentCost", null, 1, 1, BookingComponent_Booking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getBookingComponent_Booking_AdditionalServices(), this.getBookingComponent_AdditionalService(), null, "additionalServices", null, 0, -1, BookingComponent_Booking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getBookingComponent_Booking_Guests(), this.getBookingComponent_BookingGuest(), null, "guests", null, 1, -1, BookingComponent_Booking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);

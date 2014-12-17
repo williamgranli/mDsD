@@ -396,7 +396,7 @@
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//BookingComponent_Booking">
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//BookingComponent_Booking/arrivalDate"/>
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//BookingComponent_Booking/departureDate"/>
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//BookingComponent_Booking/referenceNumber"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//BookingComponent_Booking/bookingReference"/>
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//BookingComponent_Booking/currentCost.1"/>
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
           propertySortChoices="true" ecoreFeature="ecore:EReference Implementation.ecore#//BookingComponent_Booking/additionalServices"/>

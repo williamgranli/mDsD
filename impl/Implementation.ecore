@@ -456,7 +456,7 @@
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="departureDate" ordered="false"
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="referenceNumber" ordered="false"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="bookingReference" ordered="false"
         lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="currentCost" ordered="false"
         lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>

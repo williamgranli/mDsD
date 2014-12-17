@@ -291,7 +291,7 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 		
 		
 		for(BookingComponent_Booking booking : bookings){
-			if (bookingReference.equals(booking.getReferenceNumber())) {
+			if (bookingReference.equals(booking.getBookingReference())) {
 				foundGuests = booking.getGuestsInBooking();
 
 			}
@@ -310,7 +310,7 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 		
 		
 		for(BookingComponent_Booking booking : bookings){
-			if (bookingReference.equals(booking.getReferenceNumber())) {
+			if (bookingReference.equals(booking.getBookingReference())) {
 				foundRoomTypes = booking.getRoomTypesInBooking();
 
 			}
@@ -332,7 +332,7 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 		for(BookingComponent_Booking booking : bookings){
 
 			// Booking is found for the reference number
-			if(booking.getReferenceNumber().equals(bookingReference)){
+			if(booking.getBookingReference().equals(bookingReference)){
 
 				// Check that booking date is not in the future
 				if((booking.getArrivalDate()).compareTo(todaysDate) <= 0){
@@ -370,7 +370,7 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 	 */
 	public boolean isPaidFor(String bookingReference) {
 		for (BookingComponent_Booking booking : bookings) {
-			if (booking.getReferenceNumber().equals(bookingReference)) {
+			if (booking.getBookingReference().equals(bookingReference)) {
 				return booking.isPaid();
 			}
 		}
@@ -387,7 +387,7 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 		boolean successful = false;
 		
 		for (BookingComponent_Booking booking : bookings) {
-			if (booking.getReferenceNumber().equals(bookingReference)) {
+			if (booking.getBookingReference().equals(bookingReference)) {
 				String paymentString = booking.getPaymentDetails().toString();
 				String [] paymentArray = paymentString.split(",");
 				successful = iPayment.makePayment(paymentArray[0], paymentArray[1], Integer.parseInt(paymentArray[2]), 
@@ -430,7 +430,7 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 	public void addRoom(String bookingReference, String roomType, int price) {
 		BookingComponent_Booking bookingToChange = findBooking(bookingReference);
 		
-		if(bookingToChange.getReferenceNumber().equals("NULL"))
+		if(bookingToChange.getBookingReference().equals("NULL"))
 		{
 			System.out.println("Invalid Reference Number");
 		}
@@ -459,7 +459,7 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 	public void editBooking(String bookingReference, Date arrivalDate, Date departureDate) {
 		BookingComponent_Booking targetBooking = findBooking(bookingReference);
 		
-		if(targetBooking.getReferenceNumber().equals("NULL"))
+		if(targetBooking.getBookingReference().equals("NULL"))
 		{
 			System.out.println("Invalid Reference Number");
 		}
@@ -555,7 +555,7 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 	 */
 	public void addGuestToBooking(String bookingReference, String firstName, String lastName, String address) {
 		BookingComponent_Booking bookingToChange = findBooking(bookingReference);
-		if(bookingToChange.getReferenceNumber().equals("NULL"))
+		if(bookingToChange.getBookingReference().equals("NULL"))
 		{
 			System.out.println("Invalid Booking Reference");
 		}
@@ -572,7 +572,7 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 	 */
 	public void removeGuest(String bookingReference, String firstName, String lastName, String address) {
 		BookingComponent_Booking targetBooking = findBooking(bookingReference);
-		if(targetBooking.getReferenceNumber().equals("NULL")) {
+		if(targetBooking.getBookingReference().equals("NULL")) {
 			System.out.println("Invalid Booking Reference");
 		} else {
 			targetBooking.removeGuestFromBooking(firstName, lastName, address);
@@ -589,7 +589,7 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 		
 		for(BookingComponent_Booking x : bookings)
 		{
-			if(x.getReferenceNumber().equals(referenceNumber))
+			if(x.getBookingReference().equals(referenceNumber))
 			{
 				targetBooking = x;
 			}

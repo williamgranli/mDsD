@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link Implementation.BookingComponent_Booking#getArrivalDate <em>Arrival Date</em>}</li>
  *   <li>{@link Implementation.BookingComponent_Booking#getDepartureDate <em>Departure Date</em>}</li>
- *   <li>{@link Implementation.BookingComponent_Booking#getReferenceNumber <em>Reference Number</em>}</li>
+ *   <li>{@link Implementation.BookingComponent_Booking#getBookingReference <em>Booking Reference</em>}</li>
  *   <li>{@link Implementation.BookingComponent_Booking#getCurrentCost <em>Current Cost</em>}</li>
  *   <li>{@link Implementation.BookingComponent_Booking#getAdditionalServices <em>Additional Services</em>}</li>
  *   <li>{@link Implementation.BookingComponent_Booking#getGuests <em>Guests</em>}</li>
@@ -86,30 +86,30 @@ public interface BookingComponent_Booking extends EObject {
 	void setDepartureDate(Date value);
 
 	/**
-	 * Returns the value of the '<em><b>Reference Number</b></em>' attribute.
+	 * Returns the value of the '<em><b>Booking Reference</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Reference Number</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Booking Reference</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Reference Number</em>' attribute.
-	 * @see #setReferenceNumber(String)
-	 * @see Implementation.ImplementationPackage#getBookingComponent_Booking_ReferenceNumber()
+	 * @return the value of the '<em>Booking Reference</em>' attribute.
+	 * @see #setBookingReference(String)
+	 * @see Implementation.ImplementationPackage#getBookingComponent_Booking_BookingReference()
 	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
-	String getReferenceNumber();
+	String getBookingReference();
 
 	/**
-	 * Sets the value of the '{@link Implementation.BookingComponent_Booking#getReferenceNumber <em>Reference Number</em>}' attribute.
+	 * Sets the value of the '{@link Implementation.BookingComponent_Booking#getBookingReference <em>Booking Reference</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Reference Number</em>' attribute.
-	 * @see #getReferenceNumber()
+	 * @param value the new value of the '<em>Booking Reference</em>' attribute.
+	 * @see #getBookingReference()
 	 * @generated
 	 */
-	void setReferenceNumber(String value);
+	void setBookingReference(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Current Cost</b></em>' attribute.

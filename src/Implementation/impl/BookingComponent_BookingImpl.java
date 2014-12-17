@@ -31,7 +31,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * <ul>
  *   <li>{@link Implementation.impl.BookingComponent_BookingImpl#getArrivalDate <em>Arrival Date</em>}</li>
  *   <li>{@link Implementation.impl.BookingComponent_BookingImpl#getDepartureDate <em>Departure Date</em>}</li>
- *   <li>{@link Implementation.impl.BookingComponent_BookingImpl#getReferenceNumber <em>Reference Number</em>}</li>
+ *   <li>{@link Implementation.impl.BookingComponent_BookingImpl#getBookingReference <em>Booking Reference</em>}</li>
  *   <li>{@link Implementation.impl.BookingComponent_BookingImpl#getCurrentCost <em>Current Cost</em>}</li>
  *   <li>{@link Implementation.impl.BookingComponent_BookingImpl#getAdditionalServices <em>Additional Services</em>}</li>
  *   <li>{@link Implementation.impl.BookingComponent_BookingImpl#getGuests <em>Guests</em>}</li>
@@ -85,24 +85,24 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 	protected Date departureDate = DEPARTURE_DATE_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getReferenceNumber() <em>Reference Number</em>}' attribute.
+	 * The default value of the '{@link #getBookingReference() <em>Booking Reference</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getReferenceNumber()
+	 * @see #getBookingReference()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String REFERENCE_NUMBER_EDEFAULT = null;
+	protected static final String BOOKING_REFERENCE_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getReferenceNumber() <em>Reference Number</em>}' attribute.
+	 * The cached value of the '{@link #getBookingReference() <em>Booking Reference</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getReferenceNumber()
+	 * @see #getBookingReference()
 	 * @generated
 	 * @ordered
 	 */
-	protected String referenceNumber = REFERENCE_NUMBER_EDEFAULT;
+	protected String bookingReference = BOOKING_REFERENCE_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getCurrentCost() <em>Current Cost</em>}' attribute.
@@ -194,7 +194,7 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 		this.additionalServices = getAdditionalServices();
 		this.guests = getGuests();
 		this.rooms = getRooms();
-		this.referenceNumber = generateReferenceNumber();
+		this.bookingReference = generateReferenceNumber();
 	}
 	
 	/**
@@ -211,7 +211,7 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 		this.additionalServices = getAdditionalServices();
 		this.guests = getGuests();
 		this.rooms = getRooms();
-		this.referenceNumber = generateReferenceNumber();
+		this.bookingReference = generateReferenceNumber();
 	}
 	
 	/**
@@ -283,8 +283,8 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getReferenceNumber() {
-		return referenceNumber;
+	public String getBookingReference() {
+		return bookingReference;
 	}
 
 	/**
@@ -292,11 +292,11 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setReferenceNumber(String newReferenceNumber) {
-		String oldReferenceNumber = referenceNumber;
-		referenceNumber = newReferenceNumber;
+	public void setBookingReference(String newBookingReference) {
+		String oldBookingReference = bookingReference;
+		bookingReference = newBookingReference;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ImplementationPackage.BOOKING_COMPONENT_BOOKING__REFERENCE_NUMBER, oldReferenceNumber, referenceNumber));
+			eNotify(new ENotificationImpl(this, Notification.SET, ImplementationPackage.BOOKING_COMPONENT_BOOKING__BOOKING_REFERENCE, oldBookingReference, bookingReference));
 	}
 
 	/**
@@ -626,8 +626,8 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 				return getArrivalDate();
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING__DEPARTURE_DATE:
 				return getDepartureDate();
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING__REFERENCE_NUMBER:
-				return getReferenceNumber();
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING__BOOKING_REFERENCE:
+				return getBookingReference();
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING__CURRENT_COST:
 				return getCurrentCost();
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING__ADDITIONAL_SERVICES:
@@ -660,8 +660,8 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING__DEPARTURE_DATE:
 				setDepartureDate((Date)newValue);
 				return;
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING__REFERENCE_NUMBER:
-				setReferenceNumber((String)newValue);
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING__BOOKING_REFERENCE:
+				setBookingReference((String)newValue);
 				return;
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING__CURRENT_COST:
 				setCurrentCost((Integer)newValue);
@@ -702,8 +702,8 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING__DEPARTURE_DATE:
 				setDepartureDate(DEPARTURE_DATE_EDEFAULT);
 				return;
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING__REFERENCE_NUMBER:
-				setReferenceNumber(REFERENCE_NUMBER_EDEFAULT);
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING__BOOKING_REFERENCE:
+				setBookingReference(BOOKING_REFERENCE_EDEFAULT);
 				return;
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING__CURRENT_COST:
 				setCurrentCost(CURRENT_COST_EDEFAULT);
@@ -739,8 +739,8 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 				return ARRIVAL_DATE_EDEFAULT == null ? arrivalDate != null : !ARRIVAL_DATE_EDEFAULT.equals(arrivalDate);
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING__DEPARTURE_DATE:
 				return DEPARTURE_DATE_EDEFAULT == null ? departureDate != null : !DEPARTURE_DATE_EDEFAULT.equals(departureDate);
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING__REFERENCE_NUMBER:
-				return REFERENCE_NUMBER_EDEFAULT == null ? referenceNumber != null : !REFERENCE_NUMBER_EDEFAULT.equals(referenceNumber);
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING__BOOKING_REFERENCE:
+				return BOOKING_REFERENCE_EDEFAULT == null ? bookingReference != null : !BOOKING_REFERENCE_EDEFAULT.equals(bookingReference);
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING__CURRENT_COST:
 				return currentCost != CURRENT_COST_EDEFAULT;
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING__ADDITIONAL_SERVICES:
@@ -815,8 +815,8 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 		result.append(arrivalDate);
 		result.append(", departureDate: ");
 		result.append(departureDate);
-		result.append(", referenceNumber: ");
-		result.append(referenceNumber);
+		result.append(", bookingReference: ");
+		result.append(bookingReference);
 		result.append(", currentCost: ");
 		result.append(currentCost);
 		result.append(", isPaid: ");

@@ -2164,13 +2164,13 @@ public interface ImplementationPackage extends EPackage {
 	int BOOKING_COMPONENT_BOOKING__DEPARTURE_DATE = 1;
 
 	/**
-	 * The feature id for the '<em><b>Reference Number</b></em>' attribute.
+	 * The feature id for the '<em><b>Booking Reference</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_COMPONENT_BOOKING__REFERENCE_NUMBER = 2;
+	int BOOKING_COMPONENT_BOOKING__BOOKING_REFERENCE = 2;
 
 	/**
 	 * The feature id for the '<em><b>Current Cost</b></em>' attribute.
@@ -4969,15 +4969,15 @@ public interface ImplementationPackage extends EPackage {
 	EAttribute getBookingComponent_Booking_DepartureDate();
 
 	/**
-	 * Returns the meta object for the attribute '{@link Implementation.BookingComponent_Booking#getReferenceNumber <em>Reference Number</em>}'.
+	 * Returns the meta object for the attribute '{@link Implementation.BookingComponent_Booking#getBookingReference <em>Booking Reference</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Reference Number</em>'.
-	 * @see Implementation.BookingComponent_Booking#getReferenceNumber()
+	 * @return the meta object for the attribute '<em>Booking Reference</em>'.
+	 * @see Implementation.BookingComponent_Booking#getBookingReference()
 	 * @see #getBookingComponent_Booking()
 	 * @generated
 	 */
-	EAttribute getBookingComponent_Booking_ReferenceNumber();
+	EAttribute getBookingComponent_Booking_BookingReference();
 
 	/**
 	 * Returns the meta object for the attribute '{@link Implementation.BookingComponent_Booking#getCurrentCost <em>Current Cost</em>}'.
@@ -7100,12 +7100,12 @@ public interface ImplementationPackage extends EPackage {
 		EAttribute BOOKING_COMPONENT_BOOKING__DEPARTURE_DATE = eINSTANCE.getBookingComponent_Booking_DepartureDate();
 
 		/**
-		 * The meta object literal for the '<em><b>Reference Number</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Booking Reference</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute BOOKING_COMPONENT_BOOKING__REFERENCE_NUMBER = eINSTANCE.getBookingComponent_Booking_ReferenceNumber();
+		EAttribute BOOKING_COMPONENT_BOOKING__BOOKING_REFERENCE = eINSTANCE.getBookingComponent_Booking_BookingReference();
 
 		/**
 		 * The meta object literal for the '<em><b>Current Cost</b></em>' attribute feature.
