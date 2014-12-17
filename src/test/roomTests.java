@@ -30,5 +30,18 @@ public class roomTests {
 	public void test() {
 		fail("Not yet implemented");
 	}
+	
+	Implementation.ImplementationFactory factory = Implementation.impl.ImplementationFactoryImpl.init();
+	Implementation.RoomComponent_RoomHandler roomhandler = factory.createRoomComponent_RoomHandler();
+	
+	@Test
+	public void testCreateBedroom() {
+		
+		roomhandler.getAllRoomNumbers().clear();
+		org.junit.Assert.assertTrue(roomhandler.getAllRoomNumbers().size() == 0);
+		roomhandler.createBedRoom(101,true, 100, "Double", "A bedroom, which is nice to sleep in.", 2);
+		org.junit.Assert.assertTrue(roomhandler.getAllRoomNumbers().size() == 1);
+		
+	}
 
 }
