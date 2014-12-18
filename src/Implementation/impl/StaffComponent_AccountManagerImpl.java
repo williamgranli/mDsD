@@ -72,9 +72,6 @@ public class StaffComponent_AccountManagerImpl extends MinimalEObjectImpl.Contai
 	 */
 	protected StaffComponent_AccountManagerImpl() {
 		super();
-		
-		employees = (EList<StaffComponent_Employee>) new ArrayList<StaffComponent_Employee>();
-		loggedIn = (EList<StaffComponent_Employee>) new ArrayList<StaffComponent_Employee>();
 	}
 
 	/**
@@ -155,21 +152,11 @@ public class StaffComponent_AccountManagerImpl extends MinimalEObjectImpl.Contai
 	 * @generated NOT
 	 */
 	public void logIn(String ssn, String password) {
-		StaffComponent_EmployeeImpl employee = null;
+		StaffComponent_Employee emp = findAccount(ssn);
 		
-		for(int i = 0; i < employees.size(); i++){
-			StaffComponent_EmployeeImpl temp = (StaffComponent_EmployeeImpl) employees.get(i);
-			if(((temp.getSsn()).toString()).equals(ssn))
-				employee = temp;
-		}
-		
-		if(employee == null){
-			loggedIn.add(employee);
+		if (emp != null) {
+			loggedIn.add(emp);
 			System.out.println("Log in successfull");
-		}
-		
-		else{
-			System.out.println("Log in failed");
 		}
 	}
 
@@ -180,13 +167,12 @@ public class StaffComponent_AccountManagerImpl extends MinimalEObjectImpl.Contai
 	 */
 	public void logOut(String ssn) {
 		for(StaffComponent_Employee e: loggedIn){
-			if((e.getSsn()).equals(ssn)){
+			if(e.getSsn().equals(ssn)){
 				loggedIn.remove(e);
-				System.out.println("Logg out successfull");
+				System.out.println("Log out successfull");
 				return;
 			}
-		}	
-		System.out.println("User is not logged in");
+		}
 	}
 
 	/**
@@ -195,12 +181,11 @@ public class StaffComponent_AccountManagerImpl extends MinimalEObjectImpl.Contai
 	 * @generated NOT
 	 */
 	public boolean isLoggedIn(String ssn) {
-		/* We have to change the return type to boolean */
 		for(StaffComponent_Employee e : loggedIn){
-			if(e.getSsn().equals("ssn"));
-			return true;
+			if(e.getSsn().equals("ssn")) {
+				return true;
+			}
 		}
-		
 		return false;
 	}
 
@@ -210,13 +195,12 @@ public class StaffComponent_AccountManagerImpl extends MinimalEObjectImpl.Contai
 	 * @generated NOT
 	 */
 	public boolean createAccount(String name, String ssn, String email, String phone, String password) {
-		// TODO: Include sending password to Employee constructor, when constructor is changed to accept it. Change return values to be booleans.
-
 		if (findAccount(ssn) == null) {
 			employees.add(new StaffComponent_EmployeeImpl(ssn,name,email,phone,password));
 			System.out.println("Employee account created for SSN: " + ssn);
+			return true;
 		}
-		return true;
+		return false;
 	}
 
 	/**
@@ -225,24 +209,19 @@ public class StaffComponent_AccountManagerImpl extends MinimalEObjectImpl.Contai
 	 * @generated NOT
 	 */
 	public boolean editAccountDetails(String ssn, String name, String email, String phone, String password) {
-
-		if (findAccount(ssn) == null) {
-			System.out.println("Employee account for SSN: " + ssn + " does not exist, brah...");
-			return false;
+		StaffComponent_Employee emp = findAccount(ssn);
+		if (emp != null) {
+			emp.setSsn(ssn);
+			emp.setName(name);
+			emp.setEmail(email);
+			emp.setPhone(phone);
+			emp.setPassword(password);
+			System.out.println("---\nAccount with SSN: " + ssn + " edited...");
+			return true;
 		}
 		
-		boolean removed = removeAccount(ssn);
-		
-		if (!removed) {
-			System.out.println("Could not edit account with SSN: " + ssn + "\nError: Removing old account failed...");
-			return false;
-		}
-
-		boolean created = createAccount(ssn,name,email,phone,password);
-		System.out.println("---\nAccount with SSN: " + ssn + " edited...");
-
-		return true;
-		
+		System.out.println("Employee account for SSN: " + ssn + " does not exist!");
+		return false;
 	}
 
 	/**
@@ -252,13 +231,12 @@ public class StaffComponent_AccountManagerImpl extends MinimalEObjectImpl.Contai
 	 */
 	public boolean removeAccount(String ssn) {
 		StaffComponent_Employee employee = findAccount(ssn);
-		if(employee != null){
+		if (employee != null) {
 			employees.remove(employee);
+			loggedIn.remove(employee);
 			return true;
 		}
-		else{
-			return false;
-		}
+		return false;
 	}
 
 	/**
@@ -268,14 +246,13 @@ public class StaffComponent_AccountManagerImpl extends MinimalEObjectImpl.Contai
 	 */
 	public StaffComponent_Employee findAccount(String ssn) {
 
-		for(StaffComponent_Employee e: employees){
-			if((e.getSsn()).equals(ssn)){
-				//System.out.println("Account found");
+		for (StaffComponent_Employee e: employees) {
+			if (e.getSsn().equals(ssn)) {
 				return e;
 			}
 		}
 		
-		//System.out.println("Account not found");
+		System.out.println("Account for SSN: " + ssn + " was not found");
 		return null;
 	}
 
