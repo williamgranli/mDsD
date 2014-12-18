@@ -316,10 +316,10 @@ public interface BookingComponent_Booking extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model newPaymentDetailsRequired="true" newPaymentDetailsOrdered="false"
+	 * @model firstNameDataType="org.eclipse.uml2.types.String" firstNameRequired="true" firstNameOrdered="false" lastNameDataType="org.eclipse.uml2.types.String" lastNameRequired="true" lastNameOrdered="false" addressDataType="org.eclipse.uml2.types.String" addressRequired="true" addressOrdered="false" ccNumberDataType="org.eclipse.uml2.types.String" ccNumberRequired="true" ccNumberOrdered="false" ccvDataType="org.eclipse.uml2.types.String" ccvRequired="true" ccvOrdered="false" expiryMonthDataType="org.eclipse.uml2.types.Integer" expiryMonthRequired="true" expiryMonthOrdered="false" expiryYearDataType="org.eclipse.uml2.types.Integer" expiryYearRequired="true" expiryYearOrdered="false"
 	 * @generated
 	 */
-	void updatePaymentDetails(BookingComponent_PaymentDetails newPaymentDetails);
+	void updatePaymentDetails(String firstName, String lastName, String address, String ccNumber, String ccv, int expiryMonth, int expiryYear);
 
 	/**
 	 * <!-- begin-user-doc -->

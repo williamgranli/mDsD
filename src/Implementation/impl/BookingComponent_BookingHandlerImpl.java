@@ -8,6 +8,7 @@ import Implementation.BookingComponent_Booking;
 import Implementation.BookingComponent_BookingHandler;
 import Implementation.BookingComponent_IBookingAdministration;
 import Implementation.BookingComponent_IBookingDecision;
+import Implementation.BookingComponent_RoomType;
 import Implementation.ImplementationPackage;
 import Implementation.PaymentComponent_IPayment;
 import Implementation.RoomComponent_IRoomInformation;
@@ -432,11 +433,37 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public String makeBooking(Date arrivalDate, Date departureDate, String customerSSN, String customerFirstName, String customerLastName, String customerAddress, String ccNumber, String ccv, String expiryMonth, String expiryYear) {
-		BookingComponent_Booking newBooking = new BookingComponent_BookingImpl(arrivalDate, departureDate);
-		bookings.add(newBooking);
+	public String makeBooking(String roomType, Date arrivalDate, Date departureDate, String customerSSN, String customerFirstName, String customerLastName, String customerAddress, String ccNumber, String ccv, int expiryMonth, int expiryYear, int guestCount) {
 		
-		return newBooking.getBookingReference();
+		String refNumber = "INVALID_BOOKING";
+		
+		//TODO - Re-add confirm booking, returns a message stating what is missing if it's incomplete or
+		// 		 returns the booking reference if the booking is valid?
+		
+		if(bookingAvailable(arrivalDate, departureDate, roomType)) {
+			
+			BookingComponent_Booking newBooking = new BookingComponent_BookingImpl(arrivalDate, departureDate);
+			newBooking.addPaymentDetails(customerFirstName, customerLastName, customerAddress, ccNumber, ccv, expiryMonth, expiryYear);
+			newBooking.addRoomToBooking(roomType, iRoomInformation.getPriceOfRoomType(roomType));
+			
+			//TODO - Find a way to test this without relying upon connection.
+			
+			boolean validCC = false; // = iPayment.validateCC(ccNumber, ccv, 12, 15, customerFirstName, customerLastName);
+			
+			if(validCC) {
+				//Update current cost of the booking - consider re-naming this function?
+				boolean ccAdded = iPayment.addCC(ccNumber, ccv, 12, 15, customerFirstName, customerLastName);
+				double remainingMoney = iPayment.makeDeposit(ccNumber, ccv, 12, 15, customerFirstName, customerLastName, newBooking.currentCost());
+				
+				System.out.println(remainingMoney + " " + ccAdded);
+			}
+			
+			bookings.add(newBooking);
+			
+			refNumber = newBooking.getBookingReference();
+		}
+
+		return refNumber;
 	}
 
 	/**
@@ -444,16 +471,20 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public void addRoom(String bookingReference, String roomType, int price) {
+	public boolean addRoom(String bookingReference, String roomType, int price) {
 		BookingComponent_Booking bookingToChange = findBooking(bookingReference);
 		
-		if(bookingToChange.getBookingReference().equals("NULL"))
-		{
+		if(bookingToChange.getBookingReference().equals("NULL")) {
 			System.out.println("Invalid Reference Number");
+			return false;
 		}
-		else
-		{
+		else if(!bookingAvailable(bookingToChange.getArrivalDate(), bookingToChange.getDepartureDate(), roomType)) {
+			System.out.println("No valid bookings can be made on this date, for this roomType");
+			return false;
+		}
+		else {
 			bookingToChange.addRoomToBooking(roomType, price);
+			return true;
 		}
 	}
 
@@ -462,16 +493,18 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public void editBooking(String bookingReference, Date arrivalDate, Date departureDate) {
+	public boolean editBooking(String bookingReference, Date arrivalDate, Date departureDate) {
 		BookingComponent_Booking targetBooking = findBooking(bookingReference);
 		
 		if(targetBooking.getBookingReference().equals("NULL"))
 		{
 			System.out.println("Invalid Reference Number");
+			return false;
 		}
 		else
 		{
 			targetBooking.updateBooking(arrivalDate, departureDate);
+			return true;
 		}
 	}
 
@@ -480,15 +513,21 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public void cancelBooking(String bookingReference) {
+	public boolean cancelBooking(String bookingReference) {
 		BookingComponent_Booking bookingToRemove = findBooking(bookingReference);
-		if(bookingToRemove.equals("NULL"))
+		if(bookingToRemove.equals("NULL") && bookingToRemove.isActive())
 		{
 			System.out.println("Invalid Reference Number");
+			return false;
+		}
+		else if(!bookingToRemove.isActive()) {
+			System.out.println("Booking is already cancelled");
+			return false;
 		}
 		else
 		{
-			bookings.remove(bookingToRemove);
+			bookingToRemove.setIsActive(false);
+			return true;
 		}
 	}
 
@@ -497,15 +536,17 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public void addAdditionalService(String bookingReference, String additionalServiceName, int price) {
+	public boolean addAdditionalService(String bookingReference, String additionalServiceName, int price) {
 		BookingComponent_Booking bookingToChange = findBooking(bookingReference);
 		if(bookingToChange.equals("NULL"))
 		{
 			System.out.println("Invalid Reference Number");
+			return false;
 		}
 		else
 		{
 			bookingToChange.addAdditionalServiceToBooking(additionalServiceName, price);
+			return true;
 		}
 	}
 
@@ -514,15 +555,17 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public void removeRoom(String bookingReference, String roomType) {
+	public boolean removeRoom(String bookingReference, String roomType) {
 		BookingComponent_Booking bookingToRemove = findBooking(bookingReference);
 		if(bookingToRemove.equals("NULL"))
 		{
 			System.out.println("Invalid Reference Number");
+			return false;
 		}
 		else
 		{
 			bookingToRemove.removeRoomFromBooking(roomType);
+			return true;
 		}
 	}
 
@@ -531,15 +574,17 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public void removeAdditionalService(String bookingReference, String additionalServiceName) {
+	public boolean removeAdditionalService(String bookingReference, String additionalServiceName) {
 		BookingComponent_Booking bookingToRemove = findBooking(bookingReference);
 		if(bookingToRemove.equals("NULL"))
 		{
 			System.out.println("Invalid Reference Number");
+			return false;
 		}
 		else
 		{
 			bookingToRemove.removeAdditionalServiceFromBooking(additionalServiceName);
+			return true;
 		}
 	}
 
@@ -548,15 +593,21 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public void addGuestToBooking(String bookingReference, String firstName, String lastName, String address) {
+	public boolean addGuestToBooking(String bookingReference, String firstName, String lastName, String address) {
 		BookingComponent_Booking bookingToChange = findBooking(bookingReference);
 		if(bookingToChange.getBookingReference().equals("NULL"))
 		{
 			System.out.println("Invalid Booking Reference");
+			return false;
+		}
+		else if(!confirmBooking(bookingReference)) {
+			System.out.println("Unable to add more guests to this booking, please add more rooms first.");
+			return false;
 		}
 		else
 		{
 			bookingToChange.addGuestToBooking(firstName, lastName, address);
+			return true;
 		}
 	}
 
@@ -565,13 +616,43 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public void removeGuest(String bookingReference, String firstName, String lastName, String address) {
+	public boolean removeGuest(String bookingReference, String firstName, String lastName, String address) {
 		BookingComponent_Booking targetBooking = findBooking(bookingReference);
 		if(targetBooking.getBookingReference().equals("NULL")) {
 			System.out.println("Invalid Booking Reference");
+			return false;
 		} else {
 			targetBooking.removeGuestFromBooking(firstName, lastName, address);
+			return true;
 		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public boolean confirmBooking(String bookingReference) {
+		BookingComponent_Booking bookingToValidate = findBooking(bookingReference);
+		
+		int maxGuestCount = 0;
+		
+		if(bookingToValidate.getBookingReference().equals("NULL"))
+		{
+			System.out.println("Invalid Booking Reference");
+			return false;
+		}
+		
+		for(BookingComponent_RoomType roomTypes : bookingToValidate.getRooms()) {
+			String type = roomTypes.getRoomType();
+			maxGuestCount += iRoomInformation.getBedCountOfRoomType(type);
+		}
+		
+		if(bookingToValidate.getGuests().size() > maxGuestCount) {
+			return false;
+		}
+		
+		return true;
 	}
 
 	/**
@@ -597,16 +678,13 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public boolean bookingAvailable(Date startDate, Date endDate) {
+	public boolean bookingAvailable(Date startDate, Date endDate, String roomType) {
 		iRoomInformation = getIRoomInformation();
-		
-		//This count should come from room counts
-		int roomCount = 5;
+		int roomCount = iRoomInformation.getCountOfRoomType(roomType);
 		int bookingsDuringDate = findBookingsByDate(startDate, endDate);
-		System.out.println("Current available rooms on these dates: " + (roomCount - bookingsDuringDate));
 		return roomCount - bookingsDuringDate > 0;
 	}
-
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -623,11 +701,9 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 			if((booking.getArrivalDate().after(startDate) || booking.getArrivalDate().equals(startDate)) 
 					&& (booking.getDepartureDate().before(endDate) || booking.getDepartureDate().equals(endDate))) {
 				
-				//TODO - Fix bug in the below function.
 				String types = booking.getRoomTypesInBooking();
 				List<String> roomList = Arrays.asList(types.split(","));
-				System.out.println(types);
-				System.out.println(roomList);
+				
 				for(String foundTypes : roomList) {
 					if(foundTypes.equals(roomType)){
 						++count;
@@ -645,7 +721,8 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 	 * @generated NOT
 	 */
 	public int findBookingsByDate(Date startDate, Date endDate) {
-		EList<BookingComponent_Booking> bookingsInDate = new BasicEList<BookingComponent_Booking>();
+		
+		int count = 0;
 		
 		for(BookingComponent_Booking booking : bookings) {
 			
@@ -653,11 +730,11 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 			//Are less than or equal to end date
 			if((booking.getArrivalDate().after(startDate) || booking.getArrivalDate().equals(startDate)) 
 					&& (booking.getDepartureDate().before(endDate) || booking.getDepartureDate().equals(endDate))) {
-				bookingsInDate.add(booking);
+				++count;
 			}
 		}
 		
-		return bookingsInDate.size();
+		return count;
 	}
 
 	/**
@@ -779,7 +856,7 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 		}
 		if (baseClass == BookingComponent_IBookingAdministration.class) {
 			switch (baseOperationID) {
-				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___MAKE_BOOKING__DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_STRING_STRING: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___MAKE_BOOKING__DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_STRING_STRING;
+				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___MAKE_BOOKING__STRING_DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_INT_INT_INT: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___MAKE_BOOKING__STRING_DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_INT_INT_INT;
 				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___ADD_ROOM__STRING_STRING_INT: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___ADD_ROOM__STRING_STRING_INT;
 				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___EDIT_BOOKING__STRING_DATE_DATE: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___EDIT_BOOKING__STRING_DATE_DATE;
 				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___CANCEL_BOOKING__STRING: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___CANCEL_BOOKING__STRING;
@@ -788,6 +865,7 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___REMOVE_ADDITIONAL_SERVICE__STRING_STRING: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___REMOVE_ADDITIONAL_SERVICE__STRING_STRING;
 				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING;
 				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___REMOVE_GUEST__STRING_STRING_STRING_STRING: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___REMOVE_GUEST__STRING_STRING_STRING_STRING;
+				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___CONFIRM_BOOKING__STRING: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___CONFIRM_BOOKING__STRING;
 				default: return -1;
 			}
 		}
@@ -814,36 +892,30 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 				return makePayment((String)arguments.get(0));
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___GET_DSS_INFO:
 				return getDSSInfo();
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___MAKE_BOOKING__DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_STRING_STRING:
-				return makeBooking((Date)arguments.get(0), (Date)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5), (String)arguments.get(6), (String)arguments.get(7), (String)arguments.get(8), (String)arguments.get(9));
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___MAKE_BOOKING__STRING_DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_INT_INT_INT:
+				return makeBooking((String)arguments.get(0), (Date)arguments.get(1), (Date)arguments.get(2), (String)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5), (String)arguments.get(6), (String)arguments.get(7), (String)arguments.get(8), (Integer)arguments.get(9), (Integer)arguments.get(10), (Integer)arguments.get(11));
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___ADD_ROOM__STRING_STRING_INT:
-				addRoom((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2));
-				return null;
+				return addRoom((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2));
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___EDIT_BOOKING__STRING_DATE_DATE:
-				editBooking((String)arguments.get(0), (Date)arguments.get(1), (Date)arguments.get(2));
-				return null;
+				return editBooking((String)arguments.get(0), (Date)arguments.get(1), (Date)arguments.get(2));
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___CANCEL_BOOKING__STRING:
-				cancelBooking((String)arguments.get(0));
-				return null;
+				return cancelBooking((String)arguments.get(0));
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___ADD_ADDITIONAL_SERVICE__STRING_STRING_INT:
-				addAdditionalService((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2));
-				return null;
+				return addAdditionalService((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2));
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___REMOVE_ROOM__STRING_STRING:
-				removeRoom((String)arguments.get(0), (String)arguments.get(1));
-				return null;
+				return removeRoom((String)arguments.get(0), (String)arguments.get(1));
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___REMOVE_ADDITIONAL_SERVICE__STRING_STRING:
-				removeAdditionalService((String)arguments.get(0), (String)arguments.get(1));
-				return null;
+				return removeAdditionalService((String)arguments.get(0), (String)arguments.get(1));
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING:
-				addGuestToBooking((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3));
-				return null;
+				return addGuestToBooking((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3));
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___REMOVE_GUEST__STRING_STRING_STRING_STRING:
-				removeGuest((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3));
-				return null;
+				return removeGuest((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3));
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___CONFIRM_BOOKING__STRING:
+				return confirmBooking((String)arguments.get(0));
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___FIND_BOOKING__STRING:
 				return findBooking((String)arguments.get(0));
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___BOOKING_AVAILABLE__DATE_DATE:
-				return bookingAvailable((Date)arguments.get(0), (Date)arguments.get(1));
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___BOOKING_AVAILABLE__DATE_DATE_STRING:
+				return bookingAvailable((Date)arguments.get(0), (Date)arguments.get(1), (String)arguments.get(2));
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___FIND_BOOKINGS_BY_DATE_AND_TYPE__DATE_DATE_STRING:
 				return findBookingsByDateAndType((Date)arguments.get(0), (Date)arguments.get(1), (String)arguments.get(2));
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___FIND_BOOKINGS_BY_DATE__DATE_DATE:

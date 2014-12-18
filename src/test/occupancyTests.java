@@ -64,7 +64,7 @@ public class occupancyTests {
     	Date nextWeek = new Date(theFuture);
 		roomHandler.createBedRoom(1, true, 100, "Single Room", "A small single room with a single bed", 1);
     	org.junit.Assert.assertTrue(booking.getBookings().size() == 0);
-    	String bookingReference = booking.makeBooking(new Date(), nextWeek, "880923", "William", "Granli", "MyHouse", "123456789", "123", "september", "2015");
+    	String bookingReference = booking.makeBooking("Single Room", new Date(), nextWeek, "880923", "William", "Granli", "MyHouse", "123456789", "123", 9, 16, 1);
     	org.junit.Assert.assertTrue(booking.getBookings().size() == 1);
     	booking.addGuestToBooking(bookingReference, "William", "Granli", "The Shire");
     	booking.addGuestToBooking(bookingReference, "Andam", "Berima", "The Old Shire");

@@ -123,6 +123,17 @@ public class RoomComponentImpl extends MinimalEObjectImpl.Container implements R
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public int getBedCountOfRoomType(String roomType) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public void createBedRoom(int roomNumber, boolean usable, int price, String roomTypeName, String description, int bedCount) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -215,6 +226,8 @@ public class RoomComponentImpl extends MinimalEObjectImpl.Container implements R
 				return getCountOfRoomType((String)arguments.get(0));
 			case ImplementationPackage.ROOM_COMPONENT___GET_PRICE_OF_ROOM_TYPE__STRING:
 				return getPriceOfRoomType((String)arguments.get(0));
+			case ImplementationPackage.ROOM_COMPONENT___GET_BED_COUNT_OF_ROOM_TYPE__STRING:
+				return getBedCountOfRoomType((String)arguments.get(0));
 			case ImplementationPackage.ROOM_COMPONENT___CREATE_BED_ROOM__INT_BOOLEAN_INT_STRING_STRING_INT:
 				createBedRoom((Integer)arguments.get(0), (Boolean)arguments.get(1), (Integer)arguments.get(2), (String)arguments.get(3), (String)arguments.get(4), (Integer)arguments.get(5));
 				return null;

@@ -59,7 +59,7 @@ public class BankImpl extends MinimalEObjectImpl.Container implements Bank {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String makeBooking(Date arrivalDate, Date departureDate, String customerSSN, String customerFirstName, String customerLastName, String customerAddress, String ccNumber, String ccv, String expiryMonth, String expiryYear) {
+	public String makeBooking(String roomType, Date arrivalDate, Date departureDate, String customerSSN, String customerFirstName, String customerLastName, String customerAddress, String ccNumber, String ccv, int expiryMonth, int expiryYear, int guestCount) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -70,7 +70,7 @@ public class BankImpl extends MinimalEObjectImpl.Container implements Bank {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void addRoom(String bookingReference, String roomType, int price) {
+	public boolean addRoom(String bookingReference, String roomType, int price) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -81,7 +81,7 @@ public class BankImpl extends MinimalEObjectImpl.Container implements Bank {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void editBooking(String bookingReference, Date arrivalDate, Date departureDate) {
+	public boolean editBooking(String bookingReference, Date arrivalDate, Date departureDate) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -92,7 +92,7 @@ public class BankImpl extends MinimalEObjectImpl.Container implements Bank {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void cancelBooking(String bookingReference) {
+	public boolean cancelBooking(String bookingReference) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -103,7 +103,7 @@ public class BankImpl extends MinimalEObjectImpl.Container implements Bank {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void addAdditionalService(String bookingReference, String additionalServiceName, int cost) {
+	public boolean addAdditionalService(String bookingReference, String additionalServiceName, int cost) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -114,7 +114,7 @@ public class BankImpl extends MinimalEObjectImpl.Container implements Bank {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void removeRoom(String bookingReference, String roomType) {
+	public boolean removeRoom(String bookingReference, String roomType) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -125,7 +125,7 @@ public class BankImpl extends MinimalEObjectImpl.Container implements Bank {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void removeAdditionalService(String bookingReference, String additionalServiceName) {
+	public boolean removeAdditionalService(String bookingReference, String additionalServiceName) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -136,7 +136,7 @@ public class BankImpl extends MinimalEObjectImpl.Container implements Bank {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void addGuestToBooking(String bookingReference, String firstName, String lastName, String address) {
+	public boolean addGuestToBooking(String bookingReference, String firstName, String lastName, String address) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -147,7 +147,18 @@ public class BankImpl extends MinimalEObjectImpl.Container implements Bank {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void removeGuest(String bookingReference, String firstName, String lastName, String address) {
+	public boolean removeGuest(String bookingReference, String firstName, String lastName, String address) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean confirmBooking(String bookingReference) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -217,7 +228,7 @@ public class BankImpl extends MinimalEObjectImpl.Container implements Bank {
 	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
 		if (baseClass == BookingComponent_IBookingAdministration.class) {
 			switch (baseOperationID) {
-				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___MAKE_BOOKING__DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_STRING_STRING: return ImplementationPackage.BANK___MAKE_BOOKING__DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_STRING_STRING;
+				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___MAKE_BOOKING__STRING_DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_INT_INT_INT: return ImplementationPackage.BANK___MAKE_BOOKING__STRING_DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_INT_INT_INT;
 				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___ADD_ROOM__STRING_STRING_INT: return ImplementationPackage.BANK___ADD_ROOM__STRING_STRING_INT;
 				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___EDIT_BOOKING__STRING_DATE_DATE: return ImplementationPackage.BANK___EDIT_BOOKING__STRING_DATE_DATE;
 				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___CANCEL_BOOKING__STRING: return ImplementationPackage.BANK___CANCEL_BOOKING__STRING;
@@ -226,6 +237,7 @@ public class BankImpl extends MinimalEObjectImpl.Container implements Bank {
 				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___REMOVE_ADDITIONAL_SERVICE__STRING_STRING: return ImplementationPackage.BANK___REMOVE_ADDITIONAL_SERVICE__STRING_STRING;
 				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING: return ImplementationPackage.BANK___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING;
 				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___REMOVE_GUEST__STRING_STRING_STRING_STRING: return ImplementationPackage.BANK___REMOVE_GUEST__STRING_STRING_STRING_STRING;
+				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___CONFIRM_BOOKING__STRING: return ImplementationPackage.BANK___CONFIRM_BOOKING__STRING;
 				default: return -1;
 			}
 		}
@@ -252,32 +264,26 @@ public class BankImpl extends MinimalEObjectImpl.Container implements Bank {
 		switch (operationID) {
 			case ImplementationPackage.BANK___GET_DSS_INFO:
 				return getDSSInfo();
-			case ImplementationPackage.BANK___MAKE_BOOKING__DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_STRING_STRING:
-				return makeBooking((Date)arguments.get(0), (Date)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5), (String)arguments.get(6), (String)arguments.get(7), (String)arguments.get(8), (String)arguments.get(9));
+			case ImplementationPackage.BANK___MAKE_BOOKING__STRING_DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_INT_INT_INT:
+				return makeBooking((String)arguments.get(0), (Date)arguments.get(1), (Date)arguments.get(2), (String)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5), (String)arguments.get(6), (String)arguments.get(7), (String)arguments.get(8), (Integer)arguments.get(9), (Integer)arguments.get(10), (Integer)arguments.get(11));
 			case ImplementationPackage.BANK___ADD_ROOM__STRING_STRING_INT:
-				addRoom((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2));
-				return null;
+				return addRoom((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2));
 			case ImplementationPackage.BANK___EDIT_BOOKING__STRING_DATE_DATE:
-				editBooking((String)arguments.get(0), (Date)arguments.get(1), (Date)arguments.get(2));
-				return null;
+				return editBooking((String)arguments.get(0), (Date)arguments.get(1), (Date)arguments.get(2));
 			case ImplementationPackage.BANK___CANCEL_BOOKING__STRING:
-				cancelBooking((String)arguments.get(0));
-				return null;
+				return cancelBooking((String)arguments.get(0));
 			case ImplementationPackage.BANK___ADD_ADDITIONAL_SERVICE__STRING_STRING_INT:
-				addAdditionalService((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2));
-				return null;
+				return addAdditionalService((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2));
 			case ImplementationPackage.BANK___REMOVE_ROOM__STRING_STRING:
-				removeRoom((String)arguments.get(0), (String)arguments.get(1));
-				return null;
+				return removeRoom((String)arguments.get(0), (String)arguments.get(1));
 			case ImplementationPackage.BANK___REMOVE_ADDITIONAL_SERVICE__STRING_STRING:
-				removeAdditionalService((String)arguments.get(0), (String)arguments.get(1));
-				return null;
+				return removeAdditionalService((String)arguments.get(0), (String)arguments.get(1));
 			case ImplementationPackage.BANK___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING:
-				addGuestToBooking((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3));
-				return null;
+				return addGuestToBooking((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3));
 			case ImplementationPackage.BANK___REMOVE_GUEST__STRING_STRING_STRING_STRING:
-				removeGuest((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3));
-				return null;
+				return removeGuest((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3));
+			case ImplementationPackage.BANK___CONFIRM_BOOKING__STRING:
+				return confirmBooking((String)arguments.get(0));
 			case ImplementationPackage.BANK___GET_GUESTS_IN_BOOKING__STRING:
 				return getGuestsInBooking((String)arguments.get(0));
 			case ImplementationPackage.BANK___GET_ROOM_TYPES_IN_BOOKING__STRING:

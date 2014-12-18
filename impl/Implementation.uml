@@ -1033,7 +1033,27 @@ For some reason Papyrus doesn’t show the attributes in ConferenceRoom. It hold
           </ownedParameter>
         </ownedOperation>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_gokdznuiEeSz04gN9GtPDA" name="updatePaymentDetails" visibility="private">
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_gokdz3uiEeSz04gN9GtPDA" name="newPaymentDetails" type="_eQyG4HuiEeSz04gN9GtPDA"/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_c312gIbxEeSvmK2zphyL7A" name="firstName">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_eVSE4IbxEeSvmK2zphyL7A" name="lastName">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_glw5wIbxEeSvmK2zphyL7A" name="address" visibility="public">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_h8y-IIbxEeSvmK2zphyL7A" name="ccNumber">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_i_d8EIbxEeSvmK2zphyL7A" name="ccv">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_mfa0wIbxEeSvmK2zphyL7A" name="expiryMonth">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_nj8M0IbxEeSvmK2zphyL7A" name="expiryYear">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
         </ownedOperation>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_n3Sp4IFPEeSePs36Ha8-Rw" name="generateReferenceNumber" visibility="private">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_ywwRQIIUEeSGfvcarZDoCQ" name="referenceNumber" direction="return">
@@ -1135,6 +1155,9 @@ For some reason Papyrus doesn’t show the attributes in ConferenceRoom. It hold
           </ownedParameter>
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_CdGgI4YMEeSv7KoGdfMFhw" name="isAvailable" direction="return">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_fZx84IbzEeSvmK2zphyL7A" name="roomType">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedParameter>
         </ownedOperation>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_CdIVUIYMEeSv7KoGdfMFhw" name="findBookingsByDateAndType" visibility="private">
@@ -1288,6 +1311,9 @@ For some reason Papyrus doesn’t show the attributes in ConferenceRoom. It hold
       </nestedClassifier>
       <nestedClassifier xmi:type="uml:Interface" xmi:id="_hz_IgIUREeSnMfn5T1z3aA" name="IBookingAdministration">
         <ownedOperation xmi:type="uml:Operation" xmi:id="_ISVZcHpsEeS6O5zO6NZCqA" name="makeBooking" visibility="protected">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_ZFcz4Ib6EeSvmK2zphyL7A" name="roomType">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_ZCYH0HpvEeS6O5zO6NZCqA" name="arrivalDate">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
           </ownedParameter>
@@ -1313,13 +1339,16 @@ For some reason Papyrus doesn’t show the attributes in ConferenceRoom. It hold
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedParameter>
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_xg9pEHrcEeSyBKqr79uWFQ" name="expiryMonth">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
           </ownedParameter>
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_1IJyMHrcEeSyBKqr79uWFQ" name="expiryYear">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
           </ownedParameter>
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_obb1MIXjEeS_xs5TLHXXQQ" name="bookingReference" direction="return">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_-RDBcIbyEeSvmK2zphyL7A" name="guestCount">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
           </ownedParameter>
         </ownedOperation>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_NDnXIHpsEeS6O5zO6NZCqA" name="addRoom" visibility="protected">
@@ -1332,6 +1361,9 @@ For some reason Papyrus doesn’t show the attributes in ConferenceRoom. It hold
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_3kdzwIFXEeSNiOPEdgrO9Q" name="price">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
           </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_yFLZIIcAEeSBjM8bcwgScw" name="returnValue" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          </ownedParameter>
         </ownedOperation>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_TaTMYHpsEeS6O5zO6NZCqA" name="editBooking" visibility="protected">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_FDP1AHpxEeS6O5zO6NZCqA" name="bookingReference">
@@ -1343,10 +1375,16 @@ For some reason Papyrus doesn’t show the attributes in ConferenceRoom. It hold
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_RPpgcHpxEeS6O5zO6NZCqA" name="departureDate">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
           </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_z5WFcIcAEeSBjM8bcwgScw" name="returnValue" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          </ownedParameter>
         </ownedOperation>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_Vj1rwHpsEeS6O5zO6NZCqA" name="cancelBooking" visibility="protected">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_aT4hEHpxEeS6O5zO6NZCqA" name="bookingReference">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_1evV8IcAEeSBjM8bcwgScw" name="returnValue" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
           </ownedParameter>
         </ownedOperation>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_bQGrAHpsEeS6O5zO6NZCqA" name="addAdditionalService" visibility="protected">
@@ -1359,6 +1397,9 @@ For some reason Papyrus doesn’t show the attributes in ConferenceRoom. It hold
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_0_0FsIFXEeSNiOPEdgrO9Q" name="cost">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
           </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_29xfwIcAEeSBjM8bcwgScw" name="returnValue" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          </ownedParameter>
         </ownedOperation>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_qRpXkHpsEeS6O5zO6NZCqA" name="removeRoom" visibility="protected">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_miE8QHpxEeS6O5zO6NZCqA" name="bookingReference">
@@ -1367,6 +1408,9 @@ For some reason Papyrus doesn’t show the attributes in ConferenceRoom. It hold
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_2YyWQHpxEeS6O5zO6NZCqA" name="roomType">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_4nU3gIcAEeSBjM8bcwgScw" name="returnValue" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          </ownedParameter>
         </ownedOperation>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_r5v90HpsEeS6O5zO6NZCqA" name="removeAdditionalService" visibility="protected">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_8o0w8HpxEeS6O5zO6NZCqA" name="bookingReference">
@@ -1374,6 +1418,9 @@ For some reason Papyrus doesn’t show the attributes in ConferenceRoom. It hold
           </ownedParameter>
           <ownedParameter xmi:type="uml:Parameter" xmi:id="___X2AHpxEeS6O5zO6NZCqA" name="additionalServiceName">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_6HfCsIcAEeSBjM8bcwgScw" name="returnValue" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
           </ownedParameter>
         </ownedOperation>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_AXvh8ICBEeSVsryNkPPRZw" name="addGuestToBooking" visibility="protected">
@@ -1389,6 +1436,9 @@ For some reason Papyrus doesn’t show the attributes in ConferenceRoom. It hold
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_k5MyAIFYEeSNiOPEdgrO9Q" name="address">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_7ix8AIcAEeSBjM8bcwgScw" name="returnValue" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          </ownedParameter>
         </ownedOperation>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_XuVcoIVdEeSNXoGCZ7JVFg" name="removeGuest" visibility="protected">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_bfA48IVdEeSNXoGCZ7JVFg" name="bookingReference">
@@ -1402,6 +1452,17 @@ For some reason Papyrus doesn’t show the attributes in ConferenceRoom. It hold
           </ownedParameter>
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_fYEOIIVdEeSNXoGCZ7JVFg" name="address">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_96ZToIcAEeSBjM8bcwgScw" name="returnValue" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_kfCQYIb8EeSBjM8bcwgScw" name="confirmBooking" visibility="protected">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_n5flEIb8EeSBjM8bcwgScw" name="bookingReference">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_px-wsIb8EeSBjM8bcwgScw" name="returnValue" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
           </ownedParameter>
         </ownedOperation>
       </nestedClassifier>
@@ -1763,6 +1824,14 @@ For some reason Papyrus doesn’t show the attributes in ConferenceRoom. It hold
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedParameter>
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_gQMHoIbLEeSIpOkXh1Mk4w" name="price" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_P8duwIb9EeSBjM8bcwgScw" name="getBedCountOfRoomType" visibility="protected">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_WJqQ0Ib9EeSBjM8bcwgScw" name="roomType">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_Xk4RoIb9EeSBjM8bcwgScw" name="roomCount" direction="return">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
           </ownedParameter>
         </ownedOperation>

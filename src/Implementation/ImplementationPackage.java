@@ -1197,13 +1197,22 @@ public interface ImplementationPackage extends EPackage {
 	int ROOM_COMPONENT_IROOM_INFORMATION___GET_PRICE_OF_ROOM_TYPE__STRING = 6;
 
 	/**
+	 * The operation id for the '<em>Get Bed Count Of Room Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_COMPONENT_IROOM_INFORMATION___GET_BED_COUNT_OF_ROOM_TYPE__STRING = 7;
+
+	/**
 	 * The number of operations of the '<em>Room Component IRoom Information</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_COMPONENT_IROOM_INFORMATION_OPERATION_COUNT = 7;
+	int ROOM_COMPONENT_IROOM_INFORMATION_OPERATION_COUNT = 8;
 
 	/**
 	 * The meta object id for the '{@link Implementation.BookingComponent_IBookingInformation <em>Booking Component IBooking Information</em>}' class.
@@ -2880,7 +2889,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_COMPONENT_BOOKING___UPDATE_PAYMENT_DETAILS__BOOKINGCOMPONENT_PAYMENTDETAILS = 6;
+	int BOOKING_COMPONENT_BOOKING___UPDATE_PAYMENT_DETAILS__STRING_STRING_STRING_STRING_STRING_INT_INT = 6;
 
 	/**
 	 * The operation id for the '<em>Generate Reference Number</em>' operation.
@@ -3187,7 +3196,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_COMPONENT_BOOKING_HANDLER___MAKE_BOOKING__DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_STRING_STRING = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 1;
+	int BOOKING_COMPONENT_BOOKING_HANDLER___MAKE_BOOKING__STRING_DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_INT_INT_INT = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Add Room</em>' operation.
@@ -3262,13 +3271,22 @@ public interface ImplementationPackage extends EPackage {
 	int BOOKING_COMPONENT_BOOKING_HANDLER___REMOVE_GUEST__STRING_STRING_STRING_STRING = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 9;
 
 	/**
+	 * The operation id for the '<em>Confirm Booking</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_COMPONENT_BOOKING_HANDLER___CONFIRM_BOOKING__STRING = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 10;
+
+	/**
 	 * The operation id for the '<em>Find Booking</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_COMPONENT_BOOKING_HANDLER___FIND_BOOKING__STRING = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 10;
+	int BOOKING_COMPONENT_BOOKING_HANDLER___FIND_BOOKING__STRING = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 11;
 
 	/**
 	 * The operation id for the '<em>Booking Available</em>' operation.
@@ -3277,7 +3295,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_COMPONENT_BOOKING_HANDLER___BOOKING_AVAILABLE__DATE_DATE = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 11;
+	int BOOKING_COMPONENT_BOOKING_HANDLER___BOOKING_AVAILABLE__DATE_DATE_STRING = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 12;
 
 	/**
 	 * The operation id for the '<em>Find Bookings By Date And Type</em>' operation.
@@ -3286,7 +3304,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_COMPONENT_BOOKING_HANDLER___FIND_BOOKINGS_BY_DATE_AND_TYPE__DATE_DATE_STRING = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 12;
+	int BOOKING_COMPONENT_BOOKING_HANDLER___FIND_BOOKINGS_BY_DATE_AND_TYPE__DATE_DATE_STRING = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 13;
 
 	/**
 	 * The operation id for the '<em>Find Bookings By Date</em>' operation.
@@ -3295,7 +3313,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_COMPONENT_BOOKING_HANDLER___FIND_BOOKINGS_BY_DATE__DATE_DATE = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 13;
+	int BOOKING_COMPONENT_BOOKING_HANDLER___FIND_BOOKINGS_BY_DATE__DATE_DATE = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 14;
 
 	/**
 	 * The number of operations of the '<em>Booking Component Booking Handler</em>' class.
@@ -3304,7 +3322,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_COMPONENT_BOOKING_HANDLER_OPERATION_COUNT = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 14;
+	int BOOKING_COMPONENT_BOOKING_HANDLER_OPERATION_COUNT = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 15;
 
 	/**
 	 * The meta object id for the '{@link Implementation.BookingComponent_IBookingAdministration <em>Booking Component IBooking Administration</em>}' class.
@@ -3332,7 +3350,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___MAKE_BOOKING__DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_STRING_STRING = 0;
+	int BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___MAKE_BOOKING__STRING_DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_INT_INT_INT = 0;
 
 	/**
 	 * The operation id for the '<em>Add Room</em>' operation.
@@ -3407,13 +3425,22 @@ public interface ImplementationPackage extends EPackage {
 	int BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___REMOVE_GUEST__STRING_STRING_STRING_STRING = 8;
 
 	/**
+	 * The operation id for the '<em>Confirm Booking</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___CONFIRM_BOOKING__STRING = 9;
+
+	/**
 	 * The number of operations of the '<em>Booking Component IBooking Administration</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_COMPONENT_IBOOKING_ADMINISTRATION_OPERATION_COUNT = 9;
+	int BOOKING_COMPONENT_IBOOKING_ADMINISTRATION_OPERATION_COUNT = 10;
 
 	/**
 	 * The number of structural features of the '<em>Staff Component IAccount Administration</em>' class.
@@ -3792,6 +3819,15 @@ public interface ImplementationPackage extends EPackage {
 	 * @ordered
 	 */
 	int ROOM_COMPONENT___GET_PRICE_OF_ROOM_TYPE__STRING = ROOM_COMPONENT_IROOM_INFORMATION___GET_PRICE_OF_ROOM_TYPE__STRING;
+
+	/**
+	 * The operation id for the '<em>Get Bed Count Of Room Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_COMPONENT___GET_BED_COUNT_OF_ROOM_TYPE__STRING = ROOM_COMPONENT_IROOM_INFORMATION___GET_BED_COUNT_OF_ROOM_TYPE__STRING;
 
 	/**
 	 * The operation id for the '<em>Create Bed Room</em>' operation.
@@ -4235,6 +4271,15 @@ public interface ImplementationPackage extends EPackage {
 	int ROOM_COMPONENT_ROOM_HANDLER___GET_PRICE_OF_ROOM_TYPE__STRING = ROOM_COMPONENT_IROOM_INFORMATION___GET_PRICE_OF_ROOM_TYPE__STRING;
 
 	/**
+	 * The operation id for the '<em>Get Bed Count Of Room Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_COMPONENT_ROOM_HANDLER___GET_BED_COUNT_OF_ROOM_TYPE__STRING = ROOM_COMPONENT_IROOM_INFORMATION___GET_BED_COUNT_OF_ROOM_TYPE__STRING;
+
+	/**
 	 * The operation id for the '<em>Create Bed Room</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4324,7 +4369,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BANK___MAKE_BOOKING__DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_STRING_STRING = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 0;
+	int BANK___MAKE_BOOKING__STRING_DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_INT_INT_INT = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Add Room</em>' operation.
@@ -4399,13 +4444,22 @@ public interface ImplementationPackage extends EPackage {
 	int BANK___REMOVE_GUEST__STRING_STRING_STRING_STRING = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 8;
 
 	/**
+	 * The operation id for the '<em>Confirm Booking</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BANK___CONFIRM_BOOKING__STRING = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 9;
+
+	/**
 	 * The operation id for the '<em>Get Guests In Booking</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BANK___GET_GUESTS_IN_BOOKING__STRING = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 9;
+	int BANK___GET_GUESTS_IN_BOOKING__STRING = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 10;
 
 	/**
 	 * The operation id for the '<em>Get Room Types In Booking</em>' operation.
@@ -4414,7 +4468,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BANK___GET_ROOM_TYPES_IN_BOOKING__STRING = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 10;
+	int BANK___GET_ROOM_TYPES_IN_BOOKING__STRING = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 11;
 
 	/**
 	 * The operation id for the '<em>Search For Booking</em>' operation.
@@ -4423,7 +4477,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BANK___SEARCH_FOR_BOOKING__STRING = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 11;
+	int BANK___SEARCH_FOR_BOOKING__STRING = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 12;
 
 	/**
 	 * The operation id for the '<em>Is Paid For</em>' operation.
@@ -4432,7 +4486,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BANK___IS_PAID_FOR__STRING = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 12;
+	int BANK___IS_PAID_FOR__STRING = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 13;
 
 	/**
 	 * The operation id for the '<em>Make Payment</em>' operation.
@@ -4441,7 +4495,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BANK___MAKE_PAYMENT__STRING = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 13;
+	int BANK___MAKE_PAYMENT__STRING = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 14;
 
 	/**
 	 * The number of operations of the '<em>Bank</em>' class.
@@ -4450,7 +4504,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BANK_OPERATION_COUNT = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 14;
+	int BANK_OPERATION_COUNT = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 15;
 
 
 	/**
@@ -5232,6 +5286,16 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getRoomComponent_IRoomInformation__GetPriceOfRoomType__String();
+
+	/**
+	 * Returns the meta object for the '{@link Implementation.RoomComponent_IRoomInformation#getBedCountOfRoomType(java.lang.String) <em>Get Bed Count Of Room Type</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Bed Count Of Room Type</em>' operation.
+	 * @see Implementation.RoomComponent_IRoomInformation#getBedCountOfRoomType(java.lang.String)
+	 * @generated
+	 */
+	EOperation getRoomComponent_IRoomInformation__GetBedCountOfRoomType__String();
 
 	/**
 	 * Returns the meta object for class '{@link Implementation.BookingComponent_IBookingInformation <em>Booking Component IBooking Information</em>}'.
@@ -6294,14 +6358,14 @@ public interface ImplementationPackage extends EPackage {
 	EOperation getBookingComponent_Booking__CurrentCost();
 
 	/**
-	 * Returns the meta object for the '{@link Implementation.BookingComponent_Booking#updatePaymentDetails(Implementation.BookingComponent_PaymentDetails) <em>Update Payment Details</em>}' operation.
+	 * Returns the meta object for the '{@link Implementation.BookingComponent_Booking#updatePaymentDetails(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, int, int) <em>Update Payment Details</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Update Payment Details</em>' operation.
-	 * @see Implementation.BookingComponent_Booking#updatePaymentDetails(Implementation.BookingComponent_PaymentDetails)
+	 * @see Implementation.BookingComponent_Booking#updatePaymentDetails(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, int, int)
 	 * @generated
 	 */
-	EOperation getBookingComponent_Booking__UpdatePaymentDetails__BookingComponent_PaymentDetails();
+	EOperation getBookingComponent_Booking__UpdatePaymentDetails__String_String_String_String_String_int_int();
 
 	/**
 	 * Returns the meta object for the '{@link Implementation.BookingComponent_Booking#generateReferenceNumber() <em>Generate Reference Number</em>}' operation.
@@ -6546,14 +6610,14 @@ public interface ImplementationPackage extends EPackage {
 	EOperation getBookingComponent_BookingHandler__FindBooking__String();
 
 	/**
-	 * Returns the meta object for the '{@link Implementation.BookingComponent_BookingHandler#bookingAvailable(java.util.Date, java.util.Date) <em>Booking Available</em>}' operation.
+	 * Returns the meta object for the '{@link Implementation.BookingComponent_BookingHandler#bookingAvailable(java.util.Date, java.util.Date, java.lang.String) <em>Booking Available</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Booking Available</em>' operation.
-	 * @see Implementation.BookingComponent_BookingHandler#bookingAvailable(java.util.Date, java.util.Date)
+	 * @see Implementation.BookingComponent_BookingHandler#bookingAvailable(java.util.Date, java.util.Date, java.lang.String)
 	 * @generated
 	 */
-	EOperation getBookingComponent_BookingHandler__BookingAvailable__Date_Date();
+	EOperation getBookingComponent_BookingHandler__BookingAvailable__Date_Date_String();
 
 	/**
 	 * Returns the meta object for the '{@link Implementation.BookingComponent_BookingHandler#findBookingsByDateAndType(java.util.Date, java.util.Date, java.lang.String) <em>Find Bookings By Date And Type</em>}' operation.
@@ -6586,14 +6650,14 @@ public interface ImplementationPackage extends EPackage {
 	EClass getBookingComponent_IBookingAdministration();
 
 	/**
-	 * Returns the meta object for the '{@link Implementation.BookingComponent_IBookingAdministration#makeBooking(java.util.Date, java.util.Date, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String) <em>Make Booking</em>}' operation.
+	 * Returns the meta object for the '{@link Implementation.BookingComponent_IBookingAdministration#makeBooking(java.lang.String, java.util.Date, java.util.Date, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, int, int, int) <em>Make Booking</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Make Booking</em>' operation.
-	 * @see Implementation.BookingComponent_IBookingAdministration#makeBooking(java.util.Date, java.util.Date, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)
+	 * @see Implementation.BookingComponent_IBookingAdministration#makeBooking(java.lang.String, java.util.Date, java.util.Date, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, int, int, int)
 	 * @generated
 	 */
-	EOperation getBookingComponent_IBookingAdministration__MakeBooking__Date_Date_String_String_String_String_String_String_String_String();
+	EOperation getBookingComponent_IBookingAdministration__MakeBooking__String_Date_Date_String_String_String_String_String_String_int_int_int();
 
 	/**
 	 * Returns the meta object for the '{@link Implementation.BookingComponent_IBookingAdministration#addRoom(java.lang.String, java.lang.String, int) <em>Add Room</em>}' operation.
@@ -6674,6 +6738,16 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getBookingComponent_IBookingAdministration__RemoveGuest__String_String_String_String();
+
+	/**
+	 * Returns the meta object for the '{@link Implementation.BookingComponent_IBookingAdministration#confirmBooking(java.lang.String) <em>Confirm Booking</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Confirm Booking</em>' operation.
+	 * @see Implementation.BookingComponent_IBookingAdministration#confirmBooking(java.lang.String)
+	 * @generated
+	 */
+	EOperation getBookingComponent_IBookingAdministration__ConfirmBooking__String();
 
 	/**
 	 * Returns the meta object for class '{@link Implementation.StaffComponent <em>Staff Component</em>}'.
@@ -7768,6 +7842,14 @@ public interface ImplementationPackage extends EPackage {
 		EOperation ROOM_COMPONENT_IROOM_INFORMATION___GET_PRICE_OF_ROOM_TYPE__STRING = eINSTANCE.getRoomComponent_IRoomInformation__GetPriceOfRoomType__String();
 
 		/**
+		 * The meta object literal for the '<em><b>Get Bed Count Of Room Type</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ROOM_COMPONENT_IROOM_INFORMATION___GET_BED_COUNT_OF_ROOM_TYPE__STRING = eINSTANCE.getRoomComponent_IRoomInformation__GetBedCountOfRoomType__String();
+
+		/**
 		 * The meta object literal for the '{@link Implementation.BookingComponent_IBookingInformation <em>Booking Component IBooking Information</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -8623,7 +8705,7 @@ public interface ImplementationPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation BOOKING_COMPONENT_BOOKING___UPDATE_PAYMENT_DETAILS__BOOKINGCOMPONENT_PAYMENTDETAILS = eINSTANCE.getBookingComponent_Booking__UpdatePaymentDetails__BookingComponent_PaymentDetails();
+		EOperation BOOKING_COMPONENT_BOOKING___UPDATE_PAYMENT_DETAILS__STRING_STRING_STRING_STRING_STRING_INT_INT = eINSTANCE.getBookingComponent_Booking__UpdatePaymentDetails__String_String_String_String_String_int_int();
 
 		/**
 		 * The meta object literal for the '<em><b>Generate Reference Number</b></em>' operation.
@@ -8823,7 +8905,7 @@ public interface ImplementationPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation BOOKING_COMPONENT_BOOKING_HANDLER___BOOKING_AVAILABLE__DATE_DATE = eINSTANCE.getBookingComponent_BookingHandler__BookingAvailable__Date_Date();
+		EOperation BOOKING_COMPONENT_BOOKING_HANDLER___BOOKING_AVAILABLE__DATE_DATE_STRING = eINSTANCE.getBookingComponent_BookingHandler__BookingAvailable__Date_Date_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Find Bookings By Date And Type</b></em>' operation.
@@ -8857,7 +8939,7 @@ public interface ImplementationPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___MAKE_BOOKING__DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_STRING_STRING = eINSTANCE.getBookingComponent_IBookingAdministration__MakeBooking__Date_Date_String_String_String_String_String_String_String_String();
+		EOperation BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___MAKE_BOOKING__STRING_DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_INT_INT_INT = eINSTANCE.getBookingComponent_IBookingAdministration__MakeBooking__String_Date_Date_String_String_String_String_String_String_int_int_int();
 
 		/**
 		 * The meta object literal for the '<em><b>Add Room</b></em>' operation.
@@ -8922,6 +9004,14 @@ public interface ImplementationPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___REMOVE_GUEST__STRING_STRING_STRING_STRING = eINSTANCE.getBookingComponent_IBookingAdministration__RemoveGuest__String_String_String_String();
+
+		/**
+		 * The meta object literal for the '<em><b>Confirm Booking</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___CONFIRM_BOOKING__STRING = eINSTANCE.getBookingComponent_IBookingAdministration__ConfirmBooking__String();
 
 		/**
 		 * The meta object literal for the '{@link Implementation.impl.StaffComponentImpl <em>Staff Component</em>}' class.

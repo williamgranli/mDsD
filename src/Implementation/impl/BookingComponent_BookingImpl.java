@@ -216,6 +216,7 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 		this.guests = getGuests();
 		this.rooms = getRooms();
 		this.bookingReference = generateReferenceNumber();
+		this.isActive = true;
 	}
 	
 	/**
@@ -233,6 +234,7 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 		this.guests = getGuests();
 		this.rooms = getRooms();
 		this.bookingReference = generateReferenceNumber();
+		this.isActive = true;
 	}
 	
 	/**
@@ -569,15 +571,30 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 	 */
 	public int currentCost() {
 		
+		//Reset current cost
+		this.currentCost = 0;
+		
 		for(BookingComponent_AdditionalService x : additionalServices)
 		{
-			currentCost += x.getCost();
+			this.currentCost += x.getCost();
 		}
 		for(BookingComponent_RoomType x : rooms)
 		{
-			currentCost += x.getCost();
+			this.currentCost += x.getCost();
 		}
-		return currentCost;
+		
+		return this.currentCost;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void updatePaymentDetails(String firstName, String lastName, String address, String ccNumber, String ccv, int expiryMonth, int expiryYear) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -663,9 +680,6 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 	 */
 	public void addPaymentDetails(String firstName, String lastName, String address, String ccNumber, String ccv, int expiryMonth, int expiryYear) {
 		paymentDetails =  new BookingComponent_PaymentDetailsImpl(firstName, lastName, address, ccNumber, ccv, expiryMonth, expiryYear);
-		
-//		guests.add(new BookingComponent_BookingGuestImpl(firstName, lastName, address));
-
 	}
 
 	/**
@@ -846,8 +860,8 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 				return null;
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING___CURRENT_COST:
 				return currentCost();
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING___UPDATE_PAYMENT_DETAILS__BOOKINGCOMPONENT_PAYMENTDETAILS:
-				updatePaymentDetails((BookingComponent_PaymentDetails)arguments.get(0));
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING___UPDATE_PAYMENT_DETAILS__STRING_STRING_STRING_STRING_STRING_INT_INT:
+				updatePaymentDetails((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3), (String)arguments.get(4), (Integer)arguments.get(5), (Integer)arguments.get(6));
 				return null;
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING___GENERATE_REFERENCE_NUMBER:
 				return generateReferenceNumber();

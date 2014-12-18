@@ -350,6 +350,28 @@ public class RoomComponent_RoomHandlerImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
+	//TODO - Feel free to change the name of this, I forgot there are conference rooms too!
+	public int getBedCountOfRoomType(String roomType) {
+		for (RoomComponent_Bedroom r: bedRooms){
+            if (r.getRoomTypeName().equals(roomType)){
+            return r.getBedCount();
+            }
+		}
+    
+		for (RoomComponent_ConferenceRoom cr: conferenceRooms){
+            if (cr.getRoomTypeName().equals(roomType)){
+            return cr.getNumberOfSeats();
+            }
+		}
+		
+		return -1;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
 	public void createBedRoom(int roomNumber, boolean usable, int price, String roomTypeName, String description, int bedCount) {
 		for (RoomComponent_Bedroom br : bedRooms) {
 			if (br.getRoomNumber() == roomNumber) {
@@ -585,6 +607,8 @@ public class RoomComponent_RoomHandlerImpl extends MinimalEObjectImpl.Container 
 				return getCountOfRoomType((String)arguments.get(0));
 			case ImplementationPackage.ROOM_COMPONENT_ROOM_HANDLER___GET_PRICE_OF_ROOM_TYPE__STRING:
 				return getPriceOfRoomType((String)arguments.get(0));
+			case ImplementationPackage.ROOM_COMPONENT_ROOM_HANDLER___GET_BED_COUNT_OF_ROOM_TYPE__STRING:
+				return getBedCountOfRoomType((String)arguments.get(0));
 			case ImplementationPackage.ROOM_COMPONENT_ROOM_HANDLER___CREATE_BED_ROOM__INT_BOOLEAN_INT_STRING_STRING_INT:
 				createBedRoom((Integer)arguments.get(0), (Boolean)arguments.get(1), (Integer)arguments.get(2), (String)arguments.get(3), (String)arguments.get(4), (Integer)arguments.get(5));
 				return null;
