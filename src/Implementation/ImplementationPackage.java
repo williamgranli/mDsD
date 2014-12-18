@@ -3199,22 +3199,13 @@ public interface ImplementationPackage extends EPackage {
 	int BOOKING_COMPONENT_BOOKING_HANDLER___ADD_ROOM__STRING_STRING_INT = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 2;
 
 	/**
-	 * The operation id for the '<em>Request Quote</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING_COMPONENT_BOOKING_HANDLER___REQUEST_QUOTE__STRING_INT_DATE_DATE = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 3;
-
-	/**
 	 * The operation id for the '<em>Edit Booking</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_COMPONENT_BOOKING_HANDLER___EDIT_BOOKING__STRING_DATE_DATE = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 4;
+	int BOOKING_COMPONENT_BOOKING_HANDLER___EDIT_BOOKING__STRING_DATE_DATE = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 3;
 
 	/**
 	 * The operation id for the '<em>Cancel Booking</em>' operation.
@@ -3223,7 +3214,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_COMPONENT_BOOKING_HANDLER___CANCEL_BOOKING__STRING = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 5;
+	int BOOKING_COMPONENT_BOOKING_HANDLER___CANCEL_BOOKING__STRING = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 4;
 
 	/**
 	 * The operation id for the '<em>Add Additional Service</em>' operation.
@@ -3232,7 +3223,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_COMPONENT_BOOKING_HANDLER___ADD_ADDITIONAL_SERVICE__STRING_STRING_INT = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 6;
+	int BOOKING_COMPONENT_BOOKING_HANDLER___ADD_ADDITIONAL_SERVICE__STRING_STRING_INT = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 5;
 
 	/**
 	 * The operation id for the '<em>Remove Room</em>' operation.
@@ -3241,7 +3232,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_COMPONENT_BOOKING_HANDLER___REMOVE_ROOM__STRING_STRING = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 7;
+	int BOOKING_COMPONENT_BOOKING_HANDLER___REMOVE_ROOM__STRING_STRING = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 6;
 
 	/**
 	 * The operation id for the '<em>Remove Additional Service</em>' operation.
@@ -3250,16 +3241,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_COMPONENT_BOOKING_HANDLER___REMOVE_ADDITIONAL_SERVICE__STRING_STRING = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 8;
-
-	/**
-	 * The operation id for the '<em>Generate Quote</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING_COMPONENT_BOOKING_HANDLER___GENERATE_QUOTE__DATE_DATE_STRING = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 9;
+	int BOOKING_COMPONENT_BOOKING_HANDLER___REMOVE_ADDITIONAL_SERVICE__STRING_STRING = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 7;
 
 	/**
 	 * The operation id for the '<em>Add Guest To Booking</em>' operation.
@@ -3268,7 +3250,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_COMPONENT_BOOKING_HANDLER___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 10;
+	int BOOKING_COMPONENT_BOOKING_HANDLER___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 8;
 
 	/**
 	 * The operation id for the '<em>Remove Guest</em>' operation.
@@ -3277,7 +3259,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_COMPONENT_BOOKING_HANDLER___REMOVE_GUEST__STRING_STRING_STRING_STRING = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 11;
+	int BOOKING_COMPONENT_BOOKING_HANDLER___REMOVE_GUEST__STRING_STRING_STRING_STRING = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 9;
 
 	/**
 	 * The operation id for the '<em>Find Booking</em>' operation.
@@ -3286,7 +3268,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_COMPONENT_BOOKING_HANDLER___FIND_BOOKING__STRING = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 12;
+	int BOOKING_COMPONENT_BOOKING_HANDLER___FIND_BOOKING__STRING = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 10;
 
 	/**
 	 * The operation id for the '<em>Booking Available</em>' operation.
@@ -3295,7 +3277,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_COMPONENT_BOOKING_HANDLER___BOOKING_AVAILABLE__DATE_DATE = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 13;
+	int BOOKING_COMPONENT_BOOKING_HANDLER___BOOKING_AVAILABLE__DATE_DATE = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 11;
 
 	/**
 	 * The operation id for the '<em>Find Bookings By Date And Type</em>' operation.
@@ -3304,7 +3286,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_COMPONENT_BOOKING_HANDLER___FIND_BOOKINGS_BY_DATE_AND_TYPE__DATE_DATE_STRING = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 14;
+	int BOOKING_COMPONENT_BOOKING_HANDLER___FIND_BOOKINGS_BY_DATE_AND_TYPE__DATE_DATE_STRING = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 12;
 
 	/**
 	 * The operation id for the '<em>Find Bookings By Date</em>' operation.
@@ -3313,7 +3295,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_COMPONENT_BOOKING_HANDLER___FIND_BOOKINGS_BY_DATE__DATE_DATE = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 15;
+	int BOOKING_COMPONENT_BOOKING_HANDLER___FIND_BOOKINGS_BY_DATE__DATE_DATE = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 13;
 
 	/**
 	 * The number of operations of the '<em>Booking Component Booking Handler</em>' class.
@@ -3322,7 +3304,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_COMPONENT_BOOKING_HANDLER_OPERATION_COUNT = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 16;
+	int BOOKING_COMPONENT_BOOKING_HANDLER_OPERATION_COUNT = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 14;
 
 	/**
 	 * The meta object id for the '{@link Implementation.BookingComponent_IBookingAdministration <em>Booking Component IBooking Administration</em>}' class.
@@ -3362,22 +3344,13 @@ public interface ImplementationPackage extends EPackage {
 	int BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___ADD_ROOM__STRING_STRING_INT = 1;
 
 	/**
-	 * The operation id for the '<em>Request Quote</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___REQUEST_QUOTE__STRING_INT_DATE_DATE = 2;
-
-	/**
 	 * The operation id for the '<em>Edit Booking</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___EDIT_BOOKING__STRING_DATE_DATE = 3;
+	int BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___EDIT_BOOKING__STRING_DATE_DATE = 2;
 
 	/**
 	 * The operation id for the '<em>Cancel Booking</em>' operation.
@@ -3386,7 +3359,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___CANCEL_BOOKING__STRING = 4;
+	int BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___CANCEL_BOOKING__STRING = 3;
 
 	/**
 	 * The operation id for the '<em>Add Additional Service</em>' operation.
@@ -3395,7 +3368,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___ADD_ADDITIONAL_SERVICE__STRING_STRING_INT = 5;
+	int BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___ADD_ADDITIONAL_SERVICE__STRING_STRING_INT = 4;
 
 	/**
 	 * The operation id for the '<em>Remove Room</em>' operation.
@@ -3404,7 +3377,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___REMOVE_ROOM__STRING_STRING = 6;
+	int BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___REMOVE_ROOM__STRING_STRING = 5;
 
 	/**
 	 * The operation id for the '<em>Remove Additional Service</em>' operation.
@@ -3413,16 +3386,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___REMOVE_ADDITIONAL_SERVICE__STRING_STRING = 7;
-
-	/**
-	 * The operation id for the '<em>Generate Quote</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___GENERATE_QUOTE__DATE_DATE_STRING = 8;
+	int BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___REMOVE_ADDITIONAL_SERVICE__STRING_STRING = 6;
 
 	/**
 	 * The operation id for the '<em>Add Guest To Booking</em>' operation.
@@ -3431,7 +3395,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING = 9;
+	int BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING = 7;
 
 	/**
 	 * The operation id for the '<em>Remove Guest</em>' operation.
@@ -3440,7 +3404,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___REMOVE_GUEST__STRING_STRING_STRING_STRING = 10;
+	int BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___REMOVE_GUEST__STRING_STRING_STRING_STRING = 8;
 
 	/**
 	 * The number of operations of the '<em>Booking Component IBooking Administration</em>' class.
@@ -3449,7 +3413,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_COMPONENT_IBOOKING_ADMINISTRATION_OPERATION_COUNT = 11;
+	int BOOKING_COMPONENT_IBOOKING_ADMINISTRATION_OPERATION_COUNT = 9;
 
 	/**
 	 * The number of structural features of the '<em>Staff Component IAccount Administration</em>' class.
@@ -4372,22 +4336,13 @@ public interface ImplementationPackage extends EPackage {
 	int BANK___ADD_ROOM__STRING_STRING_INT = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 1;
 
 	/**
-	 * The operation id for the '<em>Request Quote</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BANK___REQUEST_QUOTE__STRING_INT_DATE_DATE = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 2;
-
-	/**
 	 * The operation id for the '<em>Edit Booking</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BANK___EDIT_BOOKING__STRING_DATE_DATE = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 3;
+	int BANK___EDIT_BOOKING__STRING_DATE_DATE = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Cancel Booking</em>' operation.
@@ -4396,7 +4351,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BANK___CANCEL_BOOKING__STRING = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 4;
+	int BANK___CANCEL_BOOKING__STRING = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 3;
 
 	/**
 	 * The operation id for the '<em>Add Additional Service</em>' operation.
@@ -4405,7 +4360,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BANK___ADD_ADDITIONAL_SERVICE__STRING_STRING_INT = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 5;
+	int BANK___ADD_ADDITIONAL_SERVICE__STRING_STRING_INT = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 4;
 
 	/**
 	 * The operation id for the '<em>Remove Room</em>' operation.
@@ -4414,7 +4369,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BANK___REMOVE_ROOM__STRING_STRING = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 6;
+	int BANK___REMOVE_ROOM__STRING_STRING = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 5;
 
 	/**
 	 * The operation id for the '<em>Remove Additional Service</em>' operation.
@@ -4423,16 +4378,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BANK___REMOVE_ADDITIONAL_SERVICE__STRING_STRING = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 7;
-
-	/**
-	 * The operation id for the '<em>Generate Quote</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BANK___GENERATE_QUOTE__DATE_DATE_STRING = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 8;
+	int BANK___REMOVE_ADDITIONAL_SERVICE__STRING_STRING = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 6;
 
 	/**
 	 * The operation id for the '<em>Add Guest To Booking</em>' operation.
@@ -4441,7 +4387,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BANK___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 9;
+	int BANK___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 7;
 
 	/**
 	 * The operation id for the '<em>Remove Guest</em>' operation.
@@ -4450,7 +4396,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BANK___REMOVE_GUEST__STRING_STRING_STRING_STRING = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 10;
+	int BANK___REMOVE_GUEST__STRING_STRING_STRING_STRING = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 8;
 
 	/**
 	 * The operation id for the '<em>Get Guests In Booking</em>' operation.
@@ -4459,7 +4405,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BANK___GET_GUESTS_IN_BOOKING__STRING = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 11;
+	int BANK___GET_GUESTS_IN_BOOKING__STRING = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 9;
 
 	/**
 	 * The operation id for the '<em>Get Room Types In Booking</em>' operation.
@@ -4468,7 +4414,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BANK___GET_ROOM_TYPES_IN_BOOKING__STRING = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 12;
+	int BANK___GET_ROOM_TYPES_IN_BOOKING__STRING = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 10;
 
 	/**
 	 * The operation id for the '<em>Search For Booking</em>' operation.
@@ -4477,7 +4423,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BANK___SEARCH_FOR_BOOKING__STRING = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 13;
+	int BANK___SEARCH_FOR_BOOKING__STRING = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 11;
 
 	/**
 	 * The operation id for the '<em>Is Paid For</em>' operation.
@@ -4486,7 +4432,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BANK___IS_PAID_FOR__STRING = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 14;
+	int BANK___IS_PAID_FOR__STRING = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 12;
 
 	/**
 	 * The operation id for the '<em>Make Payment</em>' operation.
@@ -4495,7 +4441,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BANK___MAKE_PAYMENT__STRING = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 15;
+	int BANK___MAKE_PAYMENT__STRING = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 13;
 
 	/**
 	 * The number of operations of the '<em>Bank</em>' class.
@@ -4504,7 +4450,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BANK_OPERATION_COUNT = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 16;
+	int BANK_OPERATION_COUNT = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 14;
 
 
 	/**
@@ -6660,16 +6606,6 @@ public interface ImplementationPackage extends EPackage {
 	EOperation getBookingComponent_IBookingAdministration__AddRoom__String_String_int();
 
 	/**
-	 * Returns the meta object for the '{@link Implementation.BookingComponent_IBookingAdministration#requestQuote(java.lang.String, int, java.util.Date, java.util.Date) <em>Request Quote</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Request Quote</em>' operation.
-	 * @see Implementation.BookingComponent_IBookingAdministration#requestQuote(java.lang.String, int, java.util.Date, java.util.Date)
-	 * @generated
-	 */
-	EOperation getBookingComponent_IBookingAdministration__RequestQuote__String_int_Date_Date();
-
-	/**
 	 * Returns the meta object for the '{@link Implementation.BookingComponent_IBookingAdministration#editBooking(java.lang.String, java.util.Date, java.util.Date) <em>Edit Booking</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6718,16 +6654,6 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getBookingComponent_IBookingAdministration__RemoveAdditionalService__String_String();
-
-	/**
-	 * Returns the meta object for the '{@link Implementation.BookingComponent_IBookingAdministration#generateQuote(java.util.Date, java.util.Date, java.lang.String) <em>Generate Quote</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Generate Quote</em>' operation.
-	 * @see Implementation.BookingComponent_IBookingAdministration#generateQuote(java.util.Date, java.util.Date, java.lang.String)
-	 * @generated
-	 */
-	EOperation getBookingComponent_IBookingAdministration__GenerateQuote__Date_Date_String();
 
 	/**
 	 * Returns the meta object for the '{@link Implementation.BookingComponent_IBookingAdministration#addGuestToBooking(java.lang.String, java.lang.String, java.lang.String, java.lang.String) <em>Add Guest To Booking</em>}' operation.
@@ -8942,14 +8868,6 @@ public interface ImplementationPackage extends EPackage {
 		EOperation BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___ADD_ROOM__STRING_STRING_INT = eINSTANCE.getBookingComponent_IBookingAdministration__AddRoom__String_String_int();
 
 		/**
-		 * The meta object literal for the '<em><b>Request Quote</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___REQUEST_QUOTE__STRING_INT_DATE_DATE = eINSTANCE.getBookingComponent_IBookingAdministration__RequestQuote__String_int_Date_Date();
-
-		/**
 		 * The meta object literal for the '<em><b>Edit Booking</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -8988,14 +8906,6 @@ public interface ImplementationPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___REMOVE_ADDITIONAL_SERVICE__STRING_STRING = eINSTANCE.getBookingComponent_IBookingAdministration__RemoveAdditionalService__String_String();
-
-		/**
-		 * The meta object literal for the '<em><b>Generate Quote</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___GENERATE_QUOTE__DATE_DATE_STRING = eINSTANCE.getBookingComponent_IBookingAdministration__GenerateQuote__Date_Date_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Add Guest To Booking</b></em>' operation.

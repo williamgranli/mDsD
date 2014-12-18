@@ -2330,7 +2330,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getBookingComponent_IBookingAdministration__RequestQuote__String_int_Date_Date() {
+	public EOperation getBookingComponent_IBookingAdministration__EditBooking__String_Date_Date() {
 		return bookingComponent_IBookingAdministrationEClass.getEOperations().get(2);
 	}
 
@@ -2339,7 +2339,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getBookingComponent_IBookingAdministration__EditBooking__String_Date_Date() {
+	public EOperation getBookingComponent_IBookingAdministration__CancelBooking__String() {
 		return bookingComponent_IBookingAdministrationEClass.getEOperations().get(3);
 	}
 
@@ -2348,7 +2348,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getBookingComponent_IBookingAdministration__CancelBooking__String() {
+	public EOperation getBookingComponent_IBookingAdministration__AddAdditionalService__String_String_int() {
 		return bookingComponent_IBookingAdministrationEClass.getEOperations().get(4);
 	}
 
@@ -2357,7 +2357,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getBookingComponent_IBookingAdministration__AddAdditionalService__String_String_int() {
+	public EOperation getBookingComponent_IBookingAdministration__RemoveRoom__String_String() {
 		return bookingComponent_IBookingAdministrationEClass.getEOperations().get(5);
 	}
 
@@ -2366,7 +2366,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getBookingComponent_IBookingAdministration__RemoveRoom__String_String() {
+	public EOperation getBookingComponent_IBookingAdministration__RemoveAdditionalService__String_String() {
 		return bookingComponent_IBookingAdministrationEClass.getEOperations().get(6);
 	}
 
@@ -2375,7 +2375,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getBookingComponent_IBookingAdministration__RemoveAdditionalService__String_String() {
+	public EOperation getBookingComponent_IBookingAdministration__AddGuestToBooking__String_String_String_String() {
 		return bookingComponent_IBookingAdministrationEClass.getEOperations().get(7);
 	}
 
@@ -2384,26 +2384,8 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getBookingComponent_IBookingAdministration__GenerateQuote__Date_Date_String() {
-		return bookingComponent_IBookingAdministrationEClass.getEOperations().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getBookingComponent_IBookingAdministration__AddGuestToBooking__String_String_String_String() {
-		return bookingComponent_IBookingAdministrationEClass.getEOperations().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EOperation getBookingComponent_IBookingAdministration__RemoveGuest__String_String_String_String() {
-		return bookingComponent_IBookingAdministrationEClass.getEOperations().get(10);
+		return bookingComponent_IBookingAdministrationEClass.getEOperations().get(8);
 	}
 
 	/**
@@ -3054,13 +3036,11 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		bookingComponent_IBookingAdministrationEClass = createEClass(BOOKING_COMPONENT_IBOOKING_ADMINISTRATION);
 		createEOperation(bookingComponent_IBookingAdministrationEClass, BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___MAKE_BOOKING__DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_STRING_STRING);
 		createEOperation(bookingComponent_IBookingAdministrationEClass, BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___ADD_ROOM__STRING_STRING_INT);
-		createEOperation(bookingComponent_IBookingAdministrationEClass, BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___REQUEST_QUOTE__STRING_INT_DATE_DATE);
 		createEOperation(bookingComponent_IBookingAdministrationEClass, BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___EDIT_BOOKING__STRING_DATE_DATE);
 		createEOperation(bookingComponent_IBookingAdministrationEClass, BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___CANCEL_BOOKING__STRING);
 		createEOperation(bookingComponent_IBookingAdministrationEClass, BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___ADD_ADDITIONAL_SERVICE__STRING_STRING_INT);
 		createEOperation(bookingComponent_IBookingAdministrationEClass, BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___REMOVE_ROOM__STRING_STRING);
 		createEOperation(bookingComponent_IBookingAdministrationEClass, BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___REMOVE_ADDITIONAL_SERVICE__STRING_STRING);
-		createEOperation(bookingComponent_IBookingAdministrationEClass, BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___GENERATE_QUOTE__DATE_DATE_STRING);
 		createEOperation(bookingComponent_IBookingAdministrationEClass, BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING);
 		createEOperation(bookingComponent_IBookingAdministrationEClass, BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___REMOVE_GUEST__STRING_STRING_STRING_STRING);
 
@@ -3722,12 +3702,6 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		addEParameter(op, theTypesPackage.getString(), "roomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "price", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getBookingComponent_IBookingAdministration__RequestQuote__String_int_Date_Date(), null, "requestQuote", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "roomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "price", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDate(), "arrivalDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDate(), "departureDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
 		op = initEOperation(getBookingComponent_IBookingAdministration__EditBooking__String_Date_Date(), null, "editBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "bookingReference", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDate(), "arrivalDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
@@ -3748,11 +3722,6 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		op = initEOperation(getBookingComponent_IBookingAdministration__RemoveAdditionalService__String_String(), null, "removeAdditionalService", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "bookingReference", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "additionalServiceName", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		op = initEOperation(getBookingComponent_IBookingAdministration__GenerateQuote__Date_Date_String(), null, "generateQuote", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDate(), "startDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDate(), "endDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "roomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getBookingComponent_IBookingAdministration__AddGuestToBooking__String_String_String_String(), null, "addGuestToBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "bookingReference", 1, 1, IS_UNIQUE, !IS_ORDERED);

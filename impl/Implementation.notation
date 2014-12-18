@@ -2005,17 +2005,6 @@
           <element xmi:type="uml:Operation" href="Implementation.uml#_NDnXIHpsEeS6O5zO6NZCqA"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_sMuxtXsQEeSdPKzPJV8cOA"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_sMvYwHsQEeSdPKzPJV8cOA" type="3007">
-          <styles xmi:type="notation:StringListValueStyle" xmi:id="_wdkysIa_EeSR8uMaeg-wcA" name="maskLabel">
-            <stringListValue>parametersName</stringListValue>
-            <stringListValue>visibility</stringListValue>
-            <stringListValue>name</stringListValue>
-            <stringListValue>parametersType</stringListValue>
-            <stringListValue>returnType</stringListValue>
-          </styles>
-          <element xmi:type="uml:Operation" href="Implementation.uml#_RYr58HpsEeS6O5zO6NZCqA"/>
-          <layoutConstraint xmi:type="notation:Location" xmi:id="_sMvYwXsQEeSdPKzPJV8cOA"/>
-        </children>
         <children xmi:type="notation:Shape" xmi:id="_sMvYwnsQEeSdPKzPJV8cOA" type="3007">
           <styles xmi:type="notation:StringListValueStyle" xmi:id="_wLuNsIa_EeSR8uMaeg-wcA" name="maskLabel">
             <stringListValue>parametersName</stringListValue>
@@ -2070,17 +2059,6 @@
           </styles>
           <element xmi:type="uml:Operation" href="Implementation.uml#_r5v90HpsEeS6O5zO6NZCqA"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_sMv_03sQEeSdPKzPJV8cOA"/>
-        </children>
-        <children xmi:type="notation:Shape" xmi:id="_tlXEMHuiEeSz04gN9GtPDA" type="3013">
-          <styles xmi:type="notation:StringListValueStyle" xmi:id="_utRSsIa_EeSR8uMaeg-wcA" name="maskLabel">
-            <stringListValue>parametersName</stringListValue>
-            <stringListValue>visibility</stringListValue>
-            <stringListValue>name</stringListValue>
-            <stringListValue>parametersType</stringListValue>
-            <stringListValue>returnType</stringListValue>
-          </styles>
-          <element xmi:type="uml:Operation" href="Implementation.uml#_gomS7nuiEeSz04gN9GtPDA"/>
-          <layoutConstraint xmi:type="notation:Location" xmi:id="_tlXEMXuiEeSz04gN9GtPDA"/>
         </children>
         <children xmi:type="notation:Shape" xmi:id="_AX89UICBEeSVsryNkPPRZw" type="3007">
           <styles xmi:type="notation:StringListValueStyle" xmi:id="_udCeUIa_EeSR8uMaeg-wcA" name="maskLabel">

@@ -81,17 +81,6 @@ public class BankImpl extends MinimalEObjectImpl.Container implements Bank {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void requestQuote(String roomType, int price, Date arrivalDate, Date departureDate) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public void editBooking(String bookingReference, Date arrivalDate, Date departureDate) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -137,17 +126,6 @@ public class BankImpl extends MinimalEObjectImpl.Container implements Bank {
 	 * @generated
 	 */
 	public void removeAdditionalService(String bookingReference, String additionalServiceName) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void generateQuote(Date startDate, Date endDate, String roomType) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -241,13 +219,11 @@ public class BankImpl extends MinimalEObjectImpl.Container implements Bank {
 			switch (baseOperationID) {
 				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___MAKE_BOOKING__DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_STRING_STRING: return ImplementationPackage.BANK___MAKE_BOOKING__DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_STRING_STRING;
 				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___ADD_ROOM__STRING_STRING_INT: return ImplementationPackage.BANK___ADD_ROOM__STRING_STRING_INT;
-				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___REQUEST_QUOTE__STRING_INT_DATE_DATE: return ImplementationPackage.BANK___REQUEST_QUOTE__STRING_INT_DATE_DATE;
 				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___EDIT_BOOKING__STRING_DATE_DATE: return ImplementationPackage.BANK___EDIT_BOOKING__STRING_DATE_DATE;
 				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___CANCEL_BOOKING__STRING: return ImplementationPackage.BANK___CANCEL_BOOKING__STRING;
 				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___ADD_ADDITIONAL_SERVICE__STRING_STRING_INT: return ImplementationPackage.BANK___ADD_ADDITIONAL_SERVICE__STRING_STRING_INT;
 				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___REMOVE_ROOM__STRING_STRING: return ImplementationPackage.BANK___REMOVE_ROOM__STRING_STRING;
 				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___REMOVE_ADDITIONAL_SERVICE__STRING_STRING: return ImplementationPackage.BANK___REMOVE_ADDITIONAL_SERVICE__STRING_STRING;
-				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___GENERATE_QUOTE__DATE_DATE_STRING: return ImplementationPackage.BANK___GENERATE_QUOTE__DATE_DATE_STRING;
 				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING: return ImplementationPackage.BANK___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING;
 				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___REMOVE_GUEST__STRING_STRING_STRING_STRING: return ImplementationPackage.BANK___REMOVE_GUEST__STRING_STRING_STRING_STRING;
 				default: return -1;
@@ -281,9 +257,6 @@ public class BankImpl extends MinimalEObjectImpl.Container implements Bank {
 			case ImplementationPackage.BANK___ADD_ROOM__STRING_STRING_INT:
 				addRoom((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2));
 				return null;
-			case ImplementationPackage.BANK___REQUEST_QUOTE__STRING_INT_DATE_DATE:
-				requestQuote((String)arguments.get(0), (Integer)arguments.get(1), (Date)arguments.get(2), (Date)arguments.get(3));
-				return null;
 			case ImplementationPackage.BANK___EDIT_BOOKING__STRING_DATE_DATE:
 				editBooking((String)arguments.get(0), (Date)arguments.get(1), (Date)arguments.get(2));
 				return null;
@@ -298,9 +271,6 @@ public class BankImpl extends MinimalEObjectImpl.Container implements Bank {
 				return null;
 			case ImplementationPackage.BANK___REMOVE_ADDITIONAL_SERVICE__STRING_STRING:
 				removeAdditionalService((String)arguments.get(0), (String)arguments.get(1));
-				return null;
-			case ImplementationPackage.BANK___GENERATE_QUOTE__DATE_DATE_STRING:
-				generateQuote((Date)arguments.get(0), (Date)arguments.get(1), (String)arguments.get(2));
 				return null;
 			case ImplementationPackage.BANK___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING:
 				addGuestToBooking((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3));

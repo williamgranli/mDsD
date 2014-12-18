@@ -1333,20 +1333,6 @@ For some reason Papyrus doesn’t show the attributes in ConferenceRoom. It hold
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
           </ownedParameter>
         </ownedOperation>
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_RYr58HpsEeS6O5zO6NZCqA" name="requestQuote" visibility="protected">
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_vnYJUHpwEeS6O5zO6NZCqA" name="roomType">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-          </ownedParameter>
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_yEdPwHpwEeS6O5zO6NZCqA" name="price">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-          </ownedParameter>
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_1B4DIHpwEeS6O5zO6NZCqA" name="arrivalDate">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
-          </ownedParameter>
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_4IAtoHpwEeS6O5zO6NZCqA" name="departureDate">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
-          </ownedParameter>
-        </ownedOperation>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_TaTMYHpsEeS6O5zO6NZCqA" name="editBooking" visibility="protected">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_FDP1AHpxEeS6O5zO6NZCqA" name="bookingReference">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
@@ -1387,17 +1373,6 @@ For some reason Papyrus doesn’t show the attributes in ConferenceRoom. It hold
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedParameter>
           <ownedParameter xmi:type="uml:Parameter" xmi:id="___X2AHpxEeS6O5zO6NZCqA" name="additionalServiceName">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-          </ownedParameter>
-        </ownedOperation>
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_gomS7nuiEeSz04gN9GtPDA" name="generateQuote" visibility="protected">
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_gomS73uiEeSz04gN9GtPDA" name="startDate">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
-          </ownedParameter>
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_gomS8HuiEeSz04gN9GtPDA" name="endDate">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
-          </ownedParameter>
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_gomS8XuiEeSz04gN9GtPDA" name="roomType">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedParameter>
         </ownedOperation>
