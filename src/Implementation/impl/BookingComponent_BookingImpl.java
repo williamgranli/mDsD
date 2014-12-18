@@ -647,7 +647,7 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 	 * @generated NOT
 	 */
 	public String getRoomTypesInBooking() {
-		String foundRoomTypes = null;
+		String foundRoomTypes = "";
 		
 		for(BookingComponent_RoomType roomType: rooms){
 			foundRoomTypes += (roomType.getRoomType() + ",");
