@@ -5,6 +5,8 @@
 *.DS_Store
 *Implementation.ecore
 
+bin/Implementation/
+
 *implementation.ecore
 
 # Sublime project files
