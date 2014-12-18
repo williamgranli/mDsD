@@ -1484,19 +1484,10 @@
             <client xmi:type="uml:Component" href="impl/Implementation.uml#__b5yoHobEeSypfm9OOQUYA"/>
             <supplier xmi:type="uml:Interface" href="impl/Implementation.uml#_yNtywnumEeSUpK3HS5a0Lg"/>
           </packagedElement>
-          <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_zsmbMH-zEeSVo4U8yTxtOw" name="RoomRealizesDecision">
-            <client xmi:type="uml:Component" href="impl/Implementation.uml#_9a3H8HobEeSypfm9OOQUYA"/>
-            <supplier xmi:type="uml:Interface" href="impl/Implementation.uml#_hieNEH-zEeSVo4U8yTxtOw"/>
-            <contract xmi:type="uml:Interface" href="impl/Implementation.uml#_hieNEH-zEeSVo4U8yTxtOw"/>
-          </packagedElement>
           <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_p1lSwH-zEeSVo4U8yTxtOw" name="BookingRealizesDecision">
             <client xmi:type="uml:Component" href="impl/Implementation.uml#_DBMeUHocEeSypfm9OOQUYA"/>
             <supplier xmi:type="uml:Interface" href="impl/Implementation.uml#_eX8x0H-zEeSVo4U8yTxtOw"/>
             <contract xmi:type="uml:Interface" href="impl/Implementation.uml#_eX8x0H-zEeSVo4U8yTxtOw"/>
-          </packagedElement>
-          <packagedElement xmi:type="uml:ComponentRealization" xmi:id="_1U6c0H-zEeSVo4U8yTxtOw" name="AdditionalServiceRealizesDecision">
-            <client xmi:type="uml:Component" href="impl/Implementation.uml#_IaMjUHocEeSypfm9OOQUYA"/>
-            <supplier xmi:type="uml:Interface" href="impl/Implementation.uml#_cDvTgH-zEeSVo4U8yTxtOw"/>
           </packagedElement>
           <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_xP-nwH-zEeSVo4U8yTxtOw" name="OccupancyRealizesDecision">
             <client xmi:type="uml:Component" href="impl/Implementation.uml#_Q51pIHocEeSypfm9OOQUYA"/>
@@ -1508,17 +1499,9 @@
             <supplier xmi:type="uml:Interface" href="impl/Implementation.uml#_3t3tsH-yEeSVo4U8yTxtOw"/>
             <contract xmi:type="uml:Interface" href="impl/Implementation.uml#_3t3tsH-yEeSVo4U8yTxtOw"/>
           </packagedElement>
-          <packagedElement xmi:type="uml:Usage" xmi:id="_FafZQH-0EeSVo4U8yTxtOw" name="Usage0">
-            <client xmi:type="uml:Component" href="impl/Implementation.uml#_TXYc0H-yEeSVo4U8yTxtOw"/>
-            <supplier xmi:type="uml:Interface" href="impl/Implementation.uml#_hieNEH-zEeSVo4U8yTxtOw"/>
-          </packagedElement>
           <packagedElement xmi:type="uml:Usage" xmi:id="_GIJJcH-0EeSVo4U8yTxtOw" name="Usage1">
             <client xmi:type="uml:Component" href="impl/Implementation.uml#_TXYc0H-yEeSVo4U8yTxtOw"/>
             <supplier xmi:type="uml:Interface" href="Occupancy/Occupancy.uml#_9CLf8H-yEeSVo4U8yTxtOw"/>
-          </packagedElement>
-          <packagedElement xmi:type="uml:Usage" xmi:id="_HqtvcH-0EeSVo4U8yTxtOw" name="Usage2">
-            <client xmi:type="uml:Component" href="impl/Implementation.uml#_TXYc0H-yEeSVo4U8yTxtOw"/>
-            <supplier xmi:type="uml:Interface" href="impl/Implementation.uml#_cDvTgH-zEeSVo4U8yTxtOw"/>
           </packagedElement>
           <packagedElement xmi:type="uml:Usage" xmi:id="_L8nCcH-0EeSVo4U8yTxtOw" name="Usage3">
             <client xmi:type="uml:Component" href="impl/Implementation.uml#_TXYc0H-yEeSVo4U8yTxtOw"/>
@@ -1537,7 +1520,18 @@
           <contract xmi:type="uml:Interface" href="impl/Implementation.uml#_gDR3toRbEeSwC95jIvSgtA"/>
         </packagedElement>
       </packagedElement>
-      <packagedElement xmi:type="uml:Package" xmi:id="_m59cUIacEeSBsajI1z9RTw" name="InterfaceDiagrams"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_m59cUIacEeSBsajI1z9RTw" name="InterfaceDiagrams">
+        <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_1M0zEIaeEeSBsajI1z9RTw">
+          <client xmi:type="uml:Component" href="impl/Implementation.uml#_Q51pIHocEeSypfm9OOQUYA"/>
+          <supplier xmi:type="uml:Interface" href="impl/Implementation.uml#_HB-RAIBPEeSMz8ND1yS4hA"/>
+          <contract xmi:type="uml:Interface" href="impl/Implementation.uml#_HB-RAIBPEeSMz8ND1yS4hA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_1x3Z0IaeEeSBsajI1z9RTw">
+          <client xmi:type="uml:Component" href="impl/Implementation.uml#_Q51pIHocEeSypfm9OOQUYA"/>
+          <supplier xmi:type="uml:Interface" href="impl/Implementation.uml#_at5KQHp2EeS6O5zO6NZCqA"/>
+          <contract xmi:type="uml:Interface" href="impl/Implementation.uml#_at5KQHp2EeS6O5zO6NZCqA"/>
+        </packagedElement>
+      </packagedElement>
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_xWZvIGT0EeS_fYcbMbH-Fw">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_xWywsGT0EeS_fYcbMbH-Fw" source="http://www.eclipse.org/uml2/2.0.0/UML">

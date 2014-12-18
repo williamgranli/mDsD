@@ -374,6 +374,9 @@ public class ImplementationSwitch<T> extends Switch<T> {
 			case ImplementationPackage.BANK: {
 				Bank bank = (Bank)theEObject;
 				T result = caseBank(bank);
+				if (result == null) result = caseBookingComponent_IBookingDecision(bank);
+				if (result == null) result = caseBookingComponent_IBookingAdministration(bank);
+				if (result == null) result = caseBookingComponent_IBookingInformation(bank);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

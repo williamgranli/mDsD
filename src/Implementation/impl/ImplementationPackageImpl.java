@@ -3224,6 +3224,9 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		roomComponent_RoomHandlerEClass.getESuperTypes().add(this.getRoomComponent_IRoomDecision());
 		roomComponent_RoomHandlerEClass.getESuperTypes().add(this.getRoomComponent_IRoomInformation());
 		roomComponent_RoomHandlerEClass.getESuperTypes().add(this.getRoomComponent_IRoomAdministration());
+		bankEClass.getESuperTypes().add(this.getBookingComponent_IBookingDecision());
+		bankEClass.getESuperTypes().add(this.getBookingComponent_IBookingAdministration());
+		bankEClass.getESuperTypes().add(this.getBookingComponent_IBookingInformation());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(decisionSupportComponentEClass, DecisionSupportComponent.class, "DecisionSupportComponent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

@@ -4020,7 +4020,160 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BANK_FEATURE_COUNT = 0;
+	int BANK_FEATURE_COUNT = BOOKING_COMPONENT_IBOOKING_DECISION_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Get DSS Info</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BANK___GET_DSS_INFO = BOOKING_COMPONENT_IBOOKING_DECISION___GET_DSS_INFO;
+
+	/**
+	 * The operation id for the '<em>Make Booking</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BANK___MAKE_BOOKING__DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_STRING_STRING = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Add Room</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BANK___ADD_ROOM__STRING_STRING_INT = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Request Quote</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BANK___REQUEST_QUOTE__STRING_INT_DATE_DATE = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Edit Booking</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BANK___EDIT_BOOKING__STRING_DATE_DATE = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 3;
+
+	/**
+	 * The operation id for the '<em>Cancel Booking</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BANK___CANCEL_BOOKING__STRING = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 4;
+
+	/**
+	 * The operation id for the '<em>Add Additional Service</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BANK___ADD_ADDITIONAL_SERVICE__STRING_STRING_INT = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 5;
+
+	/**
+	 * The operation id for the '<em>Remove Room</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BANK___REMOVE_ROOM__STRING_STRING = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 6;
+
+	/**
+	 * The operation id for the '<em>Remove Additional Service</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BANK___REMOVE_ADDITIONAL_SERVICE__STRING_STRING = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 7;
+
+	/**
+	 * The operation id for the '<em>Generate Quote</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BANK___GENERATE_QUOTE__DATE_DATE_STRING = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 8;
+
+	/**
+	 * The operation id for the '<em>Add Guest To Booking</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BANK___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 9;
+
+	/**
+	 * The operation id for the '<em>Remove Guest</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BANK___REMOVE_GUEST__STRING_STRING_STRING_STRING = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 10;
+
+	/**
+	 * The operation id for the '<em>Get Guests In Booking</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BANK___GET_GUESTS_IN_BOOKING__STRING = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 11;
+
+	/**
+	 * The operation id for the '<em>Get Room Types In Booking</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BANK___GET_ROOM_TYPES_IN_BOOKING__STRING = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 12;
+
+	/**
+	 * The operation id for the '<em>Search For Booking</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BANK___SEARCH_FOR_BOOKING__STRING = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 13;
+
+	/**
+	 * The operation id for the '<em>Is Paid For</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BANK___IS_PAID_FOR__STRING = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 14;
+
+	/**
+	 * The operation id for the '<em>Make Payment</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BANK___MAKE_PAYMENT__STRING = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 15;
 
 	/**
 	 * The number of operations of the '<em>Bank</em>' class.
@@ -4029,7 +4182,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BANK_OPERATION_COUNT = 0;
+	int BANK_OPERATION_COUNT = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 16;
 
 
 	/**

@@ -828,5 +828,5 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="conferenceRooms" ordered="false"
         upperBound="-1" eType="#//RoomComponent_ConferenceRoom"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Bank"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Bank" eSuperTypes="#//BookingComponent_IBookingDecision #//BookingComponent_IBookingAdministration #//BookingComponent_IBookingInformation"/>
 </ecore:EPackage>

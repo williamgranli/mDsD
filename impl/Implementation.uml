@@ -2,6 +2,7 @@
 <xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ActionLanguage="http://www.omg.org/spec/ALF/20120827/ActionLanguage-Profile" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.omg.org/spec/ALF/20120827/ActionLanguage-Profile pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_sYse0YZLEeKyw49uR6nx3g">
   <uml:Package xmi:id="_0xs5wHobEeSypfm9OOQUYA" name="Implementation">
     <packagedElement xmi:type="uml:Component" xmi:id="_TXYc0H-yEeSVo4U8yTxtOw" name="DecisionSupportComponent">
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_lpADYIafEeSBsajI1z9RTw" client="_TXYc0H-yEeSVo4U8yTxtOw" supplier="_3t3tsH-yEeSVo4U8yTxtOw" contract="_3t3tsH-yEeSVo4U8yTxtOw"/>
       <nestedClassifier xmi:type="uml:Interface" xmi:id="_3t3tsH-yEeSVo4U8yTxtOw" name="IDecisionSupport">
         <ownedOperation xmi:type="uml:Operation" xmi:id="_bd7CoIXzEeSFPNVomhGXnQ" name="getDSSData"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_hmKzQIXzEeSFPNVomhGXnQ" name="getAllRoomTypeFrequency">
@@ -57,7 +58,7 @@
         </ownedOperation>
       </nestedClassifier>
       <nestedClassifier xmi:type="uml:Class" xmi:id="_e1APUH-1EeSVo4U8yTxtOw" name="DSSController">
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_csfmcICAEeSVsryNkPPRZw" name="iRoomDecision" type="_hieNEH-zEeSVo4U8yTxtOw" association="_csgNgICAEeSVsryNkPPRZw">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_csfmcICAEeSVsryNkPPRZw" name="iRoomDecision">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_csfmcYCAEeSVsryNkPPRZw" value="1"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_csfmcoCAEeSVsryNkPPRZw" value="1"/>
         </ownedAttribute>
@@ -65,7 +66,7 @@
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZGGSEYCBEeSVsryNkPPRZw" value="1"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZGGSEoCBEeSVsryNkPPRZw" value="1"/>
         </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_7wGzAICBEeSVsryNkPPRZw" name="iAdditionalServiceDecision" type="_cDvTgH-zEeSVo4U8yTxtOw" association="_7wHaEICBEeSVsryNkPPRZw">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_7wGzAICBEeSVsryNkPPRZw" name="iAdditionalServiceDecision">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7wGzAYCBEeSVsryNkPPRZw" value="1"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7wGzAoCBEeSVsryNkPPRZw" value="1"/>
         </ownedAttribute>
@@ -112,25 +113,11 @@
           </ownedParameter>
         </ownedOperation>
       </nestedClassifier>
-      <nestedClassifier xmi:type="uml:Association" xmi:id="_csgNgICAEeSVsryNkPPRZw" memberEnd="_csg0kICAEeSVsryNkPPRZw _csfmcICAEeSVsryNkPPRZw">
-        <name xsi:nil="true"/>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_csg0kICAEeSVsryNkPPRZw" name="dSSController" type="_e1APUH-1EeSVo4U8yTxtOw" association="_csgNgICAEeSVsryNkPPRZw">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_csg0kYCAEeSVsryNkPPRZw" value="1"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_csg0koCAEeSVsryNkPPRZw" value="1"/>
-        </ownedEnd>
-      </nestedClassifier>
       <nestedClassifier xmi:type="uml:Association" xmi:id="_ZGIuUICBEeSVsryNkPPRZw" memberEnd="_ZGIuUYCBEeSVsryNkPPRZw _ZGGSEICBEeSVsryNkPPRZw">
         <name xsi:nil="true"/>
         <ownedEnd xmi:type="uml:Property" xmi:id="_ZGIuUYCBEeSVsryNkPPRZw" name="dSSController" type="_e1APUH-1EeSVo4U8yTxtOw" association="_ZGIuUICBEeSVsryNkPPRZw">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZGIuUoCBEeSVsryNkPPRZw" value="1"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZGIuU4CBEeSVsryNkPPRZw" value="1"/>
-        </ownedEnd>
-      </nestedClassifier>
-      <nestedClassifier xmi:type="uml:Association" xmi:id="_7wHaEICBEeSVsryNkPPRZw" memberEnd="_7wIBIICBEeSVsryNkPPRZw _7wGzAICBEeSVsryNkPPRZw">
-        <name xsi:nil="true"/>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_7wIBIICBEeSVsryNkPPRZw" name="dSSController" type="_e1APUH-1EeSVo4U8yTxtOw" association="_7wHaEICBEeSVsryNkPPRZw">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7wIBIYCBEeSVsryNkPPRZw" value="1"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7wIBIoCBEeSVsryNkPPRZw" value="1"/>
         </ownedEnd>
       </nestedClassifier>
       <nestedClassifier xmi:type="uml:Association" xmi:id="_D-hekICFEeSVsryNkPPRZw" memberEnd="_D-hekYCFEeSVsryNkPPRZw _D-fCUICFEeSVsryNkPPRZw">
@@ -417,6 +404,7 @@
       </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Component" xmi:id="_Oa_oIHocEeSypfm9OOQUYA" name="PaymentComponent">
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_yxr7cIagEeSBsajI1z9RTw" client="_Oa_oIHocEeSypfm9OOQUYA" supplier="_XioxYIRJEeSMS5FZ7DY3uw" contract="_XioxYIRJEeSMS5FZ7DY3uw"/>
       <nestedClassifier xmi:type="uml:Interface" xmi:id="_XioxYIRJEeSMS5FZ7DY3uw" name="IPayment">
         <ownedOperation xmi:type="uml:Operation" xmi:id="_9CxK4IRJEeSMS5FZ7DY3uw" name="makePayment" visibility="public">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="__5h8oIRJEeSMS5FZ7DY3uw" name="ccNumber">
@@ -616,6 +604,8 @@
       </nestedClassifier>
     </packagedElement>
     <packagedElement xmi:type="uml:Component" xmi:id="_IaMjUHocEeSypfm9OOQUYA" name="AdditionalServiceComponent">
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_nnmooIagEeSBsajI1z9RTw" client="_IaMjUHocEeSypfm9OOQUYA" supplier="_oFVrUHpcEeS6O5zO6NZCqA" contract="_oFVrUHpcEeS6O5zO6NZCqA"/>
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_oMCycIagEeSBsajI1z9RTw" client="_IaMjUHocEeSypfm9OOQUYA" supplier="_YlNd8HpfEeS6O5zO6NZCqA" contract="_YlNd8HpfEeS6O5zO6NZCqA"/>
       <nestedClassifier xmi:type="uml:Class" xmi:id="_BKM2oHvAEeSAJb-qAtupNw" name="AdditionalService">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_BKNdsHvAEeSAJb-qAtupNw" name="name">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
@@ -888,7 +878,6 @@
           </ownedParameter>
         </ownedOperation>
       </nestedClassifier>
-      <nestedClassifier xmi:type="uml:Interface" xmi:id="_cDvTgH-zEeSVo4U8yTxtOw" name="IAdditionalServiceDecision"/>
       <nestedClassifier xmi:type="uml:Class" xmi:id="__NyKkIRBEeSY_7x5FILowQ" name="AdditionalServiceHandler">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_I3S9UIRUEeSMS5FZ7DY3uw" name="additionalService" type="_BKM2oHvAEeSAJb-qAtupNw" association="_I3TkYIRUEeSMS5FZ7DY3uw">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_I3S9UYRUEeSMS5FZ7DY3uw"/>
@@ -899,7 +888,6 @@
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Qx41UoRUEeSMS5FZ7DY3uw" value="1"/>
         </ownedAttribute>
         <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_UTAQ0IRCEeSY_7x5FILowQ" client="__NyKkIRBEeSY_7x5FILowQ" supplier="_YlNd8HpfEeS6O5zO6NZCqA" contract="_YlNd8HpfEeS6O5zO6NZCqA"/>
-        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_Vmi8UIRCEeSY_7x5FILowQ" client="__NyKkIRBEeSY_7x5FILowQ" supplier="_cDvTgH-zEeSVo4U8yTxtOw" contract="_cDvTgH-zEeSVo4U8yTxtOw"/>
         <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_a0OiIIRCEeSY_7x5FILowQ" client="__NyKkIRBEeSY_7x5FILowQ" supplier="_oFVrUHpcEeS6O5zO6NZCqA" contract="_oFVrUHpcEeS6O5zO6NZCqA"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_2sfNAIRDEeSY_7x5FILowQ" name="findService">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_6M4xoIRDEeSY_7x5FILowQ" name="name">
@@ -1425,6 +1413,8 @@
       </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Component" xmi:id="__b5yoHobEeSypfm9OOQUYA" name="StaffComponent">
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_TBHs0IagEeSBsajI1z9RTw" client="__b5yoHobEeSypfm9OOQUYA" supplier="_yNtyrnumEeSUpK3HS5a0Lg" contract="_yNtyrnumEeSUpK3HS5a0Lg"/>
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_TeiBkIagEeSBsajI1z9RTw" client="__b5yoHobEeSypfm9OOQUYA" supplier="_yNtywnumEeSUpK3HS5a0Lg" contract="_yNtywnumEeSUpK3HS5a0Lg"/>
       <nestedClassifier xmi:type="uml:Class" xmi:id="_yNtykXumEeSUpK3HS5a0Lg" name="AccountManager">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_VNq80IEiEeSZXsM8lF2eOA" name="iAuthentication" type="_yNtywnumEeSUpK3HS5a0Lg" association="_VNsK8IEiEeSZXsM8lF2eOA">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_VNq80YEiEeSZXsM8lF2eOA" value="1"/>
@@ -1568,6 +1558,8 @@
       </nestedClassifier>
     </packagedElement>
     <packagedElement xmi:type="uml:Component" xmi:id="_9a3H8HobEeSypfm9OOQUYA" name="RoomComponent">
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_4a-UoIafEeSBsajI1z9RTw" client="_9a3H8HobEeSypfm9OOQUYA" supplier="_4QGeMHpmEeS6O5zO6NZCqA" contract="_4QGeMHpmEeS6O5zO6NZCqA"/>
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_4zWYYIafEeSBsajI1z9RTw" client="_9a3H8HobEeSypfm9OOQUYA" supplier="_hHHwcHpmEeS6O5zO6NZCqA" contract="_hHHwcHpmEeS6O5zO6NZCqA"/>
       <nestedClassifier xmi:type="uml:Class" xmi:id="_eIU7cHsTEeSLuMTWUFMNdg" name="Room">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_eIU7cXsTEeSLuMTWUFMNdg" name="roomNumber">
           <ownedComment xmi:type="uml:Comment" xmi:id="_eIU7cnsTEeSLuMTWUFMNdg">
@@ -1863,7 +1855,6 @@
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sRzHQYIIEeSsqI5NBtfIGg"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sRzHQoIIEeSsqI5NBtfIGg" value="*"/>
         </ownedAttribute>
-        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_JIbOIH-1EeSVo4U8yTxtOw" client="_CxzwoH4QEeS7R5Ychvo0mw" supplier="_hieNEH-zEeSVo4U8yTxtOw" contract="_hieNEH-zEeSVo4U8yTxtOw"/>
         <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_kSgqcIEhEeSZXsM8lF2eOA" name="HandlerToInterface" client="_CxzwoH4QEeS7R5Ychvo0mw" supplier="_4QGeMHpmEeS6O5zO6NZCqA" contract="_4QGeMHpmEeS6O5zO6NZCqA"/>
         <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_ll6zEIEhEeSZXsM8lF2eOA" client="_CxzwoH4QEeS7R5Ychvo0mw" supplier="_hHHwcHpmEeS6O5zO6NZCqA" contract="_hHHwcHpmEeS6O5zO6NZCqA"/>
         <nestedClassifier xmi:type="uml:Association" xmi:id="_7URvcIB9EeSVsryNkPPRZw" memberEnd="_7URvcYB9EeSVsryNkPPRZw _7UQhUIB9EeSVsryNkPPRZw">
@@ -1873,7 +1864,6 @@
           </ownedEnd>
         </nestedClassifier>
       </nestedClassifier>
-      <nestedClassifier xmi:type="uml:Interface" xmi:id="_hieNEH-zEeSVo4U8yTxtOw" name="IRoomDecision"/>
       <nestedClassifier xmi:type="uml:Association" xmi:id="_6YsVEIE6EeSNiOPEdgrO9Q" memberEnd="_6YsVEYE6EeSNiOPEdgrO9Q _6YruAIE6EeSNiOPEdgrO9Q">
         <ownedEnd xmi:type="uml:Property" xmi:id="_6YsVEYE6EeSNiOPEdgrO9Q" name="roomHandler" type="_CxzwoH4QEeS7R5Ychvo0mw" association="_6YsVEIE6EeSNiOPEdgrO9Q">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_6YsVEoE6EeSNiOPEdgrO9Q" value="1"/>
