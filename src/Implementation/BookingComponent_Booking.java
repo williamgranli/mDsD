@@ -25,6 +25,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link Implementation.BookingComponent_Booking#getPaymentDetails <em>Payment Details</em>}</li>
  *   <li>{@link Implementation.BookingComponent_Booking#getRooms <em>Rooms</em>}</li>
  *   <li>{@link Implementation.BookingComponent_Booking#isPaid <em>Is Paid</em>}</li>
+ *   <li>{@link Implementation.BookingComponent_Booking#isActive <em>Is Active</em>}</li>
  * </ul>
  * </p>
  *
@@ -237,6 +238,32 @@ public interface BookingComponent_Booking extends EObject {
 	 * @generated
 	 */
 	void setIsPaid(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Is Active</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Is Active</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Is Active</em>' attribute.
+	 * @see #setIsActive(boolean)
+	 * @see Implementation.ImplementationPackage#getBookingComponent_Booking_IsActive()
+	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false"
+	 * @generated
+	 */
+	boolean isActive();
+
+	/**
+	 * Sets the value of the '{@link Implementation.BookingComponent_Booking#isActive <em>Is Active</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Is Active</em>' attribute.
+	 * @see #isActive()
+	 * @generated
+	 */
+	void setIsActive(boolean value);
 
 	/**
 	 * <!-- begin-user-doc -->

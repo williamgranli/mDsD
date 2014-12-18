@@ -598,33 +598,6 @@
     <packagedElement xmi:type="uml:Component" xmi:id="_IaMjUHocEeSypfm9OOQUYA" name="AdditionalServiceComponent">
       <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_nnmooIagEeSBsajI1z9RTw" client="_IaMjUHocEeSypfm9OOQUYA" supplier="_oFVrUHpcEeS6O5zO6NZCqA" contract="_oFVrUHpcEeS6O5zO6NZCqA"/>
       <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_oMCycIagEeSBsajI1z9RTw" client="_IaMjUHocEeSypfm9OOQUYA" supplier="_YlNd8HpfEeS6O5zO6NZCqA" contract="_YlNd8HpfEeS6O5zO6NZCqA"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_QTohIIbHEeSR8uMaeg-wcA" name="createAdditionalService">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_QTqWUIbHEeSR8uMaeg-wcA" name="name">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QTq9YIbHEeSR8uMaeg-wcA" value="1"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QTq9YYbHEeSR8uMaeg-wcA" value="1"/>
-        </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_QTrkcIbHEeSR8uMaeg-wcA" name="usable">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QTrkcYbHEeSR8uMaeg-wcA" value="1"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QTsLgIbHEeSR8uMaeg-wcA" value="1"/>
-        </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_QTsLgYbHEeSR8uMaeg-wcA" name="price">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QTsykIbHEeSR8uMaeg-wcA" value="1"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QTsykYbHEeSR8uMaeg-wcA" value="1"/>
-        </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_QTsykobHEeSR8uMaeg-wcA" name="description">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QTtZoIbHEeSR8uMaeg-wcA" value="1"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QTtZoYbHEeSR8uMaeg-wcA" value="1"/>
-        </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_QTuAsIbHEeSR8uMaeg-wcA" name="returnValue" direction="return">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QTuAsYbHEeSR8uMaeg-wcA" value="1"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QTuAsobHEeSR8uMaeg-wcA" value="1"/>
-        </ownedParameter>
-      </ownedOperation>
       <nestedClassifier xmi:type="uml:Class" xmi:id="_BKM2oHvAEeSAJb-qAtupNw" name="AdditionalService">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_BKNdsHvAEeSAJb-qAtupNw" name="name" visibility="private">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>

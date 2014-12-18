@@ -470,6 +470,7 @@
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
           propertySortChoices="true" ecoreFeature="ecore:EReference Implementation.ecore#//BookingComponent_Booking/rooms"/>
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//BookingComponent_Booking/isPaid"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//BookingComponent_Booking/isActive"/>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//BookingComponent_Booking/addAdditionalServiceToBooking">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_Booking/addAdditionalServiceToBooking/newService"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_Booking/addAdditionalServiceToBooking/price"/>

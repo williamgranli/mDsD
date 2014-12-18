@@ -2784,13 +2784,22 @@ public interface ImplementationPackage extends EPackage {
 	int BOOKING_COMPONENT_BOOKING__IS_PAID = 8;
 
 	/**
+	 * The feature id for the '<em><b>Is Active</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_COMPONENT_BOOKING__IS_ACTIVE = 9;
+
+	/**
 	 * The number of structural features of the '<em>Booking Component Booking</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_COMPONENT_BOOKING_FEATURE_COUNT = 9;
+	int BOOKING_COMPONENT_BOOKING_FEATURE_COUNT = 10;
 
 	/**
 	 * The operation id for the '<em>Add Additional Service To Booking</em>' operation.
@@ -6239,6 +6248,17 @@ public interface ImplementationPackage extends EPackage {
 	EAttribute getBookingComponent_Booking_IsPaid();
 
 	/**
+	 * Returns the meta object for the attribute '{@link Implementation.BookingComponent_Booking#isActive <em>Is Active</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Is Active</em>'.
+	 * @see Implementation.BookingComponent_Booking#isActive()
+	 * @see #getBookingComponent_Booking()
+	 * @generated
+	 */
+	EAttribute getBookingComponent_Booking_IsActive();
+
+	/**
 	 * Returns the meta object for the '{@link Implementation.BookingComponent_Booking#addAdditionalServiceToBooking(java.lang.String, int) <em>Add Additional Service To Booking</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8599,6 +8619,14 @@ public interface ImplementationPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute BOOKING_COMPONENT_BOOKING__IS_PAID = eINSTANCE.getBookingComponent_Booking_IsPaid();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Active</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BOOKING_COMPONENT_BOOKING__IS_ACTIVE = eINSTANCE.getBookingComponent_Booking_IsActive();
 
 		/**
 		 * The meta object literal for the '<em><b>Add Additional Service To Booking</b></em>' operation.

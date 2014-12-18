@@ -38,6 +38,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link Implementation.impl.BookingComponent_BookingImpl#getPaymentDetails <em>Payment Details</em>}</li>
  *   <li>{@link Implementation.impl.BookingComponent_BookingImpl#getRooms <em>Rooms</em>}</li>
  *   <li>{@link Implementation.impl.BookingComponent_BookingImpl#isPaid <em>Is Paid</em>}</li>
+ *   <li>{@link Implementation.impl.BookingComponent_BookingImpl#isActive <em>Is Active</em>}</li>
  * </ul>
  * </p>
  *
@@ -183,6 +184,26 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 	 * @ordered
 	 */
 	protected boolean isPaid = IS_PAID_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isActive() <em>Is Active</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isActive()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean IS_ACTIVE_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isActive() <em>Is Active</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isActive()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean isActive = IS_ACTIVE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -418,6 +439,27 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isActive() {
+		return isActive;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setIsActive(boolean newIsActive) {
+		boolean oldIsActive = isActive;
+		isActive = newIsActive;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ImplementationPackage.BOOKING_COMPONENT_BOOKING__IS_ACTIVE, oldIsActive, isActive));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public void addAdditionalServiceToBooking(BookingComponent_AdditionalService newService) {
@@ -641,6 +683,8 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 				return getRooms();
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING__IS_PAID:
 				return isPaid();
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING__IS_ACTIVE:
+				return isActive();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -684,6 +728,9 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING__IS_PAID:
 				setIsPaid((Boolean)newValue);
 				return;
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING__IS_ACTIVE:
+				setIsActive((Boolean)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -723,6 +770,9 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING__IS_PAID:
 				setIsPaid(IS_PAID_EDEFAULT);
 				return;
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING__IS_ACTIVE:
+				setIsActive(IS_ACTIVE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -753,6 +803,8 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 				return rooms != null && !rooms.isEmpty();
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING__IS_PAID:
 				return isPaid != IS_PAID_EDEFAULT;
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING__IS_ACTIVE:
+				return isActive != IS_ACTIVE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -821,6 +873,8 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 		result.append(currentCost);
 		result.append(", isPaid: ");
 		result.append(isPaid);
+		result.append(", isActive: ");
+		result.append(isActive);
 		result.append(')');
 		return result.toString();
 	}

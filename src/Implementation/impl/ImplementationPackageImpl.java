@@ -1979,6 +1979,15 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getBookingComponent_Booking_IsActive() {
+		return (EAttribute)bookingComponent_BookingEClass.getEStructuralFeatures().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EOperation getBookingComponent_Booking__AddAdditionalServiceToBooking__String_int() {
 		return bookingComponent_BookingEClass.getEOperations().get(0);
 	}
@@ -3010,6 +3019,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		createEReference(bookingComponent_BookingEClass, BOOKING_COMPONENT_BOOKING__PAYMENT_DETAILS);
 		createEReference(bookingComponent_BookingEClass, BOOKING_COMPONENT_BOOKING__ROOMS);
 		createEAttribute(bookingComponent_BookingEClass, BOOKING_COMPONENT_BOOKING__IS_PAID);
+		createEAttribute(bookingComponent_BookingEClass, BOOKING_COMPONENT_BOOKING__IS_ACTIVE);
 		createEOperation(bookingComponent_BookingEClass, BOOKING_COMPONENT_BOOKING___ADD_ADDITIONAL_SERVICE_TO_BOOKING__STRING_INT);
 		createEOperation(bookingComponent_BookingEClass, BOOKING_COMPONENT_BOOKING___ADD_ROOM_TO_BOOKING__STRING_INT);
 		createEOperation(bookingComponent_BookingEClass, BOOKING_COMPONENT_BOOKING___REMOVE_ROOM_FROM_BOOKING__STRING);
@@ -3612,6 +3622,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		initEReference(getBookingComponent_Booking_PaymentDetails(), this.getBookingComponent_PaymentDetails(), null, "paymentDetails", null, 1, 1, BookingComponent_Booking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getBookingComponent_Booking_Rooms(), this.getBookingComponent_RoomType(), null, "rooms", null, 1, -1, BookingComponent_Booking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getBookingComponent_Booking_IsPaid(), theTypesPackage.getBoolean(), "isPaid", "false", 1, 1, BookingComponent_Booking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getBookingComponent_Booking_IsActive(), theTypesPackage.getBoolean(), "isActive", null, 1, 1, BookingComponent_Booking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		op = initEOperation(getBookingComponent_Booking__AddAdditionalServiceToBooking__String_int(), null, "addAdditionalServiceToBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "newService", 1, 1, IS_UNIQUE, !IS_ORDERED);
