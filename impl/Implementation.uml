@@ -1347,9 +1347,6 @@ For some reason Papyrus doesn’t show the attributes in ConferenceRoom. It hold
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_obb1MIXjEeS_xs5TLHXXQQ" name="bookingReference" direction="return">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedParameter>
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_-RDBcIbyEeSvmK2zphyL7A" name="guestCount">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-          </ownedParameter>
         </ownedOperation>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_NDnXIHpsEeS6O5zO6NZCqA" name="addRoom" visibility="protected">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_PJUikHpwEeS6O5zO6NZCqA" name="bookingReference">

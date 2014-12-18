@@ -59,7 +59,7 @@ public class BankImpl extends MinimalEObjectImpl.Container implements Bank {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String makeBooking(String roomType, Date arrivalDate, Date departureDate, String customerSSN, String customerFirstName, String customerLastName, String customerAddress, String ccNumber, String ccv, int expiryMonth, int expiryYear, int guestCount) {
+	public String makeBooking(String roomType, Date arrivalDate, Date departureDate, String customerSSN, String customerFirstName, String customerLastName, String customerAddress, String ccNumber, String ccv, int expiryMonth, int expiryYear) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -228,7 +228,7 @@ public class BankImpl extends MinimalEObjectImpl.Container implements Bank {
 	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
 		if (baseClass == BookingComponent_IBookingAdministration.class) {
 			switch (baseOperationID) {
-				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___MAKE_BOOKING__STRING_DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_INT_INT_INT: return ImplementationPackage.BANK___MAKE_BOOKING__STRING_DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_INT_INT_INT;
+				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___MAKE_BOOKING__STRING_DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_INT_INT: return ImplementationPackage.BANK___MAKE_BOOKING__STRING_DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_INT_INT;
 				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___ADD_ROOM__STRING_STRING_INT: return ImplementationPackage.BANK___ADD_ROOM__STRING_STRING_INT;
 				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___EDIT_BOOKING__STRING_DATE_DATE: return ImplementationPackage.BANK___EDIT_BOOKING__STRING_DATE_DATE;
 				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___CANCEL_BOOKING__STRING: return ImplementationPackage.BANK___CANCEL_BOOKING__STRING;
@@ -264,8 +264,8 @@ public class BankImpl extends MinimalEObjectImpl.Container implements Bank {
 		switch (operationID) {
 			case ImplementationPackage.BANK___GET_DSS_INFO:
 				return getDSSInfo();
-			case ImplementationPackage.BANK___MAKE_BOOKING__STRING_DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_INT_INT_INT:
-				return makeBooking((String)arguments.get(0), (Date)arguments.get(1), (Date)arguments.get(2), (String)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5), (String)arguments.get(6), (String)arguments.get(7), (String)arguments.get(8), (Integer)arguments.get(9), (Integer)arguments.get(10), (Integer)arguments.get(11));
+			case ImplementationPackage.BANK___MAKE_BOOKING__STRING_DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_INT_INT:
+				return makeBooking((String)arguments.get(0), (Date)arguments.get(1), (Date)arguments.get(2), (String)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5), (String)arguments.get(6), (String)arguments.get(7), (String)arguments.get(8), (Integer)arguments.get(9), (Integer)arguments.get(10));
 			case ImplementationPackage.BANK___ADD_ROOM__STRING_STRING_INT:
 				return addRoom((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2));
 			case ImplementationPackage.BANK___EDIT_BOOKING__STRING_DATE_DATE:

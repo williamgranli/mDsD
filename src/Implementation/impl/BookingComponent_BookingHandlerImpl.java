@@ -433,12 +433,8 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public String makeBooking(String roomType, Date arrivalDate, Date departureDate, String customerSSN, String customerFirstName, String customerLastName, String customerAddress, String ccNumber, String ccv, int expiryMonth, int expiryYear, int guestCount) {
-		
+	public String makeBooking(String roomType, Date arrivalDate, Date departureDate, String customerSSN, String customerFirstName, String customerLastName, String customerAddress, String ccNumber, String ccv, int expiryMonth, int expiryYear) {
 		String refNumber = "INVALID_BOOKING";
-		
-		//TODO - Re-add confirm booking, returns a message stating what is missing if it's incomplete or
-		// 		 returns the booking reference if the booking is valid?
 		
 		if(bookingAvailable(arrivalDate, departureDate, roomType)) {
 			
@@ -858,7 +854,7 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 		}
 		if (baseClass == BookingComponent_IBookingAdministration.class) {
 			switch (baseOperationID) {
-				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___MAKE_BOOKING__STRING_DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_INT_INT_INT: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___MAKE_BOOKING__STRING_DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_INT_INT_INT;
+				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___MAKE_BOOKING__STRING_DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_INT_INT: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___MAKE_BOOKING__STRING_DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_INT_INT;
 				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___ADD_ROOM__STRING_STRING_INT: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___ADD_ROOM__STRING_STRING_INT;
 				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___EDIT_BOOKING__STRING_DATE_DATE: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___EDIT_BOOKING__STRING_DATE_DATE;
 				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___CANCEL_BOOKING__STRING: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___CANCEL_BOOKING__STRING;
@@ -894,8 +890,8 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 				return makePayment((String)arguments.get(0));
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___GET_DSS_INFO:
 				return getDSSInfo();
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___MAKE_BOOKING__STRING_DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_INT_INT_INT:
-				return makeBooking((String)arguments.get(0), (Date)arguments.get(1), (Date)arguments.get(2), (String)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5), (String)arguments.get(6), (String)arguments.get(7), (String)arguments.get(8), (Integer)arguments.get(9), (Integer)arguments.get(10), (Integer)arguments.get(11));
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___MAKE_BOOKING__STRING_DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_INT_INT:
+				return makeBooking((String)arguments.get(0), (Date)arguments.get(1), (Date)arguments.get(2), (String)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5), (String)arguments.get(6), (String)arguments.get(7), (String)arguments.get(8), (Integer)arguments.get(9), (Integer)arguments.get(10));
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___ADD_ROOM__STRING_STRING_INT:
 				return addRoom((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2));
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___EDIT_BOOKING__STRING_DATE_DATE:

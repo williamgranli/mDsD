@@ -635,7 +635,6 @@
       <eParameters name="ccv" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       <eParameters name="expiryMonth" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
       <eParameters name="expiryYear" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-      <eParameters name="guestCount" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
     </eOperations>
     <eOperations name="addRoom" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Boolean">
       <eParameters name="bookingReference" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>

@@ -584,7 +584,6 @@
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_IBookingAdministration/makeBooking/ccv"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_IBookingAdministration/makeBooking/expiryMonth"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_IBookingAdministration/makeBooking/expiryYear"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_IBookingAdministration/makeBooking/guestCount"/>
       </genOperations>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//BookingComponent_IBookingAdministration/addRoom">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_IBookingAdministration/addRoom/bookingReference"/>

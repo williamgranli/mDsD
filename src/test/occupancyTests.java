@@ -62,13 +62,15 @@ public class occupancyTests {
 		
     	long theFuture = System.currentTimeMillis() + (86400 * 7 * 1000);
     	Date nextWeek = new Date(theFuture);
+    	
 		roomHandler.createBedRoom(1, true, 100, "Single Room", "A small single room with a single bed", 1);
     	org.junit.Assert.assertTrue(booking.getBookings().size() == 0);
-    	String bookingReference = booking.makeBooking("Single Room", new Date(), nextWeek, "880923", "William", "Granli", "MyHouse", "123456789", "123", 9, 16, 1);
+    	String bookingReference = booking.makeBooking("Single Room", new Date(), nextWeek, "880923", "William", "Granli", "MyHouse", "123456789", "123", 9, 16);
     	org.junit.Assert.assertTrue(booking.getBookings().size() == 1);
+    	booking.addRoom(bookingReference, "SingleRoom", 100);
     	booking.addGuestToBooking(bookingReference, "William", "Granli", "The Shire");
     	booking.addGuestToBooking(bookingReference, "Andam", "Berima", "The Old Shire");
-    	booking.addRoom(bookingReference, "SingleRoom", 100);
+    	
     	System.out.println(booking.getBookings().size());
     	return bookingReference;
 	}

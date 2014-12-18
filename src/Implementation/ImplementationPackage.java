@@ -3196,7 +3196,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_COMPONENT_BOOKING_HANDLER___MAKE_BOOKING__STRING_DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_INT_INT_INT = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 1;
+	int BOOKING_COMPONENT_BOOKING_HANDLER___MAKE_BOOKING__STRING_DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_INT_INT = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Add Room</em>' operation.
@@ -3350,7 +3350,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___MAKE_BOOKING__STRING_DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_INT_INT_INT = 0;
+	int BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___MAKE_BOOKING__STRING_DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_INT_INT = 0;
 
 	/**
 	 * The operation id for the '<em>Add Room</em>' operation.
@@ -4369,7 +4369,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BANK___MAKE_BOOKING__STRING_DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_INT_INT_INT = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 0;
+	int BANK___MAKE_BOOKING__STRING_DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_INT_INT = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Add Room</em>' operation.
@@ -6650,14 +6650,14 @@ public interface ImplementationPackage extends EPackage {
 	EClass getBookingComponent_IBookingAdministration();
 
 	/**
-	 * Returns the meta object for the '{@link Implementation.BookingComponent_IBookingAdministration#makeBooking(java.lang.String, java.util.Date, java.util.Date, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, int, int, int) <em>Make Booking</em>}' operation.
+	 * Returns the meta object for the '{@link Implementation.BookingComponent_IBookingAdministration#makeBooking(java.lang.String, java.util.Date, java.util.Date, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, int, int) <em>Make Booking</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Make Booking</em>' operation.
-	 * @see Implementation.BookingComponent_IBookingAdministration#makeBooking(java.lang.String, java.util.Date, java.util.Date, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, int, int, int)
+	 * @see Implementation.BookingComponent_IBookingAdministration#makeBooking(java.lang.String, java.util.Date, java.util.Date, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, int, int)
 	 * @generated
 	 */
-	EOperation getBookingComponent_IBookingAdministration__MakeBooking__String_Date_Date_String_String_String_String_String_String_int_int_int();
+	EOperation getBookingComponent_IBookingAdministration__MakeBooking__String_Date_Date_String_String_String_String_String_String_int_int();
 
 	/**
 	 * Returns the meta object for the '{@link Implementation.BookingComponent_IBookingAdministration#addRoom(java.lang.String, java.lang.String, int) <em>Add Room</em>}' operation.
@@ -8939,7 +8939,7 @@ public interface ImplementationPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___MAKE_BOOKING__STRING_DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_INT_INT_INT = eINSTANCE.getBookingComponent_IBookingAdministration__MakeBooking__String_Date_Date_String_String_String_String_String_String_int_int_int();
+		EOperation BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___MAKE_BOOKING__STRING_DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_INT_INT = eINSTANCE.getBookingComponent_IBookingAdministration__MakeBooking__String_Date_Date_String_String_String_String_String_String_int_int();
 
 		/**
 		 * The meta object literal for the '<em><b>Add Room</b></em>' operation.
