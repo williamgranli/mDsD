@@ -980,7 +980,7 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
           <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_mGZHIIU4EeS93fj9yg1HxA"/>
         </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_WXLigIbIEeSR8uMaeg-wcA" name="isActive" visibility="private">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_6OBqAIbIEeSR8uMaeg-wcA" name="isActive" visibility="private">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
         </ownedAttribute>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_gokdsnuiEeSz04gN9GtPDA" name="addAdditionalServiceToBooking" visibility="private">
