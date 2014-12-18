@@ -13,9 +13,7 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link Implementation.DecisionSupportComponent_DSSController#getIRoomDecision <em>IRoom Decision</em>}</li>
  *   <li>{@link Implementation.DecisionSupportComponent_DSSController#getIOccupancyDecision <em>IOccupancy Decision</em>}</li>
- *   <li>{@link Implementation.DecisionSupportComponent_DSSController#getIAdditionalServiceDecision <em>IAdditional Service Decision</em>}</li>
  *   <li>{@link Implementation.DecisionSupportComponent_DSSController#getIBookingDecision <em>IBooking Decision</em>}</li>
  *   <li>{@link Implementation.DecisionSupportComponent_DSSController#getOccupancyDSSInfo <em>Occupancy DSS Info</em>}</li>
  *   <li>{@link Implementation.DecisionSupportComponent_DSSController#getAdditionalServiceDSSInfo <em>Additional Service DSS Info</em>}</li>
@@ -28,32 +26,6 @@ import org.eclipse.emf.common.util.EList;
  * @generated
  */
 public interface DecisionSupportComponent_DSSController extends DecisionSupportComponent_IDecisionSupport {
-	/**
-	 * Returns the value of the '<em><b>IRoom Decision</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>IRoom Decision</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>IRoom Decision</em>' reference.
-	 * @see #setIRoomDecision(RoomComponent_IRoomDecision)
-	 * @see Implementation.ImplementationPackage#getDecisionSupportComponent_DSSController_IRoomDecision()
-	 * @model required="true" ordered="false"
-	 * @generated
-	 */
-	RoomComponent_IRoomDecision getIRoomDecision();
-
-	/**
-	 * Sets the value of the '{@link Implementation.DecisionSupportComponent_DSSController#getIRoomDecision <em>IRoom Decision</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>IRoom Decision</em>' reference.
-	 * @see #getIRoomDecision()
-	 * @generated
-	 */
-	void setIRoomDecision(RoomComponent_IRoomDecision value);
-
 	/**
 	 * Returns the value of the '<em><b>IOccupancy Decision</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -79,32 +51,6 @@ public interface DecisionSupportComponent_DSSController extends DecisionSupportC
 	 * @generated
 	 */
 	void setIOccupancyDecision(OccupancyComponent_IOccupancyDecision value);
-
-	/**
-	 * Returns the value of the '<em><b>IAdditional Service Decision</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>IAdditional Service Decision</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>IAdditional Service Decision</em>' reference.
-	 * @see #setIAdditionalServiceDecision(AdditionalServiceComponent_IAdditionalServiceDecision)
-	 * @see Implementation.ImplementationPackage#getDecisionSupportComponent_DSSController_IAdditionalServiceDecision()
-	 * @model required="true" ordered="false"
-	 * @generated
-	 */
-	AdditionalServiceComponent_IAdditionalServiceDecision getIAdditionalServiceDecision();
-
-	/**
-	 * Sets the value of the '{@link Implementation.DecisionSupportComponent_DSSController#getIAdditionalServiceDecision <em>IAdditional Service Decision</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>IAdditional Service Decision</em>' reference.
-	 * @see #getIAdditionalServiceDecision()
-	 * @generated
-	 */
-	void setIAdditionalServiceDecision(AdditionalServiceComponent_IAdditionalServiceDecision value);
 
 	/**
 	 * Returns the value of the '<em><b>IBooking Decision</b></em>' reference.

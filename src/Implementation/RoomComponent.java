@@ -2,7 +2,6 @@
  */
 package Implementation;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,5 +13,5 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface RoomComponent extends EObject {
+public interface RoomComponent extends RoomComponent_IRoomInformation, RoomComponent_IRoomAdministration {
 } // RoomComponent

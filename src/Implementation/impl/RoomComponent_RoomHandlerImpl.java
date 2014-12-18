@@ -7,7 +7,6 @@ import Implementation.ImplementationPackage;
 import Implementation.RoomComponent_Bedroom;
 import Implementation.RoomComponent_ConferenceRoom;
 import Implementation.RoomComponent_IRoomAdministration;
-import Implementation.RoomComponent_IRoomInformation;
 import Implementation.RoomComponent_RoomHandler;
 import Implementation.StaffComponent_IAuthentication;
 import java.lang.reflect.InvocationTargetException;
@@ -525,17 +524,6 @@ public class RoomComponent_RoomHandlerImpl extends MinimalEObjectImpl.Container 
 	 */
 	@Override
 	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
-		if (baseClass == RoomComponent_IRoomInformation.class) {
-			switch (baseOperationID) {
-				case ImplementationPackage.ROOM_COMPONENT_IROOM_INFORMATION___GET_ROOM_INFO__INT: return ImplementationPackage.ROOM_COMPONENT_ROOM_HANDLER___GET_ROOM_INFO__INT;
-				case ImplementationPackage.ROOM_COMPONENT_IROOM_INFORMATION___SEARCH_ROOM__STRING: return ImplementationPackage.ROOM_COMPONENT_ROOM_HANDLER___SEARCH_ROOM__STRING;
-				case ImplementationPackage.ROOM_COMPONENT_IROOM_INFORMATION___GET_ROOM_TYPES: return ImplementationPackage.ROOM_COMPONENT_ROOM_HANDLER___GET_ROOM_TYPES;
-				case ImplementationPackage.ROOM_COMPONENT_IROOM_INFORMATION___GET_ALL_ROOM_NUMBERS: return ImplementationPackage.ROOM_COMPONENT_ROOM_HANDLER___GET_ALL_ROOM_NUMBERS;
-				case ImplementationPackage.ROOM_COMPONENT_IROOM_INFORMATION___COUNT_NUMBER_OF_TOTAL_ROOMS: return ImplementationPackage.ROOM_COMPONENT_ROOM_HANDLER___COUNT_NUMBER_OF_TOTAL_ROOMS;
-				case ImplementationPackage.ROOM_COMPONENT_IROOM_INFORMATION___GET_COUNT_OF_ROOM_TYPE__STRING: return ImplementationPackage.ROOM_COMPONENT_ROOM_HANDLER___GET_COUNT_OF_ROOM_TYPE__STRING;
-				default: return -1;
-			}
-		}
 		if (baseClass == RoomComponent_IRoomAdministration.class) {
 			switch (baseOperationID) {
 				case ImplementationPackage.ROOM_COMPONENT_IROOM_ADMINISTRATION___CREATE_BED_ROOM__INT_BOOLEAN_INT_STRING_STRING_INT: return ImplementationPackage.ROOM_COMPONENT_ROOM_HANDLER___CREATE_BED_ROOM__INT_BOOLEAN_INT_STRING_STRING_INT;

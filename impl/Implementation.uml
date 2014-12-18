@@ -58,17 +58,9 @@
         </ownedOperation>
       </nestedClassifier>
       <nestedClassifier xmi:type="uml:Class" xmi:id="_e1APUH-1EeSVo4U8yTxtOw" name="DSSController">
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_csfmcICAEeSVsryNkPPRZw" name="iRoomDecision">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_csfmcYCAEeSVsryNkPPRZw" value="1"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_csfmcoCAEeSVsryNkPPRZw" value="1"/>
-        </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_ZGGSEICBEeSVsryNkPPRZw" name="iOccupancyDecision" type="_HB-RAIBPEeSMz8ND1yS4hA" association="_ZGIuUICBEeSVsryNkPPRZw">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZGGSEYCBEeSVsryNkPPRZw" value="1"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZGGSEoCBEeSVsryNkPPRZw" value="1"/>
-        </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_7wGzAICBEeSVsryNkPPRZw" name="iAdditionalServiceDecision">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7wGzAYCBEeSVsryNkPPRZw" value="1"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7wGzAoCBEeSVsryNkPPRZw" value="1"/>
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_D-fCUICFEeSVsryNkPPRZw" name="iBookingDecision" type="_eX8x0H-zEeSVo4U8yTxtOw" association="_D-hekICFEeSVsryNkPPRZw">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_D-fCUYCFEeSVsryNkPPRZw" value="1"/>

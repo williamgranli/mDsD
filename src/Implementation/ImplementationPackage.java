@@ -68,24 +68,6 @@ public interface ImplementationPackage extends EPackage {
 	int DECISION_SUPPORT_COMPONENT = 0;
 
 	/**
-	 * The number of structural features of the '<em>Decision Support Component</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DECISION_SUPPORT_COMPONENT_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Decision Support Component</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DECISION_SUPPORT_COMPONENT_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link Implementation.DecisionSupportComponent_IDecisionSupport <em>Decision Support Component IDecision Support</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -184,6 +166,96 @@ public interface ImplementationPackage extends EPackage {
 	 * @ordered
 	 */
 	int DECISION_SUPPORT_COMPONENT_IDECISION_SUPPORT_OPERATION_COUNT = 8;
+
+	/**
+	 * The number of structural features of the '<em>Decision Support Component</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DECISION_SUPPORT_COMPONENT_FEATURE_COUNT = DECISION_SUPPORT_COMPONENT_IDECISION_SUPPORT_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Get DSS Data</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DECISION_SUPPORT_COMPONENT___GET_DSS_DATA = DECISION_SUPPORT_COMPONENT_IDECISION_SUPPORT___GET_DSS_DATA;
+
+	/**
+	 * The operation id for the '<em>Get All Room Type Frequency</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DECISION_SUPPORT_COMPONENT___GET_ALL_ROOM_TYPE_FREQUENCY = DECISION_SUPPORT_COMPONENT_IDECISION_SUPPORT___GET_ALL_ROOM_TYPE_FREQUENCY;
+
+	/**
+	 * The operation id for the '<em>Get Room Type Frequency</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DECISION_SUPPORT_COMPONENT___GET_ROOM_TYPE_FREQUENCY__STRING = DECISION_SUPPORT_COMPONENT_IDECISION_SUPPORT___GET_ROOM_TYPE_FREQUENCY__STRING;
+
+	/**
+	 * The operation id for the '<em>Count Room Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DECISION_SUPPORT_COMPONENT___COUNT_ROOM_TYPE__ELIST_STRING = DECISION_SUPPORT_COMPONENT_IDECISION_SUPPORT___COUNT_ROOM_TYPE__ELIST_STRING;
+
+	/**
+	 * The operation id for the '<em>Get All Customer Booking Frequency</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DECISION_SUPPORT_COMPONENT___GET_ALL_CUSTOMER_BOOKING_FREQUENCY = DECISION_SUPPORT_COMPONENT_IDECISION_SUPPORT___GET_ALL_CUSTOMER_BOOKING_FREQUENCY;
+
+	/**
+	 * The operation id for the '<em>Get Customer Booking Frequency</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DECISION_SUPPORT_COMPONENT___GET_CUSTOMER_BOOKING_FREQUENCY__STRING = DECISION_SUPPORT_COMPONENT_IDECISION_SUPPORT___GET_CUSTOMER_BOOKING_FREQUENCY__STRING;
+
+	/**
+	 * The operation id for the '<em>Get DSS Occupancy Info</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DECISION_SUPPORT_COMPONENT___GET_DSS_OCCUPANCY_INFO = DECISION_SUPPORT_COMPONENT_IDECISION_SUPPORT___GET_DSS_OCCUPANCY_INFO;
+
+	/**
+	 * The operation id for the '<em>Get Number Of Occupancies Of Room</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DECISION_SUPPORT_COMPONENT___GET_NUMBER_OF_OCCUPANCIES_OF_ROOM__INT = DECISION_SUPPORT_COMPONENT_IDECISION_SUPPORT___GET_NUMBER_OF_OCCUPANCIES_OF_ROOM__INT;
+
+	/**
+	 * The number of operations of the '<em>Decision Support Component</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DECISION_SUPPORT_COMPONENT_OPERATION_COUNT = DECISION_SUPPORT_COMPONENT_IDECISION_SUPPORT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link Implementation.impl.DecisionSupportComponent_BookingDSSInfoImpl <em>Decision Support Component Booking DSS Info</em>}' class.
@@ -314,16 +386,6 @@ public interface ImplementationPackage extends EPackage {
 	int DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER = 4;
 
 	/**
-	 * The meta object id for the '{@link Implementation.RoomComponent_IRoomDecision <em>Room Component IRoom Decision</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see Implementation.RoomComponent_IRoomDecision
-	 * @see Implementation.impl.ImplementationPackageImpl#getRoomComponent_IRoomDecision()
-	 * @generated
-	 */
-	int ROOM_COMPONENT_IROOM_DECISION = 5;
-
-	/**
 	 * The meta object id for the '{@link Implementation.OccupancyComponent_IOccupancyDecision <em>Occupancy Component IOccupancy Decision</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -331,17 +393,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @see Implementation.impl.ImplementationPackageImpl#getOccupancyComponent_IOccupancyDecision()
 	 * @generated
 	 */
-	int OCCUPANCY_COMPONENT_IOCCUPANCY_DECISION = 6;
-
-	/**
-	 * The meta object id for the '{@link Implementation.AdditionalServiceComponent_IAdditionalServiceDecision <em>Additional Service Component IAdditional Service Decision</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see Implementation.AdditionalServiceComponent_IAdditionalServiceDecision
-	 * @see Implementation.impl.ImplementationPackageImpl#getAdditionalServiceComponent_IAdditionalServiceDecision()
-	 * @generated
-	 */
-	int ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_DECISION = 7;
+	int OCCUPANCY_COMPONENT_IOCCUPANCY_DECISION = 5;
 
 	/**
 	 * The meta object id for the '{@link Implementation.BookingComponent_IBookingDecision <em>Booking Component IBooking Decision</em>}' class.
@@ -351,7 +403,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @see Implementation.impl.ImplementationPackageImpl#getBookingComponent_IBookingDecision()
 	 * @generated
 	 */
-	int BOOKING_COMPONENT_IBOOKING_DECISION = 8;
+	int BOOKING_COMPONENT_IBOOKING_DECISION = 6;
 
 	/**
 	 * The meta object id for the '{@link Implementation.impl.DecisionSupportComponent_OccupancyDSSInfoImpl <em>Decision Support Component Occupancy DSS Info</em>}' class.
@@ -361,7 +413,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @see Implementation.impl.ImplementationPackageImpl#getDecisionSupportComponent_OccupancyDSSInfo()
 	 * @generated
 	 */
-	int DECISION_SUPPORT_COMPONENT_OCCUPANCY_DSS_INFO = 9;
+	int DECISION_SUPPORT_COMPONENT_OCCUPANCY_DSS_INFO = 7;
 
 	/**
 	 * The meta object id for the '{@link Implementation.impl.DecisionSupportComponent_AdditionalServiceDSSInfoImpl <em>Decision Support Component Additional Service DSS Info</em>}' class.
@@ -410,31 +462,13 @@ public interface ImplementationPackage extends EPackage {
 	int DECISION_SUPPORT_COMPONENT_ADDITIONAL_SERVICE_DSS_INFO_OPERATION_COUNT = 0;
 
 	/**
-	 * The feature id for the '<em><b>IRoom Decision</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__IROOM_DECISION = DECISION_SUPPORT_COMPONENT_IDECISION_SUPPORT_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>IOccupancy Decision</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__IOCCUPANCY_DECISION = DECISION_SUPPORT_COMPONENT_IDECISION_SUPPORT_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>IAdditional Service Decision</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__IADDITIONAL_SERVICE_DECISION = DECISION_SUPPORT_COMPONENT_IDECISION_SUPPORT_FEATURE_COUNT + 2;
+	int DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__IOCCUPANCY_DECISION = DECISION_SUPPORT_COMPONENT_IDECISION_SUPPORT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>IBooking Decision</b></em>' reference.
@@ -443,7 +477,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__IBOOKING_DECISION = DECISION_SUPPORT_COMPONENT_IDECISION_SUPPORT_FEATURE_COUNT + 3;
+	int DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__IBOOKING_DECISION = DECISION_SUPPORT_COMPONENT_IDECISION_SUPPORT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Occupancy DSS Info</b></em>' reference list.
@@ -452,7 +486,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__OCCUPANCY_DSS_INFO = DECISION_SUPPORT_COMPONENT_IDECISION_SUPPORT_FEATURE_COUNT + 4;
+	int DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__OCCUPANCY_DSS_INFO = DECISION_SUPPORT_COMPONENT_IDECISION_SUPPORT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Additional Service DSS Info</b></em>' reference list.
@@ -461,7 +495,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__ADDITIONAL_SERVICE_DSS_INFO = DECISION_SUPPORT_COMPONENT_IDECISION_SUPPORT_FEATURE_COUNT + 5;
+	int DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__ADDITIONAL_SERVICE_DSS_INFO = DECISION_SUPPORT_COMPONENT_IDECISION_SUPPORT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Booking DSS Info</b></em>' reference list.
@@ -470,7 +504,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__BOOKING_DSS_INFO = DECISION_SUPPORT_COMPONENT_IDECISION_SUPPORT_FEATURE_COUNT + 6;
+	int DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__BOOKING_DSS_INFO = DECISION_SUPPORT_COMPONENT_IDECISION_SUPPORT_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Decision Support Component DSS Controller</em>' class.
@@ -479,7 +513,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER_FEATURE_COUNT = DECISION_SUPPORT_COMPONENT_IDECISION_SUPPORT_FEATURE_COUNT + 7;
+	int DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER_FEATURE_COUNT = DECISION_SUPPORT_COMPONENT_IDECISION_SUPPORT_FEATURE_COUNT + 5;
 
 	/**
 	 * The operation id for the '<em>Get DSS Data</em>' operation.
@@ -581,24 +615,6 @@ public interface ImplementationPackage extends EPackage {
 	int DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER_OPERATION_COUNT = DECISION_SUPPORT_COMPONENT_IDECISION_SUPPORT_OPERATION_COUNT + 2;
 
 	/**
-	 * The number of structural features of the '<em>Room Component IRoom Decision</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_COMPONENT_IROOM_DECISION_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Room Component IRoom Decision</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_COMPONENT_IROOM_DECISION_OPERATION_COUNT = 0;
-
-	/**
 	 * The number of structural features of the '<em>Occupancy Component IOccupancy Decision</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -624,24 +640,6 @@ public interface ImplementationPackage extends EPackage {
 	 * @ordered
 	 */
 	int OCCUPANCY_COMPONENT_IOCCUPANCY_DECISION_OPERATION_COUNT = 1;
-
-	/**
-	 * The number of structural features of the '<em>Additional Service Component IAdditional Service Decision</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_DECISION_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Additional Service Component IAdditional Service Decision</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_DECISION_OPERATION_COUNT = 0;
 
 	/**
 	 * The number of structural features of the '<em>Booking Component IBooking Decision</em>' class.
@@ -732,7 +730,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @see Implementation.impl.ImplementationPackageImpl#getOccupancyComponent()
 	 * @generated
 	 */
-	int OCCUPANCY_COMPONENT = 10;
+	int OCCUPANCY_COMPONENT = 8;
 
 	/**
 	 * The number of structural features of the '<em>Occupancy Component</em>' class.
@@ -760,7 +758,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @see Implementation.impl.ImplementationPackageImpl#getOccupancyComponent_Occupancy()
 	 * @generated
 	 */
-	int OCCUPANCY_COMPONENT_OCCUPANCY = 11;
+	int OCCUPANCY_COMPONENT_OCCUPANCY = 9;
 
 	/**
 	 * The feature id for the '<em><b>Room Number</b></em>' attribute.
@@ -860,7 +858,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @see Implementation.impl.ImplementationPackageImpl#getOccupancyComponent_Guest()
 	 * @generated
 	 */
-	int OCCUPANCY_COMPONENT_GUEST = 12;
+	int OCCUPANCY_COMPONENT_GUEST = 10;
 
 	/**
 	 * The feature id for the '<em><b>First Name</b></em>' attribute.
@@ -906,7 +904,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @see Implementation.impl.ImplementationPackageImpl#getOccupancyComponent_IOccupancy()
 	 * @generated
 	 */
-	int OCCUPANCY_COMPONENT_IOCCUPANCY = 13;
+	int OCCUPANCY_COMPONENT_IOCCUPANCY = 11;
 
 	/**
 	 * The number of structural features of the '<em>Occupancy Component IOccupancy</em>' class.
@@ -988,7 +986,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @see Implementation.impl.ImplementationPackageImpl#getOccupancyComponent_OccupancyHandler()
 	 * @generated
 	 */
-	int OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER = 14;
+	int OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER = 12;
 
 	/**
 	 * The feature id for the '<em><b>IRoom Information</b></em>' reference.
@@ -1124,7 +1122,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @see Implementation.impl.ImplementationPackageImpl#getRoomComponent_IRoomInformation()
 	 * @generated
 	 */
-	int ROOM_COMPONENT_IROOM_INFORMATION = 15;
+	int ROOM_COMPONENT_IROOM_INFORMATION = 13;
 
 	/**
 	 * The number of structural features of the '<em>Room Component IRoom Information</em>' class.
@@ -1206,7 +1204,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @see Implementation.impl.ImplementationPackageImpl#getBookingComponent_IBookingInformation()
 	 * @generated
 	 */
-	int BOOKING_COMPONENT_IBOOKING_INFORMATION = 16;
+	int BOOKING_COMPONENT_IBOOKING_INFORMATION = 14;
 
 	/**
 	 * The number of structural features of the '<em>Booking Component IBooking Information</em>' class.
@@ -1279,25 +1277,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @see Implementation.impl.ImplementationPackageImpl#getPaymentComponent()
 	 * @generated
 	 */
-	int PAYMENT_COMPONENT = 17;
-
-	/**
-	 * The number of structural features of the '<em>Payment Component</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PAYMENT_COMPONENT_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Payment Component</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PAYMENT_COMPONENT_OPERATION_COUNT = 0;
+	int PAYMENT_COMPONENT = 15;
 
 	/**
 	 * The meta object id for the '{@link Implementation.PaymentComponent_IPayment <em>Payment Component IPayment</em>}' class.
@@ -1307,7 +1287,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @see Implementation.impl.ImplementationPackageImpl#getPaymentComponent_IPayment()
 	 * @generated
 	 */
-	int PAYMENT_COMPONENT_IPAYMENT = 18;
+	int PAYMENT_COMPONENT_IPAYMENT = 16;
 
 	/**
 	 * The number of structural features of the '<em>Payment Component IPayment</em>' class.
@@ -1382,6 +1362,78 @@ public interface ImplementationPackage extends EPackage {
 	int PAYMENT_COMPONENT_IPAYMENT_OPERATION_COUNT = 6;
 
 	/**
+	 * The number of structural features of the '<em>Payment Component</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PAYMENT_COMPONENT_FEATURE_COUNT = PAYMENT_COMPONENT_IPAYMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Make Payment</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PAYMENT_COMPONENT___MAKE_PAYMENT__STRING_STRING_INT_INT_STRING_STRING_DOUBLE = PAYMENT_COMPONENT_IPAYMENT___MAKE_PAYMENT__STRING_STRING_INT_INT_STRING_STRING_DOUBLE;
+
+	/**
+	 * The operation id for the '<em>Validate CC</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PAYMENT_COMPONENT___VALIDATE_CC__STRING_STRING_INT_INT_STRING_STRING = PAYMENT_COMPONENT_IPAYMENT___VALIDATE_CC__STRING_STRING_INT_INT_STRING_STRING;
+
+	/**
+	 * The operation id for the '<em>Add CC</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PAYMENT_COMPONENT___ADD_CC__STRING_STRING_INT_INT_STRING_STRING = PAYMENT_COMPONENT_IPAYMENT___ADD_CC__STRING_STRING_INT_INT_STRING_STRING;
+
+	/**
+	 * The operation id for the '<em>Check Balance</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PAYMENT_COMPONENT___CHECK_BALANCE__STRING_STRING_INT_INT_STRING_STRING = PAYMENT_COMPONENT_IPAYMENT___CHECK_BALANCE__STRING_STRING_INT_INT_STRING_STRING;
+
+	/**
+	 * The operation id for the '<em>Make Deposit</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PAYMENT_COMPONENT___MAKE_DEPOSIT__STRING_STRING_INT_INT_STRING_STRING_DOUBLE = PAYMENT_COMPONENT_IPAYMENT___MAKE_DEPOSIT__STRING_STRING_INT_INT_STRING_STRING_DOUBLE;
+
+	/**
+	 * The operation id for the '<em>Remove CC</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PAYMENT_COMPONENT___REMOVE_CC__STRING_STRING_INT_INT_STRING_STRING = PAYMENT_COMPONENT_IPAYMENT___REMOVE_CC__STRING_STRING_INT_INT_STRING_STRING;
+
+	/**
+	 * The number of operations of the '<em>Payment Component</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PAYMENT_COMPONENT_OPERATION_COUNT = PAYMENT_COMPONENT_IPAYMENT_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link Implementation.impl.PaymentComponent_PaymentHandlerImpl <em>Payment Component Payment Handler</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1389,7 +1441,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @see Implementation.impl.ImplementationPackageImpl#getPaymentComponent_PaymentHandler()
 	 * @generated
 	 */
-	int PAYMENT_COMPONENT_PAYMENT_HANDLER = 19;
+	int PAYMENT_COMPONENT_PAYMENT_HANDLER = 17;
 
 	/**
 	 * The feature id for the '<em><b>Payment</b></em>' reference list.
@@ -1498,7 +1550,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @see Implementation.impl.ImplementationPackageImpl#getPaymentComponent_Payment()
 	 * @generated
 	 */
-	int PAYMENT_COMPONENT_PAYMENT = 20;
+	int PAYMENT_COMPONENT_PAYMENT = 18;
 
 	/**
 	 * The feature id for the '<em><b>Cc Number</b></em>' attribute.
@@ -1589,7 +1641,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @see Implementation.impl.ImplementationPackageImpl#getBank_CustomerProvides()
 	 * @generated
 	 */
-	int BANK_CUSTOMER_PROVIDES = 21;
+	int BANK_CUSTOMER_PROVIDES = 19;
 
 	/**
 	 * The number of structural features of the '<em>Bank Customer Provides</em>' class.
@@ -1635,7 +1687,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @see Implementation.impl.ImplementationPackageImpl#getBank_AdministratorProvides()
 	 * @generated
 	 */
-	int BANK_ADMINISTRATOR_PROVIDES = 22;
+	int BANK_ADMINISTRATOR_PROVIDES = 20;
 
 	/**
 	 * The number of structural features of the '<em>Bank Administrator Provides</em>' class.
@@ -1699,7 +1751,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @see Implementation.impl.ImplementationPackageImpl#getAdditionalServiceComponent()
 	 * @generated
 	 */
-	int ADDITIONAL_SERVICE_COMPONENT = 23;
+	int ADDITIONAL_SERVICE_COMPONENT = 21;
 
 	/**
 	 * The meta object id for the '{@link Implementation.impl.AdditionalServiceComponent_AdditionalServiceImpl <em>Additional Service Component Additional Service</em>}' class.
@@ -1719,7 +1771,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @see Implementation.impl.ImplementationPackageImpl#getStaffComponent_IAuthentication()
 	 * @generated
 	 */
-	int STAFF_COMPONENT_IAUTHENTICATION = 29;
+	int STAFF_COMPONENT_IAUTHENTICATION = 27;
 
 	/**
 	 * The meta object id for the '{@link Implementation.AdditionalServiceComponent_IAdditionalServiceAdministration <em>Additional Service Component IAdditional Service Administration</em>}' class.
@@ -1729,7 +1781,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @see Implementation.impl.ImplementationPackageImpl#getAdditionalServiceComponent_IAdditionalServiceAdministration()
 	 * @generated
 	 */
-	int ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION = 26;
+	int ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION = 22;
 
 	/**
 	 * The meta object id for the '{@link Implementation.impl.AdditionalServiceComponent_AdditionalServiceEventImpl <em>Additional Service Component Additional Service Event</em>}' class.
@@ -1749,7 +1801,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @see Implementation.impl.ImplementationPackageImpl#getAdditionalServiceComponent_AdditionalServiceHandler()
 	 * @generated
 	 */
-	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER = 28;
+	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER = 26;
 
 	/**
 	 * The meta object id for the '{@link Implementation.impl.BookingComponentImpl <em>Booking Component</em>}' class.
@@ -1759,7 +1811,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @see Implementation.impl.ImplementationPackageImpl#getBookingComponent()
 	 * @generated
 	 */
-	int BOOKING_COMPONENT = 30;
+	int BOOKING_COMPONENT = 28;
 
 	/**
 	 * The meta object id for the '{@link Implementation.impl.BookingComponent_PaymentDetailsImpl <em>Booking Component Payment Details</em>}' class.
@@ -1769,7 +1821,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @see Implementation.impl.ImplementationPackageImpl#getBookingComponent_PaymentDetails()
 	 * @generated
 	 */
-	int BOOKING_COMPONENT_PAYMENT_DETAILS = 31;
+	int BOOKING_COMPONENT_PAYMENT_DETAILS = 29;
 
 	/**
 	 * The meta object id for the '{@link Implementation.impl.BookingComponent_BookingImpl <em>Booking Component Booking</em>}' class.
@@ -1779,7 +1831,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @see Implementation.impl.ImplementationPackageImpl#getBookingComponent_Booking()
 	 * @generated
 	 */
-	int BOOKING_COMPONENT_BOOKING = 32;
+	int BOOKING_COMPONENT_BOOKING = 30;
 
 	/**
 	 * The meta object id for the '{@link Implementation.impl.BookingComponent_AdditionalServiceImpl <em>Booking Component Additional Service</em>}' class.
@@ -1789,7 +1841,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @see Implementation.impl.ImplementationPackageImpl#getBookingComponent_AdditionalService()
 	 * @generated
 	 */
-	int BOOKING_COMPONENT_ADDITIONAL_SERVICE = 33;
+	int BOOKING_COMPONENT_ADDITIONAL_SERVICE = 31;
 
 	/**
 	 * The meta object id for the '{@link Implementation.impl.BookingComponent_BookingGuestImpl <em>Booking Component Booking Guest</em>}' class.
@@ -1799,7 +1851,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @see Implementation.impl.ImplementationPackageImpl#getBookingComponent_BookingGuest()
 	 * @generated
 	 */
-	int BOOKING_COMPONENT_BOOKING_GUEST = 34;
+	int BOOKING_COMPONENT_BOOKING_GUEST = 32;
 
 	/**
 	 * The meta object id for the '{@link Implementation.impl.BookingComponent_RoomTypeImpl <em>Booking Component Room Type</em>}' class.
@@ -1809,7 +1861,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @see Implementation.impl.ImplementationPackageImpl#getBookingComponent_RoomType()
 	 * @generated
 	 */
-	int BOOKING_COMPONENT_ROOM_TYPE = 35;
+	int BOOKING_COMPONENT_ROOM_TYPE = 33;
 
 	/**
 	 * The meta object id for the '{@link Implementation.impl.StaffComponentImpl <em>Staff Component</em>}' class.
@@ -1819,7 +1871,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @see Implementation.impl.ImplementationPackageImpl#getStaffComponent()
 	 * @generated
 	 */
-	int STAFF_COMPONENT = 38;
+	int STAFF_COMPONENT = 36;
 
 	/**
 	 * The meta object id for the '{@link Implementation.impl.StaffComponent_AccountManagerImpl <em>Staff Component Account Manager</em>}' class.
@@ -1829,7 +1881,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @see Implementation.impl.ImplementationPackageImpl#getStaffComponent_AccountManager()
 	 * @generated
 	 */
-	int STAFF_COMPONENT_ACCOUNT_MANAGER = 39;
+	int STAFF_COMPONENT_ACCOUNT_MANAGER = 38;
 
 	/**
 	 * The meta object id for the '{@link Implementation.StaffComponent_IAccountAdministration <em>Staff Component IAccount Administration</em>}' class.
@@ -1839,7 +1891,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @see Implementation.impl.ImplementationPackageImpl#getStaffComponent_IAccountAdministration()
 	 * @generated
 	 */
-	int STAFF_COMPONENT_IACCOUNT_ADMINISTRATION = 41;
+	int STAFF_COMPONENT_IACCOUNT_ADMINISTRATION = 37;
 
 	/**
 	 * The meta object id for the '{@link Implementation.impl.StaffComponent_EmployeeImpl <em>Staff Component Employee</em>}' class.
@@ -1849,7 +1901,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @see Implementation.impl.ImplementationPackageImpl#getStaffComponent_Employee()
 	 * @generated
 	 */
-	int STAFF_COMPONENT_EMPLOYEE = 40;
+	int STAFF_COMPONENT_EMPLOYEE = 39;
 
 	/**
 	 * The meta object id for the '{@link Implementation.impl.RoomComponentImpl <em>Room Component</em>}' class.
@@ -1859,7 +1911,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @see Implementation.impl.ImplementationPackageImpl#getRoomComponent()
 	 * @generated
 	 */
-	int ROOM_COMPONENT = 42;
+	int ROOM_COMPONENT = 40;
 
 	/**
 	 * The meta object id for the '{@link Implementation.impl.RoomComponent_RoomImpl <em>Room Component Room</em>}' class.
@@ -1869,7 +1921,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @see Implementation.impl.ImplementationPackageImpl#getRoomComponent_Room()
 	 * @generated
 	 */
-	int ROOM_COMPONENT_ROOM = 43;
+	int ROOM_COMPONENT_ROOM = 42;
 
 	/**
 	 * The meta object id for the '{@link Implementation.impl.RoomComponent_BedroomImpl <em>Room Component Bedroom</em>}' class.
@@ -1879,7 +1931,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @see Implementation.impl.ImplementationPackageImpl#getRoomComponent_Bedroom()
 	 * @generated
 	 */
-	int ROOM_COMPONENT_BEDROOM = 44;
+	int ROOM_COMPONENT_BEDROOM = 43;
 
 	/**
 	 * The meta object id for the '{@link Implementation.impl.RoomComponent_ConferenceRoomImpl <em>Room Component Conference Room</em>}' class.
@@ -1889,7 +1941,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @see Implementation.impl.ImplementationPackageImpl#getRoomComponent_ConferenceRoom()
 	 * @generated
 	 */
-	int ROOM_COMPONENT_CONFERENCE_ROOM = 45;
+	int ROOM_COMPONENT_CONFERENCE_ROOM = 44;
 
 	/**
 	 * The meta object id for the '{@link Implementation.RoomComponent_IRoomAdministration <em>Room Component IRoom Administration</em>}' class.
@@ -1899,7 +1951,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @see Implementation.impl.ImplementationPackageImpl#getRoomComponent_IRoomAdministration()
 	 * @generated
 	 */
-	int ROOM_COMPONENT_IROOM_ADMINISTRATION = 46;
+	int ROOM_COMPONENT_IROOM_ADMINISTRATION = 41;
 
 	/**
 	 * The meta object id for the '{@link Implementation.impl.RoomComponent_RoomHandlerImpl <em>Room Component Room Handler</em>}' class.
@@ -1909,7 +1961,88 @@ public interface ImplementationPackage extends EPackage {
 	 * @see Implementation.impl.ImplementationPackageImpl#getRoomComponent_RoomHandler()
 	 * @generated
 	 */
-	int ROOM_COMPONENT_ROOM_HANDLER = 47;
+	int ROOM_COMPONENT_ROOM_HANDLER = 45;
+
+	/**
+	 * The number of structural features of the '<em>Additional Service Component IAdditional Service Administration</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION_FEATURE_COUNT = 0;
+
+	/**
+	 * The operation id for the '<em>Create Additional Service</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___CREATE_ADDITIONAL_SERVICE__STRING_BOOLEAN_INT_STRING = 0;
+
+	/**
+	 * The operation id for the '<em>Edit Additional Service</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___EDIT_ADDITIONAL_SERVICE__STRING_STRING_BOOLEAN_INT_STRING = 1;
+
+	/**
+	 * The operation id for the '<em>Remove Additional Service</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___REMOVE_ADDITIONAL_SERVICE__STRING = 2;
+
+	/**
+	 * The operation id for the '<em>Create Event</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___CREATE_EVENT__STRING_DATE_STRING_INT_INT = 3;
+
+	/**
+	 * The operation id for the '<em>Edit Event</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___EDIT_EVENT__STRING_DATE_STRING_INT_INT = 4;
+
+	/**
+	 * The operation id for the '<em>Remove Event</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___REMOVE_EVENT__STRING_DATE_STRING = 5;
+
+	/**
+	 * The operation id for the '<em>Remove Events</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___REMOVE_EVENTS__STRING_DATE = 6;
+
+	/**
+	 * The number of operations of the '<em>Additional Service Component IAdditional Service Administration</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION_OPERATION_COUNT = 7;
 
 	/**
 	 * The number of structural features of the '<em>Additional Service Component</em>' class.
@@ -1918,7 +2051,106 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ADDITIONAL_SERVICE_COMPONENT_FEATURE_COUNT = 0;
+	int ADDITIONAL_SERVICE_COMPONENT_FEATURE_COUNT = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Create Additional Service</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_COMPONENT___CREATE_ADDITIONAL_SERVICE__STRING_BOOLEAN_INT_STRING = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___CREATE_ADDITIONAL_SERVICE__STRING_BOOLEAN_INT_STRING;
+
+	/**
+	 * The operation id for the '<em>Edit Additional Service</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_COMPONENT___EDIT_ADDITIONAL_SERVICE__STRING_STRING_BOOLEAN_INT_STRING = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___EDIT_ADDITIONAL_SERVICE__STRING_STRING_BOOLEAN_INT_STRING;
+
+	/**
+	 * The operation id for the '<em>Remove Additional Service</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_COMPONENT___REMOVE_ADDITIONAL_SERVICE__STRING = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___REMOVE_ADDITIONAL_SERVICE__STRING;
+
+	/**
+	 * The operation id for the '<em>Create Event</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_COMPONENT___CREATE_EVENT__STRING_DATE_STRING_INT_INT = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___CREATE_EVENT__STRING_DATE_STRING_INT_INT;
+
+	/**
+	 * The operation id for the '<em>Edit Event</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_COMPONENT___EDIT_EVENT__STRING_DATE_STRING_INT_INT = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___EDIT_EVENT__STRING_DATE_STRING_INT_INT;
+
+	/**
+	 * The operation id for the '<em>Remove Event</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_COMPONENT___REMOVE_EVENT__STRING_DATE_STRING = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___REMOVE_EVENT__STRING_DATE_STRING;
+
+	/**
+	 * The operation id for the '<em>Remove Events</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_COMPONENT___REMOVE_EVENTS__STRING_DATE = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___REMOVE_EVENTS__STRING_DATE;
+
+	/**
+	 * The operation id for the '<em>Get Services</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_COMPONENT___GET_SERVICES = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION_OPERATION_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Get Events</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_COMPONENT___GET_EVENTS__STRING = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION_OPERATION_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Add Guest To Event</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_COMPONENT___ADD_GUEST_TO_EVENT__STRING_DATE_STRING_INT = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION_OPERATION_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Remove Guests From Event</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_COMPONENT___REMOVE_GUESTS_FROM_EVENT__STRING_DATE_STRING_INT = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION_OPERATION_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Additional Service Component</em>' class.
@@ -1927,7 +2159,71 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ADDITIONAL_SERVICE_COMPONENT_OPERATION_COUNT = 0;
+	int ADDITIONAL_SERVICE_COMPONENT_OPERATION_COUNT = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION_OPERATION_COUNT + 4;
+
+	/**
+	 * The meta object id for the '{@link Implementation.AdditionalServiceComponent_IEventManagement <em>Additional Service Component IEvent Management</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see Implementation.AdditionalServiceComponent_IEventManagement
+	 * @see Implementation.impl.ImplementationPackageImpl#getAdditionalServiceComponent_IEventManagement()
+	 * @generated
+	 */
+	int ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT = 23;
+
+	/**
+	 * The number of structural features of the '<em>Additional Service Component IEvent Management</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT_FEATURE_COUNT = 0;
+
+	/**
+	 * The operation id for the '<em>Get Services</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT___GET_SERVICES = 0;
+
+	/**
+	 * The operation id for the '<em>Get Events</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT___GET_EVENTS__STRING = 1;
+
+	/**
+	 * The operation id for the '<em>Add Guest To Event</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT___ADD_GUEST_TO_EVENT__STRING_DATE_STRING_INT = 2;
+
+	/**
+	 * The operation id for the '<em>Remove Guests From Event</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT___REMOVE_GUESTS_FROM_EVENT__STRING_DATE_STRING_INT = 3;
+
+	/**
+	 * The number of operations of the '<em>Additional Service Component IEvent Management</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT_OPERATION_COUNT = 4;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2108,151 +2404,6 @@ public interface ImplementationPackage extends EPackage {
 	 * @ordered
 	 */
 	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_EVENT_OPERATION_COUNT = 0;
-
-	/**
-	 * The number of structural features of the '<em>Additional Service Component IAdditional Service Administration</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION_FEATURE_COUNT = 0;
-
-	/**
-	 * The operation id for the '<em>Create Additional Service</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___CREATE_ADDITIONAL_SERVICE__STRING_BOOLEAN_INT_STRING = 0;
-
-	/**
-	 * The operation id for the '<em>Edit Additional Service</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___EDIT_ADDITIONAL_SERVICE__STRING_STRING_BOOLEAN_INT_STRING = 1;
-
-	/**
-	 * The operation id for the '<em>Remove Additional Service</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___REMOVE_ADDITIONAL_SERVICE__STRING = 2;
-
-	/**
-	 * The operation id for the '<em>Create Event</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___CREATE_EVENT__STRING_DATE_STRING_INT_INT = 3;
-
-	/**
-	 * The operation id for the '<em>Edit Event</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___EDIT_EVENT__STRING_DATE_STRING_INT_INT = 4;
-
-	/**
-	 * The operation id for the '<em>Remove Event</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___REMOVE_EVENT__STRING_DATE_STRING = 5;
-
-	/**
-	 * The operation id for the '<em>Remove Events</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___REMOVE_EVENTS__STRING_DATE = 6;
-
-	/**
-	 * The number of operations of the '<em>Additional Service Component IAdditional Service Administration</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION_OPERATION_COUNT = 7;
-
-	/**
-	 * The meta object id for the '{@link Implementation.AdditionalServiceComponent_IEventManagement <em>Additional Service Component IEvent Management</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see Implementation.AdditionalServiceComponent_IEventManagement
-	 * @see Implementation.impl.ImplementationPackageImpl#getAdditionalServiceComponent_IEventManagement()
-	 * @generated
-	 */
-	int ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT = 27;
-
-	/**
-	 * The number of structural features of the '<em>Additional Service Component IEvent Management</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT_FEATURE_COUNT = 0;
-
-	/**
-	 * The operation id for the '<em>Get Services</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT___GET_SERVICES = 0;
-
-	/**
-	 * The operation id for the '<em>Get Events</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT___GET_EVENTS__STRING = 1;
-
-	/**
-	 * The operation id for the '<em>Add Guest To Event</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT___ADD_GUEST_TO_EVENT__STRING_DATE_STRING_INT = 2;
-
-	/**
-	 * The operation id for the '<em>Remove Guests From Event</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT___REMOVE_GUESTS_FROM_EVENT__STRING_DATE_STRING_INT = 3;
-
-	/**
-	 * The number of operations of the '<em>Additional Service Component IEvent Management</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT_OPERATION_COUNT = 4;
 
 	/**
 	 * The feature id for the '<em><b>Additional Service</b></em>' reference list.
@@ -2883,7 +3034,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @see Implementation.impl.ImplementationPackageImpl#getBookingComponent_BookingHandler()
 	 * @generated
 	 */
-	int BOOKING_COMPONENT_BOOKING_HANDLER = 36;
+	int BOOKING_COMPONENT_BOOKING_HANDLER = 34;
 
 	/**
 	 * The feature id for the '<em><b>Bookings</b></em>' reference list.
@@ -3145,7 +3296,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @see Implementation.impl.ImplementationPackageImpl#getBookingComponent_IBookingAdministration()
 	 * @generated
 	 */
-	int BOOKING_COMPONENT_IBOOKING_ADMINISTRATION = 37;
+	int BOOKING_COMPONENT_IBOOKING_ADMINISTRATION = 35;
 
 	/**
 	 * The number of structural features of the '<em>Booking Component IBooking Administration</em>' class.
@@ -3265,13 +3416,112 @@ public interface ImplementationPackage extends EPackage {
 	int BOOKING_COMPONENT_IBOOKING_ADMINISTRATION_OPERATION_COUNT = 11;
 
 	/**
+	 * The number of structural features of the '<em>Staff Component IAccount Administration</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAFF_COMPONENT_IACCOUNT_ADMINISTRATION_FEATURE_COUNT = 0;
+
+	/**
+	 * The operation id for the '<em>Create Account</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAFF_COMPONENT_IACCOUNT_ADMINISTRATION___CREATE_ACCOUNT__STRING_STRING_STRING_STRING_STRING = 0;
+
+	/**
+	 * The operation id for the '<em>Edit Account Details</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAFF_COMPONENT_IACCOUNT_ADMINISTRATION___EDIT_ACCOUNT_DETAILS__STRING_STRING_STRING_STRING_STRING = 1;
+
+	/**
+	 * The operation id for the '<em>Remove Account</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAFF_COMPONENT_IACCOUNT_ADMINISTRATION___REMOVE_ACCOUNT__STRING = 2;
+
+	/**
+	 * The number of operations of the '<em>Staff Component IAccount Administration</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAFF_COMPONENT_IACCOUNT_ADMINISTRATION_OPERATION_COUNT = 3;
+
+	/**
 	 * The number of structural features of the '<em>Staff Component</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STAFF_COMPONENT_FEATURE_COUNT = 0;
+	int STAFF_COMPONENT_FEATURE_COUNT = STAFF_COMPONENT_IACCOUNT_ADMINISTRATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Create Account</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAFF_COMPONENT___CREATE_ACCOUNT__STRING_STRING_STRING_STRING_STRING = STAFF_COMPONENT_IACCOUNT_ADMINISTRATION___CREATE_ACCOUNT__STRING_STRING_STRING_STRING_STRING;
+
+	/**
+	 * The operation id for the '<em>Edit Account Details</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAFF_COMPONENT___EDIT_ACCOUNT_DETAILS__STRING_STRING_STRING_STRING_STRING = STAFF_COMPONENT_IACCOUNT_ADMINISTRATION___EDIT_ACCOUNT_DETAILS__STRING_STRING_STRING_STRING_STRING;
+
+	/**
+	 * The operation id for the '<em>Remove Account</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAFF_COMPONENT___REMOVE_ACCOUNT__STRING = STAFF_COMPONENT_IACCOUNT_ADMINISTRATION___REMOVE_ACCOUNT__STRING;
+
+	/**
+	 * The operation id for the '<em>Log In</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAFF_COMPONENT___LOG_IN__STRING_STRING = STAFF_COMPONENT_IACCOUNT_ADMINISTRATION_OPERATION_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Log Out</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAFF_COMPONENT___LOG_OUT__STRING = STAFF_COMPONENT_IACCOUNT_ADMINISTRATION_OPERATION_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Is Logged In</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAFF_COMPONENT___IS_LOGGED_IN__STRING = STAFF_COMPONENT_IACCOUNT_ADMINISTRATION_OPERATION_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Staff Component</em>' class.
@@ -3280,7 +3530,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STAFF_COMPONENT_OPERATION_COUNT = 0;
+	int STAFF_COMPONENT_OPERATION_COUNT = STAFF_COMPONENT_IACCOUNT_ADMINISTRATION_OPERATION_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>IAuthentication</b></em>' reference.
@@ -3472,58 +3722,112 @@ public interface ImplementationPackage extends EPackage {
 	int STAFF_COMPONENT_EMPLOYEE_OPERATION_COUNT = 1;
 
 	/**
-	 * The number of structural features of the '<em>Staff Component IAccount Administration</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAFF_COMPONENT_IACCOUNT_ADMINISTRATION_FEATURE_COUNT = 0;
-
-	/**
-	 * The operation id for the '<em>Create Account</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAFF_COMPONENT_IACCOUNT_ADMINISTRATION___CREATE_ACCOUNT__STRING_STRING_STRING_STRING_STRING = 0;
-
-	/**
-	 * The operation id for the '<em>Edit Account Details</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAFF_COMPONENT_IACCOUNT_ADMINISTRATION___EDIT_ACCOUNT_DETAILS__STRING_STRING_STRING_STRING_STRING = 1;
-
-	/**
-	 * The operation id for the '<em>Remove Account</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAFF_COMPONENT_IACCOUNT_ADMINISTRATION___REMOVE_ACCOUNT__STRING = 2;
-
-	/**
-	 * The number of operations of the '<em>Staff Component IAccount Administration</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAFF_COMPONENT_IACCOUNT_ADMINISTRATION_OPERATION_COUNT = 3;
-
-	/**
 	 * The number of structural features of the '<em>Room Component</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_COMPONENT_FEATURE_COUNT = 0;
+	int ROOM_COMPONENT_FEATURE_COUNT = ROOM_COMPONENT_IROOM_INFORMATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Get Room Info</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_COMPONENT___GET_ROOM_INFO__INT = ROOM_COMPONENT_IROOM_INFORMATION___GET_ROOM_INFO__INT;
+
+	/**
+	 * The operation id for the '<em>Search Room</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_COMPONENT___SEARCH_ROOM__STRING = ROOM_COMPONENT_IROOM_INFORMATION___SEARCH_ROOM__STRING;
+
+	/**
+	 * The operation id for the '<em>Get Room Types</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_COMPONENT___GET_ROOM_TYPES = ROOM_COMPONENT_IROOM_INFORMATION___GET_ROOM_TYPES;
+
+	/**
+	 * The operation id for the '<em>Get All Room Numbers</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_COMPONENT___GET_ALL_ROOM_NUMBERS = ROOM_COMPONENT_IROOM_INFORMATION___GET_ALL_ROOM_NUMBERS;
+
+	/**
+	 * The operation id for the '<em>Count Number Of Total Rooms</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_COMPONENT___COUNT_NUMBER_OF_TOTAL_ROOMS = ROOM_COMPONENT_IROOM_INFORMATION___COUNT_NUMBER_OF_TOTAL_ROOMS;
+
+	/**
+	 * The operation id for the '<em>Get Count Of Room Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_COMPONENT___GET_COUNT_OF_ROOM_TYPE__STRING = ROOM_COMPONENT_IROOM_INFORMATION___GET_COUNT_OF_ROOM_TYPE__STRING;
+
+	/**
+	 * The operation id for the '<em>Create Bed Room</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_COMPONENT___CREATE_BED_ROOM__INT_BOOLEAN_INT_STRING_STRING_INT = ROOM_COMPONENT_IROOM_INFORMATION_OPERATION_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Edit Bed Room</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_COMPONENT___EDIT_BED_ROOM__INT_INT_BOOLEAN_INT_STRING_STRING_INT = ROOM_COMPONENT_IROOM_INFORMATION_OPERATION_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Remove</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_COMPONENT___REMOVE__INT = ROOM_COMPONENT_IROOM_INFORMATION_OPERATION_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Create Conference Room</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_COMPONENT___CREATE_CONFERENCE_ROOM__INT_BOOLEAN_INT_STRING_STRING_INT_BOOLEAN_BOOLEAN = ROOM_COMPONENT_IROOM_INFORMATION_OPERATION_COUNT + 3;
+
+	/**
+	 * The operation id for the '<em>Edit Conference Room</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_COMPONENT___EDIT_CONFERENCE_ROOM__INT_INT_BOOLEAN_INT_STRING_STRING_INT_BOOLEAN_BOOLEAN = ROOM_COMPONENT_IROOM_INFORMATION_OPERATION_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Room Component</em>' class.
@@ -3532,7 +3836,70 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_COMPONENT_OPERATION_COUNT = 0;
+	int ROOM_COMPONENT_OPERATION_COUNT = ROOM_COMPONENT_IROOM_INFORMATION_OPERATION_COUNT + 5;
+
+	/**
+	 * The number of structural features of the '<em>Room Component IRoom Administration</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_COMPONENT_IROOM_ADMINISTRATION_FEATURE_COUNT = 0;
+
+	/**
+	 * The operation id for the '<em>Create Bed Room</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_COMPONENT_IROOM_ADMINISTRATION___CREATE_BED_ROOM__INT_BOOLEAN_INT_STRING_STRING_INT = 0;
+
+	/**
+	 * The operation id for the '<em>Edit Bed Room</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_COMPONENT_IROOM_ADMINISTRATION___EDIT_BED_ROOM__INT_INT_BOOLEAN_INT_STRING_STRING_INT = 1;
+
+	/**
+	 * The operation id for the '<em>Remove</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_COMPONENT_IROOM_ADMINISTRATION___REMOVE__INT = 2;
+
+	/**
+	 * The operation id for the '<em>Create Conference Room</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_COMPONENT_IROOM_ADMINISTRATION___CREATE_CONFERENCE_ROOM__INT_BOOLEAN_INT_STRING_STRING_INT_BOOLEAN_BOOLEAN = 3;
+
+	/**
+	 * The operation id for the '<em>Edit Conference Room</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_COMPONENT_IROOM_ADMINISTRATION___EDIT_CONFERENCE_ROOM__INT_INT_BOOLEAN_INT_STRING_STRING_INT_BOOLEAN_BOOLEAN = 4;
+
+	/**
+	 * The number of operations of the '<em>Room Component IRoom Administration</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_COMPONENT_IROOM_ADMINISTRATION_OPERATION_COUNT = 5;
 
 	/**
 	 * The feature id for the '<em><b>Room Number</b></em>' attribute.
@@ -3796,76 +4163,13 @@ public interface ImplementationPackage extends EPackage {
 	int ROOM_COMPONENT_CONFERENCE_ROOM_OPERATION_COUNT = ROOM_COMPONENT_ROOM_OPERATION_COUNT + 2;
 
 	/**
-	 * The number of structural features of the '<em>Room Component IRoom Administration</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_COMPONENT_IROOM_ADMINISTRATION_FEATURE_COUNT = 0;
-
-	/**
-	 * The operation id for the '<em>Create Bed Room</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_COMPONENT_IROOM_ADMINISTRATION___CREATE_BED_ROOM__INT_BOOLEAN_INT_STRING_STRING_INT = 0;
-
-	/**
-	 * The operation id for the '<em>Edit Bed Room</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_COMPONENT_IROOM_ADMINISTRATION___EDIT_BED_ROOM__INT_INT_BOOLEAN_INT_STRING_STRING_INT = 1;
-
-	/**
-	 * The operation id for the '<em>Remove</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_COMPONENT_IROOM_ADMINISTRATION___REMOVE__INT = 2;
-
-	/**
-	 * The operation id for the '<em>Create Conference Room</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_COMPONENT_IROOM_ADMINISTRATION___CREATE_CONFERENCE_ROOM__INT_BOOLEAN_INT_STRING_STRING_INT_BOOLEAN_BOOLEAN = 3;
-
-	/**
-	 * The operation id for the '<em>Edit Conference Room</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_COMPONENT_IROOM_ADMINISTRATION___EDIT_CONFERENCE_ROOM__INT_INT_BOOLEAN_INT_STRING_STRING_INT_BOOLEAN_BOOLEAN = 4;
-
-	/**
-	 * The number of operations of the '<em>Room Component IRoom Administration</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_COMPONENT_IROOM_ADMINISTRATION_OPERATION_COUNT = 5;
-
-	/**
 	 * The feature id for the '<em><b>Authenticator</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_COMPONENT_ROOM_HANDLER__AUTHENTICATOR = ROOM_COMPONENT_IROOM_DECISION_FEATURE_COUNT + 0;
+	int ROOM_COMPONENT_ROOM_HANDLER__AUTHENTICATOR = ROOM_COMPONENT_IROOM_INFORMATION_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Bed Rooms</b></em>' reference list.
@@ -3874,7 +4178,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_COMPONENT_ROOM_HANDLER__BED_ROOMS = ROOM_COMPONENT_IROOM_DECISION_FEATURE_COUNT + 1;
+	int ROOM_COMPONENT_ROOM_HANDLER__BED_ROOMS = ROOM_COMPONENT_IROOM_INFORMATION_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Conference Rooms</b></em>' reference list.
@@ -3883,7 +4187,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_COMPONENT_ROOM_HANDLER__CONFERENCE_ROOMS = ROOM_COMPONENT_IROOM_DECISION_FEATURE_COUNT + 2;
+	int ROOM_COMPONENT_ROOM_HANDLER__CONFERENCE_ROOMS = ROOM_COMPONENT_IROOM_INFORMATION_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Room Component Room Handler</em>' class.
@@ -3892,7 +4196,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_COMPONENT_ROOM_HANDLER_FEATURE_COUNT = ROOM_COMPONENT_IROOM_DECISION_FEATURE_COUNT + 3;
+	int ROOM_COMPONENT_ROOM_HANDLER_FEATURE_COUNT = ROOM_COMPONENT_IROOM_INFORMATION_FEATURE_COUNT + 3;
 
 	/**
 	 * The operation id for the '<em>Get Room Info</em>' operation.
@@ -3901,7 +4205,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_COMPONENT_ROOM_HANDLER___GET_ROOM_INFO__INT = ROOM_COMPONENT_IROOM_DECISION_OPERATION_COUNT + 0;
+	int ROOM_COMPONENT_ROOM_HANDLER___GET_ROOM_INFO__INT = ROOM_COMPONENT_IROOM_INFORMATION___GET_ROOM_INFO__INT;
 
 	/**
 	 * The operation id for the '<em>Search Room</em>' operation.
@@ -3910,7 +4214,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_COMPONENT_ROOM_HANDLER___SEARCH_ROOM__STRING = ROOM_COMPONENT_IROOM_DECISION_OPERATION_COUNT + 1;
+	int ROOM_COMPONENT_ROOM_HANDLER___SEARCH_ROOM__STRING = ROOM_COMPONENT_IROOM_INFORMATION___SEARCH_ROOM__STRING;
 
 	/**
 	 * The operation id for the '<em>Get Room Types</em>' operation.
@@ -3919,7 +4223,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_COMPONENT_ROOM_HANDLER___GET_ROOM_TYPES = ROOM_COMPONENT_IROOM_DECISION_OPERATION_COUNT + 2;
+	int ROOM_COMPONENT_ROOM_HANDLER___GET_ROOM_TYPES = ROOM_COMPONENT_IROOM_INFORMATION___GET_ROOM_TYPES;
 
 	/**
 	 * The operation id for the '<em>Get All Room Numbers</em>' operation.
@@ -3928,7 +4232,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_COMPONENT_ROOM_HANDLER___GET_ALL_ROOM_NUMBERS = ROOM_COMPONENT_IROOM_DECISION_OPERATION_COUNT + 3;
+	int ROOM_COMPONENT_ROOM_HANDLER___GET_ALL_ROOM_NUMBERS = ROOM_COMPONENT_IROOM_INFORMATION___GET_ALL_ROOM_NUMBERS;
 
 	/**
 	 * The operation id for the '<em>Count Number Of Total Rooms</em>' operation.
@@ -3937,7 +4241,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_COMPONENT_ROOM_HANDLER___COUNT_NUMBER_OF_TOTAL_ROOMS = ROOM_COMPONENT_IROOM_DECISION_OPERATION_COUNT + 4;
+	int ROOM_COMPONENT_ROOM_HANDLER___COUNT_NUMBER_OF_TOTAL_ROOMS = ROOM_COMPONENT_IROOM_INFORMATION___COUNT_NUMBER_OF_TOTAL_ROOMS;
 
 	/**
 	 * The operation id for the '<em>Get Count Of Room Type</em>' operation.
@@ -3946,7 +4250,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_COMPONENT_ROOM_HANDLER___GET_COUNT_OF_ROOM_TYPE__STRING = ROOM_COMPONENT_IROOM_DECISION_OPERATION_COUNT + 5;
+	int ROOM_COMPONENT_ROOM_HANDLER___GET_COUNT_OF_ROOM_TYPE__STRING = ROOM_COMPONENT_IROOM_INFORMATION___GET_COUNT_OF_ROOM_TYPE__STRING;
 
 	/**
 	 * The operation id for the '<em>Create Bed Room</em>' operation.
@@ -3955,7 +4259,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_COMPONENT_ROOM_HANDLER___CREATE_BED_ROOM__INT_BOOLEAN_INT_STRING_STRING_INT = ROOM_COMPONENT_IROOM_DECISION_OPERATION_COUNT + 6;
+	int ROOM_COMPONENT_ROOM_HANDLER___CREATE_BED_ROOM__INT_BOOLEAN_INT_STRING_STRING_INT = ROOM_COMPONENT_IROOM_INFORMATION_OPERATION_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Edit Bed Room</em>' operation.
@@ -3964,7 +4268,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_COMPONENT_ROOM_HANDLER___EDIT_BED_ROOM__INT_INT_BOOLEAN_INT_STRING_STRING_INT = ROOM_COMPONENT_IROOM_DECISION_OPERATION_COUNT + 7;
+	int ROOM_COMPONENT_ROOM_HANDLER___EDIT_BED_ROOM__INT_INT_BOOLEAN_INT_STRING_STRING_INT = ROOM_COMPONENT_IROOM_INFORMATION_OPERATION_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Remove</em>' operation.
@@ -3973,7 +4277,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_COMPONENT_ROOM_HANDLER___REMOVE__INT = ROOM_COMPONENT_IROOM_DECISION_OPERATION_COUNT + 8;
+	int ROOM_COMPONENT_ROOM_HANDLER___REMOVE__INT = ROOM_COMPONENT_IROOM_INFORMATION_OPERATION_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Create Conference Room</em>' operation.
@@ -3982,7 +4286,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_COMPONENT_ROOM_HANDLER___CREATE_CONFERENCE_ROOM__INT_BOOLEAN_INT_STRING_STRING_INT_BOOLEAN_BOOLEAN = ROOM_COMPONENT_IROOM_DECISION_OPERATION_COUNT + 9;
+	int ROOM_COMPONENT_ROOM_HANDLER___CREATE_CONFERENCE_ROOM__INT_BOOLEAN_INT_STRING_STRING_INT_BOOLEAN_BOOLEAN = ROOM_COMPONENT_IROOM_INFORMATION_OPERATION_COUNT + 3;
 
 	/**
 	 * The operation id for the '<em>Edit Conference Room</em>' operation.
@@ -3991,7 +4295,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_COMPONENT_ROOM_HANDLER___EDIT_CONFERENCE_ROOM__INT_INT_BOOLEAN_INT_STRING_STRING_INT_BOOLEAN_BOOLEAN = ROOM_COMPONENT_IROOM_DECISION_OPERATION_COUNT + 10;
+	int ROOM_COMPONENT_ROOM_HANDLER___EDIT_CONFERENCE_ROOM__INT_INT_BOOLEAN_INT_STRING_STRING_INT_BOOLEAN_BOOLEAN = ROOM_COMPONENT_IROOM_INFORMATION_OPERATION_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Room Component Room Handler</em>' class.
@@ -4000,7 +4304,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_COMPONENT_ROOM_HANDLER_OPERATION_COUNT = ROOM_COMPONENT_IROOM_DECISION_OPERATION_COUNT + 11;
+	int ROOM_COMPONENT_ROOM_HANDLER_OPERATION_COUNT = ROOM_COMPONENT_IROOM_INFORMATION_OPERATION_COUNT + 5;
 
 
 	/**
@@ -4011,7 +4315,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @see Implementation.impl.ImplementationPackageImpl#getBank()
 	 * @generated
 	 */
-	int BANK = 48;
+	int BANK = 46;
 
 	/**
 	 * The number of structural features of the '<em>Bank</em>' class.
@@ -4415,17 +4719,6 @@ public interface ImplementationPackage extends EPackage {
 	EClass getDecisionSupportComponent_DSSController();
 
 	/**
-	 * Returns the meta object for the reference '{@link Implementation.DecisionSupportComponent_DSSController#getIRoomDecision <em>IRoom Decision</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>IRoom Decision</em>'.
-	 * @see Implementation.DecisionSupportComponent_DSSController#getIRoomDecision()
-	 * @see #getDecisionSupportComponent_DSSController()
-	 * @generated
-	 */
-	EReference getDecisionSupportComponent_DSSController_IRoomDecision();
-
-	/**
 	 * Returns the meta object for the reference '{@link Implementation.DecisionSupportComponent_DSSController#getIOccupancyDecision <em>IOccupancy Decision</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4435,17 +4728,6 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getDecisionSupportComponent_DSSController_IOccupancyDecision();
-
-	/**
-	 * Returns the meta object for the reference '{@link Implementation.DecisionSupportComponent_DSSController#getIAdditionalServiceDecision <em>IAdditional Service Decision</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>IAdditional Service Decision</em>'.
-	 * @see Implementation.DecisionSupportComponent_DSSController#getIAdditionalServiceDecision()
-	 * @see #getDecisionSupportComponent_DSSController()
-	 * @generated
-	 */
-	EReference getDecisionSupportComponent_DSSController_IAdditionalServiceDecision();
 
 	/**
 	 * Returns the meta object for the reference '{@link Implementation.DecisionSupportComponent_DSSController#getIBookingDecision <em>IBooking Decision</em>}'.
@@ -4512,16 +4794,6 @@ public interface ImplementationPackage extends EPackage {
 	EOperation getDecisionSupportComponent_DSSController__GetPositionInList__EList_String();
 
 	/**
-	 * Returns the meta object for class '{@link Implementation.RoomComponent_IRoomDecision <em>Room Component IRoom Decision</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Room Component IRoom Decision</em>'.
-	 * @see Implementation.RoomComponent_IRoomDecision
-	 * @generated
-	 */
-	EClass getRoomComponent_IRoomDecision();
-
-	/**
 	 * Returns the meta object for class '{@link Implementation.OccupancyComponent_IOccupancyDecision <em>Occupancy Component IOccupancy Decision</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4540,16 +4812,6 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getOccupancyComponent_IOccupancyDecision__GetDSSOccupancyInfo();
-
-	/**
-	 * Returns the meta object for class '{@link Implementation.AdditionalServiceComponent_IAdditionalServiceDecision <em>Additional Service Component IAdditional Service Decision</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Additional Service Component IAdditional Service Decision</em>'.
-	 * @see Implementation.AdditionalServiceComponent_IAdditionalServiceDecision
-	 * @generated
-	 */
-	EClass getAdditionalServiceComponent_IAdditionalServiceDecision();
 
 	/**
 	 * Returns the meta object for class '{@link Implementation.BookingComponent_IBookingDecision <em>Booking Component IBooking Decision</em>}'.
@@ -7117,28 +7379,12 @@ public interface ImplementationPackage extends EPackage {
 		EClass DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER = eINSTANCE.getDecisionSupportComponent_DSSController();
 
 		/**
-		 * The meta object literal for the '<em><b>IRoom Decision</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__IROOM_DECISION = eINSTANCE.getDecisionSupportComponent_DSSController_IRoomDecision();
-
-		/**
 		 * The meta object literal for the '<em><b>IOccupancy Decision</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__IOCCUPANCY_DECISION = eINSTANCE.getDecisionSupportComponent_DSSController_IOccupancyDecision();
-
-		/**
-		 * The meta object literal for the '<em><b>IAdditional Service Decision</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__IADDITIONAL_SERVICE_DECISION = eINSTANCE.getDecisionSupportComponent_DSSController_IAdditionalServiceDecision();
 
 		/**
 		 * The meta object literal for the '<em><b>IBooking Decision</b></em>' reference feature.
@@ -7189,16 +7435,6 @@ public interface ImplementationPackage extends EPackage {
 		EOperation DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER___GET_POSITION_IN_LIST__ELIST_STRING = eINSTANCE.getDecisionSupportComponent_DSSController__GetPositionInList__EList_String();
 
 		/**
-		 * The meta object literal for the '{@link Implementation.RoomComponent_IRoomDecision <em>Room Component IRoom Decision</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see Implementation.RoomComponent_IRoomDecision
-		 * @see Implementation.impl.ImplementationPackageImpl#getRoomComponent_IRoomDecision()
-		 * @generated
-		 */
-		EClass ROOM_COMPONENT_IROOM_DECISION = eINSTANCE.getRoomComponent_IRoomDecision();
-
-		/**
 		 * The meta object literal for the '{@link Implementation.OccupancyComponent_IOccupancyDecision <em>Occupancy Component IOccupancy Decision</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -7215,16 +7451,6 @@ public interface ImplementationPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation OCCUPANCY_COMPONENT_IOCCUPANCY_DECISION___GET_DSS_OCCUPANCY_INFO = eINSTANCE.getOccupancyComponent_IOccupancyDecision__GetDSSOccupancyInfo();
-
-		/**
-		 * The meta object literal for the '{@link Implementation.AdditionalServiceComponent_IAdditionalServiceDecision <em>Additional Service Component IAdditional Service Decision</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see Implementation.AdditionalServiceComponent_IAdditionalServiceDecision
-		 * @see Implementation.impl.ImplementationPackageImpl#getAdditionalServiceComponent_IAdditionalServiceDecision()
-		 * @generated
-		 */
-		EClass ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_DECISION = eINSTANCE.getAdditionalServiceComponent_IAdditionalServiceDecision();
 
 		/**
 		 * The meta object literal for the '{@link Implementation.BookingComponent_IBookingDecision <em>Booking Component IBooking Decision</em>}' class.

@@ -88,16 +88,8 @@ public class ImplementationAdapterFactory extends AdapterFactoryImpl {
 				return createDecisionSupportComponent_DSSControllerAdapter();
 			}
 			@Override
-			public Adapter caseRoomComponent_IRoomDecision(RoomComponent_IRoomDecision object) {
-				return createRoomComponent_IRoomDecisionAdapter();
-			}
-			@Override
 			public Adapter caseOccupancyComponent_IOccupancyDecision(OccupancyComponent_IOccupancyDecision object) {
 				return createOccupancyComponent_IOccupancyDecisionAdapter();
-			}
-			@Override
-			public Adapter caseAdditionalServiceComponent_IAdditionalServiceDecision(AdditionalServiceComponent_IAdditionalServiceDecision object) {
-				return createAdditionalServiceComponent_IAdditionalServiceDecisionAdapter();
 			}
 			@Override
 			public Adapter caseBookingComponent_IBookingDecision(BookingComponent_IBookingDecision object) {
@@ -164,20 +156,20 @@ public class ImplementationAdapterFactory extends AdapterFactoryImpl {
 				return createAdditionalServiceComponentAdapter();
 			}
 			@Override
-			public Adapter caseAdditionalServiceComponent_AdditionalService(AdditionalServiceComponent_AdditionalService object) {
-				return createAdditionalServiceComponent_AdditionalServiceAdapter();
-			}
-			@Override
-			public Adapter caseAdditionalServiceComponent_AdditionalServiceEvent(AdditionalServiceComponent_AdditionalServiceEvent object) {
-				return createAdditionalServiceComponent_AdditionalServiceEventAdapter();
-			}
-			@Override
 			public Adapter caseAdditionalServiceComponent_IAdditionalServiceAdministration(AdditionalServiceComponent_IAdditionalServiceAdministration object) {
 				return createAdditionalServiceComponent_IAdditionalServiceAdministrationAdapter();
 			}
 			@Override
 			public Adapter caseAdditionalServiceComponent_IEventManagement(AdditionalServiceComponent_IEventManagement object) {
 				return createAdditionalServiceComponent_IEventManagementAdapter();
+			}
+			@Override
+			public Adapter caseAdditionalServiceComponent_AdditionalService(AdditionalServiceComponent_AdditionalService object) {
+				return createAdditionalServiceComponent_AdditionalServiceAdapter();
+			}
+			@Override
+			public Adapter caseAdditionalServiceComponent_AdditionalServiceEvent(AdditionalServiceComponent_AdditionalServiceEvent object) {
+				return createAdditionalServiceComponent_AdditionalServiceEventAdapter();
 			}
 			@Override
 			public Adapter caseAdditionalServiceComponent_AdditionalServiceHandler(AdditionalServiceComponent_AdditionalServiceHandler object) {
@@ -224,6 +216,10 @@ public class ImplementationAdapterFactory extends AdapterFactoryImpl {
 				return createStaffComponentAdapter();
 			}
 			@Override
+			public Adapter caseStaffComponent_IAccountAdministration(StaffComponent_IAccountAdministration object) {
+				return createStaffComponent_IAccountAdministrationAdapter();
+			}
+			@Override
 			public Adapter caseStaffComponent_AccountManager(StaffComponent_AccountManager object) {
 				return createStaffComponent_AccountManagerAdapter();
 			}
@@ -232,12 +228,12 @@ public class ImplementationAdapterFactory extends AdapterFactoryImpl {
 				return createStaffComponent_EmployeeAdapter();
 			}
 			@Override
-			public Adapter caseStaffComponent_IAccountAdministration(StaffComponent_IAccountAdministration object) {
-				return createStaffComponent_IAccountAdministrationAdapter();
-			}
-			@Override
 			public Adapter caseRoomComponent(RoomComponent object) {
 				return createRoomComponentAdapter();
+			}
+			@Override
+			public Adapter caseRoomComponent_IRoomAdministration(RoomComponent_IRoomAdministration object) {
+				return createRoomComponent_IRoomAdministrationAdapter();
 			}
 			@Override
 			public Adapter caseRoomComponent_Room(RoomComponent_Room object) {
@@ -250,10 +246,6 @@ public class ImplementationAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseRoomComponent_ConferenceRoom(RoomComponent_ConferenceRoom object) {
 				return createRoomComponent_ConferenceRoomAdapter();
-			}
-			@Override
-			public Adapter caseRoomComponent_IRoomAdministration(RoomComponent_IRoomAdministration object) {
-				return createRoomComponent_IRoomAdministrationAdapter();
 			}
 			@Override
 			public Adapter caseRoomComponent_RoomHandler(RoomComponent_RoomHandler object) {
@@ -340,20 +332,6 @@ public class ImplementationAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link Implementation.RoomComponent_IRoomDecision <em>Room Component IRoom Decision</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see Implementation.RoomComponent_IRoomDecision
-	 * @generated
-	 */
-	public Adapter createRoomComponent_IRoomDecisionAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link Implementation.OccupancyComponent_IOccupancyDecision <em>Occupancy Component IOccupancy Decision</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -364,20 +342,6 @@ public class ImplementationAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createOccupancyComponent_IOccupancyDecisionAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link Implementation.AdditionalServiceComponent_IAdditionalServiceDecision <em>Additional Service Component IAdditional Service Decision</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see Implementation.AdditionalServiceComponent_IAdditionalServiceDecision
-	 * @generated
-	 */
-	public Adapter createAdditionalServiceComponent_IAdditionalServiceDecisionAdapter() {
 		return null;
 	}
 

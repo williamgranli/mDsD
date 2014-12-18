@@ -73,11 +73,7 @@
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//DecisionSupportComponent_DSSController">
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EReference Implementation.ecore#//DecisionSupportComponent_DSSController/iRoomDecision"/>
-      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
           propertySortChoices="true" ecoreFeature="ecore:EReference Implementation.ecore#//DecisionSupportComponent_DSSController/iOccupancyDecision"/>
-      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EReference Implementation.ecore#//DecisionSupportComponent_DSSController/iAdditionalServiceDecision"/>
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
           propertySortChoices="true" ecoreFeature="ecore:EReference Implementation.ecore#//DecisionSupportComponent_DSSController/iBookingDecision"/>
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
@@ -95,11 +91,9 @@
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//DecisionSupportComponent_DSSController/getPositionInList/element"/>
       </genOperations>
     </genClasses>
-    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Implementation.ecore#//RoomComponent_IRoomDecision"/>
     <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Implementation.ecore#//OccupancyComponent_IOccupancyDecision">
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//OccupancyComponent_IOccupancyDecision/getDSSOccupancyInfo"/>
     </genClasses>
-    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Implementation.ecore#//AdditionalServiceComponent_IAdditionalServiceDecision"/>
     <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Implementation.ecore#//BookingComponent_IBookingDecision">
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//BookingComponent_IBookingDecision/getDSSInfo"/>
     </genClasses>
@@ -329,48 +323,6 @@
       </genOperations>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//AdditionalServiceComponent"/>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//AdditionalServiceComponent_AdditionalService">
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//AdditionalServiceComponent_AdditionalService/name"/>
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//AdditionalServiceComponent_AdditionalService/usable"/>
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//AdditionalServiceComponent_AdditionalService/price"/>
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//AdditionalServiceComponent_AdditionalService/description"/>
-      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EReference Implementation.ecore#//AdditionalServiceComponent_AdditionalService/additionalServiceEvent"/>
-      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EReference Implementation.ecore#//AdditionalServiceComponent_AdditionalService/tempEvents"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//AdditionalServiceComponent_AdditionalService/findEvent">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//AdditionalServiceComponent_AdditionalService/findEvent/dateTime"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//AdditionalServiceComponent_AdditionalService/findEvent/location"/>
-      </genOperations>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//AdditionalServiceComponent_AdditionalService/findEvents">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//AdditionalServiceComponent_AdditionalService/findEvents/dateTime"/>
-      </genOperations>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//AdditionalServiceComponent_AdditionalService/createEvent">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//AdditionalServiceComponent_AdditionalService/createEvent/dateTime"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//AdditionalServiceComponent_AdditionalService/createEvent/location"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//AdditionalServiceComponent_AdditionalService/createEvent/maxAttendants"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//AdditionalServiceComponent_AdditionalService/createEvent/currentAttendants"/>
-      </genOperations>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//AdditionalServiceComponent_AdditionalService/editEvent">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//AdditionalServiceComponent_AdditionalService/editEvent/dateTime"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//AdditionalServiceComponent_AdditionalService/editEvent/location"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//AdditionalServiceComponent_AdditionalService/editEvent/maxAttendants"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//AdditionalServiceComponent_AdditionalService/editEvent/currentAttendants"/>
-      </genOperations>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//AdditionalServiceComponent_AdditionalService/removeEvent">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//AdditionalServiceComponent_AdditionalService/removeEvent/dateTime"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//AdditionalServiceComponent_AdditionalService/removeEvent/location"/>
-      </genOperations>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//AdditionalServiceComponent_AdditionalService/removeEvents">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//AdditionalServiceComponent_AdditionalService/removeEvents/dateTime"/>
-      </genOperations>
-    </genClasses>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//AdditionalServiceComponent_AdditionalServiceEvent">
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//AdditionalServiceComponent_AdditionalServiceEvent/dateTime"/>
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//AdditionalServiceComponent_AdditionalServiceEvent/location"/>
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//AdditionalServiceComponent_AdditionalServiceEvent/maxAttendant"/>
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//AdditionalServiceComponent_AdditionalServiceEvent/currentAttendants"/>
-    </genClasses>
     <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Implementation.ecore#//AdditionalServiceComponent_IAdditionalServiceAdministration">
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//AdditionalServiceComponent_IAdditionalServiceAdministration/createAdditionalService">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//AdditionalServiceComponent_IAdditionalServiceAdministration/createAdditionalService/name"/>
@@ -429,6 +381,48 @@
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//AdditionalServiceComponent_IEventManagement/removeGuestsFromEvent/location"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//AdditionalServiceComponent_IEventManagement/removeGuestsFromEvent/guests"/>
       </genOperations>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//AdditionalServiceComponent_AdditionalService">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//AdditionalServiceComponent_AdditionalService/name"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//AdditionalServiceComponent_AdditionalService/usable"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//AdditionalServiceComponent_AdditionalService/price"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//AdditionalServiceComponent_AdditionalService/description"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference Implementation.ecore#//AdditionalServiceComponent_AdditionalService/additionalServiceEvent"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference Implementation.ecore#//AdditionalServiceComponent_AdditionalService/tempEvents"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//AdditionalServiceComponent_AdditionalService/findEvent">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//AdditionalServiceComponent_AdditionalService/findEvent/dateTime"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//AdditionalServiceComponent_AdditionalService/findEvent/location"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//AdditionalServiceComponent_AdditionalService/findEvents">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//AdditionalServiceComponent_AdditionalService/findEvents/dateTime"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//AdditionalServiceComponent_AdditionalService/createEvent">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//AdditionalServiceComponent_AdditionalService/createEvent/dateTime"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//AdditionalServiceComponent_AdditionalService/createEvent/location"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//AdditionalServiceComponent_AdditionalService/createEvent/maxAttendants"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//AdditionalServiceComponent_AdditionalService/createEvent/currentAttendants"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//AdditionalServiceComponent_AdditionalService/editEvent">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//AdditionalServiceComponent_AdditionalService/editEvent/dateTime"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//AdditionalServiceComponent_AdditionalService/editEvent/location"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//AdditionalServiceComponent_AdditionalService/editEvent/maxAttendants"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//AdditionalServiceComponent_AdditionalService/editEvent/currentAttendants"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//AdditionalServiceComponent_AdditionalService/removeEvent">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//AdditionalServiceComponent_AdditionalService/removeEvent/dateTime"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//AdditionalServiceComponent_AdditionalService/removeEvent/location"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//AdditionalServiceComponent_AdditionalService/removeEvents">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//AdditionalServiceComponent_AdditionalService/removeEvents/dateTime"/>
+      </genOperations>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//AdditionalServiceComponent_AdditionalServiceEvent">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//AdditionalServiceComponent_AdditionalServiceEvent/dateTime"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//AdditionalServiceComponent_AdditionalServiceEvent/location"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//AdditionalServiceComponent_AdditionalServiceEvent/maxAttendant"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//AdditionalServiceComponent_AdditionalServiceEvent/currentAttendants"/>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//AdditionalServiceComponent_AdditionalServiceHandler">
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
@@ -617,6 +611,25 @@
       </genOperations>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//StaffComponent"/>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Implementation.ecore#//StaffComponent_IAccountAdministration">
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//StaffComponent_IAccountAdministration/createAccount">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//StaffComponent_IAccountAdministration/createAccount/name"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//StaffComponent_IAccountAdministration/createAccount/ssn"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//StaffComponent_IAccountAdministration/createAccount/email"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//StaffComponent_IAccountAdministration/createAccount/phone"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//StaffComponent_IAccountAdministration/createAccount/password"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//StaffComponent_IAccountAdministration/editAccountDetails">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//StaffComponent_IAccountAdministration/editAccountDetails/ssn"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//StaffComponent_IAccountAdministration/editAccountDetails/name"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//StaffComponent_IAccountAdministration/editAccountDetails/email"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//StaffComponent_IAccountAdministration/editAccountDetails/phone"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//StaffComponent_IAccountAdministration/editAccountDetails/password"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//StaffComponent_IAccountAdministration/removeAccount">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//StaffComponent_IAccountAdministration/removeAccount/ssn"/>
+      </genOperations>
+    </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//StaffComponent_AccountManager">
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
           propertySortChoices="true" ecoreFeature="ecore:EReference Implementation.ecore#//StaffComponent_AccountManager/iAuthentication"/>
@@ -637,26 +650,50 @@
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//StaffComponent_Employee/password"/>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//StaffComponent_Employee/getEmployeeInfo"/>
     </genClasses>
-    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Implementation.ecore#//StaffComponent_IAccountAdministration">
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//StaffComponent_IAccountAdministration/createAccount">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//StaffComponent_IAccountAdministration/createAccount/name"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//StaffComponent_IAccountAdministration/createAccount/ssn"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//StaffComponent_IAccountAdministration/createAccount/email"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//StaffComponent_IAccountAdministration/createAccount/phone"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//StaffComponent_IAccountAdministration/createAccount/password"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//RoomComponent"/>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Implementation.ecore#//RoomComponent_IRoomAdministration">
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//RoomComponent_IRoomAdministration/createBedRoom">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_IRoomAdministration/createBedRoom/roomNumber"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_IRoomAdministration/createBedRoom/usable"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_IRoomAdministration/createBedRoom/price"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_IRoomAdministration/createBedRoom/roomTypeName"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_IRoomAdministration/createBedRoom/description"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_IRoomAdministration/createBedRoom/bedCount"/>
       </genOperations>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//StaffComponent_IAccountAdministration/editAccountDetails">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//StaffComponent_IAccountAdministration/editAccountDetails/ssn"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//StaffComponent_IAccountAdministration/editAccountDetails/name"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//StaffComponent_IAccountAdministration/editAccountDetails/email"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//StaffComponent_IAccountAdministration/editAccountDetails/phone"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//StaffComponent_IAccountAdministration/editAccountDetails/password"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//RoomComponent_IRoomAdministration/editBedRoom">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_IRoomAdministration/editBedRoom/currentRoomNumber"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_IRoomAdministration/editBedRoom/roomNumber"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_IRoomAdministration/editBedRoom/usable"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_IRoomAdministration/editBedRoom/price"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_IRoomAdministration/editBedRoom/roomTypeName"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_IRoomAdministration/editBedRoom/description"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_IRoomAdministration/editBedRoom/bedCount"/>
       </genOperations>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//StaffComponent_IAccountAdministration/removeAccount">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//StaffComponent_IAccountAdministration/removeAccount/ssn"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//RoomComponent_IRoomAdministration/remove">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_IRoomAdministration/remove/roomNumber"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//RoomComponent_IRoomAdministration/createConferenceRoom">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_IRoomAdministration/createConferenceRoom/roomNumber"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_IRoomAdministration/createConferenceRoom/usable"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_IRoomAdministration/createConferenceRoom/price"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_IRoomAdministration/createConferenceRoom/roomTypeName"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_IRoomAdministration/createConferenceRoom/description"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_IRoomAdministration/createConferenceRoom/numberOfSeats"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_IRoomAdministration/createConferenceRoom/projector"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_IRoomAdministration/createConferenceRoom/conferencePhone"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//RoomComponent_IRoomAdministration/editConferenceRoom">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_IRoomAdministration/editConferenceRoom/currentRoomNumber"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_IRoomAdministration/editConferenceRoom/roomNumber"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_IRoomAdministration/editConferenceRoom/usable"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_IRoomAdministration/editConferenceRoom/price"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_IRoomAdministration/editConferenceRoom/roomTypeName"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_IRoomAdministration/editConferenceRoom/description"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_IRoomAdministration/editConferenceRoom/numberOfSeats"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_IRoomAdministration/editConferenceRoom/projector"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_IRoomAdministration/editConferenceRoom/conferencePhone"/>
       </genOperations>
     </genClasses>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//RoomComponent"/>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//RoomComponent_Room">
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//RoomComponent_Room/roomNumber"/>
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//RoomComponent_Room/usable"/>
@@ -706,49 +743,6 @@
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_ConferenceRoom/editRoom/numberOfSeats"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_ConferenceRoom/editRoom/projector"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_ConferenceRoom/editRoom/conferencePhone"/>
-      </genOperations>
-    </genClasses>
-    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="Implementation.ecore#//RoomComponent_IRoomAdministration">
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//RoomComponent_IRoomAdministration/createBedRoom">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_IRoomAdministration/createBedRoom/roomNumber"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_IRoomAdministration/createBedRoom/usable"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_IRoomAdministration/createBedRoom/price"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_IRoomAdministration/createBedRoom/roomTypeName"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_IRoomAdministration/createBedRoom/description"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_IRoomAdministration/createBedRoom/bedCount"/>
-      </genOperations>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//RoomComponent_IRoomAdministration/editBedRoom">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_IRoomAdministration/editBedRoom/currentRoomNumber"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_IRoomAdministration/editBedRoom/roomNumber"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_IRoomAdministration/editBedRoom/usable"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_IRoomAdministration/editBedRoom/price"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_IRoomAdministration/editBedRoom/roomTypeName"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_IRoomAdministration/editBedRoom/description"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_IRoomAdministration/editBedRoom/bedCount"/>
-      </genOperations>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//RoomComponent_IRoomAdministration/remove">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_IRoomAdministration/remove/roomNumber"/>
-      </genOperations>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//RoomComponent_IRoomAdministration/createConferenceRoom">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_IRoomAdministration/createConferenceRoom/roomNumber"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_IRoomAdministration/createConferenceRoom/usable"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_IRoomAdministration/createConferenceRoom/price"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_IRoomAdministration/createConferenceRoom/roomTypeName"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_IRoomAdministration/createConferenceRoom/description"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_IRoomAdministration/createConferenceRoom/numberOfSeats"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_IRoomAdministration/createConferenceRoom/projector"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_IRoomAdministration/createConferenceRoom/conferencePhone"/>
-      </genOperations>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//RoomComponent_IRoomAdministration/editConferenceRoom">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_IRoomAdministration/editConferenceRoom/currentRoomNumber"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_IRoomAdministration/editConferenceRoom/roomNumber"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_IRoomAdministration/editConferenceRoom/usable"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_IRoomAdministration/editConferenceRoom/price"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_IRoomAdministration/editConferenceRoom/roomTypeName"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_IRoomAdministration/editConferenceRoom/description"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_IRoomAdministration/editConferenceRoom/numberOfSeats"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_IRoomAdministration/editConferenceRoom/projector"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_IRoomAdministration/editConferenceRoom/conferencePhone"/>
       </genOperations>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//RoomComponent_RoomHandler">

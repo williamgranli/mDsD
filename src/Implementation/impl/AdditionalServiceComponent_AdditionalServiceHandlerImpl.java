@@ -5,14 +5,11 @@ package Implementation.impl;
 import Implementation.AdditionalServiceComponent_AdditionalService;
 import Implementation.AdditionalServiceComponent_AdditionalServiceHandler;
 import Implementation.AdditionalServiceComponent_IAdditionalServiceAdministration;
-import Implementation.AdditionalServiceComponent_IAdditionalServiceDecision;
 import Implementation.ImplementationPackage;
 import Implementation.StaffComponent_IAuthentication;
-
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 import java.util.Date;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
@@ -402,11 +399,6 @@ public class AdditionalServiceComponent_AdditionalServiceHandlerImpl extends Min
 	 */
 	@Override
 	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
-		if (baseClass == AdditionalServiceComponent_IAdditionalServiceDecision.class) {
-			switch (baseOperationID) {
-				default: return -1;
-			}
-		}
 		if (baseClass == AdditionalServiceComponent_IAdditionalServiceAdministration.class) {
 			switch (baseOperationID) {
 				case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION___CREATE_ADDITIONAL_SERVICE__STRING_BOOLEAN_INT_STRING: return ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER___CREATE_ADDITIONAL_SERVICE__STRING_BOOLEAN_INT_STRING;

@@ -2,7 +2,6 @@
  */
 package Implementation;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,5 +13,5 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface StaffComponent extends EObject {
+public interface StaffComponent extends StaffComponent_IAccountAdministration, StaffComponent_IAuthentication {
 } // StaffComponent

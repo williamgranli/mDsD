@@ -2,7 +2,6 @@
  */
 package Implementation;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,5 +13,5 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface PaymentComponent extends EObject {
+public interface PaymentComponent extends PaymentComponent_IPayment {
 } // PaymentComponent

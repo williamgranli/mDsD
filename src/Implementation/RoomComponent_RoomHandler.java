@@ -23,7 +23,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface RoomComponent_RoomHandler extends RoomComponent_IRoomDecision, RoomComponent_IRoomInformation, RoomComponent_IRoomAdministration {
+public interface RoomComponent_RoomHandler extends RoomComponent_IRoomInformation, RoomComponent_IRoomAdministration {
 	/**
 	 * Returns the value of the '<em><b>Authenticator</b></em>' reference.
 	 * <!-- begin-user-doc -->

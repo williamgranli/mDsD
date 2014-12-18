@@ -2,7 +2,6 @@
  */
 package Implementation.impl;
 
-import Implementation.AdditionalServiceComponent_IAdditionalServiceDecision;
 import Implementation.BookingComponent_IBookingDecision;
 import Implementation.DecisionSupportComponent_AdditionalServiceDSSInfo;
 import Implementation.DecisionSupportComponent_BookingDSSInfo;
@@ -10,7 +9,6 @@ import Implementation.DecisionSupportComponent_DSSController;
 import Implementation.DecisionSupportComponent_OccupancyDSSInfo;
 import Implementation.ImplementationPackage;
 import Implementation.OccupancyComponent_IOccupancyDecision;
-import Implementation.RoomComponent_IRoomDecision;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
@@ -28,9 +26,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link Implementation.impl.DecisionSupportComponent_DSSControllerImpl#getIRoomDecision <em>IRoom Decision</em>}</li>
  *   <li>{@link Implementation.impl.DecisionSupportComponent_DSSControllerImpl#getIOccupancyDecision <em>IOccupancy Decision</em>}</li>
- *   <li>{@link Implementation.impl.DecisionSupportComponent_DSSControllerImpl#getIAdditionalServiceDecision <em>IAdditional Service Decision</em>}</li>
  *   <li>{@link Implementation.impl.DecisionSupportComponent_DSSControllerImpl#getIBookingDecision <em>IBooking Decision</em>}</li>
  *   <li>{@link Implementation.impl.DecisionSupportComponent_DSSControllerImpl#getOccupancyDSSInfo <em>Occupancy DSS Info</em>}</li>
  *   <li>{@link Implementation.impl.DecisionSupportComponent_DSSControllerImpl#getAdditionalServiceDSSInfo <em>Additional Service DSS Info</em>}</li>
@@ -42,16 +38,6 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  */
 public class DecisionSupportComponent_DSSControllerImpl extends MinimalEObjectImpl.Container implements DecisionSupportComponent_DSSController {
 	/**
-	 * The cached value of the '{@link #getIRoomDecision() <em>IRoom Decision</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIRoomDecision()
-	 * @generated
-	 * @ordered
-	 */
-	protected RoomComponent_IRoomDecision iRoomDecision;
-
-	/**
 	 * The cached value of the '{@link #getIOccupancyDecision() <em>IOccupancy Decision</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -60,16 +46,6 @@ public class DecisionSupportComponent_DSSControllerImpl extends MinimalEObjectIm
 	 * @ordered
 	 */
 	protected OccupancyComponent_IOccupancyDecision iOccupancyDecision;
-
-	/**
-	 * The cached value of the '{@link #getIAdditionalServiceDecision() <em>IAdditional Service Decision</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIAdditionalServiceDecision()
-	 * @generated
-	 * @ordered
-	 */
-	protected AdditionalServiceComponent_IAdditionalServiceDecision iAdditionalServiceDecision;
 
 	/**
 	 * The cached value of the '{@link #getIBookingDecision() <em>IBooking Decision</em>}' reference.
@@ -135,44 +111,6 @@ public class DecisionSupportComponent_DSSControllerImpl extends MinimalEObjectIm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RoomComponent_IRoomDecision getIRoomDecision() {
-		if (iRoomDecision != null && iRoomDecision.eIsProxy()) {
-			InternalEObject oldIRoomDecision = (InternalEObject)iRoomDecision;
-			iRoomDecision = (RoomComponent_IRoomDecision)eResolveProxy(oldIRoomDecision);
-			if (iRoomDecision != oldIRoomDecision) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__IROOM_DECISION, oldIRoomDecision, iRoomDecision));
-			}
-		}
-		return iRoomDecision;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public RoomComponent_IRoomDecision basicGetIRoomDecision() {
-		return iRoomDecision;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setIRoomDecision(RoomComponent_IRoomDecision newIRoomDecision) {
-		RoomComponent_IRoomDecision oldIRoomDecision = iRoomDecision;
-		iRoomDecision = newIRoomDecision;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__IROOM_DECISION, oldIRoomDecision, iRoomDecision));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public OccupancyComponent_IOccupancyDecision getIOccupancyDecision() {
 		if (iOccupancyDecision != null && iOccupancyDecision.eIsProxy()) {
 			InternalEObject oldIOccupancyDecision = (InternalEObject)iOccupancyDecision;
@@ -204,44 +142,6 @@ public class DecisionSupportComponent_DSSControllerImpl extends MinimalEObjectIm
 		iOccupancyDecision = newIOccupancyDecision;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__IOCCUPANCY_DECISION, oldIOccupancyDecision, iOccupancyDecision));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public AdditionalServiceComponent_IAdditionalServiceDecision getIAdditionalServiceDecision() {
-		if (iAdditionalServiceDecision != null && iAdditionalServiceDecision.eIsProxy()) {
-			InternalEObject oldIAdditionalServiceDecision = (InternalEObject)iAdditionalServiceDecision;
-			iAdditionalServiceDecision = (AdditionalServiceComponent_IAdditionalServiceDecision)eResolveProxy(oldIAdditionalServiceDecision);
-			if (iAdditionalServiceDecision != oldIAdditionalServiceDecision) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__IADDITIONAL_SERVICE_DECISION, oldIAdditionalServiceDecision, iAdditionalServiceDecision));
-			}
-		}
-		return iAdditionalServiceDecision;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public AdditionalServiceComponent_IAdditionalServiceDecision basicGetIAdditionalServiceDecision() {
-		return iAdditionalServiceDecision;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setIAdditionalServiceDecision(AdditionalServiceComponent_IAdditionalServiceDecision newIAdditionalServiceDecision) {
-		AdditionalServiceComponent_IAdditionalServiceDecision oldIAdditionalServiceDecision = iAdditionalServiceDecision;
-		iAdditionalServiceDecision = newIAdditionalServiceDecision;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__IADDITIONAL_SERVICE_DECISION, oldIAdditionalServiceDecision, iAdditionalServiceDecision));
 	}
 
 	/**
@@ -532,15 +432,9 @@ public class DecisionSupportComponent_DSSControllerImpl extends MinimalEObjectIm
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__IROOM_DECISION:
-				if (resolve) return getIRoomDecision();
-				return basicGetIRoomDecision();
 			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__IOCCUPANCY_DECISION:
 				if (resolve) return getIOccupancyDecision();
 				return basicGetIOccupancyDecision();
-			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__IADDITIONAL_SERVICE_DECISION:
-				if (resolve) return getIAdditionalServiceDecision();
-				return basicGetIAdditionalServiceDecision();
 			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__IBOOKING_DECISION:
 				if (resolve) return getIBookingDecision();
 				return basicGetIBookingDecision();
@@ -563,14 +457,8 @@ public class DecisionSupportComponent_DSSControllerImpl extends MinimalEObjectIm
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__IROOM_DECISION:
-				setIRoomDecision((RoomComponent_IRoomDecision)newValue);
-				return;
 			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__IOCCUPANCY_DECISION:
 				setIOccupancyDecision((OccupancyComponent_IOccupancyDecision)newValue);
-				return;
-			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__IADDITIONAL_SERVICE_DECISION:
-				setIAdditionalServiceDecision((AdditionalServiceComponent_IAdditionalServiceDecision)newValue);
 				return;
 			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__IBOOKING_DECISION:
 				setIBookingDecision((BookingComponent_IBookingDecision)newValue);
@@ -599,14 +487,8 @@ public class DecisionSupportComponent_DSSControllerImpl extends MinimalEObjectIm
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__IROOM_DECISION:
-				setIRoomDecision((RoomComponent_IRoomDecision)null);
-				return;
 			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__IOCCUPANCY_DECISION:
 				setIOccupancyDecision((OccupancyComponent_IOccupancyDecision)null);
-				return;
-			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__IADDITIONAL_SERVICE_DECISION:
-				setIAdditionalServiceDecision((AdditionalServiceComponent_IAdditionalServiceDecision)null);
 				return;
 			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__IBOOKING_DECISION:
 				setIBookingDecision((BookingComponent_IBookingDecision)null);
@@ -632,12 +514,8 @@ public class DecisionSupportComponent_DSSControllerImpl extends MinimalEObjectIm
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__IROOM_DECISION:
-				return iRoomDecision != null;
 			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__IOCCUPANCY_DECISION:
 				return iOccupancyDecision != null;
-			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__IADDITIONAL_SERVICE_DECISION:
-				return iAdditionalServiceDecision != null;
 			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__IBOOKING_DECISION:
 				return iBookingDecision != null;
 			case ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__OCCUPANCY_DSS_INFO:
