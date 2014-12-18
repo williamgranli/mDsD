@@ -457,7 +457,8 @@
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//BookingComponent_PaymentDetails/ccv"/>
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//BookingComponent_PaymentDetails/expiryMonth"/>
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//BookingComponent_PaymentDetails/expiryYear"/>
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//BookingComponent_PaymentDetails/ssn"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//BookingComponent_PaymentDetails/id"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//BookingComponent_PaymentDetails/generateID"/>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//BookingComponent_Booking">
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//BookingComponent_Booking/arrivalDate"/>
@@ -509,6 +510,15 @@
       </genOperations>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//BookingComponent_Booking/getGuestsInBooking"/>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//BookingComponent_Booking/getRoomTypesInBooking"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//BookingComponent_Booking/addPaymentDetails">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_Booking/addPaymentDetails/firstName"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_Booking/addPaymentDetails/lastName"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_Booking/addPaymentDetails/address"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_Booking/addPaymentDetails/ccNumber"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_Booking/addPaymentDetails/ccv"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_Booking/addPaymentDetails/expiryMonth"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_Booking/addPaymentDetails/expiryYear"/>
+      </genOperations>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//BookingComponent_AdditionalService">
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//BookingComponent_AdditionalService/name"/>
@@ -569,12 +579,6 @@
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_IBookingAdministration/addRoom/roomType"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_IBookingAdministration/addRoom/price"/>
       </genOperations>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//BookingComponent_IBookingAdministration/requestQuote">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_IBookingAdministration/requestQuote/roomType"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_IBookingAdministration/requestQuote/price"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_IBookingAdministration/requestQuote/arrivalDate"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_IBookingAdministration/requestQuote/departureDate"/>
-      </genOperations>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//BookingComponent_IBookingAdministration/editBooking">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_IBookingAdministration/editBooking/bookingReference"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_IBookingAdministration/editBooking/arrivalDate"/>
@@ -595,11 +599,6 @@
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//BookingComponent_IBookingAdministration/removeAdditionalService">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_IBookingAdministration/removeAdditionalService/bookingReference"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_IBookingAdministration/removeAdditionalService/additionalServiceName"/>
-      </genOperations>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//BookingComponent_IBookingAdministration/generateQuote">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_IBookingAdministration/generateQuote/startDate"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_IBookingAdministration/generateQuote/endDate"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_IBookingAdministration/generateQuote/roomType"/>
       </genOperations>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//BookingComponent_IBookingAdministration/addGuestToBooking">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_IBookingAdministration/addGuestToBooking/bookingReference"/>
@@ -707,47 +706,11 @@
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//RoomComponent_Bedroom">
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//RoomComponent_Bedroom/bedCount"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//RoomComponent_Bedroom/createBedroom">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_Bedroom/createBedroom/roomNumber"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_Bedroom/createBedroom/usable"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_Bedroom/createBedroom/price"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_Bedroom/createBedroom/roomTypeName"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_Bedroom/createBedroom/description"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_Bedroom/createBedroom/bedCount"/>
-      </genOperations>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//RoomComponent_Bedroom/editRoom">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_Bedroom/editRoom/roomNumber"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_Bedroom/editRoom/usable"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_Bedroom/editRoom/price"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_Bedroom/editRoom/roomTypeName"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_Bedroom/editRoom/description"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_Bedroom/editRoom/bedCount"/>
-      </genOperations>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//RoomComponent_ConferenceRoom">
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//RoomComponent_ConferenceRoom/numberOfSeats"/>
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//RoomComponent_ConferenceRoom/projector"/>
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//RoomComponent_ConferenceRoom/conferencePhone"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//RoomComponent_ConferenceRoom/createConferenceRoom">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_ConferenceRoom/createConferenceRoom/roomNumber"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_ConferenceRoom/createConferenceRoom/usable"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_ConferenceRoom/createConferenceRoom/price"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_ConferenceRoom/createConferenceRoom/roomTypeName"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_ConferenceRoom/createConferenceRoom/description"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_ConferenceRoom/createConferenceRoom/numberOfSeats"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_ConferenceRoom/createConferenceRoom/projector"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_ConferenceRoom/createConferenceRoom/conferenceRoom"/>
-      </genOperations>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//RoomComponent_ConferenceRoom/editRoom">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_ConferenceRoom/editRoom/roomNumber"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_ConferenceRoom/editRoom/usable"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_ConferenceRoom/editRoom/price"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_ConferenceRoom/editRoom/roomTypeName"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_ConferenceRoom/editRoom/description"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_ConferenceRoom/editRoom/numberOfSeats"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_ConferenceRoom/editRoom/projector"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_ConferenceRoom/editRoom/conferencePhone"/>
-      </genOperations>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//RoomComponent_RoomHandler">
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"

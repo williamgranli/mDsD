@@ -36,14 +36,6 @@ public interface BookingComponent_IBookingAdministration extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model roomTypeDataType="org.eclipse.uml2.types.String" roomTypeRequired="true" roomTypeOrdered="false" priceDataType="org.eclipse.uml2.types.Integer" priceRequired="true" priceOrdered="false" arrivalDateRequired="true" arrivalDateOrdered="false" departureDateRequired="true" departureDateOrdered="false"
-	 * @generated
-	 */
-	void requestQuote(String roomType, int price, Date arrivalDate, Date departureDate);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
 	 * @model bookingReferenceDataType="org.eclipse.uml2.types.String" bookingReferenceRequired="true" bookingReferenceOrdered="false" arrivalDateRequired="true" arrivalDateOrdered="false" departureDateRequired="true" departureDateOrdered="false"
 	 * @generated
 	 */
@@ -80,14 +72,6 @@ public interface BookingComponent_IBookingAdministration extends EObject {
 	 * @generated
 	 */
 	void removeAdditionalService(String bookingReference, String additionalServiceName);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model startDateRequired="true" startDateOrdered="false" endDateRequired="true" endDateOrdered="false" roomTypeDataType="org.eclipse.uml2.types.String" roomTypeRequired="true" roomTypeOrdered="false"
-	 * @generated
-	 */
-	void generateQuote(Date startDate, Date endDate, String roomType);
 
 	/**
 	 * <!-- begin-user-doc -->

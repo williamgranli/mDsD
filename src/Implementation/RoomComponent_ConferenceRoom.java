@@ -100,20 +100,4 @@ public interface RoomComponent_ConferenceRoom extends RoomComponent_Room {
 	 */
 	void setConferencePhone(boolean value);
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model roomNumberDataType="org.eclipse.uml2.types.Integer" roomNumberRequired="true" roomNumberOrdered="false" usableDataType="org.eclipse.uml2.types.Boolean" usableRequired="true" usableOrdered="false" priceDataType="org.eclipse.uml2.types.Integer" priceRequired="true" priceOrdered="false" roomTypeNameDataType="org.eclipse.uml2.types.String" roomTypeNameRequired="true" roomTypeNameOrdered="false" descriptionDataType="org.eclipse.uml2.types.String" descriptionRequired="true" descriptionOrdered="false" numberOfSeatsDataType="org.eclipse.uml2.types.Integer" numberOfSeatsRequired="true" numberOfSeatsOrdered="false" projectorDataType="org.eclipse.uml2.types.Boolean" projectorRequired="true" projectorOrdered="false" conferenceRoomDataType="org.eclipse.uml2.types.Boolean" conferenceRoomRequired="true" conferenceRoomOrdered="false"
-	 * @generated
-	 */
-	void createConferenceRoom(int roomNumber, boolean usable, int price, String roomTypeName, String description, int numberOfSeats, boolean projector, boolean conferenceRoom);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model roomNumberRequired="true" roomNumberOrdered="false" usableRequired="true" usableOrdered="false" priceRequired="true" priceOrdered="false" roomTypeNameRequired="true" roomTypeNameOrdered="false" descriptionRequired="true" descriptionOrdered="false" numberOfSeatsRequired="true" numberOfSeatsOrdered="false" projectorRequired="true" projectorOrdered="false" conferencePhoneRequired="true" conferencePhoneOrdered="false"
-	 * @generated
-	 */
-	void editRoom(int roomNumber, boolean usable, int price, String roomTypeName, String description, int numberOfSeats, boolean projector, boolean conferencePhone);
-
 } // RoomComponent_ConferenceRoom

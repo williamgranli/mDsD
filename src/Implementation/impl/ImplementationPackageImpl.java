@@ -1889,8 +1889,17 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getBookingComponent_PaymentDetails_Ssn() {
+	public EAttribute getBookingComponent_PaymentDetails_Id() {
 		return (EAttribute)bookingComponent_PaymentDetailsEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getBookingComponent_PaymentDetails__GenerateID() {
+		return bookingComponent_PaymentDetailsEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -2105,6 +2114,15 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getBookingComponent_Booking__AddPaymentDetails__String_String_String_String_String_int_int() {
+		return bookingComponent_BookingEClass.getEOperations().get(12);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getBookingComponent_AdditionalService() {
 		return bookingComponent_AdditionalServiceEClass;
 	}
@@ -2312,7 +2330,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getBookingComponent_IBookingAdministration__RequestQuote__String_int_Date_Date() {
+	public EOperation getBookingComponent_IBookingAdministration__EditBooking__String_Date_Date() {
 		return bookingComponent_IBookingAdministrationEClass.getEOperations().get(2);
 	}
 
@@ -2321,7 +2339,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getBookingComponent_IBookingAdministration__EditBooking__String_Date_Date() {
+	public EOperation getBookingComponent_IBookingAdministration__CancelBooking__String() {
 		return bookingComponent_IBookingAdministrationEClass.getEOperations().get(3);
 	}
 
@@ -2330,7 +2348,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getBookingComponent_IBookingAdministration__CancelBooking__String() {
+	public EOperation getBookingComponent_IBookingAdministration__AddAdditionalService__String_String_int() {
 		return bookingComponent_IBookingAdministrationEClass.getEOperations().get(4);
 	}
 
@@ -2339,7 +2357,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getBookingComponent_IBookingAdministration__AddAdditionalService__String_String_int() {
+	public EOperation getBookingComponent_IBookingAdministration__RemoveRoom__String_String() {
 		return bookingComponent_IBookingAdministrationEClass.getEOperations().get(5);
 	}
 
@@ -2348,7 +2366,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getBookingComponent_IBookingAdministration__RemoveRoom__String_String() {
+	public EOperation getBookingComponent_IBookingAdministration__RemoveAdditionalService__String_String() {
 		return bookingComponent_IBookingAdministrationEClass.getEOperations().get(6);
 	}
 
@@ -2357,7 +2375,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getBookingComponent_IBookingAdministration__RemoveAdditionalService__String_String() {
+	public EOperation getBookingComponent_IBookingAdministration__AddGuestToBooking__String_String_String_String() {
 		return bookingComponent_IBookingAdministrationEClass.getEOperations().get(7);
 	}
 
@@ -2366,26 +2384,8 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getBookingComponent_IBookingAdministration__GenerateQuote__Date_Date_String() {
-		return bookingComponent_IBookingAdministrationEClass.getEOperations().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getBookingComponent_IBookingAdministration__AddGuestToBooking__String_String_String_String() {
-		return bookingComponent_IBookingAdministrationEClass.getEOperations().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EOperation getBookingComponent_IBookingAdministration__RemoveGuest__String_String_String_String() {
-		return bookingComponent_IBookingAdministrationEClass.getEOperations().get(10);
+		return bookingComponent_IBookingAdministrationEClass.getEOperations().get(8);
 	}
 
 	/**
@@ -2636,24 +2636,6 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRoomComponent_Bedroom__CreateBedroom__int_boolean_int_String_String_int() {
-		return roomComponent_BedroomEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getRoomComponent_Bedroom__EditRoom__int_boolean_int_String_String_int() {
-		return roomComponent_BedroomEClass.getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getRoomComponent_ConferenceRoom() {
 		return roomComponent_ConferenceRoomEClass;
 	}
@@ -2683,24 +2665,6 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 */
 	public EAttribute getRoomComponent_ConferenceRoom_ConferencePhone() {
 		return (EAttribute)roomComponent_ConferenceRoomEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getRoomComponent_ConferenceRoom__CreateConferenceRoom__int_boolean_int_String_String_int_boolean_boolean() {
-		return roomComponent_ConferenceRoomEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getRoomComponent_ConferenceRoom__EditRoom__int_boolean_int_String_String_int_boolean_boolean() {
-		return roomComponent_ConferenceRoomEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -3017,7 +2981,8 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		createEAttribute(bookingComponent_PaymentDetailsEClass, BOOKING_COMPONENT_PAYMENT_DETAILS__CCV);
 		createEAttribute(bookingComponent_PaymentDetailsEClass, BOOKING_COMPONENT_PAYMENT_DETAILS__EXPIRY_MONTH);
 		createEAttribute(bookingComponent_PaymentDetailsEClass, BOOKING_COMPONENT_PAYMENT_DETAILS__EXPIRY_YEAR);
-		createEAttribute(bookingComponent_PaymentDetailsEClass, BOOKING_COMPONENT_PAYMENT_DETAILS__SSN);
+		createEAttribute(bookingComponent_PaymentDetailsEClass, BOOKING_COMPONENT_PAYMENT_DETAILS__ID);
+		createEOperation(bookingComponent_PaymentDetailsEClass, BOOKING_COMPONENT_PAYMENT_DETAILS___GENERATE_ID);
 
 		bookingComponent_BookingEClass = createEClass(BOOKING_COMPONENT_BOOKING);
 		createEAttribute(bookingComponent_BookingEClass, BOOKING_COMPONENT_BOOKING__ARRIVAL_DATE);
@@ -3042,6 +3007,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		createEOperation(bookingComponent_BookingEClass, BOOKING_COMPONENT_BOOKING___REMOVE_GUEST_FROM_BOOKING__STRING_STRING_STRING);
 		createEOperation(bookingComponent_BookingEClass, BOOKING_COMPONENT_BOOKING___GET_GUESTS_IN_BOOKING);
 		createEOperation(bookingComponent_BookingEClass, BOOKING_COMPONENT_BOOKING___GET_ROOM_TYPES_IN_BOOKING);
+		createEOperation(bookingComponent_BookingEClass, BOOKING_COMPONENT_BOOKING___ADD_PAYMENT_DETAILS__STRING_STRING_STRING_STRING_STRING_INT_INT);
 
 		bookingComponent_AdditionalServiceEClass = createEClass(BOOKING_COMPONENT_ADDITIONAL_SERVICE);
 		createEAttribute(bookingComponent_AdditionalServiceEClass, BOOKING_COMPONENT_ADDITIONAL_SERVICE__NAME);
@@ -3070,13 +3036,11 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		bookingComponent_IBookingAdministrationEClass = createEClass(BOOKING_COMPONENT_IBOOKING_ADMINISTRATION);
 		createEOperation(bookingComponent_IBookingAdministrationEClass, BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___MAKE_BOOKING__DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_STRING_STRING);
 		createEOperation(bookingComponent_IBookingAdministrationEClass, BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___ADD_ROOM__STRING_STRING_INT);
-		createEOperation(bookingComponent_IBookingAdministrationEClass, BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___REQUEST_QUOTE__STRING_INT_DATE_DATE);
 		createEOperation(bookingComponent_IBookingAdministrationEClass, BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___EDIT_BOOKING__STRING_DATE_DATE);
 		createEOperation(bookingComponent_IBookingAdministrationEClass, BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___CANCEL_BOOKING__STRING);
 		createEOperation(bookingComponent_IBookingAdministrationEClass, BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___ADD_ADDITIONAL_SERVICE__STRING_STRING_INT);
 		createEOperation(bookingComponent_IBookingAdministrationEClass, BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___REMOVE_ROOM__STRING_STRING);
 		createEOperation(bookingComponent_IBookingAdministrationEClass, BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___REMOVE_ADDITIONAL_SERVICE__STRING_STRING);
-		createEOperation(bookingComponent_IBookingAdministrationEClass, BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___GENERATE_QUOTE__DATE_DATE_STRING);
 		createEOperation(bookingComponent_IBookingAdministrationEClass, BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING);
 		createEOperation(bookingComponent_IBookingAdministrationEClass, BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___REMOVE_GUEST__STRING_STRING_STRING_STRING);
 
@@ -3120,15 +3084,11 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 
 		roomComponent_BedroomEClass = createEClass(ROOM_COMPONENT_BEDROOM);
 		createEAttribute(roomComponent_BedroomEClass, ROOM_COMPONENT_BEDROOM__BED_COUNT);
-		createEOperation(roomComponent_BedroomEClass, ROOM_COMPONENT_BEDROOM___CREATE_BEDROOM__INT_BOOLEAN_INT_STRING_STRING_INT);
-		createEOperation(roomComponent_BedroomEClass, ROOM_COMPONENT_BEDROOM___EDIT_ROOM__INT_BOOLEAN_INT_STRING_STRING_INT);
 
 		roomComponent_ConferenceRoomEClass = createEClass(ROOM_COMPONENT_CONFERENCE_ROOM);
 		createEAttribute(roomComponent_ConferenceRoomEClass, ROOM_COMPONENT_CONFERENCE_ROOM__NUMBER_OF_SEATS);
 		createEAttribute(roomComponent_ConferenceRoomEClass, ROOM_COMPONENT_CONFERENCE_ROOM__PROJECTOR);
 		createEAttribute(roomComponent_ConferenceRoomEClass, ROOM_COMPONENT_CONFERENCE_ROOM__CONFERENCE_PHONE);
-		createEOperation(roomComponent_ConferenceRoomEClass, ROOM_COMPONENT_CONFERENCE_ROOM___CREATE_CONFERENCE_ROOM__INT_BOOLEAN_INT_STRING_STRING_INT_BOOLEAN_BOOLEAN);
-		createEOperation(roomComponent_ConferenceRoomEClass, ROOM_COMPONENT_CONFERENCE_ROOM___EDIT_ROOM__INT_BOOLEAN_INT_STRING_STRING_INT_BOOLEAN_BOOLEAN);
 
 		roomComponent_RoomHandlerEClass = createEClass(ROOM_COMPONENT_ROOM_HANDLER);
 		createEReference(roomComponent_RoomHandlerEClass, ROOM_COMPONENT_ROOM_HANDLER__AUTHENTICATOR);
@@ -3603,11 +3563,11 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 
 		initEClass(staffComponent_IAuthenticationEClass, StaffComponent_IAuthentication.class, "StaffComponent_IAuthentication", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		op = initEOperation(getStaffComponent_IAuthentication__LogIn__String_String(), null, "logIn", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getStaffComponent_IAuthentication__LogIn__String_String(), ecorePackage.getEBoolean(), "logIn", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "ssn", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "password", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getStaffComponent_IAuthentication__LogOut__String(), null, "logOut", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getStaffComponent_IAuthentication__LogOut__String(), ecorePackage.getEBoolean(), "logOut", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "ssn", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getStaffComponent_IAuthentication__IsLoggedIn__String(), theTypesPackage.getBoolean(), "isLoggedIn", 1, 1, IS_UNIQUE, !IS_ORDERED);
@@ -3621,9 +3581,11 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		initEAttribute(getBookingComponent_PaymentDetails_Address(), theTypesPackage.getString(), "address", null, 1, 1, BookingComponent_PaymentDetails.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getBookingComponent_PaymentDetails_CcNumber(), theTypesPackage.getString(), "ccNumber", null, 1, 1, BookingComponent_PaymentDetails.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getBookingComponent_PaymentDetails_Ccv(), theTypesPackage.getString(), "ccv", null, 1, 1, BookingComponent_PaymentDetails.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getBookingComponent_PaymentDetails_ExpiryMonth(), theTypesPackage.getString(), "expiryMonth", null, 1, 1, BookingComponent_PaymentDetails.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getBookingComponent_PaymentDetails_ExpiryYear(), theTypesPackage.getString(), "expiryYear", null, 1, 1, BookingComponent_PaymentDetails.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getBookingComponent_PaymentDetails_Ssn(), theTypesPackage.getString(), "ssn", null, 1, 1, BookingComponent_PaymentDetails.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getBookingComponent_PaymentDetails_ExpiryMonth(), theTypesPackage.getInteger(), "expiryMonth", null, 1, 1, BookingComponent_PaymentDetails.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getBookingComponent_PaymentDetails_ExpiryYear(), theTypesPackage.getInteger(), "expiryYear", null, 1, 1, BookingComponent_PaymentDetails.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getBookingComponent_PaymentDetails_Id(), theTypesPackage.getString(), "id", null, 1, 1, BookingComponent_PaymentDetails.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEOperation(getBookingComponent_PaymentDetails__GenerateID(), theTypesPackage.getString(), "generateID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(bookingComponent_BookingEClass, BookingComponent_Booking.class, "BookingComponent_Booking", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getBookingComponent_Booking_ArrivalDate(), ecorePackage.getEDate(), "arrivalDate", null, 1, 1, BookingComponent_Booking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -3675,6 +3637,15 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		initEOperation(getBookingComponent_Booking__GetGuestsInBooking(), theTypesPackage.getString(), "getGuestsInBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getBookingComponent_Booking__GetRoomTypesInBooking(), theTypesPackage.getString(), "getRoomTypesInBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getBookingComponent_Booking__AddPaymentDetails__String_String_String_String_String_int_int(), null, "addPaymentDetails", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "firstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "lastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "address", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "ccNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "ccv", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getInteger(), "expiryMonth", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getInteger(), "expiryYear", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(bookingComponent_AdditionalServiceEClass, BookingComponent_AdditionalService.class, "BookingComponent_AdditionalService", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getBookingComponent_AdditionalService_Name(), theTypesPackage.getString(), "name", null, 1, 1, BookingComponent_AdditionalService.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -3731,12 +3702,6 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		addEParameter(op, theTypesPackage.getString(), "roomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "price", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getBookingComponent_IBookingAdministration__RequestQuote__String_int_Date_Date(), null, "requestQuote", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "roomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "price", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDate(), "arrivalDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDate(), "departureDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
 		op = initEOperation(getBookingComponent_IBookingAdministration__EditBooking__String_Date_Date(), null, "editBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "bookingReference", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDate(), "arrivalDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
@@ -3757,11 +3722,6 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		op = initEOperation(getBookingComponent_IBookingAdministration__RemoveAdditionalService__String_String(), null, "removeAdditionalService", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "bookingReference", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "additionalServiceName", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		op = initEOperation(getBookingComponent_IBookingAdministration__GenerateQuote__Date_Date_String(), null, "generateQuote", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDate(), "startDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDate(), "endDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "roomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getBookingComponent_IBookingAdministration__AddGuestToBooking__String_String_String_String(), null, "addGuestToBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "bookingReference", 1, 1, IS_UNIQUE, !IS_ORDERED);
@@ -3869,46 +3829,10 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		initEClass(roomComponent_BedroomEClass, RoomComponent_Bedroom.class, "RoomComponent_Bedroom", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRoomComponent_Bedroom_BedCount(), theTypesPackage.getInteger(), "bedCount", null, 1, 1, RoomComponent_Bedroom.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		op = initEOperation(getRoomComponent_Bedroom__CreateBedroom__int_boolean_int_String_String_int(), null, "createBedroom", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "roomNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getBoolean(), "usable", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "price", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "roomTypeName", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "description", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "bedCount", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		op = initEOperation(getRoomComponent_Bedroom__EditRoom__int_boolean_int_String_String_int(), null, "editRoom", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEInt(), "roomNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEBoolean(), "usable", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEInt(), "price", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEString(), "roomTypeName", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEString(), "description", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEInt(), "bedCount", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
 		initEClass(roomComponent_ConferenceRoomEClass, RoomComponent_ConferenceRoom.class, "RoomComponent_ConferenceRoom", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRoomComponent_ConferenceRoom_NumberOfSeats(), ecorePackage.getEInt(), "numberOfSeats", null, 1, 1, RoomComponent_ConferenceRoom.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getRoomComponent_ConferenceRoom_Projector(), ecorePackage.getEBoolean(), "projector", null, 1, 1, RoomComponent_ConferenceRoom.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getRoomComponent_ConferenceRoom_ConferencePhone(), ecorePackage.getEBoolean(), "conferencePhone", null, 1, 1, RoomComponent_ConferenceRoom.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		op = initEOperation(getRoomComponent_ConferenceRoom__CreateConferenceRoom__int_boolean_int_String_String_int_boolean_boolean(), null, "createConferenceRoom", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "roomNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getBoolean(), "usable", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "price", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "roomTypeName", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "description", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "numberOfSeats", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getBoolean(), "projector", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getBoolean(), "conferenceRoom", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		op = initEOperation(getRoomComponent_ConferenceRoom__EditRoom__int_boolean_int_String_String_int_boolean_boolean(), null, "editRoom", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEInt(), "roomNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEBoolean(), "usable", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEInt(), "price", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEString(), "roomTypeName", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEString(), "description", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEInt(), "numberOfSeats", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEBoolean(), "projector", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEBoolean(), "conferencePhone", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(roomComponent_RoomHandlerEClass, RoomComponent_RoomHandler.class, "RoomComponent_RoomHandler", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRoomComponent_RoomHandler_Authenticator(), this.getStaffComponent_IAuthentication(), null, "authenticator", null, 1, 1, RoomComponent_RoomHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);

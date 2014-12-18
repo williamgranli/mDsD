@@ -128,10 +128,12 @@ public class OccupancyComponent_OccupancyImpl extends MinimalEObjectImpl.Contain
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	protected OccupancyComponent_OccupancyImpl() {
 		super();
+		guests = getGuests();
+
 	}
 
 	/**

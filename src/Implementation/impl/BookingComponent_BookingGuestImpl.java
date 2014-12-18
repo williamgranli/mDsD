@@ -264,7 +264,7 @@ public class BookingComponent_BookingGuestImpl extends MinimalEObjectImpl.Contai
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuffer result = new StringBuffer();
 		result.append("");
 		result.append(firstName + ",");
 		result.append(lastName + ",");

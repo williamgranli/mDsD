@@ -19,7 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link Implementation.BookingComponent_PaymentDetails#getCcv <em>Ccv</em>}</li>
  *   <li>{@link Implementation.BookingComponent_PaymentDetails#getExpiryMonth <em>Expiry Month</em>}</li>
  *   <li>{@link Implementation.BookingComponent_PaymentDetails#getExpiryYear <em>Expiry Year</em>}</li>
- *   <li>{@link Implementation.BookingComponent_PaymentDetails#getSsn <em>Ssn</em>}</li>
+ *   <li>{@link Implementation.BookingComponent_PaymentDetails#getId <em>Id</em>}</li>
  * </ul>
  * </p>
  *
@@ -167,12 +167,12 @@ public interface BookingComponent_PaymentDetails extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Expiry Month</em>' attribute.
-	 * @see #setExpiryMonth(String)
+	 * @see #setExpiryMonth(int)
 	 * @see Implementation.ImplementationPackage#getBookingComponent_PaymentDetails_ExpiryMonth()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
 	 * @generated
 	 */
-	String getExpiryMonth();
+	int getExpiryMonth();
 
 	/**
 	 * Sets the value of the '{@link Implementation.BookingComponent_PaymentDetails#getExpiryMonth <em>Expiry Month</em>}' attribute.
@@ -182,7 +182,7 @@ public interface BookingComponent_PaymentDetails extends EObject {
 	 * @see #getExpiryMonth()
 	 * @generated
 	 */
-	void setExpiryMonth(String value);
+	void setExpiryMonth(int value);
 
 	/**
 	 * Returns the value of the '<em><b>Expiry Year</b></em>' attribute.
@@ -193,12 +193,12 @@ public interface BookingComponent_PaymentDetails extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Expiry Year</em>' attribute.
-	 * @see #setExpiryYear(String)
+	 * @see #setExpiryYear(int)
 	 * @see Implementation.ImplementationPackage#getBookingComponent_PaymentDetails_ExpiryYear()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
 	 * @generated
 	 */
-	String getExpiryYear();
+	int getExpiryYear();
 
 	/**
 	 * Sets the value of the '{@link Implementation.BookingComponent_PaymentDetails#getExpiryYear <em>Expiry Year</em>}' attribute.
@@ -208,32 +208,40 @@ public interface BookingComponent_PaymentDetails extends EObject {
 	 * @see #getExpiryYear()
 	 * @generated
 	 */
-	void setExpiryYear(String value);
+	void setExpiryYear(int value);
 
 	/**
-	 * Returns the value of the '<em><b>Ssn</b></em>' attribute.
+	 * Returns the value of the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Ssn</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Ssn</em>' attribute.
-	 * @see #setSsn(String)
-	 * @see Implementation.ImplementationPackage#getBookingComponent_PaymentDetails_Ssn()
+	 * @return the value of the '<em>Id</em>' attribute.
+	 * @see #setId(String)
+	 * @see Implementation.ImplementationPackage#getBookingComponent_PaymentDetails_Id()
 	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
-	String getSsn();
+	String getId();
 
 	/**
-	 * Sets the value of the '{@link Implementation.BookingComponent_PaymentDetails#getSsn <em>Ssn</em>}' attribute.
+	 * Sets the value of the '{@link Implementation.BookingComponent_PaymentDetails#getId <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Ssn</em>' attribute.
-	 * @see #getSsn()
+	 * @param value the new value of the '<em>Id</em>' attribute.
+	 * @see #getId()
 	 * @generated
 	 */
-	void setSsn(String value);
+	void setId(String value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
+	 * @generated
+	 */
+	String generateID();
 
 } // BookingComponent_PaymentDetails

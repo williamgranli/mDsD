@@ -46,20 +46,4 @@ public interface RoomComponent_Bedroom extends RoomComponent_Room {
 	 */
 	void setBedCount(int value);
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model roomNumberDataType="org.eclipse.uml2.types.Integer" roomNumberRequired="true" roomNumberOrdered="false" usableDataType="org.eclipse.uml2.types.Boolean" usableRequired="true" usableOrdered="false" priceDataType="org.eclipse.uml2.types.Integer" priceRequired="true" priceOrdered="false" roomTypeNameDataType="org.eclipse.uml2.types.String" roomTypeNameRequired="true" roomTypeNameOrdered="false" descriptionDataType="org.eclipse.uml2.types.String" descriptionRequired="true" descriptionOrdered="false" bedCountDataType="org.eclipse.uml2.types.Integer" bedCountRequired="true" bedCountOrdered="false"
-	 * @generated
-	 */
-	void createBedroom(int roomNumber, boolean usable, int price, String roomTypeName, String description, int bedCount);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model roomNumberRequired="true" roomNumberOrdered="false" usableRequired="true" usableOrdered="false" priceRequired="true" priceOrdered="false" roomTypeNameRequired="true" roomTypeNameOrdered="false" descriptionRequired="true" descriptionOrdered="false" bedCountRequired="true" bedCountOrdered="false"
-	 * @generated
-	 */
-	void editRoom(int roomNumber, boolean usable, int price, String roomTypeName, String description, int bedCount);
-
 } // RoomComponent_Bedroom

@@ -409,7 +409,7 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 		EList<String> DSSInfo = new BasicEList<String>();
 		for (BookingComponent_Booking booking: bookings){
 			String currentBookings=booking.getRoomTypesInBooking()+","+booking.getArrivalDate()+","+booking.getDepartureDate()+","
-					+booking.getPaymentDetails().getSsn()+","+booking.getPaymentDetails().getFirstName()+","
+					+booking.getPaymentDetails().getId()+","+booking.getPaymentDetails().getFirstName()+","
 					+booking.getPaymentDetails().getLastName()+","+booking.getPaymentDetails().getAddress()
 					+","+booking.getGuests().size();
 			
@@ -455,17 +455,6 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 		{
 			bookingToChange.addRoomToBooking(roomType, price);
 		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void requestQuote(String roomType, int price, Date arrivalDate, Date departureDate) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -552,17 +541,6 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 		{
 			bookingToRemove.removeAdditionalServiceFromBooking(additionalServiceName);
 		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void generateQuote(Date startDate, Date endDate, String roomType) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -803,13 +781,11 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 			switch (baseOperationID) {
 				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___MAKE_BOOKING__DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_STRING_STRING: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___MAKE_BOOKING__DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_STRING_STRING;
 				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___ADD_ROOM__STRING_STRING_INT: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___ADD_ROOM__STRING_STRING_INT;
-				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___REQUEST_QUOTE__STRING_INT_DATE_DATE: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___REQUEST_QUOTE__STRING_INT_DATE_DATE;
 				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___EDIT_BOOKING__STRING_DATE_DATE: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___EDIT_BOOKING__STRING_DATE_DATE;
 				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___CANCEL_BOOKING__STRING: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___CANCEL_BOOKING__STRING;
 				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___ADD_ADDITIONAL_SERVICE__STRING_STRING_INT: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___ADD_ADDITIONAL_SERVICE__STRING_STRING_INT;
 				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___REMOVE_ROOM__STRING_STRING: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___REMOVE_ROOM__STRING_STRING;
 				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___REMOVE_ADDITIONAL_SERVICE__STRING_STRING: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___REMOVE_ADDITIONAL_SERVICE__STRING_STRING;
-				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___GENERATE_QUOTE__DATE_DATE_STRING: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___GENERATE_QUOTE__DATE_DATE_STRING;
 				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING;
 				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___REMOVE_GUEST__STRING_STRING_STRING_STRING: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___REMOVE_GUEST__STRING_STRING_STRING_STRING;
 				default: return -1;
@@ -843,9 +819,6 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___ADD_ROOM__STRING_STRING_INT:
 				addRoom((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2));
 				return null;
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___REQUEST_QUOTE__STRING_INT_DATE_DATE:
-				requestQuote((String)arguments.get(0), (Integer)arguments.get(1), (Date)arguments.get(2), (Date)arguments.get(3));
-				return null;
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___EDIT_BOOKING__STRING_DATE_DATE:
 				editBooking((String)arguments.get(0), (Date)arguments.get(1), (Date)arguments.get(2));
 				return null;
@@ -860,9 +833,6 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 				return null;
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___REMOVE_ADDITIONAL_SERVICE__STRING_STRING:
 				removeAdditionalService((String)arguments.get(0), (String)arguments.get(1));
-				return null;
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___GENERATE_QUOTE__DATE_DATE_STRING:
-				generateQuote((Date)arguments.get(0), (Date)arguments.get(1), (String)arguments.get(2));
 				return null;
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING:
 				addGuestToBooking((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3));

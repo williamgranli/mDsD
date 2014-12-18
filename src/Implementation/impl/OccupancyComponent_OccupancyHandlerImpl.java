@@ -355,12 +355,16 @@ public class OccupancyComponent_OccupancyHandlerImpl extends MinimalEObjectImpl.
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public int numberOfGuestsInHotel() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		int numberOfGuestsInHotel = 0;
+		
+		for (OccupancyComponent_Occupancy occupan : occupancy) {
+			numberOfGuestsInHotel += occupan.getGuests().size();
+		}
+		
+		return numberOfGuestsInHotel;
 	}
 
 	/**

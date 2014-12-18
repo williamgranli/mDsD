@@ -79,7 +79,7 @@ public class StaffComponentImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void logIn(String ssn, String password) {
+	public boolean logIn(String ssn, String password) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -90,7 +90,7 @@ public class StaffComponentImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void logOut(String ssn) {
+	public boolean logOut(String ssn) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -140,11 +140,9 @@ public class StaffComponentImpl extends MinimalEObjectImpl.Container implements 
 			case ImplementationPackage.STAFF_COMPONENT___REMOVE_ACCOUNT__STRING:
 				return removeAccount((String)arguments.get(0));
 			case ImplementationPackage.STAFF_COMPONENT___LOG_IN__STRING_STRING:
-				logIn((String)arguments.get(0), (String)arguments.get(1));
-				return null;
+				return logIn((String)arguments.get(0), (String)arguments.get(1));
 			case ImplementationPackage.STAFF_COMPONENT___LOG_OUT__STRING:
-				logOut((String)arguments.get(0));
-				return null;
+				return logOut((String)arguments.get(0));
 			case ImplementationPackage.STAFF_COMPONENT___IS_LOGGED_IN__STRING:
 				return isLoggedIn((String)arguments.get(0));
 		}
