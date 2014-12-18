@@ -1888,6 +1888,9 @@
       </nestedClassifier>
     </packagedElement>
     <packagedElement xmi:type="uml:Component" xmi:id="_TaJ1EIR1EeS3f7AD3kinCA" name="Bank">
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_f6IuAIadEeSBsajI1z9RTw" client="_TaJ1EIR1EeS3f7AD3kinCA" supplier="_eX8x0H-zEeSVo4U8yTxtOw" contract="_eX8x0H-zEeSVo4U8yTxtOw"/>
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_g17n4IadEeSBsajI1z9RTw" client="_TaJ1EIR1EeS3f7AD3kinCA" supplier="_hz_IgIUREeSnMfn5T1z3aA" contract="_hz_IgIUREeSnMfn5T1z3aA"/>
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_hJp1IIadEeSBsajI1z9RTw" client="_TaJ1EIR1EeS3f7AD3kinCA" supplier="_5-C0cHprEeS6O5zO6NZCqA" contract="_5-C0cHprEeS6O5zO6NZCqA"/>
       <nestedClassifier xmi:type="uml:Interface" xmi:id="_gDR3lIRbEeSwC95jIvSgtA" name="AdministratorProvides">
         <ownedOperation xmi:type="uml:Operation" xmi:id="_gDR3lYRbEeSwC95jIvSgtA" name="makeDeposit">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_gDR3loRbEeSwC95jIvSgtA" name="ccNumber">
