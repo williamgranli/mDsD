@@ -717,47 +717,11 @@
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//RoomComponent_Bedroom">
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//RoomComponent_Bedroom/bedCount"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//RoomComponent_Bedroom/createBedroom">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_Bedroom/createBedroom/roomNumber"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_Bedroom/createBedroom/usable"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_Bedroom/createBedroom/price"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_Bedroom/createBedroom/roomTypeName"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_Bedroom/createBedroom/description"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_Bedroom/createBedroom/bedCount"/>
-      </genOperations>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//RoomComponent_Bedroom/editRoom">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_Bedroom/editRoom/roomNumber"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_Bedroom/editRoom/usable"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_Bedroom/editRoom/price"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_Bedroom/editRoom/roomTypeName"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_Bedroom/editRoom/description"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_Bedroom/editRoom/bedCount"/>
-      </genOperations>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//RoomComponent_ConferenceRoom">
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//RoomComponent_ConferenceRoom/numberOfSeats"/>
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//RoomComponent_ConferenceRoom/projector"/>
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//RoomComponent_ConferenceRoom/conferencePhone"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//RoomComponent_ConferenceRoom/createConferenceRoom">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_ConferenceRoom/createConferenceRoom/roomNumber"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_ConferenceRoom/createConferenceRoom/usable"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_ConferenceRoom/createConferenceRoom/price"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_ConferenceRoom/createConferenceRoom/roomTypeName"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_ConferenceRoom/createConferenceRoom/description"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_ConferenceRoom/createConferenceRoom/numberOfSeats"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_ConferenceRoom/createConferenceRoom/projector"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_ConferenceRoom/createConferenceRoom/conferenceRoom"/>
-      </genOperations>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//RoomComponent_ConferenceRoom/editRoom">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_ConferenceRoom/editRoom/roomNumber"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_ConferenceRoom/editRoom/usable"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_ConferenceRoom/editRoom/price"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_ConferenceRoom/editRoom/roomTypeName"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_ConferenceRoom/editRoom/description"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_ConferenceRoom/editRoom/numberOfSeats"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_ConferenceRoom/editRoom/projector"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//RoomComponent_ConferenceRoom/editRoom/conferencePhone"/>
-      </genOperations>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//RoomComponent_RoomHandler">
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"

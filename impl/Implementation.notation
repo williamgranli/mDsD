@@ -580,21 +580,6 @@
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fOvJ5XsTEeSLuMTWUFMNdg"/>
       </children>
       <children xmi:type="notation:BasicCompartment" xmi:id="_fOvJ5nsTEeSLuMTWUFMNdg" type="7018">
-        <children xmi:type="notation:Shape" xmi:id="_w9fDkHsTEeSLuMTWUFMNdg" type="3013">
-          <styles xmi:type="notation:StringListValueStyle" xmi:id="_bQ81gHueEeSQ2NWCMmu_Fw" name="maskLabel">
-            <stringListValue>parametersType</stringListValue>
-            <stringListValue>parametersName</stringListValue>
-            <stringListValue>visibility</stringListValue>
-            <stringListValue>name</stringListValue>
-            <stringListValue>returnType</stringListValue>
-          </styles>
-          <element xmi:type="uml:Operation" href="Implementation.uml#_eIWJk3sTEeSLuMTWUFMNdg"/>
-          <layoutConstraint xmi:type="notation:Location" xmi:id="_w9fDkXsTEeSLuMTWUFMNdg"/>
-        </children>
-        <children xmi:type="notation:Shape" xmi:id="_N8efgoamEeSBsajI1z9RTw" type="3013">
-          <element xmi:type="uml:Operation" href="Implementation.uml#_eIWJmnsTEeSLuMTWUFMNdg"/>
-          <layoutConstraint xmi:type="notation:Location" xmi:id="_N8efg4amEeSBsajI1z9RTw"/>
-        </children>
         <styles xmi:type="notation:TitleStyle" xmi:id="_fOvJ53sTEeSLuMTWUFMNdg"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_fOvJ6HsTEeSLuMTWUFMNdg"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_fOvJ6XsTEeSLuMTWUFMNdg"/>
@@ -692,35 +677,23 @@
         <styles xmi:type="notation:FilteringStyle" xmi:id="_gpAvg3sTEeSLuMTWUFMNdg"/>
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_gpAvhHsTEeSLuMTWUFMNdg"/>
       </children>
-      <children xmi:type="notation:BasicCompartment" xmi:id="_gpAvhXsTEeSLuMTWUFMNdg" type="7018">
-        <children xmi:type="notation:Shape" xmi:id="_w9ecgHsTEeSLuMTWUFMNdg" type="3013">
-          <styles xmi:type="notation:StringListValueStyle" xmi:id="_cIfhgHueEeSQ2NWCMmu_Fw" name="maskLabel">
-            <stringListValue>parametersType</stringListValue>
-            <stringListValue>parametersName</stringListValue>
-            <stringListValue>visibility</stringListValue>
-            <stringListValue>name</stringListValue>
-            <stringListValue>returnType</stringListValue>
-          </styles>
-          <element xmi:type="uml:Operation" href="Implementation.uml#_eIWwpXsTEeSLuMTWUFMNdg"/>
-          <layoutConstraint xmi:type="notation:Location" xmi:id="_w9ecgXsTEeSLuMTWUFMNdg"/>
-        </children>
-        <children xmi:type="notation:Shape" xmi:id="_N8fGkIamEeSBsajI1z9RTw" type="3013">
-          <element xmi:type="uml:Operation" href="Implementation.uml#_eIWwrnsTEeSLuMTWUFMNdg"/>
-          <layoutConstraint xmi:type="notation:Location" xmi:id="_N8fGkYamEeSBsajI1z9RTw"/>
-        </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_gpAvhXsTEeSLuMTWUFMNdg" type="7018" collapsed="true">
         <styles xmi:type="notation:TitleStyle" xmi:id="_gpAvhnsTEeSLuMTWUFMNdg"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_gpAvh3sTEeSLuMTWUFMNdg"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_gpAviHsTEeSLuMTWUFMNdg"/>
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_gpAviXsTEeSLuMTWUFMNdg"/>
       </children>
       <children xmi:type="notation:BasicCompartment" xmi:id="_gpAvinsTEeSLuMTWUFMNdg" type="7019">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_-r-bAIbTEeSFgYjMB5mfdQ" source="PapyrusCSSForceValue">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_-r-bAYbTEeSFgYjMB5mfdQ" key="collapsed" value="true"/>
+        </eAnnotations>
         <styles xmi:type="notation:TitleStyle" xmi:id="_gpAvi3sTEeSLuMTWUFMNdg"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_gpAvjHsTEeSLuMTWUFMNdg"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_gpAvjXsTEeSLuMTWUFMNdg"/>
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_gpAvjnsTEeSLuMTWUFMNdg"/>
       </children>
       <element xmi:type="uml:Class" href="Implementation.uml#_eIWwoHsTEeSLuMTWUFMNdg"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_gpAIcXsTEeSLuMTWUFMNdg" x="1092" y="719" width="300" height="184"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_gpAIcXsTEeSLuMTWUFMNdg" x="1092" y="708" width="300" height="193"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_ljQ2AHuiEeSz04gN9GtPDA" type="2008" fillColor="8905185">
       <children xmi:type="notation:DecorationNode" xmi:id="_ljRdEHuiEeSz04gN9GtPDA" type="5029"/>

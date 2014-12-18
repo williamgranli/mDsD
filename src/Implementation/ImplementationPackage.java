@@ -4073,31 +4073,13 @@ public interface ImplementationPackage extends EPackage {
 	int ROOM_COMPONENT_BEDROOM_FEATURE_COUNT = ROOM_COMPONENT_ROOM_FEATURE_COUNT + 1;
 
 	/**
-	 * The operation id for the '<em>Create Bedroom</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_COMPONENT_BEDROOM___CREATE_BEDROOM__INT_BOOLEAN_INT_STRING_STRING_INT = ROOM_COMPONENT_ROOM_OPERATION_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Edit Room</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_COMPONENT_BEDROOM___EDIT_ROOM__INT_BOOLEAN_INT_STRING_STRING_INT = ROOM_COMPONENT_ROOM_OPERATION_COUNT + 1;
-
-	/**
 	 * The number of operations of the '<em>Room Component Bedroom</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_COMPONENT_BEDROOM_OPERATION_COUNT = ROOM_COMPONENT_ROOM_OPERATION_COUNT + 2;
+	int ROOM_COMPONENT_BEDROOM_OPERATION_COUNT = ROOM_COMPONENT_ROOM_OPERATION_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Room Number</b></em>' attribute.
@@ -4181,31 +4163,13 @@ public interface ImplementationPackage extends EPackage {
 	int ROOM_COMPONENT_CONFERENCE_ROOM_FEATURE_COUNT = ROOM_COMPONENT_ROOM_FEATURE_COUNT + 3;
 
 	/**
-	 * The operation id for the '<em>Create Conference Room</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_COMPONENT_CONFERENCE_ROOM___CREATE_CONFERENCE_ROOM__INT_BOOLEAN_INT_STRING_STRING_INT_BOOLEAN_BOOLEAN = ROOM_COMPONENT_ROOM_OPERATION_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Edit Room</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_COMPONENT_CONFERENCE_ROOM___EDIT_ROOM__INT_BOOLEAN_INT_STRING_STRING_INT_BOOLEAN_BOOLEAN = ROOM_COMPONENT_ROOM_OPERATION_COUNT + 1;
-
-	/**
 	 * The number of operations of the '<em>Room Component Conference Room</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_COMPONENT_CONFERENCE_ROOM_OPERATION_COUNT = ROOM_COMPONENT_ROOM_OPERATION_COUNT + 2;
+	int ROOM_COMPONENT_CONFERENCE_ROOM_OPERATION_COUNT = ROOM_COMPONENT_ROOM_OPERATION_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Authenticator</b></em>' reference.
@@ -7071,26 +7035,6 @@ public interface ImplementationPackage extends EPackage {
 	EAttribute getRoomComponent_Bedroom_BedCount();
 
 	/**
-	 * Returns the meta object for the '{@link Implementation.RoomComponent_Bedroom#createBedroom(int, boolean, int, java.lang.String, java.lang.String, int) <em>Create Bedroom</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Create Bedroom</em>' operation.
-	 * @see Implementation.RoomComponent_Bedroom#createBedroom(int, boolean, int, java.lang.String, java.lang.String, int)
-	 * @generated
-	 */
-	EOperation getRoomComponent_Bedroom__CreateBedroom__int_boolean_int_String_String_int();
-
-	/**
-	 * Returns the meta object for the '{@link Implementation.RoomComponent_Bedroom#editRoom(int, boolean, int, java.lang.String, java.lang.String, int) <em>Edit Room</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Edit Room</em>' operation.
-	 * @see Implementation.RoomComponent_Bedroom#editRoom(int, boolean, int, java.lang.String, java.lang.String, int)
-	 * @generated
-	 */
-	EOperation getRoomComponent_Bedroom__EditRoom__int_boolean_int_String_String_int();
-
-	/**
 	 * Returns the meta object for class '{@link Implementation.RoomComponent_ConferenceRoom <em>Room Component Conference Room</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7132,26 +7076,6 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getRoomComponent_ConferenceRoom_ConferencePhone();
-
-	/**
-	 * Returns the meta object for the '{@link Implementation.RoomComponent_ConferenceRoom#createConferenceRoom(int, boolean, int, java.lang.String, java.lang.String, int, boolean, boolean) <em>Create Conference Room</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Create Conference Room</em>' operation.
-	 * @see Implementation.RoomComponent_ConferenceRoom#createConferenceRoom(int, boolean, int, java.lang.String, java.lang.String, int, boolean, boolean)
-	 * @generated
-	 */
-	EOperation getRoomComponent_ConferenceRoom__CreateConferenceRoom__int_boolean_int_String_String_int_boolean_boolean();
-
-	/**
-	 * Returns the meta object for the '{@link Implementation.RoomComponent_ConferenceRoom#editRoom(int, boolean, int, java.lang.String, java.lang.String, int, boolean, boolean) <em>Edit Room</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Edit Room</em>' operation.
-	 * @see Implementation.RoomComponent_ConferenceRoom#editRoom(int, boolean, int, java.lang.String, java.lang.String, int, boolean, boolean)
-	 * @generated
-	 */
-	EOperation getRoomComponent_ConferenceRoom__EditRoom__int_boolean_int_String_String_int_boolean_boolean();
 
 	/**
 	 * Returns the meta object for class '{@link Implementation.RoomComponent_IRoomAdministration <em>Room Component IRoom Administration</em>}'.
@@ -9320,22 +9244,6 @@ public interface ImplementationPackage extends EPackage {
 		EAttribute ROOM_COMPONENT_BEDROOM__BED_COUNT = eINSTANCE.getRoomComponent_Bedroom_BedCount();
 
 		/**
-		 * The meta object literal for the '<em><b>Create Bedroom</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ROOM_COMPONENT_BEDROOM___CREATE_BEDROOM__INT_BOOLEAN_INT_STRING_STRING_INT = eINSTANCE.getRoomComponent_Bedroom__CreateBedroom__int_boolean_int_String_String_int();
-
-		/**
-		 * The meta object literal for the '<em><b>Edit Room</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ROOM_COMPONENT_BEDROOM___EDIT_ROOM__INT_BOOLEAN_INT_STRING_STRING_INT = eINSTANCE.getRoomComponent_Bedroom__EditRoom__int_boolean_int_String_String_int();
-
-		/**
 		 * The meta object literal for the '{@link Implementation.impl.RoomComponent_ConferenceRoomImpl <em>Room Component Conference Room</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -9368,22 +9276,6 @@ public interface ImplementationPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ROOM_COMPONENT_CONFERENCE_ROOM__CONFERENCE_PHONE = eINSTANCE.getRoomComponent_ConferenceRoom_ConferencePhone();
-
-		/**
-		 * The meta object literal for the '<em><b>Create Conference Room</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ROOM_COMPONENT_CONFERENCE_ROOM___CREATE_CONFERENCE_ROOM__INT_BOOLEAN_INT_STRING_STRING_INT_BOOLEAN_BOOLEAN = eINSTANCE.getRoomComponent_ConferenceRoom__CreateConferenceRoom__int_boolean_int_String_String_int_boolean_boolean();
-
-		/**
-		 * The meta object literal for the '<em><b>Edit Room</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ROOM_COMPONENT_CONFERENCE_ROOM___EDIT_ROOM__INT_BOOLEAN_INT_STRING_STRING_INT_BOOLEAN_BOOLEAN = eINSTANCE.getRoomComponent_ConferenceRoom__EditRoom__int_boolean_int_String_String_int_boolean_boolean();
 
 		/**
 		 * The meta object literal for the '{@link Implementation.RoomComponent_IRoomAdministration <em>Room Component IRoom Administration</em>}' class.
