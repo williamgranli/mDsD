@@ -1007,6 +1007,9 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
           <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_mGZHIIU4EeS93fj9yg1HxA"/>
         </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_WXLigIbIEeSR8uMaeg-wcA" name="isActive" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedAttribute>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_gokdsnuiEeSz04gN9GtPDA" name="addAdditionalServiceToBooking" visibility="private">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_gokds3uiEeSz04gN9GtPDA" name="newService">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
@@ -2073,4 +2076,5 @@
   </uml:Package>
   <ActionLanguage:TextualRepresentation xmi:id="_eIXXsHsTEeSLuMTWUFMNdg" base_Comment="_eIU7cnsTEeSLuMTWUFMNdg"/>
   <ActionLanguage:TextualRepresentation xmi:id="_JGypUIQ9EeSoeaaLNVrs8Q" language="org.eclipse.papyrus.uml.textedit.property.xtext.UmlProperty"/>
+  <ActionLanguage:TextualRepresentation xmi:id="_X483QIbIEeSR8uMaeg-wcA" language="org.eclipse.papyrus.uml.textedit.property.xtext.UmlProperty"/>
 </xmi:XMI>
