@@ -278,75 +278,9 @@ public class AdditionalServiceComponent_AdditionalServiceImpl extends MinimalEOb
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public AdditionalServiceComponent_AdditionalServiceEvent findEvent(Date dateTime, String location) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<AdditionalServiceComponent_AdditionalServiceEvent> findEvents(Date dateTime) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean createEvent(Date dateTime, String location, int maxAttendants, int currentAttendants) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean editEvent(Date dateTime, String location, int maxAttendants, int currentAttendants) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean removeEvent(Date dateTime, String location) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean removeEvents(Date dateTime) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public AdditionalServiceComponent_AdditionalServiceEvent OLD_findEvent(Date dateTime, String location) {
+	public AdditionalServiceComponent_AdditionalServiceEvent findEvent(Date dateTime, String location) {
 		for (AdditionalServiceComponent_AdditionalServiceEvent e : additionalServiceEvent) {
 			if (e.getDateTime() == dateTime && e.getLocation() == location) {
 				return e;
@@ -361,7 +295,7 @@ public class AdditionalServiceComponent_AdditionalServiceImpl extends MinimalEOb
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public EList<AdditionalServiceComponent_AdditionalServiceEvent> OLD_findEvents(Date dateTime) {
+	public EList<AdditionalServiceComponent_AdditionalServiceEvent> findEvents(Date dateTime) {
 		tempEvents = null;
 		EList<AdditionalServiceComponent_AdditionalServiceEvent> tempEvents = getTempEvents();
 
@@ -371,7 +305,6 @@ public class AdditionalServiceComponent_AdditionalServiceImpl extends MinimalEOb
 			}
 		}
 		if (tempEvents != null) {
-			//TODO Change this to return tempEvents
 			return tempEvents;
 		}
 		//System.out.println("findEvents(): Events not found (" + dateTime + ")");
@@ -383,7 +316,7 @@ public class AdditionalServiceComponent_AdditionalServiceImpl extends MinimalEOb
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public boolean OLD_createEvent(Date dateTime, String location, int maxAttendants, int currentAttendants) {
+	public boolean createEvent(Date dateTime, String location, int maxAttendants, int currentAttendants) {
 		AdditionalServiceComponent_AdditionalServiceEvent event = findEvent(dateTime,location);
 		if (event == null) {
 			this.getAdditionalServiceEvent().add(new AdditionalServiceComponent_AdditionalServiceEventImpl(dateTime,location, maxAttendants, currentAttendants));
@@ -398,7 +331,7 @@ public class AdditionalServiceComponent_AdditionalServiceImpl extends MinimalEOb
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public boolean OLD_editEvent(Date dateTime, String location, int maxAttendants, int currentAttendants) {
+	public boolean editEvent(Date dateTime, String location, int maxAttendants, int currentAttendants) {
 		AdditionalServiceComponent_AdditionalServiceEvent event = findEvent(dateTime,location);
 		if (event != null) {
 			if (currentAttendants <= maxAttendants) {
@@ -417,7 +350,7 @@ public class AdditionalServiceComponent_AdditionalServiceImpl extends MinimalEOb
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public boolean OLD_removeEvent(Date dateTime, String location) {
+	public boolean removeEvent(Date dateTime, String location) {
 		AdditionalServiceComponent_AdditionalServiceEvent event = findEvent(dateTime,location);
 		if (event != null) {
 			this.getAdditionalServiceEvent().remove(event);
@@ -432,7 +365,7 @@ public class AdditionalServiceComponent_AdditionalServiceImpl extends MinimalEOb
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public boolean OLD_removeEvents(Date dateTime) {
+	public boolean removeEvents(Date dateTime) {
 		EList<AdditionalServiceComponent_AdditionalServiceEvent> event = findEvents(dateTime);
 		if (event != null) {
 			for (AdditionalServiceComponent_AdditionalServiceEvent e : event) {

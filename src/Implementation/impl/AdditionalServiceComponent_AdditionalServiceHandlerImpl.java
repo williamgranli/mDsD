@@ -127,130 +127,9 @@ public class AdditionalServiceComponent_AdditionalServiceHandlerImpl extends Min
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<String> getServices() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<String> getEvents(String name) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean addGuestToEvent(String name, Date dateTime, String location, int guests) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean removeGuestsFromEvent(String name, Date dateTime, String location, int guests) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean createAdditionalService(String name, boolean usable, int price, String description) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean editAdditionalService(String oldName, String name, boolean usable, int price, String description) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean removeAdditionalService(String name) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean createEvent(String name, Date dateTime, String location, int maxAttendants, int currentAttendants) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean editEvent(String name, Date dateTime, String location, int maxAttendants, int currentAttendants) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean removeEvent(String name, Date dateTime, String location) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean removeEvents(String name, Date dateTime) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public EList<String> OLD_getServices() {
+	public EList<String> getServices() {
 		EList<String> result = new BasicEList<String>();
 		for (AdditionalServiceComponent_AdditionalService s : additionalService) {
 			result.add(s.getName());
@@ -266,7 +145,7 @@ public class AdditionalServiceComponent_AdditionalServiceHandlerImpl extends Min
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public EList<String> OLD_getEvents(String name) {
+	public EList<String> getEvents(String name) {
 		AdditionalServiceComponent_AdditionalService service = findService(name);
 		EList<String> result = new BasicEList<String>();
 				
@@ -285,7 +164,7 @@ public class AdditionalServiceComponent_AdditionalServiceHandlerImpl extends Min
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public boolean OLD_addGuestToEvent(String name, Date dateTime, String location, int guests) {
+	public boolean addGuestToEvent(String name, Date dateTime, String location, int guests) {
 		AdditionalServiceComponent_AdditionalService service = findService(name);
 		if (service != null) {
 			int max = service.findEvent(dateTime, location).getMaxAttendant();
@@ -301,7 +180,7 @@ public class AdditionalServiceComponent_AdditionalServiceHandlerImpl extends Min
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public boolean OLD_removeGuestsFromEvent(String name, Date dateTime, String location, int guests) {
+	public boolean removeGuestsFromEvent(String name, Date dateTime, String location, int guests) {
 		AdditionalServiceComponent_AdditionalService service = findService(name);
 		if (service != null) {
 			int max = service.findEvent(dateTime, location).getMaxAttendant();
@@ -317,7 +196,7 @@ public class AdditionalServiceComponent_AdditionalServiceHandlerImpl extends Min
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public boolean OLD_createAdditionalService(String name, boolean usable, int price, String description) {
+	public boolean createAdditionalService(String name, boolean usable, int price, String description) {
 		AdditionalServiceComponent_AdditionalService service = findService(name);
 		if (service == null) {
 			additionalService.add(new AdditionalServiceComponent_AdditionalServiceImpl(name, usable, price, description));
@@ -334,7 +213,7 @@ public class AdditionalServiceComponent_AdditionalServiceHandlerImpl extends Min
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public boolean OLD_editAdditionalService(String oldName, String name, boolean usable, int price, String description) {
+	public boolean editAdditionalService(String oldName, String name, boolean usable, int price, String description) {
 		AdditionalServiceComponent_AdditionalService service = findService(oldName);
 		if (service != null) {
 			if (removeAdditionalService(oldName)) {
@@ -349,7 +228,7 @@ public class AdditionalServiceComponent_AdditionalServiceHandlerImpl extends Min
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public boolean OLD_removeAdditionalService(String name) {
+	public boolean removeAdditionalService(String name) {
 		AdditionalServiceComponent_AdditionalService service = findService(name);
 		if (service == null) {
 			//System.out.println("A service with the name \"" + name + "\" does not exist...");
@@ -366,7 +245,7 @@ public class AdditionalServiceComponent_AdditionalServiceHandlerImpl extends Min
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public boolean OLD_createEvent(String name, Date dateTime, String location, int maxAttendants, int currentAttendants) {
+	public boolean createEvent(String name, Date dateTime, String location, int maxAttendants, int currentAttendants) {
 		AdditionalServiceComponent_AdditionalService service = findService(name);
 		if (service == null) {
 			//System.out.println("A service with name " + name + " does not exist. Creating...");
@@ -387,7 +266,7 @@ public class AdditionalServiceComponent_AdditionalServiceHandlerImpl extends Min
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public boolean OLD_editEvent(String name, Date dateTime, String location, int maxAttendants, int currentAttendants) {
+	public boolean editEvent(String name, Date dateTime, String location, int maxAttendants, int currentAttendants) {
 		AdditionalServiceComponent_AdditionalService service = findService(name);
 		if (service != null) {
 			if(service.editEvent(dateTime,location,maxAttendants,currentAttendants)){
@@ -402,7 +281,7 @@ public class AdditionalServiceComponent_AdditionalServiceHandlerImpl extends Min
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public boolean OLD_removeEvent(String name, Date dateTime, String location) {
+	public boolean removeEvent(String name, Date dateTime, String location) {
 		AdditionalServiceComponent_AdditionalService service = findService(name);
 		if (service != null) {
 			if (service.removeEvent(dateTime,location)) {
@@ -417,7 +296,7 @@ public class AdditionalServiceComponent_AdditionalServiceHandlerImpl extends Min
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public boolean OLD_removeEvents(String name, Date dateTime) {
+	public boolean removeEvents(String name, Date dateTime) {
 		AdditionalServiceComponent_AdditionalService service = findService(name);
 		if (service != null) {
 			if (service.removeEvents(dateTime)) {
@@ -430,20 +309,9 @@ public class AdditionalServiceComponent_AdditionalServiceHandlerImpl extends Min
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public AdditionalServiceComponent_AdditionalService findService(String name) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public AdditionalServiceComponent_AdditionalService OLD_findService(String name) {
+	public AdditionalServiceComponent_AdditionalService findService(String name) {
 		for (AdditionalServiceComponent_AdditionalService s : additionalService) {
 			if (s.getName() == name) {
 				return s;
