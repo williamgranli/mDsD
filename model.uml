@@ -22,21 +22,21 @@
             <ownedAttribute xmi:type="uml:Property" xmi:id="_PnO-cGT3EeS_fYcbMbH-Fw" name="Name">
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
             </ownedAttribute>
-            <ownedAttribute xmi:type="uml:Property" xmi:id="_3lsmIGT4EeS_fYcbMbH-Fw" name="Phone">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_GDcCEGT5EeS_fYcbMbH-Fw" name="Email">
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
             </ownedAttribute>
-            <ownedAttribute xmi:type="uml:Property" xmi:id="_GDcCEGT5EeS_fYcbMbH-Fw" name="Email">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_gD9sgIaqEeSXnt7hkl6G6g" name="Password">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_xJseYIaqEeSXnt7hkl6G6g" name="Phone">
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
             </ownedAttribute>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_it5F0G81EeScVK6OjRPslw" name="logIn"/>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_kNZJsG81EeScVK6OjRPslw" name="logOut"/>
           </packagedElement>
           <packagedElement xmi:type="uml:Class" xmi:id="_Jv5fAGT0EeS_fYcbMbH-Fw" name="Guest">
-            <ownedAttribute xmi:type="uml:Property" xmi:id="_FANNAGUFEeS_fYcbMbH-Fw" name="SSN">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_FANNAGUFEeS_fYcbMbH-Fw" name="ID">
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
-            </ownedAttribute>
-            <ownedAttribute xmi:type="uml:Property" xmi:id="_IDnToGUFEeS_fYcbMbH-Fw" name="Name">
-              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
             </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_Rns5AGUFEeS_fYcbMbH-Fw" name="Phone">
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
@@ -44,9 +44,8 @@
             <ownedAttribute xmi:type="uml:Property" xmi:id="_UWCukGUFEeS_fYcbMbH-Fw" name="Address">
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
             </ownedAttribute>
-            <ownedAttribute xmi:type="uml:Property" xmi:id="_WpJZoGUFEeS_fYcbMbH-Fw" name="Email">
-              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
-            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_LEmhMIarEeSXnt7hkl6G6g" name="LastName"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_MrbVEIarEeSXnt7hkl6G6g" name="FirstName"/>
           </packagedElement>
           <packagedElement xmi:type="uml:Class" xmi:id="_O2_7sGT0EeS_fYcbMbH-Fw" name="Room Type">
             <ownedAttribute xmi:type="uml:Property" xmi:id="_EcXngGUCEeS_fYcbMbH-Fw" name="ID">
@@ -63,7 +62,7 @@
             </ownedAttribute>
           </packagedElement>
           <packagedElement xmi:type="uml:Class" xmi:id="_SAs3kGT0EeS_fYcbMbH-Fw" name="Payment">
-            <ownedAttribute xmi:type="uml:Property" xmi:id="_xqOFMGUDEeS_fYcbMbH-Fw" name="Cost">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_xqOFMGUDEeS_fYcbMbH-Fw" name="PaymentTotal">
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
             </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_i43yYGv2EeSEv4PBfvvHkw" name="DateTime">
@@ -78,6 +77,9 @@
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
             </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_WiQSYHGFEeSrFY1I6Ix49Q" name="Location"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_SreocIaqEeSXnt7hkl6G6g" name="Description">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_4tO1gG82EeScVK6OjRPslw" name="getAdditionalServiceInfo"/>
           </packagedElement>
           <packagedElement xmi:type="uml:Class" xmi:id="_VbQS4GT0EeS_fYcbMbH-Fw" name="Additional Services Type">
@@ -194,6 +196,7 @@
             <ownedOperation xmi:type="uml:Operation" xmi:id="_o3IU8G81EeScVK6OjRPslw" name="getRoomInfo"/>
           </packagedElement>
           <packagedElement xmi:type="uml:Class" xmi:id="_OICJoGUEEeS_fYcbMbH-Fw" name="Receipt">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_6Si5QIaqEeSXnt7hkl6G6g" name="ID"/>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_cwaTYG84EeScVK6OjRPslw" name="getPaymentDetails"/>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_fDvn8G84EeScVK6OjRPslw" name="sendReceiptByEmail"/>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_hC0jwG84EeScVK6OjRPslw" name="print"/>
@@ -234,6 +237,7 @@
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
             </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_ciavgHlQEeSPCdLPklumvw" name="LastName"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_ROJ5YIarEeSXnt7hkl6G6g" name="Phone"/>
           </packagedElement>
           <packagedElement xmi:type="uml:Association" xmi:id="_CVHKgGaLEeSc971ouTOLAg" name="Has" memberEnd="_CVHKgWaLEeSc971ouTOLAg _CVGjcGaLEeSc971ouTOLAg">
             <ownedEnd xmi:type="uml:Property" xmi:id="_CVHKgWaLEeSc971ouTOLAg" name="customer" type="_QMwFMGaKEeSc971ouTOLAg" association="_CVHKgGaLEeSc971ouTOLAg">
@@ -476,7 +480,7 @@
               <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_9ZsAJnlTEeSPCdLPklumvw" value="1"/>
             </ownedEnd>
             <ownedEnd xmi:type="uml:Property" xmi:id="_9ZsAIHlTEeSPCdLPklumvw" name="key" type="_5Z1fYHlTEeSPCdLPklumvw" aggregation="shared" association="_9ZsAI3lTEeSPCdLPklumvw">
-              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_9ZsAIXlTEeSPCdLPklumvw" value="6"/>
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_9ZsAIXlTEeSPCdLPklumvw" value="1"/>
               <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_9ZsAInlTEeSPCdLPklumvw" value="6"/>
             </ownedEnd>
           </packagedElement>
@@ -1484,10 +1488,19 @@
             <client xmi:type="uml:Component" href="impl/Implementation.uml#__b5yoHobEeSypfm9OOQUYA"/>
             <supplier xmi:type="uml:Interface" href="impl/Implementation.uml#_yNtywnumEeSUpK3HS5a0Lg"/>
           </packagedElement>
+          <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_zsmbMH-zEeSVo4U8yTxtOw" name="RoomRealizesDecision">
+            <client xmi:type="uml:Component" href="impl/Implementation.uml#_9a3H8HobEeSypfm9OOQUYA"/>
+            <supplier xmi:type="uml:Interface" href="impl/Implementation.uml#_hieNEH-zEeSVo4U8yTxtOw"/>
+            <contract xmi:type="uml:Interface" href="impl/Implementation.uml#_hieNEH-zEeSVo4U8yTxtOw"/>
+          </packagedElement>
           <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_p1lSwH-zEeSVo4U8yTxtOw" name="BookingRealizesDecision">
             <client xmi:type="uml:Component" href="impl/Implementation.uml#_DBMeUHocEeSypfm9OOQUYA"/>
             <supplier xmi:type="uml:Interface" href="impl/Implementation.uml#_eX8x0H-zEeSVo4U8yTxtOw"/>
             <contract xmi:type="uml:Interface" href="impl/Implementation.uml#_eX8x0H-zEeSVo4U8yTxtOw"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:ComponentRealization" xmi:id="_1U6c0H-zEeSVo4U8yTxtOw" name="AdditionalServiceRealizesDecision">
+            <client xmi:type="uml:Component" href="impl/Implementation.uml#_IaMjUHocEeSypfm9OOQUYA"/>
+            <supplier xmi:type="uml:Interface" href="impl/Implementation.uml#_cDvTgH-zEeSVo4U8yTxtOw"/>
           </packagedElement>
           <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_xP-nwH-zEeSVo4U8yTxtOw" name="OccupancyRealizesDecision">
             <client xmi:type="uml:Component" href="impl/Implementation.uml#_Q51pIHocEeSypfm9OOQUYA"/>
@@ -1499,9 +1512,17 @@
             <supplier xmi:type="uml:Interface" href="impl/Implementation.uml#_3t3tsH-yEeSVo4U8yTxtOw"/>
             <contract xmi:type="uml:Interface" href="impl/Implementation.uml#_3t3tsH-yEeSVo4U8yTxtOw"/>
           </packagedElement>
+          <packagedElement xmi:type="uml:Usage" xmi:id="_FafZQH-0EeSVo4U8yTxtOw" name="Usage0">
+            <client xmi:type="uml:Component" href="impl/Implementation.uml#_TXYc0H-yEeSVo4U8yTxtOw"/>
+            <supplier xmi:type="uml:Interface" href="impl/Implementation.uml#_hieNEH-zEeSVo4U8yTxtOw"/>
+          </packagedElement>
           <packagedElement xmi:type="uml:Usage" xmi:id="_GIJJcH-0EeSVo4U8yTxtOw" name="Usage1">
             <client xmi:type="uml:Component" href="impl/Implementation.uml#_TXYc0H-yEeSVo4U8yTxtOw"/>
             <supplier xmi:type="uml:Interface" href="Occupancy/Occupancy.uml#_9CLf8H-yEeSVo4U8yTxtOw"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Usage" xmi:id="_HqtvcH-0EeSVo4U8yTxtOw" name="Usage2">
+            <client xmi:type="uml:Component" href="impl/Implementation.uml#_TXYc0H-yEeSVo4U8yTxtOw"/>
+            <supplier xmi:type="uml:Interface" href="impl/Implementation.uml#_cDvTgH-zEeSVo4U8yTxtOw"/>
           </packagedElement>
           <packagedElement xmi:type="uml:Usage" xmi:id="_L8nCcH-0EeSVo4U8yTxtOw" name="Usage3">
             <client xmi:type="uml:Component" href="impl/Implementation.uml#_TXYc0H-yEeSVo4U8yTxtOw"/>
@@ -1518,18 +1539,6 @@
         <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_gDR3k4RbEeSwC95jIvSgtA" name="Realization0" client="_gDR3kYRbEeSwC95jIvSgtA">
           <supplier xmi:type="uml:Interface" href="impl/Implementation.uml#_gDR3toRbEeSwC95jIvSgtA"/>
           <contract xmi:type="uml:Interface" href="impl/Implementation.uml#_gDR3toRbEeSwC95jIvSgtA"/>
-        </packagedElement>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Package" xmi:id="_m59cUIacEeSBsajI1z9RTw" name="InterfaceDiagrams">
-        <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_1M0zEIaeEeSBsajI1z9RTw">
-          <client xmi:type="uml:Component" href="impl/Implementation.uml#_Q51pIHocEeSypfm9OOQUYA"/>
-          <supplier xmi:type="uml:Interface" href="impl/Implementation.uml#_HB-RAIBPEeSMz8ND1yS4hA"/>
-          <contract xmi:type="uml:Interface" href="impl/Implementation.uml#_HB-RAIBPEeSMz8ND1yS4hA"/>
-        </packagedElement>
-        <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_1x3Z0IaeEeSBsajI1z9RTw">
-          <client xmi:type="uml:Component" href="impl/Implementation.uml#_Q51pIHocEeSypfm9OOQUYA"/>
-          <supplier xmi:type="uml:Interface" href="impl/Implementation.uml#_at5KQHp2EeS6O5zO6NZCqA"/>
-          <contract xmi:type="uml:Interface" href="impl/Implementation.uml#_at5KQHp2EeS6O5zO6NZCqA"/>
         </packagedElement>
       </packagedElement>
     </packagedElement>
