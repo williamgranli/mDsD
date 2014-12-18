@@ -1188,13 +1188,22 @@ public interface ImplementationPackage extends EPackage {
 	int ROOM_COMPONENT_IROOM_INFORMATION___GET_COUNT_OF_ROOM_TYPE__STRING = 5;
 
 	/**
+	 * The operation id for the '<em>Get Price Of Room Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_COMPONENT_IROOM_INFORMATION___GET_PRICE_OF_ROOM_TYPE__STRING = 6;
+
+	/**
 	 * The number of operations of the '<em>Room Component IRoom Information</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_COMPONENT_IROOM_INFORMATION_OPERATION_COUNT = 6;
+	int ROOM_COMPONENT_IROOM_INFORMATION_OPERATION_COUNT = 7;
 
 	/**
 	 * The meta object id for the '{@link Implementation.BookingComponent_IBookingInformation <em>Booking Component IBooking Information</em>}' class.
@@ -3794,6 +3803,15 @@ public interface ImplementationPackage extends EPackage {
 	int ROOM_COMPONENT___GET_COUNT_OF_ROOM_TYPE__STRING = ROOM_COMPONENT_IROOM_INFORMATION___GET_COUNT_OF_ROOM_TYPE__STRING;
 
 	/**
+	 * The operation id for the '<em>Get Price Of Room Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_COMPONENT___GET_PRICE_OF_ROOM_TYPE__STRING = ROOM_COMPONENT_IROOM_INFORMATION___GET_PRICE_OF_ROOM_TYPE__STRING;
+
+	/**
 	 * The operation id for the '<em>Create Bed Room</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4260,6 +4278,15 @@ public interface ImplementationPackage extends EPackage {
 	 * @ordered
 	 */
 	int ROOM_COMPONENT_ROOM_HANDLER___GET_COUNT_OF_ROOM_TYPE__STRING = ROOM_COMPONENT_IROOM_INFORMATION___GET_COUNT_OF_ROOM_TYPE__STRING;
+
+	/**
+	 * The operation id for the '<em>Get Price Of Room Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_COMPONENT_ROOM_HANDLER___GET_PRICE_OF_ROOM_TYPE__STRING = ROOM_COMPONENT_IROOM_INFORMATION___GET_PRICE_OF_ROOM_TYPE__STRING;
 
 	/**
 	 * The operation id for the '<em>Create Bed Room</em>' operation.
@@ -5267,6 +5294,16 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getRoomComponent_IRoomInformation__GetCountOfRoomType__String();
+
+	/**
+	 * Returns the meta object for the '{@link Implementation.RoomComponent_IRoomInformation#getPriceOfRoomType(java.lang.String) <em>Get Price Of Room Type</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Price Of Room Type</em>' operation.
+	 * @see Implementation.RoomComponent_IRoomInformation#getPriceOfRoomType(java.lang.String)
+	 * @generated
+	 */
+	EOperation getRoomComponent_IRoomInformation__GetPriceOfRoomType__String();
 
 	/**
 	 * Returns the meta object for class '{@link Implementation.BookingComponent_IBookingInformation <em>Booking Component IBooking Information</em>}'.
@@ -7833,6 +7870,14 @@ public interface ImplementationPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation ROOM_COMPONENT_IROOM_INFORMATION___GET_COUNT_OF_ROOM_TYPE__STRING = eINSTANCE.getRoomComponent_IRoomInformation__GetCountOfRoomType__String();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Price Of Room Type</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ROOM_COMPONENT_IROOM_INFORMATION___GET_PRICE_OF_ROOM_TYPE__STRING = eINSTANCE.getRoomComponent_IRoomInformation__GetPriceOfRoomType__String();
 
 		/**
 		 * The meta object literal for the '{@link Implementation.BookingComponent_IBookingInformation <em>Booking Component IBooking Information</em>}' class.

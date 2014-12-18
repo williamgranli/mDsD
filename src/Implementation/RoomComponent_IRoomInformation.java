@@ -64,4 +64,12 @@ public interface RoomComponent_IRoomInformation extends EObject {
 	 */
 	int getCountOfRoomType(String roomType);
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" roomTypeDataType="org.eclipse.uml2.types.String" roomTypeRequired="true" roomTypeOrdered="false"
+	 * @generated
+	 */
+	int getPriceOfRoomType(String roomType);
+
 } // RoomComponent_IRoomInformation
