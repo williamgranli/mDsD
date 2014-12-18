@@ -600,15 +600,16 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 			System.out.println("Invalid Booking Reference");
 			return false;
 		}
-		else if(!confirmBooking(bookingReference)) {
+		
+		bookingToChange.addGuestToBooking(firstName, lastName, address);
+		
+		if(!confirmBooking(bookingReference)) {
 			System.out.println("Unable to add more guests to this booking, please add more rooms first.");
+			bookingToChange.removeGuestFromBooking(firstName, lastName, address);
 			return false;
 		}
-		else
-		{
-			bookingToChange.addGuestToBooking(firstName, lastName, address);
-			return true;
-		}
+		
+		return true;
 	}
 
 	/**
@@ -622,6 +623,7 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 			System.out.println("Invalid Booking Reference");
 			return false;
 		} else {
+			System.out.println("Removing!");
 			targetBooking.removeGuestFromBooking(firstName, lastName, address);
 			return true;
 		}

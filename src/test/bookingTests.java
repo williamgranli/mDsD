@@ -84,7 +84,6 @@ public class bookingTests {
 	
     @Test
     public void makeBooking() {
-    	//setupRoomHandler();
     	Date nextWeek = nextWeekDate();
     	
     	org.junit.Assert.assertTrue(booking.getBookings().size() == 0);
@@ -182,9 +181,15 @@ public class bookingTests {
     
     @Test
     public void addGuestToBooking() {
-    	String referenceNumber = booking.makeBooking(getRandomRoomType(), new Date(), new Date(2014, 12, 31), "880923", "John", "Burchell", "MyHouse", "123456789", "123", 9, 16, 1);
-    	booking.addGuestToBooking(referenceNumber, "Frodo", "Baggins", "The Shire");
-    	booking.addGuestToBooking(referenceNumber, "Bilbo", "Baggins", "The Old Shire");
+    	String type = getRandomRoomType();
+    	String referenceNumber = booking.makeBooking(type, new Date(), new Date(), "880923", "John", "Burchell", "MyHouse", "123456789", "123", 9, 16, 1);
+    	booking.addRoom(referenceNumber, type, booking.getIRoomInformation().getPriceOfRoomType(type));
+    	
+    	boolean attemptOne = booking.addGuestToBooking(referenceNumber, "Frodo", "Baggins", "The Shire");
+    	boolean attemptTwo = booking.addGuestToBooking(referenceNumber, "Bilbo", "Baggins", "The Old Shire");
+    	
+    	org.junit.Assert.assertTrue(attemptOne);
+    	org.junit.Assert.assertTrue(attemptTwo);
     	org.junit.Assert.assertTrue(booking.findBooking(referenceNumber).getGuests().size() == 2);
     	org.junit.Assert.assertTrue(booking.findBooking(referenceNumber).getGuests().get(0).getFirstName().equals("Frodo"));
     	org.junit.Assert.assertTrue(booking.findBooking(referenceNumber).getGuests().get(1).getFirstName().equals("Bilbo"));
@@ -194,7 +199,10 @@ public class bookingTests {
     public void addMoreGuestsThanRooms() {
     	Date nextWeek = nextWeekDate();
     	
-    	String referenceNumber = booking.makeBooking(getRandomRoomType(), new Date(), nextWeek, "880923", "John", "Burchell", "MyHouse", "123456789", "123", 9, 16, 1);
+    	String type = getRandomRoomType();
+    	String referenceNumber = booking.makeBooking(type, new Date(), new Date(), "880923", "John", "Burchell", "MyHouse", "123456789", "123", 9, 16, 1);
+    	booking.addRoom(referenceNumber, type, booking.getIRoomInformation().getPriceOfRoomType(type));
+    	
     	booking.addGuestToBooking(referenceNumber, "Frodo", "Baggins", "The Shire");
     	booking.addGuestToBooking(referenceNumber, "Bilbo", "Baggins", "The Old Shire");
     	boolean result = booking.addGuestToBooking(referenceNumber, "Sauron", "Baggins", "The Even Older Shire");
@@ -208,10 +216,13 @@ public class bookingTests {
     
     @Test
     public void removeGuest() {
-    	String referenceNumber = booking.makeBooking(getRandomRoomType(), new Date(), new Date(), "880923", "John", "Burchell", "MyHouse", "123456789", "123", 9, 16, 1);
+    	String type = getRandomRoomType();
+    	String referenceNumber = booking.makeBooking(type, new Date(), new Date(), "880923", "John", "Burchell", "MyHouse", "123456789", "123", 9, 16, 1);
+    	booking.addRoom(referenceNumber, type, booking.getIRoomInformation().getPriceOfRoomType(type));
     	booking.addGuestToBooking(referenceNumber, "Frodo", "Baggins", "The Shire");
     	booking.addGuestToBooking(referenceNumber, "Bilbo", "Baggins", "Mordor");
     	booking.removeGuest(referenceNumber, "Frodo", "Baggins", "The Shire");
+    	System.out.println(booking.findBooking(referenceNumber).getGuests().size());
     	org.junit.Assert.assertTrue(booking.findBooking(referenceNumber).getGuests().size() == 1);
     	org.junit.Assert.assertTrue(booking.findBooking(referenceNumber).getGuests().get(0).getFirstName().equals("Bilbo"));
     }
