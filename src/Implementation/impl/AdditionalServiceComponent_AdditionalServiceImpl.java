@@ -582,32 +582,10 @@ public class AdditionalServiceComponent_AdditionalServiceImpl extends MinimalEOb
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(", usable: ");
-		result.append(usable);
-		result.append(", price: ");
-		result.append(price);
-		result.append(", description: ");
-		result.append(description);
-		result.append(')');
-		return result.toString();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	@Override
-	public String OLD_toString() {
+	public String toString() {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer();

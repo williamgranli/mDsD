@@ -42,7 +42,7 @@ public class AdditionalServicesTests {
 	
 	@Test
 	public void createService() {
-		System.out.print("\n\n### FUNC: ");
+		System.out.print("\n### FUNC: ");
 		System.out.println("createService()\n");
 		
 		as.createAdditionalService("SERVICE", true, 500, "Test description");
@@ -51,7 +51,7 @@ public class AdditionalServicesTests {
 	
 	@Test
 	public void createAndEditService() {
-		System.out.print("\n\n### FUNC: ");
+		System.out.print("\n### FUNC: ");
 		System.out.println("createAndEditService()\n");
 		
 		as.createAdditionalService("SERVICE", true, 500, "Test description");
@@ -64,7 +64,7 @@ public class AdditionalServicesTests {
 	
 	@Test
 	public void createTwoServicesRemoveOne() {
-		System.out.print("\n\n### FUNC: ");
+		System.out.print("\n### FUNC: ");
 		System.out.println("createTwoServicesRemoveOne()\n");
 		
 		as.createAdditionalService("SERVICE1", true, 500, "Test description");
@@ -76,7 +76,7 @@ public class AdditionalServicesTests {
 	
 	@Test
 	public void createFiveRemoveOne() {
-		System.out.print("\n\n### FUNC: ");
+		System.out.print("\n### FUNC: ");
 		System.out.println("createFiveRemoveOne()\n");
 		
 		as.createAdditionalService("SERVICE1", true, 500, "Test description");
@@ -90,7 +90,7 @@ public class AdditionalServicesTests {
 	
 	@Test
 	public void preventDuplicateServices() {
-		System.out.print("\n\n### FUNC: ");
+		System.out.print("\n### FUNC: ");
 		System.out.println("preventDuplicateServices()\n");
 		
 		as.createAdditionalService("SERVICE1", true, 500, "Test description");
@@ -100,7 +100,7 @@ public class AdditionalServicesTests {
 	
 	@Test
 	public void addDeleteAddDeleteAdd() {
-		System.out.print("\n\n### FUNC: ");
+		System.out.print("\n### FUNC: ");
 		System.out.println("addDeleteAddDeleteAdd()\n");
 		
 		as.createAdditionalService("SERVICE", true, 500, "Test description");
@@ -113,7 +113,7 @@ public class AdditionalServicesTests {
 	
 	@Test
 	public void createServiceAddEventEditEvent() {
-		System.out.print("\n\n### FUNC: ");
+		System.out.print("\n### FUNC: ");
 		System.out.println("createServiceAddEventEditEvent()\n");
 		
 		Date date = new Date();
@@ -129,7 +129,7 @@ public class AdditionalServicesTests {
 	
 	@Test
 	public void addTooManyAttendantsToEvent() {
-		System.out.print("\n\n### FUNC: ");
+		System.out.print("\n### FUNC: ");
 		System.out.println("addTooManyAttendantsToEvent()\n");
 		
 		Date date = new Date();
@@ -145,7 +145,7 @@ public class AdditionalServicesTests {
 	
 	@Test
 	public void createServiceAddTwoEvent() {
-		System.out.print("\n\n### FUNC: ");
+		System.out.print("\n### FUNC: ");
 		System.out.println("createServiceAddEvent()\n");
 		
 		Date date = new Date();
@@ -164,7 +164,7 @@ public class AdditionalServicesTests {
 	
 	@Test
 	public void createServiceAddTwoEventsRemoveOneEvent() {
-		System.out.print("\n\n### FUNC: ");
+		System.out.print("\n### FUNC: ");
 		System.out.println("createServiceAddTwoEventsRemoveOneEvent()\n");
 		
 		Date date = new Date();
@@ -184,7 +184,7 @@ public class AdditionalServicesTests {
 	
 	@Test
 	public void createEventWithoutExistingService() {
-		System.out.print("\n\n### FUNC: ");
+		System.out.print("\n### FUNC: ");
 		System.out.println("createEventWithoutExistingService()\n");
 		
 		Date date = new Date();
@@ -200,7 +200,7 @@ public class AdditionalServicesTests {
 	
 	@Test
 	public void removeAllEventsForDate() {
-		System.out.print("\n\n### FUNC: ");
+		System.out.print("\n### FUNC: ");
 		System.out.println("removeAllEventsForDate()\n");
 		
 		Date date = new Date();
@@ -220,7 +220,7 @@ public class AdditionalServicesTests {
 	
 	@Test
 	public void returnMultipleEvents() {
-		System.out.print("\n\n### FUNC: ");
+		System.out.print("\n### FUNC: ");
 		System.out.println("returnMultipleEvents()\n");
 		
 		Date date = new Date();
@@ -240,7 +240,7 @@ public class AdditionalServicesTests {
 	
 	@Test
 	public void getServiceNamesForBooking() {
-		System.out.print("\n\n### FUNC: ");
+		System.out.print("\n### FUNC: ");
 		System.out.println("getServiceNames()\n");
 		
 		as.createAdditionalService("SERVICE1", true, 500, "Test description");
@@ -256,7 +256,7 @@ public class AdditionalServicesTests {
 	
 	@Test
 	public void getEventInfoForBooking() {
-		System.out.print("\n\n### FUNC: ");
+		System.out.print("\n### FUNC: ");
 		System.out.println("getEventInfoForBooking()\n");
 		
 		Date date = new Date();
@@ -274,7 +274,7 @@ public class AdditionalServicesTests {
 	
 	@Test
 	public void addGueststoEventFromBooking() {
-		System.out.print("\n\n### FUNC: ");
+		System.out.print("\n### FUNC: ");
 		System.out.println("addGueststoEventFromBooking()\n");
 		
 		Date date = new Date();
@@ -287,7 +287,7 @@ public class AdditionalServicesTests {
 	
 	@Test
 	public void addTooManyGueststoEventFromBooking() {
-		System.out.print("\n\n### FUNC: ");
+		System.out.print("\n### FUNC: ");
 		System.out.println("addTooManyGueststoEventFromBooking()\n");
 		
 		Date date = new Date();
@@ -301,7 +301,7 @@ public class AdditionalServicesTests {
 	
 	@Test
 	public void removeGueststoEventFromBooking() {
-		System.out.print("\n\n### FUNC: ");
+		System.out.print("\n### FUNC: ");
 		System.out.println("removeGueststoEventFromBooking()\n");
 		
 		Date date = new Date();

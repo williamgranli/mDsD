@@ -7,8 +7,10 @@ import Implementation.StaffComponent_AccountManager;
 import Implementation.StaffComponent_Employee;
 import Implementation.StaffComponent_IAccountAdministration;
 import Implementation.StaffComponent_IAuthentication;
+
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
@@ -68,6 +70,8 @@ public class StaffComponent_AccountManagerImpl extends MinimalEObjectImpl.Contai
 	 */
 	protected StaffComponent_AccountManagerImpl() {
 		super();
+		employees = getEmployees();
+		loggedIn = getLoggedIn();
 	}
 
 	/**
@@ -145,23 +149,39 @@ public class StaffComponent_AccountManagerImpl extends MinimalEObjectImpl.Contai
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean logIn(String ssn, String password) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		StaffComponent_Employee emp = findAccount(ssn);
+	
+		if (emp != null) {
+			for (StaffComponent_Employee e: loggedIn){
+				if (e.getSsn().equals(ssn)) {
+					System.out.println("Already logged in!");
+					return false;
+				}
+			}
+			loggedIn.add(emp);
+			System.out.println("Log in successfull");
+			return true;
+		}
+		return false;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean logOut(String ssn) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		for (StaffComponent_Employee e: loggedIn){
+			if (e.getSsn().equals(ssn)){
+				loggedIn.remove(e);
+				System.out.println("Log out successfull");
+				return true;
+			}
+		}
+		return false;
 	}
 
 	/**
@@ -170,11 +190,13 @@ public class StaffComponent_AccountManagerImpl extends MinimalEObjectImpl.Contai
 	 * @generated NOT
 	 */
 	public boolean isLoggedIn(String ssn) {
-		for(StaffComponent_Employee e : loggedIn){
-			if(e.getSsn().equals("ssn")) {
+		for (StaffComponent_Employee e : loggedIn){
+			if (e.getSsn().equals(ssn)) {
+				System.out.println("Is logged in!");
 				return true;
 			}
 		}
+		System.out.println("Is not logged in!");
 		return false;
 	}
 
@@ -221,8 +243,10 @@ public class StaffComponent_AccountManagerImpl extends MinimalEObjectImpl.Contai
 	public boolean removeAccount(String ssn) {
 		StaffComponent_Employee employee = findAccount(ssn);
 		if (employee != null) {
-			employees.remove(employee);
-			loggedIn.remove(employee);
+			if (employees.remove(employee))
+				System.out.println(ssn + " removed from Employees!");
+			if (loggedIn.remove(employee))
+				System.out.println(ssn + " removed from logged in employees!");
 			return true;
 		}
 		return false;
