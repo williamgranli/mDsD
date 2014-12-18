@@ -107,5 +107,16 @@ public class roomTests {
 		org.junit.Assert.assertTrue(roomhandler.getRoomInfo(100).equals("100" + "," + "conference" + "," + "200" + "," 
 		+ "A very, very big conference room."));
 	}
+	
+	@Test
+	public void testRemoveRoom() {
+		
+		
+		roomhandler.createBedRoom(101,true, 100, "bedroom", "A bedroom, which is nice to sleep in.", 2);
+		org.junit.Assert.assertTrue(roomhandler.getAllRoomNumbers().size() == 1);
+		roomhandler.remove(101);
+		org.junit.Assert.assertTrue(roomhandler.getAllRoomNumbers().size() == 0);
+		
+	}
 
 }
