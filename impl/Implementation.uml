@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ActionLanguage="http://www.omg.org/spec/ALF/20120827/ActionLanguage-Profile" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.omg.org/spec/ALF/20120827/ActionLanguage-Profile pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_sYse0YZLEeKyw49uR6nx3g">
   <uml:Package xmi:id="_0xs5wHobEeSypfm9OOQUYA" name="Implementation">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_7a094IbUEeSFgYjMB5mfdQ">
+      <body>&lt;---
+For some reason Papyrus doesn’t show the attributes in ConferenceRoom. It holds numberOfSeats:int, projector:Boolean and conferencePhone:Boolean. (The visibility is set to show all contents).
+</body>
+    </ownedComment>
     <packagedElement xmi:type="uml:Component" xmi:id="_TXYc0H-yEeSVo4U8yTxtOw" name="DecisionSupportComponent">
       <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_lpADYIafEeSBsajI1z9RTw" client="_TXYc0H-yEeSVo4U8yTxtOw" supplier="_3t3tsH-yEeSVo4U8yTxtOw" contract="_3t3tsH-yEeSVo4U8yTxtOw"/>
       <nestedClassifier xmi:type="uml:Interface" xmi:id="_3t3tsH-yEeSVo4U8yTxtOw" name="IDecisionSupport">
