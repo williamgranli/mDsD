@@ -314,10 +314,32 @@ public class AdditionalServiceComponent_AdditionalServiceEventImpl extends Minim
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * @generated
 	 */
 	@Override
 	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (dateTime: ");
+		result.append(dateTime);
+		result.append(", location: ");
+		result.append(location);
+		result.append(", maxAttendant: ");
+		result.append(maxAttendant);
+		result.append(", currentAttendants: ");
+		result.append(currentAttendants);
+		result.append(')');
+		return result.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	@Override
+	public String OLD_toString() {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer();

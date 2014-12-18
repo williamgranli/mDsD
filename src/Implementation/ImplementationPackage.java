@@ -3533,22 +3533,13 @@ public interface ImplementationPackage extends EPackage {
 	int STAFF_COMPONENT_OPERATION_COUNT = STAFF_COMPONENT_IACCOUNT_ADMINISTRATION_OPERATION_COUNT + 3;
 
 	/**
-	 * The feature id for the '<em><b>IAuthentication</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAFF_COMPONENT_ACCOUNT_MANAGER__IAUTHENTICATION = STAFF_COMPONENT_IAUTHENTICATION_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Logged In</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STAFF_COMPONENT_ACCOUNT_MANAGER__LOGGED_IN = STAFF_COMPONENT_IAUTHENTICATION_FEATURE_COUNT + 1;
+	int STAFF_COMPONENT_ACCOUNT_MANAGER__LOGGED_IN = STAFF_COMPONENT_IAUTHENTICATION_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Employees</b></em>' reference list.
@@ -3557,7 +3548,16 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STAFF_COMPONENT_ACCOUNT_MANAGER__EMPLOYEES = STAFF_COMPONENT_IAUTHENTICATION_FEATURE_COUNT + 2;
+	int STAFF_COMPONENT_ACCOUNT_MANAGER__EMPLOYEES = STAFF_COMPONENT_IAUTHENTICATION_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>IAuthentication</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAFF_COMPONENT_ACCOUNT_MANAGER__IAUTHENTICATION = STAFF_COMPONENT_IAUTHENTICATION_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Staff Component Account Manager</em>' class.

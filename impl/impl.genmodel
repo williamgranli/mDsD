@@ -632,11 +632,11 @@
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//StaffComponent_AccountManager">
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EReference Implementation.ecore#//StaffComponent_AccountManager/iAuthentication"/>
-      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
           propertySortChoices="true" ecoreFeature="ecore:EReference Implementation.ecore#//StaffComponent_AccountManager/loggedIn"/>
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
           propertySortChoices="true" ecoreFeature="ecore:EReference Implementation.ecore#//StaffComponent_AccountManager/employees"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference Implementation.ecore#//StaffComponent_AccountManager/iAuthentication"/>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//StaffComponent_AccountManager/findAccount">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//StaffComponent_AccountManager/findAccount/ssn"/>
       </genOperations>

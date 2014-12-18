@@ -7,10 +7,8 @@ import Implementation.StaffComponent_AccountManager;
 import Implementation.StaffComponent_Employee;
 import Implementation.StaffComponent_IAccountAdministration;
 import Implementation.StaffComponent_IAuthentication;
-
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
@@ -18,8 +16,6 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-
-import java.util.ArrayList;
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Staff Component Account Manager</b></em>'.
@@ -27,25 +23,15 @@ import java.util.ArrayList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link Implementation.impl.StaffComponent_AccountManagerImpl#getIAuthentication <em>IAuthentication</em>}</li>
  *   <li>{@link Implementation.impl.StaffComponent_AccountManagerImpl#getLoggedIn <em>Logged In</em>}</li>
  *   <li>{@link Implementation.impl.StaffComponent_AccountManagerImpl#getEmployees <em>Employees</em>}</li>
+ *   <li>{@link Implementation.impl.StaffComponent_AccountManagerImpl#getIAuthentication <em>IAuthentication</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
 public class StaffComponent_AccountManagerImpl extends MinimalEObjectImpl.Container implements StaffComponent_AccountManager {
-	/**
-	 * The cached value of the '{@link #getIAuthentication() <em>IAuthentication</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIAuthentication()
-	 * @generated
-	 * @ordered
-	 */
-	protected StaffComponent_IAuthentication iAuthentication;
-
 	/**
 	 * The cached value of the '{@link #getLoggedIn() <em>Logged In</em>}' reference list.
 	 * <!-- begin-user-doc -->
@@ -64,6 +50,16 @@ public class StaffComponent_AccountManagerImpl extends MinimalEObjectImpl.Contai
 	 * @ordered
 	 */
 	protected EList<StaffComponent_Employee> employees;
+
+	/**
+	 * The cached value of the '{@link #getIAuthentication() <em>IAuthentication</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIAuthentication()
+	 * @generated
+	 * @ordered
+	 */
+	protected StaffComponent_IAuthentication iAuthentication;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -264,13 +260,13 @@ public class StaffComponent_AccountManagerImpl extends MinimalEObjectImpl.Contai
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ImplementationPackage.STAFF_COMPONENT_ACCOUNT_MANAGER__IAUTHENTICATION:
-				if (resolve) return getIAuthentication();
-				return basicGetIAuthentication();
 			case ImplementationPackage.STAFF_COMPONENT_ACCOUNT_MANAGER__LOGGED_IN:
 				return getLoggedIn();
 			case ImplementationPackage.STAFF_COMPONENT_ACCOUNT_MANAGER__EMPLOYEES:
 				return getEmployees();
+			case ImplementationPackage.STAFF_COMPONENT_ACCOUNT_MANAGER__IAUTHENTICATION:
+				if (resolve) return getIAuthentication();
+				return basicGetIAuthentication();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -284,9 +280,6 @@ public class StaffComponent_AccountManagerImpl extends MinimalEObjectImpl.Contai
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ImplementationPackage.STAFF_COMPONENT_ACCOUNT_MANAGER__IAUTHENTICATION:
-				setIAuthentication((StaffComponent_IAuthentication)newValue);
-				return;
 			case ImplementationPackage.STAFF_COMPONENT_ACCOUNT_MANAGER__LOGGED_IN:
 				getLoggedIn().clear();
 				getLoggedIn().addAll((Collection<? extends StaffComponent_Employee>)newValue);
@@ -294,6 +287,9 @@ public class StaffComponent_AccountManagerImpl extends MinimalEObjectImpl.Contai
 			case ImplementationPackage.STAFF_COMPONENT_ACCOUNT_MANAGER__EMPLOYEES:
 				getEmployees().clear();
 				getEmployees().addAll((Collection<? extends StaffComponent_Employee>)newValue);
+				return;
+			case ImplementationPackage.STAFF_COMPONENT_ACCOUNT_MANAGER__IAUTHENTICATION:
+				setIAuthentication((StaffComponent_IAuthentication)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -307,14 +303,14 @@ public class StaffComponent_AccountManagerImpl extends MinimalEObjectImpl.Contai
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ImplementationPackage.STAFF_COMPONENT_ACCOUNT_MANAGER__IAUTHENTICATION:
-				setIAuthentication((StaffComponent_IAuthentication)null);
-				return;
 			case ImplementationPackage.STAFF_COMPONENT_ACCOUNT_MANAGER__LOGGED_IN:
 				getLoggedIn().clear();
 				return;
 			case ImplementationPackage.STAFF_COMPONENT_ACCOUNT_MANAGER__EMPLOYEES:
 				getEmployees().clear();
+				return;
+			case ImplementationPackage.STAFF_COMPONENT_ACCOUNT_MANAGER__IAUTHENTICATION:
+				setIAuthentication((StaffComponent_IAuthentication)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -328,12 +324,12 @@ public class StaffComponent_AccountManagerImpl extends MinimalEObjectImpl.Contai
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ImplementationPackage.STAFF_COMPONENT_ACCOUNT_MANAGER__IAUTHENTICATION:
-				return iAuthentication != null;
 			case ImplementationPackage.STAFF_COMPONENT_ACCOUNT_MANAGER__LOGGED_IN:
 				return loggedIn != null && !loggedIn.isEmpty();
 			case ImplementationPackage.STAFF_COMPONENT_ACCOUNT_MANAGER__EMPLOYEES:
 				return employees != null && !employees.isEmpty();
+			case ImplementationPackage.STAFF_COMPONENT_ACCOUNT_MANAGER__IAUTHENTICATION:
+				return iAuthentication != null;
 		}
 		return super.eIsSet(featureID);
 	}

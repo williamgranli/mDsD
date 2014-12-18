@@ -13,9 +13,9 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link Implementation.StaffComponent_AccountManager#getIAuthentication <em>IAuthentication</em>}</li>
  *   <li>{@link Implementation.StaffComponent_AccountManager#getLoggedIn <em>Logged In</em>}</li>
  *   <li>{@link Implementation.StaffComponent_AccountManager#getEmployees <em>Employees</em>}</li>
+ *   <li>{@link Implementation.StaffComponent_AccountManager#getIAuthentication <em>IAuthentication</em>}</li>
  * </ul>
  * </p>
  *

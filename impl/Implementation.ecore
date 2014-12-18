@@ -685,12 +685,12 @@
     <eOperations name="findAccount" ordered="false" lowerBound="1" eType="#//StaffComponent_Employee">
       <eParameters name="ssn" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     </eOperations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="iAuthentication" ordered="false"
-        lowerBound="1" eType="#//StaffComponent_IAuthentication"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="loggedIn" ordered="false"
         upperBound="-1" eType="#//StaffComponent_Employee"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="employees" ordered="false"
         lowerBound="1" upperBound="-1" eType="#//StaffComponent_Employee"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="iAuthentication" ordered="false"
+        lowerBound="1" eType="#//StaffComponent_IAuthentication"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="StaffComponent_Employee">
     <eOperations name="getEmployeeInfo" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
