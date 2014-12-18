@@ -409,7 +409,7 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 		EList<String> DSSInfo = new BasicEList<String>();
 		for (BookingComponent_Booking booking: bookings){
 			String currentBookings=booking.getRoomTypesInBooking()+","+booking.getArrivalDate()+","+booking.getDepartureDate()+","
-					+booking.getPaymentDetails().getSsn()+","+booking.getPaymentDetails().getFirstName()+","
+					+booking.getPaymentDetails().getId()+","+booking.getPaymentDetails().getFirstName()+","
 					+booking.getPaymentDetails().getLastName()+","+booking.getPaymentDetails().getAddress()
 					+","+booking.getGuests().size();
 			

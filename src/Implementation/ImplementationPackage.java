@@ -2685,13 +2685,13 @@ public interface ImplementationPackage extends EPackage {
 	int BOOKING_COMPONENT_PAYMENT_DETAILS__EXPIRY_YEAR = 6;
 
 	/**
-	 * The feature id for the '<em><b>Ssn</b></em>' attribute.
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_COMPONENT_PAYMENT_DETAILS__SSN = 7;
+	int BOOKING_COMPONENT_PAYMENT_DETAILS__ID = 7;
 
 	/**
 	 * The number of structural features of the '<em>Booking Component Payment Details</em>' class.
@@ -2703,13 +2703,22 @@ public interface ImplementationPackage extends EPackage {
 	int BOOKING_COMPONENT_PAYMENT_DETAILS_FEATURE_COUNT = 8;
 
 	/**
+	 * The operation id for the '<em>Generate ID</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_COMPONENT_PAYMENT_DETAILS___GENERATE_ID = 0;
+
+	/**
 	 * The number of operations of the '<em>Booking Component Payment Details</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_COMPONENT_PAYMENT_DETAILS_OPERATION_COUNT = 0;
+	int BOOKING_COMPONENT_PAYMENT_DETAILS_OPERATION_COUNT = 1;
 
 	/**
 	 * The feature id for the '<em><b>Arrival Date</b></em>' attribute.
@@ -2919,13 +2928,22 @@ public interface ImplementationPackage extends EPackage {
 	int BOOKING_COMPONENT_BOOKING___GET_ROOM_TYPES_IN_BOOKING = 11;
 
 	/**
+	 * The operation id for the '<em>Add Payment Details</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_COMPONENT_BOOKING___ADD_PAYMENT_DETAILS__STRING_STRING_STRING_STRING_STRING_INT_INT = 12;
+
+	/**
 	 * The number of operations of the '<em>Booking Component Booking</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_COMPONENT_BOOKING_OPERATION_COUNT = 12;
+	int BOOKING_COMPONENT_BOOKING_OPERATION_COUNT = 13;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -6165,15 +6183,25 @@ public interface ImplementationPackage extends EPackage {
 	EAttribute getBookingComponent_PaymentDetails_ExpiryYear();
 
 	/**
-	 * Returns the meta object for the attribute '{@link Implementation.BookingComponent_PaymentDetails#getSsn <em>Ssn</em>}'.
+	 * Returns the meta object for the attribute '{@link Implementation.BookingComponent_PaymentDetails#getId <em>Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Ssn</em>'.
-	 * @see Implementation.BookingComponent_PaymentDetails#getSsn()
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see Implementation.BookingComponent_PaymentDetails#getId()
 	 * @see #getBookingComponent_PaymentDetails()
 	 * @generated
 	 */
-	EAttribute getBookingComponent_PaymentDetails_Ssn();
+	EAttribute getBookingComponent_PaymentDetails_Id();
+
+	/**
+	 * Returns the meta object for the '{@link Implementation.BookingComponent_PaymentDetails#generateID() <em>Generate ID</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Generate ID</em>' operation.
+	 * @see Implementation.BookingComponent_PaymentDetails#generateID()
+	 * @generated
+	 */
+	EOperation getBookingComponent_PaymentDetails__GenerateID();
 
 	/**
 	 * Returns the meta object for class '{@link Implementation.BookingComponent_Booking <em>Booking Component Booking</em>}'.
@@ -6414,6 +6442,16 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getBookingComponent_Booking__GetRoomTypesInBooking();
+
+	/**
+	 * Returns the meta object for the '{@link Implementation.BookingComponent_Booking#addPaymentDetails(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, int, int) <em>Add Payment Details</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Add Payment Details</em>' operation.
+	 * @see Implementation.BookingComponent_Booking#addPaymentDetails(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, int, int)
+	 * @generated
+	 */
+	EOperation getBookingComponent_Booking__AddPaymentDetails__String_String_String_String_String_int_int();
 
 	/**
 	 * Returns the meta object for class '{@link Implementation.BookingComponent_AdditionalService <em>Booking Component Additional Service</em>}'.
@@ -8576,12 +8614,20 @@ public interface ImplementationPackage extends EPackage {
 		EAttribute BOOKING_COMPONENT_PAYMENT_DETAILS__EXPIRY_YEAR = eINSTANCE.getBookingComponent_PaymentDetails_ExpiryYear();
 
 		/**
-		 * The meta object literal for the '<em><b>Ssn</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute BOOKING_COMPONENT_PAYMENT_DETAILS__SSN = eINSTANCE.getBookingComponent_PaymentDetails_Ssn();
+		EAttribute BOOKING_COMPONENT_PAYMENT_DETAILS__ID = eINSTANCE.getBookingComponent_PaymentDetails_Id();
+
+		/**
+		 * The meta object literal for the '<em><b>Generate ID</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation BOOKING_COMPONENT_PAYMENT_DETAILS___GENERATE_ID = eINSTANCE.getBookingComponent_PaymentDetails__GenerateID();
 
 		/**
 		 * The meta object literal for the '{@link Implementation.impl.BookingComponent_BookingImpl <em>Booking Component Booking</em>}' class.
@@ -8768,6 +8814,14 @@ public interface ImplementationPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation BOOKING_COMPONENT_BOOKING___GET_ROOM_TYPES_IN_BOOKING = eINSTANCE.getBookingComponent_Booking__GetRoomTypesInBooking();
+
+		/**
+		 * The meta object literal for the '<em><b>Add Payment Details</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation BOOKING_COMPONENT_BOOKING___ADD_PAYMENT_DETAILS__STRING_STRING_STRING_STRING_STRING_INT_INT = eINSTANCE.getBookingComponent_Booking__AddPaymentDetails__String_String_String_String_String_int_int();
 
 		/**
 		 * The meta object literal for the '{@link Implementation.impl.BookingComponent_AdditionalServiceImpl <em>Booking Component Additional Service</em>}' class.

@@ -483,7 +483,7 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public BookingComponent_BookingImpl(String roomType, Date arrivalDate, Date departureDate, String customerSSN, String customerFirstName, String customerLastName, String customerAddress, String customerEmail, String ccNumber, String ccv, String expiryMonth, String expiryYear) {
+	public BookingComponent_BookingImpl(String roomType, Date arrivalDate, Date departureDate, String customerSSN, String customerFirstName, String customerLastName, String customerAddress, String customerEmail, String ccNumber, String ccv, int expiryMonth, int expiryYear) {
 		BookingComponent_RoomType newRoom = new BookingComponent_RoomTypeImpl();
 		BookingComponent_PaymentDetails newPayment = new BookingComponent_PaymentDetailsImpl();
 		BookingComponent_BookingGuest newGuest = new BookingComponent_BookingGuestImpl();
@@ -654,6 +654,18 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 		}
 		
 		return foundRoomTypes;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public void addPaymentDetails(String firstName, String lastName, String address, String ccNumber, String ccv, int expiryMonth, int expiryYear) {
+		paymentDetails =  new BookingComponent_PaymentDetailsImpl(firstName, lastName, address, ccNumber, ccv, expiryMonth, expiryYear);
+		
+//		guests.add(new BookingComponent_BookingGuestImpl(firstName, lastName, address));
+
 	}
 
 	/**
@@ -849,6 +861,9 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 				return getGuestsInBooking();
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING___GET_ROOM_TYPES_IN_BOOKING:
 				return getRoomTypesInBooking();
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING___ADD_PAYMENT_DETAILS__STRING_STRING_STRING_STRING_STRING_INT_INT:
+				addPaymentDetails((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3), (String)arguments.get(4), (Integer)arguments.get(5), (Integer)arguments.get(6));
+				return null;
 		}
 		return super.eInvoke(operationID, arguments);
 	}
