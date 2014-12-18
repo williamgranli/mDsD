@@ -106,11 +106,9 @@
             <ownedAttribute xmi:type="uml:Property" xmi:id="_6_0mcGwFEeSEv4PBfvvHkw" name="Departure Date">
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
             </ownedAttribute>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="_tv4MkG81EeScVK6OjRPslw" name="confirmBooking"/>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_wEmoQG81EeScVK6OjRPslw" name="getBookingInfo"/>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_Ii90kG82EeScVK6OjRPslw" name="addAdditionalServiceToBooking"/>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_ixqWEG82EeScVK6OjRPslw" name="cancelBooking"/>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="_kaqewG83EeScVK6OjRPslw" name="makeBooking"/>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_np1wgG83EeScVK6OjRPslw" name="editBooking"/>
           </packagedElement>
           <packagedElement xmi:type="uml:Association" xmi:id="_iqTC4GT7EeS_fYcbMbH-Fw" name="Has" memberEnd="_iqTC4WT7EeS_fYcbMbH-Fw _iqSb0GT7EeS_fYcbMbH-Fw">
@@ -651,6 +649,60 @@
           <packagedElement xmi:type="uml:Component" xmi:id="_7M_SgHloEeSSyuYUqAwxPw" name="AdditionalServices">
             <packagedElement xmi:type="uml:Component" xmi:id="_STxn4HlpEeSSyuYUqAwxPw" name="adminAS"/>
             <packagedElement xmi:type="uml:Component" xmi:id="_ThhNYHlpEeSSyuYUqAwxPw" name="bookingAS"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_2S2UEIarEeSXnt7hkl6G6g" name="DSS">
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_MJbXEIayEeSXnt7hkl6G6g" name="getAllCustomerBookingFrequency"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_N-BhMIayEeSXnt7hkl6G6g" name="getCustomerBookingFrequency"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_TIyV4IayEeSXnt7hkl6G6g" name="getAllRoomTypeFrequency"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_W3wiAIayEeSXnt7hkl6G6g" name="getRoomTypeFrequency"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_bnckQIayEeSXnt7hkl6G6g" name="getDSSOccupancyInfo"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_d50PgIayEeSXnt7hkl6G6g" name="getDSSData"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_3ZvqsIarEeSXnt7hkl6G6g" name="Statistics">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_uymxkIayEeSXnt7hkl6G6g" name="Date"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_vh4SYIayEeSXnt7hkl6G6g" name="Value"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_0WxkwIayEeSXnt7hkl6G6g" name="RoomTypeFrequency"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_1X3OUIayEeSXnt7hkl6G6g" name="CustomerFrequency"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_xrD0IIasEeSXnt7hkl6G6g" name="Collects" memberEnd="_xrD0IYasEeSXnt7hkl6G6g _xrCmAIasEeSXnt7hkl6G6g">
+            <ownedEnd xmi:type="uml:Property" xmi:id="_xrD0IYasEeSXnt7hkl6G6g" name="collector" type="_2S2UEIarEeSXnt7hkl6G6g" association="_xrD0IIasEeSXnt7hkl6G6g">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_xrD0IoasEeSXnt7hkl6G6g" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_xrD0I4asEeSXnt7hkl6G6g" value="1"/>
+            </ownedEnd>
+            <ownedEnd xmi:type="uml:Property" xmi:id="_xrCmAIasEeSXnt7hkl6G6g" name="booking data" type="_Ym2sMGT0EeS_fYcbMbH-Fw" aggregation="composite" association="_xrD0IIasEeSXnt7hkl6G6g">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_xrCmAYasEeSXnt7hkl6G6g"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_xrCmAoasEeSXnt7hkl6G6g" value="*"/>
+            </ownedEnd>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_8t0W8IasEeSXnt7hkl6G6g" name="Collects" memberEnd="_8t0W8YasEeSXnt7hkl6G6g _8tzv4IasEeSXnt7hkl6G6g">
+            <ownedEnd xmi:type="uml:Property" xmi:id="_8t0W8YasEeSXnt7hkl6G6g" name="collector" type="_2S2UEIarEeSXnt7hkl6G6g" association="_8t0W8IasEeSXnt7hkl6G6g">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_8t0W8oasEeSXnt7hkl6G6g" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_8t0W84asEeSXnt7hkl6G6g" value="1"/>
+            </ownedEnd>
+            <ownedEnd xmi:type="uml:Property" xmi:id="_8tzv4IasEeSXnt7hkl6G6g" name="occupancy data" type="_nZsmEHGEEeSrFY1I6Ix49Q" aggregation="composite" association="_8t0W8IasEeSXnt7hkl6G6g">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_8tzv4YasEeSXnt7hkl6G6g"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_8tzv4oasEeSXnt7hkl6G6g" value="*"/>
+            </ownedEnd>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_EhYZ4IatEeSXnt7hkl6G6g" name="creates" memberEnd="_EhYZ4YatEeSXnt7hkl6G6g _EhXLwIatEeSXnt7hkl6G6g">
+            <ownedEnd xmi:type="uml:Property" xmi:id="_EhYZ4YatEeSXnt7hkl6G6g" name="statistics" type="_3ZvqsIarEeSXnt7hkl6G6g" association="_EhYZ4IatEeSXnt7hkl6G6g">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_EhYZ4oatEeSXnt7hkl6G6g"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EhYZ44atEeSXnt7hkl6G6g" value="*"/>
+            </ownedEnd>
+            <ownedEnd xmi:type="uml:Property" xmi:id="_EhXLwIatEeSXnt7hkl6G6g" name="DSS" type="_2S2UEIarEeSXnt7hkl6G6g" aggregation="composite" association="_EhYZ4IatEeSXnt7hkl6G6g">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_EhXy0IatEeSXnt7hkl6G6g" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EhXy0YatEeSXnt7hkl6G6g" value="1"/>
+            </ownedEnd>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_FdsRIIatEeSXnt7hkl6G6g" name="Uses" memberEnd="_FdsRIYatEeSXnt7hkl6G6g _FdrqEIatEeSXnt7hkl6G6g">
+            <ownedEnd xmi:type="uml:Property" xmi:id="_FdsRIYatEeSXnt7hkl6G6g" name="statistics" type="_FdsRIIatEeSXnt7hkl6G6g" association="_FdsRIIatEeSXnt7hkl6G6g">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FdsRIoatEeSXnt7hkl6G6g" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FdsRI4atEeSXnt7hkl6G6g" value="*"/>
+            </ownedEnd>
+            <ownedEnd xmi:type="uml:Property" xmi:id="_FdrqEIatEeSXnt7hkl6G6g" name="administrator" type="_KZ_cYGaKEeSc971ouTOLAg" association="_FdsRIIatEeSXnt7hkl6G6g">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FdrqEYatEeSXnt7hkl6G6g" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FdrqEoatEeSXnt7hkl6G6g" value="*"/>
+            </ownedEnd>
           </packagedElement>
         </packagedElement>
       </packagedElement>
