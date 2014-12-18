@@ -297,7 +297,7 @@ public class RoomComponent_RoomHandlerImpl extends MinimalEObjectImpl.Container 
 	 * @generated NOT
 	 */
 	public int countNumberOfTotalRooms() {
-		return bedRooms.size();
+		return bedRooms.size() + conferenceRooms.size();
 	}
 
 	/**

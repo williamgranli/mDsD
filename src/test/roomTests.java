@@ -35,7 +35,8 @@ public class roomTests {
 		
 		roomhandler.createBedRoom(101,true, 100, "bedroom", "A bedroom, which is nice to sleep in.", 2);
 		roomhandler.createBedRoom(102,true, 100, "bedroom", "A bedroom, which is nice to sleep in.", 2);
-		org.junit.Assert.assertTrue(roomhandler.getAllRoomNumbers().size() == roomhandler.countNumberOfTotalRooms());
+		roomhandler.createConferenceRoom(101,true, 100, "conference", "A conference room, for conferences.",50, true, false);
+		org.junit.Assert.assertTrue(roomhandler.countNumberOfTotalRooms() == 3);
 		
 	}
 	
@@ -135,4 +136,14 @@ public class roomTests {
 		org.junit.Assert.assertTrue(roomhandler.getPriceOfRoomType("bedroom") == 100);
 	}
 
+	@Test
+	public void testGetCountOfRoomType() {
+		
+		roomhandler.createBedRoom(101,true, 100, "bedroom", "A bedroom, which is nice to sleep in.", 2);
+		org.junit.Assert.assertTrue(roomhandler.getCountOfRoomType("bedroom") == 1);
+		roomhandler.createBedRoom(102,true, 100, "bedroom", "A bedroom, which is nice to sleep in.", 2);
+		org.junit.Assert.assertTrue(roomhandler.getCountOfRoomType("bedroom") == 2);
+		
+	}
+	
 }
