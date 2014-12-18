@@ -326,12 +326,23 @@ public class RoomComponent_RoomHandlerImpl extends MinimalEObjectImpl.Container 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public int getPriceOfRoomType(String roomType) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		
+		for (RoomComponent_Bedroom r: bedRooms){
+            if (r.getRoomTypeName().equals(roomType)){
+            return r.getPrice();
+            }
+		}
+    
+		for (RoomComponent_ConferenceRoom cr: conferenceRooms){
+            if (cr.getRoomTypeName().equals(roomType)){
+            return cr.getPrice();
+            }
+		}
+		
+		return -1;
 	}
 
 	/**

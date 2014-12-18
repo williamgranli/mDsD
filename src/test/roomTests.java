@@ -127,5 +127,12 @@ public class roomTests {
 		org.junit.Assert.assertTrue(roomhandler.getAllRoomNumbers().size() == 0);
 		
 	}
+	
+	@Test
+	public void testGetPriceOfRoomType() {
+		
+		roomhandler.createBedRoom(101,true, 100, "bedroom", "A bedroom, which is nice to sleep in.", 2);
+		org.junit.Assert.assertTrue(roomhandler.getPriceOfRoomType("bedroom") == 100);
+	}
 
 }
