@@ -1537,10 +1537,16 @@ For some reason Papyrus doesn’t show the attributes in ConferenceRoom. It hold
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_yNtyxXumEeSUpK3HS5a0Lg" name="password">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_rKEvYIbYEeSEr9sg8d2ERQ" name="successfulLogin" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
         </ownedOperation>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_yNtyxnumEeSUpK3HS5a0Lg" name="logOut" visibility="protected">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_yNtyx3umEeSUpK3HS5a0Lg" name="ssn">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_uT5nEIbYEeSEr9sg8d2ERQ" name="successfulLogout" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
           </ownedParameter>
         </ownedOperation>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_yNtyyHumEeSUpK3HS5a0Lg" name="isLoggedIn" visibility="protected">

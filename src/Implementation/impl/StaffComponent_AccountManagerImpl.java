@@ -361,11 +361,9 @@ public class StaffComponent_AccountManagerImpl extends MinimalEObjectImpl.Contai
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
 			case ImplementationPackage.STAFF_COMPONENT_ACCOUNT_MANAGER___LOG_IN__STRING_STRING:
-				logIn((String)arguments.get(0), (String)arguments.get(1));
-				return null;
+				return logIn((String)arguments.get(0), (String)arguments.get(1));
 			case ImplementationPackage.STAFF_COMPONENT_ACCOUNT_MANAGER___LOG_OUT__STRING:
-				logOut((String)arguments.get(0));
-				return null;
+				return logOut((String)arguments.get(0));
 			case ImplementationPackage.STAFF_COMPONENT_ACCOUNT_MANAGER___IS_LOGGED_IN__STRING:
 				return isLoggedIn((String)arguments.get(0));
 			case ImplementationPackage.STAFF_COMPONENT_ACCOUNT_MANAGER___CREATE_ACCOUNT__STRING_STRING_STRING_STRING_STRING:

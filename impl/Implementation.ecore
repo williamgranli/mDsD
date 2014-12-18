@@ -466,11 +466,11 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="StaffComponent_IAuthentication" abstract="true"
       interface="true">
-    <eOperations name="logIn" ordered="false" lowerBound="1">
+    <eOperations name="logIn" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
       <eParameters name="ssn" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       <eParameters name="password" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     </eOperations>
-    <eOperations name="logOut" ordered="false" lowerBound="1">
+    <eOperations name="logOut" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
       <eParameters name="ssn" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     </eOperations>
     <eOperations name="isLoggedIn" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Boolean">

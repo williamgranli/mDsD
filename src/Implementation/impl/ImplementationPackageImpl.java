@@ -3563,11 +3563,11 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 
 		initEClass(staffComponent_IAuthenticationEClass, StaffComponent_IAuthentication.class, "StaffComponent_IAuthentication", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		op = initEOperation(getStaffComponent_IAuthentication__LogIn__String_String(), null, "logIn", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getStaffComponent_IAuthentication__LogIn__String_String(), ecorePackage.getEBoolean(), "logIn", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "ssn", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "password", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getStaffComponent_IAuthentication__LogOut__String(), null, "logOut", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getStaffComponent_IAuthentication__LogOut__String(), ecorePackage.getEBoolean(), "logOut", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "ssn", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getStaffComponent_IAuthentication__IsLoggedIn__String(), theTypesPackage.getBoolean(), "isLoggedIn", 1, 1, IS_UNIQUE, !IS_ORDERED);
