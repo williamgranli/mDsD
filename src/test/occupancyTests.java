@@ -56,14 +56,20 @@ public class occupancyTests {
    	org.junit.Assert.assertTrue(booking.getBookings().size() == 0);
 	 */
 	public String setupRoomHandler() {
+		roomHandler.createBedRoom(101,true, 100, "Single Room", "A bedroom, which is nice to sleep in.", 2);
+		roomHandler.createBedRoom(102,true, 100, "Single Room", "A bedroom, which is nice to sleep in.", 2);
+		
+		
     	long theFuture = System.currentTimeMillis() + (86400 * 7 * 1000);
     	Date nextWeek = new Date(theFuture);
 		roomHandler.createBedRoom(1, true, 100, "Single Room", "A small single room with a single bed", 1);
     	org.junit.Assert.assertTrue(booking.getBookings().size() == 0);
-    	String bookingReference = booking.makeBooking(
-    			new Date(), nextWeek, "880923", "William", "Granli", "MyHouse", "123456789", "123", "september", "2015");
+    	String bookingReference = booking.makeBooking(new Date(), nextWeek, "880923", "William", "Granli", "MyHouse", "123456789", "123", "september", "2015");
     	org.junit.Assert.assertTrue(booking.getBookings().size() == 1);
-    	
+    	booking.addGuestToBooking(bookingReference, "William", "Granli", "The Shire");
+    	booking.addGuestToBooking(bookingReference, "Andam", "Berima", "The Old Shire");
+    	booking.addRoom(bookingReference, "SingleRoom", 100);
+    	System.out.println(booking.getBookings().size());
     	return bookingReference;
 	}
 	
@@ -74,12 +80,12 @@ public class occupancyTests {
 
 		org.junit.Assert.assertTrue(occupancy.getOccupancy().size() == 0);
 		
-		occupancy.checkInGuest(bookingReference, "William", "Granli", "Suite", null, null);
-		occupancy.checkInGuest(bookingReference, "Sofia", "Cao", "Suite", "William", "Granli");
-		occupancy.checkInGuest(bookingReference, "Patrik", "Bäckström", "Suite", "William", "Granli");
-		occupancy.checkInGuest(bookingReference, "John", "Burchell", "Suite", "William", "Granli");
-		occupancy.checkInGuest(bookingReference, "Amirab", "Madna", "Suite", "William", "Granli");
-		occupancy.checkInGuest(bookingReference, "Ioannis", "Kellaris", "Suite", "William", "Granli");
+		occupancy.checkInGuest(bookingReference, "William", "Granli", "Singleroom", null, null);
+//		occupancy.checkInGuest(bookingReference, "Sofia", "Cao", "Singleroom", "William", "Granli");
+//		occupancy.checkInGuest(bookingReference, "Patrik", "Bäckström", "Singleroom", "William", "Granli");
+//		occupancy.checkInGuest(bookingReference, "John", "Burchell", "Singleroom", "William", "Granli");
+//		occupancy.checkInGuest(bookingReference, "Amirab", "Madna", "Singleroom", "William", "Granli");
+//		occupancy.checkInGuest(bookingReference, "Ioannis", "Kellaris", "Singleroom", "William", "Granli");
 		
 		
 		System.out.println(occupancy.getOccupancy().size());
