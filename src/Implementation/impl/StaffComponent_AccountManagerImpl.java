@@ -145,30 +145,23 @@ public class StaffComponent_AccountManagerImpl extends MinimalEObjectImpl.Contai
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * @generated
 	 */
-	public void logIn(String ssn, String password) {
-		StaffComponent_Employee emp = findAccount(ssn);
-		
-		if (emp != null) {
-			loggedIn.add(emp);
-			System.out.println("Log in successfull");
-		}
+	public boolean logIn(String ssn, String password) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * @generated
 	 */
-	public void logOut(String ssn) {
-		for(StaffComponent_Employee e: loggedIn){
-			if(e.getSsn().equals(ssn)){
-				loggedIn.remove(e);
-				System.out.println("Log out successfull");
-				return;
-			}
-		}
+	public boolean logOut(String ssn) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
