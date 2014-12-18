@@ -277,11 +277,15 @@ public class RoomComponent_RoomHandlerImpl extends MinimalEObjectImpl.Container 
 		EList<Integer> allRoomNumbers = new  BasicEList<Integer>();
 
 		for (RoomComponent_Bedroom r : bedRooms) {
-			allRoomNumbers.add(r.getRoomNumber());
+			if (r.isUsable()){
+				allRoomNumbers.add(r.getRoomNumber());
+			}
 		}
 		
 		for(RoomComponent_ConferenceRoom cr: conferenceRooms){
-			allRoomNumbers.add(cr.getRoomNumber());
+			if (cr.isUsable()){
+				allRoomNumbers.add(cr.getRoomNumber());
+			}
 		}
 
 		return allRoomNumbers;
