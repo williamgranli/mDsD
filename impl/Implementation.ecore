@@ -38,8 +38,6 @@
         lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="departureDate" ordered="false"
         lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="customerSSN" ordered="false"
-        lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="additionalServices" ordered="false"
         upperBound="-1" eType="#//DecisionSupportComponent_AdditionalServiceDSSInfo"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="customerFirstName" ordered="false"

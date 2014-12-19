@@ -17,7 +17,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link Implementation.DecisionSupportComponent_BookingDSSInfo#getRoomType <em>Room Type</em>}</li>
  *   <li>{@link Implementation.DecisionSupportComponent_BookingDSSInfo#getArrivalDate <em>Arrival Date</em>}</li>
  *   <li>{@link Implementation.DecisionSupportComponent_BookingDSSInfo#getDepartureDate <em>Departure Date</em>}</li>
- *   <li>{@link Implementation.DecisionSupportComponent_BookingDSSInfo#getCustomerSSN <em>Customer SSN</em>}</li>
  *   <li>{@link Implementation.DecisionSupportComponent_BookingDSSInfo#getAdditionalServices <em>Additional Services</em>}</li>
  *   <li>{@link Implementation.DecisionSupportComponent_BookingDSSInfo#getCustomerFirstName <em>Customer First Name</em>}</li>
  *   <li>{@link Implementation.DecisionSupportComponent_BookingDSSInfo#getCustomerLastName <em>Customer Last Name</em>}</li>
@@ -134,32 +133,6 @@ public interface DecisionSupportComponent_BookingDSSInfo extends EObject {
 	 * @generated
 	 */
 	void setDepartureDate(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Customer SSN</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Customer SSN</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Customer SSN</em>' attribute.
-	 * @see #setCustomerSSN(String)
-	 * @see Implementation.ImplementationPackage#getDecisionSupportComponent_BookingDSSInfo_CustomerSSN()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
-	 * @generated
-	 */
-	String getCustomerSSN();
-
-	/**
-	 * Sets the value of the '{@link Implementation.DecisionSupportComponent_BookingDSSInfo#getCustomerSSN <em>Customer SSN</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Customer SSN</em>' attribute.
-	 * @see #getCustomerSSN()
-	 * @generated
-	 */
-	void setCustomerSSN(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Additional Services</b></em>' reference list.

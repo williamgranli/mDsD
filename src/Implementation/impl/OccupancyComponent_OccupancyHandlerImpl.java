@@ -2,7 +2,6 @@
  */
 package Implementation.impl;
 
-import Implementation.BookingComponent_Booking;
 import Implementation.BookingComponent_IBookingInformation;
 import Implementation.ImplementationPackage;
 import Implementation.OccupancyComponent_IOccupancy;

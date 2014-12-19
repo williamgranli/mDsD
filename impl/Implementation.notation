@@ -2195,10 +2195,6 @@
           <element xmi:type="uml:Property" href="Implementation.uml#_ab5dkIX2EeSFPNVomhGXnQ"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_ab6EoYX2EeSFPNVomhGXnQ"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_cHHCMIX2EeSFPNVomhGXnQ" type="3012">
-          <element xmi:type="uml:Property" href="Implementation.uml#_cHEl8IX2EeSFPNVomhGXnQ"/>
-          <layoutConstraint xmi:type="notation:Location" xmi:id="_cHHCMYX2EeSFPNVomhGXnQ"/>
-        </children>
         <children xmi:type="notation:Shape" xmi:id="_doXZkIX2EeSFPNVomhGXnQ" type="3012">
           <element xmi:type="uml:Property" href="Implementation.uml#_doU9UIX2EeSFPNVomhGXnQ"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_doXZkYX2EeSFPNVomhGXnQ"/>

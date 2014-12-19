@@ -304,22 +304,13 @@ public interface ImplementationPackage extends EPackage {
 	int DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO__DEPARTURE_DATE = 3;
 
 	/**
-	 * The feature id for the '<em><b>Customer SSN</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO__CUSTOMER_SSN = 4;
-
-	/**
 	 * The feature id for the '<em><b>Additional Services</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO__ADDITIONAL_SERVICES = 5;
+	int DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO__ADDITIONAL_SERVICES = 4;
 
 	/**
 	 * The feature id for the '<em><b>Customer First Name</b></em>' attribute.
@@ -328,7 +319,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO__CUSTOMER_FIRST_NAME = 6;
+	int DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO__CUSTOMER_FIRST_NAME = 5;
 
 	/**
 	 * The feature id for the '<em><b>Customer Last Name</b></em>' attribute.
@@ -337,7 +328,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO__CUSTOMER_LAST_NAME = 7;
+	int DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO__CUSTOMER_LAST_NAME = 6;
 
 	/**
 	 * The feature id for the '<em><b>Address</b></em>' attribute.
@@ -346,7 +337,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO__ADDRESS = 8;
+	int DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO__ADDRESS = 7;
 
 	/**
 	 * The number of structural features of the '<em>Decision Support Component Booking DSS Info</em>' class.
@@ -355,7 +346,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO_FEATURE_COUNT = 9;
+	int DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO_FEATURE_COUNT = 8;
 
 	/**
 	 * The operation id for the '<em>Add Additional Service</em>' operation.
@@ -4743,17 +4734,6 @@ public interface ImplementationPackage extends EPackage {
 	EAttribute getDecisionSupportComponent_BookingDSSInfo_DepartureDate();
 
 	/**
-	 * Returns the meta object for the attribute '{@link Implementation.DecisionSupportComponent_BookingDSSInfo#getCustomerSSN <em>Customer SSN</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Customer SSN</em>'.
-	 * @see Implementation.DecisionSupportComponent_BookingDSSInfo#getCustomerSSN()
-	 * @see #getDecisionSupportComponent_BookingDSSInfo()
-	 * @generated
-	 */
-	EAttribute getDecisionSupportComponent_BookingDSSInfo_CustomerSSN();
-
-	/**
 	 * Returns the meta object for the reference list '{@link Implementation.DecisionSupportComponent_BookingDSSInfo#getAdditionalServices <em>Additional Services</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7449,14 +7429,6 @@ public interface ImplementationPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO__DEPARTURE_DATE = eINSTANCE.getDecisionSupportComponent_BookingDSSInfo_DepartureDate();
-
-		/**
-		 * The meta object literal for the '<em><b>Customer SSN</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO__CUSTOMER_SSN = eINSTANCE.getDecisionSupportComponent_BookingDSSInfo_CustomerSSN();
 
 		/**
 		 * The meta object literal for the '<em><b>Additional Services</b></em>' reference list feature.

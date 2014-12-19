@@ -602,17 +602,8 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getDecisionSupportComponent_BookingDSSInfo_CustomerSSN() {
-		return (EAttribute)decisionSupportComponent_BookingDSSInfoEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getDecisionSupportComponent_BookingDSSInfo_AdditionalServices() {
-		return (EReference)decisionSupportComponent_BookingDSSInfoEClass.getEStructuralFeatures().get(5);
+		return (EReference)decisionSupportComponent_BookingDSSInfoEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -621,7 +612,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * @generated
 	 */
 	public EAttribute getDecisionSupportComponent_BookingDSSInfo_CustomerFirstName() {
-		return (EAttribute)decisionSupportComponent_BookingDSSInfoEClass.getEStructuralFeatures().get(6);
+		return (EAttribute)decisionSupportComponent_BookingDSSInfoEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -630,7 +621,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * @generated
 	 */
 	public EAttribute getDecisionSupportComponent_BookingDSSInfo_CustomerLastName() {
-		return (EAttribute)decisionSupportComponent_BookingDSSInfoEClass.getEStructuralFeatures().get(7);
+		return (EAttribute)decisionSupportComponent_BookingDSSInfoEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -639,7 +630,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * @generated
 	 */
 	public EAttribute getDecisionSupportComponent_BookingDSSInfo_Address() {
-		return (EAttribute)decisionSupportComponent_BookingDSSInfoEClass.getEStructuralFeatures().get(8);
+		return (EAttribute)decisionSupportComponent_BookingDSSInfoEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -2856,7 +2847,6 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		createEAttribute(decisionSupportComponent_BookingDSSInfoEClass, DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO__ROOM_TYPE);
 		createEAttribute(decisionSupportComponent_BookingDSSInfoEClass, DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO__ARRIVAL_DATE);
 		createEAttribute(decisionSupportComponent_BookingDSSInfoEClass, DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO__DEPARTURE_DATE);
-		createEAttribute(decisionSupportComponent_BookingDSSInfoEClass, DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO__CUSTOMER_SSN);
 		createEReference(decisionSupportComponent_BookingDSSInfoEClass, DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO__ADDITIONAL_SERVICES);
 		createEAttribute(decisionSupportComponent_BookingDSSInfoEClass, DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO__CUSTOMER_FIRST_NAME);
 		createEAttribute(decisionSupportComponent_BookingDSSInfoEClass, DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO__CUSTOMER_LAST_NAME);
@@ -3237,7 +3227,6 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		initEAttribute(getDecisionSupportComponent_BookingDSSInfo_RoomType(), theTypesPackage.getString(), "roomType", null, 1, 1, DecisionSupportComponent_BookingDSSInfo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getDecisionSupportComponent_BookingDSSInfo_ArrivalDate(), theTypesPackage.getString(), "arrivalDate", null, 1, 1, DecisionSupportComponent_BookingDSSInfo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getDecisionSupportComponent_BookingDSSInfo_DepartureDate(), theTypesPackage.getString(), "departureDate", null, 1, 1, DecisionSupportComponent_BookingDSSInfo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getDecisionSupportComponent_BookingDSSInfo_CustomerSSN(), theTypesPackage.getString(), "customerSSN", null, 1, 1, DecisionSupportComponent_BookingDSSInfo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getDecisionSupportComponent_BookingDSSInfo_AdditionalServices(), this.getDecisionSupportComponent_AdditionalServiceDSSInfo(), null, "additionalServices", null, 0, -1, DecisionSupportComponent_BookingDSSInfo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getDecisionSupportComponent_BookingDSSInfo_CustomerFirstName(), theTypesPackage.getString(), "customerFirstName", null, 1, 1, DecisionSupportComponent_BookingDSSInfo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getDecisionSupportComponent_BookingDSSInfo_CustomerLastName(), theTypesPackage.getString(), "customerLastName", null, 1, 1, DecisionSupportComponent_BookingDSSInfo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
