@@ -327,12 +327,15 @@ public boolean isTooManyOccupants(int roomNumber, int guestCount){
 	public void checkOutGuest(int roomNumber, String firstName, String lastName) {
 		String fullName = "" + firstName + "," + lastName;
 		
-		EList<String> guestsInRoom = 
-				new EObjectResolvingEList<String>(BookingComponent_Booking.class, 
-						this, ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER__OCCUPANCY);
+		EList<String> guestsInRoom = new BasicEList<String>();
 		
 		//Get guests from occupancy object with this roomNumber
 		guestsInRoom = listGuestsInRoom(roomNumber);
+		
+		if(guestsInRoom == null){
+			System.out.println("No guests found in room: " + roomNumber);
+			return;
+		}
 				
 		//Iterate through the guests in the room to match it
 		//with the one talking to the receptionist
@@ -370,9 +373,7 @@ public boolean isTooManyOccupants(int roomNumber, int guestCount){
 			return null;
 		}
 		
-		EList<String> guestsInRoom = 
-				new EObjectResolvingEList<String>(BookingComponent_Booking.class, 
-						this, ImplementationPackage.OCCUPANCY_COMPONENT_OCCUPANCY_HANDLER__OCCUPANCY);
+		EList<String> guestsInRoom = new BasicEList<String>();
 		
 		
 		for(OccupancyComponent_Occupancy eachOccupancy: occupancy) {

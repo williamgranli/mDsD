@@ -38,7 +38,7 @@ public class occupancyTests {
 		occupancy.setIRoomInformation(roomHandler);
 		
 		// Add rooms to room handler
-		//roomHandler.createBedRoom(101,true, 100, "Single Room", "A bedroom which is nice to sleep in.", 2);
+		roomHandler.createBedRoom(101,true, 100, "Single Room", "A bedroom which is nice to sleep in.", 2);
 		roomHandler.createBedRoom(102,true, 100, "Single Room", "A bedroom which is nice to sleep in.", 2);
 		roomHandler.createBedRoom(1, true, 100, "Single Room", "A small single room with a single bed", 1);
 		
@@ -69,6 +69,8 @@ public class occupancyTests {
 	}
 
 
+	/** Check in tests **/
+	
 	
 	@Test 
 	public void testCheckInTwoGuestsInOneRoom(){
@@ -105,5 +107,20 @@ public class occupancyTests {
 		org.junit.Assert.assertTrue(occupancy.getOccupancy().size() == 0);
 		
 	}
+	
+	
+	/** Check out tests **/
+	
+	@Test
+	public void checkOutGuest(){
+		occupancy.checkInGuest(bookingReference, "William", "Granli", "Single Room", null, null);
+		occupancy.checkInGuest(bookingReference, "Andam", "Berima", "Single Room", "William","Granli");
+		
+		occupancy.checkOutGuest(occupancy.getOccupancy().get(0).getRoomNumber(), "William", "Granli");
+		System.out.println("TestcheckoutGuest: " + occupancy.getOccupancy().get(0).getCheckInDateTime());
+		org.junit.Assert.assertTrue(occupancy.getOccupancy().get(0).getCheckInDateTime() != 0L);
+		
+	}
+	
 	
 }
