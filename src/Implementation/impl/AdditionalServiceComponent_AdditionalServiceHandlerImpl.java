@@ -194,34 +194,44 @@ public class AdditionalServiceComponent_AdditionalServiceHandlerImpl extends Min
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public int getEventPrice(String name, Date dateTime, String location) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public int getServicePrice(String name) {
+		AdditionalServiceComponent_AdditionalService service = findService(name);
+		if (service != null) {
+			return service.getPrice();
+		}
+		return -1;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public int getEventMaxAttendants(String name, Date dateTime, String location) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		AdditionalServiceComponent_AdditionalService service = findService(name);
+		if (service != null) {
+			if (null != service.findEvent(dateTime, location)) {
+				return service.findEvent(dateTime, location).getMaxAttendant();	
+			}
+		}
+		return -1;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public int getEventCurrentAttendants(String name, Date dateTime, String location) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		AdditionalServiceComponent_AdditionalService service = findService(name);
+		if (service != null) {
+			if (null != service.findEvent(dateTime, location)) {
+				return service.findEvent(dateTime, location).getCurrentAttendants();	
+			}
+		}
+		return -1;
 	}
 
 	/**
@@ -463,8 +473,8 @@ public class AdditionalServiceComponent_AdditionalServiceHandlerImpl extends Min
 				return addGuestToEvent((String)arguments.get(0), (Date)arguments.get(1), (String)arguments.get(2), (Integer)arguments.get(3));
 			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER___REMOVE_GUESTS_FROM_EVENT__STRING_DATE_STRING_INT:
 				return removeGuestsFromEvent((String)arguments.get(0), (Date)arguments.get(1), (String)arguments.get(2), (Integer)arguments.get(3));
-			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER___GET_EVENT_PRICE__STRING_DATE_STRING:
-				return getEventPrice((String)arguments.get(0), (Date)arguments.get(1), (String)arguments.get(2));
+			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER___GET_SERVICE_PRICE__STRING:
+				return getServicePrice((String)arguments.get(0));
 			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER___GET_EVENT_MAX_ATTENDANTS__STRING_DATE_STRING:
 				return getEventMaxAttendants((String)arguments.get(0), (Date)arguments.get(1), (String)arguments.get(2));
 			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER___GET_EVENT_CURRENT_ATTENDANTS__STRING_DATE_STRING:

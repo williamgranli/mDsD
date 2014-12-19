@@ -168,7 +168,7 @@ public class AdditionalServiceComponentImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getEventPrice(String name, Date dateTime, String location) {
+	public int getServicePrice(String name) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -209,7 +209,7 @@ public class AdditionalServiceComponentImpl extends MinimalEObjectImpl.Container
 				case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT___GET_EVENTS__STRING: return ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT___GET_EVENTS__STRING;
 				case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT___ADD_GUEST_TO_EVENT__STRING_DATE_STRING_INT: return ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT___ADD_GUEST_TO_EVENT__STRING_DATE_STRING_INT;
 				case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT___REMOVE_GUESTS_FROM_EVENT__STRING_DATE_STRING_INT: return ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT___REMOVE_GUESTS_FROM_EVENT__STRING_DATE_STRING_INT;
-				case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT___GET_EVENT_PRICE__STRING_DATE_STRING: return ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT___GET_EVENT_PRICE__STRING_DATE_STRING;
+				case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT___GET_SERVICE_PRICE__STRING: return ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT___GET_SERVICE_PRICE__STRING;
 				case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT___GET_EVENT_MAX_ATTENDANTS__STRING_DATE_STRING: return ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT___GET_EVENT_MAX_ATTENDANTS__STRING_DATE_STRING;
 				case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT___GET_EVENT_CURRENT_ATTENDANTS__STRING_DATE_STRING: return ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT___GET_EVENT_CURRENT_ATTENDANTS__STRING_DATE_STRING;
 				default: return -1;
@@ -248,8 +248,8 @@ public class AdditionalServiceComponentImpl extends MinimalEObjectImpl.Container
 				return addGuestToEvent((String)arguments.get(0), (Date)arguments.get(1), (String)arguments.get(2), (Integer)arguments.get(3));
 			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT___REMOVE_GUESTS_FROM_EVENT__STRING_DATE_STRING_INT:
 				return removeGuestsFromEvent((String)arguments.get(0), (Date)arguments.get(1), (String)arguments.get(2), (Integer)arguments.get(3));
-			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT___GET_EVENT_PRICE__STRING_DATE_STRING:
-				return getEventPrice((String)arguments.get(0), (Date)arguments.get(1), (String)arguments.get(2));
+			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT___GET_SERVICE_PRICE__STRING:
+				return getServicePrice((String)arguments.get(0));
 			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT___GET_EVENT_MAX_ATTENDANTS__STRING_DATE_STRING:
 				return getEventMaxAttendants((String)arguments.get(0), (Date)arguments.get(1), (String)arguments.get(2));
 			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT___GET_EVENT_CURRENT_ATTENDANTS__STRING_DATE_STRING:

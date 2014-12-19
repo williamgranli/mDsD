@@ -312,4 +312,37 @@ public class AdditionalServicesTests {
 
 		org.junit.Assert.assertTrue(as.addGuestToEvent("SERVICE", date, "Location 1", 2) == true);
 	}
+	
+	@Test
+	public void createOneGetPrice() {
+		//System.out.print("\n### FUNC: ");
+		//System.out.println("createOneGetPrice()\n");
+		
+		as.createAdditionalService("SERVICE", true, 500, "Test description");
+		org.junit.Assert.assertTrue(as.getServicePrice("SERVICE") == 500);
+	}
+	
+	@Test
+	public void createOneGetMaxAttendants() {
+		//System.out.print("\n### FUNC: ");
+		//System.out.println("createOneGetPrice()\n");
+		
+		Date date = new Date();
+		
+		as.createAdditionalService("SERVICE", true, 500, "Test description");
+		as.createEvent("SERVICE", date, "Location 1", 10, 5);
+		org.junit.Assert.assertTrue(as.findService("SERVICE").findEvent(date, "Location 1").getMaxAttendant() == 10);
+	}
+	
+	@Test
+	public void createOneGetCurrentAttendants() {
+		//System.out.print("\n### FUNC: ");
+		//System.out.println("createOneGetCurrentAttendants()\n");
+		
+		Date date = new Date();
+		
+		as.createAdditionalService("SERVICE", true, 500, "Test description");
+		as.createEvent("SERVICE", date, "Location 1", 10, 5);
+		org.junit.Assert.assertTrue(as.findService("SERVICE").findEvent(date, "Location 1").getCurrentAttendants() == 5);
+	}
 }
