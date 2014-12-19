@@ -3054,13 +3054,22 @@ public interface ImplementationPackage extends EPackage {
 	int BOOKING_COMPONENT_ADDITIONAL_SERVICE__DATE_TIME = 3;
 
 	/**
+	 * The feature id for the '<em><b>Price</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_COMPONENT_ADDITIONAL_SERVICE__PRICE = 4;
+
+	/**
 	 * The number of structural features of the '<em>Booking Component Additional Service</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_COMPONENT_ADDITIONAL_SERVICE_FEATURE_COUNT = 4;
+	int BOOKING_COMPONENT_ADDITIONAL_SERVICE_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Booking Component Additional Service</em>' class.
@@ -6580,6 +6589,17 @@ public interface ImplementationPackage extends EPackage {
 	EAttribute getBookingComponent_AdditionalService_DateTime();
 
 	/**
+	 * Returns the meta object for the attribute '{@link Implementation.BookingComponent_AdditionalService#getPrice <em>Price</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Price</em>'.
+	 * @see Implementation.BookingComponent_AdditionalService#getPrice()
+	 * @see #getBookingComponent_AdditionalService()
+	 * @generated
+	 */
+	EAttribute getBookingComponent_AdditionalService_Price();
+
+	/**
 	 * Returns the meta object for class '{@link Implementation.BookingComponent_BookingGuest <em>Booking Component Booking Guest</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8935,6 +8955,14 @@ public interface ImplementationPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute BOOKING_COMPONENT_ADDITIONAL_SERVICE__DATE_TIME = eINSTANCE.getBookingComponent_AdditionalService_DateTime();
+
+		/**
+		 * The meta object literal for the '<em><b>Price</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BOOKING_COMPONENT_ADDITIONAL_SERVICE__PRICE = eINSTANCE.getBookingComponent_AdditionalService_Price();
 
 		/**
 		 * The meta object literal for the '{@link Implementation.impl.BookingComponent_BookingGuestImpl <em>Booking Component Booking Guest</em>}' class.

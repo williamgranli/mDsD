@@ -192,7 +192,6 @@ public class DecisionSupportComponent_BookingDSSInfoImpl extends MinimalEObjectI
 		this.roomType= roomType;
 		this.arrivalDate = arrivalDate;
 		this.departureDate = departureDate;
-		this.customerSSN = customerSSN;
 		this.customerFirstName = customerFirstName;
 		this.customerLastName = customerLastName;
 		this.address = address;

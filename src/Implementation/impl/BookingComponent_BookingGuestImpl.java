@@ -6,9 +6,7 @@ import Implementation.BookingComponent_BookingGuest;
 import Implementation.ImplementationPackage;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -118,11 +116,12 @@ public class BookingComponent_BookingGuestImpl extends MinimalEObjectImpl.Contai
 		super();
 	}
 	
-	protected BookingComponent_BookingGuestImpl(String firstName, String lastName, String address) {
+	protected BookingComponent_BookingGuestImpl(String firstName, String lastName, String address, String phoneNumber) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.address = address;
+		this.phoneNumber = phoneNumber;
 	}
 
 	/**

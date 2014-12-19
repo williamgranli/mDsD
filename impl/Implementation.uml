@@ -975,7 +975,7 @@ For some reason Papyrus doesn’t show the attributes in ConferenceRoom. It hold
         <ownedAttribute xmi:type="uml:Property" xmi:id="_eQyG53uiEeSz04gN9GtPDA" name="expiryYear" visibility="private">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedAttribute>
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_3I6y4IbLEeSIpOkXh1Mk4w" name="generateID">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_3I6y4IbLEeSIpOkXh1Mk4w" name="generateID" visibility="private">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_8qMqIIbLEeSIpOkXh1Mk4w" name="customerID" direction="return">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedParameter>
@@ -1131,7 +1131,7 @@ For some reason Papyrus doesn’t show the attributes in ConferenceRoom. It hold
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedParameter>
         </ownedOperation>
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_oXFg0IbMEeSIpOkXh1Mk4w" name="addPaymentDetails">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_oXFg0IbMEeSIpOkXh1Mk4w" name="addPaymentDetails" visibility="private">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_vftJUIbMEeSIpOkXh1Mk4w" name="firstName">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedParameter>
@@ -1301,11 +1301,14 @@ For some reason Papyrus doesn’t show the attributes in ConferenceRoom. It hold
         <ownedAttribute xmi:type="uml:Property" xmi:id="_gong8nuiEeSz04gN9GtPDA" name="guestCount" visibility="private">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_urlggIeXEeSR3K1ALk3LsA" name="location">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_urlggIeXEeSR3K1ALk3LsA" name="location" visibility="private">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_wmef4IeXEeSR3K1ALk3LsA" name="dateTime">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_wmef4IeXEeSR3K1ALk3LsA" name="dateTime" visibility="private">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_GYTGEIebEeSESexMVR2qxw" name="price" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
         </ownedAttribute>
         <nestedClassifier xmi:type="uml:Association" xmi:id="_K8534H4SEeS7R5Ychvo0mw" memberEnd="_K8535H4SEeS7R5Ychvo0mw _K8534X4SEeS7R5Ychvo0mw">
           <ownedEnd xmi:type="uml:Property" xmi:id="_K8534X4SEeS7R5Ychvo0mw" name="booking" type="_gokdoHuiEeSz04gN9GtPDA" association="_K8534H4SEeS7R5Ychvo0mw">
@@ -1324,7 +1327,7 @@ For some reason Papyrus doesn’t show the attributes in ConferenceRoom. It hold
         <ownedAttribute xmi:type="uml:Property" xmi:id="_gomS03uiEeSz04gN9GtPDA" name="address" visibility="private">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_YObMYIeWEeSR3K1ALk3LsA" name="phoneNumber">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_YObMYIeWEeSR3K1ALk3LsA" name="phoneNumber" visibility="private">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedAttribute>
         <nestedClassifier xmi:type="uml:Association" xmi:id="_KFIiYH4SEeS7R5Ychvo0mw" memberEnd="_KFIiZH4SEeS7R5Ychvo0mw _KFIiYX4SEeS7R5Ychvo0mw">
@@ -2097,4 +2100,5 @@ For some reason Papyrus doesn’t show the attributes in ConferenceRoom. It hold
   <ActionLanguage:TextualRepresentation xmi:id="_eIXXsHsTEeSLuMTWUFMNdg" base_Comment="_eIU7cnsTEeSLuMTWUFMNdg"/>
   <ActionLanguage:TextualRepresentation xmi:id="_JGypUIQ9EeSoeaaLNVrs8Q" language="org.eclipse.papyrus.uml.textedit.property.xtext.UmlProperty"/>
   <ActionLanguage:TextualRepresentation xmi:id="_X483QIbIEeSR8uMaeg-wcA" language="org.eclipse.papyrus.uml.textedit.property.xtext.UmlProperty"/>
+  <ActionLanguage:TextualRepresentation xmi:id="_G-I-EIebEeSESexMVR2qxw" language="org.eclipse.papyrus.uml.textedit.property.xtext.UmlProperty"/>
 </xmi:XMI>

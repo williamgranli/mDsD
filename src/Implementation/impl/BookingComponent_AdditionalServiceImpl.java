@@ -6,10 +6,9 @@ import Implementation.BookingComponent_AdditionalService;
 import Implementation.ImplementationPackage;
 
 import java.util.Date;
+
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -24,6 +23,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link Implementation.impl.BookingComponent_AdditionalServiceImpl#getGuestCount <em>Guest Count</em>}</li>
  *   <li>{@link Implementation.impl.BookingComponent_AdditionalServiceImpl#getLocation <em>Location</em>}</li>
  *   <li>{@link Implementation.impl.BookingComponent_AdditionalServiceImpl#getDateTime <em>Date Time</em>}</li>
+ *   <li>{@link Implementation.impl.BookingComponent_AdditionalServiceImpl#getPrice <em>Price</em>}</li>
  * </ul>
  * </p>
  *
@@ -111,12 +111,46 @@ public class BookingComponent_AdditionalServiceImpl extends MinimalEObjectImpl.C
 	protected Date dateTime = DATE_TIME_EDEFAULT;
 
 	/**
+	 * The default value of the '{@link #getPrice() <em>Price</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPrice()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int PRICE_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getPrice() <em>Price</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPrice()
+	 * @generated
+	 * @ordered
+	 */
+	protected int price = PRICE_EDEFAULT;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	protected BookingComponent_AdditionalServiceImpl() {
 		super();
+	}
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	protected BookingComponent_AdditionalServiceImpl(String newService, int guestCount, String location, Date dateTime) {
+		super();
+		
+		this.name = newService;
+		this.guestCount = guestCount;
+		this.location = location;
+		this.dateTime = dateTime;
 	}
 
 	/**
@@ -218,6 +252,27 @@ public class BookingComponent_AdditionalServiceImpl extends MinimalEObjectImpl.C
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public int getPrice() {
+		return price;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPrice(int newPrice) {
+		int oldPrice = price;
+		price = newPrice;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ImplementationPackage.BOOKING_COMPONENT_ADDITIONAL_SERVICE__PRICE, oldPrice, price));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -229,6 +284,8 @@ public class BookingComponent_AdditionalServiceImpl extends MinimalEObjectImpl.C
 				return getLocation();
 			case ImplementationPackage.BOOKING_COMPONENT_ADDITIONAL_SERVICE__DATE_TIME:
 				return getDateTime();
+			case ImplementationPackage.BOOKING_COMPONENT_ADDITIONAL_SERVICE__PRICE:
+				return getPrice();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -252,6 +309,9 @@ public class BookingComponent_AdditionalServiceImpl extends MinimalEObjectImpl.C
 				return;
 			case ImplementationPackage.BOOKING_COMPONENT_ADDITIONAL_SERVICE__DATE_TIME:
 				setDateTime((Date)newValue);
+				return;
+			case ImplementationPackage.BOOKING_COMPONENT_ADDITIONAL_SERVICE__PRICE:
+				setPrice((Integer)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -277,6 +337,9 @@ public class BookingComponent_AdditionalServiceImpl extends MinimalEObjectImpl.C
 			case ImplementationPackage.BOOKING_COMPONENT_ADDITIONAL_SERVICE__DATE_TIME:
 				setDateTime(DATE_TIME_EDEFAULT);
 				return;
+			case ImplementationPackage.BOOKING_COMPONENT_ADDITIONAL_SERVICE__PRICE:
+				setPrice(PRICE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -297,6 +360,8 @@ public class BookingComponent_AdditionalServiceImpl extends MinimalEObjectImpl.C
 				return LOCATION_EDEFAULT == null ? location != null : !LOCATION_EDEFAULT.equals(location);
 			case ImplementationPackage.BOOKING_COMPONENT_ADDITIONAL_SERVICE__DATE_TIME:
 				return DATE_TIME_EDEFAULT == null ? dateTime != null : !DATE_TIME_EDEFAULT.equals(dateTime);
+			case ImplementationPackage.BOOKING_COMPONENT_ADDITIONAL_SERVICE__PRICE:
+				return price != PRICE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -319,6 +384,8 @@ public class BookingComponent_AdditionalServiceImpl extends MinimalEObjectImpl.C
 		result.append(location);
 		result.append(", dateTime: ");
 		result.append(dateTime);
+		result.append(", price: ");
+		result.append(price);
 		result.append(')');
 		return result.toString();
 	}

@@ -282,7 +282,7 @@ public class AdditionalServiceComponent_AdditionalServiceImpl extends MinimalEOb
 	 */
 	public AdditionalServiceComponent_AdditionalServiceEvent findEvent(Date dateTime, String location) {
 		for (AdditionalServiceComponent_AdditionalServiceEvent e : additionalServiceEvent) {
-			if (e.getDateTime() == dateTime && e.getLocation() == location) {
+			if (e.getDateTime().equals(dateTime) && e.getLocation().equals(location)) {
 				return e;
 			}
 		}

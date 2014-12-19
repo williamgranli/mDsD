@@ -245,7 +245,7 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 	public void addAdditionalServiceToBooking(String newService, int price) {
 		BookingComponent_AdditionalService service = new BookingComponent_AdditionalServiceImpl();
 		service.setName(newService);
-		service.setCost(price);
+		service.setPrice(price);
 		additionalServices.add(service);
 	}
 
@@ -462,21 +462,11 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void addAdditionalServiceToBooking(String newService, int guestCount, String location, Date dateTime) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public void addAdditionalServiceToBooking(BookingComponent_AdditionalService newService) {
-		additionalServices.add(newService);
+	public void addAdditionalServiceToBooking(String newService, int guestCount, String location, Date dateTime) {
+		BookingComponent_AdditionalService serviceToAdd = new BookingComponent_AdditionalServiceImpl(newService, guestCount, location, dateTime);
+		additionalServices.add(serviceToAdd);
 	}
 
 	/**
@@ -587,7 +577,7 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 		
 		for(BookingComponent_AdditionalService x : additionalServices)
 		{
-			this.currentCost += x.getCost();
+			this.currentCost += x.getPrice();
 		}
 		for(BookingComponent_RoomType x : rooms)
 		{
@@ -633,21 +623,11 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void addGuestToBooking(String firstName, String lastName, String address, String phoneNumber) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public void addGuestToBooking(String firstName, String lastName, String address) {
-		guests.add(new BookingComponent_BookingGuestImpl(firstName, lastName, address));
+	public void addGuestToBooking(String firstName, String lastName, String address, String phoneNumber) {
+		BookingComponent_BookingGuest guestToAdd = new BookingComponent_BookingGuestImpl(firstName, lastName, address, phoneNumber);
+		guests.add(guestToAdd);
 	}
 
 	/**

@@ -15,6 +15,9 @@ import Implementation.RoomComponent_IRoomInformation;
 import Implementation.StaffComponent_IAuthentication;
 
 import java.lang.reflect.InvocationTargetException;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Date;
@@ -410,17 +413,17 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 		EList<String> DSSInfo = new BasicEList<String>();
 		for (BookingComponent_Booking booking: bookings){
 			String currentBookings=booking.getRoomTypesInBooking()+","+booking.getArrivalDate()+","+booking.getDepartureDate()+","
-					+booking.getPaymentDetails().getId()+","+booking.getPaymentDetails().getFirstName()+","
+					+booking.getPaymentDetails().getFirstName()+","
 					+booking.getPaymentDetails().getLastName()+","+booking.getPaymentDetails().getAddress()
 					+","+booking.getGuests().size();
 			
 			String additionalServices=null;
 			for (BookingComponent_AdditionalService additionalService: booking.getAdditionalServices()){
 				if(additionalServices == null){
-					additionalServices = additionalService.getName()+":"+additionalService.getCost();
+					additionalServices = additionalService.getName()+":"+additionalService.getPrice();
 				}
 				else{
-					additionalServices += ","+additionalService.getName()+":"+additionalService.getCost();
+					additionalServices += ","+additionalService.getName()+":"+additionalService.getPrice();
 				}
 			}
 			DSSInfo.add(currentBookings+";"+additionalServices);
@@ -458,7 +461,6 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 			
 			refNumber = newBooking.getBookingReference();
 		}
-
 		return refNumber;
 	}
 
@@ -522,6 +524,7 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 		}
 		else
 		{
+			//TODO - Need to remove customers from additional services
 			bookingToRemove.setIsActive(false);
 			return true;
 		}
@@ -541,8 +544,34 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 		}
 		else
 		{
-			bookingToChange.addAdditionalServiceToBooking(additionalServiceName, price);
-			return true;
+	    	EList<String> events = getIAdditionalServiceInformation().getEvents(additionalServiceName);
+	    	
+	    	String event = events.get(0);
+	    	
+	    	List<String> eventInformation = Arrays.asList(event.split("#"));
+	    	String location = eventInformation.get(1).trim().replace(';', ' ').trim();
+	    	
+	    	Date newDate = new Date();
+	    	
+	    	try {
+	            DateFormat df = new SimpleDateFormat("EEE MMM dd HH:mm:ss ZZZ yyyy");
+	            newDate = df.parse(eventInformation.get(0).trim()); 
+	        	
+			} catch (ParseException e) {
+				System.out.println("Error parsing Date");
+				e.printStackTrace();
+			}
+	    	
+	    	boolean success = getIAdditionalServiceInformation().addGuestToEvent(additionalServiceName, newDate, location, price);
+			if(success) {
+		    	bookingToChange.addAdditionalServiceToBooking(additionalServiceName, getIAdditionalServiceInformation().getServicePrice(additionalServiceName), location, newDate);
+		    	return true;
+			} 
+			else {
+				System.out.println("Failed added service to booking " + bookingToChange.getBookingReference());
+				return false;
+			}
+
 		}
 	}
 
@@ -571,28 +600,43 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 	 * @generated NOT
 	 */
 	public boolean removeAdditionalService(String bookingReference, String additionalServiceName) {
-		BookingComponent_Booking bookingToRemove = findBooking(bookingReference);
-		if(bookingToRemove.equals("NULL"))
+		BookingComponent_Booking bookingToRemoveFrom = findBooking(bookingReference);
+		if(bookingToRemoveFrom.equals("NULL"))
 		{
 			System.out.println("Invalid Reference Number");
 			return false;
 		}
 		else
 		{
-			bookingToRemove.removeAdditionalServiceFromBooking(additionalServiceName);
-			return true;
+			EList<String> events = getIAdditionalServiceInformation().getEvents(additionalServiceName);
+	    	
+	    	String event = events.get(0);
+	    	
+	    	List<String> eventInformation = Arrays.asList(event.split("#"));
+	    	String location = eventInformation.get(1).trim().replace(';', ' ').trim();
+	    	
+	    	Date newDate = new Date();
+	    	
+	    	try {
+	            DateFormat df = new SimpleDateFormat("EEE MMM dd HH:mm:ss ZZZ yyyy");
+	            newDate = df.parse(eventInformation.get(0).trim()); 
+	        	
+			} catch (ParseException e) {
+				System.out.println("Error parsing Date");
+				e.printStackTrace();
+			}
+	    	
+	    	boolean success = getIAdditionalServiceInformation().removeGuestsFromEvent(additionalServiceName, newDate, location, bookingToRemoveFrom.getGuests().size());
+	    	if(success) {
+	    		bookingToRemoveFrom.removeAdditionalServiceFromBooking(additionalServiceName);
+	    		return true;
+	    	}
+	    	else {
+	    		System.out.println("Unable to remove booking for " + bookingToRemoveFrom.getBookingReference());
+	    		return false;
+	    	}
+			
 		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean addGuestToBooking(String bookingReference, String firstName, String lastName, String address, String phoneNumber) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -600,7 +644,7 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public boolean addGuestToBooking(String bookingReference, String firstName, String lastName, String address) {
+	public boolean addGuestToBooking(String bookingReference, String firstName, String lastName, String address, String phoneNumber) {
 		BookingComponent_Booking bookingToChange = findBooking(bookingReference);
 		if(bookingToChange.getBookingReference().equals("NULL"))
 		{
@@ -608,7 +652,7 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 			return false;
 		}
 		
-		bookingToChange.addGuestToBooking(firstName, lastName, address);
+		bookingToChange.addGuestToBooking(firstName, lastName, address, phoneNumber);
 		
 		if(!confirmBooking(bookingReference)) {
 			System.out.println("Unable to add more guests to this booking, please add more rooms first.");
@@ -630,7 +674,6 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 			System.out.println("Invalid Booking Reference");
 			return false;
 		} else {
-			System.out.println("Removing!");
 			targetBooking.removeGuestFromBooking(firstName, lastName, address);
 			return true;
 		}
@@ -661,6 +704,8 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 			return false;
 		}
 		
+		//Check the customer has input valid payment details here, if not, the booking is invalid.
+		
 		return true;
 	}
 
@@ -688,7 +733,6 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 	 * @generated NOT
 	 */
 	public boolean bookingAvailable(Date startDate, Date endDate, String roomType) {
-		iRoomInformation = getIRoomInformation();
 		int roomCount = iRoomInformation.getCountOfRoomType(roomType);
 		int bookingsDuringDate = findBookingsByDate(startDate, endDate);
 		return roomCount - bookingsDuringDate > 0;
