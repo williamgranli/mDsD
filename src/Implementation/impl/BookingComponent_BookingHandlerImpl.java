@@ -587,6 +587,17 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean addGuestToBooking(String bookingReference, String firstName, String lastName, String address, String phoneNumber) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public boolean addGuestToBooking(String bookingReference, String firstName, String lastName, String address) {
@@ -861,7 +872,7 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___ADD_ADDITIONAL_SERVICE__STRING_STRING_INT: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___ADD_ADDITIONAL_SERVICE__STRING_STRING_INT;
 				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___REMOVE_ROOM__STRING_STRING: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___REMOVE_ROOM__STRING_STRING;
 				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___REMOVE_ADDITIONAL_SERVICE__STRING_STRING: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___REMOVE_ADDITIONAL_SERVICE__STRING_STRING;
-				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING;
+				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING_STRING: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING_STRING;
 				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___REMOVE_GUEST__STRING_STRING_STRING_STRING: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___REMOVE_GUEST__STRING_STRING_STRING_STRING;
 				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___CONFIRM_BOOKING__STRING: return ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___CONFIRM_BOOKING__STRING;
 				default: return -1;
@@ -904,8 +915,8 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 				return removeRoom((String)arguments.get(0), (String)arguments.get(1));
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___REMOVE_ADDITIONAL_SERVICE__STRING_STRING:
 				return removeAdditionalService((String)arguments.get(0), (String)arguments.get(1));
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING:
-				return addGuestToBooking((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3));
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING_STRING:
+				return addGuestToBooking((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3), (String)arguments.get(4));
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___REMOVE_GUEST__STRING_STRING_STRING_STRING:
 				return removeGuest((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3));
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___CONFIRM_BOOKING__STRING:

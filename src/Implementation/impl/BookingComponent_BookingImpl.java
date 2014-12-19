@@ -622,6 +622,17 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void addGuestToBooking(String firstName, String lastName, String address, String phoneNumber) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public void addGuestToBooking(String firstName, String lastName, String address) {
@@ -865,8 +876,8 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 				return null;
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING___GENERATE_REFERENCE_NUMBER:
 				return generateReferenceNumber();
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING:
-				addGuestToBooking((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2));
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING:
+				addGuestToBooking((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3));
 				return null;
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING___REMOVE_GUEST_FROM_BOOKING__STRING_STRING_STRING:
 				removeGuestFromBooking((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2));

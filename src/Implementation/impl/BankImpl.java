@@ -136,7 +136,7 @@ public class BankImpl extends MinimalEObjectImpl.Container implements Bank {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean addGuestToBooking(String bookingReference, String firstName, String lastName, String address) {
+	public boolean addGuestToBooking(String bookingReference, String firstName, String lastName, String address, String phoneNumber) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -235,7 +235,7 @@ public class BankImpl extends MinimalEObjectImpl.Container implements Bank {
 				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___ADD_ADDITIONAL_SERVICE__STRING_STRING_INT: return ImplementationPackage.BANK___ADD_ADDITIONAL_SERVICE__STRING_STRING_INT;
 				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___REMOVE_ROOM__STRING_STRING: return ImplementationPackage.BANK___REMOVE_ROOM__STRING_STRING;
 				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___REMOVE_ADDITIONAL_SERVICE__STRING_STRING: return ImplementationPackage.BANK___REMOVE_ADDITIONAL_SERVICE__STRING_STRING;
-				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING: return ImplementationPackage.BANK___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING;
+				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING_STRING: return ImplementationPackage.BANK___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING_STRING;
 				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___REMOVE_GUEST__STRING_STRING_STRING_STRING: return ImplementationPackage.BANK___REMOVE_GUEST__STRING_STRING_STRING_STRING;
 				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___CONFIRM_BOOKING__STRING: return ImplementationPackage.BANK___CONFIRM_BOOKING__STRING;
 				default: return -1;
@@ -278,8 +278,8 @@ public class BankImpl extends MinimalEObjectImpl.Container implements Bank {
 				return removeRoom((String)arguments.get(0), (String)arguments.get(1));
 			case ImplementationPackage.BANK___REMOVE_ADDITIONAL_SERVICE__STRING_STRING:
 				return removeAdditionalService((String)arguments.get(0), (String)arguments.get(1));
-			case ImplementationPackage.BANK___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING:
-				return addGuestToBooking((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3));
+			case ImplementationPackage.BANK___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING_STRING:
+				return addGuestToBooking((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3), (String)arguments.get(4));
 			case ImplementationPackage.BANK___REMOVE_GUEST__STRING_STRING_STRING_STRING:
 				return removeGuest((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3));
 			case ImplementationPackage.BANK___CONFIRM_BOOKING__STRING:

@@ -508,8 +508,6 @@
         lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="expiryYear" ordered="false"
         lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" ordered="false" lowerBound="1"
-        eType="ecore:EDataType types.ecore#//String"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BookingComponent_Booking">
     <eOperations name="addAdditionalServiceToBooking" ordered="false" lowerBound="1">
@@ -545,6 +543,7 @@
       <eParameters name="firstName" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       <eParameters name="lastName" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       <eParameters name="address" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="phoneNumber" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     </eOperations>
     <eOperations name="removeGuestFromBooking" ordered="false" lowerBound="1">
       <eParameters name="firstName" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
@@ -595,6 +594,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="lastName" ordered="false"
         lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="address" ordered="false"
+        lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="phoneNumber" ordered="false"
         lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BookingComponent_RoomType">
@@ -678,6 +679,7 @@
       <eParameters name="firstName" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       <eParameters name="lastName" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       <eParameters name="address" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="phoneNumber" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     </eOperations>
     <eOperations name="removeGuest" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Boolean">
       <eParameters name="bookingReference" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>

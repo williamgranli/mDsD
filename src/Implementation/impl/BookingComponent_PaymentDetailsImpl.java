@@ -28,7 +28,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link Implementation.impl.BookingComponent_PaymentDetailsImpl#getCcv <em>Ccv</em>}</li>
  *   <li>{@link Implementation.impl.BookingComponent_PaymentDetailsImpl#getExpiryMonth <em>Expiry Month</em>}</li>
  *   <li>{@link Implementation.impl.BookingComponent_PaymentDetailsImpl#getExpiryYear <em>Expiry Year</em>}</li>
- *   <li>{@link Implementation.impl.BookingComponent_PaymentDetailsImpl#getId <em>Id</em>}</li>
  * </ul>
  * </p>
  *
@@ -174,26 +173,6 @@ public class BookingComponent_PaymentDetailsImpl extends MinimalEObjectImpl.Cont
 	 * @ordered
 	 */
 	protected int expiryYear = EXPIRY_YEAR_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getId()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String ID_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getId()
-	 * @generated
-	 * @ordered
-	 */
-	protected String id = ID_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -376,27 +355,6 @@ public class BookingComponent_PaymentDetailsImpl extends MinimalEObjectImpl.Cont
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getId() {
-		return id;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setId(String newId) {
-		String oldId = id;
-		id = newId;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ImplementationPackage.BOOKING_COMPONENT_PAYMENT_DETAILS__ID, oldId, id));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public String generateID() {
@@ -429,8 +387,6 @@ public class BookingComponent_PaymentDetailsImpl extends MinimalEObjectImpl.Cont
 				return getExpiryMonth();
 			case ImplementationPackage.BOOKING_COMPONENT_PAYMENT_DETAILS__EXPIRY_YEAR:
 				return getExpiryYear();
-			case ImplementationPackage.BOOKING_COMPONENT_PAYMENT_DETAILS__ID:
-				return getId();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -463,9 +419,6 @@ public class BookingComponent_PaymentDetailsImpl extends MinimalEObjectImpl.Cont
 				return;
 			case ImplementationPackage.BOOKING_COMPONENT_PAYMENT_DETAILS__EXPIRY_YEAR:
 				setExpiryYear((Integer)newValue);
-				return;
-			case ImplementationPackage.BOOKING_COMPONENT_PAYMENT_DETAILS__ID:
-				setId((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -500,9 +453,6 @@ public class BookingComponent_PaymentDetailsImpl extends MinimalEObjectImpl.Cont
 			case ImplementationPackage.BOOKING_COMPONENT_PAYMENT_DETAILS__EXPIRY_YEAR:
 				setExpiryYear(EXPIRY_YEAR_EDEFAULT);
 				return;
-			case ImplementationPackage.BOOKING_COMPONENT_PAYMENT_DETAILS__ID:
-				setId(ID_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -529,8 +479,6 @@ public class BookingComponent_PaymentDetailsImpl extends MinimalEObjectImpl.Cont
 				return expiryMonth != EXPIRY_MONTH_EDEFAULT;
 			case ImplementationPackage.BOOKING_COMPONENT_PAYMENT_DETAILS__EXPIRY_YEAR:
 				return expiryYear != EXPIRY_YEAR_EDEFAULT;
-			case ImplementationPackage.BOOKING_COMPONENT_PAYMENT_DETAILS__ID:
-				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -573,8 +521,6 @@ public class BookingComponent_PaymentDetailsImpl extends MinimalEObjectImpl.Cont
 		result.append(expiryMonth);
 		result.append(", expiryYear: ");
 		result.append(expiryYear);
-		result.append(", id: ");
-		result.append(id);
 		result.append(')');
 		return result.toString();
 	}

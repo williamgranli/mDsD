@@ -22,6 +22,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link Implementation.impl.BookingComponent_BookingGuestImpl#getFirstName <em>First Name</em>}</li>
  *   <li>{@link Implementation.impl.BookingComponent_BookingGuestImpl#getLastName <em>Last Name</em>}</li>
  *   <li>{@link Implementation.impl.BookingComponent_BookingGuestImpl#getAddress <em>Address</em>}</li>
+ *   <li>{@link Implementation.impl.BookingComponent_BookingGuestImpl#getPhoneNumber <em>Phone Number</em>}</li>
  * </ul>
  * </p>
  *
@@ -87,6 +88,26 @@ public class BookingComponent_BookingGuestImpl extends MinimalEObjectImpl.Contai
 	 * @ordered
 	 */
 	protected String address = ADDRESS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getPhoneNumber() <em>Phone Number</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPhoneNumber()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String PHONE_NUMBER_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getPhoneNumber() <em>Phone Number</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPhoneNumber()
+	 * @generated
+	 * @ordered
+	 */
+	protected String phoneNumber = PHONE_NUMBER_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -182,6 +203,27 @@ public class BookingComponent_BookingGuestImpl extends MinimalEObjectImpl.Contai
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPhoneNumber(String newPhoneNumber) {
+		String oldPhoneNumber = phoneNumber;
+		phoneNumber = newPhoneNumber;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ImplementationPackage.BOOKING_COMPONENT_BOOKING_GUEST__PHONE_NUMBER, oldPhoneNumber, phoneNumber));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -191,6 +233,8 @@ public class BookingComponent_BookingGuestImpl extends MinimalEObjectImpl.Contai
 				return getLastName();
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_GUEST__ADDRESS:
 				return getAddress();
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_GUEST__PHONE_NUMBER:
+				return getPhoneNumber();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -211,6 +255,9 @@ public class BookingComponent_BookingGuestImpl extends MinimalEObjectImpl.Contai
 				return;
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_GUEST__ADDRESS:
 				setAddress((String)newValue);
+				return;
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_GUEST__PHONE_NUMBER:
+				setPhoneNumber((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -233,6 +280,9 @@ public class BookingComponent_BookingGuestImpl extends MinimalEObjectImpl.Contai
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_GUEST__ADDRESS:
 				setAddress(ADDRESS_EDEFAULT);
 				return;
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_GUEST__PHONE_NUMBER:
+				setPhoneNumber(PHONE_NUMBER_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -251,6 +301,8 @@ public class BookingComponent_BookingGuestImpl extends MinimalEObjectImpl.Contai
 				return LAST_NAME_EDEFAULT == null ? lastName != null : !LAST_NAME_EDEFAULT.equals(lastName);
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_GUEST__ADDRESS:
 				return ADDRESS_EDEFAULT == null ? address != null : !ADDRESS_EDEFAULT.equals(address);
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_GUEST__PHONE_NUMBER:
+				return PHONE_NUMBER_EDEFAULT == null ? phoneNumber != null : !PHONE_NUMBER_EDEFAULT.equals(phoneNumber);
 		}
 		return super.eIsSet(featureID);
 	}

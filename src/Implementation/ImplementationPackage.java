@@ -2766,22 +2766,13 @@ public interface ImplementationPackage extends EPackage {
 	int BOOKING_COMPONENT_PAYMENT_DETAILS__EXPIRY_YEAR = 6;
 
 	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING_COMPONENT_PAYMENT_DETAILS__ID = 7;
-
-	/**
 	 * The number of structural features of the '<em>Booking Component Payment Details</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_COMPONENT_PAYMENT_DETAILS_FEATURE_COUNT = 8;
+	int BOOKING_COMPONENT_PAYMENT_DETAILS_FEATURE_COUNT = 7;
 
 	/**
 	 * The operation id for the '<em>Generate ID</em>' operation.
@@ -2979,7 +2970,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_COMPONENT_BOOKING___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING = 8;
+	int BOOKING_COMPONENT_BOOKING___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING = 8;
 
 	/**
 	 * The operation id for the '<em>Remove Guest From Booking</em>' operation.
@@ -3090,13 +3081,22 @@ public interface ImplementationPackage extends EPackage {
 	int BOOKING_COMPONENT_BOOKING_GUEST__ADDRESS = 2;
 
 	/**
+	 * The feature id for the '<em><b>Phone Number</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_COMPONENT_BOOKING_GUEST__PHONE_NUMBER = 3;
+
+	/**
 	 * The number of structural features of the '<em>Booking Component Booking Guest</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_COMPONENT_BOOKING_GUEST_FEATURE_COUNT = 3;
+	int BOOKING_COMPONENT_BOOKING_GUEST_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Booking Component Booking Guest</em>' class.
@@ -3331,7 +3331,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_COMPONENT_BOOKING_HANDLER___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 8;
+	int BOOKING_COMPONENT_BOOKING_HANDLER___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING_STRING = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 8;
 
 	/**
 	 * The operation id for the '<em>Remove Guest</em>' operation.
@@ -3485,7 +3485,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING = 7;
+	int BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING_STRING = 7;
 
 	/**
 	 * The operation id for the '<em>Remove Guest</em>' operation.
@@ -4504,7 +4504,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BANK___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 7;
+	int BANK___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING_STRING = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 7;
 
 	/**
 	 * The operation id for the '<em>Remove Guest</em>' operation.
@@ -6248,17 +6248,6 @@ public interface ImplementationPackage extends EPackage {
 	EAttribute getBookingComponent_PaymentDetails_ExpiryYear();
 
 	/**
-	 * Returns the meta object for the attribute '{@link Implementation.BookingComponent_PaymentDetails#getId <em>Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see Implementation.BookingComponent_PaymentDetails#getId()
-	 * @see #getBookingComponent_PaymentDetails()
-	 * @generated
-	 */
-	EAttribute getBookingComponent_PaymentDetails_Id();
-
-	/**
 	 * Returns the meta object for the '{@link Implementation.BookingComponent_PaymentDetails#generateID() <em>Generate ID</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6469,14 +6458,14 @@ public interface ImplementationPackage extends EPackage {
 	EOperation getBookingComponent_Booking__GenerateReferenceNumber();
 
 	/**
-	 * Returns the meta object for the '{@link Implementation.BookingComponent_Booking#addGuestToBooking(java.lang.String, java.lang.String, java.lang.String) <em>Add Guest To Booking</em>}' operation.
+	 * Returns the meta object for the '{@link Implementation.BookingComponent_Booking#addGuestToBooking(java.lang.String, java.lang.String, java.lang.String, java.lang.String) <em>Add Guest To Booking</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Add Guest To Booking</em>' operation.
-	 * @see Implementation.BookingComponent_Booking#addGuestToBooking(java.lang.String, java.lang.String, java.lang.String)
+	 * @see Implementation.BookingComponent_Booking#addGuestToBooking(java.lang.String, java.lang.String, java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	EOperation getBookingComponent_Booking__AddGuestToBooking__String_String_String();
+	EOperation getBookingComponent_Booking__AddGuestToBooking__String_String_String_String();
 
 	/**
 	 * Returns the meta object for the '{@link Implementation.BookingComponent_Booking#removeGuestFromBooking(java.lang.String, java.lang.String, java.lang.String) <em>Remove Guest From Booking</em>}' operation.
@@ -6592,6 +6581,17 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getBookingComponent_BookingGuest_Address();
+
+	/**
+	 * Returns the meta object for the attribute '{@link Implementation.BookingComponent_BookingGuest#getPhoneNumber <em>Phone Number</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Phone Number</em>'.
+	 * @see Implementation.BookingComponent_BookingGuest#getPhoneNumber()
+	 * @see #getBookingComponent_BookingGuest()
+	 * @generated
+	 */
+	EAttribute getBookingComponent_BookingGuest_PhoneNumber();
 
 	/**
 	 * Returns the meta object for class '{@link Implementation.BookingComponent_RoomType <em>Booking Component Room Type</em>}'.
@@ -6811,14 +6811,14 @@ public interface ImplementationPackage extends EPackage {
 	EOperation getBookingComponent_IBookingAdministration__RemoveAdditionalService__String_String();
 
 	/**
-	 * Returns the meta object for the '{@link Implementation.BookingComponent_IBookingAdministration#addGuestToBooking(java.lang.String, java.lang.String, java.lang.String, java.lang.String) <em>Add Guest To Booking</em>}' operation.
+	 * Returns the meta object for the '{@link Implementation.BookingComponent_IBookingAdministration#addGuestToBooking(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String) <em>Add Guest To Booking</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Add Guest To Booking</em>' operation.
-	 * @see Implementation.BookingComponent_IBookingAdministration#addGuestToBooking(java.lang.String, java.lang.String, java.lang.String, java.lang.String)
+	 * @see Implementation.BookingComponent_IBookingAdministration#addGuestToBooking(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	EOperation getBookingComponent_IBookingAdministration__AddGuestToBooking__String_String_String_String();
+	EOperation getBookingComponent_IBookingAdministration__AddGuestToBooking__String_String_String_String_String();
 
 	/**
 	 * Returns the meta object for the '{@link Implementation.BookingComponent_IBookingAdministration#removeGuest(java.lang.String, java.lang.String, java.lang.String, java.lang.String) <em>Remove Guest</em>}' operation.
@@ -8653,14 +8653,6 @@ public interface ImplementationPackage extends EPackage {
 		EAttribute BOOKING_COMPONENT_PAYMENT_DETAILS__EXPIRY_YEAR = eINSTANCE.getBookingComponent_PaymentDetails_ExpiryYear();
 
 		/**
-		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute BOOKING_COMPONENT_PAYMENT_DETAILS__ID = eINSTANCE.getBookingComponent_PaymentDetails_Id();
-
-		/**
 		 * The meta object literal for the '<em><b>Generate ID</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -8828,7 +8820,7 @@ public interface ImplementationPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation BOOKING_COMPONENT_BOOKING___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING = eINSTANCE.getBookingComponent_Booking__AddGuestToBooking__String_String_String();
+		EOperation BOOKING_COMPONENT_BOOKING___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING = eINSTANCE.getBookingComponent_Booking__AddGuestToBooking__String_String_String_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Remove Guest From Booking</b></em>' operation.
@@ -8921,6 +8913,14 @@ public interface ImplementationPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute BOOKING_COMPONENT_BOOKING_GUEST__ADDRESS = eINSTANCE.getBookingComponent_BookingGuest_Address();
+
+		/**
+		 * The meta object literal for the '<em><b>Phone Number</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BOOKING_COMPONENT_BOOKING_GUEST__PHONE_NUMBER = eINSTANCE.getBookingComponent_BookingGuest_PhoneNumber();
 
 		/**
 		 * The meta object literal for the '{@link Implementation.impl.BookingComponent_RoomTypeImpl <em>Booking Component Room Type</em>}' class.
@@ -9102,7 +9102,7 @@ public interface ImplementationPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING = eINSTANCE.getBookingComponent_IBookingAdministration__AddGuestToBooking__String_String_String_String();
+		EOperation BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING_STRING = eINSTANCE.getBookingComponent_IBookingAdministration__AddGuestToBooking__String_String_String_String_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Remove Guest</b></em>' operation.

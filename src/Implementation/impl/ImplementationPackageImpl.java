@@ -1916,15 +1916,6 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getBookingComponent_PaymentDetails_Id() {
-		return (EAttribute)bookingComponent_PaymentDetailsEClass.getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EOperation getBookingComponent_PaymentDetails__GenerateID() {
 		return bookingComponent_PaymentDetailsEClass.getEOperations().get(0);
 	}
@@ -2105,7 +2096,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getBookingComponent_Booking__AddGuestToBooking__String_String_String() {
+	public EOperation getBookingComponent_Booking__AddGuestToBooking__String_String_String_String() {
 		return bookingComponent_BookingEClass.getEOperations().get(8);
 	}
 
@@ -2206,6 +2197,15 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 */
 	public EAttribute getBookingComponent_BookingGuest_Address() {
 		return (EAttribute)bookingComponent_BookingGuestEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getBookingComponent_BookingGuest_PhoneNumber() {
+		return (EAttribute)bookingComponent_BookingGuestEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -2402,7 +2402,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getBookingComponent_IBookingAdministration__AddGuestToBooking__String_String_String_String() {
+	public EOperation getBookingComponent_IBookingAdministration__AddGuestToBooking__String_String_String_String_String() {
 		return bookingComponent_IBookingAdministrationEClass.getEOperations().get(7);
 	}
 
@@ -3020,7 +3020,6 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		createEAttribute(bookingComponent_PaymentDetailsEClass, BOOKING_COMPONENT_PAYMENT_DETAILS__CCV);
 		createEAttribute(bookingComponent_PaymentDetailsEClass, BOOKING_COMPONENT_PAYMENT_DETAILS__EXPIRY_MONTH);
 		createEAttribute(bookingComponent_PaymentDetailsEClass, BOOKING_COMPONENT_PAYMENT_DETAILS__EXPIRY_YEAR);
-		createEAttribute(bookingComponent_PaymentDetailsEClass, BOOKING_COMPONENT_PAYMENT_DETAILS__ID);
 		createEOperation(bookingComponent_PaymentDetailsEClass, BOOKING_COMPONENT_PAYMENT_DETAILS___GENERATE_ID);
 
 		bookingComponent_BookingEClass = createEClass(BOOKING_COMPONENT_BOOKING);
@@ -3042,7 +3041,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		createEOperation(bookingComponent_BookingEClass, BOOKING_COMPONENT_BOOKING___CURRENT_COST);
 		createEOperation(bookingComponent_BookingEClass, BOOKING_COMPONENT_BOOKING___UPDATE_PAYMENT_DETAILS__STRING_STRING_STRING_STRING_STRING_INT_INT);
 		createEOperation(bookingComponent_BookingEClass, BOOKING_COMPONENT_BOOKING___GENERATE_REFERENCE_NUMBER);
-		createEOperation(bookingComponent_BookingEClass, BOOKING_COMPONENT_BOOKING___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING);
+		createEOperation(bookingComponent_BookingEClass, BOOKING_COMPONENT_BOOKING___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING);
 		createEOperation(bookingComponent_BookingEClass, BOOKING_COMPONENT_BOOKING___REMOVE_GUEST_FROM_BOOKING__STRING_STRING_STRING);
 		createEOperation(bookingComponent_BookingEClass, BOOKING_COMPONENT_BOOKING___GET_GUESTS_IN_BOOKING);
 		createEOperation(bookingComponent_BookingEClass, BOOKING_COMPONENT_BOOKING___GET_ROOM_TYPES_IN_BOOKING);
@@ -3056,6 +3055,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		createEAttribute(bookingComponent_BookingGuestEClass, BOOKING_COMPONENT_BOOKING_GUEST__FIRST_NAME);
 		createEAttribute(bookingComponent_BookingGuestEClass, BOOKING_COMPONENT_BOOKING_GUEST__LAST_NAME);
 		createEAttribute(bookingComponent_BookingGuestEClass, BOOKING_COMPONENT_BOOKING_GUEST__ADDRESS);
+		createEAttribute(bookingComponent_BookingGuestEClass, BOOKING_COMPONENT_BOOKING_GUEST__PHONE_NUMBER);
 
 		bookingComponent_RoomTypeEClass = createEClass(BOOKING_COMPONENT_ROOM_TYPE);
 		createEAttribute(bookingComponent_RoomTypeEClass, BOOKING_COMPONENT_ROOM_TYPE__ROOM_TYPE);
@@ -3080,7 +3080,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		createEOperation(bookingComponent_IBookingAdministrationEClass, BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___ADD_ADDITIONAL_SERVICE__STRING_STRING_INT);
 		createEOperation(bookingComponent_IBookingAdministrationEClass, BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___REMOVE_ROOM__STRING_STRING);
 		createEOperation(bookingComponent_IBookingAdministrationEClass, BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___REMOVE_ADDITIONAL_SERVICE__STRING_STRING);
-		createEOperation(bookingComponent_IBookingAdministrationEClass, BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING);
+		createEOperation(bookingComponent_IBookingAdministrationEClass, BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING_STRING);
 		createEOperation(bookingComponent_IBookingAdministrationEClass, BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___REMOVE_GUEST__STRING_STRING_STRING_STRING);
 		createEOperation(bookingComponent_IBookingAdministrationEClass, BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___CONFIRM_BOOKING__STRING);
 
@@ -3638,7 +3638,6 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		initEAttribute(getBookingComponent_PaymentDetails_Ccv(), theTypesPackage.getString(), "ccv", null, 1, 1, BookingComponent_PaymentDetails.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getBookingComponent_PaymentDetails_ExpiryMonth(), theTypesPackage.getInteger(), "expiryMonth", null, 1, 1, BookingComponent_PaymentDetails.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getBookingComponent_PaymentDetails_ExpiryYear(), theTypesPackage.getInteger(), "expiryYear", null, 1, 1, BookingComponent_PaymentDetails.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getBookingComponent_PaymentDetails_Id(), theTypesPackage.getString(), "id", null, 1, 1, BookingComponent_PaymentDetails.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEOperation(getBookingComponent_PaymentDetails__GenerateID(), theTypesPackage.getString(), "generateID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
@@ -3685,10 +3684,11 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 
 		initEOperation(getBookingComponent_Booking__GenerateReferenceNumber(), theTypesPackage.getString(), "generateReferenceNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getBookingComponent_Booking__AddGuestToBooking__String_String_String(), null, "addGuestToBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getBookingComponent_Booking__AddGuestToBooking__String_String_String_String(), null, "addGuestToBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "firstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "lastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "address", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "phoneNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getBookingComponent_Booking__RemoveGuestFromBooking__String_String_String(), null, "removeGuestFromBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "firstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
@@ -3716,6 +3716,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		initEAttribute(getBookingComponent_BookingGuest_FirstName(), theTypesPackage.getString(), "firstName", null, 1, 1, BookingComponent_BookingGuest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getBookingComponent_BookingGuest_LastName(), theTypesPackage.getString(), "lastName", null, 1, 1, BookingComponent_BookingGuest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getBookingComponent_BookingGuest_Address(), theTypesPackage.getString(), "address", null, 1, 1, BookingComponent_BookingGuest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getBookingComponent_BookingGuest_PhoneNumber(), theTypesPackage.getString(), "phoneNumber", null, 1, 1, BookingComponent_BookingGuest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(bookingComponent_RoomTypeEClass, BookingComponent_RoomType.class, "BookingComponent_RoomType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getBookingComponent_RoomType_RoomType(), theTypesPackage.getString(), "roomType", null, 1, 1, BookingComponent_RoomType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -3786,11 +3787,12 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		addEParameter(op, theTypesPackage.getString(), "bookingReference", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "additionalServiceName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getBookingComponent_IBookingAdministration__AddGuestToBooking__String_String_String_String(), theTypesPackage.getBoolean(), "addGuestToBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getBookingComponent_IBookingAdministration__AddGuestToBooking__String_String_String_String_String(), theTypesPackage.getBoolean(), "addGuestToBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "bookingReference", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "firstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "lastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "address", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "phoneNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getBookingComponent_IBookingAdministration__RemoveGuest__String_String_String_String(), theTypesPackage.getBoolean(), "removeGuest", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "bookingReference", 1, 1, IS_UNIQUE, !IS_ORDERED);

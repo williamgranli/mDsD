@@ -472,7 +472,6 @@
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//BookingComponent_PaymentDetails/ccv"/>
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//BookingComponent_PaymentDetails/expiryMonth"/>
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//BookingComponent_PaymentDetails/expiryYear"/>
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//BookingComponent_PaymentDetails/id"/>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//BookingComponent_PaymentDetails/generateID"/>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//BookingComponent_Booking">
@@ -523,6 +522,7 @@
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_Booking/addGuestToBooking/firstName"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_Booking/addGuestToBooking/lastName"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_Booking/addGuestToBooking/address"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_Booking/addGuestToBooking/phoneNumber"/>
       </genOperations>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//BookingComponent_Booking/removeGuestFromBooking">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_Booking/removeGuestFromBooking/firstName"/>
@@ -549,6 +549,7 @@
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//BookingComponent_BookingGuest/firstName"/>
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//BookingComponent_BookingGuest/lastName"/>
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//BookingComponent_BookingGuest/address"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//BookingComponent_BookingGuest/phoneNumber"/>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//BookingComponent_RoomType">
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//BookingComponent_RoomType/roomType"/>
@@ -628,6 +629,7 @@
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_IBookingAdministration/addGuestToBooking/firstName"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_IBookingAdministration/addGuestToBooking/lastName"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_IBookingAdministration/addGuestToBooking/address"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_IBookingAdministration/addGuestToBooking/phoneNumber"/>
       </genOperations>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//BookingComponent_IBookingAdministration/removeGuest">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_IBookingAdministration/removeGuest/bookingReference"/>
