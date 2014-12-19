@@ -2171,13 +2171,13 @@ public interface ImplementationPackage extends EPackage {
 	int ADDITIONAL_SERVICE_COMPONENT___REMOVE_GUESTS_FROM_EVENT__STRING_DATE_STRING_INT = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION_OPERATION_COUNT + 3;
 
 	/**
-	 * The operation id for the '<em>Get Event Price</em>' operation.
+	 * The operation id for the '<em>Get Service Price</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ADDITIONAL_SERVICE_COMPONENT___GET_EVENT_PRICE__STRING_DATE_STRING = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION_OPERATION_COUNT + 4;
+	int ADDITIONAL_SERVICE_COMPONENT___GET_SERVICE_PRICE__STRING = ADDITIONAL_SERVICE_COMPONENT_IADDITIONAL_SERVICE_ADMINISTRATION_OPERATION_COUNT + 4;
 
 	/**
 	 * The operation id for the '<em>Get Event Max Attendants</em>' operation.
@@ -2262,13 +2262,13 @@ public interface ImplementationPackage extends EPackage {
 	int ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT___REMOVE_GUESTS_FROM_EVENT__STRING_DATE_STRING_INT = 3;
 
 	/**
-	 * The operation id for the '<em>Get Event Price</em>' operation.
+	 * The operation id for the '<em>Get Service Price</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT___GET_EVENT_PRICE__STRING_DATE_STRING = 4;
+	int ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT___GET_SERVICE_PRICE__STRING = 4;
 
 	/**
 	 * The operation id for the '<em>Get Event Max Attendants</em>' operation.
@@ -2541,13 +2541,13 @@ public interface ImplementationPackage extends EPackage {
 	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER___REMOVE_GUESTS_FROM_EVENT__STRING_DATE_STRING_INT = ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT___REMOVE_GUESTS_FROM_EVENT__STRING_DATE_STRING_INT;
 
 	/**
-	 * The operation id for the '<em>Get Event Price</em>' operation.
+	 * The operation id for the '<em>Get Service Price</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER___GET_EVENT_PRICE__STRING_DATE_STRING = ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT___GET_EVENT_PRICE__STRING_DATE_STRING;
+	int ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER___GET_SERVICE_PRICE__STRING = ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT___GET_SERVICE_PRICE__STRING;
 
 	/**
 	 * The operation id for the '<em>Get Event Max Attendants</em>' operation.
@@ -6087,14 +6087,14 @@ public interface ImplementationPackage extends EPackage {
 	EOperation getAdditionalServiceComponent_IEventManagement__RemoveGuestsFromEvent__String_Date_String_int();
 
 	/**
-	 * Returns the meta object for the '{@link Implementation.AdditionalServiceComponent_IEventManagement#getEventPrice(java.lang.String, java.util.Date, java.lang.String) <em>Get Event Price</em>}' operation.
+	 * Returns the meta object for the '{@link Implementation.AdditionalServiceComponent_IEventManagement#getServicePrice(java.lang.String) <em>Get Service Price</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Event Price</em>' operation.
-	 * @see Implementation.AdditionalServiceComponent_IEventManagement#getEventPrice(java.lang.String, java.util.Date, java.lang.String)
+	 * @return the meta object for the '<em>Get Service Price</em>' operation.
+	 * @see Implementation.AdditionalServiceComponent_IEventManagement#getServicePrice(java.lang.String)
 	 * @generated
 	 */
-	EOperation getAdditionalServiceComponent_IEventManagement__GetEventPrice__String_Date_String();
+	EOperation getAdditionalServiceComponent_IEventManagement__GetServicePrice__String();
 
 	/**
 	 * Returns the meta object for the '{@link Implementation.AdditionalServiceComponent_IEventManagement#getEventMaxAttendants(java.lang.String, java.util.Date, java.lang.String) <em>Get Event Max Attendants</em>}' operation.
@@ -8539,12 +8539,12 @@ public interface ImplementationPackage extends EPackage {
 		EOperation ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT___REMOVE_GUESTS_FROM_EVENT__STRING_DATE_STRING_INT = eINSTANCE.getAdditionalServiceComponent_IEventManagement__RemoveGuestsFromEvent__String_Date_String_int();
 
 		/**
-		 * The meta object literal for the '<em><b>Get Event Price</b></em>' operation.
+		 * The meta object literal for the '<em><b>Get Service Price</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT___GET_EVENT_PRICE__STRING_DATE_STRING = eINSTANCE.getAdditionalServiceComponent_IEventManagement__GetEventPrice__String_Date_String();
+		EOperation ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT___GET_SERVICE_PRICE__STRING = eINSTANCE.getAdditionalServiceComponent_IEventManagement__GetServicePrice__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Event Max Attendants</b></em>' operation.

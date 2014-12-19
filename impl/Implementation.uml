@@ -874,14 +874,8 @@ For some reason Papyrus doesn’t show the attributes in ConferenceRoom. It hold
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
           </ownedParameter>
         </ownedOperation>
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_HnoyYIdsEeS_QNUqzsz7Og" name="getEventPrice" visibility="protected">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_HnoyYIdsEeS_QNUqzsz7Og" name="getServicePrice" visibility="protected">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_hyMawIdsEeS_QNUqzsz7Og" name="name">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-          </ownedParameter>
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_k8xgYIdsEeS_QNUqzsz7Og" name="dateTime">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
-          </ownedParameter>
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_mabKIIdsEeS_QNUqzsz7Og" name="location">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedParameter>
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_o56EUIdsEeS_QNUqzsz7Og" name="returnValue" direction="return">
