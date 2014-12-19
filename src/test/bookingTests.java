@@ -10,6 +10,8 @@ import org.junit.BeforeClass;
 import org.junit.Ignore;
 import org.junit.Test;
 
+import Implementation.BookingComponent_AdditionalService;
+
 public class bookingTests {
 
 	static Implementation.ImplementationFactory factory;
@@ -76,7 +78,7 @@ public class bookingTests {
 		int max = 10;
 		int current = 0;
 		
-		as.createAdditionalService("Massage", true, 500, "Massage from a lovely person");
+		as.createAdditionalService("Massage", true, max, "Massage from a lovely person");
 		
 		as.createEvent("Massage", date, location, max, current);
 		as.createEvent("Massage", date, location + "1", max, current);
@@ -141,14 +143,29 @@ public class bookingTests {
     @Test
     public void cancelBooking() {
     	String referenceNumber = booking.makeBooking(getRandomRoomType(), new Date(), nextWeekDate(), "880923", "John", "Burchell", "MyHouse", "123456789", "123", 9, 16);
-    	booking.cancelBooking(referenceNumber);
-    	org.junit.Assert.assertTrue(booking.findBooking(referenceNumber).isActive() == false);
+    	
+    	setupAdditionalServiceHandler();
+    	
+    	String randomType = getRandomEventType();
+    	
+    	boolean successAS = booking.addAdditionalService(referenceNumber, randomType, booking.findBooking(referenceNumber).getGuests().size());
+    	org.junit.Assert.assertTrue(successAS);
+    	
+    	boolean success = booking.cancelBooking(referenceNumber);
+    	org.junit.Assert.assertFalse(booking.findBooking(referenceNumber).isActive());
+    	org.junit.Assert.assertTrue(success);
+    	
+    	for(BookingComponent_AdditionalService as : booking.findBooking(referenceNumber).getAdditionalServices()) {
+    		org.junit.Assert.assertTrue(as.getGuestCount() == 0);
+    	}
+
     }
     
     @Test
     public void cancelBookingFail() {
     	String referenceNumber = booking.makeBooking(getRandomRoomType(), new Date(), nextWeekDate(), "880923", "John", "Burchell", "MyHouse", "123456789", "123", 9, 16);
     	booking.cancelBooking(referenceNumber);
+    	
     	boolean result = booking.cancelBooking(referenceNumber);
     	org.junit.Assert.assertFalse(booking.findBooking(referenceNumber).isActive());
     	org.junit.Assert.assertFalse(result);
@@ -300,11 +317,6 @@ public class bookingTests {
     }
     
     @Test
-    public void searchForBooking() {
-    	//TODO - Implement
-    }
-    
-    @Test
     public void findBookingsByDate() {
     	
     	long theFuture = System.currentTimeMillis() + (86400 * 7 * 1000);
@@ -320,6 +332,7 @@ public class bookingTests {
     	booking.makeBooking(getRandomRoomType(), nextWeek, nextWeek2, "880923", "John", "Burchell", "MyHouse", "123456789", "123", 9, 16);
     	booking.makeBooking(getRandomRoomType(), nextWeek, nextWeek2, "880923", "John", "Burchell", "MyHouse", "123456789", "123", 9, 16);
     	
+    	System.out.println(">> " + booking.findBookingsByDate(nextWeek, nextWeek2));
     	org.junit.Assert.assertTrue(booking.findBookingsByDate(nextWeek, nextWeek2) == 4);
     	org.junit.Assert.assertTrue(booking.bookingAvailable(nextWeek, nextWeek2, getRandomRoomType()) == true);
     }
