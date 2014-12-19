@@ -2,6 +2,8 @@
  */
 package Implementation;
 
+import java.util.Date;
+import java.util.Map;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
@@ -55,5 +57,21 @@ public interface BookingComponent_IBookingInformation extends EObject {
 	 * @generated
 	 */
 	boolean makePayment(String bookingReference);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model required="true" ordered="false" arrivalDateRequired="true" arrivalDateOrdered="false" departureDateRequired="true" departureDateOrdered="false"
+	 * @generated
+	 */
+	Map searchAvailableRoomTypes(Date arrivalDate, Date departureDate);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model required="true" ordered="false" arrivalDateRequired="true" arrivalDateOrdered="false" departureDateRequired="true" departureDateOrdered="false" roomTypeDataType="org.eclipse.uml2.types.String" roomTypeRequired="true" roomTypeOrdered="false"
+	 * @generated
+	 */
+	int findBookingsByDateAndType(Date arrivalDate, Date departureDate, String roomType);
 
 } // BookingComponent_IBookingInformation

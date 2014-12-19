@@ -1199,20 +1199,6 @@ For some reason Papyrus doesn’t show the attributes in ConferenceRoom. It hold
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedParameter>
         </ownedOperation>
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_CdIVUIYMEeSv7KoGdfMFhw" name="findBookingsByDateAndType" visibility="private">
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_CdIVUYYMEeSv7KoGdfMFhw" name="startDate">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
-          </ownedParameter>
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_CdIVUoYMEeSv7KoGdfMFhw" name="endDate">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
-          </ownedParameter>
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_CdIVU4YMEeSv7KoGdfMFhw" name="roomType">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-          </ownedParameter>
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_CdIVVIYMEeSv7KoGdfMFhw" name="returnValue" direction="return">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-          </ownedParameter>
-        </ownedOperation>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_CdKKgIYMEeSv7KoGdfMFhw" name="findBookingsByDate" visibility="private">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_CdKKgYYMEeSv7KoGdfMFhw" name="startDate">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
@@ -1291,6 +1277,31 @@ For some reason Papyrus doesn’t show the attributes in ConferenceRoom. It hold
           </ownedParameter>
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_8Z-zEIU6EeS93fj9yg1HxA" name="paymentSuccessful" direction="return">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_1eAB8Ie3EeSESexMVR2qxw" name="searchAvailableRoomTypes" visibility="protected">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_A22JgIe4EeSESexMVR2qxw" name="arrivalDate">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_DCqg0Ie4EeSESexMVR2qxw" name="departureDate">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_sfdc0Ie7EeSESexMVR2qxw" name="retrunMap" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EMap"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_esqwcIe9EeSESexMVR2qxw" name="findBookingsByDateAndType" visibility="protected">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_kSiz0Ie9EeSESexMVR2qxw" name="arrivalDate">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_lc9_kIe9EeSESexMVR2qxw" name="departureDate">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_oB3lQIe9EeSESexMVR2qxw" name="roomType">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_HmGBAIe-EeSESexMVR2qxw" name="count" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
           </ownedParameter>
         </ownedOperation>
       </nestedClassifier>

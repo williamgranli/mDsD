@@ -13,7 +13,6 @@ import Implementation.ImplementationPackage;
 import Implementation.PaymentComponent_IPayment;
 import Implementation.RoomComponent_IRoomInformation;
 import Implementation.StaffComponent_IAuthentication;
-
 import java.lang.reflect.InvocationTargetException;
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -22,7 +21,7 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.Date;
 import java.util.List;
-
+import java.util.Map;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
@@ -403,6 +402,17 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 		}
 		
 		return successful;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Map<String, Integer> searchAvailableRoomTypes(Date arrivalDate, Date departureDate) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -949,6 +959,10 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 				return isPaidFor((String)arguments.get(0));
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___MAKE_PAYMENT__STRING:
 				return makePayment((String)arguments.get(0));
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___SEARCH_AVAILABLE_ROOM_TYPES__DATE_DATE:
+				return searchAvailableRoomTypes((Date)arguments.get(0), (Date)arguments.get(1));
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___FIND_BOOKINGS_BY_DATE_AND_TYPE__DATE_DATE_STRING:
+				return findBookingsByDateAndType((Date)arguments.get(0), (Date)arguments.get(1), (String)arguments.get(2));
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___GET_DSS_INFO:
 				return getDSSInfo();
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___MAKE_BOOKING__STRING_DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_INT_INT:
@@ -975,8 +989,6 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 				return findBooking((String)arguments.get(0));
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___BOOKING_AVAILABLE__DATE_DATE_STRING:
 				return bookingAvailable((Date)arguments.get(0), (Date)arguments.get(1), (String)arguments.get(2));
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___FIND_BOOKINGS_BY_DATE_AND_TYPE__DATE_DATE_STRING:
-				return findBookingsByDateAndType((Date)arguments.get(0), (Date)arguments.get(1), (String)arguments.get(2));
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER___FIND_BOOKINGS_BY_DATE__DATE_DATE:
 				return findBookingsByDate((Date)arguments.get(0), (Date)arguments.get(1));
 		}

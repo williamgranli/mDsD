@@ -1270,13 +1270,31 @@ public interface ImplementationPackage extends EPackage {
 	int BOOKING_COMPONENT_IBOOKING_INFORMATION___MAKE_PAYMENT__STRING = 4;
 
 	/**
+	 * The operation id for the '<em>Search Available Room Types</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_COMPONENT_IBOOKING_INFORMATION___SEARCH_AVAILABLE_ROOM_TYPES__DATE_DATE = 5;
+
+	/**
+	 * The operation id for the '<em>Find Bookings By Date And Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_COMPONENT_IBOOKING_INFORMATION___FIND_BOOKINGS_BY_DATE_AND_TYPE__DATE_DATE_STRING = 6;
+
+	/**
 	 * The number of operations of the '<em>Booking Component IBooking Information</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT = 5;
+	int BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT = 7;
 
 	/**
 	 * The meta object id for the '{@link Implementation.impl.PaymentComponentImpl <em>Payment Component</em>}' class.
@@ -3280,6 +3298,24 @@ public interface ImplementationPackage extends EPackage {
 	int BOOKING_COMPONENT_BOOKING_HANDLER___MAKE_PAYMENT__STRING = BOOKING_COMPONENT_IBOOKING_INFORMATION___MAKE_PAYMENT__STRING;
 
 	/**
+	 * The operation id for the '<em>Search Available Room Types</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_COMPONENT_BOOKING_HANDLER___SEARCH_AVAILABLE_ROOM_TYPES__DATE_DATE = BOOKING_COMPONENT_IBOOKING_INFORMATION___SEARCH_AVAILABLE_ROOM_TYPES__DATE_DATE;
+
+	/**
+	 * The operation id for the '<em>Find Bookings By Date And Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_COMPONENT_BOOKING_HANDLER___FIND_BOOKINGS_BY_DATE_AND_TYPE__DATE_DATE_STRING = BOOKING_COMPONENT_IBOOKING_INFORMATION___FIND_BOOKINGS_BY_DATE_AND_TYPE__DATE_DATE_STRING;
+
+	/**
 	 * The operation id for the '<em>Get DSS Info</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3397,22 +3433,13 @@ public interface ImplementationPackage extends EPackage {
 	int BOOKING_COMPONENT_BOOKING_HANDLER___BOOKING_AVAILABLE__DATE_DATE_STRING = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 12;
 
 	/**
-	 * The operation id for the '<em>Find Bookings By Date And Type</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING_COMPONENT_BOOKING_HANDLER___FIND_BOOKINGS_BY_DATE_AND_TYPE__DATE_DATE_STRING = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 13;
-
-	/**
 	 * The operation id for the '<em>Find Bookings By Date</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_COMPONENT_BOOKING_HANDLER___FIND_BOOKINGS_BY_DATE__DATE_DATE = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 14;
+	int BOOKING_COMPONENT_BOOKING_HANDLER___FIND_BOOKINGS_BY_DATE__DATE_DATE = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 13;
 
 	/**
 	 * The number of operations of the '<em>Booking Component Booking Handler</em>' class.
@@ -3421,7 +3448,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_COMPONENT_BOOKING_HANDLER_OPERATION_COUNT = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 15;
+	int BOOKING_COMPONENT_BOOKING_HANDLER_OPERATION_COUNT = BOOKING_COMPONENT_IBOOKING_INFORMATION_OPERATION_COUNT + 14;
 
 	/**
 	 * The meta object id for the '{@link Implementation.BookingComponent_IBookingAdministration <em>Booking Component IBooking Administration</em>}' class.
@@ -4597,13 +4624,31 @@ public interface ImplementationPackage extends EPackage {
 	int BANK___MAKE_PAYMENT__STRING = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 14;
 
 	/**
+	 * The operation id for the '<em>Search Available Room Types</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BANK___SEARCH_AVAILABLE_ROOM_TYPES__DATE_DATE = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 15;
+
+	/**
+	 * The operation id for the '<em>Find Bookings By Date And Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BANK___FIND_BOOKINGS_BY_DATE_AND_TYPE__DATE_DATE_STRING = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 16;
+
+	/**
 	 * The number of operations of the '<em>Bank</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BANK_OPERATION_COUNT = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 15;
+	int BANK_OPERATION_COUNT = BOOKING_COMPONENT_IBOOKING_DECISION_OPERATION_COUNT + 17;
 
 
 	/**
@@ -5444,6 +5489,26 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getBookingComponent_IBookingInformation__MakePayment__String();
+
+	/**
+	 * Returns the meta object for the '{@link Implementation.BookingComponent_IBookingInformation#searchAvailableRoomTypes(java.util.Date, java.util.Date) <em>Search Available Room Types</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Search Available Room Types</em>' operation.
+	 * @see Implementation.BookingComponent_IBookingInformation#searchAvailableRoomTypes(java.util.Date, java.util.Date)
+	 * @generated
+	 */
+	EOperation getBookingComponent_IBookingInformation__SearchAvailableRoomTypes__Date_Date();
+
+	/**
+	 * Returns the meta object for the '{@link Implementation.BookingComponent_IBookingInformation#findBookingsByDateAndType(java.util.Date, java.util.Date, java.lang.String) <em>Find Bookings By Date And Type</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Find Bookings By Date And Type</em>' operation.
+	 * @see Implementation.BookingComponent_IBookingInformation#findBookingsByDateAndType(java.util.Date, java.util.Date, java.lang.String)
+	 * @generated
+	 */
+	EOperation getBookingComponent_IBookingInformation__FindBookingsByDateAndType__Date_Date_String();
 
 	/**
 	 * Returns the meta object for class '{@link Implementation.PaymentComponent <em>Payment Component</em>}'.
@@ -6771,16 +6836,6 @@ public interface ImplementationPackage extends EPackage {
 	EOperation getBookingComponent_BookingHandler__BookingAvailable__Date_Date_String();
 
 	/**
-	 * Returns the meta object for the '{@link Implementation.BookingComponent_BookingHandler#findBookingsByDateAndType(java.util.Date, java.util.Date, java.lang.String) <em>Find Bookings By Date And Type</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Find Bookings By Date And Type</em>' operation.
-	 * @see Implementation.BookingComponent_BookingHandler#findBookingsByDateAndType(java.util.Date, java.util.Date, java.lang.String)
-	 * @generated
-	 */
-	EOperation getBookingComponent_BookingHandler__FindBookingsByDateAndType__Date_Date_String();
-
-	/**
 	 * Returns the meta object for the '{@link Implementation.BookingComponent_BookingHandler#findBookingsByDate(java.util.Date, java.util.Date) <em>Find Bookings By Date</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8043,6 +8098,22 @@ public interface ImplementationPackage extends EPackage {
 		EOperation BOOKING_COMPONENT_IBOOKING_INFORMATION___MAKE_PAYMENT__STRING = eINSTANCE.getBookingComponent_IBookingInformation__MakePayment__String();
 
 		/**
+		 * The meta object literal for the '<em><b>Search Available Room Types</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation BOOKING_COMPONENT_IBOOKING_INFORMATION___SEARCH_AVAILABLE_ROOM_TYPES__DATE_DATE = eINSTANCE.getBookingComponent_IBookingInformation__SearchAvailableRoomTypes__Date_Date();
+
+		/**
+		 * The meta object literal for the '<em><b>Find Bookings By Date And Type</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation BOOKING_COMPONENT_IBOOKING_INFORMATION___FIND_BOOKINGS_BY_DATE_AND_TYPE__DATE_DATE_STRING = eINSTANCE.getBookingComponent_IBookingInformation__FindBookingsByDateAndType__Date_Date_String();
+
+		/**
 		 * The meta object literal for the '{@link Implementation.impl.PaymentComponentImpl <em>Payment Component</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -9097,14 +9168,6 @@ public interface ImplementationPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation BOOKING_COMPONENT_BOOKING_HANDLER___BOOKING_AVAILABLE__DATE_DATE_STRING = eINSTANCE.getBookingComponent_BookingHandler__BookingAvailable__Date_Date_String();
-
-		/**
-		 * The meta object literal for the '<em><b>Find Bookings By Date And Type</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation BOOKING_COMPONENT_BOOKING_HANDLER___FIND_BOOKINGS_BY_DATE_AND_TYPE__DATE_DATE_STRING = eINSTANCE.getBookingComponent_BookingHandler__FindBookingsByDateAndType__Date_Date_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Find Bookings By Date</b></em>' operation.
