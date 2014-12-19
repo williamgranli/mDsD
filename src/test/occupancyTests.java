@@ -38,9 +38,9 @@ public class occupancyTests {
 		occupancy.setIRoomInformation(roomHandler);
 		
 		// Add rooms to room handler
-		roomHandler.createBedRoom(101,true, 100, "Single Room", "A bedroom which is nice to sleep in.", 2);
+		//roomHandler.createBedRoom(101,true, 100, "Single Room", "A bedroom which is nice to sleep in.", 2);
 		roomHandler.createBedRoom(102,true, 100, "Single Room", "A bedroom which is nice to sleep in.", 2);
-		roomHandler.createBedRoom(1, true, 100, "Single Room", "A small single room with a single bed", 2);
+		roomHandler.createBedRoom(1, true, 100, "Single Room", "A small single room with a single bed", 1);
 		
 		// Make a booking
     	long theFuture = System.currentTimeMillis() + (86400 * 7 * 1000);

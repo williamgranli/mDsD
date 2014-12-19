@@ -200,100 +200,120 @@ public class OccupancyComponent_OccupancyHandlerImpl extends MinimalEObjectImpl.
 	 */
 	public void checkInGuest(String bookingReference, String firstName, String lastName, String roomType, String partnerFirstName, String partnerLastName) {
 		// Returns a list of guests and room types for a booking
-		EList<String> bookingInfo= iBooking.searchForBooking(bookingReference);
+	EList<String> bookingInfo= iBooking.searchForBooking(bookingReference);
+	
+				//System.out.println("from occupancy: " + bookingInfo.get(0).toString());
+	
+	String[] guestsForBooking;
+	EList<String> roomTypesArray;
+	String roomTypes;
+	
+				// If  reference does'nt return booking Info
+	if(bookingInfo != null){
 		
-		//System.out.println("from occupancy: " + bookingInfo.get(0).toString());
+		roomTypes = bookingInfo.get(0).toString();
+		guestsForBooking = (bookingInfo.get(1)).split(";");
 		
-		String[] guestsForBooking;
-		EList<String> roomTypesArray;
-		String roomTypes;
+					//System.out.println(guestsForBooking[1]);
 		
-		// If  reference does'nt return booking Info
-		if(bookingInfo != null){
-			
-			roomTypes = bookingInfo.get(0).toString();
-			guestsForBooking = (bookingInfo.get(1)).split(";");
-			
-			//System.out.println(guestsForBooking[1]);
-			
-			
-			
-		}else{
-			System.out.println("Booking reference does not match a booking");
-			return;
-		}
 		
-		for(String guest: guestsForBooking){
-			String[] guestInfo = guest.split(",");
+		
+	}else{
+		System.out.println("Booking reference does not match a booking");
+		return;
+	}
+	
+	for(String guest: guestsForBooking){
+		String[] guestInfo = guest.split(",");
+		
+					// if guest firstName and lastName matches a guest in list
+		if((guestInfo[0].equals(firstName)) && (guestInfo[1].equals(lastName))){
 			
-			// if guest firstName and lastName matches a guest in list
-			if((guestInfo[0].equals(firstName)) && (guestInfo[1].equals(lastName))){
+			roomTypesArray = new BasicEList<String>();
+			String[] x = roomTypes.split(",");
+			
+			for(int i = 0; i < x.length; i++){
+				roomTypesArray.add(x[i]);
+			}
+			
+			
+			
+						// if roomType provided by guest is in booking // check
+			if(isInRoomTypes(roomTypesArray, roomType)){
 				
-				roomTypesArray = new BasicEList<String>();
-				String[] x = roomTypes.split(",");
-				
-				for(int i = 0; i < x.length; i++){
-					roomTypesArray.add(x[i]);
-				}
-				
-				
-				
-				// if roomType provided by guest is in booking // check
-				if(isInRoomTypes(roomTypesArray, roomType)){
+							// Check if a partner info is not null check if partner exist in booking and
+							// check guest in the same room
+				if((partnerFirstName != null) && (partnerLastName != null)){
+					OccupancyComponent_Occupancy occupan = findOccupancy(bookingReference, partnerFirstName, partnerLastName);
 					
-					// Check if a partner info is not null check if partner exist in booking and
-					// check guest in the same room
-					if((partnerFirstName != null) && (partnerLastName != null)){
-						OccupancyComponent_Occupancy occupan = findOccupancy(bookingReference, partnerFirstName, partnerLastName);
+								// Check if occupancy exits for partner and bookingReference
+					if(occupan != null){
 						
-						// Check if occupancy exits for partner and bookingReference
-						if(occupan != null){
+						
+						if (!isTooManyOccupants(occupan.getRoomNumber(), occupan.getGuests().size())) {
 							occupan.addGuestToOccupancy(firstName, lastName);
 							System.out.println("Guest: " + firstName + " " + lastName + " is check in in the same room: " + 
-							occupan.getRoomNumber() +  "with " + partnerFirstName + " " + partnerLastName);
+								occupan.getRoomNumber() +  "with " + partnerFirstName + " " + partnerLastName);
 							
 							return;
 						}
 						
-						//if partner is not found for specified partnerFirstName and partnerLastName
 						else{
-							System.out.println("No occupancy was found for the specified booking: " + bookingReference 
-									+ " and partner information : " + partnerFirstName + " " + partnerLastName);
-							return;
+							System.out.println("Occupancy" + occupan.getRoomNumber() + "already has max guests");
 						}
+						
+						
 					}
 					
-					
-					
-					int roomAvailable = getAvailableRooms(roomType);
-					
-					if(roomAvailable != 0){
-						
-						OccupancyComponent_OccupancyImpl currentOccupancy = new OccupancyComponent_OccupancyImpl();
-						currentOccupancy.setRoomNumber(roomAvailable);
-						
-						// todo change checkInDateTime variable to Date instead of int 
-						// and regenerate getters and setters to accept date.
-						currentOccupancy.setCheckInDateTime(System.currentTimeMillis());
-						currentOccupancy.setBookingReference(bookingReference);
-						currentOccupancy.addGuestToOccupancy(firstName, lastName);
-						
-						occupancy.add(currentOccupancy);
-						
+								//if partner is not found for specified partnerFirstName and partnerLastName
+					else{
+						System.out.println("No occupancy was found for the specified booking: " + bookingReference 
+							+ " and partner information : " + partnerFirstName + " " + partnerLastName);
 						return;
 					}
-					
-				}else{
-					System.out.println("Room type provided by guest doesn't match types in booking");
 				}
 				
+				
+				
+				int roomAvailable = getAvailableRooms(roomType);
+				
+				if(roomAvailable != 0){
+					
+					OccupancyComponent_OccupancyImpl currentOccupancy = new OccupancyComponent_OccupancyImpl();
+					currentOccupancy.setRoomNumber(roomAvailable);
+					
+								// todo change checkInDateTime variable to Date instead of int 
+								// and regenerate getters and setters to accept date.
+					currentOccupancy.setCheckInDateTime(System.currentTimeMillis());
+					currentOccupancy.setBookingReference(bookingReference);
+					currentOccupancy.addGuestToOccupancy(firstName, lastName);
+					
+					occupancy.add(currentOccupancy);
+					
+					return;
+				}
+				
+			}else{
+				System.out.println("Room type provided by guest doesn't match types in booking");
 			}
 			
-			
-			else{
-				System.out.println("Name: " + firstName + "  " + lastName + "does not exist in booking");
-			}
 		}
+		
+		
+		else{
+			System.out.println("Name: " + firstName + "  " + lastName + "does not exist in booking");
+		}
+	}
+}
+
+
+
+public boolean isTooManyOccupants(int roomNumber, int guestCount){
+	String[] roomInfo = iRoomInformation.getRoomInfo(roomNumber).split(",");
+	
+	int bedCount = Integer.valueOf(roomInfo[4]);
+	return bedCount == guestCount;
+		//System.out.println("isTooManyOccupants: "+roomInfo[4]);
 
 	}
 

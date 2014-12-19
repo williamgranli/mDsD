@@ -166,7 +166,7 @@ public class RoomComponent_RoomHandlerImpl extends MinimalEObjectImpl.Container 
 				return  r.getRoomNumber() + "," 
 				+r.getRoomTypeName() + ","
 				+ r.getPrice() + ","
-				+  r.getDescription();
+				+  r.getDescription() + "," + r.getBedCount();
 			}
 
 		}
