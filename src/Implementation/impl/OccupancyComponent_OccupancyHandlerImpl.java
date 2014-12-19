@@ -406,7 +406,7 @@ public class OccupancyComponent_OccupancyHandlerImpl extends MinimalEObjectImpl.
 	 */
 	public int getAvailableRooms(String roomType) {
 		EList<Integer> allRoomNumbers = iRoomInformation.getAllRoomNumbers();
-		EList<String> allRoomInfo = null;
+		EList<String> allRoomInfo = new BasicEList<String>();
 		
 		for(Integer roomNumber: allRoomNumbers){
 			allRoomInfo.add(iRoomInformation.getRoomInfo(roomNumber));

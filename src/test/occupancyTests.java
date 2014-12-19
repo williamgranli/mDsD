@@ -1,6 +1,5 @@
-package test;
 
-import static org.junit.Assert.*;
+package test;
 
 import java.util.Date;
 
@@ -18,27 +17,45 @@ public class occupancyTests {
 	static Implementation.OccupancyComponent_IOccupancy occupancyHandler;
 	static Implementation.AdditionalServiceComponent_IEventManagement additionalService;
 	
+	static String bookingReference;
+	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 		//My Stuff
 		factory = Implementation.impl.ImplementationFactoryImpl.init();
-
-		//Booking stuff
 		booking = factory.createBookingComponent_BookingHandler();
-		occupancy = factory.createOccupancyComponent_OccupancyHandler();
-		occupancy.setIBooking(booking);
-		
 		roomHandler = factory.createRoomComponent_RoomHandler();
 		additionalService =	factory.createAdditionalServiceComponent_AdditionalServiceHandler();
+		occupancy = factory.createOccupancyComponent_OccupancyHandler();
+		
+		//Booking stuff
+		
 		booking.setIRoomInformation(roomHandler);
 		booking.setIAdditionalServiceInformation(additionalService);
 		
+		
+		occupancy.setIBooking(booking);
+		occupancy.setIRoomInformation(roomHandler);
+		
+		// Add rooms to room handler
+		roomHandler.createBedRoom(101,true, 100, "Single Room", "A bedroom which is nice to sleep in.", 2);
+		roomHandler.createBedRoom(102,true, 100, "Single Room", "A bedroom which is nice to sleep in.", 2);
+		roomHandler.createBedRoom(1, true, 100, "Single Room", "A small single room with a single bed", 2);
+		
+		// Make a booking
+    	long theFuture = System.currentTimeMillis() + (86400 * 7 * 1000);
+    	Date nextWeek = new Date(theFuture);
+    	bookingReference = booking.makeBooking("Single Room",new Date(), nextWeek, "880923", "William", "Granli", "MyHouse", "123456789", "123", 6, 2015);
+    	booking.addGuestToBooking(bookingReference, "William", "Granli", "The Shire");
+    	booking.addGuestToBooking(bookingReference, "Andam", "Berima", "The Old Shire");
+    	booking.addRoom(bookingReference, "Single Room", 100);
+    	booking.addRoom(bookingReference, "Single Room", 100);
 	}
 
 	@AfterClass
 	public static void tearDownAfterClass() throws Exception {
-		factory = null;
-		occupancy = null;
+		/*factory = null;
+		occupancy = null;*/
 	}
 
 	@Before
@@ -52,49 +69,41 @@ public class occupancyTests {
 	}
 
 
-	/*
-   	org.junit.Assert.assertTrue(booking.getBookings().size() == 0);
-	 */
-	public String setupRoomHandler() {
-		roomHandler.createBedRoom(101,true, 100, "Single Room", "A bedroom, which is nice to sleep in.", 2);
-		roomHandler.createBedRoom(102,true, 100, "Single Room", "A bedroom, which is nice to sleep in.", 2);
-		
-		
-    	long theFuture = System.currentTimeMillis() + (86400 * 7 * 1000);
-    	Date nextWeek = new Date(theFuture);
-    	
-		roomHandler.createBedRoom(1, true, 100, "Single Room", "A small single room with a single bed", 1);
-    	org.junit.Assert.assertTrue(booking.getBookings().size() == 0);
-    	String bookingReference = booking.makeBooking("Single Room", new Date(), nextWeek, "880923", "William", "Granli", "MyHouse", "123456789", "123", 9, 16);
-    	org.junit.Assert.assertTrue(booking.getBookings().size() == 1);
-    	booking.addRoom(bookingReference, "SingleRoom", 100);
-    	booking.addGuestToBooking(bookingReference, "William", "Granli", "The Shire");
-    	booking.addGuestToBooking(bookingReference, "Andam", "Berima", "The Old Shire");
-    	
-    	System.out.println(booking.getBookings().size());
-    	return bookingReference;
+	
+	@Test 
+	public void testCheckInTwoGuestsInOneRoom(){
+		occupancy.checkInGuest(bookingReference, "William", "Granli", "Single Room", null, null);
+		occupancy.checkInGuest(bookingReference, "Andam", "Berima", "Single Room", "William", "Granli");
+		org.junit.Assert.assertTrue(occupancy.getOccupancy().size() == 1);
+	}
+	
+	
+	@Test 
+	
+	public void testCheckInTwoGuestInTwoRooms(){
+		occupancy.checkInGuest(bookingReference, "William", "Granli", "Single Room", null, null);
+		occupancy.checkInGuest(bookingReference, "Andam", "Berima", "Single Room", null, null);
+		org.junit.Assert.assertTrue(occupancy.getOccupancy().size() == 2);
 	}
 	
 	@Test
-	public void checkIn() {
-    	String bookingReference = setupRoomHandler();
-    	System.out.println(bookingReference);
-
+	public void testGuestsNotOnBooking() {
+		occupancy.checkInGuest(bookingReference, "Sofia", "Cao", "Singleroom", "William", "Granli");
+		occupancy.checkInGuest(bookingReference, "Patrik", "Bäckström", "Singleroom", "William", "Granli");
+		occupancy.checkInGuest(bookingReference, "John", "Burchell", "Singleroom", "William", "Granli");
+		occupancy.checkInGuest(bookingReference, "Ioannis", "Kellaris", "Singleroom", "William", "Granli");
+		
 		org.junit.Assert.assertTrue(occupancy.getOccupancy().size() == 0);
-		
-		occupancy.checkInGuest(bookingReference, "William", "Granli", "Singleroom", null, null);
-//		occupancy.checkInGuest(bookingReference, "Sofia", "Cao", "Singleroom", "William", "Granli");
-//		occupancy.checkInGuest(bookingReference, "Patrik", "Bäckström", "Singleroom", "William", "Granli");
-//		occupancy.checkInGuest(bookingReference, "John", "Burchell", "Singleroom", "William", "Granli");
-//		occupancy.checkInGuest(bookingReference, "Amirab", "Madna", "Singleroom", "William", "Granli");
-//		occupancy.checkInGuest(bookingReference, "Ioannis", "Kellaris", "Singleroom", "William", "Granli");
-		
-		
-		System.out.println(occupancy.getOccupancy().size());
-
-		org.junit.Assert.assertTrue(occupancy.getOccupancy().size() == 1);
 
 	}	
 	
-
+	@Test
+	public void testCheckInNoBooking(){
+		booking.getBookings().clear();
+		occupancy.checkInGuest(bookingReference, "William", "Granli", "Single Room", null, null);
+		occupancy.checkInGuest(bookingReference, "Andam", "Berima", "Single Room", null, null);
+		org.junit.Assert.assertTrue(occupancy.getOccupancy().size() == 0);
+		
+	}
+	
 }
