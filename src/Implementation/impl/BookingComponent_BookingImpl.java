@@ -481,38 +481,7 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 		rooms.add(newRoom);
 	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public BookingComponent_BookingImpl(String roomType, Date arrivalDate, Date departureDate, String customerSSN, String customerFirstName, String customerLastName, String customerAddress, String customerEmail, String ccNumber, String ccv, int expiryMonth, int expiryYear) {
-		BookingComponent_RoomType newRoom = new BookingComponent_RoomTypeImpl();
-		BookingComponent_PaymentDetails newPayment = new BookingComponent_PaymentDetailsImpl();
-		BookingComponent_BookingGuest newGuest = new BookingComponent_BookingGuestImpl();
-		
-		newRoom.setRoomType(roomType);
-		
-		newPayment.setFirstName(customerSSN);
-		newPayment.setLastName(customerFirstName);
-		newPayment.setAddress(customerAddress);
-		newPayment.setCcNumber(ccNumber);
-		newPayment.setCcv(ccv);
-		newPayment.setExpiryMonth(expiryMonth);
-		newPayment.setExpiryYear(expiryYear);
-		
-		newGuest.setFirstName(customerFirstName);
-		newGuest.setLastName(customerLastName);
-		newGuest.setAddress(customerAddress);
-		
-		this.arrivalDate = arrivalDate;
-		this.departureDate = departureDate;
-		
-		addRoomToBooking(newRoom);
-		
-		this.guests.add(newGuest);
-		this.paymentDetails = newPayment;
-	}
+
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -593,18 +562,8 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 	 * @generated
 	 */
 	public void updatePaymentDetails(String firstName, String lastName, String address, String ccNumber, String ccv, int expiryMonth, int expiryYear) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public void updatePaymentDetails(BookingComponent_PaymentDetails newPaymentDetails) {
-		this.paymentDetails = newPaymentDetails;
+		BookingComponent_PaymentDetails newDetails = new BookingComponent_PaymentDetailsImpl(firstName, lastName, address, ccNumber, ccv, expiryMonth, expiryYear);
+		this.paymentDetails = newDetails;
 	}
 
 	/**

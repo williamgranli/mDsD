@@ -318,7 +318,8 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 
 			}
 		}
-
+		
+		System.out.println(foundRoomTypes);
 		return foundRoomTypes;
 	}
 

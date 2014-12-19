@@ -361,4 +361,15 @@ public class bookingTests {
     	org.junit.Assert.assertTrue(booking.findBookingsByDateAndType(nextWeek, nextWeek2, roomType) == targetBookings + 1);
     	org.junit.Assert.assertTrue(booking.bookingAvailable(nextWeek, nextWeek2, roomType) == true);
     }
+    
+//    @Test
+//    public void updateDetails() {
+//    	Date nextWeek = nextWeekDate();
+//    	
+//    	String firstName = 
+//    	
+//    	String ref = booking.makeBooking(getRandomRoomType(), new Date(), nextWeek, "880923", "John", "Burchell", "MyHouse", "123456789", "123", 9, 16);
+//    	booking.findBooking(ref).updateBooking(arrivalDate, departureDate);
+//    	booking.findBooking(ref).updatePaymentDetails(firstName, lastName, address, ccNumber, ccv, expiryMonth, expiryYear);
+//    }
 }
