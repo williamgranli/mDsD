@@ -194,6 +194,39 @@ public class AdditionalServiceComponent_AdditionalServiceHandlerImpl extends Min
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getEventPrice(String name, Date dateTime, String location) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getEventMaxAttendants(String name, Date dateTime, String location) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getEventCurrentAttendants(String name, Date dateTime, String location) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public boolean createAdditionalService(String name, boolean usable, int price, String description) {
@@ -430,6 +463,12 @@ public class AdditionalServiceComponent_AdditionalServiceHandlerImpl extends Min
 				return addGuestToEvent((String)arguments.get(0), (Date)arguments.get(1), (String)arguments.get(2), (Integer)arguments.get(3));
 			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER___REMOVE_GUESTS_FROM_EVENT__STRING_DATE_STRING_INT:
 				return removeGuestsFromEvent((String)arguments.get(0), (Date)arguments.get(1), (String)arguments.get(2), (Integer)arguments.get(3));
+			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER___GET_EVENT_PRICE__STRING_DATE_STRING:
+				return getEventPrice((String)arguments.get(0), (Date)arguments.get(1), (String)arguments.get(2));
+			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER___GET_EVENT_MAX_ATTENDANTS__STRING_DATE_STRING:
+				return getEventMaxAttendants((String)arguments.get(0), (Date)arguments.get(1), (String)arguments.get(2));
+			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER___GET_EVENT_CURRENT_ATTENDANTS__STRING_DATE_STRING:
+				return getEventCurrentAttendants((String)arguments.get(0), (Date)arguments.get(1), (String)arguments.get(2));
 			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER___CREATE_ADDITIONAL_SERVICE__STRING_BOOLEAN_INT_STRING:
 				return createAdditionalService((String)arguments.get(0), (Boolean)arguments.get(1), (Integer)arguments.get(2), (String)arguments.get(3));
 			case ImplementationPackage.ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE_HANDLER___EDIT_ADDITIONAL_SERVICE__STRING_STRING_BOOLEAN_INT_STRING:

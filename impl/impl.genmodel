@@ -387,6 +387,21 @@
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//AdditionalServiceComponent_IEventManagement/removeGuestsFromEvent/location"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//AdditionalServiceComponent_IEventManagement/removeGuestsFromEvent/guests"/>
       </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//AdditionalServiceComponent_IEventManagement/getEventPrice">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//AdditionalServiceComponent_IEventManagement/getEventPrice/name"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//AdditionalServiceComponent_IEventManagement/getEventPrice/dateTime"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//AdditionalServiceComponent_IEventManagement/getEventPrice/location"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//AdditionalServiceComponent_IEventManagement/getEventMaxAttendants">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//AdditionalServiceComponent_IEventManagement/getEventMaxAttendants/name"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//AdditionalServiceComponent_IEventManagement/getEventMaxAttendants/dateTime"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//AdditionalServiceComponent_IEventManagement/getEventMaxAttendants/location"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//AdditionalServiceComponent_IEventManagement/getEventCurrentAttendants">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//AdditionalServiceComponent_IEventManagement/getEventCurrentAttendants/name"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//AdditionalServiceComponent_IEventManagement/getEventCurrentAttendants/dateTime"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//AdditionalServiceComponent_IEventManagement/getEventCurrentAttendants/location"/>
+      </genOperations>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//AdditionalServiceComponent_AdditionalService">
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute Implementation.ecore#//AdditionalServiceComponent_AdditionalService/name"/>

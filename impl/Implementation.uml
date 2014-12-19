@@ -874,6 +874,48 @@ For some reason Papyrus doesn’t show the attributes in ConferenceRoom. It hold
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
           </ownedParameter>
         </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_HnoyYIdsEeS_QNUqzsz7Og" name="getEventPrice" visibility="protected">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_hyMawIdsEeS_QNUqzsz7Og" name="name">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_k8xgYIdsEeS_QNUqzsz7Og" name="dateTime">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_mabKIIdsEeS_QNUqzsz7Og" name="location">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_o56EUIdsEeS_QNUqzsz7Og" name="returnValue" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_rSwyEIdsEeS_QNUqzsz7Og" name="getEventMaxAttendants" visibility="protected">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_rSwyEYdsEeS_QNUqzsz7Og" name="name">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_rSwyEodsEeS_QNUqzsz7Og" name="dateTime">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_rSwyE4dsEeS_QNUqzsz7Og" name="location">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_rSwyFIdsEeS_QNUqzsz7Og" name="returnValue" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_ur1msIdsEeS_QNUqzsz7Og" name="getEventCurrentAttendants" visibility="protected">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_ur1msYdsEeS_QNUqzsz7Og" name="name">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_ur1msodsEeS_QNUqzsz7Og" name="dateTime">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_ur1ms4dsEeS_QNUqzsz7Og" name="location">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_ur1mtIdsEeS_QNUqzsz7Og" name="returnValue" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+        </ownedOperation>
       </nestedClassifier>
       <nestedClassifier xmi:type="uml:Class" xmi:id="__NyKkIRBEeSY_7x5FILowQ" name="AdditionalServiceHandler">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_I3S9UIRUEeSMS5FZ7DY3uw" name="additionalService" visibility="private" type="_BKM2oHvAEeSAJb-qAtupNw" association="_I3TkYIRUEeSMS5FZ7DY3uw">

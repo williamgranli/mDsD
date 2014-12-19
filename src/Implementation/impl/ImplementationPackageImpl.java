@@ -1772,6 +1772,33 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getAdditionalServiceComponent_IEventManagement__GetEventPrice__String_Date_String() {
+		return additionalServiceComponent_IEventManagementEClass.getEOperations().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getAdditionalServiceComponent_IEventManagement__GetEventMaxAttendants__String_Date_String() {
+		return additionalServiceComponent_IEventManagementEClass.getEOperations().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getAdditionalServiceComponent_IEventManagement__GetEventCurrentAttendants__String_Date_String() {
+		return additionalServiceComponent_IEventManagementEClass.getEOperations().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getAdditionalServiceComponent_AdditionalServiceEvent() {
 		return additionalServiceComponent_AdditionalServiceEventEClass;
 	}
@@ -2959,6 +2986,9 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		createEOperation(additionalServiceComponent_IEventManagementEClass, ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT___GET_EVENTS__STRING);
 		createEOperation(additionalServiceComponent_IEventManagementEClass, ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT___ADD_GUEST_TO_EVENT__STRING_DATE_STRING_INT);
 		createEOperation(additionalServiceComponent_IEventManagementEClass, ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT___REMOVE_GUESTS_FROM_EVENT__STRING_DATE_STRING_INT);
+		createEOperation(additionalServiceComponent_IEventManagementEClass, ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT___GET_EVENT_PRICE__STRING_DATE_STRING);
+		createEOperation(additionalServiceComponent_IEventManagementEClass, ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT___GET_EVENT_MAX_ATTENDANTS__STRING_DATE_STRING);
+		createEOperation(additionalServiceComponent_IEventManagementEClass, ADDITIONAL_SERVICE_COMPONENT_IEVENT_MANAGEMENT___GET_EVENT_CURRENT_ATTENDANTS__STRING_DATE_STRING);
 
 		additionalServiceComponent_AdditionalServiceEClass = createEClass(ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE);
 		createEAttribute(additionalServiceComponent_AdditionalServiceEClass, ADDITIONAL_SERVICE_COMPONENT_ADDITIONAL_SERVICE__NAME);
@@ -3536,6 +3566,21 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		addEParameter(op, ecorePackage.getEDate(), "dateTime", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "location", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "guests", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getAdditionalServiceComponent_IEventManagement__GetEventPrice__String_Date_String(), theTypesPackage.getInteger(), "getEventPrice", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "name", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "dateTime", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "location", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getAdditionalServiceComponent_IEventManagement__GetEventMaxAttendants__String_Date_String(), theTypesPackage.getInteger(), "getEventMaxAttendants", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "name", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "dateTime", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "location", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getAdditionalServiceComponent_IEventManagement__GetEventCurrentAttendants__String_Date_String(), theTypesPackage.getInteger(), "getEventCurrentAttendants", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "name", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "dateTime", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "location", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(additionalServiceComponent_AdditionalServiceEClass, AdditionalServiceComponent_AdditionalService.class, "AdditionalServiceComponent_AdditionalService", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAdditionalServiceComponent_AdditionalService_Name(), theTypesPackage.getString(), "name", null, 1, 1, AdditionalServiceComponent_AdditionalService.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
