@@ -1,6 +1,10 @@
 package test;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -344,5 +348,29 @@ public class AdditionalServicesTests {
 		as.createAdditionalService("SERVICE", true, 500, "Test description");
 		as.createEvent("SERVICE", date, "Location 1", 10, 5);
 		org.junit.Assert.assertTrue(as.findService("SERVICE").findEvent(date, "Location 1").getCurrentAttendants() == 5);
+	}
+	
+	@Ignore // Just to help John out...!
+	public void dateTest() {
+		//System.out.print("\n### FUNC: ");
+		//System.out.println("dateTest()\n");
+		
+		
+		Date date = new Date();
+		long dateLong = (date.getTime() / 1000) * 1000;
+		date = new Date(dateLong);
+		
+		String dateString = date.toString();
+		
+		Date otherDate = null;
+		SimpleDateFormat sdf = new SimpleDateFormat("EEE MMM dd HH:mm:ss ZZZ yyyy");
+		try {
+			otherDate = sdf.parse(dateString);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		//System.out.println("      Date: " + date.getTime() + "\nOther date: " + otherDate.getTime());
+		org.junit.Assert.assertTrue(date.equals(otherDate));
 	}
 }
