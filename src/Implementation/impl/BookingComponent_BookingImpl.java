@@ -462,6 +462,17 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void addAdditionalServiceToBooking(String newService, int guestCount, String location, Date dateTime) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public void addAdditionalServiceToBooking(BookingComponent_AdditionalService newService) {
@@ -854,8 +865,8 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case ImplementationPackage.BOOKING_COMPONENT_BOOKING___ADD_ADDITIONAL_SERVICE_TO_BOOKING__STRING_INT:
-				addAdditionalServiceToBooking((String)arguments.get(0), (Integer)arguments.get(1));
+			case ImplementationPackage.BOOKING_COMPONENT_BOOKING___ADD_ADDITIONAL_SERVICE_TO_BOOKING__STRING_INT_STRING_DATE:
+				addAdditionalServiceToBooking((String)arguments.get(0), (Integer)arguments.get(1), (String)arguments.get(2), (Date)arguments.get(3));
 				return null;
 			case ImplementationPackage.BOOKING_COMPONENT_BOOKING___ADD_ROOM_TO_BOOKING__STRING_INT:
 				addRoomToBooking((String)arguments.get(0), (Integer)arguments.get(1));

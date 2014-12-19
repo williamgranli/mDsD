@@ -268,10 +268,10 @@ public interface BookingComponent_Booking extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model newServiceDataType="org.eclipse.uml2.types.String" newServiceRequired="true" newServiceOrdered="false" priceDataType="org.eclipse.uml2.types.Integer" priceRequired="true" priceOrdered="false"
+	 * @model newServiceDataType="org.eclipse.uml2.types.String" newServiceRequired="true" newServiceOrdered="false" guestCountDataType="org.eclipse.uml2.types.Integer" guestCountRequired="true" guestCountOrdered="false" locationDataType="org.eclipse.uml2.types.String" locationRequired="true" locationOrdered="false" dateTimeRequired="true" dateTimeOrdered="false"
 	 * @generated
 	 */
-	void addAdditionalServiceToBooking(String newService, int price);
+	void addAdditionalServiceToBooking(String newService, int guestCount, String location, Date dateTime);
 
 	/**
 	 * <!-- begin-user-doc -->

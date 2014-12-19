@@ -2898,7 +2898,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_COMPONENT_BOOKING___ADD_ADDITIONAL_SERVICE_TO_BOOKING__STRING_INT = 0;
+	int BOOKING_COMPONENT_BOOKING___ADD_ADDITIONAL_SERVICE_TO_BOOKING__STRING_INT_STRING_DATE = 0;
 
 	/**
 	 * The operation id for the '<em>Add Room To Booking</em>' operation.
@@ -3027,13 +3027,31 @@ public interface ImplementationPackage extends EPackage {
 	int BOOKING_COMPONENT_ADDITIONAL_SERVICE__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Cost</b></em>' attribute.
+	 * The feature id for the '<em><b>Guest Count</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_COMPONENT_ADDITIONAL_SERVICE__COST = 1;
+	int BOOKING_COMPONENT_ADDITIONAL_SERVICE__GUEST_COUNT = 1;
+
+	/**
+	 * The feature id for the '<em><b>Location</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_COMPONENT_ADDITIONAL_SERVICE__LOCATION = 2;
+
+	/**
+	 * The feature id for the '<em><b>Date Time</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_COMPONENT_ADDITIONAL_SERVICE__DATE_TIME = 3;
 
 	/**
 	 * The number of structural features of the '<em>Booking Component Additional Service</em>' class.
@@ -3042,7 +3060,7 @@ public interface ImplementationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_COMPONENT_ADDITIONAL_SERVICE_FEATURE_COUNT = 2;
+	int BOOKING_COMPONENT_ADDITIONAL_SERVICE_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Booking Component Additional Service</em>' class.
@@ -6378,14 +6396,14 @@ public interface ImplementationPackage extends EPackage {
 	EAttribute getBookingComponent_Booking_IsActive();
 
 	/**
-	 * Returns the meta object for the '{@link Implementation.BookingComponent_Booking#addAdditionalServiceToBooking(java.lang.String, int) <em>Add Additional Service To Booking</em>}' operation.
+	 * Returns the meta object for the '{@link Implementation.BookingComponent_Booking#addAdditionalServiceToBooking(java.lang.String, int, java.lang.String, java.util.Date) <em>Add Additional Service To Booking</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Add Additional Service To Booking</em>' operation.
-	 * @see Implementation.BookingComponent_Booking#addAdditionalServiceToBooking(java.lang.String, int)
+	 * @see Implementation.BookingComponent_Booking#addAdditionalServiceToBooking(java.lang.String, int, java.lang.String, java.util.Date)
 	 * @generated
 	 */
-	EOperation getBookingComponent_Booking__AddAdditionalServiceToBooking__String_int();
+	EOperation getBookingComponent_Booking__AddAdditionalServiceToBooking__String_int_String_Date();
 
 	/**
 	 * Returns the meta object for the '{@link Implementation.BookingComponent_Booking#addRoomToBooking(java.lang.String, int) <em>Add Room To Booking</em>}' operation.
@@ -6529,15 +6547,37 @@ public interface ImplementationPackage extends EPackage {
 	EAttribute getBookingComponent_AdditionalService_Name();
 
 	/**
-	 * Returns the meta object for the attribute '{@link Implementation.BookingComponent_AdditionalService#getCost <em>Cost</em>}'.
+	 * Returns the meta object for the attribute '{@link Implementation.BookingComponent_AdditionalService#getGuestCount <em>Guest Count</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Cost</em>'.
-	 * @see Implementation.BookingComponent_AdditionalService#getCost()
+	 * @return the meta object for the attribute '<em>Guest Count</em>'.
+	 * @see Implementation.BookingComponent_AdditionalService#getGuestCount()
 	 * @see #getBookingComponent_AdditionalService()
 	 * @generated
 	 */
-	EAttribute getBookingComponent_AdditionalService_Cost();
+	EAttribute getBookingComponent_AdditionalService_GuestCount();
+
+	/**
+	 * Returns the meta object for the attribute '{@link Implementation.BookingComponent_AdditionalService#getLocation <em>Location</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Location</em>'.
+	 * @see Implementation.BookingComponent_AdditionalService#getLocation()
+	 * @see #getBookingComponent_AdditionalService()
+	 * @generated
+	 */
+	EAttribute getBookingComponent_AdditionalService_Location();
+
+	/**
+	 * Returns the meta object for the attribute '{@link Implementation.BookingComponent_AdditionalService#getDateTime <em>Date Time</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Date Time</em>'.
+	 * @see Implementation.BookingComponent_AdditionalService#getDateTime()
+	 * @see #getBookingComponent_AdditionalService()
+	 * @generated
+	 */
+	EAttribute getBookingComponent_AdditionalService_DateTime();
 
 	/**
 	 * Returns the meta object for class '{@link Implementation.BookingComponent_BookingGuest <em>Booking Component Booking Guest</em>}'.
@@ -8756,7 +8796,7 @@ public interface ImplementationPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation BOOKING_COMPONENT_BOOKING___ADD_ADDITIONAL_SERVICE_TO_BOOKING__STRING_INT = eINSTANCE.getBookingComponent_Booking__AddAdditionalServiceToBooking__String_int();
+		EOperation BOOKING_COMPONENT_BOOKING___ADD_ADDITIONAL_SERVICE_TO_BOOKING__STRING_INT_STRING_DATE = eINSTANCE.getBookingComponent_Booking__AddAdditionalServiceToBooking__String_int_String_Date();
 
 		/**
 		 * The meta object literal for the '<em><b>Add Room To Booking</b></em>' operation.
@@ -8873,12 +8913,28 @@ public interface ImplementationPackage extends EPackage {
 		EAttribute BOOKING_COMPONENT_ADDITIONAL_SERVICE__NAME = eINSTANCE.getBookingComponent_AdditionalService_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Cost</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Guest Count</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute BOOKING_COMPONENT_ADDITIONAL_SERVICE__COST = eINSTANCE.getBookingComponent_AdditionalService_Cost();
+		EAttribute BOOKING_COMPONENT_ADDITIONAL_SERVICE__GUEST_COUNT = eINSTANCE.getBookingComponent_AdditionalService_GuestCount();
+
+		/**
+		 * The meta object literal for the '<em><b>Location</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BOOKING_COMPONENT_ADDITIONAL_SERVICE__LOCATION = eINSTANCE.getBookingComponent_AdditionalService_Location();
+
+		/**
+		 * The meta object literal for the '<em><b>Date Time</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BOOKING_COMPONENT_ADDITIONAL_SERVICE__DATE_TIME = eINSTANCE.getBookingComponent_AdditionalService_DateTime();
 
 		/**
 		 * The meta object literal for the '{@link Implementation.impl.BookingComponent_BookingGuestImpl <em>Booking Component Booking Guest</em>}' class.

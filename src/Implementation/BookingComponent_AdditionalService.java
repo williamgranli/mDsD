@@ -2,6 +2,7 @@
  */
 package Implementation;
 
+import java.util.Date;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -13,7 +14,9 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link Implementation.BookingComponent_AdditionalService#getName <em>Name</em>}</li>
- *   <li>{@link Implementation.BookingComponent_AdditionalService#getCost <em>Cost</em>}</li>
+ *   <li>{@link Implementation.BookingComponent_AdditionalService#getGuestCount <em>Guest Count</em>}</li>
+ *   <li>{@link Implementation.BookingComponent_AdditionalService#getLocation <em>Location</em>}</li>
+ *   <li>{@link Implementation.BookingComponent_AdditionalService#getDateTime <em>Date Time</em>}</li>
  * </ul>
  * </p>
  *
@@ -49,29 +52,81 @@ public interface BookingComponent_AdditionalService extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Cost</b></em>' attribute.
+	 * Returns the value of the '<em><b>Guest Count</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Cost</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Guest Count</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Cost</em>' attribute.
-	 * @see #setCost(int)
-	 * @see Implementation.ImplementationPackage#getBookingComponent_AdditionalService_Cost()
+	 * @return the value of the '<em>Guest Count</em>' attribute.
+	 * @see #setGuestCount(int)
+	 * @see Implementation.ImplementationPackage#getBookingComponent_AdditionalService_GuestCount()
 	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
 	 * @generated
 	 */
-	int getCost();
+	int getGuestCount();
 
 	/**
-	 * Sets the value of the '{@link Implementation.BookingComponent_AdditionalService#getCost <em>Cost</em>}' attribute.
+	 * Sets the value of the '{@link Implementation.BookingComponent_AdditionalService#getGuestCount <em>Guest Count</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Cost</em>' attribute.
-	 * @see #getCost()
+	 * @param value the new value of the '<em>Guest Count</em>' attribute.
+	 * @see #getGuestCount()
 	 * @generated
 	 */
-	void setCost(int value);
+	void setGuestCount(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Location</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Location</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Location</em>' attribute.
+	 * @see #setLocation(String)
+	 * @see Implementation.ImplementationPackage#getBookingComponent_AdditionalService_Location()
+	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
+	 * @generated
+	 */
+	String getLocation();
+
+	/**
+	 * Sets the value of the '{@link Implementation.BookingComponent_AdditionalService#getLocation <em>Location</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Location</em>' attribute.
+	 * @see #getLocation()
+	 * @generated
+	 */
+	void setLocation(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Date Time</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Date Time</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Date Time</em>' attribute.
+	 * @see #setDateTime(Date)
+	 * @see Implementation.ImplementationPackage#getBookingComponent_AdditionalService_DateTime()
+	 * @model required="true" ordered="false"
+	 * @generated
+	 */
+	Date getDateTime();
+
+	/**
+	 * Sets the value of the '{@link Implementation.BookingComponent_AdditionalService#getDateTime <em>Date Time</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Date Time</em>' attribute.
+	 * @see #getDateTime()
+	 * @generated
+	 */
+	void setDateTime(Date value);
 
 } // BookingComponent_AdditionalService
