@@ -35,8 +35,8 @@ public class StaffAdministrationTest {
 
 	@Test
 	public void createAccount() {
-		System.out.print("\n### FUNC: ");
-		System.out.println("createEmployee()\n");
+		//System.out.print("\n### FUNC: ");
+		//System.out.println("createEmployee()\n");
 		
 		am.createAccount("TESTARN", "101010-1010", "mail@receiver.com", "1337-133337", "SuPeR_SeCrEt");
 		
@@ -45,8 +45,8 @@ public class StaffAdministrationTest {
 
 	@Test
 	public void createFiveAccounts() {
-		System.out.print("\n### FUNC: ");
-		System.out.println("createFiveAccounts()\n");
+		//System.out.print("\n### FUNC: ");
+		//System.out.println("createFiveAccounts()\n");
 		
 		am.createAccount("TESTARN", "101010-1010", "mail@receiver.com", "1337-133337", "SuPeR_SeCrEt");
 		am.createAccount("TESTARN", "101010-1011", "mail@receiver.com", "1337-133337", "SuPeR_SeCrEt");
@@ -59,8 +59,8 @@ public class StaffAdministrationTest {
 
 	@Test
 	public void createTwoAndRemoveOne() {
-		System.out.print("\n### FUNC: ");
-		System.out.println("createTwoAndRemoveOne()\n");
+		//System.out.print("\n### FUNC: ");
+		//System.out.println("createTwoAndRemoveOne()\n");
 		
 		am.createAccount("TESTARN", "101010-1010", "mail@receiver.com", "1337-133337", "SuPeR_SeCrEt");
 		am.createAccount("TESTARN", "101010-1011", "mail@receiver.com", "1337-133337", "SuPeR_SeCrEt");
@@ -71,8 +71,8 @@ public class StaffAdministrationTest {
 
 	@Test
 	public void createTwoEditLast() {
-		System.out.print("\n### FUNC: ");
-		System.out.println("createTwoEditLast()\n");
+		//System.out.print("\n### FUNC: ");
+		//System.out.println("createTwoEditLast()\n");
 		
 		am.createAccount("TESTARN", "101010-1010", "mail@receiver.com", "1337-133337", "SuPeR_SeCrEt");
 		am.createAccount("TESTARN", "101010-1011", "mail@receiver.com", "1337-133337", "SuPeR_SeCrEt");
@@ -83,8 +83,8 @@ public class StaffAdministrationTest {
 
 	@Test
 	public void createOneLogInLogOut() {
-		System.out.print("\n### FUNC: ");
-		System.out.println("createOneLogInLogOut()\n");
+		//System.out.print("\n### FUNC: ");
+		//System.out.println("createOneLogInLogOut()\n");
 		
 		am.createAccount("TESTARN", "101010-1010", "mail@receiver.com", "1337-133337", "SuPeR_SeCrEt");
 		am.logIn("101010-1010", "SuPeR_SeCrEt");
@@ -95,8 +95,8 @@ public class StaffAdministrationTest {
 
 	@Test
 	public void createOneLogInRemove() {
-		System.out.print("\n### FUNC: ");
-		System.out.println("createOneLogInRemove()\n");
+		//System.out.print("\n### FUNC: ");
+		//System.out.println("createOneLogInRemove()\n");
 		
 		am.createAccount("TESTARN", "101010-1010", "mail@receiver.com", "1337-133337", "SuPeR_SeCrEt");
 		am.logIn("101010-1010", "SuPeR_SeCrEt");
@@ -106,8 +106,8 @@ public class StaffAdministrationTest {
 
 	@Test
 	public void preventLoggingInTwice() {
-		System.out.print("\n### FUNC: ");
-		System.out.println("preventLoggingInTwice()\n");
+		//System.out.print("\n### FUNC: ");
+		//System.out.println("preventLoggingInTwice()\n");
 		
 		am.createAccount("TESTARN", "101010-1010", "mail@receiver.com", "1337-133337", "SuPeR_SeCrEt");
 		am.logIn("101010-1010", "SuPeR_SeCrEt");
@@ -117,8 +117,8 @@ public class StaffAdministrationTest {
 
 	@Test
 	public void createOneLogInIsLoggedIn() {
-		System.out.print("\n### FUNC: ");
-		System.out.println("createOneLogInIsLoggedIn()\n");
+		//System.out.print("\n### FUNC: ");
+		//System.out.println("createOneLogInIsLoggedIn()\n");
 		
 		am.createAccount("TESTARN", "101010-1010", "mail@receiver.com", "1337-133337", "SuPeR_SeCrEt");
 		am.logIn("101010-1010", "SuPeR_SeCrEt");

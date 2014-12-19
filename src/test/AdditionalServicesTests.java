@@ -42,8 +42,8 @@ public class AdditionalServicesTests {
 	
 	@Test
 	public void createService() {
-		System.out.print("\n### FUNC: ");
-		System.out.println("createService()\n");
+		//System.out.print("\n### FUNC: ");
+		//System.out.println("createService()\n");
 		
 		as.createAdditionalService("SERVICE", true, 500, "Test description");
 		org.junit.Assert.assertTrue(as.getAdditionalService().size() == 1);
@@ -51,21 +51,21 @@ public class AdditionalServicesTests {
 	
 	@Test
 	public void createAndEditService() {
-		System.out.print("\n### FUNC: ");
-		System.out.println("createAndEditService()\n");
+		//System.out.print("\n### FUNC: ");
+		//System.out.println("createAndEditService()\n");
 		
 		as.createAdditionalService("SERVICE", true, 500, "Test description");
-		System.out.println(as.findService("SERVICE").toString());
+		//System.out.println(as.findService("SERVICE").toString());
 		as.editAdditionalService("SERVICE", "NEW NAME", true, 500, "New name and new price");
-		System.out.println(as.findService("NEW NAME").toString());
+		//System.out.println(as.findService("NEW NAME").toString());
 		
 		org.junit.Assert.assertTrue("NEW NAME".equals(as.findService("NEW NAME").getName()));
 	}
 	
 	@Test
 	public void createTwoServicesRemoveOne() {
-		System.out.print("\n### FUNC: ");
-		System.out.println("createTwoServicesRemoveOne()\n");
+		//System.out.print("\n### FUNC: ");
+		//System.out.println("createTwoServicesRemoveOne()\n");
 		
 		as.createAdditionalService("SERVICE1", true, 500, "Test description");
 		as.createAdditionalService("SERVICE2", true, 500, "Test description");
@@ -76,8 +76,8 @@ public class AdditionalServicesTests {
 	
 	@Test
 	public void createFiveRemoveOne() {
-		System.out.print("\n### FUNC: ");
-		System.out.println("createFiveRemoveOne()\n");
+		//System.out.print("\n### FUNC: ");
+		//System.out.println("createFiveRemoveOne()\n");
 		
 		as.createAdditionalService("SERVICE1", true, 500, "Test description");
 		as.createAdditionalService("SERVICE2", true, 500, "Test description");
@@ -90,8 +90,8 @@ public class AdditionalServicesTests {
 	
 	@Test
 	public void preventDuplicateServices() {
-		System.out.print("\n### FUNC: ");
-		System.out.println("preventDuplicateServices()\n");
+		//System.out.print("\n### FUNC: ");
+		//System.out.println("preventDuplicateServices()\n");
 		
 		as.createAdditionalService("SERVICE1", true, 500, "Test description");
 		as.createAdditionalService("SERVICE1", true, 200, "Another test description");
@@ -100,8 +100,8 @@ public class AdditionalServicesTests {
 	
 	@Test
 	public void addDeleteAddDeleteAdd() {
-		System.out.print("\n### FUNC: ");
-		System.out.println("addDeleteAddDeleteAdd()\n");
+		//System.out.print("\n### FUNC: ");
+		//System.out.println("addDeleteAddDeleteAdd()\n");
 		
 		as.createAdditionalService("SERVICE", true, 500, "Test description");
 		as.removeAdditionalService("SERVICE");
@@ -113,8 +113,8 @@ public class AdditionalServicesTests {
 	
 	@Test
 	public void createServiceAddEventEditEvent() {
-		System.out.print("\n### FUNC: ");
-		System.out.println("createServiceAddEventEditEvent()\n");
+		//System.out.print("\n### FUNC: ");
+		//System.out.println("createServiceAddEventEditEvent()\n");
 		
 		Date date = new Date();
 		String location = "Over there";
@@ -129,8 +129,8 @@ public class AdditionalServicesTests {
 	
 	@Test
 	public void addTooManyAttendantsToEvent() {
-		System.out.print("\n### FUNC: ");
-		System.out.println("addTooManyAttendantsToEvent()\n");
+		//System.out.print("\n### FUNC: ");
+		//System.out.println("addTooManyAttendantsToEvent()\n");
 		
 		Date date = new Date();
 		String location = "Over there";
@@ -145,8 +145,8 @@ public class AdditionalServicesTests {
 	
 	@Test
 	public void createServiceAddTwoEvent() {
-		System.out.print("\n### FUNC: ");
-		System.out.println("createServiceAddEvent()\n");
+		//System.out.print("\n### FUNC: ");
+		//System.out.println("createServiceAddEvent()\n");
 		
 		Date date = new Date();
 		String location = "Over there";
@@ -157,15 +157,15 @@ public class AdditionalServicesTests {
 		as.createEvent("SERVICE", date, location2, 10, 5);
 		
 		// Print in terminal
-		System.out.println(as.findService("SERVICE").toString());
+		//System.out.println(as.findService("SERVICE").toString());
 		
 		org.junit.Assert.assertTrue(as.findService("SERVICE").getAdditionalServiceEvent().size() == 2);
 	}
 	
 	@Test
 	public void createServiceAddTwoEventsRemoveOneEvent() {
-		System.out.print("\n### FUNC: ");
-		System.out.println("createServiceAddTwoEventsRemoveOneEvent()\n");
+		//System.out.print("\n### FUNC: ");
+		//System.out.println("createServiceAddTwoEventsRemoveOneEvent()\n");
 		
 		Date date = new Date();
 		String location = "Over there";
@@ -177,15 +177,15 @@ public class AdditionalServicesTests {
 		as.removeEvent("SERVICE", date, location2);
 		
 		// Print in terminal
-		System.out.println(as.findService("SERVICE").toString());
+		//System.out.println(as.findService("SERVICE").toString());
 		
 		org.junit.Assert.assertTrue(as.findService("SERVICE").getAdditionalServiceEvent().size() == 1);
 	}
 	
 	@Test
 	public void createEventWithoutExistingService() {
-		System.out.print("\n### FUNC: ");
-		System.out.println("createEventWithoutExistingService()\n");
+		//System.out.print("\n### FUNC: ");
+		//System.out.println("createEventWithoutExistingService()\n");
 		
 		Date date = new Date();
 		String location = "Over there";
@@ -193,15 +193,15 @@ public class AdditionalServicesTests {
 		as.createEvent("SERVICE", date, location, 10, 5);
 		
 		// Print in terminal
-		System.out.println(as.findService("SERVICE").toString());
+		//System.out.println(as.findService("SERVICE").toString());
 		
 		org.junit.Assert.assertTrue(as.findService("SERVICE").getAdditionalServiceEvent().size() == 1);
 	}
 	
 	@Test
 	public void removeAllEventsForDate() {
-		System.out.print("\n### FUNC: ");
-		System.out.println("removeAllEventsForDate()\n");
+		//System.out.print("\n### FUNC: ");
+		//System.out.println("removeAllEventsForDate()\n");
 		
 		Date date = new Date();
 		
@@ -211,7 +211,7 @@ public class AdditionalServicesTests {
 		as.createEvent("SERVICE", date, "Location 4", 10, 5);
 		
 		// Print in terminal
-		System.out.println(as.findService("SERVICE").toString());
+		//System.out.println(as.findService("SERVICE").toString());
 		
 		as.removeEvents("SERVICE", date);
 		
@@ -220,8 +220,8 @@ public class AdditionalServicesTests {
 	
 	@Test
 	public void returnMultipleEvents() {
-		System.out.print("\n### FUNC: ");
-		System.out.println("returnMultipleEvents()\n");
+		//System.out.print("\n### FUNC: ");
+		//System.out.println("returnMultipleEvents()\n");
 		
 		Date date = new Date();
 		
@@ -231,7 +231,7 @@ public class AdditionalServicesTests {
 		as.createEvent("SERVICE", date, "Location 4", 10, 5);
 		
 		// Print in terminal
-		System.out.println(as.findService("SERVICE").toString());
+		//System.out.println(as.findService("SERVICE").toString());
 		
 		as.findService("SERVICE").findEvents(date);
 		
@@ -240,8 +240,8 @@ public class AdditionalServicesTests {
 	
 	@Test
 	public void getServiceNamesForBooking() {
-		System.out.print("\n### FUNC: ");
-		System.out.println("getServiceNames()\n");
+		//System.out.print("\n### FUNC: ");
+		//System.out.println("getServiceNames()\n");
 		
 		as.createAdditionalService("SERVICE1", true, 500, "Test description");
 		as.createAdditionalService("SERVICE2", true, 500, "Test description");
@@ -249,15 +249,15 @@ public class AdditionalServicesTests {
 		as.createAdditionalService("SERVICE4", true, 500, "Test description");
 		as.createAdditionalService("SERVICE5", true, 500, "Test description");
 		
-		System.out.println(as.getServices());
+		//System.out.println(as.getServices());
 		
 		org.junit.Assert.assertTrue(as.getServices().size() == 5);
 	}
 	
 	@Test
 	public void getEventInfoForBooking() {
-		System.out.print("\n### FUNC: ");
-		System.out.println("getEventInfoForBooking()\n");
+		//System.out.print("\n### FUNC: ");
+		//System.out.println("getEventInfoForBooking()\n");
 		
 		Date date = new Date();
 		
@@ -267,15 +267,15 @@ public class AdditionalServicesTests {
 		as.createEvent("SERVICE", date, "Location 3", 10, 5);
 		as.createEvent("SERVICE", date, "Location 4", 10, 5);
 		
-		System.out.println(as.getEvents("SERVICE"));
+		//System.out.println(as.getEvents("SERVICE"));
 		
 		org.junit.Assert.assertTrue(as.getEvents("SERVICE").size() == 4);
 	}
 	
 	@Test
 	public void addGueststoEventFromBooking() {
-		System.out.print("\n### FUNC: ");
-		System.out.println("addGueststoEventFromBooking()\n");
+		//System.out.print("\n### FUNC: ");
+		//System.out.println("addGueststoEventFromBooking()\n");
 		
 		Date date = new Date();
 		
@@ -287,8 +287,8 @@ public class AdditionalServicesTests {
 	
 	@Test
 	public void addTooManyGueststoEventFromBooking() {
-		System.out.print("\n### FUNC: ");
-		System.out.println("addTooManyGueststoEventFromBooking()\n");
+		//System.out.print("\n### FUNC: ");
+		//System.out.println("addTooManyGueststoEventFromBooking()\n");
 		
 		Date date = new Date();
 		
@@ -301,8 +301,8 @@ public class AdditionalServicesTests {
 	
 	@Test
 	public void removeGueststoEventFromBooking() {
-		System.out.print("\n### FUNC: ");
-		System.out.println("removeGueststoEventFromBooking()\n");
+		//System.out.print("\n### FUNC: ");
+		//System.out.println("removeGueststoEventFromBooking()\n");
 		
 		Date date = new Date();
 		
