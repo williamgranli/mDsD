@@ -186,7 +186,7 @@ public class DecisionSupportComponent_BookingDSSInfoImpl extends MinimalEObjectI
 	 * @generated NOT
 	 */
 	protected DecisionSupportComponent_BookingDSSInfoImpl(String roomType, String arrivalDate,
-			String departureDate, String customerSSN, String customerFirstName,
+			String departureDate, String customerFirstName,
 			String customerLastName, String address, int numberOfGuests) {
 		super();
 		this.roomType= roomType;

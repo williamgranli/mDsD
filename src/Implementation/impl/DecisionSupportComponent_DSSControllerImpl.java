@@ -9,9 +9,12 @@ import Implementation.DecisionSupportComponent_DSSController;
 import Implementation.DecisionSupportComponent_OccupancyDSSInfo;
 import Implementation.ImplementationPackage;
 import Implementation.OccupancyComponent_IOccupancyDecision;
+
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -235,26 +238,30 @@ public class DecisionSupportComponent_DSSControllerImpl extends MinimalEObjectIm
 		
 		for (String dssData: dssInfo){
 			String[] DSSDataList= dssData.split(";");
-			String[] DSSBookingList = DSSDataList[0].split(",");
-			String[] additionalService = DSSDataList[1].split(",");
-			
+			String[] DSSBookingList = DSSDataList[0].split(",");			
 			
 			DecisionSupportComponent_BookingDSSInfo bookingDSSInformation = new DecisionSupportComponent_BookingDSSInfoImpl(DSSBookingList[0],
-					DSSBookingList[1],DSSBookingList[2],DSSBookingList[3],DSSBookingList[4],
-					DSSBookingList[5],DSSBookingList[6], Integer.parseInt(DSSBookingList[7]));
+					DSSBookingList[1],DSSBookingList[2],DSSBookingList[3],
+					DSSBookingList[4],DSSBookingList[5], Integer.parseInt(DSSBookingList[6]));
 			
 //			EList<String> DSSInfo = new EObjectResolvingEList<String>(BookingComponent_Booking.class, this, 
 //			ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER__BOOKINGS);		
 			
-			
-			EList<DecisionSupportComponent_AdditionalServiceDSSInfo> addServices = new EObjectResolvingEList<DecisionSupportComponent_AdditionalServiceDSSInfo>
-			(DecisionSupportComponent_AdditionalServiceDSSInfo.class, this, ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__OCCUPANCY_DSS_INFO);
-			for (String addService:additionalService){
-				if(addService != null){
-					String[] addServiceList= addService.split(":");
-					bookingDSSInformation.addAdditionalService(addServiceList[0], Long.parseLong(addServiceList[1], 10));
+			if(DSSDataList.length==2){
+				String[] additionalService = DSSDataList[1].split(",");
+
+				EList<DecisionSupportComponent_AdditionalServiceDSSInfo> addServices = new EObjectResolvingEList<DecisionSupportComponent_AdditionalServiceDSSInfo>
+				(DecisionSupportComponent_AdditionalServiceDSSInfo.class, this, ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__OCCUPANCY_DSS_INFO);
+				for (String addService:additionalService){
+					if(addService != ""){
+						String[] addServiceList= addService.split(":");
+						if(addServiceList.length==2){
+							bookingDSSInformation.addAdditionalService(addServiceList[0], Integer.parseInt(addServiceList[1]));
+						}
+					}
 				}
 			}
+			
 			bookingDSSInfo.add(bookingDSSInformation);
 		}
 
@@ -267,14 +274,14 @@ public class DecisionSupportComponent_DSSControllerImpl extends MinimalEObjectIm
 	 */
 	public EList<String> getAllRoomTypeFrequency() {
 		EList<String> roomTypeFrequency = new EObjectResolvingEList<String>(DecisionSupportComponent_DSSControllerImpl.class, this, 
-				ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__OCCUPANCY_DSS_INFO);
+			ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__OCCUPANCY_DSS_INFO);
 
 		int[] count = new int[bookingDSSInfo.size()];
 		EList<String> roomTypes = new EObjectResolvingEList<String>(DecisionSupportComponent_DSSControllerImpl.class, this, 
-				ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__OCCUPANCY_DSS_INFO);
+			ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__OCCUPANCY_DSS_INFO);
 
 
-		// Add all unique roomtypes to a list
+			// Add all unique roomtypes to a list
 		for(int i = 0; i < bookingDSSInfo.size(); i++){
 			DecisionSupportComponent_BookingDSSInfo current_bookingDSSInfo = bookingDSSInfo.get(i);
 			if(getPositionInList(roomTypes, current_bookingDSSInfo.getRoomType()) == -1){
@@ -282,7 +289,7 @@ public class DecisionSupportComponent_DSSControllerImpl extends MinimalEObjectIm
 			}
 		}
 
-		// Count all the unique room types and add it to roomTypeFrequency list
+			// Count all the unique room types and add it to roomTypeFrequency list
 		for(int i = 0; i < roomTypes.size(); i++){
 			count[i] = countRoomType(bookingDSSInfo, roomTypes.get(i));
 			roomTypeFrequency.add(roomTypes.get(i) + ":" + count[i]);
@@ -324,23 +331,21 @@ public class DecisionSupportComponent_DSSControllerImpl extends MinimalEObjectIm
 	 * @generated NOT
 	 */
 	public EList<String> getAllCustomerBookingFrequency() {
-		EList<String> customerBookingFrequency = new EObjectResolvingEList<String>(DecisionSupportComponent_DSSControllerImpl.class, this, 
-				ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__OCCUPANCY_DSS_INFO);
+		EList<String> customerBookingFrequency = new BasicEList<String>();
 
 		int[] count = new int[bookingDSSInfo.size()];
-		EList<String> customers = new EObjectResolvingEList<String>(DecisionSupportComponent_DSSControllerImpl.class, this, 
-				ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__OCCUPANCY_DSS_INFO);
+		EList<String> customers = new BasicEList<String>();
 
 
-		// Add all unique customers to a list
+			// Add all unique customers to a list
 		for(int i = 0; i < bookingDSSInfo.size(); i++){
 			DecisionSupportComponent_BookingDSSInfo current_bookingDSSInfo = bookingDSSInfo.get(i);
-			if(getPositionInList(customers, current_bookingDSSInfo.getCustomerSSN()) == -1){
-				customers.add(current_bookingDSSInfo.getCustomerSSN());
+			if(getPositionInList(customers, (current_bookingDSSInfo.getCustomerFirstName() + " " +current_bookingDSSInfo.getCustomerLastName())) == -1){
+				customers.add(current_bookingDSSInfo.getCustomerLastName());
 			}
 		}
 
-		// Count all the occurances of customer in booking and adds it to customerBookingFrequency list
+			// Count all the occurances of customer in booking and adds it to customerBookingFrequency list
 		for(int i = 0; i < customers.size(); i++){
 			count[i] = countCustomerBooking(bookingDSSInfo, customers.get(i));
 			customerBookingFrequency.add(customers.get(i) + ":" + count[i]);
@@ -349,13 +354,30 @@ public class DecisionSupportComponent_DSSControllerImpl extends MinimalEObjectIm
 		return customerBookingFrequency;
 	}
 
+	
+	/**
+	 * shows the history of number of bookings made
+	 * */
+	public int showHistoryBookingsNumber(){
+		return bookingDSSInfo.size();
+	}
+	
+
+	/**
+	 * shows the history of number of check-ins made
+	 * */
+	public int showCheckInsNumber(){
+		return occupancyDSSInfo.size();
+	}
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public String getCustomerBookingFrequency(String customerSSN) {
-		return customerSSN + ":" + countCustomerBooking(bookingDSSInfo, customerSSN);
+	public String getCustomerBookingFrequency(String name) {
+		String[] nameList = name.split(" ");
+		return nameList[0] + " " + nameList[1] + ":" + countCustomerBooking(bookingDSSInfo, name);
 
 	}
 
@@ -397,11 +419,12 @@ public class DecisionSupportComponent_DSSControllerImpl extends MinimalEObjectIm
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public int countCustomerBooking(EList<DecisionSupportComponent_BookingDSSInfo> bookingDSSInfo, String customerSSN) {
+	public int countCustomerBooking(EList<DecisionSupportComponent_BookingDSSInfo> bookingDSSInfo, String name) {
 		int countForCurrentCustomer = 0;
+		String[] nameList = name.split(" ");
 		for(DecisionSupportComponent_BookingDSSInfo current_bookingDSSInfo: bookingDSSInfo){
 
-			if(current_bookingDSSInfo.getCustomerSSN().equals(customerSSN))
+			if(current_bookingDSSInfo.getCustomerFirstName().equals(nameList[0]) && current_bookingDSSInfo.getCustomerLastName().equals(nameList[1]))
 				countForCurrentCustomer++;
 		}
 
