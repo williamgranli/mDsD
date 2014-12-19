@@ -60,7 +60,7 @@
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
             </ownedAttribute>
           </packagedElement>
-          <packagedElement xmi:type="uml:Class" xmi:id="_SAs3kGT0EeS_fYcbMbH-Fw" name="Payment">
+          <packagedElement xmi:type="uml:Class" xmi:id="_SAs3kGT0EeS_fYcbMbH-Fw" name="Bank">
             <ownedAttribute xmi:type="uml:Property" xmi:id="_xqOFMGUDEeS_fYcbMbH-Fw" name="PaymentTotal">
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
             </ownedAttribute>
