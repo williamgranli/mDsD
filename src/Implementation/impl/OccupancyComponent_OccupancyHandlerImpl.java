@@ -4,12 +4,15 @@ package Implementation.impl;
 
 import Implementation.BookingComponent_IBookingInformation;
 import Implementation.ImplementationPackage;
+import Implementation.OccupancyComponent_Guest;
 import Implementation.OccupancyComponent_IOccupancy;
 import Implementation.OccupancyComponent_Occupancy;
 import Implementation.OccupancyComponent_OccupancyHandler;
 import Implementation.RoomComponent_IRoomInformation;
+
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
@@ -324,42 +327,39 @@ public boolean isTooManyOccupants(int roomNumber, int guestCount){
 	 * @generated NOT
 	 */
 	public void checkOutGuest(int roomNumber, String firstName, String lastName) {
-		String fullName = "" + firstName + "," + lastName;
-		
-		EList<String> guestsInRoom = new BasicEList<String>();
-		
-		//Get guests from occupancy object with this roomNumber
-		guestsInRoom = listGuestsInRoom(roomNumber);
-		
-		if(guestsInRoom == null){
-			System.out.println("No guests found in room: " + roomNumber);
-			return;
-		}
-				
-		//Iterate through the guests in the room to match it
-		//with the one talking to the receptionist
-		for(String guest: guestsInRoom) {
-			if (guest == fullName) {
-				for (OccupancyComponent_Occupancy currentOccupancy : occupancy) {
-					//If this occupancy is not checked out...
-					if (currentOccupancy.getRoomNumber() == roomNumber 
-							&& currentOccupancy.getCheckOutDateTime() != 0L) {
+
+
+
+
+		for (OccupancyComponent_Occupancy currentOccupancy : occupancy) {
+			for (OccupancyComponent_Guest guest :  currentOccupancy.getGuests()) {
+
+				if (!(guest.getFirstName().equals(firstName) && guest.getLastName().equals(lastName))) {
+					System.out.println("No guests found in room: " + roomNumber);
+				}
+				else {
+
+					if ((int)currentOccupancy.getCheckOutDateTime() == 0) {
 						//...check out the occupancy
+						System.out.println("Setting the checkout time");
 						currentOccupancy.setCheckOutDateTime(System.currentTimeMillis());
 						if (iBooking.isPaidFor(currentOccupancy.getBookingReference()) == true) {
 							System.out.println("Booking has already been paid for!");
 						}
 						else { 
+							System.out.println(currentOccupancy.getBookingReference());
 							iBooking.makePayment(currentOccupancy.getBookingReference());
 						}
-					}				
+					}	
+				}
+					
 				}
 			}
-			else {
-				System.out.println("Room number and name of guest does not match an occupancy");
-			}
 		}
-	}
+		
+
+
+	
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -408,9 +408,9 @@ public boolean isTooManyOccupants(int roomNumber, int guestCount){
 	 */
 	public boolean isOccupied(int roomNumber) {
 		for(OccupancyComponent_Occupancy occupan: occupancy){
-			if(occupan.getRoomNumber() == Integer.valueOf(roomNumber)
-					&& occupan.getCheckOutDateTime() != 0L)
-				return true;
+
+			if(occupan.getRoomNumber() == roomNumber && (int) occupan.getCheckOutDateTime() == 0)
+				return true;	
 		}
 
 		return false;

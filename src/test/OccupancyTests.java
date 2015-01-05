@@ -112,13 +112,13 @@ public class OccupancyTests {
 	/** Check out tests **/
 	
 	@Test
-	public void checkOutGuest(){
+	public void checkOutGuest() {
 		occupancy.checkInGuest(bookingReference, "William", "Granli", "Single Room", null, null);
-		occupancy.checkInGuest(bookingReference, "Andam", "Berima", "Single Room", "William","Granli");
 		
 		occupancy.checkOutGuest(occupancy.getOccupancy().get(0).getRoomNumber(), "William", "Granli");
-		System.out.println("TestcheckoutGuest: " + occupancy.getOccupancy().get(0).getCheckInDateTime());
-		org.junit.Assert.assertTrue(occupancy.getOccupancy().get(0).getCheckInDateTime() != 0L);
+		System.out.println("TestcheckoutGuest: " + occupancy.getOccupancy().get(0).getCheckOutDateTime());
+		System.out.println(occupancy.getOccupancy().get(0).getCheckOutDateTime());
+		org.junit.Assert.assertTrue(occupancy.getOccupancy().get(0).getCheckOutDateTime() != 0);
 		
 	}
 	

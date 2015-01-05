@@ -24,6 +24,9 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
@@ -395,8 +398,49 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 			if (booking.getBookingReference().equals(bookingReference)) {
 				String paymentString = booking.getPaymentDetails().toString();
 				String [] paymentArray = paymentString.split(",");
-				successful = iPayment.makePayment(paymentArray[0], paymentArray[1], Integer.parseInt(paymentArray[2]), 
-						Integer.parseInt(paymentArray[3]), paymentArray[4], paymentArray[5], booking.getCurrentCost());
+				System.out.println(paymentString);
+				
+				Pattern p = Pattern.compile("(\\d+)");
+				Matcher m1 = p.matcher(paymentArray[5]);
+				long bookingCost = 100;
+				Matcher m2 = p.matcher(paymentArray[6]);
+				m1.find();
+				m2.find();
+				
+				iPayment.addCC(paymentArray[3], 
+						paymentArray[4], 
+						Integer.parseInt(m1.group(1)),
+						Integer.parseInt(m2.group(1)),
+						paymentArray[0], 
+						paymentArray[1]);
+
+				
+				
+				iPayment.makeDeposit(paymentArray[3], 
+						paymentArray[4], 
+						Integer.parseInt(m1.group(1)),
+						Integer.parseInt(m2.group(1)),
+						paymentArray[0], 
+						paymentArray[1], 
+						bookingCost);
+				
+				successful = iPayment.makePayment(
+						paymentArray[3], 
+						paymentArray[4], 
+						Integer.parseInt(m1.group(1)),
+						Integer.parseInt(m2.group(1)),
+						paymentArray[0], 
+						paymentArray[1], 
+						bookingCost);
+				
+				iPayment.removeCC(paymentArray[3], 
+						paymentArray[4], 
+						Integer.parseInt(m1.group(1)),
+						Integer.parseInt(m2.group(1)),
+						paymentArray[0], 
+						paymentArray[1]);
+				
+				
 				if (successful == true) {
 					booking.setIsPaid(true);
 				}
