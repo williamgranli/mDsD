@@ -13,7 +13,8 @@ import org.junit.runners.Suite.SuiteClasses;
 	PaymentTests.class,
 	RoomTests.class,
 	StaffAdministrationTest.class,
-	MakeBookingUseCaseTest.class})
+	MakeBookingUseCaseTest.class,
+	CheckOutUseCaseTest.class})
 
 public class AllTests {
 

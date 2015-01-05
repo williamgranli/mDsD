@@ -502,13 +502,9 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 			newBooking.addPaymentDetails(customerFirstName, customerLastName, customerAddress, ccNumber, ccv, expiryMonth, expiryYear);
 			newBooking.addRoomToBooking(roomType, iRoomInformation.getPriceOfRoomType(roomType));
 			
-			//TODO - Find a way to test this without relying upon connection.
 			boolean ccAdded = iPayment.addCC(ccNumber, ccv, expiryMonth, expiryYear, customerFirstName, customerLastName);
-			System.out.println("1 " + ccAdded);
 			boolean validCC = iPayment.validateCC(ccNumber, ccv, expiryMonth, expiryYear, customerFirstName, customerLastName);
-			System.out.println("2 " + validCC);
 			double remainingMoney = iPayment.makeDeposit(ccNumber, ccv, expiryMonth, expiryYear, customerFirstName, customerLastName, newBooking.currentCost());
-			System.out.println("3 " + remainingMoney);
 			iPayment.removeCC(ccNumber, ccv, expiryMonth, expiryYear, customerFirstName, customerLastName);
 			
 			System.out.println(remainingMoney + " " + ccAdded);
