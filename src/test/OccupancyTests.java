@@ -9,7 +9,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-public class occupancyTests {
+public class OccupancyTests {
 	static Implementation.ImplementationFactory factory;
 	static Implementation.OccupancyComponent_OccupancyHandler occupancy;
 	static Implementation.BookingComponent_BookingHandler booking;

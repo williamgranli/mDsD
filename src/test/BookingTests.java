@@ -12,7 +12,7 @@ import org.junit.Test;
 
 import Implementation.BookingComponent_AdditionalService;
 
-public class bookingTests {
+public class BookingTests {
 
 	static Implementation.ImplementationFactory factory;
 	static Implementation.BookingComponent_BookingHandler booking;

@@ -7,11 +7,11 @@ import org.junit.runners.Suite.SuiteClasses;
 @RunWith(Suite.class)
 @SuiteClasses({
 	AdditionalServicesTests.class,
-	bookingTests.class,
+	BookingTests.class,
 	DecisionSupportTests.class,
-	occupancyTests.class,
+	OccupancyTests.class,
 	PaymentTests.class,
-	roomTests.class,
+	RoomTests.class,
 	StaffAdministrationTest.class})
 
 public class AllTests {

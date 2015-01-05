@@ -4,13 +4,16 @@ package Implementation.impl;
 
 //banking
 import javax.xml.soap.SOAPException;
+
 import Implementation.Bank_AdministratorProvides;
 import Implementation.Bank_CustomerProvides;
 import Implementation.ImplementationPackage;
 import Implementation.PaymentComponent_Payment;
 import Implementation.PaymentComponent_PaymentHandler;
+
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
