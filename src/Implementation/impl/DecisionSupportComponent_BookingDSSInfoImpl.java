@@ -376,6 +376,10 @@ public class DecisionSupportComponent_BookingDSSInfoImpl extends MinimalEObjectI
 	 * @generated NOT
 	 */
 	public void addAdditionalService(String additionalServiceName, long additionalServicePrice) {
+		if (additionalServices == null) {
+			additionalServices = new EObjectResolvingEList<DecisionSupportComponent_AdditionalServiceDSSInfo>(DecisionSupportComponent_AdditionalServiceDSSInfo.class, this, ImplementationPackage.DECISION_SUPPORT_COMPONENT_BOOKING_DSS_INFO__ADDITIONAL_SERVICES);
+		}
+		
 		additionalServices.add(new DecisionSupportComponent_AdditionalServiceDSSInfoImpl
 				(additionalServiceName, additionalServicePrice));
 	}

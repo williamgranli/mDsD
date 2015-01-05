@@ -238,25 +238,23 @@ public class DecisionSupportComponent_DSSControllerImpl extends MinimalEObjectIm
 		
 		for (String dssData: dssInfo){
 			String[] DSSDataList= dssData.split(";");
-			String[] DSSBookingList = DSSDataList[0].split(",");			
+			String[] DSSBookingList = DSSDataList[0].split(",");
+			
 			
 			DecisionSupportComponent_BookingDSSInfo bookingDSSInformation = new DecisionSupportComponent_BookingDSSInfoImpl(DSSBookingList[0],
-					DSSBookingList[1],DSSBookingList[2],DSSBookingList[3],
-					DSSBookingList[4],DSSBookingList[5], Integer.parseInt(DSSBookingList[6]));
-			
-//			EList<String> DSSInfo = new EObjectResolvingEList<String>(BookingComponent_Booking.class, this, 
-//			ImplementationPackage.BOOKING_COMPONENT_BOOKING_HANDLER__BOOKINGS);		
+					DSSBookingList[3],DSSBookingList[4],DSSBookingList[5],
+					DSSBookingList[6],DSSBookingList[7], Integer.parseInt(DSSBookingList[8]));
+					
 			
 			if(DSSDataList.length==2){
 				String[] additionalService = DSSDataList[1].split(",");
-
-				EList<DecisionSupportComponent_AdditionalServiceDSSInfo> addServices = new EObjectResolvingEList<DecisionSupportComponent_AdditionalServiceDSSInfo>
-				(DecisionSupportComponent_AdditionalServiceDSSInfo.class, this, ImplementationPackage.DECISION_SUPPORT_COMPONENT_DSS_CONTROLLER__OCCUPANCY_DSS_INFO);
+				
 				for (String addService:additionalService){
+					
 					if(addService != ""){
 						String[] addServiceList= addService.split(":");
 						if(addServiceList.length==2){
-							bookingDSSInformation.addAdditionalService(addServiceList[0], Integer.parseInt(addServiceList[1]));
+							bookingDSSInformation.addAdditionalService(addServiceList[0], Long.valueOf(addServiceList[1]));
 						}
 					}
 				}
@@ -390,10 +388,17 @@ public class DecisionSupportComponent_DSSControllerImpl extends MinimalEObjectIm
 
 		String DSSOccupancyInformation = iOccupancyDecision.getDSSOccupancyInfo();
 		String[] DSSOccupancyList = DSSOccupancyInformation.split(";");
+		int numberOfGuest = 1;
 		for (String DSSOccupancy: DSSOccupancyList){
 			String[] dssOccupanList = DSSOccupancy.split(",");
+			for(DecisionSupportComponent_OccupancyDSSInfo dssOccu:occupancyDSSInfo){
+				if(Integer.parseInt(dssOccupanList[0])==dssOccu.getRoomNumber()){
+					numberOfGuest = dssOccu.getNumberOfGuests() + 1;
+					dssOccu.setNumberOfGuests(numberOfGuest);
+				}
+			}
 			occupancyDSSInfo.add(new DecisionSupportComponent_OccupancyDSSInfoImpl(Integer.parseInt(dssOccupanList[0]),dssOccupanList[1]
-					,dssOccupanList[2],Integer.parseInt(dssOccupanList[3])));
+					,dssOccupanList[2],numberOfGuest));
 		}
 	}
 
