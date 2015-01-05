@@ -32,6 +32,7 @@ public class DecisionSupportTests {
 		
 		static Implementation.ImplementationFactory factory;
 		static Implementation.BookingComponent_BookingHandler booking;
+		static Implementation.PaymentComponent_IPayment payment;
 		static Implementation.OccupancyComponent_OccupancyHandler occupan;
 		
 		static Implementation.RoomComponent_RoomHandler roomHandler;
@@ -58,7 +59,9 @@ public class DecisionSupportTests {
 		paymentDetails2 = factory.createBookingComponent_PaymentDetails();
 		paymentDetails3 = factory.createBookingComponent_PaymentDetails();
 		paymentDetails4 = factory.createBookingComponent_PaymentDetails();
+		payment = factory.createPaymentComponent_PaymentHandler();
 		booking.setIRoomInformation(roomHandler);
+		booking.setIPayment(payment);
 		occupan.setIRoomInformation(roomHandler);
 		occupan.setIBooking(booking);
 		controller.setIBookingDecision(booking);
