@@ -37,7 +37,6 @@ public class RoomTests {
 		roomhandler.createBedRoom(102,true, 100, "bedroom", "A bedroom, which is nice to sleep in.", 2);
 		roomhandler.createConferenceRoom(101,true, 100, "conference", "A conference room, for conferences.",50, true, false);
 		org.junit.Assert.assertTrue(roomhandler.countNumberOfTotalRooms() == 3);
-		
 	}
 	
 	@Test
@@ -46,7 +45,6 @@ public class RoomTests {
 		org.junit.Assert.assertTrue(roomhandler.getAllRoomNumbers().size() == 0);
 		roomhandler.createBedRoom(101,true, 100, "bedroom", "A bedroom, which is nice to sleep in.", 2);
 		org.junit.Assert.assertTrue(roomhandler.getAllRoomNumbers().size() == 1);
-		
 	}
 	
 	@Test
@@ -55,7 +53,6 @@ public class RoomTests {
 		org.junit.Assert.assertTrue(roomhandler.getAllRoomNumbers().size() == 0);
 		roomhandler.createConferenceRoom(101,true, 100, "conference", "A conference room, for conferences.",50, true, false);
 		org.junit.Assert.assertTrue(roomhandler.getAllRoomNumbers().size() == 1);
-		
 	}
 	
 	@Test
@@ -63,8 +60,7 @@ public class RoomTests {
 		
 		roomhandler.createBedRoom(101,true, 100, "bedroom", "A bedroom, which is nice to sleep in.", 2);
 		org.junit.Assert.assertTrue(roomhandler.getRoomInfo(101).equals("101" + "," + "bedroom" + "," + "100" + "," 
-				+ "A bedroom, which is nice to sleep in."));
-		
+				+ "A bedroom, which is nice to sleep in.,2"));
 	}
 	
 	@Test
@@ -88,7 +84,6 @@ public class RoomTests {
 		org.junit.Assert.assertTrue((roomhandler.searchRoom("bedroom").get(1)).equals("102,true,bedroom,100,2,A bedroom, which is nice to sleep in."));
 		org.junit.Assert.assertTrue((roomhandler.searchRoom("conference").get(0)).equals("102,true,conference,100,50,true,false,A conference room, for conferences."));
 		//org.junit.Assert.assertTrue(roomhandler.getRoomTypes().get(1).equals("conference"));
-
 	}
 	
 	@Test
@@ -97,7 +92,7 @@ public class RoomTests {
 		roomhandler.createBedRoom(101,true, 100, "bedroom", "A bedroom, which is nice to sleep in.", 2);
 		roomhandler.editBedRoom(101, 100, false, 200, "bedroom", "A bedroom, which is even better to sleep in.", 1);
 		org.junit.Assert.assertTrue(roomhandler.getRoomInfo(100).equals("100" + "," + "bedroom" + "," + "200" + "," 
-		+ "A bedroom, which is even better to sleep in."));
+		+ "A bedroom, which is even better to sleep in.,1"));
 	}
 	
 	@Test
@@ -112,12 +107,10 @@ public class RoomTests {
 	@Test
 	public void testRemoveRoom() {
 		
-		
 		roomhandler.createBedRoom(101,true, 100, "bedroom", "A bedroom, which is nice to sleep in.", 2);
 		org.junit.Assert.assertTrue(roomhandler.getAllRoomNumbers().size() == 1);
 		roomhandler.remove(101);
-		org.junit.Assert.assertTrue(roomhandler.getAllRoomNumbers().size() == 0);
-		
+		org.junit.Assert.assertTrue(roomhandler.getAllRoomNumbers().size() == 0);	
 	}
 	
 	@Test
@@ -126,7 +119,6 @@ public class RoomTests {
 		org.junit.Assert.assertTrue(roomhandler.getAllRoomNumbers().size() == 0);
 		roomhandler.createBedRoom(101,false, 100, "bedroom", "A bedroom, which is nice to sleep in.", 2);
 		org.junit.Assert.assertTrue(roomhandler.getAllRoomNumbers().size() == 0);
-		
 	}
 	
 	@Test
@@ -143,7 +135,6 @@ public class RoomTests {
 		org.junit.Assert.assertTrue(roomhandler.getCountOfRoomType("bedroom") == 1);
 		roomhandler.createBedRoom(102,true, 100, "bedroom", "A bedroom, which is nice to sleep in.", 2);
 		org.junit.Assert.assertTrue(roomhandler.getCountOfRoomType("bedroom") == 2);
-		
 	}
 	
 }
