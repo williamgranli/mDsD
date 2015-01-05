@@ -562,8 +562,9 @@ public class BookingComponent_BookingImpl extends MinimalEObjectImpl.Container i
 	 * @generated
 	 */
 	public void updatePaymentDetails(String firstName, String lastName, String address, String ccNumber, String ccv, int expiryMonth, int expiryYear) {
-		BookingComponent_PaymentDetails newDetails = new BookingComponent_PaymentDetailsImpl(firstName, lastName, address, ccNumber, ccv, expiryMonth, expiryYear);
-		this.paymentDetails = newDetails;
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**

@@ -1,10 +1,8 @@
 package test;
 
-import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Locale;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -17,7 +15,6 @@ public class AdditionalServicesTests {
 
 	static Implementation.ImplementationFactory factory;
 	static Implementation.AdditionalServiceComponent_AdditionalServiceHandler as;
-	static Implementation.AdditionalServiceComponent_IAdditionalServiceInformation as2;
 	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {

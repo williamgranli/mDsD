@@ -16,7 +16,7 @@ public class AllTestsRunner {
 	  System.out.println("+++ Run time (ms): " + result.getRunTime());
 	  System.out.println("----------------------------------------------------\n");
 		for (Failure failure : result.getFailures()) {
-    		System.out.println(failure.toString());
+			System.out.println(failure.toString());
 		}
 	}
 } 

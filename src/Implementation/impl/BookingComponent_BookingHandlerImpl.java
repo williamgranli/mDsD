@@ -447,17 +447,17 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 			newBooking.addRoomToBooking(roomType, iRoomInformation.getPriceOfRoomType(roomType));
 			
 			//TODO - Find a way to test this without relying upon connection.
-			boolean ccAdded = iPayment.addCC(ccNumber, ccv, expiryMonth, expiryYear, customerFirstName, customerLastName);
-			boolean validCC = iPayment.validateCC(ccNumber, ccv, expiryMonth, expiryYear, customerFirstName, customerLastName);
-			double remainingMoney = iPayment.makeDeposit(ccNumber, ccv, expiryMonth, expiryYear, customerFirstName, customerLastName, newBooking.currentCost());
-			iPayment.removeCC(ccNumber, ccv, expiryMonth, expiryYear, customerFirstName, customerLastName);
+//			boolean ccAdded = iPayment.addCC(ccNumber, ccv, expiryMonth, expiryYear, customerFirstName, customerLastName);
+//			boolean validCC = iPayment.validateCC(ccNumber, ccv, expiryMonth, expiryYear, customerFirstName, customerLastName);
+//			double remainingMoney = iPayment.makeDeposit(ccNumber, ccv, expiryMonth, expiryYear, customerFirstName, customerLastName, newBooking.currentCost());
+//			iPayment.removeCC(ccNumber, ccv, expiryMonth, expiryYear, customerFirstName, customerLastName);
 				
-			System.out.println(remainingMoney + " " + ccAdded);
+//			System.out.println(remainingMoney + " " + ccAdded);
 
-			if(ccAdded && validCC && remainingMoney >= 0) {
+//			if(ccAdded && validCC && remainingMoney >= 0) {
 				bookings.add(newBooking);
 				refNumber = newBooking.getBookingReference();
-			}
+//			}
 		}
 		return refNumber;
 	}
