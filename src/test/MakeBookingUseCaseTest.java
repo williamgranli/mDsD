@@ -237,6 +237,6 @@ public class MakeBookingUseCaseTest {
 		 * Step 10:
 		 * Provide User with a reference number.
 		 */
-		System.out.println("Herro dear " + custFName + "\nYour reference number is " + ref1);
+		System.out.println("Herro Mr. " + custFName + "\nYour reference number is " + ref1);
 	}
 }
