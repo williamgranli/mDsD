@@ -12,7 +12,8 @@ import org.junit.runners.Suite.SuiteClasses;
 	OccupancyTests.class,
 	PaymentTests.class,
 	RoomTests.class,
-	StaffAdministrationTest.class})
+	StaffAdministrationTest.class,
+	MakeBookingUseCaseTest.class})
 
 public class AllTests {
 

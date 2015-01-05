@@ -13,6 +13,7 @@ import Implementation.ImplementationPackage;
 import Implementation.PaymentComponent_IPayment;
 import Implementation.RoomComponent_IRoomInformation;
 import Implementation.StaffComponent_IAuthentication;
+
 import java.lang.reflect.InvocationTargetException;
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -22,6 +23,7 @@ import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
@@ -457,18 +459,22 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 			newBooking.addRoomToBooking(roomType, iRoomInformation.getPriceOfRoomType(roomType));
 			
 			//TODO - Find a way to test this without relying upon connection.
-//			boolean ccAdded = iPayment.addCC(ccNumber, ccv, expiryMonth, expiryYear, customerFirstName, customerLastName);
-//			boolean validCC = iPayment.validateCC(ccNumber, ccv, expiryMonth, expiryYear, customerFirstName, customerLastName);
-//			double remainingMoney = iPayment.makeDeposit(ccNumber, ccv, expiryMonth, expiryYear, customerFirstName, customerLastName, newBooking.currentCost());
-//			iPayment.removeCC(ccNumber, ccv, expiryMonth, expiryYear, customerFirstName, customerLastName);
-				
-//			System.out.println(remainingMoney + " " + ccAdded);
+			boolean ccAdded = iPayment.addCC(ccNumber, ccv, expiryMonth, expiryYear, customerFirstName, customerLastName);
+			System.out.println("1 " + ccAdded);
+			boolean validCC = iPayment.validateCC(ccNumber, ccv, expiryMonth, expiryYear, customerFirstName, customerLastName);
+			System.out.println("2 " + validCC);
+			double remainingMoney = iPayment.makeDeposit(ccNumber, ccv, expiryMonth, expiryYear, customerFirstName, customerLastName, newBooking.currentCost());
+			System.out.println("3 " + remainingMoney);
+			iPayment.removeCC(ccNumber, ccv, expiryMonth, expiryYear, customerFirstName, customerLastName);
+			
+			System.out.println(remainingMoney + " " + ccAdded);
 
-//			if(ccAdded && validCC && remainingMoney >= 0) {
+			if(ccAdded && validCC && remainingMoney >= 0) {
 				bookings.add(newBooking);
 				refNumber = newBooking.getBookingReference();
-//			}
+			}
 		}
+		System.out.println(refNumber);
 		return refNumber;
 	}
 
