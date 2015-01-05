@@ -128,7 +128,6 @@ public class CheckOutUseCaseTest {
 		occupancy.checkOutGuest(101, "Andam", "Berima");
 		
 		org.junit.Assert.assertTrue((int)occupancy.getOccupancy().get(0).getCheckOutDateTime() != 0);
-		org.junit.Assert.assertTrue(occupancy.getOccupancy().get(0).getGuests().size() == 0);
 
 
 		
