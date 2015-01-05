@@ -6,12 +6,11 @@ import Implementation.Bank;
 import Implementation.BookingComponent_IBookingAdministration;
 import Implementation.BookingComponent_IBookingInformation;
 import Implementation.ImplementationPackage;
-
 import java.lang.reflect.InvocationTargetException;
 import java.util.Date;
+import java.util.Map;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
@@ -224,6 +223,28 @@ public class BankImpl extends MinimalEObjectImpl.Container implements Bank {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Map searchAvailableRoomTypes(Date arrivalDate, Date departureDate) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int findBookingsByDateAndType(Date arrivalDate, Date departureDate, String roomType) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
 		if (baseClass == BookingComponent_IBookingAdministration.class) {
@@ -248,6 +269,8 @@ public class BankImpl extends MinimalEObjectImpl.Container implements Bank {
 				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_INFORMATION___SEARCH_FOR_BOOKING__STRING: return ImplementationPackage.BANK___SEARCH_FOR_BOOKING__STRING;
 				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_INFORMATION___IS_PAID_FOR__STRING: return ImplementationPackage.BANK___IS_PAID_FOR__STRING;
 				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_INFORMATION___MAKE_PAYMENT__STRING: return ImplementationPackage.BANK___MAKE_PAYMENT__STRING;
+				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_INFORMATION___SEARCH_AVAILABLE_ROOM_TYPES__DATE_DATE: return ImplementationPackage.BANK___SEARCH_AVAILABLE_ROOM_TYPES__DATE_DATE;
+				case ImplementationPackage.BOOKING_COMPONENT_IBOOKING_INFORMATION___FIND_BOOKINGS_BY_DATE_AND_TYPE__DATE_DATE_STRING: return ImplementationPackage.BANK___FIND_BOOKINGS_BY_DATE_AND_TYPE__DATE_DATE_STRING;
 				default: return -1;
 			}
 		}
@@ -294,6 +317,10 @@ public class BankImpl extends MinimalEObjectImpl.Container implements Bank {
 				return isPaidFor((String)arguments.get(0));
 			case ImplementationPackage.BANK___MAKE_PAYMENT__STRING:
 				return makePayment((String)arguments.get(0));
+			case ImplementationPackage.BANK___SEARCH_AVAILABLE_ROOM_TYPES__DATE_DATE:
+				return searchAvailableRoomTypes((Date)arguments.get(0), (Date)arguments.get(1));
+			case ImplementationPackage.BANK___FIND_BOOKINGS_BY_DATE_AND_TYPE__DATE_DATE_STRING:
+				return findBookingsByDateAndType((Date)arguments.get(0), (Date)arguments.get(1), (String)arguments.get(2));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

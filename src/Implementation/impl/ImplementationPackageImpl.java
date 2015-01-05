@@ -1196,6 +1196,24 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getBookingComponent_IBookingInformation__SearchAvailableRoomTypes__Date_Date() {
+		return bookingComponent_IBookingInformationEClass.getEOperations().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getBookingComponent_IBookingInformation__FindBookingsByDateAndType__Date_Date_String() {
+		return bookingComponent_IBookingInformationEClass.getEOperations().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getPaymentComponent() {
 		return paymentComponentEClass;
 	}
@@ -2339,17 +2357,8 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getBookingComponent_BookingHandler__FindBookingsByDateAndType__Date_Date_String() {
-		return bookingComponent_BookingHandlerEClass.getEOperations().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EOperation getBookingComponent_BookingHandler__FindBookingsByDate__Date_Date() {
-		return bookingComponent_BookingHandlerEClass.getEOperations().get(3);
+		return bookingComponent_BookingHandlerEClass.getEOperations().get(2);
 	}
 
 	/**
@@ -2952,6 +2961,8 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		createEOperation(bookingComponent_IBookingInformationEClass, BOOKING_COMPONENT_IBOOKING_INFORMATION___SEARCH_FOR_BOOKING__STRING);
 		createEOperation(bookingComponent_IBookingInformationEClass, BOOKING_COMPONENT_IBOOKING_INFORMATION___IS_PAID_FOR__STRING);
 		createEOperation(bookingComponent_IBookingInformationEClass, BOOKING_COMPONENT_IBOOKING_INFORMATION___MAKE_PAYMENT__STRING);
+		createEOperation(bookingComponent_IBookingInformationEClass, BOOKING_COMPONENT_IBOOKING_INFORMATION___SEARCH_AVAILABLE_ROOM_TYPES__DATE_DATE);
+		createEOperation(bookingComponent_IBookingInformationEClass, BOOKING_COMPONENT_IBOOKING_INFORMATION___FIND_BOOKINGS_BY_DATE_AND_TYPE__DATE_DATE_STRING);
 
 		paymentComponentEClass = createEClass(PAYMENT_COMPONENT);
 
@@ -3099,7 +3110,6 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		createEReference(bookingComponent_BookingHandlerEClass, BOOKING_COMPONENT_BOOKING_HANDLER__IPAYMENT);
 		createEOperation(bookingComponent_BookingHandlerEClass, BOOKING_COMPONENT_BOOKING_HANDLER___FIND_BOOKING__STRING);
 		createEOperation(bookingComponent_BookingHandlerEClass, BOOKING_COMPONENT_BOOKING_HANDLER___BOOKING_AVAILABLE__DATE_DATE_STRING);
-		createEOperation(bookingComponent_BookingHandlerEClass, BOOKING_COMPONENT_BOOKING_HANDLER___FIND_BOOKINGS_BY_DATE_AND_TYPE__DATE_DATE_STRING);
 		createEOperation(bookingComponent_BookingHandlerEClass, BOOKING_COMPONENT_BOOKING_HANDLER___FIND_BOOKINGS_BY_DATE__DATE_DATE);
 
 		bookingComponent_IBookingAdministrationEClass = createEClass(BOOKING_COMPONENT_IBOOKING_ADMINISTRATION);
@@ -3401,6 +3411,15 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 
 		op = initEOperation(getBookingComponent_IBookingInformation__MakePayment__String(), theTypesPackage.getBoolean(), "makePayment", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "bookingReference", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getBookingComponent_IBookingInformation__SearchAvailableRoomTypes__Date_Date(), ecorePackage.getEMap(), "searchAvailableRoomTypes", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "arrivalDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "departureDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getBookingComponent_IBookingInformation__FindBookingsByDateAndType__Date_Date_String(), ecorePackage.getEInt(), "findBookingsByDateAndType", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "arrivalDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDate(), "departureDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "roomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(paymentComponentEClass, PaymentComponent.class, "PaymentComponent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -3768,11 +3787,6 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		addEParameter(op, theTypesPackage.getString(), "referenceNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getBookingComponent_BookingHandler__BookingAvailable__Date_Date_String(), ecorePackage.getEBoolean(), "bookingAvailable", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDate(), "startDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDate(), "endDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "roomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		op = initEOperation(getBookingComponent_BookingHandler__FindBookingsByDateAndType__Date_Date_String(), theTypesPackage.getInteger(), "findBookingsByDateAndType", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDate(), "startDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDate(), "endDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "roomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
