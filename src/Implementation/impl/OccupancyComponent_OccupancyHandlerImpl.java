@@ -301,11 +301,8 @@ public class OccupancyComponent_OccupancyHandlerImpl extends MinimalEObjectImpl.
 			
 		}
 		
-		
-		else{
-			System.out.println("Name: " + firstName + "  " + lastName + "does not exist in booking");
-		}
 	}
+	System.out.println("Name: " + firstName + "  " + lastName + "does not exist in booking");
 }
 
 
