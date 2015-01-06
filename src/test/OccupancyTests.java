@@ -48,7 +48,7 @@ public class OccupancyTests {
     	long theFuture = System.currentTimeMillis() + (86400 * 7 * 1000);
     	Date nextWeek = new Date(theFuture);
     	bookingReference = booking.makeBooking("Single Room",new Date(), nextWeek, "880923");
-    	booking.addPaymentDetails(bookingReference, "William", "Granli", "MyHouse", "123456789", "123", 6, 2015);
+    	booking.addPaymentDetails(bookingReference, "William", "Granli", "MyHouse", "2010", "123", 6, 15);
     	booking.addGuestToBooking(bookingReference, "William", "Granli", "The Shire", "telephoneNumber");
     	booking.addGuestToBooking(bookingReference, "Andam", "Berima", "The Old Shire", "telephoneNumber");
     	booking.addRoom(bookingReference, "Single Room", 100);
