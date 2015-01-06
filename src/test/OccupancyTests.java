@@ -16,6 +16,8 @@ public class OccupancyTests {
 	static Implementation.RoomComponent_RoomHandler roomHandler;
 	static Implementation.OccupancyComponent_IOccupancy occupancyHandler;
 	static Implementation.AdditionalServiceComponent_IEventManagement additionalService;
+	static Implementation.PaymentComponent_PaymentHandler payment; //In class
+
 	
 	static String bookingReference;
 	
@@ -51,6 +53,9 @@ public class OccupancyTests {
     	booking.addGuestToBooking(bookingReference, "Andam", "Berima", "The Old Shire", "telephoneNumber");
     	booking.addRoom(bookingReference, "Single Room", 100);
     	booking.addRoom(bookingReference, "Single Room", 100);
+    	
+    	payment = factory.createPaymentComponent_PaymentHandler(); //In setupBeforeClass
+    	booking.setIPayment(payment);//In setupBeforeClass
 	}
 
 	@AfterClass
