@@ -3,15 +3,20 @@
 %Classpath ignore
 *.classpath
 *.DS_Store
-*Implementation.ecore
 
-bin/Implementation/
-
-*implementation.ecore
 
 # Sublime project files
 *.sublime-project
 *.sublime-workspace
+
+
+
+
+
+
+
+
+
 
 %ingoring jani settings file
 *.settings/
