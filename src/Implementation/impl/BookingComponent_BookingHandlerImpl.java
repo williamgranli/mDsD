@@ -768,12 +768,15 @@ public class BookingComponent_BookingHandlerImpl extends MinimalEObjectImpl.Cont
 	 */
 	public boolean addPaymentDetails(String bookingReference, String customerFirstName, String customerLastName, String customerAddress, String ccNumber, String ccv, int expiryMonth, int expiryYear) {
 		
+		boolean ccAdded = iPayment.addCC(ccNumber, ccv, expiryMonth, expiryYear, customerFirstName, customerLastName);
 		boolean success = iPayment.validateCC(ccNumber, ccv, expiryMonth, expiryYear, customerFirstName, customerLastName);
 		
-		if(success) {
+		
+		if(ccAdded && success) {
 			BookingComponent_Booking bookingToChange = findBooking(bookingReference);
 			BookingComponent_PaymentDetails newPaymentDetails = new BookingComponent_PaymentDetailsImpl(customerFirstName, customerLastName, customerAddress, ccNumber, ccv, expiryMonth, expiryYear);
 			bookingToChange.setPaymentDetails(newPaymentDetails);
+			iPayment.removeCC(ccNumber, ccv, expiryMonth, expiryYear, customerFirstName, customerLastName);
 		}
 		
 		return success;

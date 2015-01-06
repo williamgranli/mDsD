@@ -360,4 +360,28 @@ public class BookingTests {
     	org.junit.Assert.assertTrue(booking.findBookingsByDateAndType(nextWeek, nextWeek2, roomType) == targetBookings + 1);
     	org.junit.Assert.assertTrue(booking.bookingAvailable(nextWeek, nextWeek2, roomType) == true);
     }
+    
+    @Test
+    public void addPaymentDetails() {
+    	Date nextWeek = nextWeekDate();
+    	String referenceNumber = booking.makeBooking(getRandomRoomType(), new Date(), nextWeek, "880923");
+    	
+    	boolean success = booking.addPaymentDetails(referenceNumber, "John", "Burchell", "His Home", "2020", "202", 5, 16);
+    	org.junit.Assert.assertTrue(success);
+    }
+    
+    @Test
+    public void addPaymentDetailsFail() {
+    	Date nextWeek = nextWeekDate();
+    	String referenceNumber = booking.makeBooking(getRandomRoomType(), new Date(), nextWeek, "880923");
+    	
+    	boolean success = booking.addPaymentDetails(referenceNumber, "John", "Burchell", "His Home", "This is not a number", "202", 5, 16);
+    	org.junit.Assert.assertFalse(success);
+    }
+    
+    @Test
+    public void editPaymentDetails() {
+    	Date nextWeek = nextWeekDate();
+    	String referenceNumber = booking.makeBooking(getRandomRoomType(), new Date(), nextWeek, "880923");
+    }
 }
