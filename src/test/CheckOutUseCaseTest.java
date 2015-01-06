@@ -41,6 +41,8 @@ public class CheckOutUseCaseTest {
 		booking.setIRoomInformation(roomHandler);
 		booking.setIAdditionalServiceInformation(additionalService);
 		
+    	payment = factory.createPaymentComponent_PaymentHandler(); //In setupBeforeClass
+    	booking.setIPayment(payment);//In setupBeforeClass
 		
 		occupancy.setIBooking(booking);
 		occupancy.setIRoomInformation(roomHandler);
@@ -60,8 +62,7 @@ public class CheckOutUseCaseTest {
     	booking.addRoom(bookingReference, "Single Room", 100);
     	booking.addRoom(bookingReference, "Single Room", 100);
     	
-    	payment = factory.createPaymentComponent_PaymentHandler(); //In setupBeforeClass
-    	booking.setIPayment(payment);//In setupBeforeClass
+
     	
 
 

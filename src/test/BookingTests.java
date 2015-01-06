@@ -7,10 +7,14 @@ import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
-import org.junit.Ignore;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.TestRule;
+import org.junit.rules.TestWatcher;
+import org.junit.runner.Description;
 
 import Implementation.BookingComponent_AdditionalService;
+import Implementation.BookingComponent_BookingHandler;
 
 public class BookingTests {
 
@@ -49,18 +53,25 @@ public class BookingTests {
 		em = null;
 		occupancyHandler = null;
 		payment = null;
+		
 	}
 
 	@Before
 	public void setUp() throws Exception {
 		booking.getBookings().clear();
-		System.out.println("---------------------------");
 	}
 
 	@After
 	public void tearDown() throws Exception {
-		
+		System.out.println("---------------------------");
 	}
+	
+	@Rule
+	public TestRule watcher = new TestWatcher() {
+	   protected void starting(Description description) {
+	      System.out.println("Starting test: " + description.getMethodName() + "\n");
+	   }
+	};
 	
 	public void setupRoomHandler() {
 		roomHandler.createBedRoom(1, true, 100, "SingleRoom", "A small single room with a single bed", 1);
@@ -327,7 +338,6 @@ public class BookingTests {
     	booking.makeBooking(getRandomRoomType(), nextWeek, nextWeek2, "880923");
     	booking.makeBooking(getRandomRoomType(), nextWeek, nextWeek2, "880923");
     	
-    	System.out.println(">> " + booking.findBookingsByDate(nextWeek, nextWeek2));
     	org.junit.Assert.assertTrue(booking.findBookingsByDate(nextWeek, nextWeek2) == 4);
     	org.junit.Assert.assertTrue(booking.bookingAvailable(nextWeek, nextWeek2, getRandomRoomType()) == true);
     }

@@ -44,6 +44,9 @@ public class OccupancyTests {
 		roomHandler.createBedRoom(102,true, 100, "Single Room", "A bedroom which is nice to sleep in.", 2);
 		roomHandler.createBedRoom(1, true, 100, "Single Room", "A small single room with a single bed", 1);
 		
+    	payment = factory.createPaymentComponent_PaymentHandler(); //In setupBeforeClass
+    	booking.setIPayment(payment);//In setupBeforeClass
+		
 		// Make a booking
     	long theFuture = System.currentTimeMillis() + (86400 * 7 * 1000);
     	Date nextWeek = new Date(theFuture);
@@ -53,9 +56,6 @@ public class OccupancyTests {
     	booking.addGuestToBooking(bookingReference, "Andam", "Berima", "The Old Shire", "telephoneNumber");
     	booking.addRoom(bookingReference, "Single Room", 100);
     	booking.addRoom(bookingReference, "Single Room", 100);
-    	
-    	payment = factory.createPaymentComponent_PaymentHandler(); //In setupBeforeClass
-    	booking.setIPayment(payment);//In setupBeforeClass
 	}
 
 	@AfterClass
