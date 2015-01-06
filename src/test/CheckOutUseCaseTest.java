@@ -108,6 +108,14 @@ public class CheckOutUseCaseTest {
 	
 	@Test
 	public void nameAndRoomNumberDoesNotMatchOccupancyTest() {
+		/*Alternative flow #1*/
+		
+		/**
+		 * 1. Receptionist provides System the room number and name of the Guest
+		 * 2-7a Provided room number and name of guest does not match an occupancy
+		 * System shows an error
+		 * Use case ends
+		*/
 		
 		occupancy.checkInGuest(bookingReference, "William", "Granli", "Single Room", null, null);
 		occupancy.checkOutGuest(101, "Stupid", "Name");
@@ -118,6 +126,19 @@ public class CheckOutUseCaseTest {
 	
 	@Test
 	public void moreGuestsCheckingOutForSameRoomTest() {
+		/*Alternative flow #2*/
+		
+		/**
+		 * 1. Receptionist provides System the room number and name of the Guest
+		 * 2. System checks if room exists and guest is assigned to specified room
+		 * 3. Assume provided room number and name of guest matches an occupancy
+		 * 4. System  records check-out date to current date
+		 * 5. System makes room as signed to guest available 
+		 * 6-7a Guest checking out is not the first in the booking
+		 * Use case ends
+		 * 
+		 */
+
     	//SETUP: Check in two guests
 		occupancy.getOccupancy().clear();
 
@@ -125,6 +146,8 @@ public class CheckOutUseCaseTest {
 		occupancy.checkInGuest(bookingReference, "Andam", "Berima", "Single Room", "William", "Granli");
 		
 		occupancy.checkOutGuest(101, "William", "Granli");
+		org.junit.Assert.assertTrue((int)occupancy.getOccupancy().get(0).getCheckOutDateTime() != 0);
+
 		occupancy.checkOutGuest(101, "Andam", "Berima");
 		
 		org.junit.Assert.assertTrue((int)occupancy.getOccupancy().get(0).getCheckOutDateTime() != 0);
@@ -132,8 +155,4 @@ public class CheckOutUseCaseTest {
 
 		
 	}
-	
-
-	
-
 }
