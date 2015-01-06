@@ -141,7 +141,7 @@ public class DecisionSupportTests {
     	booking.findBooking(reference3).addAdditionalServiceToBooking("breakfast", 100,"a",new Date());
     	booking.findBooking(reference3).addAdditionalServiceToBooking("massage", 200,"b",new Date());
     	//booking4
-    	reference4 = booking.makeBooking("SingleRoom",new Date(), new Date(114,12,21), "1234323");
+    	reference4 = booking.makeBooking("SingleRoom",new Date(), new Date(114,12,21), "1234323");v
     	booking.addPaymentDetails(reference4, "lady", "beard", "hokaido", "123456789", "123", 9, 2015);
     	booking.addGuestToBooking(reference4, "d", "d", "d","123");
     	paymentDetails4.setAddress("hokaido");
