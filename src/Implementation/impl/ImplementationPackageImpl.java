@@ -2375,7 +2375,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getBookingComponent_IBookingAdministration__MakeBooking__String_Date_Date_String_String_String_String_String_String_int_int() {
+	public EOperation getBookingComponent_IBookingAdministration__MakeBooking__String_Date_Date_String() {
 		return bookingComponent_IBookingAdministrationEClass.getEOperations().get(0);
 	}
 
@@ -2458,6 +2458,15 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 	 */
 	public EOperation getBookingComponent_IBookingAdministration__ConfirmBooking__String() {
 		return bookingComponent_IBookingAdministrationEClass.getEOperations().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getBookingComponent_IBookingAdministration__AddPaymentDetails__String_String_String_String_String_String_int_int() {
+		return bookingComponent_IBookingAdministrationEClass.getEOperations().get(10);
 	}
 
 	/**
@@ -3113,7 +3122,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		createEOperation(bookingComponent_BookingHandlerEClass, BOOKING_COMPONENT_BOOKING_HANDLER___FIND_BOOKINGS_BY_DATE__DATE_DATE);
 
 		bookingComponent_IBookingAdministrationEClass = createEClass(BOOKING_COMPONENT_IBOOKING_ADMINISTRATION);
-		createEOperation(bookingComponent_IBookingAdministrationEClass, BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___MAKE_BOOKING__STRING_DATE_DATE_STRING_STRING_STRING_STRING_STRING_STRING_INT_INT);
+		createEOperation(bookingComponent_IBookingAdministrationEClass, BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___MAKE_BOOKING__STRING_DATE_DATE_STRING);
 		createEOperation(bookingComponent_IBookingAdministrationEClass, BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___ADD_ROOM__STRING_STRING_INT);
 		createEOperation(bookingComponent_IBookingAdministrationEClass, BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___EDIT_BOOKING__STRING_DATE_DATE);
 		createEOperation(bookingComponent_IBookingAdministrationEClass, BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___CANCEL_BOOKING__STRING);
@@ -3123,6 +3132,7 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 		createEOperation(bookingComponent_IBookingAdministrationEClass, BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___ADD_GUEST_TO_BOOKING__STRING_STRING_STRING_STRING_STRING);
 		createEOperation(bookingComponent_IBookingAdministrationEClass, BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___REMOVE_GUEST__STRING_STRING_STRING_STRING);
 		createEOperation(bookingComponent_IBookingAdministrationEClass, BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___CONFIRM_BOOKING__STRING);
+		createEOperation(bookingComponent_IBookingAdministrationEClass, BOOKING_COMPONENT_IBOOKING_ADMINISTRATION___ADD_PAYMENT_DETAILS__STRING_STRING_STRING_STRING_STRING_STRING_INT_INT);
 
 		staffComponentEClass = createEClass(STAFF_COMPONENT);
 
@@ -3797,18 +3807,11 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 
 		initEClass(bookingComponent_IBookingAdministrationEClass, BookingComponent_IBookingAdministration.class, "BookingComponent_IBookingAdministration", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		op = initEOperation(getBookingComponent_IBookingAdministration__MakeBooking__String_Date_Date_String_String_String_String_String_String_int_int(), theTypesPackage.getString(), "makeBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getBookingComponent_IBookingAdministration__MakeBooking__String_Date_Date_String(), theTypesPackage.getString(), "makeBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "roomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDate(), "arrivalDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDate(), "departureDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "customerSSN", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "customerFirstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "customerLastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "customerAddress", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "ccNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "ccv", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEInt(), "expiryMonth", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEInt(), "expiryYear", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getBookingComponent_IBookingAdministration__AddRoom__String_String_int(), theTypesPackage.getBoolean(), "addRoom", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "bookingReference", 1, 1, IS_UNIQUE, !IS_ORDERED);
@@ -3851,6 +3854,16 @@ public class ImplementationPackageImpl extends EPackageImpl implements Implement
 
 		op = initEOperation(getBookingComponent_IBookingAdministration__ConfirmBooking__String(), theTypesPackage.getBoolean(), "confirmBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "bookingReference", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getBookingComponent_IBookingAdministration__AddPaymentDetails__String_String_String_String_String_String_int_int(), theTypesPackage.getBoolean(), "addPaymentDetails", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "bookingReference", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "customerFirstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "customerLastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "customerAddress", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "ccNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "ccv", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "expiryMonth", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "expiryYear", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(staffComponentEClass, StaffComponent.class, "StaffComponent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

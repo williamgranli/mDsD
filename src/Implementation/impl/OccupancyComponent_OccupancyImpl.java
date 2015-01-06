@@ -6,12 +6,9 @@ import Implementation.BookingComponent_Booking;
 import Implementation.ImplementationPackage;
 import Implementation.OccupancyComponent_Guest;
 import Implementation.OccupancyComponent_Occupancy;
-
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;

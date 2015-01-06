@@ -652,13 +652,6 @@
       <eParameters name="arrivalDate" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
       <eParameters name="departureDate" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
       <eParameters name="customerSSN" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-      <eParameters name="customerFirstName" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-      <eParameters name="customerLastName" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-      <eParameters name="customerAddress" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-      <eParameters name="ccNumber" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-      <eParameters name="ccv" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-      <eParameters name="expiryMonth" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-      <eParameters name="expiryYear" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     </eOperations>
     <eOperations name="addRoom" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Boolean">
       <eParameters name="bookingReference" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
@@ -701,6 +694,16 @@
     </eOperations>
     <eOperations name="confirmBooking" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Boolean">
       <eParameters name="bookingReference" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+    </eOperations>
+    <eOperations name="addPaymentDetails" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Boolean">
+      <eParameters name="bookingReference" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="customerFirstName" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="customerLastName" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="customerAddress" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="ccNumber" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="ccv" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="expiryMonth" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="expiryYear" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     </eOperations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="StaffComponent" eSuperTypes="#//StaffComponent_IAccountAdministration #//StaffComponent_IAuthentication"/>

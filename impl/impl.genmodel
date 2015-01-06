@@ -599,13 +599,6 @@
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_IBookingAdministration/makeBooking/arrivalDate"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_IBookingAdministration/makeBooking/departureDate"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_IBookingAdministration/makeBooking/customerSSN"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_IBookingAdministration/makeBooking/customerFirstName"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_IBookingAdministration/makeBooking/customerLastName"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_IBookingAdministration/makeBooking/customerAddress"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_IBookingAdministration/makeBooking/ccNumber"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_IBookingAdministration/makeBooking/ccv"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_IBookingAdministration/makeBooking/expiryMonth"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_IBookingAdministration/makeBooking/expiryYear"/>
       </genOperations>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//BookingComponent_IBookingAdministration/addRoom">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_IBookingAdministration/addRoom/bookingReference"/>
@@ -648,6 +641,16 @@
       </genOperations>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//BookingComponent_IBookingAdministration/confirmBooking">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_IBookingAdministration/confirmBooking/bookingReference"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="Implementation.ecore#//BookingComponent_IBookingAdministration/addPaymentDetails">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_IBookingAdministration/addPaymentDetails/bookingReference"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_IBookingAdministration/addPaymentDetails/customerFirstName"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_IBookingAdministration/addPaymentDetails/customerLastName"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_IBookingAdministration/addPaymentDetails/customerAddress"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_IBookingAdministration/addPaymentDetails/ccNumber"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_IBookingAdministration/addPaymentDetails/ccv"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_IBookingAdministration/addPaymentDetails/expiryMonth"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="Implementation.ecore#//BookingComponent_IBookingAdministration/addPaymentDetails/expiryYear"/>
       </genOperations>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="Implementation.ecore#//StaffComponent"/>

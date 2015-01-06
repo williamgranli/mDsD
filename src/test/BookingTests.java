@@ -110,7 +110,7 @@ public class BookingTests {
     	Date nextWeek = nextWeekDate();
     	
     	org.junit.Assert.assertTrue(booking.getBookings().size() == 0);
-    	String ref = booking.makeBooking(getRandomRoomType(), new Date(), nextWeek, "880923", "John", "Burchell", "MyHouse", "123456789", "123", 9, 16);
+    	String ref = booking.makeBooking(getRandomRoomType(), new Date(), nextWeek, "880923");
     	org.junit.Assert.assertTrue(booking.getBookings().size() == 1);
     	org.junit.Assert.assertFalse(ref.equals("INVALID_BOOKING"));
     }
@@ -121,7 +121,7 @@ public class BookingTests {
     	Date nextWeek = nextWeekDate();
     	
     	for(int i = 0; i < roomHandler.getAllRoomNumbers().size(); ++i) {
-    		String ref = booking.makeBooking(getRandomRoomType(), new Date(), nextWeek, "880923", "John", "Burchell", "MyHouse", "123456789", "123", 9, 16);
+    		String ref = booking.makeBooking(getRandomRoomType(), new Date(), nextWeek, "880923");
     		org.junit.Assert.assertFalse(ref.equals("INVALID_BOOKING"));
     	}
     }
@@ -133,16 +133,16 @@ public class BookingTests {
     	Date today = new Date();
     	
     	for(int i = 0; i < roomHandler.getAllRoomNumbers().size(); i++) {
-    		String ref = booking.makeBooking(getRandomRoomType(), today, nextWeek, "880923", "John", "Burchell", "MyHouse", "123456789", "123", 9, 16);
+    		String ref = booking.makeBooking(getRandomRoomType(), today, nextWeek, "880923");
     		org.junit.Assert.assertFalse(ref.equals("INVALID_BOOKING"));
     	}
-    	String ref = booking.makeBooking(getRandomRoomType(), today, nextWeek, "880923", "John", "Burchell", "MyHouse", "123456789", "123", 9, 16);
+    	String ref = booking.makeBooking(getRandomRoomType(), today, nextWeek, "880923");
     	org.junit.Assert.assertTrue(ref.equals("INVALID_BOOKING"));
     }
     
     @Test
     public void cancelBooking() {
-    	String referenceNumber = booking.makeBooking(getRandomRoomType(), new Date(), nextWeekDate(), "880923", "John", "Burchell", "MyHouse", "123456789", "123", 9, 16);
+    	String referenceNumber = booking.makeBooking(getRandomRoomType(), new Date(), nextWeekDate(), "880923");
     	
     	setupAdditionalServiceHandler();
     	
@@ -163,7 +163,7 @@ public class BookingTests {
     
     @Test
     public void cancelBookingFail() {
-    	String referenceNumber = booking.makeBooking(getRandomRoomType(), new Date(), nextWeekDate(), "880923", "John", "Burchell", "MyHouse", "123456789", "123", 9, 16);
+    	String referenceNumber = booking.makeBooking(getRandomRoomType(), new Date(), nextWeekDate(), "880923");
     	booking.cancelBooking(referenceNumber);
     	
     	boolean result = booking.cancelBooking(referenceNumber);
@@ -177,7 +177,7 @@ public class BookingTests {
     	String roomType = getRandomRoomType();
     	int price = booking.getIRoomInformation().getPriceOfRoomType(roomType);
     	
-    	String referenceNumber = booking.makeBooking(roomType, new Date(), nextWeekDate(), "880923", "John", "Burchell", "MyHouse", "123456789", "123", 9, 16);
+    	String referenceNumber = booking.makeBooking(roomType, new Date(), nextWeekDate(), "880923");
     	
     	booking.addRoom(referenceNumber, roomType, price);
     	
@@ -196,7 +196,7 @@ public class BookingTests {
     	Date nextWeek2 = new Date(theFuture);
     	
     	String roomType = getRandomRoomType();
-    	String realRef = booking.makeBooking(roomType, nextWeek, nextWeek2, "880923", "John", "Burchell", "MyHouse", "123456789", "123", 9, 16);
+    	String realRef = booking.makeBooking(roomType, nextWeek, nextWeek2, "880923");
     	booking.addRoom(realRef, roomType, booking.getIRoomInformation().getPriceOfRoomType(roomType));
     	org.junit.Assert.assertTrue(booking.findBooking(realRef).getRooms().get(0) != null);
     }
@@ -209,7 +209,7 @@ public class BookingTests {
     	long theFuture = System.currentTimeMillis() + (86400 * 7 * 1000);
     	Date nextWeek = new Date(theFuture);
     	
-    	String referenceNumber = booking.makeBooking(getRandomRoomType(), new Date(), nextWeek, "880923", "John", "Burchell", "MyHouse", "123456789", "123", 9, 16);
+    	String referenceNumber = booking.makeBooking(getRandomRoomType(), new Date(), nextWeek, "880923");
     	booking.addRoom(referenceNumber, roomTypeTwo, 150);
     	booking.removeRoom(referenceNumber, roomType);
     	org.junit.Assert.assertTrue(booking.findBooking(referenceNumber).getRooms().get(0).getRoomType().equals(roomTypeTwo));
@@ -218,7 +218,7 @@ public class BookingTests {
     @Test
     public void addGuestToBooking() {
     	String type = getRandomRoomType();
-    	String referenceNumber = booking.makeBooking(type, new Date(), new Date(), "880923", "John", "Burchell", "MyHouse", "123456789", "123", 9, 16);
+    	String referenceNumber = booking.makeBooking(type, new Date(), new Date(), "880923");
     	booking.addRoom(referenceNumber, type, booking.getIRoomInformation().getPriceOfRoomType(type));
     	
     	boolean attemptOne = booking.addGuestToBooking(referenceNumber, "Frodo", "Baggins", "The Shire", "01235 528942");
@@ -236,7 +236,7 @@ public class BookingTests {
     	Date nextWeek = nextWeekDate();
     	
     	String type = getRandomRoomType();
-    	String referenceNumber = booking.makeBooking(type, new Date(), nextWeek, "880923", "John", "Burchell", "MyHouse", "123456789", "123", 9, 16);
+    	String referenceNumber = booking.makeBooking(type, new Date(), nextWeek, "880923");
     	booking.addRoom(referenceNumber, type, booking.getIRoomInformation().getPriceOfRoomType(type));
     	
     	booking.addGuestToBooking(referenceNumber, "Frodo", "Baggins", "The Shire", "01235 528942");
@@ -253,7 +253,7 @@ public class BookingTests {
     @Test
     public void removeGuest() {
     	String type = getRandomRoomType();
-    	String referenceNumber = booking.makeBooking(type, new Date(), new Date(), "880923", "John", "Burchell", "MyHouse", "123456789", "123", 9, 16);
+    	String referenceNumber = booking.makeBooking(type, new Date(), new Date(), "880923");
     	booking.addRoom(referenceNumber, type, booking.getIRoomInformation().getPriceOfRoomType(type));
     	booking.addGuestToBooking(referenceNumber, "Frodo", "Baggins", "The Shire", "01235 528942");
     	booking.addGuestToBooking(referenceNumber, "Bilbo", "Baggins", "Mordor", "01235 528942");
@@ -265,7 +265,7 @@ public class BookingTests {
     @Test
     public void addAdditionalService() {
     	Date nextWeek = nextWeekDate();
-    	String referenceNumber = booking.makeBooking(getRandomRoomType(), new Date(), nextWeek, "880923", "John", "Burchell", "MyHouse", "123456789", "123", 9, 16);
+    	String referenceNumber = booking.makeBooking(getRandomRoomType(), new Date(), nextWeek, "880923");
     	booking.addGuestToBooking(referenceNumber, "Frodo", "Baggins", "The Shire", "01235 528942");
     	
     	setupAdditionalServiceHandler();
@@ -283,7 +283,7 @@ public class BookingTests {
     @Test
     public void addAdditionalServiceFailTooManyGuests() {
     	Date nextWeek = nextWeekDate();
-    	String referenceNumber = booking.makeBooking(getRandomRoomType(), new Date(), nextWeek, "880923", "John", "Burchell", "MyHouse", "123456789", "123", 9, 16);
+    	String referenceNumber = booking.makeBooking(getRandomRoomType(), new Date(), nextWeek, "880923");
     	booking.addGuestToBooking(referenceNumber, "Frodo", "Baggins", "The Shire", "01235 528942");
     	
     	setupAdditionalServiceHandler();
@@ -298,7 +298,7 @@ public class BookingTests {
     @Test
     public void removeAdditionalService() {
     	Date nextWeek = nextWeekDate();
-    	String referenceNumber = booking.makeBooking(getRandomRoomType(), new Date(), nextWeek, "880923", "John", "Burchell", "MyHouse", "123456789", "123", 9, 16);
+    	String referenceNumber = booking.makeBooking(getRandomRoomType(), new Date(), nextWeek, "880923");
     	
     	String randomType = getRandomEventType();
     	
@@ -327,10 +327,10 @@ public class BookingTests {
     	
     	setupRoomHandler();
     	
-    	booking.makeBooking(getRandomRoomType(), nextWeek, nextWeek2, "880923", "John", "Burchell", "MyHouse", "123456789", "123", 9, 16);
-    	booking.makeBooking(getRandomRoomType(), nextWeek, nextWeek2, "880923", "John", "Burchell", "MyHouse", "123456789", "123", 9, 16);
-    	booking.makeBooking(getRandomRoomType(), nextWeek, nextWeek2, "880923", "John", "Burchell", "MyHouse", "123456789", "123", 9, 16);
-    	booking.makeBooking(getRandomRoomType(), nextWeek, nextWeek2, "880923", "John", "Burchell", "MyHouse", "123456789", "123", 9, 16);
+    	booking.makeBooking(getRandomRoomType(), nextWeek, nextWeek2, "880923");
+    	booking.makeBooking(getRandomRoomType(), nextWeek, nextWeek2, "880923");
+    	booking.makeBooking(getRandomRoomType(), nextWeek, nextWeek2, "880923");
+    	booking.makeBooking(getRandomRoomType(), nextWeek, nextWeek2, "880923");
     	
     	System.out.println(">> " + booking.findBookingsByDate(nextWeek, nextWeek2));
     	org.junit.Assert.assertTrue(booking.findBookingsByDate(nextWeek, nextWeek2) == 4);
@@ -346,14 +346,13 @@ public class BookingTests {
     	Date nextWeek2 = new Date(theFuture2);
     	
     	String roomType = getRandomRoomType();
-    	String refernceNumber = booking.makeBooking(roomType, nextWeek, nextWeek2, "880923", "John", "Burchell", "MyHouse", "123456789", "123", 9, 16);
+    	String refernceNumber = booking.makeBooking(roomType, nextWeek, nextWeek2, "880923");
     
     	booking.findBooking(refernceNumber).addRoomToBooking("TrippleRoom", 300);
     	booking.findBooking(refernceNumber).addRoomToBooking("DoubleRoom", 200);
     	
     	int targetBookings = 5;
     	
-    	//i = i because a booking must have a roomType upon creation
     	for(int i = 0; i < targetBookings; ++i) {
     		booking.findBooking(refernceNumber).addRoomToBooking(roomType, 100);
     	}
@@ -361,15 +360,4 @@ public class BookingTests {
     	org.junit.Assert.assertTrue(booking.findBookingsByDateAndType(nextWeek, nextWeek2, roomType) == targetBookings + 1);
     	org.junit.Assert.assertTrue(booking.bookingAvailable(nextWeek, nextWeek2, roomType) == true);
     }
-    
-//    @Test
-//    public void updateDetails() {
-//    	Date nextWeek = nextWeekDate();
-//    	
-//    	String firstName = 
-//    	
-//    	String ref = booking.makeBooking(getRandomRoomType(), new Date(), nextWeek, "880923", "John", "Burchell", "MyHouse", "123456789", "123", 9, 16);
-//    	booking.findBooking(ref).updateBooking(arrivalDate, departureDate);
-//    	booking.findBooking(ref).updatePaymentDetails(firstName, lastName, address, ccNumber, ccv, expiryMonth, expiryYear);
-//    }
 }
