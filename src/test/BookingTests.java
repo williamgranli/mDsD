@@ -54,6 +54,7 @@ public class BookingTests {
 	@Before
 	public void setUp() throws Exception {
 		booking.getBookings().clear();
+		System.out.println("---------------------------");
 	}
 
 	@After
@@ -310,12 +311,6 @@ public class BookingTests {
     	org.junit.Assert.assertTrue(success);
     }
     
-    @Ignore
-    @Test
-    public void generateQuote() {
-    	//TODO - Fix once implemented
-    }
-    
     @Test
     public void findBookingsByDate() {
     	
@@ -375,13 +370,7 @@ public class BookingTests {
     	Date nextWeek = nextWeekDate();
     	String referenceNumber = booking.makeBooking(getRandomRoomType(), new Date(), nextWeek, "880923");
     	
-    	boolean success = booking.addPaymentDetails(referenceNumber, "John", "Burchell", "His Home", "This is not a number", "202", 5, 16);
+    	boolean success = booking.addPaymentDetails(referenceNumber, "John", "Burchell", "His Home", "This is not a number", "Neither is this", 999, 999);
     	org.junit.Assert.assertFalse(success);
-    }
-    
-    @Test
-    public void editPaymentDetails() {
-    	Date nextWeek = nextWeekDate();
-    	String referenceNumber = booking.makeBooking(getRandomRoomType(), new Date(), nextWeek, "880923");
     }
 }
