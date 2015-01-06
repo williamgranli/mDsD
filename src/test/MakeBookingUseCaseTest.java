@@ -110,7 +110,7 @@ public class MakeBookingUseCaseTest {
 		 * User has added two room types to his/her booking. A temporary 
 		 * booking is made to reserve room(s).
 		 */
-		String ref1 = ib.makeBooking(rt[1], ad, dd, "", "", "", "", custCC, custCVC, custExpMonth, custExpYear); // NOTE: Not through IBooking
+		String ref1 = ib.makeBooking(rt[1], ad, dd, "");
 		bh.findBooking(ref1).addRoomToBooking(rt[0], 1337);
 		
 		System.out.println(ref1);
@@ -132,7 +132,10 @@ public class MakeBookingUseCaseTest {
 		 * User adds payment details. The details are correctly inserted on 
 		 * first try and passes the validation.
 		 */
+		boolean valid = ib.addPaymentDetails(ref1, custFName, custLName, custAddr, custCC, custCVC, custExpMonth, custExpYear);
 		
+		// Validates payment details
+		org.junit.Assert.assertTrue(valid);
 		// Verifies that the expected CC number exist within the booking.
 		org.junit.Assert.assertTrue(bh.findBooking(ref1).getPaymentDetails().getCcNumber().equals(custCC));
 		
@@ -150,7 +153,7 @@ public class MakeBookingUseCaseTest {
 		 * User has added two room types to his/her booking. A temporary 
 		 * booking is made to reserve room(s).
 		 */
-		String ref1 = ib.makeBooking(rt[1], ad, dd, "", "", "", "", custCC, custCVC, custExpMonth, custExpYear); // NOTE: Not through IBooking
+		String ref1 = ib.makeBooking(rt[1], ad, dd, "");
 		bh.findBooking(ref1).addRoomToBooking(rt[0], 1337);
 		
 		org.junit.Assert.assertTrue(!"INVALID_BOOKING".equals(ref1));
@@ -172,7 +175,7 @@ public class MakeBookingUseCaseTest {
 		// this test case to prevent the necessity of UI interaction.
 		
 		/** Step 7-10a
-		 * 
+		 * Simulates wrong input of credit card number a few times
 		 */
 		boolean correct = false;
 		int i = 2;
@@ -190,7 +193,11 @@ public class MakeBookingUseCaseTest {
 		 * Use case has recovered from alternative flow 7-10a.
 		 * Credit card information is validated with the bank service
 		 */
+
+		boolean valid = ib.addPaymentDetails(ref1, custFName, custLName, custAddr, custCC, custCVC, custExpMonth, custExpYear);
 		
+		// Validates payment details
+		org.junit.Assert.assertTrue(valid);
 		// Verifies that the expected CC number exist within the booking.
 		org.junit.Assert.assertTrue(bh.findBooking(ref1).getPaymentDetails().getCcNumber().equals(custCC));
 		
@@ -209,7 +216,7 @@ public class MakeBookingUseCaseTest {
 		 * User has added two room types to his/her booking. A temporary 
 		 * booking is made to reserve room(s).
 		 */
-		String ref1 = ib.makeBooking(rt[1], ad, dd, "", "", "", "", custCC, custCVC, custExpMonth, custExpYear); // NOTE: Not through IBooking
+		String ref1 = ib.makeBooking(rt[1], ad, dd, "");
 		bh.findBooking(ref1).addRoomToBooking(rt[0], 1337);
 		
 		org.junit.Assert.assertTrue(!"INVALID_BOOKING".equals(ref1));
@@ -229,7 +236,11 @@ public class MakeBookingUseCaseTest {
 		 * User adds payment details. The details are correctly inserted on 
 		 * first try and passes the validation.
 		 */
+
+		boolean valid = ib.addPaymentDetails(ref1, custFName, custLName, custAddr, custCC, custCVC, custExpMonth, custExpYear);
 		
+		// Validates payment details
+		org.junit.Assert.assertTrue(valid);
 		// Verifies that the expected CC number exist within the booking.
 		org.junit.Assert.assertTrue(bh.findBooking(ref1).getPaymentDetails().getCcNumber().equals(custCC));
 		
